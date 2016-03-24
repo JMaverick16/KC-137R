@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>grdStartAndMore.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>grdSockle</object-name>  
+		<object-name>grdCover</object-name> 
+		<object-name>extbottlesup</object-name>
+		<object-name>extbottlesup.001</object-name>
+		<object-name>knob</object-name>
+		<object-name>knob.001</object-name>
+		<object-name>knobsup</object-name>
+		<object-name>knobsup.001</object-name>
+		<condition>	
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>grdSwitch</object-name>	
+		<condition>	
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<!-- Ground Start COVER High or Low Pressure -->
+  <animation>
+    <type>rotate</type>
+    <object-name>grdCover</object-name>
+    <property>/b707/start/ground-start-cover</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>70.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 0</x>
+     <y> 1</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m> 0.0</y-m>
+    <z-m> 0.060</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>grdCover</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/start/ground-start-cover</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+  <!-- Ground Start SWITCH High or Low Pressure -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>grdSwitch</object-name>
+		  <property>/b707/start/ground-start</property>
+		 	<interpolation>
+				<entry><ind>  1.0</ind><dep> -50.0</dep></entry>
+				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>  2.0</ind><dep>  50.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0776</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>grdLow</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/start/ground-start") or 0;
+            	var lsl = getprop("/b707/start/low-start-left") or 0;
+            	var lsr = getprop("/b707/start/low-start-right") or 0;
+            	if(bt > 0){
+            		setprop("/b707/start/ground-start", 0);
+            		setprop("/b707/start/low-start-left", 0);
+            		setprop("/b707/start/low-start-right", 0);
+            	}else{
+            		if(lsl or lsr){
+		          		setprop("/b707/start/ground-start", 1);
+		          	  b707.short_startup();
+		        			settimer(func{
+		        				setprop("/b707/start/ground-start", 0);
+									}, 10);
+								 	if(getprop("/sim/sound/switch2") == 1){
+										 setprop("/sim/sound/switch2", 0); 
+									}else{
+										 setprop("/sim/sound/switch2", 1);
+									}
+								}else{
+		          		setprop("/b707/start/ground-start", 1);
+		          		settimer(func{
+		        				setprop("/b707/start/ground-start", 0);
+									}, 0.5);
+									screen.log.write(" No ALTERNATE LOW PRESS START selected in Engineer panel! ", 1, 0, 0);
+								}
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>grdHigh</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/start/ground-start") or 0;
+            	if(bt > 0){
+            		setprop("/b707/start/ground-start", 0);
+            	}else{
+            		setprop("/b707/start/ground-start", 2);
+		          	b707.short_startup();
+          			settimer(func{
+          				setprop("/b707/start/ground-start", 0);
+								}, 10);
+							 	if(getprop("/sim/sound/switch2") == 1){
+									 setprop("/sim/sound/switch2", 0); 
+								}else{
+									 setprop("/sim/sound/switch2", 1);
+								}
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+  <!-- rain repellent -->
+  <animation>
+      <type>translate</type>
+      <object-name>knob</object-name>
+      <property>/b707/rain/rain-repellent-captain</property>
+      <factor>-0.0030</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <object-name>knobsup</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/rain/rain-repellent-captain</property>  
+          <value type="double">1</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/rain/rain-repellent-captain</property>  
+          <value type="double">0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>knob.001</object-name>
+      <property>/b707/rain/rain-repellent-fo</property>
+      <factor>-0.0030</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis> 
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob.001</object-name>
+    <object-name>knobsup.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/rain/rain-repellent-fo</property>  
+          <value type="double">1</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/rain/rain-repellent-fo</property>  
+          <value type="double">0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+</PropertyList>

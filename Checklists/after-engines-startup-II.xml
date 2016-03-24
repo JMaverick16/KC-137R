@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList> 
+    <title>VI. After startup engines</title>
+    <item>
+      <name>V. After startup engines</name>
+      <value>COMPLETED</value>
+    </item>
+	
+	<item>
+		<name>EXTERNAL POWER UNIT</name>
+		<value>DISCONNECTED</value>
+		<marker>
+		    <x-m>-17.5248</x-m>
+		    <y-m>0.6331</y-m>
+		    <z-m>1.4066</z-m>
+		    <scale>1.9091</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/external-power-connected</property>
+		    <value>0</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/external-power-connected</property>
+		  <value>0</value>
+		</binding>
+	</item> 
+
+	<item>
+		<name>APU BLEED VALVE</name>
+		<value>CLOSE</value>
+		<marker>
+		    <x-m>-17.1149</x-m>
+		    <y-m>0.7661</y-m>
+		    <z-m>0.7727</z-m>
+		    <scale>1.9256</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/apu/apu-bleed-valve</property>
+		    <value>0</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/apu/apu-bleed-valve</property>
+		  <value>0</value>
+		</binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>APU GENERATOR</name>
+		<value>OFF</value>
+		<marker>
+		    <x-m>-17.1727</x-m>
+		    <y-m>0.7661</y-m>
+		    <z-m>0.7727</z-m>
+		    <scale>1.9256</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-drive[4]</property>
+		    <value>0</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-drive[4]</property>
+		  <value>0</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>APU</name>
+		<value>OFF</value>
+		<marker>
+		    <x-m>-17.1727</x-m>
+		    <y-m>0.7661</y-m>
+		    <z-m>0.8603</z-m>
+		    <scale>1.9256</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/apu/off-start-run</property>
+		    <value>0</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/apu/starter</property>
+		  <value>0</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+
+	<item>
+		<name>40 HERTZ CONVERTER</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.4744</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0347</z-m>
+		    <scale>1.9752</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/hertz-converter</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/hertz-converter</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+
+	<item>
+		<name>BLOWER</name>
+		<value>NORM</value>
+		<marker>
+		    <x-m>-17.4769</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.1041</z-m>
+		    <scale>1.9752</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/equipment/blower</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/equipment/blower</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+
+	<item>
+		<name>OVBD DUMP</name>
+		<value>NORM</value>
+		<marker>
+		    <x-m>-17.462</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.1041</z-m>
+		    <scale>1.9752</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/equipment/ovbd-dump</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/equipment/ovbd-dump</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>RAM AIR</name>
+		<value>OPEN</value>
+		<marker>
+		    <x-m>-17.3074</x-m>
+		    <y-m>0.5620</y-m>
+		    <z-m>1.5050</z-m>
+		    <scale>2.3554</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/air-conditioning/ram-air-switch</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/air-conditioning/ram-air-switch</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>AIR COMPRESSOR ENG 2</name>
+		<value>START</value>
+		<marker>
+		    <x-m>-17.4926</x-m>
+		    <y-m>0.5843</y-m>
+		    <z-m>1.4653</z-m>
+		    <scale>1.4298</scale>
+		</marker>
+		<condition>
+		  <greater-than>
+		    <property>/b707/air-conditioning/compressor-rpm[0]</property>
+		    <value>95</value>
+		  </greater-than>
+		</condition>		
+		<binding>
+            <command>nasal</command>
+            <script>b707.air_compressor(0);</script>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>AIR COMPRESSOR ENG 3</name>
+		<value>START</value>
+		<marker>
+		    <x-m>-17.4372</x-m>
+		    <y-m>0.5843</y-m>
+		    <z-m>1.4653</z-m>
+		    <scale>1.4298</scale>
+		</marker>
+		<condition>
+		  <greater-than>
+		    <property>/b707/air-conditioning/compressor-rpm[1]</property>
+		    <value>95</value>
+		  </greater-than>
+		</condition>		
+		<binding>
+            <command>nasal</command>
+            <script>b707.air_compressor(1);</script>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>AIR COMPRESSOR ENG 4</name>
+		<value>START</value>
+		<marker>
+		    <x-m>-17.3802</x-m>
+		    <y-m>0.5843</y-m>
+		    <z-m>1.4653</z-m>
+		    <scale>1.4298</scale>
+		</marker>
+		<condition>
+		  <greater-than>
+		    <property>/b707/air-conditioning/compressor-rpm[2]</property>
+		    <value>95</value>
+		  </greater-than>
+		</condition>		
+		<binding>
+            <command>nasal</command>
+            <script>b707.air_compressor(2);</script>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>WING VALVE L</name>
+		<value>OPEN</value>
+		<marker>
+		    <x-m>-17.4413</x-m>
+		    <y-m>0.6066</y-m>
+		    <z-m>1.4314</z-m>
+		    <scale>1.4298</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/air-conditioning/wing-valve[0]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/air-conditioning/wing-valve[0]</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>WING VALVE R</name>
+		<value>OPEN</value>
+		<marker>
+		    <x-m>-17.4140</x-m>
+		    <y-m>0.6066</y-m>
+		    <z-m>1.4314</z-m>
+		    <scale>1.4298</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/air-conditioning/wing-valve[1]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/air-conditioning/wing-valve[1]</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>AIR CONDITIONING UNIT L</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.4479</x-m>
+		    <y-m>0.6438</y-m>
+		    <z-m>1.3826</z-m>
+		    <scale>1.4298</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/air-conditioning/air-cond-unit-left-start</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/air-conditioning/air-cond-unit-left-start</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>AIR CONDITIONING UNIT R</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.4017</x-m>
+		    <y-m>0.6438</y-m>
+		    <z-m>1.3826</z-m>
+		    <scale>1.4298</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/air-conditioning/air-cond-unit-right-start</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/air-conditioning/air-cond-unit-right-start</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>SAFETY VALVE OVERRIDE</name>
+		<value>NORMAL</value>
+		<marker>
+		    <x-m>-17.1140</x-m>
+		    <y-m>0.6207</y-m>
+		    <z-m>1.4058</z-m>
+		    <scale>2.2727</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/pressurization/safety-valve</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/pressurization/safety-valve</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>PRESSURIZATION MODE</name>
+		<value>AUTO</value>
+		<marker>
+		    <x-m>-17.2950</x-m>
+		    <y-m>0.7397</y-m>
+		    <z-m>1.2463</z-m>
+		    <scale>1.7438</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/pressurization/manual-mode-switch</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/pressurization/manual-mode-switch</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>CLIMB MODE</name>
+		<value>TAKE OFF</value>
+		<marker>
+		    <x-m>-17.4678</x-m>
+		    <y-m>0.7397</y-m>
+		    <z-m>1.2463</z-m>
+		    <scale>1.7438</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/pressurization/mode-switch</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/pressurization/mode-switch</property>
+		  <value>1</value>
+		</binding>    
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+</PropertyList>

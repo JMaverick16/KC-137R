@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>radioroom.ac</path>
+	<animation>
+		<type>material</type>
+  		<object-name>sup</object-name>
+  		<object-name>console1</object-name>
+			<object-name>seats</object-name>
+			<object-name>keyboard</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+		</condition>
+		<emission>
+			<red>0.05</red>
+			<green>0.05</green>
+			<blue>0.05</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+  		<object-name>sup</object-name>
+  		<object-name>console1</object-name>
+			<object-name>seats</object-name>
+			<object-name>keyboard</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>noshadow</type>
+			<object-name>keyboard</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+			<object-name>keyboard</object-name>
+  </effect>
+
+    <model>
+        <name>RAD1</name>
+        <path>Aircraft/707/Models/Cockpit/Awacs/radar/radar.xml</path>
+        <offsets>
+            <x-m>-11.20</x-m>
+            <y-m>  0.117</y-m>
+            <z-m>  1.24</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>RAD2</name>
+        <path>Aircraft/707/Models/Cockpit/Awacs/radar/radardata.xml</path>
+        <offsets>
+            <x-m>-11.20</x-m>
+            <y-m>  0.617</y-m>
+            <z-m>  1.24</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>RAD3</name>
+        <path>Aircraft/707/Models/Cockpit/Awacs/radar/radarblind.xml</path>
+        <offsets>
+            <x-m>-11.20</x-m>
+            <y-m>  1.117</y-m>
+            <z-m>  1.24</z-m>
+        </offsets>
+    </model>
+</PropertyList>

@@ -1,0 +1,623 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+<path>radio.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Panel</object-name>
+  <texture>nav.png</texture>
+</animation>
+	
+	<animation>
+		<type>material</type>
+  		<object-name>Panel</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+			<object-name>TFRbutton</object-name>
+			<object-name>StdbyKnob1</object-name>
+			<object-name>StdbyKnob2</object-name>
+			<object-name>ActKnob1</object-name>
+			<object-name>ActKnob2</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+		</condition>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+			<object-name>TFRbutton</object-name>
+			<object-name>StdbyKnob1</object-name>
+			<object-name>StdbyKnob2</object-name>
+			<object-name>ActKnob1</object-name>
+			<object-name>ActKnob2</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.6</red>
+		  <green>0.6</green>
+		  <blue>0.6</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+  <animation>
+		<type>material</type>
+			<object-name>ActDigit1</object-name>
+			<object-name>ActDigit2</object-name>
+			<object-name>ActDigit3</object-name>
+			<object-name>ActDigit4</object-name>
+			<object-name>ActDigit5</object-name>
+			<object-name>DecimalActive</object-name>
+			<object-name>StdbyDigit1</object-name>
+			<object-name>StdbyDigit2</object-name>
+			<object-name>StdbyDigit3</object-name>
+			<object-name>StdbyDigit4</object-name>
+			<object-name>StdbyDigit5</object-name>
+			<object-name>DecimalStdby</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+			<object-name>ActDigit1</object-name>
+			<object-name>ActDigit2</object-name>
+			<object-name>ActDigit3</object-name>
+			<object-name>ActDigit4</object-name>
+			<object-name>ActDigit5</object-name>
+			<object-name>DecimalActive</object-name>
+			<object-name>StdbyDigit1</object-name>
+			<object-name>StdbyDigit2</object-name>
+			<object-name>StdbyDigit3</object-name>
+			<object-name>StdbyDigit4</object-name>
+			<object-name>StdbyDigit5</object-name>
+			<object-name>DecimalStdby</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.7</green>
+		  <blue>0.5</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+<!--  Active Freq Digits -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>ActDigit1</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-mhz</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>ActDigit2</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-mhz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>ActDigit3</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-mhz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>ActDigit4</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-khz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>ActDigit5</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-khz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--  Active Freq Knobs -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>ActKnob1</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-mhz</property>
+  <interpolation>
+    <entry><ind>107.95</ind><dep>  0</dep></entry>
+    <entry><ind>117.95</ind><dep>720</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.02338</y-m>
+    <z-m>-0.00859</z-m>
+  </center>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ActKnob1</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <step>10</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <step>-10</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <step>1</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <step>-1</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ActKnob2</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sel-khz</property>
+  <interpolation>
+    <entry><ind> 0</ind><dep>  0</dep></entry>
+    <entry><ind>95</ind><dep>720</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.02338</y-m>
+    <z-m>-0.00859</z-m>
+  </center>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ActKnob2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <step>0.1</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <step>-0.1</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <step>0.01</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <step>-0.01</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+</animation>
+
+<!--  Standby Freq Digits -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>StdbyDigit1</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-mhz</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>StdbyDigit2</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-mhz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>StdbyDigit3</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-mhz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>StdbyDigit4</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-khz</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>StdbyDigit5</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-khz</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<!--  Standby Freq Knobs -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>StdbyKnob1</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-mhz</property>
+  <interpolation>
+    <entry><ind>107.95</ind><dep>  0</dep></entry>
+    <entry><ind>117.95</ind><dep>720</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.0242</y-m>
+    <z-m>-0.008594</z-m>
+  </center>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>StdbyKnob1</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      <step>10</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      <step>-10</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      <step>1</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      <step>-1</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>StdbyKnob2</object-name>
+  <property>/instrumentation/nav[1]/frequencies/display-sby-khz</property>
+  <interpolation>
+    <entry><ind> 0</ind><dep>  0</dep></entry>
+    <entry><ind>95</ind><dep>720</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.0242</y-m>
+    <z-m>-0.008594</z-m>
+  </center>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>StdbyKnob2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      <step>0.1</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      <step>-0.1</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>3</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      <step>0.01</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+  <action>
+    <button>4</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+      <step>-0.01</step>
+      <min>107.95</min>
+      <max>117.95</max>
+      <wrap>true</wrap>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+  </action>
+</animation>
+
+<!--  Freq Transfer Button -->
+
+<animation>
+  <type>pick</type>
+  <object-name>TFRbutton</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-swap</command>
+      <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+      <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+    </binding>				
+    <binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch2</property>
+		</binding>
+  </action>
+</animation>
+
+</PropertyList>
+

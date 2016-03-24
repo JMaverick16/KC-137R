@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>refuel_lamp_pilot.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>support</object-name>
+		<condition>
+			<not><property>/systems/electrical/outputs/cabin-dim</property></not>
+		</condition>
+		<emission>
+			<red>0.15</red>
+			<green>0.1</green>
+			<blue>0.075</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>support</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+<animation>
+	<type>material</type>
+    <object-name>LampAmber</object-name>
+    <object-name>LampGreen</object-name>
+    <object-name>LampGreen.001</object-name>
+	<object-name>switch</object-name>
+	<object-name>sockle</object-name>
+	<object-name>sockle.001</object-name>
+	<condition>
+		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+	</condition>
+	<emission>
+		<red>0.2</red>
+		<green>0.2</green>
+		<blue>0.2</blue>
+		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+    <object-name>LampAmber</object-name>
+    <object-name>LampGreen</object-name>
+    <object-name>LampGreen.001</object-name>
+	<object-name>sockle</object-name>
+	<object-name>switch</object-name>
+	<object-name>sockle.001</object-name>
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		<property>/systems/electrical/outputs/cabin-dim</property>
+	</condition>
+	<emission>
+	  <red>0.3</red>
+	  <green>0.3</green>
+	  <blue>0.3</blue>
+	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	</emission>
+</animation>	
+
+<animation>
+  <type>noshadow</type>
+  <object-name>LampAmber</object-name>
+  <object-name>LampAmberON</object-name>
+  <object-name>LampGreen</object-name>
+  <object-name>LampGreenON</object-name>
+  <object-name>LampGreen.001</object-name>
+  <object-name>LampGreenON.001</object-name>
+</animation>
+
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>shadow</object-name>
+</effect>
+
+<animation>
+  <type>material</type>
+  <object-name>LampAmberON</object-name>
+  <emission>
+    <red>   5.0 </red>
+    <green> 0.0 </green>
+    <blue>  0.0 </blue>
+  </emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>LampGreenON</object-name>
+	<object-name>LampGreenON.001</object-name>
+	<emission>
+	  <red>   0 </red>
+	  <green> 1.0 </green>
+	  <blue>  0 </blue>
+	</emission>
+</animation>
+
+<!-- Control lights -->
+<animation>
+	<type>select</type>
+	<object-name>LampAmberON</object-name>
+	<condition>			
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+	  <or>
+		<and>
+	  		<not><property>/sim/multiplay/generic/int[12]</property></not>
+			<property>/b707/refuelling/receiving-switch</property>
+			<property>/systems/refuel/serviceable</property>
+		</and>
+	    <property>/controls/test/warn-knob</property>
+	  </or>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>LampGreenON.001</object-name>
+	<condition>			
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+	  <or>
+		<and>
+	    	<greater-than>
+	    		<property>/sim/multiplay/generic/int[12]</property>
+	    		<value>1</value>
+	    	</greater-than>
+			<property>/b707/refuelling/receiving-switch</property>
+			<property>/systems/refuel/serviceable</property>
+		</and>
+	    <property>/controls/test/warn-knob</property>
+	  </or>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>LampGreenON</object-name>
+	<condition>			
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+	  <or>
+		<and>
+	    	<greater-than>
+	    		<property>/sim/multiplay/generic/int[12]</property>
+	    		<value>0</value>
+	    	</greater-than>
+			<property>/b707/refuelling/receiving-switch</property>
+			<property>/systems/refuel/serviceable</property>
+		</and>
+	    <property>/controls/test/warn-knob</property>
+	  </or>
+	</condition>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>switch</object-name>
+	<property>/b707/refuelling/receiving-switch</property>
+	<factor>-60</factor>
+	<axis>
+	  <x>0</x>
+	  <y>1</y>
+	  <z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>switch</object-name>
+	<object-name>sockle</object-name>
+	<visible>true</visible>
+	  <action>
+	    <name>on_off_refuel</name>
+	    <button>0</button>
+	    <repeatable>true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					var rfsw = getprop("/b707/refuelling/receiving-switch") or 0;
+					var pwr_ref = getprop("/b707/ess-bus") or 0;
+					if (!rfsw){
+
+						setprop("/b707/refuelling/receiving-switch", 1);
+						
+						if(pwr_ref &gt; 20){
+							setprop("/systems/refuel/serviceable", 1);
+							b707.doorsystem.refuelexport();
+						}else{
+							settimer(func{setprop("/b707/refuelling/receiving-switch", 0);},0.25);
+						}
+						
+					}else{
+						setprop("/b707/refuelling/receiving-switch", 0);
+						setprop("/systems/refuel/serviceable", 0);
+						if(pwr_ref &gt; 20){
+							b707.doorsystem.refuelexport();
+						}
+					}
+				</script>
+			</binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+	  </action>
+</animation>
+
+
+</PropertyList>
+

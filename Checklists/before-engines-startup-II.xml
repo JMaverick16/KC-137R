@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList> 
+    <title>II. Before engines startup</title>
+    <item>
+      <name>I. Before engines startup /APU or EPU</name>
+      <value>COMPLETED</value>
+    </item>
+
+	<item>
+		<name>CROSSFEED VALVE RESERVE L</name>
+		<value>POSITION CHECK</value>
+		<marker>
+		    <x-m>-17.8207</x-m>
+		    <y-m>0.7678</y-m>
+		    <z-m>0.9000</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/valve-pos[0]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/valve-pos[0]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+	
+	<item>
+		<name>CROSSFEED VALVE TANK 1</name>
+		<value>POSITION CHECK</value>
+		<marker>
+		    <x-m>-17.7802</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>0.9240</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/valve-pos[1]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/valve-pos[1]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>  
+	
+	<item>
+		<name>CROSSFEED VALVE TANK 2</name>
+		<value>POSITION CHECK</value>
+		<marker>
+		    <x-m>-17.7116</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>0.9240</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/valve-pos[2]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/valve-pos[2]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>  
+	
+	<item>
+		<name>CROSSFEED VALVE TANK 3</name>
+		<value>POSITION CHECK</value>
+		<marker>
+		    <x-m>-17.6430</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>0.9240</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/valve-pos[3]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/valve-pos[3]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>  
+	
+	<item>
+		<name>CROSSFEED VALVE TANK 4</name>
+		<value>POSITION CHECK</value>
+		<marker>
+		    <x-m>-17.5727</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>0.9240</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/valve-pos[4]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/valve-pos[4]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>  
+	
+	<item>
+		<name>CROSSFEED VALVE RESERVE R</name>
+		<value>POSITION CHECK</value>
+		<marker>
+		    <x-m>-17.5314</x-m>
+		    <y-m>0.7678</y-m>
+		    <z-m>0.9000</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/valve-pos[5]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/valve-pos[5]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+		
+	<item>
+		<name>BOOST PUMP No.1 F</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.8355</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0231</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[0]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[0]</property>
+		  <value>1</value>
+		</binding> 
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+		
+	<item>
+		<name>BOOST PUMP No.1 A</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.7975</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0231</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[1]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[1]</property>
+		  <value>1</value>
+		</binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+		
+	<item>
+		<name>BOOST PUMP No.2 F</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.7661</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0810</z-m>
+		    <scale>1.8760</scale>
+		</marker>	
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[2]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[2]</property>
+		  <value>1</value>
+		</binding> 
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+		
+	<item>
+		<name>BOOST PUMP No.2 A</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.7281</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0810</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[3]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[3]</property>
+		  <value>1</value>
+		</binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>BOOST PUMP CENTER L</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.7008</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0231</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[4]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[4]</property>
+		  <value>1</value>
+		</binding> 
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+		
+	<item>
+		<name>BOOST PUMP CENTER R</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.6612</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0231</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[5]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[5]</property>
+		  <value>1</value>
+		</binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+			
+	<item>
+		<name>BOOST PUMP No.3 F</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.6264</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0851</z-m>
+		    <scale>1.8760</scale>
+		</marker>	
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[6]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[6]</property>
+		  <value>1</value>
+		</binding> 
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+		
+	<item>
+		<name>BOOST PUMP No.3 A</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.5876</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0851</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[7]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[7]</property>
+		  <value>1</value>
+		</binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+			
+	<item>
+		<name>BOOST PUMP No.4 F</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.5587</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0256</z-m>
+		    <scale>1.8760</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[8]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[8]</property>
+		  <value>1</value>
+		</binding> 
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+		
+	<item>
+		<name>BOOST PUMP No.4 A</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.5182</x-m>
+		    <y-m>0.7719</y-m>
+		    <z-m>1.0256</z-m>
+		    <scale>1.8760</scale>
+		</marker>	
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/boost-pump[9]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/boost-pump[9]</property>
+		  <value>1</value>
+		</binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+		
+	<item>
+		<name>SHUTOFF ENG 1</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.8066</x-m>
+		    <y-m>0.7620</y-m>
+		    <z-m>1.1000</z-m>
+		    <scale>1.8926</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/fuel-shutoff[0]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/fuel-shutoff[0]</property>
+		  <value>1</value>
+		</binding>        
+		<binding>
+            <command>nasal</command>
+            <script>b707.shutoff_pos(0);</script>
+        </binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>SHUTOFF ENG 2</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.7413</x-m>
+		    <y-m>0.7620</y-m>
+		    <z-m>1.1645</z-m>
+		    <scale>1.8926</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/fuel-shutoff[1]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/fuel-shutoff[1]</property>
+		  <value>1</value>
+		</binding>      
+		<binding>
+            <command>nasal</command>
+            <script>b707.shutoff_pos(1);</script>
+        </binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>SHUTOFF ENG 3</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.6066</x-m>
+		    <y-m>0.7620</y-m>
+		    <z-m>1.1645</z-m>
+		    <scale>1.8926</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/fuel-shutoff[2]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/fuel-shutoff[2]</property>
+		  <value>1</value>
+		</binding>      
+		<binding>
+            <command>nasal</command>
+            <script>b707.shutoff_pos(2);</script>
+        </binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>SHUTOFF ENG 4</name>
+		<value>ON</value>
+		<marker>
+		    <x-m>-17.5388</x-m>
+		    <y-m>0.7620</y-m>
+		    <z-m>1.1000</z-m>
+		    <scale>1.8926</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/fuel/valves/fuel-shutoff[3]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/fuel/valves/fuel-shutoff[3]</property>
+		  <value>1</value>
+		</binding>      
+		<binding>
+            <command>nasal</command>
+            <script>b707.shutoff_pos(3);</script>
+        </binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+		     
+</PropertyList>

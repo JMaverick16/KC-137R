@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>instr_n1.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<object-name>needle</object-name>
+		<object-name>needle.001</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<object-name>needle</object-name>
+		<object-name>needle.001</object-name>
+		<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>/engines/engine[2]/n1</property>
+		<interpolation>
+		  <entry><ind>  0.0</ind><dep>    0.0</dep></entry>
+		  <entry><ind>100.0</ind><dep>  270.0</dep></entry>
+		</interpolation>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+
+	<animation> 
+		<type>rotate</type>
+		<object-name>needle.001</object-name>
+		<property>/engines/engine[2]/n1</property>
+    <factor>36</factor>
+		<center>   
+		  <x-m> 0 </x-m> 
+		  <y-m>-0.00278 </y-m>
+			<z-m> 0.0108 </z-m>
+		</center>
+		<axis> 
+		  <x> -1 </x>
+		  <y>  0 </y>
+		  <z>  0 </z>
+		</axis>
+	</animation>
+
+</PropertyList>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>airtemp.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>Airtemp.face</object-name>
+		<object-name>Airtemp.needle</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+			<object-name>Airtemp.face</object-name>
+			<object-name>Airtemp.needle</object-name>
+			<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Airtemp.face</object-name>
+		<object-name>Airtemp.needle</object-name>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.4</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Airtemp.needle</object-name>
+		<property>/environment/temperature-degc</property>
+		<interpolation>
+			<entry><ind>-250</ind><dep>-169.48</dep></entry>
+		  <entry><ind>-100</ind><dep>-169.48</dep></entry>
+		  <entry><ind>   0</ind><dep> 55.74</dep></entry>
+		  <entry><ind>  50</ind><dep> 168.17</dep></entry>
+		  <entry><ind> 200</ind><dep> 168.17</dep></entry>
+		</interpolation>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

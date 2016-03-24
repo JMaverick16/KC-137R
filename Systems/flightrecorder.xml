@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<!-- B707-420 custom flight recorder configuration
+     Marc Kraus, June 2013 
+-->
+<PropertyList>
+    <!-- selected active flight recorder configuration for replay system -->
+    <replay-config type="int">0</replay-config>
+
+    <config n="0">
+        <name type="string">B707 Flight Recorder</name>
+        <!-- include generic stuff -->
+        <signals include="/Aircraft/Generic/flightrecorder/components/position.xml" />
+        <signals include="/Aircraft/Generic/flightrecorder/components/controls.xml" />
+        <signals include="/Aircraft/Generic/flightrecorder/components/surfaces.xml"/>
+        <signals include="/Aircraft/Generic/flightrecorder/components/engine-jet.xml">
+            <count type="int">4</count>
+        </signals>
+        <signals include="/Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
+            <count type="int">3</count>
+        </signals>
+        <signals include="/Aircraft/Generic/flightrecorder/components/tanks.xml">
+            <count type="int">7</count>
+        </signals>
+
+        <signals>  <!-- now the custom properties -->
+
+            <signals>
+                <!--  engine related signals -->
+                <count type="int">4</count>
+                <signal>
+                    <type>bool</type><property type="string">/controls/engines/engine[%i]/cutoff</property>
+                </signal>
+                <signal>
+                    <type>bool</type><property type="string">/engines/engine[%i]/reversed</property>
+                </signal>
+                <signal>
+                    <type>bool</type><property type="string">/controls/engines/engine[%i]/fire</property>
+                </signal>
+                <signal>
+                    <type>double</type><property type="string">/b707/generator/gen-breaker[%i]</property>
+                </signal>
+                <signal>
+                    <type>bool</type><property type="string">/b707/generator/gen-bus-tie-cover[%i]</property>
+                </signal>
+                <signal>
+                    <type>double</type><property type="string">/b707/generator/gen-bus-tie[%i]</property>
+                </signal>
+                <signal>
+                    <type>double</type><property type="string">/b707/generator/gen-control[%i]</property>
+                </signal>
+                <signal>
+                    <type>bool</type><property type="string">/b707/generator/gen-control-cover[%i]</property>
+                </signal>
+                <signal>
+                    <type>bool</type><property type="string">/b707/generator/gen-drive[%i]</property>
+                </signal>
+                <signal>
+                    <type>bool</type><property type="string">/b707/generator/gen-drive-cover[%i]</property>
+                </signal>
+                <signal>
+                    <type>double</type><property type="string">/b707/generator/gen-freq[%i]</property>
+                </signal>
+                <signal>
+                    <type>double</type><property type="string">/b707/generator/gen-load[%i]</property>
+                </signal>
+                <signal>
+                    <type>bool</type><property type="string">/b707/start/startercover[%i]</property>
+                </signal>
+            </signals>
+            <signal>
+                <type>bool</type><property type="string">/b707/crashed</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/apu/apu-bleed-valve</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/apu/off-start-run</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/ac/ac-para-select</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/b707/ac/sync1</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/b707/ac/sync2</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/ac-sel-para-freq</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/ac-sel-para-volts</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/b707/batt-cover</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/battery</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/b707/battery-switch</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/volt-dc</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/volt-load</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/b707/external-power-connected</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/ground-connect</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/b707/shake-effect/shaking</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/b707/shake-effect/effect</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/controls/lighting/strobe</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/controls/lighting/beacon</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/controls/lighting/taxi-lights</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/systems/electrical/outputs/cabin-dim</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/systems/electrical/outputs/panel-dim</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/controls/lighting/landing-light[0]</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/controls/lighting/landing-light[1]</property>
+            </signal>
+            <signal>
+                <type>bool</type><property type="string">/controls/lighting/landing-light[2]</property>
+            </signal>
+            <signal>
+                <type>int</type><property type="string">/autopilot/settings/heading-bug-deg</property>
+            </signal>
+            <signal>
+                <type>float</type><property type="string">/gear/brake-thermal-energy</property>
+            </signal>
+            <signal>
+                <type>double</type><property type="string">/controls/special/wiper-deg</property>
+            </signal>            
+            <signal>
+                <type>int</type><property type="string">/controls/special/wiper-switch</property>
+            </signal>            
+            <signal>
+                <type>bool</type><property type="string">/controls/special/mach-trim-switch</property>
+            </signal>            
+            <signal>
+                <type>double</type><property type="string">/controls/special/slats-switch</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/gear/gear[0]/compression-m</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/gear/gear[1]/compression-m</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/gear/gear[2]/compression-m</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/velocities/groundspeed-kt</property>
+            </signal>
+            <signal>
+                <type>float</type><property type="string">/position/gear-agl-ft</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/surface-positions/speedbrake-norm</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[4]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[5]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[6]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[7]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[8]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[9]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[12]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[13]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[14]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[15]</property>
+            </signal>
+            <signal>
+                <type>float</type>
+                <property type="string">/sim/multiplay/generic/float[16]</property>
+            </signal>
+        </signals>
+
+    </config>
+
+</PropertyList>

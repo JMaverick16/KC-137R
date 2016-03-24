@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList> 
+    <title>V. After startup engines</title>
+	<item>
+      <name>IV. Startup engines</name>
+      <value>COMPLETED</value>
+    </item>
+	<item>
+		<name>GENERATOR ENG 1</name>
+		<value>SYNCHRONIZED</value>
+		<marker>
+		    <x-m>-17.8124</x-m>
+		    <y-m>0.7595</y-m>
+		    <z-m>1.2116</z-m>
+		    <scale>1.4463</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-freq[0]</property>
+		    <value>400</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-freq[0]</property>
+		  <value>400</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+
+	<item>
+		<name>BUS-TIE BREAKER ENG 1</name>
+		<value>CLOSE</value>
+		<marker>
+		    <x-m>-17.8124</x-m>
+		    <y-m>0.6397</y-m>
+		    <z-m>1.3818</z-m>
+		    <scale>2.4876</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-bus-tie[0]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-bus-tie[0]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+
+	<item>
+		<name>GENERATOR ENG 2</name>
+		<value>SYNCHRONIZED</value>
+		<marker>
+		    <x-m>-17.7554</x-m>
+		    <y-m>0.7595</y-m>
+		    <z-m>1.2116</z-m>
+		    <scale>1.4463</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-freq[1]</property>
+		    <value>400</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-freq[1]</property>
+		  <value>400</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+	
+	<item>
+		<name>BUS-TIE BREAKER ENG 2</name>
+		<value>CLOSE</value>
+		<marker>
+		    <x-m>-17.7537</x-m>
+		    <y-m>0.6397</y-m>
+		    <z-m>1.3818</z-m>
+		    <scale>2.4876</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-bus-tie[1]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-bus-tie[1]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+
+	<item>
+		<name>GENERATOR ENG 3</name>
+		<value>SYNCHRONIZED</value>
+		<marker>
+		    <x-m>-17.6992</x-m>
+		    <y-m>0.7595</y-m>
+		    <z-m>1.2116</z-m>
+		    <scale>1.4463</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-freq[2]</property>
+		    <value>400</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-freq[2]</property>
+		  <value>400</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+	
+	<item>
+		<name>BUS-TIE BREAKER ENG 3</name>
+		<value>CLOSE</value>
+		<marker>
+		    <x-m>-17.7033</x-m>
+		    <y-m>0.6397</y-m>
+		    <z-m>1.3818</z-m>
+		    <scale>2.4876</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-bus-tie[2]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-bus-tie[2]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>	
+
+	<item>
+		<name>GENERATOR ENG 4</name>
+		<value>SYNCHRONIZED</value>
+		<marker>
+		    <x-m>-17.6413</x-m>
+		    <y-m>0.7595</y-m>
+		    <z-m>1.2116</z-m>
+		    <scale>1.4463</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-freq[3]</property>
+		    <value>400</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-freq[3]</property>
+		  <value>400</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item> 
+	
+	<item>
+		<name>BUS-TIE BREAKER ENG 4</name>
+		<value>CLOSE</value>
+		<marker>
+		    <x-m>-17.6430</x-m>
+		    <y-m>0.6397</y-m>
+		    <z-m>1.3860</z-m>
+		    <scale>2.6033</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/generator/gen-bus-tie[3]</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/generator/gen-bus-tie[3]</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>SELECTOR AC-PARALLELING</name>
+		<value>GEN 1</value>
+		<marker>
+		    <x-m>-17.5545</x-m>
+		    <y-m>0.7364</y-m>
+		    <z-m>1.2545</z-m>
+		    <scale>2.5041</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/ac/ac-para-select</property>
+		    <value>1</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/ac/ac-para-select</property>
+		  <value>1</value>
+		</binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+	<item>
+		<name>ESSENTIAL POWER SOURCE</name>
+		<value>GEN 1</value>
+		<marker>
+		    <x-m>-17.5388</x-m>
+		    <y-m>0.6620</y-m>
+		    <z-m>1.3645</z-m>
+		    <scale>2.5041</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/ess-power-switch</property>
+		    <value>1</value>
+		  </equals>
+		</condition>		
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/ess-power-switch</property>
+		  <value>1</value>
+		</binding>   
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+
+	<item>
+		<name>GROUND CONNECT</name>
+		<value>OFF</value>
+		<marker>
+		    <x-m>-17.5248</x-m>
+		    <y-m>0.6331</y-m>
+		    <z-m>1.4066</z-m>
+		    <scale>1.9091</scale>
+		</marker>
+		<condition>
+		  <equals>
+		    <property>/b707/ground-connect</property>
+		    <value>0</value>
+		  </equals>
+		</condition>
+		<binding>
+		  <command>property-assign</command>
+		  <property>/b707/ground-connect</property>
+		  <value>0</value>
+		</binding>  
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch1</property>
+	    </binding>
+	</item>
+	
+    <item>
+      <name>SELECTOR LOAD/VOLTS</name>
+      <value>BUS TIE</value>
+	  <marker>
+	      <x-m>-17.5463</x-m>
+	      <y-m>0.5802</y-m>
+	      <z-m>1.4620</z-m>
+	      <scale>2.4380</scale>
+	  </marker>
+      <condition>
+        <equals>
+          <property>/b707/load-volt-selector</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <binding>
+        <command>property-assign</command>
+        <property>/b707/load-volt-selector</property>
+        <value>1</value>
+      </binding>        
+	  <binding>
+	    <command>property-toggle</command>
+	    <property>/sim/sound/switch1</property>
+	  </binding>
+    </item>
+
+</PropertyList>

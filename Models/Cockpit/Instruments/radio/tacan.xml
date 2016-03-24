@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<!-- Boeing 707 by the Lake of Constance Hangar :: M.Kraus July 2013 -->
+<PropertyList>
+
+<path>tacan.ac</path>
+
+<animation>
+	<type>material</type>
+    <object-name>LampGreen</object-name>
+    <object-name>LampAmber</object-name>
+	<object-name>Panel</object-name>
+	<object-name>Panel.001</object-name>
+	<object-name>chan-knob</object-name>
+	<object-name>mode-knob</object-name>
+	<object-name>switch</object-name>
+	<object-name>sockle</object-name>
+	<object-name>vol-knob</object-name>
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		<property>/systems/electrical/outputs/cabin-dim</property>
+	</condition>
+	<emission>
+	  <red>0.3</red>
+	  <green>0.3</green>
+	  <blue>0.3</blue>
+	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+		<object-name>ActDigit1</object-name>
+		<object-name>ActDigit2</object-name>
+	<condition>
+		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+	</condition>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+		<object-name>ActDigit1</object-name>
+		<object-name>ActDigit2</object-name>
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		<property>/systems/electrical/outputs/cabin-dim</property>
+	</condition>
+	<emission>
+	  <red>0.8</red>
+	  <green>0.7</green>
+	  <blue>0.5</blue>
+	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+  <type>noshadow</type>
+  <object-name>LampGreen</object-name>
+  <object-name>LampAmber</object-name>
+</animation>
+
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>shadow</object-name>
+</effect>
+
+<animation>
+  <type>material</type>
+  <object-name>LampAmberON</object-name>
+  <object-name>LampAmberON.001</object-name>
+  <emission>
+    <red>   1.0 </red>
+    <green> 0.8 </green>
+    <blue>  0.4 </blue>
+  </emission>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>LampGreenON</object-name>
+  <emission>
+    <red>   0 </red>
+    <green> 1.0 </green>
+    <blue>  0 </blue>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampGreenON</object-name>
+  <condition>
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+    <or>
+		<and>
+      	  <property>/instrumentation/tacan/in-range</property>
+		  <greater-than>
+      	  	<property>/instrumentation/tacan/switch-position</property>
+			<value>0</value>
+	  	  </greater-than>
+	  	</and>
+      <property>/controls/test/warn-knob</property>
+    </or>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampAmberON</object-name>
+  <condition>
+	<greater-than>
+		<property>/b707/ess-bus</property>
+		<value>20</value>
+	</greater-than>
+	  <or>
+		<and>
+	      <not><property>/instrumentation/tacan/in-range</property></not>
+		  <greater-than>
+	    	  	<property>/instrumentation/tacan/switch-position</property>
+			<value>0</value>
+	  	  </greater-than>
+	  	</and>
+	    <property>/controls/test/warn-knob</property>
+	  </or>
+  </condition>
+</animation>
+
+<animation>
+     <type>rotate</type>
+     <object-name>switch</object-name>
+     <property>/instrumentation/tacan/xy-position</property>
+     <factor>-70</factor>
+     <axis>
+         <x>0.0</x>
+         <y>1.0</y>
+         <z>0.0</z>
+     </axis>
+     <center>
+         <x-m> 0.004</x-m>
+         <y-m> 0.0</y-m>
+         <z-m>-0.012</z-m>
+     </center>
+ </animation>
+ 
+ <animation>
+     <type>pick</type>
+     <object-name>switch</object-name>
+     <object-name>sockle</object-name>
+     <visible>true</visible>
+     <action>
+         <button>0</button>
+         <repeatable>true</repeatable>
+         <interval-sec>0.2</interval-sec>
+         <binding>
+			<command>nasal</command>
+			<script>
+				if (getprop("/instrumentation/tacan/frequencies/selected-channel[4]") == "X") {
+					setprop("/instrumentation/tacan/frequencies/selected-channel[4]", "Y");
+					setprop("/instrumentation/tacan/xy-position", 0);
+				}else{
+					setprop("/instrumentation/tacan/frequencies/selected-channel[4]", "X");
+					setprop("/instrumentation/tacan/xy-position", 1);
+				}
+			</script>
+         </binding>
+         <binding>
+           <command>property-toggle</command>
+           <property>/sim/sound/switch2</property>
+         </binding>
+     </action>
+ </animation>
+
+ <animation>
+      <type>rotate</type>
+      <object-name>vol-knob</object-name>
+      <property>/instrumentation/tacan/volume</property>
+      <factor>-270</factor>
+      <axis>
+          <x>1.0</x>
+          <y>0.0</y>
+          <z>0.0</z>
+      </axis>
+      <center>
+          <x-m> 0.0</x-m>
+          <y-m> 0.03</y-m>
+          <z-m>-0.0125</z-m>
+      </center>
+  </animation>
+  
+<animation>
+	<type>pick</type>
+	<object-name>vol-knob</object-name>
+	<visible>true</visible>
+	<action>
+		<name>calibrate fine dec</name>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/volume</property>
+			<step>0.1</step>
+			<min>0.01</min>
+			<max>1.0</max>
+			<wrap>false</wrap>
+		</binding>
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+	</action>
+	<action>
+		<name>calibrate fine inc</name>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/volume</property>
+			<step>-0.1</step>
+			<min>0.01</min>
+			<max>1.0</max>
+			<wrap>false</wrap>
+		</binding>
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+	</action>
+	<action>
+		<name>calibrate fine dec</name>
+		<button>3</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/volume</property>
+			<step>0.1</step>
+			<min>0.01</min>
+			<max>1.0</max>
+			<wrap>false</wrap>
+		</binding>
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+	</action>
+	<action>
+		<name>calibrate fine inc</name>
+		<button>4</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/volume</property>
+			<step>-0.1</step>
+			<min>0.01</min>
+			<max>1.0</max>
+			<wrap>false</wrap>
+		</binding>
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+	</action>
+</animation>
+
+ <animation>
+      <type>rotate</type>
+      <object-name>mode-knob</object-name>
+      <property>/instrumentation/tacan/switch-position</property>
+		<interpolation>
+		  <entry><ind>  0</ind><dep>  0</dep></entry>
+		  <entry><ind>  1</ind><dep>32.5</dep></entry>
+		  <entry><ind>  2</ind><dep> 63</dep></entry>
+		  <entry><ind>  3</ind><dep> 92</dep></entry>
+		</interpolation>
+      <axis>
+          <x>-1.0</x>
+          <y>0.0</y>
+          <z>0.0</z>
+      </axis>
+      <center>
+          <x-m> 0.0</x-m>
+          <y-m> 0.03</y-m>
+          <z-m> 0.01</z-m>
+      </center>
+  </animation>
+  
+<animation>
+	<type>pick</type>
+	<object-name>mode-knob</object-name>
+	<visible>true</visible>
+	<action>
+		<name>calibrate fine dec</name>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/switch-position</property>
+			<step>1</step>
+			<min>0</min>
+			<max>3</max>
+			<wrap>false</wrap>
+		</binding>
+        <binding>
+			<command>nasal</command>
+			<script>
+				if (getprop("/instrumentation/tacan/frequencies/selected-channel[4]") == "X") {
+					setprop("/instrumentation/tacan/xy-position", 1);
+				}else{
+					setprop("/instrumentation/tacan/xy-position", 0);
+				}
+			</script>
+        </binding>	
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch1</property>
+		</binding>
+	</action>
+	<action>
+		<name>calibrate fine inc</name>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/switch-position</property>
+			<step>-1</step>
+			<min>0</min>
+			<max>3</max>
+			<wrap>false</wrap>
+		</binding>	
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch1</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Panel</object-name>
+	<visible>true</visible>
+	<action>
+		<name>infoTacan</name>
+		<button>0</button>
+        <binding>
+			<command>nasal</command>
+			<script>
+				b707.show_tacan();
+			</script>
+        </binding>	
+	</action>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>ActDigit1</object-name>
+  <property>/instrumentation/tacan/frequencies/selected-channel</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>ActDigit2</object-name>
+  <property>/instrumentation/tacan/frequencies/selected-channel</property>
+  <factor>0.1</factor>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+ <animation>
+      <type>rotate</type>
+      <object-name>chan-knob</object-name>
+      <property>/instrumentation/tacan/frequencies/selected-channel</property>
+	  <factor>-2.7</factor>
+      <axis>
+          <x>1.0</x>
+          <y>0.0</y>
+          <z>0.0</z>
+      </axis>
+      <center>
+          <x-m> 0.0</x-m>
+          <y-m>-0.02</y-m>
+          <z-m> 0.0</z-m>
+      </center>
+  </animation>
+  
+<animation>
+	<type>pick</type>
+	<object-name>chan-knob</object-name>
+	<object-name>Panel.001</object-name>
+	<visible>true</visible>
+	<action>
+		<name>calibrate fine dec</name>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/frequencies/selected-channel</property>
+			<step>10</step>
+			<min>1</min>
+			<max>90</max>
+			<wrap>false</wrap>
+		</binding>       
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+	</action>
+	<action>
+		<name>calibrate fine inc</name>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/frequencies/selected-channel</property>
+			<step>-10</step>
+			<min>1</min>
+			<max>90</max>
+			<wrap>false</wrap>
+		</binding>       
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+	</action>
+	<action>
+		<name>calibrate fine dec</name>
+		<button>3</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/frequencies/selected-channel</property>
+			<step>1</step>
+			<min>1</min>
+			<max>99</max>
+			<wrap>false</wrap>
+		</binding>       
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+	</action>
+	<action>
+		<name>calibrate fine inc</name>
+		<button>4</button>
+		<repeatable>true</repeatable>
+		<binding>	          
+			<command>property-adjust</command>
+			<property>/instrumentation/tacan/frequencies/selected-channel</property>
+			<step>-1</step>
+			<min>1</min>
+			<max>99</max>
+			<wrap>false</wrap>
+		</binding>       
+	  	<binding>
+			<command>property-toggle</command>
+			<property>/sim/sound/switch3</property>
+		</binding>
+	</action>
+</animation>
+	
+
+</PropertyList>

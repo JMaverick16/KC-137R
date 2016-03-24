@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>mach.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>Mach.face</object-name>
+		<object-name>Mach.needle</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Mach.face</object-name>
+		<object-name>Mach.needle</object-name>
+		<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Mach.needle</object-name>
+  <property>/velocities/mach</property>
+  <interpolation>
+    <entry><ind> 0.0</ind><dep>   0.0</dep></entry>
+    <entry><ind> 0.4</ind><dep>  67.5</dep></entry>
+    <entry><ind> 0.5</ind><dep> 112.5</dep></entry>
+    <entry><ind> 0.6</ind><dep> 157.5</dep></entry>
+    <entry><ind> 0.7</ind><dep> 202.5</dep></entry>
+    <entry><ind> 0.8</ind><dep> 247.5</dep></entry>
+    <entry><ind> 0.9</ind><dep> 292.5</dep></entry>
+    <entry><ind> 1.0</ind><dep> 337.5</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+
+</PropertyList>

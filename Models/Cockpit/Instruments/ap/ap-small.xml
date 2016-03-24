@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<!-- Boeing 707 by the Lake of Constance Hangar :: M.Kraus July 2013 -->
+<PropertyList>
+
+<path>ap-small.ac</path>
+
+<!-- Autopilot Mode Selector -->
+<animation>
+  <type>rotate</type>
+  <object-name>turn.001</object-name>
+  <property>/autopilot/Bendix-PB-20/controls/mode-selector</property>
+  <interpolation>
+    <entry><ind> 0</ind><dep>   0.0</dep></entry>
+    <entry><ind> 1</ind><dep> -28.0</dep></entry>
+    <entry><ind> 2</ind><dep> -57.5</dep></entry>
+    <entry><ind> 3</ind><dep> -90.0</dep></entry>
+    <entry><ind> 4</ind><dep>-123.0</dep></entry>
+    <entry><ind> 5</ind><dep>-162.0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m> 0.0</x-m>
+    <y-m>-0.0257</y-m>
+    <z-m> 0.0</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+  
+<animation>
+	<type>pick</type>
+	<object-name>turn.001</object-name>
+	<action>
+	  <button>0</button>
+	  <repeatable>true</repeatable>
+	  <binding>
+	    <command>property-adjust</command>
+			<property>/autopilot/Bendix-PB-20/controls/mode-selector</property>
+	    <step>1</step>
+	    <min>0</min>
+	    <max>5</max>
+	    <wrap>0</wrap>
+	  </binding>
+	  <binding>
+	    <command>property-toggle</command>
+	    <property>/sim/sound/switch2</property>
+	  </binding>
+	</action>
+	<action>
+	  <button>1</button>
+	  <repeatable>true</repeatable>
+	  <binding>
+	    <command>property-adjust</command>
+			<property>/autopilot/Bendix-PB-20/controls/mode-selector</property>
+	    <step>-1</step>
+	    <min>0</min>
+	    <max>5</max>
+	    <wrap>0</wrap>
+	  </binding>
+	  <binding>
+	    <command>property-toggle</command>
+	    <property>/sim/sound/switch2</property>
+	  </binding>
+	</action>
+	<action>
+	  <button>3</button>
+	  <repeatable>true</repeatable>
+	  <binding>
+	    <command>property-adjust</command>
+			<property>/autopilot/Bendix-PB-20/controls/mode-selector</property>
+	    <step>1</step>
+	    <min>0</min>
+	    <max>5</max>
+	    <wrap>0</wrap>
+	  </binding>
+	  <binding>
+	    <command>property-toggle</command>
+	    <property>/sim/sound/switch2</property>
+	  </binding>
+	</action>
+	<action>
+	  <button>4</button>
+	  <repeatable>true</repeatable>
+	  <binding>
+	    <command>property-adjust</command>
+			<property>/autopilot/Bendix-PB-20/controls/mode-selector</property>
+	    <step>-1</step>
+	    <min>0</min>
+	    <max>5</max>
+	    <wrap>0</wrap>
+	  </binding>
+	  <binding>
+	    <command>property-toggle</command>
+	    <property>/sim/sound/switch2</property>
+	  </binding>
+	</action>
+</animation>
+
+<!-- Autopilot Pitch wheels -->
+<animation>
+  <type>rotate</type>
+  <object-name>turn.002</object-name>
+  <property>/autopilot/Bendix-PB-20/settings/pitch-wheel-deg</property>
+  <factor>3</factor>
+  <center>
+    <x-m> 0.0</x-m>
+    <y-m> 0.0333</y-m>
+    <z-m> 0.0</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>turn.002</object-name>
+  <action>
+    <name>small increase (scrollwheel)</name>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/Bendix-PB-20/settings/pitch-wheel-deg</property>
+      <step type="double">-0.25</step>
+      <min>-30.0</min>
+      <max>30.0</max>
+    </binding>
+  </action>
+  <action>
+    <name>small decrease (scrollwheel)</name>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/Bendix-PB-20/settings/pitch-wheel-deg</property>
+      <step type="double">0.25</step>
+      <min>-30.0</min>
+      <max>30.0</max>
+    </binding>
+  </action>
+  <action>
+    <name>reset</name>
+    <button>0</button>
+    <repeatable>true</repeatable>
+		<binding>
+			 <command>property-interpolate</command>
+			 <property>/autopilot/Bendix-PB-20/settings/pitch-wheel-deg</property>
+  		<value>0</value>
+			<time>1</time>
+		</binding>
+  </action>
+</animation>
+
+<!-- Autopilot ALT on off -->
+<animation>
+  <type>rotate</type>
+  <object-name>switch</object-name>
+  <property>/autopilot/Bendix-PB-20/controls/alt-active</property>
+  <factor>-65</factor>
+  <center>
+    <x-m> 0.0034</x-m>
+    <y-m> 0.0</y-m>
+    <z-m> 0.0056</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>switch</object-name>
+  <object-name>sockle</object-name>
+  <action>
+      <button>0</button>      
+      <binding>
+        <command>property-toggle</command>
+        <property>/autopilot/Bendix-PB-20/controls/alt-active</property>
+      </binding> 
+      <binding>
+          <command>nasal</command>
+          <script>
+          	var apa = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;
+          	if(!apa){
+          		settimer(func{ setprop("/autopilot/Bendix-PB-20/controls/alt-active", 0);}, 0.2);
+          	}
+          </script>
+      </binding>    
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch1</property>
+      </binding>
+  </action>
+</animation>
+
+</PropertyList>

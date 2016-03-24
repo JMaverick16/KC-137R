@@ -1,0 +1,4460 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ 	<path>circuitBreaker.ac</path>
+ 	
+	<animation>
+		<type>material</type>
+		<object-name>breakerPanel</object-name>
+		<condition>	
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>b</object-name>
+		<object-name>b.001</object-name>
+		<object-name>b.002</object-name>
+		<object-name>b.003</object-name>
+		<object-name>b.004</object-name>
+		<object-name>b.005</object-name>
+		<object-name>b.006</object-name>
+		<object-name>b.007</object-name>
+		<object-name>b.008</object-name>
+		<object-name>b.009</object-name>
+<!--<object-name>b.010</object-name>
+		<object-name>b.011</object-name>-->
+		<object-name>b.012</object-name>
+		<object-name>b.013</object-name>
+		<object-name>b.014</object-name>
+		<object-name>b.015</object-name>
+		<object-name>b.016</object-name>
+		<object-name>b.017</object-name>
+<!--<object-name>b.018</object-name>
+		<object-name>b.019</object-name>
+		<object-name>b.020</object-name>-->
+		<object-name>b.021</object-name>
+<!--<object-name>b.022</object-name>-->
+		<object-name>b.023</object-name>
+		<object-name>b.024</object-name>
+		<object-name>b.025</object-name>
+		<object-name>b.026</object-name>
+		<object-name>b.027</object-name>
+		<object-name>b.028</object-name>
+		<object-name>b.029</object-name>
+		<object-name>b.030</object-name>
+<!--<object-name>b.031</object-name>-->
+		<object-name>b.032</object-name>
+<!--<object-name>b.033</object-name>
+		<object-name>b.034</object-name>-->
+		<object-name>b.035</object-name>
+		<object-name>b.036</object-name>
+		<object-name>b.037</object-name>
+		<object-name>b.038</object-name>
+		<object-name>b.039</object-name>		
+		<object-name>b.040</object-name>
+		<object-name>b.041</object-name>
+		<object-name>b.042</object-name>
+<!--<object-name>b.043</object-name>
+		<object-name>b.044</object-name>-->
+		<object-name>b.045</object-name>
+		<object-name>b.046</object-name>
+		<object-name>b.047</object-name>
+		<object-name>b.048</object-name>
+		<object-name>b.049</object-name>
+		<object-name>b.050</object-name>
+		<object-name>b.051</object-name>
+<!--<object-name>b.052</object-name>-->
+		<object-name>b.053</object-name>
+		<object-name>b.054</object-name>
+<!--<object-name>b.055</object-name>-->
+		<object-name>b.056</object-name>
+<!--<object-name>b.057</object-name>-->
+		<object-name>b.058</object-name>
+		<object-name>b.059</object-name>
+		<object-name>b.060</object-name>
+		<object-name>b.061</object-name>
+		<object-name>b.062</object-name>
+		<object-name>b.063</object-name>
+<!--<object-name>b.064</object-name>
+		<object-name>b.065</object-name>-->
+		<object-name>b.066</object-name>
+		<object-name>b.067</object-name>
+		<object-name>b.068</object-name>
+		<object-name>b.069</object-name>
+		<object-name>b.070</object-name>
+		<object-name>b.071</object-name>
+<!--<object-name>b.072</object-name>-->
+		<object-name>b.073</object-name>
+		<object-name>b.074</object-name>
+		<object-name>b.075</object-name>
+<!--<object-name>b.076</object-name>
+		<object-name>b.077</object-name>-->
+		<object-name>b.078</object-name>
+		<object-name>b.079</object-name>
+		<object-name>b.080</object-name>
+		<object-name>b.081</object-name>
+		<object-name>b.082</object-name>
+		<object-name>b.083</object-name>
+<!--<object-name>b.084</object-name>-->
+		<object-name>b.085</object-name>
+		<object-name>b.086</object-name>
+		<object-name>b.087</object-name>
+		<object-name>b.088</object-name>
+		<object-name>b.089</object-name>
+		<object-name>b.090</object-name>
+		<object-name>b.091</object-name>
+		<object-name>b.092</object-name>
+		<object-name>b.093</object-name>
+<!--<object-name>b.094</object-name>-->
+		<object-name>b.095</object-name>
+		<object-name>b.096</object-name>
+		<object-name>b.097</object-name>
+<!--<object-name>b.098</object-name>
+		<object-name>b.099</object-name>-->
+		<object-name>b.100</object-name>
+		<object-name>b.101</object-name>
+		<object-name>b.102</object-name>
+		<object-name>b.103</object-name>
+		<object-name>b.104</object-name>
+		<object-name>b.105</object-name>
+		<object-name>b.106</object-name>
+		<object-name>b.107</object-name>
+		<object-name>b.108</object-name>
+		<object-name>b.109</object-name>
+<!--<object-name>b.110</object-name>-->
+		<object-name>b.111</object-name>
+		<object-name>b.112</object-name>
+		<object-name>b.113</object-name>
+		<object-name>b.114</object-name>
+		<object-name>b.115</object-name>
+		<object-name>b.116</object-name>
+		<object-name>b.117</object-name>
+		<object-name>b.118</object-name>
+		<object-name>b.119</object-name>
+		<object-name>b.120</object-name>
+		<object-name>b.121</object-name>
+		<object-name>b.122</object-name>
+		<object-name>b.123</object-name>
+		<object-name>b.124</object-name>
+<!--<object-name>b.125</object-name>-->
+		<object-name>b.126</object-name>
+		<object-name>b.127</object-name>
+		<object-name>b.128</object-name>
+		<object-name>b.129</object-name>
+		<object-name>b.130</object-name>
+<!--<object-name>b.131</object-name>
+		<object-name>b.132</object-name>-->
+		<object-name>b.133</object-name>
+		<object-name>b.134</object-name>
+		<object-name>b.135</object-name>
+		<object-name>b.136</object-name>
+		<object-name>b.137</object-name>
+<!--<object-name>b.138</object-name>-->
+		<object-name>b.139</object-name>
+		<object-name>b.140</object-name>
+		<object-name>b.141</object-name>
+		<object-name>b.142</object-name>
+		<object-name>b.143</object-name>
+		<object-name>b.144</object-name>
+		<object-name>b.145</object-name>
+		<object-name>b.146</object-name>
+<!--<object-name>b.147</object-name>-->
+		<object-name>b.148</object-name>
+		<object-name>b.149</object-name>
+		<object-name>b.150</object-name>
+		<object-name>b.151</object-name>
+		<object-name>b.152</object-name>
+<!--<object-name>b.153</object-name>-->
+		<object-name>b.154</object-name>
+		<object-name>b.155</object-name>
+		<object-name>b.156</object-name>
+		<object-name>b.157</object-name>
+		<object-name>b.158</object-name>
+		<object-name>b.159</object-name>
+		<object-name>b.160</object-name>
+		<object-name>b.161</object-name>
+		<object-name>b.162</object-name>
+		<object-name>b.163</object-name>
+<!--<object-name>b.164</object-name>
+		<object-name>b.165</object-name>-->
+		<object-name>b.166</object-name>
+		<object-name>b.167</object-name>
+<!--<object-name>b.168</object-name>-->
+		<object-name>b.169</object-name>
+		<object-name>b.170</object-name>
+<!--<object-name>b.171</object-name>
+		<object-name>b.172</object-name>
+		<object-name>b.173</object-name>-->
+		<object-name>b.174</object-name>
+		<object-name>b.175</object-name>			
+		<condition>	
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<!-- circuit breaker first row left-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b</object-name>
+      <property>/b707/circuit-breakers/b[0]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[0]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.001</object-name>
+      <property>/b707/circuit-breakers/b[1]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[1]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.002</object-name>
+      <property>/b707/circuit-breakers/b[2]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[2]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.003</object-name>
+      <property>/b707/circuit-breakers/b[3]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.003</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[3]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.004</object-name>
+      <property>/b707/circuit-breakers/b[4]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.004</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[4]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.005</object-name>
+      <property>/b707/circuit-breakers/b[5]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.005</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[5]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.006</object-name>
+      <property>/b707/circuit-breakers/b[6]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.006</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[6]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.007</object-name>
+      <property>/b707/circuit-breakers/b[7]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.007</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[7]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.008</object-name>
+      <property>/b707/circuit-breakers/b[8]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.008</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[8]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.009</object-name>
+      <property>/b707/circuit-breakers/b[9]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.009</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[9]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker first row right -->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.035</object-name>
+      <property>/b707/circuit-breakers/b[17]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.035</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[17]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.036</object-name>
+      <property>/b707/circuit-breakers/b[16]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.036</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[16]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.037</object-name>
+      <property>/b707/circuit-breakers/b[15]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.037</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[15]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.038</object-name>
+      <property>/b707/circuit-breakers/b[14]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.038</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[14]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.039</object-name>
+      <property>/b707/circuit-breakers/b[13]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.039</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[13]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.040</object-name>
+      <property>/b707/circuit-breakers/b[12]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.040</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[12]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.041</object-name>
+      <property>/b707/circuit-breakers/b[11]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.041</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[11]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.042</object-name>
+      <property>/b707/circuit-breakers/b[10]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.042</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[10]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker second row left-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.021</object-name>
+      <property>/b707/circuit-breakers/b[18]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.021</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[18]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.017</object-name>
+      <property>/b707/circuit-breakers/b[19]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.017</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[19]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.016</object-name>
+      <property>/b707/circuit-breakers/b[20]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.016</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[20]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.015</object-name>
+      <property>/b707/circuit-breakers/b[21]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.015</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[21]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.014</object-name>
+      <property>/b707/circuit-breakers/b[22]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.014</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[22]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.013</object-name>
+      <property>/b707/circuit-breakers/b[23]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.013</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[23]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.012</object-name>
+      <property>/b707/circuit-breakers/b[24]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.012</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[24]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker second row right-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.023</object-name>
+      <property>/b707/circuit-breakers/b[25]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.023</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[25]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.024</object-name>
+      <property>/b707/circuit-breakers/b[26]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.024</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[26]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.025</object-name>
+      <property>/b707/circuit-breakers/b[27]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.025</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[27]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.026</object-name>
+      <property>/b707/circuit-breakers/b[28]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.026</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[28]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.027</object-name>
+      <property>/b707/circuit-breakers/b[29]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.027</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[29]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.028</object-name>
+      <property>/b707/circuit-breakers/b[30]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.028</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[30]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.029</object-name>
+      <property>/b707/circuit-breakers/b[31]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.029</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[31]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.030</object-name>
+      <property>/b707/circuit-breakers/b[32]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.030</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[32]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.032</object-name>
+      <property>/b707/circuit-breakers/b[33]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.032</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[33]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+
+	<!-- circuit breaker third row left-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.078</object-name>
+      <property>/b707/circuit-breakers/b[34]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.078</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[34]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.079</object-name>
+      <property>/b707/circuit-breakers/b[35]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.079</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[35]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.080</object-name>
+      <property>/b707/circuit-breakers/b[36]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.080</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[36]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.081</object-name>
+      <property>/b707/circuit-breakers/b[37]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.081</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[37]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.082</object-name>
+      <property>/b707/circuit-breakers/b[38]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.082</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[38]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.083</object-name>
+      <property>/b707/circuit-breakers/b[39]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.083</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[39]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.085</object-name>
+      <property>/b707/circuit-breakers/b[40]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.085</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[40]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.086</object-name>
+      <property>/b707/circuit-breakers/b[41]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.086</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[41]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.087</object-name>
+      <property>/b707/circuit-breakers/b[42]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.087</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[42]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker third row right-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.045</object-name>
+      <property>/b707/circuit-breakers/b[43]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.045</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[43]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.046</object-name>
+      <property>/b707/circuit-breakers/b[44]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.046</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[44]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.047</object-name>
+      <property>/b707/circuit-breakers/b[45]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.047</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[45]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.048</object-name>
+      <property>/b707/circuit-breakers/b[46]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.048</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[46]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.049</object-name>
+      <property>/b707/circuit-breakers/b[47]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.049</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[47]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.050</object-name>
+      <property>/b707/circuit-breakers/b[48]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.050</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[48]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.051</object-name>
+      <property>/b707/circuit-breakers/b[49]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.051</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[49]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.053</object-name>
+      <property>/b707/circuit-breakers/b[50]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.053</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[50]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.054</object-name>
+      <property>/b707/circuit-breakers/b[51]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.054</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[51]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker 4th row left-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.066</object-name>
+      <property>/b707/circuit-breakers/b[52]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.066</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[52]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.067</object-name>
+      <property>/b707/circuit-breakers/b[53]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.067</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[53]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.068</object-name>
+      <property>/b707/circuit-breakers/b[54]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.068</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[54]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.069</object-name>
+      <property>/b707/circuit-breakers/b[55]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.069</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[55]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.070</object-name>
+      <property>/b707/circuit-breakers/b[56]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.070</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[56]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.071</object-name>
+      <property>/b707/circuit-breakers/b[57]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.071</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[57]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.073</object-name>
+      <property>/b707/circuit-breakers/b[58]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.073</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[58]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.074</object-name>
+      <property>/b707/circuit-breakers/b[59]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.074</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[59]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.075</object-name>
+      <property>/b707/circuit-breakers/b[60]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.075</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[60]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker 4th row right -->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.063</object-name>
+      <property>/b707/circuit-breakers/b[61]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.063</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[61]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.062</object-name>
+      <property>/b707/circuit-breakers/b[62]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.062</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[62]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.061</object-name>
+      <property>/b707/circuit-breakers/b[63]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.061</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[63]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.060</object-name>
+      <property>/b707/circuit-breakers/b[64]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.060</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[64]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.059</object-name>
+      <property>/b707/circuit-breakers/b[65]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.059</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[65]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.058</object-name>
+      <property>/b707/circuit-breakers/b[66]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.058</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[66]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.056</object-name>
+      <property>/b707/circuit-breakers/b[67]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.056</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[67]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.054</object-name>
+      <property>/b707/circuit-breakers/b[68]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.054</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[68]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker 5th row left-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.088</object-name>
+      <property>/b707/circuit-breakers/b[69]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.088</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[69]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.089</object-name>
+      <property>/b707/circuit-breakers/b[70]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.089</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[70]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.090</object-name>
+      <property>/b707/circuit-breakers/b[71]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.090</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[71]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.091</object-name>
+      <property>/b707/circuit-breakers/b[72]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.091</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[72]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.092</object-name>
+      <property>/b707/circuit-breakers/b[73]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.092</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[73]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.093</object-name>
+      <property>/b707/circuit-breakers/b[74]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.093</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[74]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.095</object-name>
+      <property>/b707/circuit-breakers/b[75]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.095</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[75]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+    
+  <animation>
+      <type>translate</type>
+      <object-name>b.096</object-name>
+      <property>/b707/circuit-breakers/b[76]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.096</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[76]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+    
+  <animation>
+      <type>translate</type>
+      <object-name>b.097</object-name>
+      <property>/b707/circuit-breakers/b[77]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.097</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[77]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker 5th row right-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.130</object-name>
+      <property>/b707/circuit-breakers/b[78]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.130</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[78]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.129</object-name>
+      <property>/b707/circuit-breakers/b[79]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.129</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[79]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.128</object-name>
+      <property>/b707/circuit-breakers/b[80]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.128</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[80]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.127</object-name>
+      <property>/b707/circuit-breakers/b[81]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.127</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[81]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.126</object-name>
+      <property>/b707/circuit-breakers/b[82]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.126</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[82]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.124</object-name>
+      <property>/b707/circuit-breakers/b[83]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.124</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[83]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.123</object-name>
+      <property>/b707/circuit-breakers/b[84]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.123</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[84]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.122</object-name>
+      <property>/b707/circuit-breakers/b[85]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.122</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[85]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.121</object-name>
+      <property>/b707/circuit-breakers/b[86]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.121</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[86]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+
+	<!-- circuit breaker 6th row left-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.109</object-name>
+      <property>/b707/circuit-breakers/b[87]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.109</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[87]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.108</object-name>
+      <property>/b707/circuit-breakers/b[88]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.108</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[88]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.107</object-name>
+      <property>/b707/circuit-breakers/b[89]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.107</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[89]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.106</object-name>
+      <property>/b707/circuit-breakers/b[90]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.106</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[90]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.105</object-name>
+      <property>/b707/circuit-breakers/b[91]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.105</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[91]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.104</object-name>
+      <property>/b707/circuit-breakers/b[92]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.104</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[92]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.103</object-name>
+      <property>/b707/circuit-breakers/b[93]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.103</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[93]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.102</object-name>
+      <property>/b707/circuit-breakers/b[94]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.102</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[94]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.101</object-name>
+      <property>/b707/circuit-breakers/b[95]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.101</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[95]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.100</object-name>
+      <property>/b707/circuit-breakers/b[96]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.100</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[96]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker 6th row right-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.111</object-name>
+      <property>/b707/circuit-breakers/b[97]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.111</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[97]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.112</object-name>
+      <property>/b707/circuit-breakers/b[98]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.112</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[98]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.113</object-name>
+      <property>/b707/circuit-breakers/b[99]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.113</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[99]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.114</object-name>
+      <property>/b707/circuit-breakers/b[100]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.114</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[100]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.115</object-name>
+      <property>/b707/circuit-breakers/b[101]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.115</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[101]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.116</object-name>
+      <property>/b707/circuit-breakers/b[102]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.116</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[102]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.117</object-name>
+      <property>/b707/circuit-breakers/b[103]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.117</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[103]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.118</object-name>
+      <property>/b707/circuit-breakers/b[104]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.118</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[104]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.119</object-name>
+      <property>/b707/circuit-breakers/b[105]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.119</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[105]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.120</object-name>
+      <property>/b707/circuit-breakers/b[106]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.120</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[106]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+
+	<!-- circuit breaker 7th row left-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.175</object-name>
+      <property>/b707/circuit-breakers/b[107]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.175</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[107]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.174</object-name>
+      <property>/b707/circuit-breakers/b[108]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.174</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[108]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.170</object-name>
+      <property>/b707/circuit-breakers/b[109]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.170</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[109]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.169</object-name>
+      <property>/b707/circuit-breakers/b[110]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.169</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[110]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.167</object-name>
+      <property>/b707/circuit-breakers/b[111]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.167</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[111]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.166</object-name>
+      <property>/b707/circuit-breakers/b[112]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.166</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[112]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker 7th row right-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.133</object-name>
+      <property>/b707/circuit-breakers/b[113]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.133</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[113]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.134</object-name>
+      <property>/b707/circuit-breakers/b[114]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.134</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[114]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.135</object-name>
+      <property>/b707/circuit-breakers/b[115]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.135</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[115]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.136</object-name>
+      <property>/b707/circuit-breakers/b[116]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.136</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[116]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.137</object-name>
+      <property>/b707/circuit-breakers/b[117]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.137</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[117]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.139</object-name>
+      <property>/b707/circuit-breakers/b[118]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.139</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[118]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.140</object-name>
+      <property>/b707/circuit-breakers/b[119]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.140</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[119]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.141</object-name>
+      <property>/b707/circuit-breakers/b[120]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.141</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[120]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.142</object-name>
+      <property>/b707/circuit-breakers/b[121]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.142</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[121]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+ 
+	<!-- circuit breaker 8th row left-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.154</object-name>
+      <property>/b707/circuit-breakers/b[122]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.154</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[122]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.155</object-name>
+      <property>/b707/circuit-breakers/b[123]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.155</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[123]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.156</object-name>
+      <property>/b707/circuit-breakers/b[124]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.156</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[124]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.157</object-name>
+      <property>/b707/circuit-breakers/b[125]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.157</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[125]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.158</object-name>
+      <property>/b707/circuit-breakers/b[126]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.158</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[126]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.159</object-name>
+      <property>/b707/circuit-breakers/b[127]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.159</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[127]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.160</object-name>
+      <property>/b707/circuit-breakers/b[128]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.160</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[128]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.161</object-name>
+      <property>/b707/circuit-breakers/b[129]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.161</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[129]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.162</object-name>
+      <property>/b707/circuit-breakers/b[130]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.162</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[130]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.163</object-name>
+      <property>/b707/circuit-breakers/b[131]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.163</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[131]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+	<!-- circuit breaker 8th row right-->	
+  <animation>
+      <type>translate</type>
+      <object-name>b.152</object-name>
+      <property>/b707/circuit-breakers/b[132]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.152</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[132]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.151</object-name>
+      <property>/b707/circuit-breakers/b[133]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.151</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[133]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.150</object-name>
+      <property>/b707/circuit-breakers/b[134]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.150</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[134]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.149</object-name>
+      <property>/b707/circuit-breakers/b[135]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.149</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[135]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>b.148</object-name>
+      <property>/b707/circuit-breakers/b[136]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>b.148</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[136]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.146</object-name>
+      <property>/b707/circuit-breakers/b[137]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.146</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[137]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.145</object-name>
+      <property>/b707/circuit-breakers/b[138]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.145</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[138]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.144</object-name>
+      <property>/b707/circuit-breakers/b[139]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.144</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[139]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>b.143</object-name>
+      <property>/b707/circuit-breakers/b[140]</property>
+      <factor>0.0065</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>b.143</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+      		<property>/b707/circuit-breakers/b[140]</property>  
+        </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+    </action>
+  </animation>
+	
+</PropertyList>

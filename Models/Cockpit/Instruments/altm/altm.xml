@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>altm.ac</path>
+
+<animation>
+	<type>material</type>
+	<object-name>ALT.Face</object-name>
+	<object-name>ALT.FacePressure</object-name>
+	<object-name>ALT.Needle1</object-name>
+	<object-name>ALT.Needle2</object-name>
+	<condition>
+		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+	</condition>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>ALT.Face</object-name>
+	<object-name>ALT.FacePressure</object-name>
+	<object-name>ALT.Needle1</object-name>
+	<object-name>ALT.Needle2</object-name>
+	<object-name>shadow</object-name>
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		<property>/systems/electrical/outputs/cabin-dim</property>
+	</condition>
+	<emission>
+	  <red>0.8</red>
+	  <green>0.8</green>
+	  <blue>0.8</blue>
+	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	</emission>
+</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>ALT.Knob</object-name>
+		<condition>
+			<not><property>/systems/electrical/outputs/cabin-dim</property></not>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>	
+
+	<animation>
+		<type>material</type>
+		<object-name>support</object-name>
+		<condition>
+			<not><property>/systems/electrical/outputs/cabin-dim</property></not>
+		</condition>
+		<emission>
+			<red>0.05</red>
+			<green>0.05</green>
+			<blue>0.05</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>support</object-name>
+		<object-name>ALT.Knob</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+<animation>
+	<type>noshadow</type>
+	<object-name>shadow</object-name>
+</animation>
+
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>shadow</object-name>
+</effect>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ALT.Needle1</object-name>
+  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.109728</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ALT.Needle2</object-name>
+  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.0109728</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ALT.FacePressure</object-name>
+  <property>/instrumentation/altimeter/setting-inhg</property>
+  <interpolation>
+    <entry><ind>  28</ind><dep>-200</dep></entry>
+    <entry><ind>  30</ind><dep>   0</dep></entry>
+    <entry><ind>31.3</ind><dep> 130</dep></entry>
+  </interpolation>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ALT.Knob</object-name>
+  <property>/instrumentation/altimeter/setting-inhg</property>
+  <factor>500</factor>
+  <center>
+    <x-m>0</x-m>
+    <y-m> 0.0256</y-m>
+    <z-m>-0.0259</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+    
+<animation>
+  <type>pick</type>
+  <object-name>ALT.Face</object-name>
+  <object-name>ALT.Knob</object-name>
+  <visible>true</visible>
+      <action>
+        <name>show info</name>
+        <button>0</button>
+      	<repeatable>true</repeatable>			
+        <binding>
+				  <command>nasal</command>
+				  <script>b707.show_alti()</script>
+				</binding>
+      </action>
+      <action>
+        <name>calibrate fine dec</name>
+        <button>3</button>
+      <repeatable>true</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>/instrumentation/altimeter/setting-inhg</property>
+          <step>-0.01</step>
+          <min>27.9</min>
+          <max>31.4</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>calibrate fine inc</name>
+        <button>4</button>
+      <repeatable>true</repeatable>
+        <binding>
+          <command>property-adjust</command>
+          <property>/instrumentation/altimeter/setting-inhg</property>
+          <step>0.01</step>
+          <min>27.9</min>
+          <max>31.4</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+    </animation>
+
+</PropertyList>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>shadow.ac</path>
+    
+		<!-- No preview for fgrun-->
+		<animation>
+			<object-name>shadow</object-name>
+			<nopreview/>
+		</animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>shadow</object-name>
+        <property>sim/multiplay/generic/float[17]</property>
+        <factor>-1.0</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>shadow</object-name>
+        <property>sim/multiplay/generic/float[8]</property>
+        <factor>0.3048</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>shadow</object-name>
+        <condition>
+         <and>
+          <less-than>
+            <property>sim/multiplay/generic/float[8]</property>
+            <value>300</value>
+          </less-than>
+          <greater-than>
+            <property>sim/multiplay/generic/float[8]</property>
+            <value>0</value>
+          </greater-than>
+         </and>
+        </condition>
+    </animation>
+
+</PropertyList>	

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+	<path>cabin.ac</path>
+	
+	<animation>
+		<object-name>LightVolume3</object-name>
+		<nopreview/>
+	</animation>
+ 
+	<animation>
+		<type>material</type>
+		<object-name>cabin</object-name>
+		<object-name>ablage</object-name>
+		<object-name>theSeats</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+		</emission>
+	</animation>	
+	
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>cabin</object-name>
+    </effect>
+	
+	<model> 
+		<name>theSeats</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/seats/seatspass.xml</path>
+	</model>
+
+	
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-small.xml</path>
+		<name>light_cabin</name>
+		<offsets>   
+		  <x-m> 8.86</x-m>
+		  <y-m>-1.0</y-m>
+		  <z-m> 1.5</z-m>
+		  <pitch-deg>-5.0</pitch-deg>
+		  <roll-deg>-5.0</roll-deg>
+		</offsets>
+	 </model>
+	
+	<!-- inner light-->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>InnerLight</name>
+		<object-name>LightVolume3</object-name>
+		<position>
+			<x> 8.78</x>
+			<y> -0.8</y>
+			<z> 1.6</z>
+		</position>
+		<direction>
+			<x>8.5</x>
+			<y>-1.2</y>
+			<z>0.13</z>
+		</direction>
+    <dim-factor>
+      <property>/systems/electrical/outputs/cabin-dim</property>
+      <factor>1.0</factor>
+      <offset>0</offset>
+      <min>0</min>
+      <max>1.0</max>
+    </dim-factor>
+		<diffuse>
+			<r>0.9</r>
+			<g>0.9</g>
+			<b>0.9</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.2</r>
+			<g>0.2</g>
+			<b>0.2</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.002</l>
+			<q>0.00005</q>
+		</attenuation>
+		<exponent>40</exponent>
+		<near-m>0.05</near-m>
+		<far-m>250</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+	
+	<!-- Rembrand -  light-->
+	<animation>
+		<type>select</type>
+		<object-name>LightVolume3</object-name>
+		<object-name>light_cabin</object-name>
+		<condition>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+	</animation>
+	
+</PropertyList>

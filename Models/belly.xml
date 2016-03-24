@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+	<path>belly.ac</path>
+  <animation>
+    <type>material</type>
+		<object-name>jourContainerBelly</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture-container</texture-prop>
+    <texture>container.png</texture>
+  </animation>
+ 
+	<animation>
+		<type>material</type>
+		<object-name>jour</object-name> 
+		<object-name>jourPlatform</object-name>
+		<object-name>jourContainerBelly</object-name>
+		<object-name>jourCylinder</object-name>
+		<object-name>jourShear</object-name>
+		<object-name>jourShear.001</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.04</red>
+		  <green>0.04</green>
+		  <blue>0.04</blue>
+		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+		</emission>
+	</animation>
+	
+  <animation>
+      <type>translate</type> 
+			<object-name>jourPlatform</object-name>
+			<object-name>jourContainerBelly</object-name>
+      <property>sim/multiplay/generic/float[16]</property>
+			<interpolation>
+				<entry><ind>    0.0</ind><dep>  -0.55</dep></entry>
+				<entry><ind>    0.2</ind><dep>  -0.55</dep></entry>
+				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
+			</interpolation>
+      <axis>
+          <x> 0.0</x>
+          <y> 0.0</y>
+          <z> 1.0</z>
+      </axis>
+  </animation>
+  
+  <animation>
+      <type>translate</type> 
+			<object-name>jourCylinder</object-name>
+      <property>sim/multiplay/generic/float[16]</property>
+			<interpolation>
+				<entry><ind>    0.0</ind><dep>  -0.5</dep></entry>
+				<entry><ind>    0.2</ind><dep>  -0.5</dep></entry>
+				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
+			</interpolation>
+      <axis>
+          <x> 0.0</x>
+          <y> 0.0</y>
+          <z> 1.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>translate</type> 
+			<object-name>jourShear</object-name>
+			<object-name>jourShear.001</object-name>
+      <property>sim/multiplay/generic/float[16]</property>
+			<interpolation>
+				<entry><ind>    0.0</ind><dep>  -0.23</dep></entry>
+				<entry><ind>    0.2</ind><dep>  -0.23</dep></entry>
+				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
+			</interpolation>
+      <axis>
+          <x> 0.0</x>
+          <y> 0.0</y>
+          <z> 1.0</z>
+      </axis>
+  </animation>
+	
+  <animation>
+      <type>rotate</type>
+      <object-name>jourShear.001</object-name>
+      <property>sim/multiplay/generic/float[16]</property>
+			<interpolation>
+				<entry><ind>    0.0</ind><dep> -15.0</dep></entry>
+				<entry><ind>    0.2</ind><dep> -15.0</dep></entry>
+				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
+			</interpolation>
+      <center>
+          <x-m> 0.0</x-m>
+          <y-m> 3.18</y-m>
+          <z-m>-1.92</z-m>
+      </center>
+      <axis>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+      </axis>
+  </animation>
+  
+  <animation>
+      <type>rotate</type>
+      <object-name>jourShear</object-name>
+      <property>sim/multiplay/generic/float[16]</property>
+			<interpolation>
+				<entry><ind>    0.0</ind><dep>  15.0</dep></entry>
+				<entry><ind>    0.2</ind><dep>  15.0</dep></entry>
+				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
+			</interpolation>
+      <center>
+          <x-m> 0.0</x-m>
+          <y-m> 3.18</y-m>
+          <z-m>-1.92</z-m>
+      </center>
+      <axis>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+      </axis>
+  </animation>
+		
+</PropertyList>

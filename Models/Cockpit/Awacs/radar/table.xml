@@ -1,0 +1,6085 @@
+<?xml version="1.0"?>
+
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+	
+	<!-- 1 Row 1 Col -->
+	<model>
+	  <name>0_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.155</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[0]/col[0]</property>
+				<character-size type="double">0.009</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 1 Row 2 Col -->
+	<model>
+	  <name>0_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.155</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[0]/col[1]</property>
+				<character-size type="double">0.009</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 1 Row 3 Col -->
+	<model>
+	  <name>0_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.155</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[0]/col[2]</property>
+				<character-size type="double">0.009</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 1 Row 4 Col -->
+	<model>
+	  <name>0_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.155</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[0]/col[3]</property>
+				<character-size type="double">0.009</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 1 Row 5 Col -->
+	<model>
+	  <name>0_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.155</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[0]/col[4]</property>
+				<character-size type="double">0.009</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 1 Row 6 Col -->
+	<model>
+	  <name>0_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.155</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[0]/col[5]</property>
+				<character-size type="double">0.009</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+
+	<!-- 2 Row 1 Col -->
+	<model>
+	  <name>1_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.146</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[1]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 2 Row 2 Col -->
+	<model>
+	  <name>1_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.146</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[1]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 2 Row 3 Col -->
+	<model>
+	  <name>1_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.146</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[1]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 2 Row 4 Col -->
+	<model>
+	  <name>1_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.146</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[1]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 2 Row 5 Col -->
+	<model>
+	  <name>1_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.146</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[1]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 2 Row 6 Col -->
+	<model>
+	  <name>1_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.146</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[1]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 1 Col -->
+	<model>
+	  <name>2_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.139</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[2]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 2 Col -->
+	<model>
+	  <name>2_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.139</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[2]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 3 Col -->
+	<model>
+	  <name>2_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.139</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[2]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 4 Col -->
+	<model>
+	  <name>2_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.139</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[2]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 5 Col -->
+	<model>
+	  <name>2_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.139</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[2]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 6 Col -->
+	<model>
+	  <name>2_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.139</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[2]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 4 Row 1 Col -->
+	<model>
+	  <name>3_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.132</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[3]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 2 Col -->
+	<model>
+	  <name>3_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.132</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[3]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 3 Col -->
+	<model>
+	  <name>3_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.132</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[3]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 4 Col -->
+	<model>
+	  <name>3_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.132</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[3]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 5 Col -->
+	<model>
+	  <name>3_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.132</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[3]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 6 Col -->
+	<model>
+	  <name>3_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.132</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[3]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 5 Row 1 Col -->
+	<model>
+	  <name>4_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.125</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[4]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 2 Col -->
+	<model>
+	  <name>4_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.125</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[4]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 3 Col -->
+	<model>
+	  <name>4_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.125</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[4]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 4 Col -->
+	<model>
+	  <name>4_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.125</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[4]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 5 Col -->
+	<model>
+	  <name>4_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.125</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[4]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 6 Col -->
+	<model>
+	  <name>4_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.125</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[4]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 6 Row 1 Col -->
+	<model>
+	  <name>5_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[5]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 2 Col -->
+	<model>
+	  <name>5_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[5]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 3 Col -->
+	<model>
+	  <name>5_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[5]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 4 Col -->
+	<model>
+	  <name>5_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[5]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 5 Col -->
+	<model>
+	  <name>5_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[5]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 6 Col -->
+	<model>
+	  <name>5_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[5]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 1 Col -->
+	<model>
+	  <name>6_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[6]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 2 Col -->
+	<model>
+	  <name>6_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[6]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 3 Col -->
+	<model>
+	  <name>7_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[7]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 4 Col -->
+	<model>
+	  <name>6_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[6]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 5 Col -->
+	<model>
+	  <name>6_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[6]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 6 Col -->
+	<model>
+	  <name>6_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[6]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 1 Col -->
+	<model>
+	  <name>7_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[7]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 2 Col -->
+	<model>
+	  <name>7_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[7]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 3 Col -->
+	<model>
+	  <name>7_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[7]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 4 Col -->
+	<model>
+	  <name>7_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[7]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 5 Col -->
+	<model>
+	  <name>7_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[7]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 6 Col -->
+	<model>
+	  <name>7_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[7]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 1 Col -->
+	<model>
+	  <name>8_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[8]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 2 Col -->
+	<model>
+	  <name>8_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[8]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 3 Col -->
+	<model>
+	  <name>8_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[8]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 4 Col -->
+	<model>
+	  <name>8_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[8]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 5 Col -->
+	<model>
+	  <name>8_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[8]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 6 Col -->
+	<model>
+	  <name>8_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[8]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 10 Row 1 Col -->
+	<model>
+	  <name>9_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[9]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 2 Col -->
+	<model>
+	  <name>9_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[9]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 3 Col -->
+	<model>
+	  <name>9_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[9]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 4 Col -->
+	<model>
+	  <name>9_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[9]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 5 Col -->
+	<model>
+	  <name>9_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[9]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 6 Col -->
+	<model>
+	  <name>9_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[9]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 11 Row 1 Col -->
+	<model>
+	  <name>10_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[10]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 2 Col -->
+	<model>
+	  <name>10_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[10]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 3 Col -->
+	<model>
+	  <name>10_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[10]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 4 Col -->
+	<model>
+	  <name>10_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[10]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 5 Col -->
+	<model>
+	  <name>10_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[10]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 6 Col -->
+	<model>
+	  <name>10_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[10]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 12 Row 1 Col -->
+	<model>
+	  <name>11_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[11]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 2 Col -->
+	<model>
+	  <name>11_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[11]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 3 Col -->
+	<model>
+	  <name>11_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[11]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 4 Col -->
+	<model>
+	  <name>11_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[11]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 5 Col -->
+	<model>
+	  <name>11_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[11]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 6 Col -->
+	<model>
+	  <name>11_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[11]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 1 Col -->
+	<model>
+	  <name>12_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.07</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[12]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 2 Col -->
+	<model>
+	  <name>12_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.07</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[12]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 3 Col -->
+	<model>
+	  <name>12_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.07</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[12]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 4 Col -->
+	<model>
+	  <name>12_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.07</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[12]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 5 Col -->
+	<model>
+	  <name>12_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.07</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[12]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 6 Col -->
+	<model>
+	  <name>12_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.07</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[12]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 1 Col -->
+	<model>
+	  <name>13_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[13]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 2 Col -->
+	<model>
+	  <name>13_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[13]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 3 Col -->
+	<model>
+	  <name>13_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[13]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 4 Col -->
+	<model>
+	  <name>13_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[13]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 5 Col -->
+	<model>
+	  <name>13_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[13]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 6 Col -->
+	<model>
+	  <name>13_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[13]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 1 Col -->
+	<model>
+	  <name>14_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[14]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 2 Col -->
+	<model>
+	  <name>14_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[14]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 3 Col -->
+	<model>
+	  <name>14_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[14]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 4 Col -->
+	<model>
+	  <name>14_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[14]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 5 Col -->
+	<model>
+	  <name>14_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[14]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 6 Col -->
+	<model>
+	  <name>14_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[14]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 16 Row 1 Col -->
+	<model>
+	  <name>15_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[15]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 2 Col -->
+	<model>
+	  <name>15_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[15]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 3 Col -->
+	<model>
+	  <name>15_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[15]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 4 Col -->
+	<model>
+	  <name>15_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[15]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 5 Col -->
+	<model>
+	  <name>15_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[15]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 6 Col -->
+	<model>
+	  <name>15_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[15]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 17 Row 1 Col -->
+	<model>
+	  <name>16_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[16]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 2 Col -->
+	<model>
+	  <name>16_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[16]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 3 Col -->
+	<model>
+	  <name>16_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[16]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 4 Col -->
+	<model>
+	  <name>16_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[16]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 5 Col -->
+	<model>
+	  <name>16_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[16]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 6 Col -->
+	<model>
+	  <name>16_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[16]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 18 Row 1 Col -->
+	<model>
+	  <name>17_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[17]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 2 Col -->
+	<model>
+	  <name>17_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[17]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 3 Col -->
+	<model>
+	  <name>17_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[17]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 4 Col -->
+	<model>
+	  <name>17_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[17]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 5 Col -->
+	<model>
+	  <name>17_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[17]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 6 Col -->
+	<model>
+	  <name>17_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[17]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 1 Col -->
+	<model>
+	  <name>18_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[18]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 2 Col -->
+	<model>
+	  <name>18_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[18]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 3 Col -->
+	<model>
+	  <name>19_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[19]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 4 Col -->
+	<model>
+	  <name>18_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[18]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 5 Col -->
+	<model>
+	  <name>18_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[18]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 6 Col -->
+	<model>
+	  <name>18_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[18]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 1 Col -->
+	<model>
+	  <name>19_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[19]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 2 Col -->
+	<model>
+	  <name>19_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[19]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 3 Col -->
+	<model>
+	  <name>19_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[19]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 4 Col -->
+	<model>
+	  <name>19_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[19]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 5 Col -->
+	<model>
+	  <name>19_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[19]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 6 Col -->
+	<model>
+	  <name>19_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[19]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 1 Col -->
+	<model>
+	  <name>20_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[20]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 2 Col -->
+	<model>
+	  <name>20_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[20]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 3 Col -->
+	<model>
+	  <name>20_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[20]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 4 Col -->
+	<model>
+	  <name>20_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[20]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 5 Col -->
+	<model>
+	  <name>20_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[20]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 6 Col -->
+	<model>
+	  <name>20_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[20]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 22 Row 1 Col -->
+	<model>
+	  <name>21_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[21]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 2 Col -->
+	<model>
+	  <name>21_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[21]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 3 Col -->
+	<model>
+	  <name>21_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[21]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 4 Col -->
+	<model>
+	  <name>21_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[21]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 5 Col -->
+	<model>
+	  <name>21_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[21]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 6 Col -->
+	<model>
+	  <name>21_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[21]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 23 Row 1 Col -->
+	<model>
+	  <name>22_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> 0.0</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[22]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 2 Col -->
+	<model>
+	  <name>22_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> 0.0</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[22]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 3 Col -->
+	<model>
+	  <name>22_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> 0.0</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[22]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 4 Col -->
+	<model>
+	  <name>22_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.0</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[22]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 5 Col -->
+	<model>
+	  <name>22_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> 0.0</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[22]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 6 Col -->
+	<model>
+	  <name>22_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> 0.0</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[22]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 24 Row 1 Col -->
+	<model>
+	  <name>23_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> -0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[23]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 2 Col -->
+	<model>
+	  <name>23_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> -0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[23]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 3 Col -->
+	<model>
+	  <name>23_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> -0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[23]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 4 Col -->
+	<model>
+	  <name>23_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> -0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[23]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 5 Col -->
+	<model>
+	  <name>23_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> -0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[23]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 6 Col -->
+	<model>
+	  <name>23_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> -0.007</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[23]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 1 Col -->
+	<model>
+	  <name>24_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> -0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[24]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 2 Col -->
+	<model>
+	  <name>24_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> -0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[24]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 3 Col -->
+	<model>
+	  <name>24_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> -0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[24]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 4 Col -->
+	<model>
+	  <name>24_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> -0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[24]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 5 Col -->
+	<model>
+	  <name>24_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> -0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[24]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 3 Row 6 Col -->
+	<model>
+	  <name>24_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> -0.014</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[24]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 4 Row 1 Col -->
+	<model>
+	  <name>25_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> -0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[25]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 2 Col -->
+	<model>
+	  <name>25_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> -0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[25]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 3 Col -->
+	<model>
+	  <name>25_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> -0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[25]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 4 Col -->
+	<model>
+	  <name>25_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> -0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[25]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 5 Col -->
+	<model>
+	  <name>25_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> -0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[25]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 4 Row 6 Col -->
+	<model>
+	  <name>25_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> -0.021</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[25]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 5 Row 1 Col -->
+	<model>
+	  <name>26_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> -0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[26]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 2 Col -->
+	<model>
+	  <name>26_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> -0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[26]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 3 Col -->
+	<model>
+	  <name>26_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> -0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[26]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 4 Col -->
+	<model>
+	  <name>26_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> -0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[26]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 5 Col -->
+	<model>
+	  <name>26_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> -0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[26]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 5 Row 6 Col -->
+	<model>
+	  <name>26_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> -0.028</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[26]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 6 Row 1 Col -->
+	<model>
+	  <name>27_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> -0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[27]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 2 Col -->
+	<model>
+	  <name>27_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> -0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[27]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 3 Col -->
+	<model>
+	  <name>27_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> -0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[27]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 4 Col -->
+	<model>
+	  <name>27_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> -0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[27]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 5 Col -->
+	<model>
+	  <name>27_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> -0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[27]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 6 Row 6 Col -->
+	<model>
+	  <name>27_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> -0.035</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[27]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+
+	<!-- 7 Row 1 Col -->
+	<model>
+	  <name>28_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m> -0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[28]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 2 Col -->
+	<model>
+	  <name>28_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m> -0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[28]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 3 Col -->
+	<model>
+	  <name>29_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m> -0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[29]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 4 Col -->
+	<model>
+	  <name>28_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> -0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[28]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 5 Col -->
+	<model>
+	  <name>28_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m> -0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[28]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 7 Row 6 Col -->
+	<model>
+	  <name>28_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m> -0.042</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[28]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>	
+	<!-- 8 Row 1 Col -->
+	<model>
+	  <name>29_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[29]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 2 Col -->
+	<model>
+	  <name>29_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[29]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 3 Col -->
+	<model>
+	  <name>29_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[29]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 4 Col -->
+	<model>
+	  <name>29_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[29]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 5 Col -->
+	<model>
+	  <name>29_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[29]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 8 Row 6 Col -->
+	<model>
+	  <name>29_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.049</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[29]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 1 Col -->
+	<model>
+	  <name>30_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[30]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 2 Col -->
+	<model>
+	  <name>30_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[30]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 3 Col -->
+	<model>
+	  <name>30_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[30]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 4 Col -->
+	<model>
+	  <name>30_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[30]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 5 Col -->
+	<model>
+	  <name>30_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[30]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 9 Row 6 Col -->
+	<model>
+	  <name>30_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.056</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[30]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 10 Row 1 Col -->
+	<model>
+	  <name>31_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[31]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 2 Col -->
+	<model>
+	  <name>31_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[31]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 3 Col -->
+	<model>
+	  <name>31_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[31]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 4 Col -->
+	<model>
+	  <name>31_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[31]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 5 Col -->
+	<model>
+	  <name>31_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[31]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 10 Row 6 Col -->
+	<model>
+	  <name>31_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.063</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[31]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 11 Row 1 Col -->
+	<model>
+	  <name>32_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.070</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[32]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 2 Col -->
+	<model>
+	  <name>32_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.070</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[32]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 3 Col -->
+	<model>
+	  <name>32_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.070</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[32]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 4 Col -->
+	<model>
+	  <name>32_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.070</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[32]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 5 Col -->
+	<model>
+	  <name>32_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.070</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[32]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 11 Row 6 Col -->
+	<model>
+	  <name>32_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.070</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[32]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 12 Row 1 Col -->
+	<model>
+	  <name>33_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[33]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 2 Col -->
+	<model>
+	  <name>33_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[33]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 3 Col -->
+	<model>
+	  <name>33_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[33]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 4 Col -->
+	<model>
+	  <name>33_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[33]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 5 Col -->
+	<model>
+	  <name>33_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[33]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 12 Row 6 Col -->
+	<model>
+	  <name>33_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.077</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[33]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 1 Col -->
+	<model>
+	  <name>34_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[34]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 2 Col -->
+	<model>
+	  <name>34_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[34]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 3 Col -->
+	<model>
+	  <name>34_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[34]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 4 Col -->
+	<model>
+	  <name>34_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[34]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 5 Col -->
+	<model>
+	  <name>34_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[34]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 13 Row 6 Col -->
+	<model>
+	  <name>34_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.084</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[34]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 1 Col -->
+	<model>
+	  <name>35_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[35]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 2 Col -->
+	<model>
+	  <name>35_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[35]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 3 Col -->
+	<model>
+	  <name>35_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[35]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 4 Col -->
+	<model>
+	  <name>35_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[35]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 5 Col -->
+	<model>
+	  <name>35_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[35]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 14 Row 6 Col -->
+	<model>
+	  <name>35_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.091</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[35]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 1 Col -->
+	<model>
+	  <name>36_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[36]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 2 Col -->
+	<model>
+	  <name>36_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[36]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 3 Col -->
+	<model>
+	  <name>36_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[36]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 4 Col -->
+	<model>
+	  <name>36_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[36]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 5 Col -->
+	<model>
+	  <name>36_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[36]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 15 Row 6 Col -->
+	<model>
+	  <name>36_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.098</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[36]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 16 Row 1 Col -->
+	<model>
+	  <name>37_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[37]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 2 Col -->
+	<model>
+	  <name>37_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[37]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 3 Col -->
+	<model>
+	  <name>37_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[37]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 4 Col -->
+	<model>
+	  <name>37_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[37]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 5 Col -->
+	<model>
+	  <name>37_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[37]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 16 Row 6 Col -->
+	<model>
+	  <name>37_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.105</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[37]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 17 Row 1 Col -->
+	<model>
+	  <name>38_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[38]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 2 Col -->
+	<model>
+	  <name>38_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[38]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 3 Col -->
+	<model>
+	  <name>38_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[38]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 4 Col -->
+	<model>
+	  <name>38_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[38]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 5 Col -->
+	<model>
+	  <name>38_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[38]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 17 Row 6 Col -->
+	<model>
+	  <name>38_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.112</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[38]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 18 Row 1 Col -->
+	<model>
+	  <name>39_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[39]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 2 Col -->
+	<model>
+	  <name>39_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[39]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 3 Col -->
+	<model>
+	  <name>39_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[39]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 4 Col -->
+	<model>
+	  <name>39_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[39]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 5 Col -->
+	<model>
+	  <name>39_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[39]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 18 Row 6 Col -->
+	<model>
+	  <name>39_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.119</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[39]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 1 Col -->
+	<model>
+	  <name>40_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.126</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[40]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 2 Col -->
+	<model>
+	  <name>40_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.126</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[40]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 3 Col -->
+	<model>
+	  <name>41_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.126</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[41]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 4 Col -->
+	<model>
+	  <name>40_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.126</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[40]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 5 Col -->
+	<model>
+	  <name>40_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.126</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[40]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 19 Row 6 Col -->
+	<model>
+	  <name>40_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.126</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[40]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 1 Col -->
+	<model>
+	  <name>41_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.133</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[41]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 2 Col -->
+	<model>
+	  <name>41_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.133</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[41]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 3 Col -->
+	<model>
+	  <name>41_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.133</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[41]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 4 Col -->
+	<model>
+	  <name>41_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.133</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[41]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 5 Col -->
+	<model>
+	  <name>41_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.133</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[41]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 20 Row 6 Col -->
+	<model>
+	  <name>41_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.133</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[41]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 1 Col -->
+	<model>
+	  <name>42_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.140</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[42]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 2 Col -->
+	<model>
+	  <name>42_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.140</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[42]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 3 Col -->
+	<model>
+	  <name>42_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.140</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[42]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 4 Col -->
+	<model>
+	  <name>42_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.140</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[42]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 5 Col -->
+	<model>
+	  <name>42_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.140</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[42]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 21 Row 6 Col -->
+	<model>
+	  <name>42_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.140</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[42]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 22 Row 1 Col -->
+	<model>
+	  <name>43_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.147</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[43]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 2 Col -->
+	<model>
+	  <name>43_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.147</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[43]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 3 Col -->
+	<model>
+	  <name>43_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.147</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[43]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 4 Col -->
+	<model>
+	  <name>43_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.147</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[43]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 5 Col -->
+	<model>
+	  <name>43_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.147</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[43]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 22 Row 6 Col -->
+	<model>
+	  <name>43_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.147</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[43]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 23 Row 1 Col -->
+	<model>
+	  <name>44_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.154</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[44]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 2 Col -->
+	<model>
+	  <name>44_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.154</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[44]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 3 Col -->
+	<model>
+	  <name>44_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.154</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[44]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 4 Col -->
+	<model>
+	  <name>44_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.154</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[44]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 5 Col -->
+	<model>
+	  <name>44_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.154</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[44]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 23 Row 6 Col -->
+	<model>
+	  <name>44_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.154</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[44]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+		<!-- 24 Row 1 Col -->
+	<model>
+	  <name>45_0</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.15</y-m>
+			<z-m>-0.163</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[45]/col[0]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 2 Col -->
+	<model>
+	  <name>45_1</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.1</y-m>
+			<z-m>-0.163</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[45]/col[1]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 3 Col -->
+	<model>
+	  <name>45_2</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.163</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[45]/col[2]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 4 Col -->
+	<model>
+	  <name>45_3</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.0</y-m>
+			<z-m>-0.163</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[45]/col[3]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 5 Col -->
+	<model>
+	  <name>45_4</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.163</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[45]/col[4]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+	<!-- 24 Row 6 Col -->
+	<model>
+	  <name>45_5</name>
+		<path>Aircraft/707/Models/Cockpit/Awacs/radar/screen-layout.xml</path>
+		<offsets>
+			<x-m>-0.0025</x-m>
+			<y-m> 0.1</y-m>
+			<z-m>-0.163</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<property type="string">/instrumentation/mptcas/table/row[45]/col[5]</property>
+				<character-size type="double">0.007</character-size>
+				<color>
+					<red   type="double">0.4</red>
+					<green type="double">0.6</green>
+					<blue  type="double">0.0</blue>
+				</color>
+				<alignment>left-top</alignment>
+			</params>
+		</overlay>
+	</model>
+</PropertyList>

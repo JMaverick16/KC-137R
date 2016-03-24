@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>agl.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>arrow</object-name>
+		<object-name>off-flag</object-name>
+		<object-name>altnum100</object-name>
+		<object-name>altnum1000</object-name>
+		<object-name>altnum10000</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>newFace</object-name>
+		<object-name>face3000</object-name>
+		<object-name>faceOut</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.4</red>
+			<green>0.3</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>agl-knob</object-name>		
+		<object-name>lampOff</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>arrow</object-name>
+		<object-name>off-flag</object-name>
+		<object-name>altnum100</object-name>
+		<object-name>altnum1000</object-name>
+		<object-name>altnum10000</object-name>
+		<object-name>shadow</object-name>
+		<object-name>newFace</object-name>
+		<object-name>face3000</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>agl-knob</object-name>
+		<object-name>frame</object-name>
+		<object-name>lampOff</object-name>
+		<object-name>faceOut</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+	 
+	<animation>
+		<type>material</type>
+		<object-name>lampOn</object-name>
+		<emission>
+		  <red>   1.0 </red>
+		  <green> 0.8 </green>
+		  <blue>  0.4 </blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+		<object-name>shadowArrow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+		<object-name>shadowArrow</object-name>
+  </effect>
+  
+	<animation>
+		<type>select</type>
+		<object-name>lampOn</object-name>
+		<condition>	
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		    <and>
+				  <property>/instrumentation/aglradar/power-btn</property>
+				  <property>/instrumentation/aglradar/mda-lamp</property>
+				</and>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>off-flag</object-name>
+		<condition>
+			<or>
+				<less-than>
+					<property>/b707/ess-bus</property>
+					<value>22</value>
+				</less-than>
+		   	<not><property>/instrumentation/aglradar/power-btn</property></not>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>altnum.off</object-name>
+		<condition>
+			<or>
+				<less-than>
+					<property>/b707/ess-bus</property>
+					<value>22</value>
+				</less-than>
+		   	<not><property>/instrumentation/aglradar/power-btn</property></not>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>face3000</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/b707/ess-bus</property>
+					<value>22</value>
+				</greater-than>
+		   	<property>/instrumentation/aglradar/power-btn</property>			
+		   	<greater-than>
+					<property>/instrumentation/aglradar/alt-ft</property>
+					<value>3000</value>
+				</greater-than>
+		  </and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>faceOut</object-name>
+		<condition>
+			<or>
+				<less-than>
+					<property>/b707/ess-bus</property>
+					<value>22</value>
+				</less-than>
+		   	<not><property>/instrumentation/aglradar/power-btn</property></not>				
+		  </or>
+		</condition>
+	</animation>
+	
+  <animation>
+      <type>textranslate</type>
+      <object-name>newFace</object-name>
+      <condition>
+				<or>
+					<greater-than>
+						<property>/b707/ess-bus</property>
+						<value>22</value>
+					</greater-than>
+				 	<property>/instrumentation/aglradar/power-btn</property>
+				</or>
+			</condition>
+      <property>/instrumentation/aglradar/alt-ft</property>
+      <bias>0.00001</bias>
+      <factor>0.000242</factor>
+      <max>3000</max>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+      </axis>
+  </animation>
+  
+  
+  <!-- over 3000 ft the arrow continue -->
+  <animation>
+		<type>translate</type>
+		<object-name>arrow</object-name>
+		<object-name>shadowArrow</object-name>
+		<property>/instrumentation/aglradar/alt-ft</property>
+      <condition>
+				<and>
+					<greater-than>
+						<property>/b707/ess-bus</property>
+						<value>22</value>
+					</greater-than>
+				 	<property>/instrumentation/aglradar/power-btn</property>			
+				 	<greater-than>
+						<property>/instrumentation/aglradar/alt-ft</property>
+						<value>3000</value>
+					</greater-than>
+				</and>
+      </condition>
+		<interpolation>
+			<entry><ind> 3000</ind><dep>  0.0</dep></entry>
+		  <entry><ind>10000</ind><dep>  0.0375</dep></entry>
+		  <entry><ind>40000</ind><dep>  0.0375</dep></entry>
+		</interpolation>
+		<axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>1</z>
+		</axis>
+	</animation>
+  
+  <!-- the Flightlevel digits -->	
+  <animation>
+      <type>textranslate</type>
+      <object-name>altnum100</object-name>
+      <property>/instrumentation/aglradar/alt-offset-ft</property>
+      <factor>0.1</factor>
+      <step>1</step>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>textranslate</type>
+      <object-name>altnum1000</object-name>
+      <property>/instrumentation/aglradar/alt-offset-ft</property>
+      <factor>0.01</factor>
+      <step>10</step>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>textranslate</type>
+      <object-name>altnum10000</object-name>
+      <property>/instrumentation/aglradar/alt-offset-ft</property>
+      <factor>0.001</factor>
+      <step>100</step>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+ 
+ <!-- the offset knob --> 
+	<animation>
+		<type>rotate</type>
+		<object-name>agl-knob</object-name>
+		<property>/instrumentation/aglradar/alt-offset-ft</property>
+		<factor>1</factor>
+		<center>
+		  <x-m>0</x-m>
+		  <y-m>0.0095</y-m>
+		  <z-m>-0.0347</z-m>
+		</center>
+		<axis>
+		  <x>1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>agl-knob</object-name>
+		<object-name>face</object-name>
+		<visible>true</visible>
+		  <action>
+		    <name>calibrate reset</name>
+		    <button>0</button>
+		    <repeatable>true</repeatable>
+				<binding>
+					 <command>property-assign</command>
+					 <property>/instrumentation/aglradar/alt-offset-ft</property>
+					 <value>0</value>
+				</binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+		  </action>  
+		  <action>
+		      <button>3</button>
+		      <binding>
+		          <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+		          </condition>
+						  <command>property-adjust</command>
+						  <property>/instrumentation/aglradar/alt-offset-ft</property>
+						  <step>5</step>
+						  <min>0</min>
+						  <max>995</max>
+						  <wrap>false</wrap>
+		      </binding>
+		      <binding>
+		          <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+		          </condition>
+						  <command>property-adjust</command>
+						  <property>/instrumentation/aglradar/alt-offset-ft</property>
+						  <step>100</step>
+						  <min>0</min>
+						  <max>995</max>
+						  <wrap>false</wrap>
+		      </binding>
+					<binding>
+						<command>property-toggle</command>
+						<property>/sim/sound/switch3</property>
+					</binding>
+		  </action>
+		  <action>
+		      <button>4</button>
+		      <binding>
+		          <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+		          </condition>
+						  <command>property-adjust</command>
+						  <property>/instrumentation/aglradar/alt-offset-ft</property>
+						  <step>-5</step>
+						  <min>0</min>
+						  <max>995</max>
+						  <wrap>false</wrap>
+		      </binding>
+		      <binding>
+		          <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+		          </condition>
+						  <command>property-adjust</command>
+						  <property>/instrumentation/aglradar/alt-offset-ft</property>
+						  <step>-100</step>
+						  <min>0</min>
+						  <max>995</max>
+						  <wrap>false</wrap>
+		      </binding>
+					<binding>
+						<command>property-toggle</command>
+						<property>/sim/sound/switch3</property>
+					</binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>newFace</object-name>
+		<visible>true</visible>
+		  <action>
+		    <name>show alt</name>
+		    <button>0</button>
+		    <repeatable>true</repeatable>
+				<binding>
+					 <command>nasal</command>
+					 <script>b707.show_alti();</script>
+				</binding>
+		  </action>
+	</animation>
+</PropertyList>

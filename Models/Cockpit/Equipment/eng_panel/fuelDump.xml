@@ -1,0 +1,648 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>fuelDump.ac</path>
+
+	<animation>
+		<type>material</type>		
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmber.001</object-name>
+		<object-name>LampBlue</object-name>
+		<object-name>LampBlue.001</object-name>
+		<object-name>LampBlue.002</object-name>
+		<object-name>LampBlue.003</object-name>
+		<object-name>LampBlue.004</object-name>
+		<object-name>LampBlue.005</object-name>
+		<object-name>sockle.lamp</object-name> 
+		<object-name>sockle.000</object-name>
+		<object-name>sockle.001</object-name>
+		<object-name>sockle.002</object-name>
+		<object-name>sockle.003</object-name>
+		<object-name>sockle.004</object-name>
+		<object-name>sockle.005</object-name>
+		<object-name>sockle.006</object-name>
+		<object-name>sockle.007</object-name>
+		<object-name>switch.000</object-name>
+		<object-name>switch.001</object-name>
+		<object-name>switch.002</object-name>
+		<object-name>switch.003</object-name>
+		<object-name>switch.004</object-name>
+		<object-name>switch.005</object-name>
+		<object-name>switch.006</object-name>
+		<object-name>switch.007</object-name>
+		<object-name>cover</object-name>
+		<object-name>cover.001</object-name>
+		<object-name>scharnier</object-name>
+		<object-name>scharnier.001</object-name>
+		<condition>		
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>LampBlue</object-name>
+		<object-name>LampBlue.001</object-name>
+		<object-name>LampBlue.002</object-name>
+		<object-name>LampBlue.003</object-name>
+		<object-name>LampBlue.004</object-name>
+		<object-name>LampBlue.005</object-name>
+		<object-name>LampBlueON</object-name>
+		<object-name>LampBlueON.001</object-name>
+		<object-name>LampBlueON.002</object-name>
+		<object-name>LampBlueON.003</object-name>
+		<object-name>LampBlueON.004</object-name>
+		<object-name>LampBlueON.005</object-name>
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmber.001</object-name>
+	</animation>
+	
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON</object-name>
+		<object-name>LampAmberON.001</object-name>
+		<emission>
+		  <red>   1.0 </red>
+		  <green> 0.8 </green>
+		  <blue>  0.4 </blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampBlueON</object-name>
+		<object-name>LampBlueON.001</object-name>
+		<object-name>LampBlueON.002</object-name>
+		<object-name>LampBlueON.003</object-name>
+		<object-name>LampBlueON.004</object-name>
+		<object-name>LampBlueON.005</object-name>
+		<emission>
+		  <red>   0.5 </red>
+		  <green> 1.0 </green>
+		  <blue>  1.0 </blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampBlueON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/fuel/valves/dump-valve-pos[0]</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampBlueON.001</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/fuel/valves/dump-valve-pos[1]</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampBlueON.002</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/fuel/valves/dump-valve-pos[2]</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampBlueON.003</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/fuel/valves/dump-valve-pos[3]</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampBlueON.004</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/fuel/valves/dump-valve-pos[4]</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampBlueON.005</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/fuel/valves/dump-valve-pos[5]</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<property>/b707/fuel/valves/dump-retract[0]</property>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.001</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<property>/b707/fuel/valves/dump-retract[1]</property>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<!-- Open cover -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>cover</object-name>
+		  <object-name>scharnier</object-name>
+		  <property>/b707/fuel/valves/dump-cover[0]</property>
+      <factor>140</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.013</y-m>
+		  <z-m>-0.052</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+            <command>nasal</command>
+            <script>b707.dump_cover(0);</script>
+        </binding>            
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation> 
+	
+	<!-- Turn cover for retract -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>cover.001</object-name>
+		  <property>/b707/fuel/valves/dump-cover[1]</property>
+      <factor>90</factor>
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.028</z-m>
+		  </center>  
+	</animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>cover.001</object-name>
+      <property>/b707/fuel/valves/dump-cover[1]</property>
+			<interpolation>
+				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
+				<entry><ind> 0.8</ind><dep> 0.0</dep></entry>
+				<entry><ind> 1.0</ind><dep> 0.008</dep></entry>
+			</interpolation>
+      <axis>
+          <x> 0.0</x>
+          <y> 1.0</y>
+          <z> 0.0</z>
+      </axis>
+      <center>
+				<x-m>0.0</x-m>
+				<y-m>0.0</y-m>
+				<z-m>0.023</z-m>
+      </center>
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover.001</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>       
+		    <binding>
+            <command>nasal</command>
+            <script>b707.dump_cover(1);</script>
+        </binding>            
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation> 
+	
+	<!-- Left Center Tank valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.001</object-name>
+		  <property>/b707/fuel/valves/dump-valve[0]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.001</y-m>
+		  <z-m>0.028</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.001</object-name>
+		  <object-name>sockle.001</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/valves/dump-valve[0]</property>
+		    </binding>          
+        <binding>
+            <command>nasal</command>
+            <script>b707.dump_pos(0);</script>
+        </binding>  
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Left Retract valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.006</object-name>	
+		  <property>/b707/fuel/valves/dump-retract[0]</property>
+			<interpolation>
+				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
+				<entry><ind> 1.0</ind><dep> 0.0</dep></entry>
+				<entry><ind> 2.0</ind><dep>-60.0</dep></entry>
+				<entry><ind> 3.0</ind><dep> 60.0</dep></entry>
+			</interpolation>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.001</y-m>
+		  <z-m>0.028</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.006</object-name>
+		  <object-name>sockle.006</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>	
+		    <binding>
+						<condition>		
+							<property>/b707/fuel/valves/dump-cover[0]</property>
+							<property>/b707/fuel/valves/dump-cover[1]</property>
+						</condition>
+		        <command>nasal</command>
+		        <script>b707.dump_chute_switch(0);</script>
+		    </binding>           
+		    <binding>
+						<condition>		
+							<property>/b707/fuel/valves/dump-cover[0]</property>
+							<property>/b707/fuel/valves/dump-cover[1]</property>
+						</condition>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Right Retract valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.007</object-name>
+		  <property>/b707/fuel/valves/dump-retract[1]</property>
+			<interpolation>
+				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
+				<entry><ind> 1.0</ind><dep> 0.0</dep></entry>
+				<entry><ind> 2.0</ind><dep>-60.0</dep></entry>
+				<entry><ind> 3.0</ind><dep> 60.0</dep></entry>
+			</interpolation>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.001</y-m>
+		  <z-m>0.028</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.007</object-name>
+		  <object-name>sockle.007</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>	
+						<condition>		
+							<property>/b707/fuel/valves/dump-cover[0]</property>
+							<property>/b707/fuel/valves/dump-cover[1]</property>
+						</condition>
+		        <command>nasal</command>
+		        <script>b707.dump_chute_switch(1);</script>
+		    </binding>           
+		    <binding>
+						<condition>		
+							<property>/b707/fuel/valves/dump-cover[0]</property>
+							<property>/b707/fuel/valves/dump-cover[1]</property>
+						</condition>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Right Center Tank valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.000</object-name>
+		  <property>/b707/fuel/valves/dump-valve[1]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.001</y-m>
+		  <z-m>0.028</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.000</object-name>
+		  <object-name>sockle.000</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/valves/dump-valve[1]</property>
+		    </binding>          
+        <binding>
+            <command>nasal</command>
+            <script>b707.dump_pos(1);</script>
+        </binding>  
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Main 1 Tank valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.002</object-name>
+		  <property>/b707/fuel/valves/dump-valve[2]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.001</y-m>
+		  <z-m>-0.039</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.002</object-name>
+		  <object-name>sockle.002</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/valves/dump-valve[2]</property>
+		    </binding>          
+        <binding>
+            <command>nasal</command>
+            <script>b707.dump_pos(2);</script>
+        </binding>  
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation> 
+		
+	<!-- Main 2 Tank valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.003</object-name>
+		  <property>/b707/fuel/valves/dump-valve[3]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.001</y-m>
+		  <z-m>-0.039</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.003</object-name>
+		  <object-name>sockle.003</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/valves/dump-valve[3]</property>
+		    </binding>          
+        <binding>
+            <command>nasal</command>
+            <script>b707.dump_pos(3);</script>
+        </binding>  
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation> 
+	
+	<!-- Main 3 Tank valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.004</object-name>
+		  <property>/b707/fuel/valves/dump-valve[4]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.001</y-m>
+		  <z-m>-0.039</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.004</object-name>
+		  <object-name>sockle.004</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/valves/dump-valve[4]</property>
+		    </binding>          
+        <binding>
+            <command>nasal</command>
+            <script>b707.dump_pos(4);</script>
+        </binding>  
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+			
+	<!-- Main 4 Tank valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.005</object-name>
+		  <property>/b707/fuel/valves/dump-valve[5]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>-0.001</y-m>
+		  <z-m>-0.039</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.005</object-name>
+		  <object-name>sockle.005</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/valves/dump-valve[5]</property>
+		    </binding>          
+        <binding>
+            <command>nasal</command>
+            <script>b707.dump_pos(5);</script>
+        </binding>  
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation> 
+	
+</PropertyList>

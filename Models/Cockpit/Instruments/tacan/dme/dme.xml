@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <name>dme</name>
+ <path>dme.ac</path>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>shadow</object-name>
+	</effect>
+	
+	<animation>
+		<type>material</type>
+        <object-name>Tacan.1</object-name>
+        <object-name>Tacan.10</object-name>
+        <object-name>Tacan.100</object-name>
+      	<object-name>Dot</object-name>
+		<object-name>face</object-name>
+		<object-name>screws</object-name>
+		<object-name>norange</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+  	<animation>
+  		<type>material</type>
+        <object-name>Tacan.1</object-name>
+        <object-name>Tacan.10</object-name>
+        <object-name>Tacan.100</object-name>
+      	<object-name>Dot</object-name>
+		<object-name>shadow</object-name>		
+		<object-name>face</object-name>
+		<object-name>screws</object-name>
+		<object-name>norange</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>norange</object-name>
+		<condition>
+			<or>	
+				<less-than>
+					<property>/b707/ess-bus</property>
+					<value>22</value>
+				</less-than>
+				<less-than>
+					<property>/instrumentation/tacan/switch-position</property>
+					<value>1</value>
+				</less-than>
+	            <not><property>/instrumentation/tacan/in-range</property></not>
+			</or>
+		</condition>
+	</animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>Tacan.100</object-name>
+        <property>/instrumentation/tacan/indicated-distance-nm</property>
+        <factor>0.01</factor>
+        <step>10</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>Tacan.10</object-name>
+        <property>/instrumentation/tacan/indicated-distance-nm</property>
+        <factor>0.1</factor>
+        <step>1</step>
+		    <bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>Tacan.1</object-name>
+        <property>/instrumentation/tacan/indicated-distance-nm</property>
+        <factor>1</factor>
+        <step>0.1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <!-- Click on the instrument showing the distance on the screen -->    
+    <animation>
+      <type>pick</type>
+      <object-name>face</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+		  <binding>
+			  <command>nasal</command>
+			  <script>
+				  b707.show_tacan_dme();
+      		</script>
+		  </binding>
+      </action>
+    </animation>
+
+</PropertyList>

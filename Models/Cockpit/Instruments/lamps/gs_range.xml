@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>gs_range.ac</path>
+
+<animation>
+	<type>material</type>
+  <object-name>LampGreen</object-name>
+	<condition>
+		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+	</condition>
+	<emission>
+		<red>0.2</red>
+		<green>0.2</green>
+		<blue>0.2</blue>
+		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+  <object-name>LampGreen</object-name>
+  <object-name>shadow</object-name>
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		<property>/systems/electrical/outputs/cabin-dim</property>
+	</condition>
+	<emission>
+	  <red>0.3</red>
+	  <green>0.3</green>
+	  <blue>0.3</blue>
+	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+  <object-name>sup</object-name>
+  <object-name>sup.001</object-name>
+	<condition>
+		<not><property>/systems/electrical/outputs/cabin-dim</property></not>
+	</condition>
+	<emission>
+		<red>0.05</red>
+		<green>0.05</green>
+		<blue>0.05</blue>
+		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+  <object-name>sup</object-name>
+  <object-name>sup.001</object-name>
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		<property>/systems/electrical/outputs/cabin-dim</property>
+	</condition>
+	<emission>
+	  <red>0.3</red>
+	  <green>0.3</green>
+	  <blue>0.3</blue>
+	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+  <type>noshadow</type>
+  <object-name>LampGreen</object-name>
+  <object-name>LampGreenON</object-name>
+</animation>
+
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>shadow</object-name>
+</effect>
+
+<animation>
+  <type>material</type>
+  <object-name>LampGreenON</object-name>
+  <emission>
+    <red>   0.4 </red>
+    <green> 1.0 </green>
+    <blue>  0 </blue>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampGreenON</object-name>
+  <condition>
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+    <or>
+      <property>/instrumentation/nav[0]/gs-in-range</property>
+      <property>/controls/test/warn-knob</property>
+    </or>
+  </condition>
+</animation>
+
+
+
+</PropertyList>
+

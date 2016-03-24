@@ -1,0 +1,2679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+	<name>Engines: Start-up [german]</name>
+	<description>Starten des elektrischen Systems und der Triebwerke mit externer Stromversorgungseinheit.</description>
+
+	<init>
+		<set>
+			<property>/sim/current-view/view-number</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/controls/gear/brake-parking</property>
+			<value>1</value>
+		</set>
+		<set>
+			<property>/controls/flight/flaps</property>
+			<value>0.0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-bus-tie[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-breaker[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-control[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-drive[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-bus-tie[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-breaker[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-control[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-drive[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-bus-tie[2]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-breaker[2]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-control[2]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-drive[2]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/controls/electric/engine[2]/generator</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-bus-tie[3]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-breaker[3]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-control[3]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/generator/gen-drive[3]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/controls/engines/engine[0]/cutoff</property>
+			<value>1</value>
+		</set>
+		<set>
+			<property>/controls/engines/engine[1]/cutoff</property>
+			<value>1</value>
+		</set>
+		<set>
+			<property>/controls/engines/engine[2]/cutoff</property>
+			<value>1</value>
+		</set>
+		<set>
+			<property>/controls/engines/engine[3]/cutoff</property>
+			<value>1</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/valve-pos[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/valve-pos[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/valve-pos[2]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/valve-pos[3]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/valve-pos[4]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/valve-pos[5]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[3]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[4]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[5]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[6]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[7]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[8]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/boost-pump[9]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/fuel-shutoff[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/fuel-shutoff[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/fuel-shutoff[2]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/fuel/valves/fuel-shutoff[3]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/load-volt-selector</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/external-power-connected</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/battery-switch</property>
+			<value>0</value>
+		</set>		
+		<set>
+			<property>/b707/hydraulic/rudder</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/system</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/brake-valve</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/ac-aux-pump[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/ac-aux-pump[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/hyd-fluid-shutoff[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/hyd-fluid-shutoff[1]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/hyd-fluid-pump[0]</property>
+			<value>0</value>
+		</set>
+		<set>
+			<property>/b707/hydraulic/hyd-fluid-pump[1]</property>
+			<value>0</value>
+		</set>
+
+	</init>
+
+	<step>
+		<message>
+			Schliessen Sie zuerst die Externe Stromversorgungseinheit an.
+			Waehlen Sie hierzu im Hauptmenu: Boeing 707/ External Power Unit
+		</message>
+		<view>
+				<heading-offset-deg>240.8</heading-offset-deg>
+				<pitch-offset-deg>4.0</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>49.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5636</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.3967</z-m>
+				<scale>1.6612</scale>
+		</marker>
+
+		<exit>
+			<condition>
+				<property>/b707/external-power-connected</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Die Externe Stromversorgungseinheit wurde angeschlossen.
+		</message>
+		<view>
+		    <view-number>1</view-number>
+				<heading-offset-deg>195.9</heading-offset-deg>
+				<pitch-offset-deg>-3.7</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>25.0</x-offset-m>
+				<y-offset-m>2.0</y-offset-m>
+				<z-offset-m>-45.0</z-offset-m>
+				<field-of-view>21.6</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<property>/b707/external-power-connected</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Batterie Hauptschalter einschalten.
+		</message>
+		<view>
+				<heading-offset-deg>235.4</heading-offset-deg>
+				<pitch-offset-deg>7.9</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>51.5</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5901</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.4587</z-m>
+				<scale>2.3719</scale>
+		</marker>
+
+		<error>
+			<message>Oeffnen Sie die Schalterabdeckung.</message>
+			<condition>
+				<not><property>/b707/battery-switch</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/battery-switch</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			SELECTOR LOAD &amp; VOLTS auf Stellung BUS-TIE drehen.
+		</message>
+		<view>
+				<heading-offset-deg>234.0</heading-offset-deg>
+				<pitch-offset-deg>14.4</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>14.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5554</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.4628</z-m>
+				<scale>3.0000</scale>
+		</marker>
+		<error>
+			<message>Verwenden Sie zunaechst nur die Stellung BUS TIE.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/load-volt-selector</property>
+						<value>1</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/load-volt-selector</property>
+						<value>1</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/load-volt-selector</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			ESSENTIAL POWER auf Stellung EXT PWR drehen.
+		</message>
+		<view>
+				<heading-offset-deg>238.1</heading-offset-deg>
+				<pitch-offset-deg>7.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>14.5</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5620</x-m>
+				<y-m>0.6000</y-m>
+				<z-m>1.3686</z-m>
+				<scale>1.3967</scale>
+		</marker>
+		<error>
+			<message>Drehen Sie bis zur Stellung EXT PWR.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/ess-power-switch</property>
+						<value>5</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/ess-power-switch</property>
+						<value>5</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/ess-power-switch</property>
+					<value>5</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			SELECTOR AC PARALLELING auf External Power drehen.
+			Die AC Spannungsquelle wird dadurch auf 400Hz synchronisiert.
+		</message>
+		<view>
+				<heading-offset-deg>241.4</heading-offset-deg>
+				<pitch-offset-deg>3.4</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>15.9</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.6165</x-m>
+				<y-m>0.6000</y-m>
+				<z-m>1.2488</z-m>
+				<scale>1.3967</scale>
+		</marker>
+		<error>
+			<message>Drehen Sie bis zur Stellung External Power.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>6</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>6</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/ac/ac-para-select</property>
+					<value>6</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			AUXILLIARY PUMPS einschalten.
+			Hydraulikdruck auf Ruder und Sicherheitskreis fuer Bremsen.
+		</message>
+		<view>
+				<heading-offset-deg>230.5</heading-offset-deg>
+				<pitch-offset-deg>-17.6</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>17.7</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.4422</x-m>
+				<y-m>0.7289</y-m>
+				<z-m>0.7942</z-m>
+				<scale>1.4959</scale>
+		</marker>
+
+		<error>
+			<message>Schalten Sie beide Pumpen an und warten Sie auf ca. 3000 PSI RUD HYD PRESS.</message>
+			<condition>
+				<or>
+					<not><property>/b707/hydraulic/ac-aux-pump[0]</property></not>
+					<not><property>/b707/hydraulic/ac-aux-pump[1]</property></not>
+					<less-than>
+						<property>/b707/hydraulic/rudder</property>
+						<value>2900</value>
+					</less-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+			 <and>
+				<property>/b707/hydraulic/ac-aux-pump[0]</property>
+				<property>/b707/hydraulic/ac-aux-pump[1]</property>
+				<greater-than>
+					<property>/b707/hydraulic/rudder</property>
+					<value>2900</value>
+				</greater-than>
+			 </and>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			INTERCONNECT VALVE einschalten.
+			AC AUXILLIARY PUMPE unterstuetzt auch die Systemhydraulik.
+		</message>
+		<view>
+				<heading-offset-deg>230.5</heading-offset-deg>
+				<pitch-offset-deg>-17.6</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>17.7</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.4066</x-m>
+				<y-m>0.7289</y-m>
+				<z-m>0.7942</z-m>
+				<scale>1.4959</scale>
+		</marker>
+		
+		<error>
+			<message>Schalten Sie den Kippschalter nach unten</message>
+			<condition>
+				<not>
+					<equals>
+						<property>b707/hydraulic/brake-valve</property>
+						<value>2</value>
+					</equals>
+				</not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>b707/hydraulic/brake-valve</property>
+					<value>2</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>		
+	
+	<step>
+		<message>
+			HYD FLUID SHUTOFFs einschalten.
+		</message>
+		<view>
+				<heading-offset-deg>230.5</heading-offset-deg>
+				<pitch-offset-deg>-17.6</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>17.7</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.3207</x-m>
+				<y-m>0.7289</y-m>
+				<z-m>0.7942</z-m>
+				<scale>2.7686</scale>
+		</marker>
+
+		<error>
+			<message>Oeffnen Sie die Schalterabdeckungen zum Einschalten.</message>
+			<condition>
+				<or>
+					<not><property>/b707/hydraulic/hyd-fluid-shutoff[0]</property></not>
+					<not><property>/b707/hydraulic/hyd-fluid-shutoff[1]</property></not>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<and>
+					<property>/b707/hydraulic/hyd-fluid-shutoff[0]</property>
+					<property>/b707/hydraulic/hyd-fluid-shutoff[1]</property>
+				</and>
+			</condition>
+		</exit>
+	</step>	
+	
+	<step>
+		<message>
+			ENGINE PUMPS einschalten.
+			Hydraulik fuer alle uebrigen Systeme.
+		</message>
+		<view>
+				<heading-offset-deg>230.5</heading-offset-deg>
+				<pitch-offset-deg>-17.6</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>17.7</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.3744</x-m>
+				<y-m>0.7289</y-m>
+				<z-m>0.7918</z-m>
+				<scale>1.5124</scale>
+		</marker>
+
+		<error>
+			<message>Schalten Sie beide Pumpen an und warten Sie auf ca. 2200 PSI HYD SYS PRESS.</message>
+			<condition>
+				<or>
+					<not><property>/b707/hydraulic/hyd-fluid-pump[0]</property></not>
+					<not><property>/b707/hydraulic/hyd-fluid-pump[1]</property></not>
+					<less-than>
+						<property>/b707/hydraulic/system</property>
+						<value>2000</value>
+					</less-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<and>
+					<property>/b707/hydraulic/hyd-fluid-pump[0]</property>
+					<property>/b707/hydraulic/hyd-fluid-pump[1]</property>
+					<greater-than>
+						<property>/b707/hydraulic/system</property>
+						<value>2000</value>
+					</greater-than>
+				</and>
+			</condition>
+		</exit>
+	</step>	
+	
+	<step>
+		<message>
+			Stellen Sie die Verbindung zwischen der Externen Stromversorgungseinheit und dem SYNC BUS her.
+		</message>
+		<view>
+				<heading-offset-deg>237.8</heading-offset-deg>
+				<pitch-offset-deg>8.2</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>15.9</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5785</x-m>
+				<y-m>0.6000</y-m>
+				<z-m>1.4091</z-m>
+				<scale>1.4959</scale>
+		</marker>
+		<error>
+			<message>
+				Schalterstellung auf ON.
+			</message>
+			<condition>
+				<not><property>/b707/ground-connect</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/ground-connect</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			Zuschaltung der Generator-Getriebe (GEN - DRIVE).
+			Oeffnen Sie alle roten Abdeckungen und schalten sie die Getriebe zu. 
+			Danach Abdeckungen schliessen.
+		</message>
+		<view>
+				<heading-offset-deg>241.8</heading-offset-deg>
+				<pitch-offset-deg>14.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>22.8</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.8587</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.4603</z-m>
+				<scale>1.6612</scale>
+		</marker>
+		<error>
+			<message>
+				Schalten Sie alle Getriebe zu!
+				Im Flug abgeschaltete Getriebe koennen nicht wieder zugeschaltet werden.
+				Abdeckungen anschliessend schliessen.
+			</message>
+			<condition>
+				<not><property>/b707/generator/gen-drive[0]</property></not>
+				<not><property>/b707/generator/gen-drive[1]</property></not>
+				<not><property>/b707/generator/gen-drive[2]</property></not>
+				<not><property>/b707/generator/gen-drive[3]</property></not>
+				<property>/b707/generator/gen-drive-cover[0]</property>
+				<property>/b707/generator/gen-drive-cover[1]</property>
+				<property>/b707/generator/gen-drive-cover[2]</property>
+				<property>/b707/generator/gen-drive-cover[3]</property>
+			</condition>
+		</error>		
+		<exit>
+			<condition>
+				<property>/b707/generator/gen-drive[0]</property>
+				<property>/b707/generator/gen-drive[1]</property>
+				<property>/b707/generator/gen-drive[2]</property>
+				<property>/b707/generator/gen-drive[3]</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			Generator-Aufschaltung zur BUS-TIE (BUS-TIE-BREAKER).
+			Oeffnen Sie alle Abdeckungen und schalten sie die Busse auf. 
+			Danach Abdeckungen schliessen.
+		</message>
+		<view>
+				<heading-offset-deg>244.9</heading-offset-deg>
+				<pitch-offset-deg>9.7</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>16.7</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.8653</x-m>
+				<y-m>0.5992</y-m>
+				<z-m>1.3669</z-m>
+				<scale>1.6628</scale>
+		</marker>
+		<error>
+			<message>
+				Schalten Sie alle Busse auf und schliessen Sie die Abdeckungen wieder!
+			</message>
+			<condition>
+				<not><property>/b707/generator/gen-bus-tie[0]</property></not>
+				<not><property>/b707/generator/gen-bus-tie[1]</property></not>
+				<not><property>/b707/generator/gen-bus-tie[2]</property></not>
+				<not><property>/b707/generator/gen-bus-tie[3]</property></not>
+				<property>/b707/generator/gen-bus-tie-cover[0]</property>
+				<property>/b707/generator/gen-bus-tie-cover[1]</property>
+				<property>/b707/generator/gen-bus-tie-cover[2]</property>
+				<property>/b707/generator/gen-bus-tie-cover[3]</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/generator/gen-bus-tie[0]</property>
+				<property>/b707/generator/gen-bus-tie[1]</property>
+				<property>/b707/generator/gen-bus-tie[2]</property>
+				<property>/b707/generator/gen-bus-tie[3]</property>
+			</condition>
+		</exit>
+	</step>	
+	
+	<step>
+		<message>
+			Generator-Kontrolleinheit (GEN - CONTROL).
+			Oeffnen Sie alle Abdeckungen und schalten sie die Controller ein. 
+			Danach Abdeckungen schliessen.
+		</message>
+		<view>
+				<heading-offset-deg>246.5</heading-offset-deg>
+				<pitch-offset-deg>8.0</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>17.8</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.8620</x-m>
+				<y-m>0.6661</y-m>
+				<z-m>1.2860</z-m>
+				<scale>1.8430</scale>
+		</marker>
+		<error>
+			<message>
+				Schalten Sie alle Controller ein und schliessen Sie anschliessend die Abdeckungen!
+			</message>
+			<condition>
+				<not><property>/b707/generator/gen-control[0]</property></not>
+				<not><property>/b707/generator/gen-control[1]</property></not>
+				<not><property>/b707/generator/gen-control[2]</property></not>
+				<not><property>/b707/generator/gen-control[3]</property></not>
+				<property>/b707/generator/gen-control-cover[0]</property>
+				<property>/b707/generator/gen-control-cover[1]</property>
+				<property>/b707/generator/gen-control-cover[2]</property>
+				<property>/b707/generator/gen-control-cover[3]</property>
+			</condition>
+		</error>	
+		<exit>
+			<condition>
+				<property>/b707/generator/gen-control[0]</property>
+				<property>/b707/generator/gen-control[1]</property>
+				<property>/b707/generator/gen-control[2]</property>
+				<property>/b707/generator/gen-control[3]</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Generator-Trenneinheit (GEN - BREAKER).
+			Schalten sie nun alle Generatoren zu. 
+		</message>
+		<view>
+				<heading-offset-deg>246.5</heading-offset-deg>
+				<pitch-offset-deg>8.0</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>17.8</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.8521</x-m>
+				<y-m>0.6661</y-m>
+				<z-m>1.3331</z-m>
+				<scale>1.8430</scale>
+		</marker>
+		<error>
+			<message>
+				Schalten Sie alle Generatoren ein!
+			</message>
+			<condition>
+				<not><property>/b707/generator/gen-breaker[0]</property></not>
+				<not><property>/b707/generator/gen-breaker[1]</property></not>
+				<not><property>/b707/generator/gen-breaker[2]</property></not>
+				<not><property>/b707/generator/gen-breaker[3]</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/generator/gen-breaker[0]</property>
+				<property>/b707/generator/gen-breaker[1]</property>
+				<property>/b707/generator/gen-breaker[2]</property>
+				<property>/b707/generator/gen-breaker[3]</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Tankausgleichsventile (CROSSFEED - VALVES).
+			Zur Initialisierung ALLE Ausgleichsventile einmal drehen. 
+		</message>
+		<view>
+				<heading-offset-deg>244.9</heading-offset-deg>
+				<pitch-offset-deg>-9.3</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>31.1</field-of-view>
+		</view>
+		<marker>
+				<x-m>-17.8157</x-m>
+				<y-m>0.7496</y-m>
+				<z-m>0.9017</z-m>
+				<scale>1.8595</scale>
+		</marker>
+
+		<error>
+			<message>
+				ALLE Ausgleichsventile einmal kurz oeffnen!
+			</message>
+			<condition>
+				<not><property>/b707/fuel/valves/valve-pos[0]</property></not>
+				<not><property>/b707/fuel/valves/valve-pos[1]</property></not>
+				<not><property>/b707/fuel/valves/valve-pos[2]</property></not>
+				<not><property>/b707/fuel/valves/valve-pos[3]</property></not>
+				<not><property>/b707/fuel/valves/valve-pos[4]</property></not>
+				<not><property>/b707/fuel/valves/valve-pos[5]</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/fuel/valves/valve-pos[0]</property>
+				<property>/b707/fuel/valves/valve-pos[1]</property>
+				<property>/b707/fuel/valves/valve-pos[2]</property>
+				<property>/b707/fuel/valves/valve-pos[3]</property>
+				<property>/b707/fuel/valves/valve-pos[4]</property>
+				<property>/b707/fuel/valves/valve-pos[5]</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Treibstoffpumpen (BOOST - PUMPS).
+			Schalten Sie ALLE Pumpen ein. 
+		</message>
+		<view>
+				<heading-offset-deg>244.9</heading-offset-deg>
+				<pitch-offset-deg>-9.3</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>31.1</field-of-view>
+		</view>
+		<marker>
+				<x-m>-17.8074</x-m>
+				<y-m>0.7496</y-m>
+				<z-m>1.0231</z-m>
+				<scale>3.0496</scale>
+		</marker>
+		<error>
+			<message>
+				ALLE Pumpen einschalten!
+			</message>
+			<condition>
+				<not><property>/b707/fuel/valves/boost-pump[0]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[1]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[2]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[3]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[4]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[5]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[6]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[7]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[8]</property></not>
+				<not><property>/b707/fuel/valves/boost-pump[9]</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/fuel/valves/boost-pump[0]</property>
+				<property>/b707/fuel/valves/boost-pump[1]</property>
+				<property>/b707/fuel/valves/boost-pump[2]</property>
+				<property>/b707/fuel/valves/boost-pump[3]</property>
+				<property>/b707/fuel/valves/boost-pump[4]</property>
+				<property>/b707/fuel/valves/boost-pump[5]</property>
+				<property>/b707/fuel/valves/boost-pump[6]</property>
+				<property>/b707/fuel/valves/boost-pump[7]</property>
+				<property>/b707/fuel/valves/boost-pump[8]</property>
+				<property>/b707/fuel/valves/boost-pump[9]</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Treibstoff-Hauptventile (SHUTOFF - VALVES).
+			Schalten Sie ALLE Hauptventile ein. 
+		</message>
+		<view>
+				<heading-offset-deg>244.9</heading-offset-deg>
+				<pitch-offset-deg>-9.3</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>31.1</field-of-view>
+		</view>
+		
+		<marker>
+				<x-m>-17.8174</x-m>
+				<y-m>0.7496</y-m>
+				<z-m>1.1000</z-m>
+				<scale>3.0496</scale>
+		</marker>
+
+		<error>
+			<message>
+				ALLE Hauptventile einschalten!
+			</message>
+			<condition>
+				<not><property>/b707/fuel/valves/fuel-shutoff[0]</property></not>
+				<not><property>/b707/fuel/valves/fuel-shutoff[1]</property></not>
+				<not><property>/b707/fuel/valves/fuel-shutoff[2]</property></not>
+				<not><property>/b707/fuel/valves/fuel-shutoff[3]</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/fuel/valves/fuel-shutoff[0]</property>
+				<property>/b707/fuel/valves/fuel-shutoff[1]</property>
+				<property>/b707/fuel/valves/fuel-shutoff[2]</property>
+				<property>/b707/fuel/valves/fuel-shutoff[3]</property>
+			</condition>
+		</exit>
+	</step>
+		
+		
+	<step>
+		<message>Starter 3 Klappe oeffnen</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<marker>
+		  <x-m> 0.0322</x-m>
+		  <y-m> 0.0393</y-m>
+		  <z-m> 0.1301</z-m>
+			<scale>3.0000</scale>
+		</marker>
+		<exit>
+			<condition>
+					<property>/b707/start/startercover[2]</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Starter 3 einschalten</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<marker>
+				<x-m>-18.3301</x-m>
+				<y-m>0.0149</y-m>
+				<z-m>1.4176</z-m>
+				<scale>1.9107</scale>
+		</marker>
+		<exit>
+			<condition>
+				<property>engines/engine[2]/starter</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			CUTOFF 3 einschalten
+		</message>
+		<view>
+				<heading-offset-deg>300.2</heading-offset-deg>
+				<pitch-offset-deg>-38.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>31.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.5140</x-m>
+				<y-m>0.0074</y-m>
+				<z-m>0.6669</z-m>
+				<scale>3.6628</scale>
+		</marker>
+
+		<error>
+			<message>
+				Klicken Sie CUTOFF 3 an
+			</message>
+			<condition>
+				<property>controls/engines/engine[2]/cutoff</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not><property>controls/engines/engine[2]/cutoff</property></not>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>N2 fuer dieses Triebwerk ueberpruefen</message>
+		<view>
+				<heading-offset-deg>319.3</heading-offset-deg>
+				<pitch-offset-deg>-28.3</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>52.9</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.9037</x-m>
+				<y-m>-0.0017</y-m>
+				<z-m>0.8449</z-m>
+				<scale>1.9107</scale>
+		</marker>
+		<exit>
+			<condition>
+				<greater-than>
+					<property>engines/engine[2]/n2</property>
+					<value>35</value>
+				</greater-than>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>Starter 3 - warten bis gruenes Licht erlischt</message>
+		<view>
+				<heading-offset-deg>315.9</heading-offset-deg>
+				<pitch-offset-deg>-29.3</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>39.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.3301</x-m>
+				<y-m>0.0149</y-m>
+				<z-m>1.4176</z-m>
+				<scale>1.9107</scale>
+		</marker>
+
+		<exit>
+			<condition>
+				<property>engines/engine[2]/running</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>Abdeckung 3 schliessen und 4 oeffnen</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<property>engines/engine[2]/running</property>
+				<property>/b707/start/startercover[3]</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Starter 4 einschalten</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<marker>
+				<x-m>-18.3301</x-m>
+				<y-m>0.0719</y-m>
+				<z-m>1.4176</z-m>
+				<scale>1.9107</scale>
+		</marker>
+		<exit>
+			<condition>
+				<property>engines/engine[3]/starter</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			CUTOFF 4 einschalten
+		</message>
+		<view>
+				<heading-offset-deg>300.2</heading-offset-deg>
+				<pitch-offset-deg>-38.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>31.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.5140</x-m>
+				<y-m>0.0074</y-m>
+				<z-m>0.6669</z-m>
+				<scale>3.6628</scale>
+		</marker>
+
+		<error>
+			<message>
+				CUTOFF 4 anklicken
+			</message>
+			<condition>
+				<property>controls/engines/engine[3]/cutoff</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not><property>controls/engines/engine[3]/cutoff</property></not>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>N2 fuer dieses Triebwerk ueberpruefen</message>
+		<view>
+				<heading-offset-deg>319.3</heading-offset-deg>
+				<pitch-offset-deg>-28.3</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>52.9</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.9037</x-m>
+				<y-m>0.0380</y-m>
+				<z-m>0.8449</z-m>
+				<scale>1.9107</scale>
+		</marker>
+
+		<exit>
+			<condition>
+				<greater-than>
+					<property>engines/engine[3]/n2</property>
+					<value>40</value>
+				</greater-than>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>Starter 4 - warten, bis gruenes Licht erlischt</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<property>engines/engine[3]/running</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>Abdeckung 4 schliessen und 2 oeffnen</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<property>engines/engine[3]/running</property>
+				<property>/b707/start/startercover[1]</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Starter 2 einschalten</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<marker>
+				<x-m>-18.3301</x-m>
+				<y-m>-0.0565</y-m>
+				<z-m>1.4102</z-m>
+				<scale>1.9107</scale>
+		</marker>
+		<exit>
+			<condition>
+				<property>engines/engine[1]/starter</property>
+			</condition>
+		</exit>
+	</step>
+		
+	<step>
+		<message>
+			CUTOFF 2 einschalten
+		</message>
+		<view>
+				<heading-offset-deg>300.2</heading-offset-deg>
+				<pitch-offset-deg>-38.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>31.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.5140</x-m>
+				<y-m>0.0074</y-m>
+				<z-m>0.6669</z-m>
+				<scale>3.6628</scale>
+		</marker>
+
+		<error>
+			<message>
+				CUTOFF 2 anklicken
+			</message>
+			<condition>
+				<property>controls/engines/engine[1]/cutoff</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not><property>controls/engines/engine[1]/cutoff</property></not>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>N2 fuer dieses Triebwerk ueberpruefen</message>
+		<view>
+				<heading-offset-deg>319.3</heading-offset-deg>
+				<pitch-offset-deg>-28.3</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>52.9</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.9037</x-m>
+				<y-m>-0.0430</y-m>
+				<z-m>0.8449</z-m>
+				<scale>1.9107</scale>
+		</marker>
+
+		<exit>
+			<condition>
+				<greater-than>
+					<property>engines/engine[1]/n2</property>
+					<value>40</value>
+				</greater-than>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>Starter 2 - warten, bis gruene Lampe erlischt</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<property>engines/engine[1]/running</property>
+			</condition>
+		</exit>
+	</step>	
+	
+	<step>
+		<message>Abdeckung 2 schliessen und 1 oeffnen</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<property>engines/engine[1]/running</property>
+				<property>/b707/start/startercover[0]</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>Starter 1 einschalten</message>
+		<view>
+				<heading-offset-deg>292.9</heading-offset-deg>
+				<pitch-offset-deg>27.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>47.4</field-of-view>
+		</view>
+		<marker>
+				<x-m>-18.3301</x-m>
+				<y-m>-0.1193</y-m>
+				<z-m>1.4102</z-m>
+				<scale>1.9107</scale>
+		</marker>
+		<exit>
+			<condition>
+				<property>engines/engine[0]/starter</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			CUTOFF 1 einschalten.
+		</message>
+		<view>
+				<heading-offset-deg>300.2</heading-offset-deg>
+				<pitch-offset-deg>-38.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>31.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.5140</x-m>
+				<y-m>0.0074</y-m>
+				<z-m>0.6669</z-m>
+				<scale>3.6628</scale>
+		</marker>
+
+		<error>
+			<message>
+				Ziehen Sie CUTOFF 1 nach oben!
+			</message>
+			<condition>
+				<property>controls/engines/engine[0]/cutoff</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not><property>controls/engines/engine[0]/cutoff</property></not>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>N2 fuer dieses Triebwerk ueberpruefen</message>
+		<view>
+				<heading-offset-deg>319.3</heading-offset-deg>
+				<pitch-offset-deg>-28.3</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.5</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>52.9</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-18.9037</x-m>
+				<y-m>-0.0843</y-m>
+				<z-m>0.8449</z-m>
+				<scale>1.9107</scale>
+		</marker>
+
+		<exit>
+			<condition>
+				<greater-than>
+					<property>engines/engine[1]/n2</property>
+					<value>35</value>
+				</greater-than>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>Starter 1 - warten bis gruenes Licht erlischt</message>
+		<view>
+			<heading-offset-deg>-75</heading-offset-deg>
+			<pitch-offset-deg>30.0</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.46</x-offset-m>
+			<y-offset-m>1.19</y-offset-m>
+			<z-offset-m>-18.2</z-offset-m>
+			<field-of-view>44.3</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<property>engines/engine[0]/running</property>
+			</condition>
+		</exit>
+	</step>	
+
+	<step>
+		<message>Klappe 1 schliessen</message>
+		<view>
+			<heading-offset-deg>-75</heading-offset-deg>
+			<pitch-offset-deg>30.0</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.46</x-offset-m>
+			<y-offset-m>1.19</y-offset-m>
+			<z-offset-m>-18.2</z-offset-m>
+			<field-of-view>44.3</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<not><property>/b707/start/startercover[0]</property></not>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>Alle N2 Drehzahlen sollten im gruenen Bereich liegen.</message>
+		<view>
+			<heading-offset-deg>-40.0</heading-offset-deg>
+			<pitch-offset-deg>-20.0</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.46</x-offset-m>
+			<y-offset-m>1.19</y-offset-m>
+			<z-offset-m>-18.2</z-offset-m>
+			<field-of-view>44.3</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<greater-than>
+					<property>engines/engine[0]/n2</property>
+					<value>50</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[1]/n2</property>
+					<value>50</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[2]/n2</property>
+					<value>50</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[3]/n2</property>
+					<value>50</value>
+				</greater-than>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>N2 der Triebwerke im gruenen Bereich?</message>
+		<view>
+			<heading-offset-deg>-40.0</heading-offset-deg>
+			<pitch-offset-deg>-20.0</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.46</x-offset-m>
+			<y-offset-m>1.19</y-offset-m>
+			<z-offset-m>-18.2</z-offset-m>
+			<field-of-view>44.3</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<greater-than>
+					<property>engines/engine[0]/n2</property>
+					<value>50</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[1]/n2</property>
+					<value>50</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[2]/n2</property>
+					<value>50</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[3]/n2</property>
+					<value>50</value>
+				</greater-than>
+			</condition>
+		</exit>
+	</step>
+		
+	<step>
+		<message>
+			SELECTOR AC PARALLELING auf GEN I drehen.
+			Die Generatoren muessen jetzt synchronisiert werden.
+		</message>
+		<view>
+				<heading-offset-deg>244.2</heading-offset-deg>
+				<pitch-offset-deg>4.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>20.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.6066</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2455</z-m>
+				<scale>1.6612</scale>
+		</marker>
+
+		<error>
+			<message>Drehen Sie bis zur Stellung GEN I.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>1</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>1</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/ac/ac-para-select</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Achten Sie bei folgenden Schritten auf dieses Instrument.
+		</message>
+		<view>
+				<heading-offset-deg>244.2</heading-offset-deg>
+				<pitch-offset-deg>4.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>20.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.6182</x-m>
+				<y-m>0.6513</y-m>
+				<z-m>1.3107</z-m>
+				<scale>2.5372</scale>
+		</marker>
+	</step>
+
+	<step>
+		<message>
+			Drehen Sie den FREQ CONTROL Knopf in Richtung der weissen Kontroll-Leuchten.
+			Beide Kontroll-Leuchten erlischen wenn die Sinuskurve des Generators angeglichen ist.
+		</message>
+		<view>
+				<heading-offset-deg>247.7</heading-offset-deg>
+				<pitch-offset-deg>4.0</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>21.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.8314</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2174</z-m>
+				<scale>1.7934</scale>
+		</marker>
+		<error>
+			<message>Synchronisieren Sie den ersten Generator (achten Sie auf die weissen Leuchten)</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/generator/gen-freq[0]</property>
+						<value>400</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/generator/gen-freq[0]</property>
+						<value>400</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/generator/gen-freq[0]</property>
+					<value>400</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			SELECTOR AC PARALLELING auf GEN 2 drehen.
+			Synchronisation Sie nun den zweiten Generator.
+		</message>
+		<view>
+				<heading-offset-deg>244.2</heading-offset-deg>
+				<pitch-offset-deg>4.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>20.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.6066</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2455</z-m>
+				<scale>1.6612</scale>
+		</marker>
+
+		<error>
+			<message>Drehen Sie bis zur Stellung GEN 2.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>2</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>2</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/ac/ac-para-select</property>
+					<value>2</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Synchronisation durch Frequenzverschiebung an Generator 2 (achten Sie auf die weissen Leuchten)
+		</message>
+		<view>
+				<heading-offset-deg>247.7</heading-offset-deg>
+				<pitch-offset-deg>4.0</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>21.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.7785</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2174</z-m>
+				<scale>1.7934</scale>
+		</marker>
+		<error>
+			<message>Synchronisieren Sie den zweiten Generator.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/generator/gen-freq[1]</property>
+						<value>400</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/generator/gen-freq[1]</property>
+						<value>400</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/generator/gen-freq[1]</property>
+					<value>400</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			SELECTOR AC PARALLELING auf GEN 3 drehen.
+			Synchronisation Sie nun den dritten Generator.
+		</message>
+		<view>
+				<heading-offset-deg>244.2</heading-offset-deg>
+				<pitch-offset-deg>4.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>20.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5719</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2695</z-m>
+				<scale>1.6612</scale>
+		</marker>
+
+		<error>
+			<message>Drehen Sie bis zur Stellung GEN 3.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>4</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>4</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/ac/ac-para-select</property>
+					<value>4</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Synchronisation durch Frequenzverschiebung an Generator 3.
+		</message>
+		<view>
+				<heading-offset-deg>247.7</heading-offset-deg>
+				<pitch-offset-deg>4.0</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>21.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.7248</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2149</z-m>
+				<scale>1.7934</scale>
+		</marker>
+		<error>
+			<message>Synchronisieren Sie den dritten Generator.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/generator/gen-freq[2]</property>
+						<value>400</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/generator/gen-freq[2]</property>
+						<value>400</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/generator/gen-freq[2]</property>
+					<value>400</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			SELECTOR AC PARALLELING auf GEN 4 drehen.
+			Synchronisation Sie nun den letzten Generator.
+		</message>
+		<view>
+				<heading-offset-deg>244.2</heading-offset-deg>
+				<pitch-offset-deg>4.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>20.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5719</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2695</z-m>
+				<scale>1.6612</scale>
+		</marker>
+
+		<error>
+			<message>Drehen Sie bis zur Stellung GEN 4.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>5</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>5</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/ac/ac-para-select</property>
+					<value>5</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Synchronisation durch Frequenzverschiebung an Generator 4.
+		</message>
+		<view>
+				<heading-offset-deg>247.7</heading-offset-deg>
+				<pitch-offset-deg>4.0</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>21.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.6719</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2149</z-m>
+				<scale>1.7934</scale>
+		</marker>
+		<error>
+			<message>Synchronisieren Sie den vierten Generator.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/generator/gen-freq[3]</property>
+						<value>400</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/generator/gen-freq[3]</property>
+						<value>400</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/generator/gen-freq[3]</property>
+					<value>400</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			SELECTOR AC PARALLELING auf GEN I drehen.
+		</message>
+		<view>
+				<heading-offset-deg>244.2</heading-offset-deg>
+				<pitch-offset-deg>4.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>20.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.6066</x-m>
+				<y-m>0.7000</y-m>
+				<z-m>1.2455</z-m>
+				<scale>1.6612</scale>
+		</marker>
+
+		<error>
+			<message>Drehen Sie bis zur Stellung GEN I.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>1</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/ac/ac-para-select</property>
+						<value>1</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/ac/ac-para-select</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Generator-Aufschaltung zur BUS-TIE (BUS-TIE-BREAKER).
+			Oeffnen Sie alle Abdeckungen und schalten sie die Busse erneut auf. 
+			Danach Abdeckungen schliessen.
+		</message>
+		<view>
+				<heading-offset-deg>244.9</heading-offset-deg>
+				<pitch-offset-deg>9.7</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>16.7</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.8653</x-m>
+				<y-m>0.5992</y-m>
+				<z-m>1.3669</z-m>
+				<scale>1.6628</scale>
+		</marker>
+		<error>
+			<message>
+				Schalten Sie alle Busse auf!
+			</message>
+			<condition>
+				<not><property>/b707/generator/gen-bus-tie[0]</property></not>
+				<not><property>/b707/generator/gen-bus-tie[1]</property></not>
+				<not><property>/b707/generator/gen-bus-tie[2]</property></not>
+				<not><property>/b707/generator/gen-bus-tie[3]</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/generator/gen-bus-tie[0]</property>
+				<property>/b707/generator/gen-bus-tie[1]</property>
+				<property>/b707/generator/gen-bus-tie[2]</property>
+				<property>/b707/generator/gen-bus-tie[3]</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			ESSENTIAL POWER auf Stellung GEN I drehen.
+			Generator I ist nun unsere Stromquelle.
+		</message>
+		<view>
+				<heading-offset-deg>238.1</heading-offset-deg>
+				<pitch-offset-deg>7.5</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>14.5</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5620</x-m>
+				<y-m>0.6000</y-m>
+				<z-m>1.3686</z-m>
+				<scale>1.3967</scale>
+		</marker>
+		<error>
+			<message>Drehen Sie bis zur Stellung GEN I.</message>
+			<condition>
+				<or>
+					<less-than>
+						<property>/b707/ess-power-switch</property>
+						<value>1</value>
+					</less-than>
+					<greater-than>
+						<property>/b707/ess-power-switch</property>
+						<value>1</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<equals>
+					<property>/b707/ess-power-switch</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Trennen Sie die Verbindung zwischen der Externen Stromversorgungseinheit und dem SYNC BUS.
+		</message>
+		<view>
+				<heading-offset-deg>237.8</heading-offset-deg>
+				<pitch-offset-deg>8.2</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.3</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>15.9</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5785</x-m>
+				<y-m>0.6000</y-m>
+				<z-m>1.4091</z-m>
+				<scale>1.4959</scale>
+		</marker>
+		<error>
+			<message>
+				Schalterstellung auf OFF.
+			</message>
+			<condition>
+				<property>/b707/ground-connect</property>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<not><property>/b707/ground-connect</property></not>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			Trennen Sie nun die Externe Stromversorgungseinheit ab.
+			Waehlen Sie hierzu im Hauptmenu: Boeing 707/ External Power Unit
+		</message>
+		<view>
+				<heading-offset-deg>240.8</heading-offset-deg>
+				<pitch-offset-deg>4.0</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>49.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5636</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.3967</z-m>
+				<scale>1.6612</scale>
+		</marker>
+
+		<exit>
+			<condition>
+				<not><property>/b707/external-power-connected</property></not>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Die Externe Stromversorgungseinheit wurde entfernt.
+		</message>
+		<view>
+			<view-number>1</view-number>
+			<heading-offset-deg>182.1</heading-offset-deg>
+			<pitch-offset-deg>-4.6</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>0.3</x-offset-m>
+			<y-offset-m>1.8</y-offset-m>
+			<z-offset-m>-32.0</z-offset-m>
+			<field-of-view>70</field-of-view>
+		</view>
+		<exit>
+			<condition>
+				<not><property>/b707/external-power-connected</property></not>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Schalten Sie den 40Hertz Converter fuer die zusaetzlichen Verbraucher ein.
+		</message>
+		<view>
+			<heading-offset-deg>239.9</heading-offset-deg>
+			<pitch-offset-deg>-4.9</pitch-offset-deg>
+			<roll-offset-deg>0.0</roll-offset-deg>
+			<x-offset-m>-0.4</x-offset-m>
+			<y-offset-m>1.2</y-offset-m>
+			<z-offset-m>-18.2</z-offset-m>
+			<field-of-view>28.6</field-of-view>
+		</view>
+
+		<marker>
+			<x-m>-17.5876</x-m>
+			<y-m>0.5711</y-m>
+			<z-m>1.0636</z-m>
+			<scale>1.6612</scale>
+		</marker>
+		<error>
+			<message>
+				Schalterstellung auf ON.
+			</message>
+			<condition>
+				<not><property>/b707/generator/hertz-converter</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/generator/hertz-converter</property>
+			</condition>
+		</exit>
+	</step>
+	
+	<step>
+		<message>
+			Schalten Sie das Kuehlsystem fuer die Elektronik ein.
+		</message>
+		<view>
+				<heading-offset-deg>239.9</heading-offset-deg>
+				<pitch-offset-deg>-4.9</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>28.6</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5876</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.1157</z-m>
+				<scale>1.6612</scale>
+		</marker>
+
+		<error>
+			<message>
+				Beide Schalter auf ON.
+			</message>
+			<condition>
+				<not><property>/b707/equipment/ovbd-dump</property></not>
+				<not><property>/b707/equipment/blower</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/equipment/ovbd-dump</property>
+				<property>/b707/equipment/blower</property>
+			</condition>
+		</exit>
+	</step>	
+	
+	<step>
+		<message>
+			Oeffnen Sie nun die Abdeckung fuer das Aussenluftventil.
+			Schalten Sie den Kippschalter nach oben. 
+		</message>
+		<view>
+				<heading-offset-deg>229.9</heading-offset-deg>
+				<pitch-offset-deg>8.2</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>30.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.3264</x-m>
+				<y-m>0.5356</y-m>
+				<z-m>1.4959</z-m>
+				<scale>2.3224</scale>
+		</marker>
+
+		<error>
+			<message>
+				Schalter nach oben.
+			</message>
+			<condition>
+				<not><property>/b707/air-conditioning/ram-air-switch</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/air-conditioning/ram-air-switch</property>
+			</condition>
+		</exit>
+	</step>	
+
+	<step>
+		<message>
+			Schalten Sie den Kompressor an Triebwerk 2 ein.
+		</message>
+		<view>
+				<heading-offset-deg>229.9</heading-offset-deg>
+				<pitch-offset-deg>8.2</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>30.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5041</x-m>
+				<y-m>0.5356</y-m>
+				<z-m>1.4579</z-m>
+				<scale>2.3224</scale>
+		</marker>
+		<error>
+			<message>
+				Schalter nach oben. Wenn die RPM bei 115% liegt starten Sie den Kompressor erneut.
+			</message>
+			<condition>
+				<not><property>/b707/air-conditioning/compressor-start[0]</property></not>
+				<greater-than>
+					<property>/b707/air-conditioning/compressor-rpm[0]</property>
+					<value>115</value>
+				</greater-than>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/air-conditioning/compressor-start[0]</property>
+				<less-than>
+					<property>/b707/air-conditioning/compressor-rpm[0]</property>
+					<value>115</value>
+				</less-than>
+				<greater-than>
+					<property>/b707/air-conditioning/compressor-rpm[0]</property>
+					<value>90</value>
+				</greater-than>	
+			</condition>
+		</exit>
+	</step>	
+
+	<step>
+		<message>
+			Schalten Sie den Kompressor an Triebwerk 3 ein.
+		</message>
+		<view>
+				<heading-offset-deg>229.9</heading-offset-deg>
+				<pitch-offset-deg>8.2</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>30.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.4537</x-m>
+				<y-m>0.5356</y-m>
+				<z-m>1.4579</z-m>
+				<scale>2.3224</scale>
+		</marker>
+		<error>
+			<message>
+				Schalter nach oben. Wenn die RPM bei 115% liegt starten Sie den Kompressor erneut.
+				Achten Sie auch auf den bereits geschalteten Kompressor. Starten Sie diesen erneut,
+				wenn die OVER SPEED TRIP Leuchte angegangen ist.
+			</message>
+			<condition>
+				<not><property>/b707/air-conditioning/compressor-start[1]</property></not>
+				<or>			
+					<greater-than>
+						<property>/b707/air-conditioning/compressor-rpm[1]</property>
+						<value>115</value>
+					</greater-than>				
+					<greater-than>
+						<property>/b707/air-conditioning/compressor-rpm[0]</property>
+						<value>115</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/air-conditioning/compressor-start[1]</property>
+				<less-than>
+					<property>/b707/air-conditioning/compressor-rpm[1]</property>
+					<value>115</value>
+				</less-than>
+				<greater-than>
+					<property>/b707/air-conditioning/compressor-rpm[1]</property>
+					<value>90</value>
+				</greater-than>	
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			Schalten Sie den Kompressor an Triebwerk 4 ein.
+		</message>
+		<view>
+				<heading-offset-deg>229.9</heading-offset-deg>
+				<pitch-offset-deg>8.2</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>30.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.4041</x-m>
+				<y-m>0.5356</y-m>
+				<z-m>1.4579</z-m>
+				<scale>2.3224</scale>
+		</marker>
+		<error>
+			<message>
+				Schalter nach oben. Wenn die RPM bei 115% liegt starten Sie den Kompressor erneut.
+				Achten Sie auch auf die bereits geschalteten Kompressoren. Starten Sie diese erneut,
+				wenn deren OVER SPEED TRIP Leuchten angegangen sind.
+			</message>
+			<condition>
+				<not><property>/b707/air-conditioning/compressor-start[2]</property></not>
+				<or>
+					<greater-than>
+						<property>/b707/air-conditioning/compressor-rpm[2]</property>
+						<value>115</value>
+					</greater-than>				
+					<greater-than>
+						<property>/b707/air-conditioning/compressor-rpm[1]</property>
+						<value>115</value>
+					</greater-than>				
+					<greater-than>
+						<property>/b707/air-conditioning/compressor-rpm[0]</property>
+						<value>115</value>
+					</greater-than>
+				</or>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/air-conditioning/compressor-start[2]</property>
+				<less-than>
+					<property>/b707/air-conditioning/compressor-rpm[2]</property>
+					<value>115</value>
+				</less-than>
+				<greater-than>
+					<property>/b707/air-conditioning/compressor-rpm[2]</property>
+					<value>90</value>
+				</greater-than>	
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			Schalten Sie die Luftzufuhr ein.
+		</message>
+		<view>
+				<heading-offset-deg>229.9</heading-offset-deg>
+				<pitch-offset-deg>8.2</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>30.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.4801</x-m>
+				<y-m>0.5356</y-m>
+				<z-m>1.4166</z-m>
+				<scale>2.3224</scale>
+		</marker>
+		<error>
+			<message>
+				Schalter nach oben. Luftzufuhr aus linker und rechter Tragflaeche oeffnen.
+			</message>
+			<condition>
+				<not><property>/b707/air-conditioning/wing-valve[0]</property></not>
+				<not><property>/b707/air-conditioning/wing-valve[1]</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/air-conditioning/wing-valve[0]</property>
+				<property>/b707/air-conditioning/wing-valve[1]</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			Oeffnen Sie die Abdeckung fuer die Klimaanlagen-Einheiten und schalten Sie beide an.
+		</message>
+		<view>
+				<heading-offset-deg>229.9</heading-offset-deg>
+				<pitch-offset-deg>8.2</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>30.1</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.4933</x-m>
+				<y-m>0.5356</y-m>
+				<z-m>1.3620</z-m>
+				<scale>3.2811</scale>
+		</marker>
+		<error>
+			<message>
+				Oeffnen Sie die Abdeckung und schalten Sie die Einheiten an.
+			</message>
+			<condition>
+				<not><property>/b707/air-conditioning/air-cond-unit-left-start</property></not>
+				<not><property>/b707/air-conditioning/air-cond-unit-right-start</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/air-conditioning/air-cond-unit-left-start</property>
+				<property>/b707/air-conditioning/air-cond-unit-right-start</property>
+			</condition>
+		</exit>
+	</step>
+
+	<step>
+		<message>
+			Oeffnen Sie nun die Abdeckung fuer das Sicherheitsluftventil.
+			Schalten Sie den Kippschalten nach unten. 
+		</message>
+		<view>
+				<heading-offset-deg>227.6</heading-offset-deg>
+				<pitch-offset-deg>3.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>23.5</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.1619</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.3967</z-m>
+				<scale>2.3224</scale>
+		</marker>
+
+		<error>
+			<message>
+				Schalter nach unten, die orange Kontrollleuchte unten links erlischt.
+			</message>
+			<condition>
+				<not><property>/b707/pressurization/safety-valve</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/pressurization/safety-valve</property>
+			</condition>
+		</exit>
+	</step>		
+	
+	<step>
+		<message>
+			Schalten Sie die Automatik fuer den Kabinendruckausgleich ein. 
+		</message>
+		<view>
+				<heading-offset-deg>227.6</heading-offset-deg>
+				<pitch-offset-deg>3.8</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>23.5</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.4264</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.2380</z-m>
+				<scale>1.8100</scale>
+		</marker>
+		<error>
+			<message>
+				Kippschalter nach oben.
+			</message>
+			<condition>
+				<not><property>/b707/pressurization/manual-mode-switch</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/pressurization/manual-mode-switch</property>
+			</condition>
+		</exit>
+	</step>		
+
+	<step>
+		<message>
+			Waehlen Sie die Take off Stellung. 
+		</message>
+		<view>
+				<heading-offset-deg>235.3</heading-offset-deg>
+				<pitch-offset-deg>1.4</pitch-offset-deg>
+				<roll-offset-deg>0.0</roll-offset-deg>
+				<x-offset-m>-0.4</x-offset-m>
+				<y-offset-m>1.2</y-offset-m>
+				<z-offset-m>-18.2</z-offset-m>
+				<field-of-view>14.3</field-of-view>
+		</view>
+
+		<marker>
+				<x-m>-17.5785</x-m>
+				<y-m>0.5711</y-m>
+				<z-m>1.2380</z-m>
+				<scale>1.1488</scale>
+		</marker>
+		<error>
+			<message>
+				Kippschalter nach oben.
+			</message>
+			<condition>
+				<not><property>/b707/pressurization/mode-switch</property></not>
+			</condition>
+		</error>
+		<exit>
+			<condition>
+				<property>/b707/pressurization/mode-switch</property>
+			</condition>
+		</exit>
+	</step>	
+	
+	<end>
+		<message>Alle Triebwerke sind gestartet. Have a nice trip!</message>
+		<view>
+			<heading-offset-deg>0</heading-offset-deg>
+			<pitch-offset-deg>-16</pitch-offset-deg>
+			<field-of-view>72</field-of-view>
+		</view>
+	</end>
+</PropertyList>

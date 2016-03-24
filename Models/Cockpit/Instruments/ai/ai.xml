@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>ai.ac</path>
+  
+	<animation>
+		<type>material</type>
+		<object-name>bank-index</object-name>
+		<object-name>off-flag</object-name>
+		<object-name>off-nav</object-name>
+		<object-name>reticl</object-name>
+		<object-name>ZR.Azi</object-name>
+		<object-name>ZR.Alt</object-name>
+		<object-name>gs-scale</object-name>
+		<object-name>ai-dir</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>sphere</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.4</red>
+			<green>0.3</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>mount</object-name>
+		<object-name>dir-knob</object-name>
+		<object-name>adi-knob</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>bank-index</object-name>
+		<object-name>off-flag</object-name>
+		<object-name>off-nav</object-name>
+		<object-name>reticl</object-name>
+		<object-name>ZR.Azi</object-name>
+		<object-name>ZR.Alt</object-name>
+		<object-name>gs-scale</object-name>
+		<object-name>ai-dir</object-name>
+		<object-name>sphere</object-name>
+		<object-name>mount</object-name>
+		<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>dir-knob</object-name>
+		<object-name>adi-knob</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>		
+ 
+	<animation>
+		<type>noshadow</type>
+		<object-name>ai-ring-shadow</object-name>
+		<object-name>reticl</object-name>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>ai-ring-shadow</object-name>
+		<object-name>reticl</object-name>
+		<object-name>shadow</object-name>
+  </effect>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>off-flag</object-name>
+    <property>b707/ess-bus</property>
+		<interpolation>
+		  <entry>
+		    <ind>0.0</ind>
+		    <dep>-39</dep>
+		  </entry>
+		  <entry>
+		    <ind>12</ind>
+		    <dep>-39</dep>
+		  </entry>
+		  <entry>
+		    <ind>12.1</ind>
+		    <dep>-37</dep>
+		  </entry>
+		  <entry>
+		    <ind>24</ind>
+		    <dep>31</dep>
+		  </entry>
+		</interpolation>   
+		<center>
+		 <x-m>0.0</x-m>
+		 <y-m>0.032</y-m>
+		 <z-m>0.037</z-m>
+		</center>
+		<axis>
+		 <x>1</x>
+		 <y>0</y>
+		 <z>0</z>
+		</axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>sphere</object-name>
+    <property>orientation/roll-deg</property>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis><x>1</x></axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>sphere</object-name>
+    <property>orientation/pitch-deg</property>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis><y>1</y></axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>bank-index</object-name>
+    <property>orientation/roll-deg</property>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis><x>-1</x></axis>
+  </animation>
+  
+	<animation>
+		<type>select</type>
+		<object-name>off-nav</object-name>
+		<condition>
+		  <or>
+		    <not><property>/instrumentation/nav[0]/nav-loc</property></not>
+				<and>
+				  <property>/instrumentation/nav[0]/nav-loc</property>
+				  <not><property>/instrumentation/nav[0]/in-range</property></not>
+				</and>
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>gs-scale</object-name>
+		<condition>
+		  <or>
+		    <not><property>/instrumentation/nav[0]/nav-loc</property></not>
+				<and>
+				  <property>/instrumentation/nav[0]/nav-loc</property>
+				  <not><property>/instrumentation/nav[0]/gs-in-range</property></not>
+				</and>
+			</or>
+		</condition>
+	</animation>
+  
+	<animation>
+		<type>select</type>
+		<object-name>ZR.Alt</object-name>
+		<condition>
+		  <!--><and>
+		    <property>/instrumentation/nav[0]/nav-loc</property>-->
+		  <property>/instrumentation/nav[0]/in-range</property>
+		  <property>/instrumentation/nav[0]/has-gs</property>
+		  <!--</and>-->
+		</condition>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>ZR.Alt</object-name>
+		<property>/instrumentation/nav[0]/gs-needle-deflection</property>
+		<interpolation>
+		  <entry><ind>-400</ind><dep>-30</dep></entry>
+		  <entry><ind> -10</ind><dep>-30</dep></entry>
+		  <entry><ind>   0</ind><dep>  0</dep></entry>
+		  <entry><ind>  10</ind><dep> 30</dep></entry>
+		  <entry><ind> 400</ind><dep> 30</dep></entry>
+		</interpolation>
+		<axis>
+		  <x>0</x>
+		  <y>-1</y>
+		  <z>0</z>
+		</axis>
+		<center>
+		  <x-m>0</x-m>
+		  <y-m>0</y-m>
+		  <z-m>0</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>ZR.Azi</object-name>
+		<condition>
+			<or>
+				<and>
+					<not><property>/instrumentation/nav[0]/nav-loc</property></not>
+					<property>/instrumentation/nav[0]/in-range</property>
+					<less-than>
+						<property>/instrumentation/nav[0]/nav-distance</property>
+						<value>45000</value>
+					</less-than>
+				</and>				
+				<and>
+					<property>/instrumentation/nav[0]/nav-loc</property>
+					<property>/instrumentation/nav[0]/in-range</property>
+				</and>					
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>ZR.Azi</object-name>
+		<property>/instrumentation/nav[0]/heading-needle-deflection</property>
+		<interpolation>
+		  <entry><ind>-10</ind><dep>-30</dep></entry>
+		  <entry><ind>  0</ind><dep>  0</dep></entry>
+		  <entry><ind> 10</ind><dep> 30</dep></entry>
+		</interpolation>
+		<axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>1</z>
+		</axis>
+		<center>
+		  <x-m>0</x-m>
+		  <y-m>0</y-m>
+		  <z-m>0</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>reticl</object-name>
+		<property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+		<factor>0.001</factor>
+		<axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>adi-knob</object-name>
+		<property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+		<factor>25</factor>
+		<center>
+		  <x-m>0</x-m>
+		  <y-m>0.041</y-m>
+		  <z-m>-0.0389</z-m>
+		</center>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>adi-knob</object-name>
+		<visible>true</visible>
+		  <action>
+		    <name>calibrate reset</name>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		      <command>property-assign</command>
+		      <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+		      <value>0</value>
+		    </binding>
+		  </action>      
+		  <action>
+		    <name>calibrate fine dec</name>
+		    <button>3</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+		      <step>-0.1</step>
+		      <min>-5</min>
+		      <max>5</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+		  <action>
+		    <name>calibrate fine inc</name>
+		    <button>4</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+		      <step>0.1</step>
+		      <min>-5</min>
+		      <max>5</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- dir -->
+		<animation>
+		<type>translate</type>
+		<object-name>ai-dir</object-name>
+		<property>/instrumentation/attitude-indicator/dir-offset-deg</property>
+		<factor>0.001</factor>
+		<axis>
+		  <x>0</x>
+		  <y>1</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>dir-knob</object-name>
+		<property>/instrumentation/attitude-indicator/dir-offset-deg</property>
+		<factor>25</factor>
+		<center>
+		  <x-m>0</x-m>
+		  <y-m>-0.037</y-m>
+		  <z-m>-0.039</z-m>
+		</center>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>dir-knob</object-name>
+		<visible>true</visible>
+		  <action>
+		    <name>calibrate reset d</name>
+		    <button>0</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-assign</command>
+		      <property>/instrumentation/attitude-indicator/dir-offset-deg</property>
+		      <value>0</value>
+		    </binding>
+		  </action>      
+		  <action>
+		    <name>calibrate fine dec d</name>
+		    <button>3</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>/instrumentation/attitude-indicator/dir-offset-deg</property>
+		      <step>-0.1</step>
+		      <min>-5</min>
+		      <max>5</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+		  <action>
+		    <name>calibrate fine inc d</name>
+		    <button>4</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>/instrumentation/attitude-indicator/dir-offset-deg</property>
+		      <step>0.1</step>
+		      <min>-5</min>
+		      <max>5</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+	</animation>
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>15</max-m>
+  </animation>
+
+</PropertyList>

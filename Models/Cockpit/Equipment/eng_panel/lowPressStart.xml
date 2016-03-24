@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>lowPressStart.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmber.001</object-name>
+		<object-name>sockle</object-name>
+		<object-name>sockle.001</object-name> 
+		<object-name>sockle.002</object-name>
+		<object-name>sockle.003</object-name>
+		<object-name>sockle.004</object-name>
+		<object-name>sockle.005</object-name>
+		<object-name>sockle.006</object-name>
+		<object-name>switch</object-name>
+		<object-name>switch.001</object-name>
+		<object-name>switch.002</object-name>
+		<object-name>switch.003</object-name>
+		<object-name>switch.004</object-name>
+		<object-name>switch.005</object-name>
+		<condition>		
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON</object-name>
+		<emission>
+		  <red>   1.0 </red>
+		  <green> 0.8 </green>
+		  <blue>  0.4 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON.001</object-name> <!-- ups green light not amber -->
+		<emission>
+		  <red>   0 </red>
+		  <green> 1.0 </green>
+		  <blue>  0 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/equipment/blower</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.001</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/equipment/ovbd-dump</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+  <!-- oil quantity test knob -->
+  <animation>
+      <type>translate</type>
+      <object-name>switch.002</object-name>
+      <property>/b707/oil/oil-test</property>
+      <factor>0.0028</factor>
+      <axis>
+          <x> 0.0</x>
+          <y> 1.0</y>
+          <z> 0.0</z>
+      </axis>
+      <center>
+          <x-m> 0.0725</x-m>
+          <y-m>-0.0068</y-m>
+          <z-m> 0.188</z-m>
+      </center>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+      <object-name>switch.002</object-name>
+      <object-name>sockle.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/oil/oil-test</property>  
+          <value>1.0</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/oil/oil-test</property>  
+          <value>0.0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+	<!-- Low Start Engine 3 and 4 -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch</object-name>
+		  <property>/b707/start/low-start-right</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.0029</y-m>
+		  <z-m> 0.198</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch</object-name>
+		  <object-name>sockle</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		  			<property>/b707/start/low-start-right</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Low Start Engine 1 and 2 -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.001</object-name>
+		  <property>/b707/start/low-start-left</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.0029</y-m>
+		  <z-m> 0.198</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.001</object-name>
+		  <object-name>sockle.001</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		  			<property>/b707/start/low-start-left</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Equipment Cooling Blower -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.003</object-name>
+		  <property>/b707/equipment/blower</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.0029</y-m>
+		  <z-m> 0.125</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.003</object-name>
+		  <object-name>sockle.003</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		  			<property>/b707/equipment/blower</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Equipment Cooling OVBD Dump -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.004</object-name>
+		  <property>/b707/equipment/ovbd-dump</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.0029</y-m>
+		  <z-m> 0.125</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.004</object-name>
+		  <object-name>sockle.004</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		  			13<property>/b707/equipment/ovbd-dump</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- 40 Hertz Converter - Controls 115Volt 60 cycle power to the stateroom and the number two galley areas -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.005</object-name>
+		  <property>/b707/generator/hertz-converter</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.0029</y-m>
+		  <z-m> 0.054</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.005</object-name>
+		  <object-name>sockle.005</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		 			  <property>/b707/generator/hertz-converter</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+</PropertyList>

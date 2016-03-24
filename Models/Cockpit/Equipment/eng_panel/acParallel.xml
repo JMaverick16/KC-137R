@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>acParallel.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampWhite</object-name>
+		<object-name>LampWhite.001</object-name>
+		<object-name>knob</object-name>
+		<object-name>knob.001</object-name>
+		<object-name>knobsup</object-name>
+		<object-name>knobsup.001</object-name>
+		<object-name>turn</object-name>
+		<object-name>bezel</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<object-name>needle</object-name>
+		<object-name>needle.001</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<object-name>needle</object-name>
+		<object-name>needle.001</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/engineer-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>LampWhiteON</object-name>
+		<object-name>LampWhiteON.001</object-name>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampWhiteON</object-name>
+		<object-name>LampWhiteON.001</object-name>
+		<condition>
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		</condition>
+		<emission>
+		  <red>   0.5 </red>
+		  <green> 0.4 </green>
+		  <blue>  0.2 </blue>
+		</emission>
+	</animation>
+	 
+  <!-- residual volt switch -->
+  <animation>
+      <type>translate</type>
+      <object-name>knob.001</object-name>
+      <property>/b707/generator/residual-volts-knob</property>
+      <factor>0.0028</factor>
+      <axis>
+          <x> 0.0</x>
+          <y> 1.0</y>
+          <z> 0.0</z>
+      </axis>
+      <center>
+          <x-m>-0.0011</x-m>
+          <y-m>-0.0039</y-m>
+          <z-m> 0.0487</z-m>
+      </center>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob.001</object-name>
+    <object-name>knobsup.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/generator/residual-volts-knob</property>  
+          <value>1.0</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/generator/residual-volts-knob</property>  
+          <value>0.0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+  <!-- powermeter -->
+  <animation>
+      <type>translate</type>
+      <object-name>knob</object-name>
+      <property>/b707/generator/powermeter-knob</property>
+      <factor>0.0028</factor>
+      <axis>
+          <x> 0.0</x>
+          <y> 1.0</y>
+          <z> 0.0</z>
+      </axis>
+      <center>
+          <x-m>-0.0011</x-m>
+          <y-m>-0.0039</y-m>
+          <z-m>-0.0456</z-m>
+      </center>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <object-name>knobsup</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/generator/powermeter-knob</property>  
+          <value>1.0</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/generator/powermeter-knob</property>  
+          <value>0.0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+  <!-- select ac power --> 
+	<animation>
+		<type>rotate</type>
+		<object-name>turn</object-name>
+		<property>/b707/ac/ac-para-select</property>
+		<interpolation>
+		  <entry><ind> 0</ind><dep>   0</dep></entry>
+		  <entry><ind> 1</ind><dep>  90</dep></entry>
+		  <entry><ind> 2</ind><dep> 135</dep></entry>
+		  <entry><ind> 3</ind><dep> 180</dep></entry>
+		  <entry><ind> 4</ind><dep>-135</dep></entry>
+		  <entry><ind> 5</ind><dep> -90</dep></entry>
+		  <entry><ind> 6</ind><dep> -45</dep></entry>
+		</interpolation>
+		<axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+		</axis>
+		<center>
+		<x-m> 0.0</x-m>
+		<y-m> 0.0</y-m>
+		<z-m> 0.0</z-m>
+		</center>  
+	</animation>
+     
+	<animation>
+		<type>pick</type>
+		<object-name>turn</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/ac/ac-para-select</property>
+		    <step>1</step>
+		    <min>0</min>
+		    <max>7</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+		<action>
+		  <button>1</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/ac/ac-para-select</property>
+		    <step>-1</step>
+		    <min>0</min>
+		    <max>7</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+	</animation>
+	
+	<!-- white lights -->
+	<animation>
+		<type>select</type>
+		<object-name>LampWhiteON</object-name>
+		<condition>
+		  <or>
+		    <and>
+				  <property>/b707/ac/sync1</property>
+		    	<property>/controls/electric/battery-switch</property>
+				</and>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampWhiteON.001</object-name>
+		<condition>
+		  <or>
+		    <and>
+				  <property>/b707/ac/sync2</property>
+		    	<property>/controls/electric/battery-switch</property>		    
+				</and>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<!-- selected paralleling frequency -->
+	<animation>
+		<type>rotate</type>
+		<object-name>needle</object-name>
+		<property>/b707/ac-sel-para-freq</property>
+		<interpolation>
+		  <entry><ind> 300.0</ind><dep>   0.0</dep></entry>
+		  <entry><ind> 380.0</ind><dep>   0.0</dep></entry>
+		  <entry><ind> 400.0</ind><dep>  59.31</dep></entry>
+		  <entry><ind> 420.0</ind><dep> 118.14</dep></entry>
+		  <entry><ind> 500.0</ind><dep> 118.14</dep></entry>
+		</interpolation>
+    <center>
+        <x-m>-0.0278</x-m>
+        <y-m> 0.0</y-m>
+        <z-m> 0.0697</z-m>
+    </center>
+		<axis>
+		  <x>0</x>
+		  <y>1</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+	
+	<!-- selected paralleling ac volts and amp -->
+	<animation>
+		<type>rotate</type>
+		<object-name>needle.001</object-name>
+		<property>/b707/ac-sel-para-volts</property>	
+		<interpolation>
+		  <entry><ind>   0.0</ind><dep>   0.0</dep></entry>
+		  <entry><ind>  40.0</ind><dep> 115.56</dep></entry>
+		  <entry><ind> 100.0</ind><dep> 115.56</dep></entry>
+		</interpolation>
+    <center>
+        <x-m> 0.0247</x-m>
+        <y-m> 0.0</y-m>
+        <z-m> 0.07</z-m>
+    </center>
+		<axis>
+		  <x>0</x>
+		  <y>1</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+	
+</PropertyList>

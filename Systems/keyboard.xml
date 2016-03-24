@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+<key n="127">
+	<name>Delete</name>
+	<desc>Toggle Reversers</desc>
+  <binding>
+      <command>nasal</command>
+      <script>b707.togglereverser();</script>
+  </binding>
+</key>
+<key n="60">
+  <name> > </name>
+  <desc>toggle pilot engineer view</desc>
+  <binding>
+		  <command>nasal</command>
+		  <script>b707.changeView(9);</script>
+  </binding>
+</key>
+
+<key n="108">
+  <name>L</name>
+  <desc>toggle landing lights</desc>
+  <binding>
+      <command>nasal</command>
+      <script>b707.toggleLandingLights();</script>
+  </binding>
+</key>
+<key n="121">
+  <name>y</name>
+  <desc>toggle yokes</desc>
+  <binding>
+      <command>property-toggle</command>
+      <property>sim/yokes-visible</property>
+  </binding>
+</key>
+
+<key n="94"> <!-- ^ -->
+    <name>short start</name>
+    <desc>Test startup</desc>
+  <binding>
+      <command>nasal</command>
+      <script>b707.short_startup();</script>
+  </binding>
+</key>
+
+<key n="257">
+    <name>F1</name>
+    <desc>Checklists</desc>
+    <binding>
+      <command>dialog-show</command>
+      <dialog-name>checklist</dialog-name>
+    </binding>
+</key>
+
+<key n="263">
+	<name>F7</name>
+	<desc>Show map</desc>
+	<binding>
+	<command>dialog-show</command>
+	<dialog-name>map</dialog-name>
+	</binding>
+</key>
+
+<key n="264">
+	<name>F8</name>
+	<desc>Show map</desc>
+	<binding>
+	<command>dialog-show</command>
+	<dialog-name>route-manager</dialog-name>
+	</binding>
+</key>
+
+<key n="265">
+    <name>F9</name>
+    <desc>Pop up Fuel and Weight dialog</desc>
+    <binding>
+        <command>nasal</command>
+        <script>b707.WeightFuelDialog()</script>
+    </binding>
+</key>
+<!--
+<key n="267">
+  <name>F11</name>
+  <desc>Pop up autopilot dialog</desc>
+  <binding>
+		  <command>nasal</command>
+		  <script>b707.changeView(11);</script>
+  </binding>
+</key>
+-->
+<key n="62">
+  <name>Shift + ></name>
+  <desc>Pop up autopilot dialog</desc>
+  <binding>
+		  <command>nasal</command>
+		  <script>b707.changeView(11);</script>
+  </binding>
+</key>
+
+<key n="79">
+  <name>O</name>
+  <desc>Extend Refuelling Drogues</desc>  
+  <binding>
+		  <command>nasal</command>
+		  <script>b707.toggleRefuelling();</script>
+  </binding>
+</key>
+<key n="2">
+  <name>Ctrl + b</name>
+  <desc>Speedbrakes/Spoiler full</desc>  
+  <binding>
+		  <command>nasal</command>
+		  <script>b707.fullSpeedbrakes();</script>
+  </binding>
+</key>
+
+</PropertyList>

@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ 	<path>ohpanel.ac</path>
+ 	
+	<animation>
+		<type>material</type>
+		<object-name>ohpanel</object-name>
+		<condition>	
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<model>
+		<name>transponder</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/transponder.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>emer_lights</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/emerYawAndMore.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>window_heat</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/windowHeat.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>wing_anti_ice</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/wingAntiIce.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>	
+
+	<model>
+		<name>grd_start_and_more</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/grdStartAndMore.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>	
+
+	<model>
+		<name>light_and_wiper</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/lightAndWiper.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>starter_switch_1</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch1.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.0885</y-m>
+		  <z-m> 0.2301</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>starter_switch_2</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch2.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.0222</y-m>
+		  <z-m> 0.2301</z-m>
+		</offsets>
+	</model>
+		
+	<model>
+		<name>starter_switch_3</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch3.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0393</y-m>
+		  <z-m> 0.2301</z-m>
+		</offsets>
+	</model>
+		
+	<model>
+		<name>starter_switch_4</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch4.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.1033</y-m>
+		  <z-m> 0.2301</z-m>
+		</offsets>
+	</model>
+		
+	<model>
+		<name>compass_control_1</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/compass_control/compass_control.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>
+
+</PropertyList>

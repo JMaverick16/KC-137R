@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList> 
+    <title>IV. Startup engines</title>    
+	<item>
+      <name>III. Before engines startup</name>
+      <value>COMPLETED</value>
+    </item>
+    <item>
+      <name>THROTTLE</name>
+      <value>IDLE</value>
+    </item>
+    <item>
+      <name>Start ENG 3</name>
+      <value>OVERHEAD PANEL - switch STARTER 3 ON</value>
+    </item> 
+    <item>
+      <name>Cutoff ENG 3</name>
+      <value>PEDESTAL - cutoff 3 up</value>
+    </item> 
+    <item>
+      <name>Start ENG 4</name>
+      <value>OVERHEAD PANEL - switch STARTER 4 ON</value>
+    </item> 
+    <item>
+      <name>Cutoff ENG 4</name>
+      <value>PEDESTAL - cutoff 4 up</value>
+    </item>
+    <item>
+      <name>Start ENG 2</name>
+      <value>OVERHEAD PANEL - switch STARTER 2 ON</value>
+    </item> 
+    <item>
+      <name>Cutoff ENG 2</name>
+      <value>PEDESTAL - cutoff 2 up</value>
+    </item> 
+    <item>
+      <name>Start ENG 1</name>
+      <value>OVERHEAD PANEL - switch STARTER 1 ON</value>
+    </item> 
+    <item>
+      <name>Cutoff ENG 1</name>
+      <value>PEDESTAL - cutoff 1 up</value>
+    </item>
+    <item>
+      <name>--- NOTICE ---</name>
+      <value></value>
+    </item> 
+    <item>
+      <name>GREEN LIGHTS</name>
+      <value>in OH Panel ENGINES STARTER extinguished</value>
+    </item>   
+</PropertyList>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+ <path>wheels.ac</path>
+
+<!-- Gear -->
+	<animation>
+		<type>spin</type>
+		<object-name>WheelFront</object-name>		
+    <property>sim/multiplay/generic/float[2]</property>
+		<factor>10</factor>
+		<axis>
+		    <x>0</x>
+		    <y>-1</y>
+		    <z>0</z>
+		</axis>
+		<center>
+		    <x-m>-0.765</x-m>
+		    <y-m> 0.0</y-m>
+		    <z-m> 0.0</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>spin</type>
+		<object-name>WheelBack</object-name>		
+    <property>sim/multiplay/generic/float[2]</property>
+		<factor>10</factor>
+		<axis>
+		    <x>0</x>
+		    <y>-1</y>
+		    <z>0</z>
+		</axis>
+		<center>
+		    <x-m>0.763</x-m>
+		    <y-m>0.0</y-m>
+		    <z-m>0.0</z-m>
+		</center>
+	</animation>
+  
+</PropertyList>
+
+

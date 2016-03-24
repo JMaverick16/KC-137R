@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<!-- specific ADF -->
+<adf n="0">
+  <mode>adf</mode>
+  <serviceable type="bool">true</serviceable>
+  <frequencies>
+    <selected-khz type="int">490</selected-khz>  <!-- NDB "DVI" (Donaueschingen) -->
+    <standby-khz type="int">401</standby-khz>    <!-- EDTM ancient military airbase -->
+  </frequencies>
+</adf>
+
+<adf n="1">
+  <mode>adf</mode>
+  <serviceable type="bool">true</serviceable>
+  <frequencies>
+    <selected-khz type="int">442</selected-khz>  <!-- EDNY near the lake of constance -->
+    <standby-khz type="int">473</standby-khz>    <!-- EDSN ancient military airbase -->
+  </frequencies>
+</adf>
+
+<rmi>	
+	<face-offset type="double">0.0</face-offset>
+	<rmi-needle n="0">
+		<switch type="bool">0</switch>
+	</rmi-needle>
+	<rmi-needle n="1">
+		<switch type="bool">1</switch>
+	</rmi-needle>
+</rmi>
+
+<deviation-indicator>
+  <frequency type="int">0</frequency>
+</deviation-indicator>
+
+<marker-beacon>
+  <test type="int">0</test>
+  <audio-btn type="bool">0</audio-btn>
+  <power-btn type="bool">0</power-btn>
+</marker-beacon>
+
+<nav n="0">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">114.30</selected-mhz-fmt>
+    <selected-mhz type="double">114.30</selected-mhz>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">109.60</standby-mhz-fmt>
+    <standby-mhz type="double">109.6</standby-mhz>
+  </frequencies>
+  <serviceable type="bool">true</serviceable>
+  <radials><selected-deg>0</selected-deg></radials>
+</nav>
+<nav n="1">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">110.05</selected-mhz-fmt>
+    <selected-mhz type="double">110.05</selected-mhz>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">116.10</standby-mhz-fmt>
+    <standby-mhz type="double">116.10</standby-mhz>
+  </frequencies>
+  <serviceable type="bool">true</serviceable>
+  <radials><selected-deg>0</selected-deg></radials>
+</nav>
+
+<dme n="0">
+  <mode>dme</mode>
+  <serviceable type="bool">true</serviceable>
+  <frequencies>
+    <selected-mhz type="double">114.30</selected-mhz>
+    <source type="string">/instrumentation/nav[0]/frequencies/selected-mhz</source>
+  </frequencies>
+  <power-btn type="bool">true</power-btn>
+  <indicated-distance-nm type="double">0.0</indicated-distance-nm>
+  <indicated-time-min type="double">0.0</indicated-time-min>
+	<indicated-ground-speed-kt type="double">0.0</indicated-ground-speed-kt>
+	<switch-min-kts type="bool">true</switch-min-kts>
+	<min-kts-display type="double">0.0</min-kts-display>
+	<miles-display type="double">0.0</miles-display>
+	<left-dot type="bool">false</left-dot>
+</dme>
+
+<dme n="1">
+  <mode>dme</mode>
+  <serviceable type="bool">true</serviceable>
+  <frequencies>
+    <selected-mhz type="double">110.05</selected-mhz>
+    <source type="string">/instrumentation/nav[1]/frequencies/selected-mhz</source>
+  </frequencies>
+  <power-btn type="bool">true</power-btn>
+  <indicated-distance-nm type="double">0.0</indicated-distance-nm>
+  <indicated-time-min type="double">0.0</indicated-time-min>
+	<indicated-ground-speed-kt type="double">0.0</indicated-ground-speed-kt>
+	<switch-min-kts type="bool">true</switch-min-kts>
+	<min-kts-display type="double">0.0</min-kts-display>
+	<miles-display type="double">0.0</miles-display>
+	<left-dot type="bool">false</left-dot>
+</dme>
+
+<comm n="0">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">127.32</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">118.10</standby-mhz-fmt>
+</frequencies>
+</comm>
+
+<comm-radio>
+  <name>comm</name>
+  <number>0</number>
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">127.32</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">118.10</standby-mhz-fmt>
+</frequencies>
+</comm-radio>
+
+<comm n="1">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">122.75</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">122.75</standby-mhz-fmt>
+  </frequencies>
+</comm>
+
+<!-- Flightgear Rallye Watch  -->
+<frw>
+  <running type="bool">0</running>
+  <btn-mode type="bool">0</btn-mode>
+  <btn-reset type="bool">0</btn-reset>
+  <btn-start-stop type="bool">0</btn-start-stop>
+  <flight-time>
+    <start-time type="double">0</start-time>
+    <accu type="double">0</accu>
+    <total type="double">0</total>
+    <hours type="int">0</hours>
+    <minutes type="int">0</minutes>
+    <seconds type="int">0</seconds>
+  </flight-time>
+</frw>
+
+<!-- B707 Stopwatch  -->
+<stopwatch>
+  <running type="bool">0</running>
+  <btn-mode type="bool">0</btn-mode>
+  <btn-reset type="bool">0</btn-reset>
+  <btn-start-stop type="bool">0</btn-start-stop>
+  <flight-time>
+    <start-time type="double">0</start-time>
+    <accu type="double">0</accu>
+    <total type="double">0</total>
+    <hours type="int">0</hours>
+    <minutes type="int">0</minutes>
+    <seconds type="int">0</seconds>
+  </flight-time>
+</stopwatch>
+
+<!-- B707 Compass Controll  -->
+<compass-control>
+  <mag type="bool">1</mag>
+  <lat-knob type="bool">0</lat-knob>
+  <lat-turn type="double">0</lat-turn>
+</compass-control>
+
+<compass-control n="1">
+  <mag type="bool">1</mag>
+  <lat-knob type="bool">0</lat-knob>
+  <lat-turn type="double">0</lat-turn>
+</compass-control>
+
+<operating-time>
+  <start-time>0.0</start-time>
+	<total type="double">0.0</total>
+	<total-h type="double">0.0</total-h>
+	<total-m type="double">0.0</total-m>
+</operating-time>
+
+<!-- agl-radar -->
+<aglradar>
+  <power-btn type="bool">0</power-btn>
+  <mda-lamp type="bool">0</mda-lamp>
+</aglradar>
+
+<!-- standby ai -->
+<adi>
+  <knob-pos type="double">0.0</knob-pos>
+  <horizon-offset-deg type="double">0.0</horizon-offset-deg>
+</adi>
+
+<mptcas>
+	<display-factor type="double">0.14</display-factor>
+	<on type="bool">0</on>
+</mptcas>
+
+<tacan>
+  <name>tacan</name>
+  <number>0</number>
+	<serviceable type="bool" archive="y">true</serviceable>
+	<switch-position type="int" archive="y">0</switch-position>      
+	<xy-position type="int" archive="y">0</xy-position>
+    <volume type="double" archive="y">0.0</volume>
+	<display n="0"><correction type="double">0.0</correction></display>
+</tacan>
+
+<radar n="0">
+ <!-- Used for Air-to-Air Refueling -->
+ <range type="int" archive="y">20</range>
+ <range-factor type="double" archive="n">20</range-factor>
+ <minimized type="bool" archive="y">false</minimized>
+</radar>
+
+<mptcas n="0">
+  <table>
+  	<row n="0">
+  		<col n="0">CALLSIGN</col>
+  		<col n="1">DISTANCE</col>
+  		<col n="2">ALTITUDE</col>
+  		<col n="3">HDG / DIR</col>
+  		<col n="4">TAS</col>
+  		<col n="5">AIRCRAFT</col>
+  	</row>
+  </table>
+</mptcas>
+
+<transponder>
+  <inputs><knob-mode type="int">0</knob-mode></inputs>
+</transponder>
+
+</PropertyList>

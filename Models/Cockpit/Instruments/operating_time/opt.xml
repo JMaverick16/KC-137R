@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+ <name>opt</name>
+ <path>opt_digital.ac</path>
+ 
+	<animation>
+		<type>material</type>
+      <object-name>hour1</object-name>
+      <object-name>hour10</object-name>
+      <object-name>hour100</object-name>
+      <object-name>hour1000</object-name>
+      <object-name>min1</object-name>
+      <object-name>min10</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+      <object-name>hour1</object-name>
+      <object-name>hour10</object-name>
+      <object-name>hour100</object-name>
+      <object-name>hour1000</object-name>
+      <object-name>min1</object-name>
+      <object-name>min10</object-name>
+			<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+  
+  <animation>
+      <type>textranslate</type>
+      <object-name>hour1000</object-name>
+              <property>/instrumentation/operating-time/total-h</property>
+      <step>1000</step>
+      <factor>0.0001</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+  
+  <animation>
+      <type>textranslate</type>
+      <object-name>hour100</object-name>
+              <property>/instrumentation/operating-time/total-h</property>
+      <step>100</step>
+      <factor>0.001</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+  
+  <animation>
+      <type>textranslate</type>
+      <object-name>hour10</object-name>
+              <property>/instrumentation/operating-time/total-h</property>
+      <step>10</step>
+      <factor>0.01</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>textranslate</type>
+      <object-name>hour1</object-name>
+              <property>/instrumentation/operating-time/total-h</property>
+      <step>1</step>
+      <factor>0.1</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>textranslate</type>
+      <object-name>min10</object-name>
+              <property>/instrumentation/operating-time/total-m</property>
+      <step>10</step>
+      <factor>0.01</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>textranslate</type>
+      <object-name>min1</object-name>
+              <property>/instrumentation/operating-time/total-m</property>
+      <step>1</step>
+      <factor>0.1</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+
+</PropertyList>

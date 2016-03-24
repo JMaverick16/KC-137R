@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+	<path>adi.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>bank-index</object-name>
+		<object-name>ringfront</object-name>
+		<object-name>marker</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>drum</object-name>
+		<object-name>bkg</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.4</red>
+			<green>0.3</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>bank-index</object-name>
+		<object-name>ringfront</object-name>
+		<object-name>marker</object-name>
+		<object-name>drum</object-name>
+		<object-name>bkg</object-name>
+		<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+			<red>0.8</red>
+			<green>0.8</green>
+			<blue>0.8</blue>
+			<factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>support</object-name>
+		<condition>
+			<not><property>/systems/electrical/outputs/cabin-dim</property></not>
+		</condition>
+		<emission>
+			<red>0.05</red>
+			<green>0.05</green>
+			<blue>0.05</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>support</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>gaugeKnob</object-name>
+		<object-name>gaugeScale</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>gaugeKnob</object-name>
+		<object-name>gaugeScale</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+		<object-name>bkg</object-name>
+		<object-name>ring</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+	</effect>
+	
+	<!-- the object action -->
+	
+		
+	<animation>
+		<type>rotate</type>
+		<object-name>drum</object-name>
+		<property>orientation/roll-deg</property>
+		<center>
+			<x-m>-0.0113</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>bkg</object-name>
+		<property>orientation/roll-deg</property>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>bank-index</object-name>
+		<property>orientation/roll-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>drum</object-name>
+		<property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+		<interpolation>
+		  <entry><ind>-6000</ind><dep>-150</dep></entry>
+		  <entry><ind>-4000</ind><dep>-120</dep></entry>
+		  <entry><ind>-2000</ind><dep>-60</dep></entry>
+		  <entry><ind>-1000</ind><dep>-30</dep></entry>
+		  <entry><ind>    0</ind><dep>  0</dep></entry>
+		  <entry><ind> 1000</ind><dep> 30</dep></entry>
+		  <entry><ind> 2000</ind><dep> 60</dep></entry>
+		  <entry><ind> 4000</ind><dep> 120</dep></entry>
+		  <entry><ind> 6000</ind><dep> 150</dep></entry> 
+		</interpolation>
+		<center>
+			<x-m>-0.022</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+		  <x>0</x>
+		  <y>1</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>marker</object-name>
+		<property>/instrumentation/adi/horizon-offset-deg</property>
+		<factor>0.002</factor>
+		<axis>
+		  <x>0</x>
+		  <y>0</y>
+		  <z>1</z>
+		</axis>
+	</animation>
+	
+  
+  <!-- The knop -->
+  <animation>
+      <type>translate</type>
+      <object-name>gaugeKnob</object-name>
+      <property>/instrumentation/adi/knob-pos</property>
+      <factor>0.003</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+      <center>
+          <x-m> 0.007</x-m>
+          <y-m> 0.026</y-m>
+          <z-m>-0.026</z-m>
+      </center>
+  </animation> 
+    
+	<animation>
+			<type>rotate</type>
+      <object-name>gaugeKnob</object-name>
+			<property>/instrumentation/adi/horizon-offset-deg</property>
+			<interpolation>
+				<entry><ind> 1</ind><dep> 60</dep></entry>
+				<entry><ind> 0</ind><dep>  0</dep></entry>
+				<entry><ind>-1</ind><dep>-60</dep></entry>
+			</interpolation>
+      <center>
+        <x-m> 0.007</x-m>
+        <y-m> 0.026</y-m>
+        <z-m>-0.026</z-m>
+      </center>
+			<axis>
+				<x>-1</x>
+				<y>0</y>
+				<z>0</z>
+			</axis>
+		</animation>
+
+	<animation>
+		<type>pick</type>
+  	<object-name>gaugeKnob</object-name>
+  	<object-name>gaugeScale</object-name>
+		<visible>true</visible>
+		  <action>
+		    <name>adi calibrate reset</name>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		      <command>property-assign</command>
+		      <property>/instrumentation/adi/horizon-offset-deg</property>
+		      <value>0</value>
+		    </binding>
+        <binding>
+          <command>nasal</command>
+          <script>b707.gauge_erec();</script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-assign</command>
+            <property>/instrumentation/adi/knob-pos</property>  
+            <value>0.0</value>
+          </binding>
+        </mod-up>
+		  </action>      
+		  <action>
+		    <name>adi calibrate fine dec</name>
+		    <button>3</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>/instrumentation/adi/horizon-offset-deg</property>
+		      <step>-0.2</step>
+		      <min>-1</min>
+		      <max>1</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+		  <action>
+		    <name>adi calibrate fine inc</name>
+		    <button>4</button>
+		    <repeatable>true</repeatable>
+		    <binding>
+		      <command>property-adjust</command>
+		      <property>/instrumentation/adi/horizon-offset-deg</property>
+		      <step>0.2</step>
+		      <min>-1</min>
+		      <max>1</max>
+		      <wrap>false</wrap>
+		    </binding>
+		  </action>
+	</animation>
+
+</PropertyList>

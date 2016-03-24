@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<!-- Lake of Constance Hangar :: M. Kraus, Avril 2013  -->
+
+<PropertyList>
+
+<path>rmi.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<object-name>heading</object-name>
+		<object-name>needle1</object-name>
+		<object-name>needle2</object-name>
+		<object-name>ring</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+			<object-name>face</object-name>
+			<object-name>heading</object-name>
+			<object-name>needle1</object-name>
+			<object-name>needle2</object-name>
+			<object-name>ring</object-name>
+			<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>hdg-knob</object-name>
+		<object-name>needle1-knob</object-name>
+		<object-name>needle2-knob</object-name>
+		<object-name>reset-knob</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>hdg-knob</object-name>
+		<object-name>needle1-knob</object-name>
+		<object-name>needle2-knob</object-name>
+		<object-name>reset-knob</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+
+	<!-- Needle 1 -->
+	<animation>
+		<type>rotate</type>
+		<object-name>needle1</object-name>
+		<property>/instrumentation/rmi/rmi-needle[0]/value</property>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Needle 2 -->
+	<animation>
+		<type>rotate</type>
+		<object-name>needle2</object-name>
+		<property>/instrumentation/rmi/rmi-needle[1]/value</property>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+
+	<!-- turn face or knob -->
+	<animation>
+		<type>rotate</type>
+		<object-name>face</object-name>
+		<property>/instrumentation/rmi/face-offset</property>
+		<factor>-1</factor>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>hdg-knob</object-name>
+		<property>/instrumentation/rmi/face-offset</property>
+		<factor>-1</factor>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+		<center>
+		  <x-m>0</x-m>
+		  <y-m>0.0303</y-m>
+		  <z-m>0.0303</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+			<object-name>face</object-name>
+			<object-name>hdg-knob</object-name>
+		  <action>
+		      <button>0</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.2</interval-sec>
+		      <binding>
+		          <command>nasal</command>
+		          <script>b707.rmiNavInfo(1);</script>
+		      </binding>
+		  </action>
+		  <action>
+		      <button>1</button>
+		      <repeatable>true</repeatable>
+		      <interval-sec>0.2</interval-sec>
+		      <binding>
+		          <command>nasal</command>
+		          <script>b707.rmiNavInfo(2);</script>
+		      </binding>
+		  </action>
+		  <action>
+		      <button>3</button>
+		      <binding>
+		          <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+		          </condition>
+		          <command>property-adjust</command>
+		          <property>/instrumentation/rmi/face-offset</property>
+		          <step>1</step>
+		          <min>0</min>
+		          <max>359</max>
+		          <wrap>1</wrap>
+		      </binding>
+		      <binding>
+		          <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+		          </condition>
+		          <command>property-adjust</command>
+		          <property>/instrumentation/rmi/face-offset</property>
+		          <step>5</step>
+		          <min>0</min>
+		          <max>359</max>
+		          <wrap>1</wrap>
+		      </binding>
+		  </action>
+		  <action>
+		      <button>4</button>
+		      <binding>
+		          <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+		          </condition>
+		          <command>property-adjust</command>
+		          <property>/instrumentation/rmi/face-offset</property>
+		          <step>-1</step>
+		          <min>0</min>
+		          <max>359</max>
+		          <wrap>1</wrap>
+		      </binding>
+		      <binding>
+		          <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+		          </condition>
+		          <command>property-adjust</command>
+		          <property>/instrumentation/rmi/face-offset</property>
+		          <step>-5</step>
+		          <min>0</min>
+		          <max>359</max>
+		          <wrap>1</wrap>
+		      </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>needle1-knob</object-name>
+		<property>/instrumentation/rmi/rmi-needle[0]/switch</property>
+		<interpolation>
+		  <entry><ind> 0</ind><dep> 0</dep></entry>
+		  <entry><ind> 1</ind><dep>90</dep></entry>
+		</interpolation>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+		<center>
+		  <x-m>0</x-m>
+		  <y-m>-0.03</y-m>
+		  <z-m>-0.031</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>needle2-knob</object-name>
+		<property>/instrumentation/rmi/rmi-needle[1]/switch</property>
+		<interpolation>
+		  <entry><ind> 0</ind><dep> 0</dep></entry>
+		  <entry><ind> 1</ind><dep>-90</dep></entry>
+		</interpolation>
+		<axis>
+		  <x>-1</x>
+		  <y>0</y>
+		  <z>0</z>
+		</axis>
+		<center>
+		  <x-m>0</x-m>
+		  <y-m> 0.0303</y-m>
+		  <z-m>-0.031</z-m>
+		</center>
+	</animation>	
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>reset-knob</object-name>
+		<property>/instrumentation/rmi/face-offset</property>
+		<interpolation>
+			<entry><ind>-0.1</ind><dep>-13</dep></entry>
+		  <entry><ind> 0</ind><dep> 0</dep></entry>
+		  <entry><ind> 0.1</ind><dep>-13</dep></entry>
+		</interpolation>
+    <axis>   
+      <x1-m>  0.004</x1-m>
+      <y1-m> -0.024</y1-m>
+      <z1-m>  0.036</z1-m>
+      <x2-m>  0.004</x2-m>
+      <y2-m> -0.036</y2-m>
+      <z2-m>  0.025</z2-m>
+    </axis>
+	</animation>
+
+	<animation>
+	  <type>pick</type>
+		<object-name>needle1-knob</object-name>
+	  <action>
+		    <name>needle1 change</name>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/instrumentation/rmi/rmi-needle[0]/switch</property>
+		    </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+	  </action>
+	</animation>
+
+	<animation>
+	  <type>pick</type>
+		<object-name>needle2-knob</object-name>
+	  <action>
+		    <name>needle2 change</name>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/instrumentation/rmi/rmi-needle[1]/switch</property>
+		    </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+	  </action>
+	</animation>
+
+	<animation>
+	  <type>pick</type>
+		<object-name>reset-knob</object-name>
+	  <action>
+		    <name>hdg reset</name>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		      <command>property-assign</command>
+		      <property>/instrumentation/rmi/face-offset</property>
+		      <value>0</value>
+		    </binding>
+				<binding>
+					<command>property-toggle</command>
+					<property>/sim/sound/switch3</property>
+				</binding>
+	  </action>
+	</animation>
+	
+</PropertyList>

@@ -1,0 +1,1139 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>airConditioning.ac</path>
+ 
+ <!-- NOTE: also look in the pressurization.xml for more knobs -->
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmber.001</object-name>
+		<object-name>LampAmber.002</object-name>
+		<object-name>LampAmber.003</object-name>
+		<object-name>LampAmber.004</object-name>
+		<object-name>LampAmber.005</object-name>
+		<object-name>LampAmber.006</object-name>
+		<object-name>LampAmber.007</object-name>
+		<object-name>LampAmber.008</object-name>
+		<object-name>LampAmber.009</object-name>
+		<object-name>LampAmber.010</object-name>
+		<object-name>LampAmber.011</object-name>
+		<object-name>LampWhite</object-name>
+		<object-name>LampWhite.001</object-name>
+		<object-name>sockle</object-name>
+		<object-name>sockle.001</object-name> 
+		<object-name>sockle.002</object-name>
+		<object-name>sockle.003</object-name>
+		<object-name>sockle.004</object-name>
+		<object-name>sockle.005</object-name>
+		<object-name>sockle.006</object-name>
+		<object-name>sockle.007</object-name> 
+		<object-name>sockle.008</object-name> 
+		<object-name>sockle.009</object-name>
+		<object-name>sockle.010</object-name>
+		<object-name>sockle.011</object-name>
+		<object-name>sockle.012</object-name>
+		<object-name>sockle.013</object-name>
+		<object-name>sockle.014</object-name> 
+		<object-name>switch</object-name>
+		<object-name>switch.001</object-name>
+		<object-name>switch.002</object-name>
+		<object-name>switch.003</object-name>
+		<object-name>switch.004</object-name>
+		<object-name>switch.005</object-name>
+		<object-name>switch.006</object-name>
+		<object-name>switch.007</object-name>
+		<object-name>switch.008</object-name>
+		<object-name>switch.009</object-name>
+		<object-name>switch.010</object-name>
+		<object-name>switch.011</object-name>
+		<object-name>switch.012</object-name>
+		<object-name>switch.013</object-name>
+		<object-name>cover</object-name>
+		<object-name>cover.001</object-name>
+		<object-name>cover.002</object-name>
+		<object-name>turn</object-name>
+		<object-name>turn.001</object-name>
+		<condition>		
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON</object-name>
+		<object-name>LampAmberON.001</object-name>
+		<object-name>LampAmberON.002</object-name>
+		<object-name>LampAmberON.003</object-name>
+		<object-name>LampAmberON.004</object-name>
+		<object-name>LampAmberON.005</object-name>
+		<object-name>LampAmberON.006</object-name>
+		<object-name>LampAmberON.007</object-name>
+		<object-name>LampAmberON.008</object-name>
+		<object-name>LampAmberON.009</object-name>
+		<object-name>LampAmberON.010</object-name>
+		<object-name>LampAmberON.011</object-name>
+		<condition>
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		</condition>
+		<emission>
+		  <red>   1.0 </red>
+		  <green> 0.8 </green>
+		  <blue>  0.4 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampWhiteON</object-name>
+		<object-name>LampWhiteON.001</object-name>
+		<condition>
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		</condition>
+		<emission>
+		  <red>   0.5 </red>
+		  <green> 0.4 </green>
+		  <blue>  0.2 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<less-than>
+		  		<property>/b707/air-conditioning/compressor-rpm[0]</property>
+		  		<value>42</value>
+		  	</less-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.001</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<less-than>
+		  		<property>/b707/air-conditioning/compressor-rpm[1]</property>
+		  		<value>42</value>
+		  	</less-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.002</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<less-than>
+		  		<property>/b707/air-conditioning/compressor-rpm[2]</property>
+		  		<value>42</value>
+		  	</less-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+		
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.003</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<greater-than>
+		  		<property>/b707/air-conditioning/compressor-rpm[0]</property>
+		  		<value>115</value>
+		  	</greater-than>
+		  	<greater-than>
+		  		<property>/velocities/mach</property>
+		  		<value>0.89</value>
+		  	</greater-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+		
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.004</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<greater-than>
+		  		<property>/b707/air-conditioning/compressor-rpm[1]</property>
+		  		<value>115</value>
+		  	</greater-than>
+		  	<greater-than>
+		  		<property>/velocities/mach</property>
+		  		<value>0.89</value>
+		  	</greater-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+		
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.005</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<greater-than>
+		  		<property>/b707/air-conditioning/compressor-rpm[2]</property>
+		  		<value>115</value>
+		  	</greater-than>
+		  	<greater-than>
+		  		<property>/velocities/mach</property>
+		  		<value>0.89</value>
+		  	</greater-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.006</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<property>/b707/air-conditioning/crew-overheat</property>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+		
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.007</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<property>/b707/air-conditioning/main-overheat</property>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.008</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<property>/b707/air-conditioning/air-cond-unit-left-overheat</property>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.009</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<property>/b707/air-conditioning/air-cond-unit-right-overheat</property>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.010</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/air-conditioning/air-cond-unit-left-start</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.011</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/air-conditioning/air-cond-unit-right-start</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampWhiteON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/air-conditioning/cabin-temp-selector[0]</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampWhiteON.001</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/air-conditioning/cabin-temp-selector[1]</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<!-- Cover -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover</object-name>
+    <property>/b707/air-conditioning/ram-air-cover</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-90.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 1</x>
+     <y> 0</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m>-0.001</y-m>
+    <z-m>0.1661</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/ram-air-cover</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch</object-name>
+    	<property>/b707/air-conditioning/ram-air-switch</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.1518</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch</object-name>
+		  <object-name>sockle</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/ram-air-switch</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Cover -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover.001</object-name>
+    <property>/b707/air-conditioning/crew-aux-valve-cover</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-90.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 1</x>
+     <y> 0</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m>-0.001</y-m>
+    <z-m>0.1661</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover.001</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/crew-aux-valve-cover</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.001</object-name>
+    	<property>/b707/air-conditioning/crew-aux-valve-switch</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.1518</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.001</object-name>
+		  <object-name>sockle.001</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/crew-aux-valve-switch</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+		
+  <!-- cabin temperature selector --> 
+	<animation>
+		<type>rotate</type>
+		<object-name>turn.001</object-name>
+		<property>/b707/air-conditioning/cabin-temp-selector[0]</property>
+		<interpolation>
+		  <entry><ind> 0</ind><dep>   0</dep></entry>
+		  <entry><ind> 1</ind><dep>  22</dep></entry>
+		  <entry><ind> 2</ind><dep>  90</dep></entry>
+		  <entry><ind> 3</ind><dep> 136</dep></entry>
+		  <entry><ind> 4</ind><dep> 180</dep></entry>
+		  <entry><ind> 5</ind><dep> 224</dep></entry>
+		  <entry><ind> 6</ind><dep> 270</dep></entry>
+		  <entry><ind> 7</ind><dep> 338</dep></entry>
+		</interpolation>
+		<axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+		</axis>
+		<center>
+		<x-m> 0.2649</x-m>
+		<y-m> 0.0</y-m>
+		<z-m> 0.0534</z-m>
+		</center>  
+	</animation>
+     
+	<animation>
+		<type>pick</type>
+		<object-name>turn.001</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/air-conditioning/cabin-temp-selector[0]</property>
+		    <step>1</step>
+		    <min>0</min>
+		    <max>8</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+		<action>
+		  <button>1</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/air-conditioning/cabin-temp-selector[0]</property>
+		    <step>-1</step>
+		    <min>0</min>
+		    <max>8</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+	</animation>
+	
+	  <!-- cabin temperature selector 2 --> 
+	<animation>
+		<type>rotate</type>
+		<object-name>turn</object-name>
+		<property>/b707/air-conditioning/cabin-temp-selector[1]</property>
+		<interpolation>
+		  <entry><ind> 0</ind><dep>   0</dep></entry>
+		  <entry><ind> 1</ind><dep>  22</dep></entry>
+		  <entry><ind> 2</ind><dep>  90</dep></entry>
+		  <entry><ind> 3</ind><dep> 136</dep></entry>
+		  <entry><ind> 4</ind><dep> 180</dep></entry>
+		  <entry><ind> 5</ind><dep> 224</dep></entry>
+		  <entry><ind> 6</ind><dep> 270</dep></entry>
+		  <entry><ind> 7</ind><dep> 338</dep></entry>
+		</interpolation>
+		<axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+		</axis>
+		<center>
+		<x-m> 0.2649</x-m>
+		<y-m> 0.0</y-m>
+		<z-m>-0.0278</z-m>
+		</center>  
+	</animation>
+     
+	<animation>
+		<type>pick</type>
+		<object-name>turn</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/air-conditioning/cabin-temp-selector[1]</property>
+		    <step>1</step>
+		    <min>0</min>
+		    <max>8</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+		<action>
+		  <button>1</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/air-conditioning/cabin-temp-selector[1]</property>
+		    <step>-1</step>
+		    <min>0</min>
+		    <max>8</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+	</animation>
+	
+  <!-- duct overheat reset -->
+  <animation>
+      <type>translate</type>
+      <object-name>switch.013</object-name>
+      <property>/b707/air-conditioning/overheat-reset</property>
+      <factor>0.0028</factor>
+      <axis>
+          <x> 0.0</x>
+          <y> 1.0</y>
+          <z> 0.0</z>
+      </axis>
+      <center>
+          <x-m> 0.2073</x-m>
+          <y-m> 0.0008</y-m>
+          <z-m>-0.0127</z-m>
+      </center>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+      <object-name>switch.013</object-name>
+      <object-name>sockle.014</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+      		<property>/b707/air-conditioning/overheat-reset</property>  
+          <value>1.0</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+      		<property>/b707/air-conditioning/overheat-reset</property> 
+          <value>0.0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+	
+	<!-- Turn cover for air conditioning unit switches -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>cover.002</object-name>
+		  <property>/b707/air-conditioning/air-cond-unit-cover</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+				<x-m>0.1205</x-m>
+				<y-m>0.0</y-m>
+				<z-m>0.0065</z-m>
+		  </center>  
+	</animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>cover.002</object-name>
+		  <property>/b707/air-conditioning/air-cond-unit-cover</property>
+			<interpolation>
+				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
+				<entry><ind> 0.8</ind><dep> 0.0</dep></entry>
+				<entry><ind> 1.0</ind><dep> 0.008</dep></entry>
+			</interpolation>
+      <axis>
+          <x> 0.0</x>
+          <y> 1.0</y>
+          <z> 0.0</z>
+      </axis>
+      <center>
+				<x-m>0.1205</x-m>
+				<y-m>0.0</y-m>
+				<z-m>0.0065</z-m>
+      </center>
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover.002</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>       
+		    <binding>
+            <command>nasal</command>
+            <script>b707.air_cond_cover();</script>
+        </binding>            
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- left and right air conditioning unit starter -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.009</object-name>
+    	<property>/b707/air-conditioning/air-cond-unit-left-start</property>	
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.0058</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.009</object-name>
+		  <object-name>sockle.009</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+						<condition>		
+							<property>/b707/air-conditioning/air-cond-unit-cover</property>
+						</condition>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/air-cond-unit-left-start</property>	
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- left air conditioning unit starter -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.008</object-name>
+    	<property>/b707/air-conditioning/air-cond-unit-right-start</property>	
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.0058</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.008</object-name>
+		  <object-name>sockle.008</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+						<condition>		
+							<property>/b707/air-conditioning/air-cond-unit-cover</property>
+						</condition>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/air-cond-unit-right-start</property>	
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- engines bleed air valves -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.002</object-name>
+    	<property>/b707/air-conditioning/eng-bleed-air[0]</property>	
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.0633</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.002</object-name>
+		  <object-name>sockle.002</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/eng-bleed-air[0]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.003</object-name>
+    	<property>/b707/air-conditioning/eng-bleed-air[1]</property>	
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.0633</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.003</object-name>
+		  <object-name>sockle.003</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/eng-bleed-air[1]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.006</object-name>
+    	<property>/b707/air-conditioning/eng-bleed-air[2]</property>	
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.0633</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.006</object-name>
+		  <object-name>sockle.006</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/eng-bleed-air[2]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.007</object-name>
+    	<property>/b707/air-conditioning/eng-bleed-air[3]</property>	
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.0633</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.007</object-name>
+		  <object-name>sockle.007</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/air-conditioning/eng-bleed-air[3]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- wing valves L and R-->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.004</object-name>
+    	<property>/b707/air-conditioning/wing-valve[0]</property>	
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.0633</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.004</object-name>
+		  <object-name>sockle.004</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    	<property>/b707/air-conditioning/wing-valve[0]</property>	
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.005</object-name>
+    	<property>/b707/air-conditioning/wing-valve[1]</property>	
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.0633</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.005</object-name>
+		  <object-name>sockle.005</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    	<property>/b707/air-conditioning/wing-valve[1]</property>	
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- air compressor on engines 2, 3, 4 -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.010</object-name>
+    	<property>/b707/air-conditioning/compressor-start[0]</property>	
+      <factor>-40</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.104</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.010</object-name>
+		  <object-name>sockle.010</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>b707.air_compressor(0);</script>
+        </binding>         
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.011</object-name>
+    	<property>/b707/air-conditioning/compressor-start[1]</property>	
+      <factor>-40</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.104</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.011</object-name>
+		  <object-name>sockle.011</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>b707.air_compressor(1);</script>
+        </binding>         
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.012</object-name>
+    	<property>/b707/air-conditioning/compressor-start[2]</property>	
+      <factor>-40</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.002</y-m>
+		  <z-m> 0.104</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.012</object-name>
+		  <object-name>sockle.012</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>b707.air_compressor(2);</script>
+        </binding>         
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+
+ 
+</PropertyList>

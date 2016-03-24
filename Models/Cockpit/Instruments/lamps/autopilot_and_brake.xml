@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>autopilot_and_brake.ac</path>
+
+<animation>
+	<type>material</type>
+  <object-name>LampAmber</object-name>
+  <object-name>LampAmber.001</object-name>
+  <object-name>Sockle</object-name>
+	<condition>
+		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+	</condition>
+	<emission>
+		<red>0.2</red>
+		<green>0.2</green>
+		<blue>0.2</blue>
+		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+  <object-name>LampAmber</object-name>
+  <object-name>LampAmber.001</object-name>
+  <object-name>Sockle</object-name>
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		<property>/systems/electrical/outputs/cabin-dim</property>
+	</condition>
+	<emission>
+	  <red>0.3</red>
+	  <green>0.3</green>
+	  <blue>0.3</blue>
+	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+  <type>noshadow</type>
+  <object-name>LampAmberON</object-name>
+  <object-name>LampAmberON.001</object-name>  
+  <object-name>LampAmber</object-name>
+  <object-name>LampAmber.001</object-name>
+</animation>
+
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>shadow</object-name>
+</effect>
+
+<animation>
+  <type>material</type>
+  <object-name>LampAmberON</object-name>
+  <object-name>LampAmberON.001</object-name>
+  <emission>
+    <red>   1.0 </red>
+    <green> 0.8 </green>
+    <blue>  0.4 </blue>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampAmberON</object-name>
+  <condition>
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+    <or>
+      <property>/controls/gear/brake-parking</property>
+      <property>/controls/test/warn-knob</property>
+    </or>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampAmberON.001</object-name>
+  <condition>
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+    <or>
+		<and>
+	        <greater-than>
+	          <property>/b707/ess-bus</property>
+	          <value>12</value>
+	        </greater-than>
+	        <less-than>
+	          <property>/b707/stabilizer/cutout</property>
+	          <value>-0.05</value>
+	        </less-than>
+		</and>
+		<and>
+		  <greater-than>
+		    <property>/b707/ess-bus</property>
+		    <value>12</value>
+		  </greater-than>
+		  <greater-than>
+		    <property>/b707/stabilizer/cutout</property>
+		    <value>0.05</value>
+		  </greater-than>
+	  </and>
+      <property>/controls/test/warn-knob</property>
+    </or>
+  </condition>
+</animation>
+
+
+</PropertyList>
+

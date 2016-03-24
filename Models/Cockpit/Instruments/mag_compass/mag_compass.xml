@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>mag_compass.ac</path>
+
+<animation>
+	<type>material</type>
+	<object-name>support</object-name>
+	<object-name>fix</object-name> 
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+	</condition>
+	<emission>
+	  <red>0.2</red>
+	  <green>0.2</green>
+	  <blue>0.2</blue>
+	  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+  <object-name>ball</object-name>
+  <object-name>needle</object-name>
+	<condition>			
+		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+	</condition>
+	<emission>
+		<red>0.6</red>
+		<green>0.4</green>
+		<blue>0.3</blue>
+		<factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+	</emission>
+</animation>
+
+<animation>
+	<type>material</type>
+  <object-name>ball</object-name>
+  <object-name>needle</object-name>
+	<condition>			
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		<property>/systems/electrical/outputs/overhead-dim</property>
+	</condition>
+	<emission>
+	  <red>0.8</red>
+	  <green>0.8</green>
+	  <blue>0.8</blue>
+	  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+	</emission>
+</animation>
+
+<!-- swing the compass -->
+<animation>
+  <type>rotate</type>
+	<object-name>support</object-name>
+  <object-name>ball</object-name>
+  <object-name>needle</object-name>
+  <property>/b707/compass-pos</property>
+	<interpolation>
+		<entry><ind>0   </ind><dep>  0.0</dep></entry>
+		<entry><ind>0.2 </ind><dep> -3.0</dep></entry>
+		<entry><ind>0.4 </ind><dep>  6.0</dep></entry>
+		<entry><ind>0.6 </ind><dep> -6.0</dep></entry>
+		<entry><ind>1   </ind><dep> 140.0</dep></entry>
+	</interpolation>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+  <center>
+    <x-m>-0.033</x-m>
+    <y-m> 0</y-m>
+    <z-m> 0.058</z-m>
+  </center>
+</animation>
+
+<animation>
+  <type>rotate</type>
+	<object-name>fix</object-name>
+  <property>/b707/compass-pos</property>
+	<interpolation>
+		<entry><ind>0 	</ind><dep>  0.0</dep></entry>
+		<entry><ind>0.2 </ind><dep> 50.0</dep></entry>
+		<entry><ind>0.7</ind><dep>  50.0</dep></entry>
+		<entry><ind>1</ind><dep>   -50.0</dep></entry>
+	</interpolation>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+  <center>
+    <x-m>-0.153</x-m>
+    <y-m> 0</y-m>
+    <z-m> 0.063</z-m>
+  </center>
+</animation>
+
+<!-- the compass roll -->
+<animation>
+  <type>rotate</type>
+  <object-name>ball</object-name>
+  <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
+  <axis>
+    <x>0</x>
+    <y>0</y>
+    <z>1</z>
+  </axis>
+  <center>
+    <x-m>-0.033</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+  </center>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>fix</object-name> 
+	<object-name>support</object-name>
+  <object-name>ball</object-name>
+  <object-name>needle</object-name>
+	  <action>
+	    <button>0</button>
+	    <repeatable>false</repeatable>
+      <binding>
+          <command>nasal</command>
+          <script>b707.compass_swing();</script>
+      </binding>
+	    <binding>
+	      <command>property-toggle</command>
+	      <property>/sim/sound/switch2</property>
+	    </binding>
+	  </action>
+</animation>
+
+</PropertyList>

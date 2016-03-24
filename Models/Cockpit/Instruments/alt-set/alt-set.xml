@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>altset.ac</path>
+
+	<animation>
+		<type>material</type>
+    <object-name>APalt1</object-name>
+    <object-name>APalt2</object-name>
+    <object-name>APalt3</object-name>
+    <object-name>APalt4</object-name>
+    <object-name>APalt5</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+    <object-name>APalt1</object-name>
+    <object-name>APalt2</object-name>
+    <object-name>APalt3</object-name>
+    <object-name>APalt4</object-name>
+    <object-name>APalt5</object-name>
+    <object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+    <object-name>AltSet.cancel</object-name>
+    <object-name>AltSet.knob</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+    <object-name>AltSet.cancel</object-name>
+    <object-name>AltSet.knob</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+	
+	<animation>
+		<type>material</type>
+		<object-name>AltSet.bezel</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+		<animation>
+			<type>noshadow</type>
+			<object-name>shadow</object-name>
+		</animation>
+
+		<effect>
+			<inherits-from>Effects/model-transparent</inherits-from>
+			<object-name>shadow</object-name>
+		</effect>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>APalt1</object-name>
+        <property>/autopilot/settings/target-altitude-ft</property>
+        <factor>0.00001</factor>
+        <step>10000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>APalt2</object-name>
+        <property>/autopilot/settings/target-altitude-ft</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>APalt3</object-name>
+        <property>/autopilot/settings/target-altitude-ft</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>APalt4</object-name>
+        <property>/autopilot/settings/target-altitude-ft</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>APalt5</object-name>
+        <property>/autopilot/settings/target-altitude-ft</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!-- Hotspots -->
+    
+		<animation>
+		    <type>translate</type>
+		    <object-name>AltSet.cancel</object-name>
+		    <property>/instrumentation/alt-set/knob-pos</property>
+		    <factor>-0.003</factor>
+		    <axis>
+		        <x> 1.0</x>
+		        <y> 0.0</y>
+		        <z> 0.0</z>
+		    </axis>
+		    <center>
+		        <x-m> 0.007</x-m>
+		        <y-m> 0.026</y-m>
+		        <z-m>-0.026</z-m>
+		    </center>
+		</animation> 
+
+    <animation>
+        <type>pick</type>
+        <object-name>AltSet.cancel</object-name>
+        <visible>true</visible>
+        <action>
+		      <button>0</button>
+		      <binding>
+		        <command>property-assign</command>
+		        <property>/autopilot/settings/target-altitude-ft</property>
+		        <value>0.0</value>
+		      </binding>
+		      <binding>
+		        <command>property-toggle</command>
+		        <property>/sim/sound/switch2</property>
+		      </binding>
+	        <binding>
+	          <command>property-assign</command>
+	          <property>/instrumentation/alt-set/knob-pos</property>  
+	          <value>1.0</value>
+	        </binding>
+		      <mod-up>
+		        <binding>
+		          <command>property-assign</command>
+		          <property>/instrumentation/alt-set/knob-pos</property>  
+		          <value>0.0</value>
+		        </binding>
+		      </mod-up>
+        </action>
+    </animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>AltSet.knob</object-name>
+      <property>/autopilot/settings/target-altitude-ft</property>
+        <factor>0.1</factor>
+      <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0278</y-m>
+      <z-m> 0.0</z-m>
+      </center>
+      <axis>
+        <x>-1 </x>
+        <y> 0 </y>
+        <z> 0 </z>
+      </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>AltSet.plane</object-name>
+        <visible>false</visible>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+		          <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+		          </condition>
+		          <command>property-adjust</command>
+		          <property>/autopilot/settings/target-altitude-ft</property>
+		          <step>1</step>
+		          <min>0.0</min>
+		          <max>50000.0</max>
+		          <wrap>false</wrap>
+            </binding>
+            <binding>
+		          <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+		          </condition>
+		          <command>property-adjust</command>
+		          <property>/autopilot/settings/target-altitude-ft</property>
+		          <step>10</step>
+		          <min>0.0</min>
+		          <max>50000.0</max>
+		          <wrap>false</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch3</property>
+            </binding>
+        </action>
+        
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+		          <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+		          </condition>
+		          <command>property-adjust</command>
+		          <property>/autopilot/settings/target-altitude-ft</property>
+		          <step>-1</step>
+		          <min>0.0</min>
+		          <max>50000.0</max>
+		          <wrap>false</wrap>
+            </binding>            
+            <binding>
+		          <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+		          </condition>
+		          <command>property-adjust</command>
+		          <property>/autopilot/settings/target-altitude-ft</property>
+		          <step>-10</step>
+		          <min>0.0</min>
+		          <max>50000.0</max>
+		          <wrap>false</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch3</property>
+            </binding>
+        </action>
+        <action>
+            <button>3</button>
+            <binding>		          
+		          <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+			        </condition>
+		          <command>property-adjust</command>
+		          <property>/autopilot/settings/target-altitude-ft</property>
+		          <step>100</step>
+		          <min>0.0</min>
+		          <max>50000.0</max>
+		          <wrap>false</wrap>
+            </binding>
+            <binding>		          
+		          <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+			        </condition>
+		          <command>property-adjust</command>
+		          <property>/autopilot/settings/target-altitude-ft</property>
+		          <step>1000</step>
+		          <min>0.0</min>
+		          <max>50000.0</max>
+		          <wrap>false</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch3</property>
+            </binding>
+        </action>
+        <action>
+            <button>4</button>
+            <binding>		          
+		          <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+			        </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/target-altitude-ft</property>
+            <step>-100</step>
+            <min>0.0</min>
+            <max>50000.0</max>
+            <wrap>false</wrap>
+            </binding>            
+            <binding>		          
+		          <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+			        </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/target-altitude-ft</property>
+            <step>-1000</step>
+            <min>0.0</min>
+            <max>50000.0</max>
+            <wrap>false</wrap>
+            </binding>
+            <binding>
+              <command>property-toggle</command>
+              <property>/sim/sound/switch3</property>
+            </binding>
+        </action>
+    </animation>
+
+
+</PropertyList>

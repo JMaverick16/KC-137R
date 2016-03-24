@@ -1,0 +1,643 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>auxPump.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmber.001</object-name>
+		<object-name>LampAmber.002</object-name>
+		<object-name>LampAmber.003</object-name>
+		<object-name>sockle</object-name>
+		<object-name>sockle.001</object-name> 
+		<object-name>sockle.002</object-name>
+		<object-name>sockle.003</object-name>
+		<object-name>sockle.004</object-name>
+		<object-name>sockle.005</object-name>
+		<object-name>sockle.006</object-name>
+		<object-name>sockle.007</object-name> 
+		<object-name>switch</object-name>
+		<object-name>switch.001</object-name>
+		<object-name>switch.002</object-name>
+		<object-name>switch.003</object-name>
+		<object-name>switch.004</object-name>
+		<object-name>switch.005</object-name>
+		<object-name>switch.006</object-name>
+		<object-name>switch.007</object-name>
+		<object-name>cover</object-name>
+		<object-name>cover.001</object-name>
+		<object-name>turn</object-name>
+		<condition>		
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON</object-name>
+		<object-name>LampAmberON.001</object-name>
+		<object-name>LampAmberON.002</object-name>
+		<object-name>LampAmberON.003</object-name>
+		<emission>
+		  <red>   1.0 </red>
+		  <green> 0.8 </green>
+		  <blue>  0.4 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/hydraulic/ac-aux-pump[0]</property></not>
+		  	<less-than>
+		    	<property>/b707/hydraulic/rudder</property>
+		    	<value>2800</value>
+		    </less-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.001</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/hydraulic/ac-aux-pump[1]</property></not>
+		  	<less-than>
+		    	<property>/b707/hydraulic/rudder</property>
+		    	<value>2800</value>
+		    </less-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+		
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.002</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/hydraulic/hyd-fluid-pump[0]</property></not>
+		  	<not><property>/b707/hydraulic/hyd-fluid-shutoff[0]</property></not>
+		  	<less-than>
+		    	<property>/b707/hydraulic/system</property>
+		    	<value>2100</value>
+		    </less-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+		
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.003</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<not><property>/b707/hydraulic/hyd-fluid-pump[1]</property></not>
+		  	<not><property>/b707/hydraulic/hyd-fluid-shutoff[1]</property></not>
+		  	<less-than>
+		    	<property>/b707/hydraulic/system</property>
+		    	<value>2100</value>
+		    </less-than>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<!-- Vibration Test -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch</object-name>
+		  <property>/b707/vibrations/vib-test</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>0</x>
+		   <y>0</y>
+		   <z>1</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0417</x-m>
+		  <y-m>-0.0025</y-m>
+		  <z-m> 0.0434</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch</object-name>
+		  <object-name>sockle</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		  			<property>/b707/vibrations/vib-test</property>
+		    </binding>
+        <mod-up>
+          <binding>
+		        <command>property-toggle</command>
+		  			<property>/b707/vibrations/vib-test</property>
+          </binding>
+          <binding>
+		        <command>nasal</command>
+		  			<script>b707.eng_vib();</script>
+          </binding>
+        </mod-up>         
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- ac auxilliary pumps for rudder and spoiler -->	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.001</object-name>
+		  <property>/b707/hydraulic/ac-aux-pump[0]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0044</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.001</object-name>
+		  <object-name>sockle.001</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/ac-aux-pump[0]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.002</object-name>
+		  <property>/b707/hydraulic/ac-aux-pump[1]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0044</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.002</object-name>
+		  <object-name>sockle.002</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/ac-aux-pump[1]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- inter connect brake valve -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.003</object-name>
+		  <property>/b707/hydraulic/brake-valve</property>
+		 	<interpolation>
+				<entry><ind>  1.0</ind><dep> -50.0</dep></entry>
+				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>  2.0</ind><dep>  50.0</dep></entry>
+			</interpolation>  
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.005</y-m>
+		  <z-m>0.0023</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.001</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/hydraulic/brake-valve") or 0;
+            	if(bt > 0){
+            		setprop("/b707/hydraulic/brake-valve", 0);
+            	}else{
+            		setprop("/b707/hydraulic/brake-valve", 1);
+            		<!-- fall back, if ac aux pumps or ess-bus to low -->
+            		var acaux1 = getprop("/b707/hydraulic/ac-aux-pump[0]") or 0;
+            		var acaux2 = getprop("/b707/hydraulic/ac-aux-pump[1]") or 0;
+            		
+            		if((getprop("/b707/ess-bus") != nil and getprop("/b707/ess-bus") &lt; 20.0) or !acaux1 or !acaux2){
+            			settimer(func{
+            				setprop("/b707/hydraulic/brake-valve", 0);
+									}, 0.5);
+								 	if(getprop("/sim/sound/switch2") == 1){
+										 setprop("/sim/sound/switch2", 0); 
+									}else{
+										 setprop("/sim/sound/switch2", 1);
+									}
+            		}
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.002</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/hydraulic/brake-valve") or 0;
+            	if(bt > 0){
+            		setprop("/b707/hydraulic/brake-valve", 0);
+            	}else{
+            		setprop("/b707/hydraulic/brake-valve", 2);
+            		<!-- fall back, if ac aux pumps or ess-bus to low -->
+            		var acaux1 = getprop("/b707/hydraulic/ac-aux-pump[0]") or 0;
+            		var acaux2 = getprop("/b707/hydraulic/ac-aux-pump[1]") or 0;
+            		
+            		if((getprop("/b707/ess-bus") != nil and getprop("/b707/ess-bus") &lt; 20.0) or !acaux1 or !acaux2){
+            			settimer(func{
+            				setprop("/b707/hydraulic/brake-valve", 0);
+									}, 0.5);
+								 	if(getprop("/sim/sound/switch2") == 1){
+										 setprop("/sim/sound/switch2", 0); 
+									}else{
+										 setprop("/sim/sound/switch2", 1);
+									}
+            		}
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- hydraulic pumps for systems on eng 2 and eng 3 -->	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.004</object-name>
+		  <property>/b707/hydraulic/hyd-fluid-pump[0]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0044</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.004</object-name>
+		  <object-name>sockle.004</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/hyd-fluid-pump[0]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.005</object-name>
+		  <property>/b707/hydraulic/hyd-fluid-pump[1]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0044</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.005</object-name>
+		  <object-name>sockle.005</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/hyd-fluid-pump[1]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+  <!-- Cover -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover</object-name>
+    <property>/b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 1</x>
+     <y> 0</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m>-0.0003</y-m>
+    <z-m>-0.0084</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.006</object-name>
+		  <property>/b707/hydraulic/hyd-fluid-shutoff[0]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0058</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.006</object-name>
+		  <object-name>sockle.006</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/hyd-fluid-shutoff[0]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+  <!-- Cover.001 -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover.001</object-name>
+    <property>/b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 1</x>
+     <y> 0</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m>-0.0003</y-m>
+    <z-m>-0.0084</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover.001</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+    				<property>/b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.007</object-name>
+		  <property>/b707/hydraulic/hyd-fluid-shutoff[1]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0058</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.007</object-name>
+		  <object-name>sockle.007</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/hyd-fluid-shutoff[1]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+  <!-- engine vibration selector --> 
+	<animation>
+		<type>rotate</type>
+		<object-name>turn</object-name>
+		<property>/b707/vibrations/vib-sel</property>
+		<interpolation>
+		  <entry><ind> 0</ind><dep>   0</dep></entry>
+		  <entry><ind> 1</ind><dep>  45</dep></entry>
+		  <entry><ind> 2</ind><dep>  90</dep></entry>
+		</interpolation>
+		<axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+		</axis>
+		<center>
+		<x-m> 0.0402</x-m>
+		<y-m> 0.0</y-m>
+		<z-m> 0.0</z-m>
+		</center>  
+	</animation>
+     
+	<animation>
+		<type>pick</type>
+		<object-name>turn</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/vibrations/vib-sel</property>
+		    <step>1</step>
+		    <min>0</min>
+		    <max>3</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+		<action>
+		  <button>1</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/vibrations/vib-sel</property>
+		    <step>-1</step>
+		    <min>0</min>
+		    <max>3</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+	</animation>
+ 
+</PropertyList>

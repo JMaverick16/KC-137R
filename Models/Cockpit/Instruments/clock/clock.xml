@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+ <path>clock.ac</path>
+ 
+	<animation>
+		<type>material</type>
+      <object-name>face</object-name>
+			<object-name>Hourhand</object-name>
+			<object-name>Minutehand</object-name>
+			<object-name>Sec.Hand</object-name>
+			<object-name>FThour</object-name>
+			<object-name>FTmin</object-name>
+			<object-name>sec</object-name>
+			<object-name>min</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+      <object-name>face</object-name>
+			<object-name>Hourhand</object-name>
+			<object-name>Minutehand</object-name>
+			<object-name>Sec.Hand</object-name>
+			<object-name>FThour</object-name>
+			<object-name>FTmin</object-name>
+			<object-name>sec</object-name>
+			<object-name>min</object-name>
+			<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+
+	<animation>
+		<type>material</type>
+		<object-name>time.set</object-name>
+		<object-name>time.stop</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>time.set</object-name>
+		<object-name>time.stop</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Hourhand</object-name>
+        <property>instrumentation/clock/indicated-sec</property>
+        <factor>0.00833333</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Minutehand</object-name>
+        <property>/instrumentation/clock/indicated-sec</property>
+        <factor>0.1</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Sec.Hand</object-name>
+        <property>/instrumentation/clock/indicated-sec</property>
+        <factor>6.0</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+		<animation> 
+		  <type>rotate</type>
+		  <object-name>FThour</object-name>
+		  <property>/instrumentation/stopwatch/flight-time/hours</property>
+		  <interpolation>
+		    <entry><ind> 0</ind><dep> 0 </dep></entry>
+		    <entry><ind>60</ind><dep>360</dep></entry>
+		  </interpolation>
+		  <center>   
+		    <x-m> 0 </x-m> 
+		    <y-m> 0 </y-m>
+				<z-m> 0.01723 </z-m>
+		  </center>
+		  <axis> 
+		    <x> -1 </x>
+		    <y>  0 </y>
+		    <z>  0 </z>
+		  </axis>
+		</animation>
+    
+		<animation> 
+			<type>rotate</type>
+			<object-name>FTmin</object-name>
+			<property>/instrumentation/stopwatch/flight-time/minutes</property>
+			<interpolation>
+				<entry><ind> 0</ind><dep> 0 </dep></entry>
+				<entry><ind>60</ind><dep>360</dep></entry>
+			</interpolation>
+			<center> 
+				<x-m> 0 </x-m>
+				<y-m> 0 </y-m>
+				<z-m> 0.01723 </z-m>
+			</center>
+			<axis> 
+				<x> -1 </x>
+				<y>  0 </y>
+				<z>  0 </z>
+			</axis>
+		</animation>
+		
+		<animation> 
+			<type>rotate</type>
+			<object-name>min</object-name>
+			<property>/instrumentation/stopwatch/flight-time/minutes</property>
+			<interpolation>
+				<entry><ind> 0</ind><dep>  0</dep></entry>
+				<entry><ind>60</ind><dep>720</dep></entry>
+			</interpolation>
+			<center> 
+				<x-m> 0 </x-m>
+				<y-m> 0 </y-m>
+				<z-m>-0.01738 </z-m>
+			</center>
+			<axis> 
+				<x> -1 </x>
+				<y>  0 </y>
+				<z>  0 </z>
+			</axis>
+		</animation>
+    
+		<animation> 
+		  <type>rotate</type>
+		  <object-name>sec</object-name>
+		  <property>/instrumentation/stopwatch/flight-time/seconds</property>
+		  <interpolation>
+		    <entry><ind> 0</ind><dep>  0</dep></entry>
+		    <entry><ind>60</ind><dep>720</dep></entry>
+		  </interpolation>
+		  <center>  
+		    <x-m> 0 </x-m>
+		    <y-m> 0 </y-m>
+				<z-m>-0.01738 </z-m>
+		  </center>
+		  <axis> 
+		    <x> -1 </x>
+		    <y>  0 </y>
+		    <z>  0 </z>
+		  </axis>
+		</animation>
+
+
+<!-- knobs -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>time.set</object-name>
+        <property>instrumentation/clock/offset-sec</property>
+        <factor>0.05</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>-0.03</y-m>
+            <z-m>-0.03</z-m>
+        </center>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>time.set</object-name>
+        <action>
+            <button>3</button>
+            <binding>
+                <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/clock/offset-sec</property>
+                <step>60</step>
+                <min>-43200</min>
+                <max>43200</max>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+                <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/clock/offset-sec</property>
+                <step>600</step>
+                <min>-43200</min>
+                <max>43200</max>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+							<command>property-toggle</command>
+							<property>/sim/sound/switch3</property>
+						</binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>time.set</object-name>
+        <action>
+            <button>4</button>
+            <binding>
+                <condition>
+                <not><property>devices/status/keyboard/shift</property></not>
+                <not><property>devices/status/keyboard/super</property></not>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/clock/offset-sec</property>
+                <step>-60</step>
+                <min>-43200</min>
+                <max>43200</max>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+                <condition>
+               <or>
+                <property>devices/status/keyboard/shift</property>
+                <property>devices/status/keyboard/super</property>
+               </or>
+                </condition>
+                <command>property-adjust</command>
+                <property>instrumentation/clock/offset-sec</property>
+                <step>-600</step>
+                <min>-43200</min>
+                <max>43200</max>
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+							<command>property-toggle</command>
+							<property>/sim/sound/switch3</property>
+						</binding>
+        </action>
+    </animation>
+    
+    <!-- start stop and reset the stopwatch-->
+    <animation>
+        <type>translate</type>
+        <object-name>time.stop</object-name>
+        <property>/instrumentation/stopwatch/running</property>
+        <factor>0.005</factor>
+        <axis>
+            <x> 1.0</x>
+            <y> 0.0</y>
+            <z> 0.0</z>
+        </axis>
+        <center>
+            <x-m> 0.0</x-m>
+            <y-m> 0.03</y-m>
+            <z-m>-0.03</z-m>
+        </center>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <object-name>time.stop</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.1</interval-sec>
+            <binding>
+                <command>nasal</command>
+                <script>b707.sw_start_stop();</script>
+            </binding>
+            <binding>
+							<command>property-toggle</command>
+							<property>/sim/sound/switch2</property>
+						</binding>
+        </action>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <object-name>time.set</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.1</interval-sec>
+            <binding>
+                <command>nasal</command>
+                <script>b707.sw_reset();</script>
+            </binding>
+            <binding>
+							<command>property-toggle</command>
+							<property>/sim/sound/switch2</property>
+						</binding>
+        </action>
+    </animation>
+    
+    <animation>
+        <type>pick</type>
+        <object-name>face</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.1</interval-sec>
+            <binding>
+                <command>nasal</command>
+                <script>b707.sw_show_time_on_screen();</script>
+            </binding>
+        </action>
+    </animation>    
+
+
+</PropertyList>

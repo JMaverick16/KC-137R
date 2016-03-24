@@ -1,0 +1,2148 @@
+<?xml version="1.0"?>
+
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+	<path>mps.ac</path>
+	
+	<animation>
+		<type>material</type>
+		<object-name>mp</object-name>
+		<object-name>mp.001</object-name>
+		<object-name>mp.002</object-name>
+		<object-name>mp.003</object-name>
+		<object-name>mp.004</object-name>
+		<object-name>mp.005</object-name>
+		<object-name>mp.006</object-name>
+		<object-name>mp.007</object-name>
+		<object-name>mp.008</object-name>
+		<object-name>mp.009</object-name>
+		<object-name>mp.010</object-name>
+		<object-name>mp.011</object-name>
+		<object-name>mp.012</object-name>
+		<object-name>mp.013</object-name>
+		<object-name>mp.014</object-name>
+		<object-name>mp.015</object-name>
+		<object-name>mp.016</object-name>
+		<object-name>mp.017</object-name>
+		<object-name>mp.018</object-name>
+		<object-name>mp.019</object-name>
+		<object-name>ai</object-name>
+		<object-name>ai.001</object-name>
+		<object-name>ai.002</object-name>
+		<object-name>ai.003</object-name>
+		<object-name>ai.004</object-name>
+		<object-name>ai.005</object-name>
+		<object-name>ai.006</object-name>
+		<object-name>ai.007</object-name>
+		<object-name>ai.008</object-name>
+		<object-name>ai.009</object-name>
+		<object-name>ai.010</object-name>
+		<object-name>ai.011</object-name>
+		<object-name>ai.012</object-name>
+		<object-name>ai.013</object-name>
+		<object-name>ai.014</object-name>
+		<object-name>ai.015</object-name>
+		<object-name>ai.016</object-name>
+		<object-name>ai.017</object-name>
+		<object-name>ai.018</object-name>
+		<object-name>ai.019</object-name>
+		<object-name>ta</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.6</green>
+			<blue>0.0</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>mp</object-name>
+		<object-name>mp.001</object-name>
+		<object-name>mp.002</object-name>
+		<object-name>mp.003</object-name>
+		<object-name>mp.004</object-name>
+		<object-name>mp.005</object-name>
+		<object-name>mp.006</object-name>
+		<object-name>mp.007</object-name>
+		<object-name>mp.008</object-name>
+		<object-name>mp.009</object-name>
+		<object-name>mp.010</object-name>
+		<object-name>mp.011</object-name>
+		<object-name>mp.012</object-name>
+		<object-name>mp.013</object-name>
+		<object-name>mp.014</object-name>
+		<object-name>mp.015</object-name>
+		<object-name>mp.016</object-name>
+		<object-name>mp.017</object-name>
+		<object-name>mp.018</object-name>
+		<object-name>mp.019</object-name>
+		<object-name>ai</object-name>
+		<object-name>ai.001</object-name>
+		<object-name>ai.002</object-name>
+		<object-name>ai.003</object-name>
+		<object-name>ai.004</object-name>
+		<object-name>ai.005</object-name>
+		<object-name>ai.006</object-name>
+		<object-name>ai.007</object-name>
+		<object-name>ai.008</object-name>
+		<object-name>ai.009</object-name>
+		<object-name>ai.010</object-name>
+		<object-name>ai.011</object-name>
+		<object-name>ai.012</object-name>
+		<object-name>ai.013</object-name>
+		<object-name>ai.014</object-name>
+		<object-name>ai.015</object-name>
+		<object-name>ai.016</object-name>
+		<object-name>ai.017</object-name>
+		<object-name>ai.018</object-name>
+		<object-name>ai.019</object-name>
+		<object-name>ta</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+			<red>0.4</red>
+			<green>0.8</green>
+			<blue>0.0</blue>
+			<factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>mp</object-name>
+		<object-name>mp.001</object-name>
+		<object-name>mp.002</object-name>
+		<object-name>mp.003</object-name>
+		<object-name>mp.004</object-name>
+		<object-name>mp.005</object-name>
+		<object-name>mp.006</object-name>
+		<object-name>mp.007</object-name>
+		<object-name>mp.008</object-name>
+		<object-name>mp.009</object-name>
+		<object-name>mp.010</object-name>
+		<object-name>mp.011</object-name>
+		<object-name>mp.012</object-name>
+		<object-name>mp.013</object-name>
+		<object-name>mp.014</object-name>
+		<object-name>mp.015</object-name>
+		<object-name>mp.016</object-name>
+		<object-name>mp.017</object-name>
+		<object-name>mp.018</object-name>
+		<object-name>mp.019</object-name>
+		<object-name>ai</object-name>
+		<object-name>ai.001</object-name>
+		<object-name>ai.002</object-name>
+		<object-name>ai.003</object-name>
+		<object-name>ai.004</object-name>
+		<object-name>ai.005</object-name>
+		<object-name>ai.006</object-name>
+		<object-name>ai.007</object-name>
+		<object-name>ai.008</object-name>
+		<object-name>ai.009</object-name>
+		<object-name>ai.010</object-name>
+		<object-name>ai.011</object-name>
+		<object-name>ai.012</object-name>
+		<object-name>ai.013</object-name>
+		<object-name>ai.014</object-name>
+		<object-name>ai.015</object-name>
+		<object-name>ai.016</object-name>
+		<object-name>ai.017</object-name>
+		<object-name>ai.018</object-name>
+		<object-name>ai.019</object-name>
+		<object-name>ta</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>mp</object-name>
+		<object-name>mp.001</object-name>
+		<object-name>mp.002</object-name>
+		<object-name>mp.003</object-name>
+		<object-name>mp.004</object-name>
+		<object-name>mp.005</object-name>
+		<object-name>mp.006</object-name>
+		<object-name>mp.007</object-name>
+		<object-name>mp.008</object-name>
+		<object-name>mp.009</object-name>
+		<object-name>mp.010</object-name>
+		<object-name>mp.011</object-name>
+		<object-name>mp.012</object-name>
+		<object-name>mp.013</object-name>
+		<object-name>mp.014</object-name>
+		<object-name>mp.015</object-name>
+		<object-name>mp.016</object-name>
+		<object-name>mp.017</object-name>
+		<object-name>mp.018</object-name>
+		<object-name>mp.019</object-name>
+		<object-name>ai</object-name>
+		<object-name>ai.001</object-name>
+		<object-name>ai.002</object-name>
+		<object-name>ai.003</object-name>
+		<object-name>ai.004</object-name>
+		<object-name>ai.005</object-name>
+		<object-name>ai.006</object-name>
+		<object-name>ai.007</object-name>
+		<object-name>ai.008</object-name>
+		<object-name>ai.009</object-name>
+		<object-name>ai.010</object-name>
+		<object-name>ai.011</object-name>
+		<object-name>ai.012</object-name>
+		<object-name>ai.013</object-name>
+		<object-name>ai.014</object-name>
+		<object-name>ai.015</object-name>
+		<object-name>ai.016</object-name>
+		<object-name>ai.017</object-name>
+		<object-name>ai.018</object-name>
+		<object-name>ai.019</object-name>
+		<object-name>ta</object-name>
+	</effect>
+
+<!-- TCAS ANIMATIONS -->
+	
+	<!-- TANKER only in air refueling_demo -->
+
+	<!-- ta -->
+
+		<animation>
+			<type>select</type>
+			<object-name>ta</object-name>
+			<condition>
+				<property>instrumentation/mptcas/ta[0]/show</property>
+			</condition>
+		</animation>
+
+		<animation>
+			<type>pick</type>
+			<object-name>ta</object-name>
+			<visible>true</visible>
+			<action>
+				<button>0</button>
+				<repeatable>false</repeatable>			
+				<binding>
+					<command>nasal</command>
+					<script>b707.show_ta_info(0)</script>
+				</binding>
+			</action>
+		</animation>
+	
+		<animation>
+			<type>translate</type>
+			<object-name>ta</object-name>
+			<property>instrumentation/mptcas/ta[0]/dis-x</property>
+			<factor>1</factor>
+			<axis>
+				<x>0</x>
+				<y>1</y>
+				<z>0</z>
+			</axis>
+		</animation>
+		<animation>
+			<type>translate</type>
+			<object-name>ta</object-name>
+			<property>instrumentation/mptcas/ta[0]/dis-y</property>
+			<factor>1</factor>
+			<axis>
+				<x>0</x>
+				<y>0</y>
+				<z>1</z>
+			</axis>
+		</animation>
+
+<!-- MULTIPLAYER -->
+
+<!-- mp1 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[0]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(0)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp</object-name>
+		<property>instrumentation/mptcas/mp[0]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp</object-name>
+		<property>instrumentation/mptcas/mp[0]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- mp2 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.001</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[1]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.001</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(1)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.001</object-name>
+		<property>instrumentation/mptcas/mp[1]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.001</object-name>
+		<property>instrumentation/mptcas/mp[1]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp3 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.002</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[2]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.002</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(2)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.002</object-name>
+		<property>instrumentation/mptcas/mp[2]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.002</object-name>
+		<property>instrumentation/mptcas/mp[2]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp4 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.003</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[3]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.003</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(3)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.003</object-name>
+		<property>instrumentation/mptcas/mp[3]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.003</object-name>
+		<property>instrumentation/mptcas/mp[3]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp5 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.004</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[4]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.004</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(4)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.004</object-name>
+		<property>instrumentation/mptcas/mp[4]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.004</object-name>
+		<property>instrumentation/mptcas/mp[4]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp6 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.005</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[5]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.005</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(5)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.005</object-name>
+		<property>instrumentation/mptcas/mp[5]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.005</object-name>
+		<property>instrumentation/mptcas/mp[5]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp7 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.006</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[6]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.006</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(6)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.006</object-name>
+		<property>instrumentation/mptcas/mp[6]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.006</object-name>
+		<property>instrumentation/mptcas/mp[6]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- mp8 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.007</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[7]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.007</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(7)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.007</object-name>
+		<property>instrumentation/mptcas/mp[7]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.007</object-name>
+		<property>instrumentation/mptcas/mp[7]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- mp9 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.008</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[8]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.008</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(8)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.008</object-name>
+		<property>instrumentation/mptcas/mp[8]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.008</object-name>
+		<property>instrumentation/mptcas/mp[8]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- mp10 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.009</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[9]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.009</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(9)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.009</object-name>
+		<property>instrumentation/mptcas/mp[9]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.009</object-name>
+		<property>instrumentation/mptcas/mp[9]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- mp11 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.010</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[10]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.010</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(10)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.010</object-name>
+		<property>instrumentation/mptcas/mp[10]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.001</object-name>
+		<property>instrumentation/mptcas/mp[10]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+		
+<!-- mp12 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.011</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[11]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.011</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(11)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.011</object-name>
+		<property>instrumentation/mptcas/mp[11]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.011</object-name>
+		<property>instrumentation/mptcas/mp[11]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp13 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.012</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[12]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.012</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(12)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.012</object-name>
+		<property>instrumentation/mptcas/mp[12]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.012</object-name>
+		<property>instrumentation/mptcas/mp[12]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp14 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.013</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[13]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.013</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(13)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.013</object-name>
+		<property>instrumentation/mptcas/mp[13]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.013</object-name>
+		<property>instrumentation/mptcas/mp[13]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp15 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.014</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[14]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.014</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(14)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.014</object-name>
+		<property>instrumentation/mptcas/mp[14]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.014</object-name>
+		<property>instrumentation/mptcas/mp[14]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp16 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.015</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[15]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.015</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(15)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.015</object-name>
+		<property>instrumentation/mptcas/mp[15]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.015</object-name>
+		<property>instrumentation/mptcas/mp[15]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- mp17 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.016</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[16]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.016</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(16)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.016</object-name>
+		<property>instrumentation/mptcas/mp[16]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.016</object-name>
+		<property>instrumentation/mptcas/mp[16]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- mp18 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.017</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[17]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.017</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(17)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.017</object-name>
+		<property>instrumentation/mptcas/mp[17]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.017</object-name>
+		<property>instrumentation/mptcas/mp[17]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- mp19 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.018</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[18]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.018</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(18)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.018</object-name>
+		<property>instrumentation/mptcas/mp[18]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.018</object-name>
+		<property>instrumentation/mptcas/mp[18]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- mp20 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>mp.019</object-name>
+		<condition>
+			<property>instrumentation/mptcas/mp[19]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>mp.019</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_mp_info(19)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>mp.019</object-name>
+		<property>instrumentation/mptcas/mp[19]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>mp.019</object-name>
+		<property>instrumentation/mptcas/mp[19]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>	
+
+	
+<!-- AI AIRCRAFT -->
+
+<!-- ai1 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[0]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(0)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai</object-name>
+		<property>instrumentation/mptcas/ai[0]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai</object-name>
+		<property>instrumentation/mptcas/ai[0]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- ai2 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.001</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[1]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.001</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(1)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.001</object-name>
+		<property>instrumentation/mptcas/ai[1]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.001</object-name>
+		<property>instrumentation/mptcas/ai[1]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai3 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.002</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[2]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.002</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(2)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.002</object-name>
+		<property>instrumentation/mptcas/ai[2]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.002</object-name>
+		<property>instrumentation/mptcas/ai[2]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai4 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.003</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[3]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.003</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(3)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.003</object-name>
+		<property>instrumentation/mptcas/ai[3]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.003</object-name>
+		<property>instrumentation/mptcas/ai[3]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai5 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.004</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[4]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.004</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(4)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.004</object-name>
+		<property>instrumentation/mptcas/ai[4]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.004</object-name>
+		<property>instrumentation/mptcas/ai[4]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai6 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.005</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[5]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.005</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(5)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.005</object-name>
+		<property>instrumentation/mptcas/ai[5]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.005</object-name>
+		<property>instrumentation/mptcas/ai[5]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai7 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.006</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[6]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.006</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(6)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.006</object-name>
+		<property>instrumentation/mptcas/ai[6]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.006</object-name>
+		<property>instrumentation/mptcas/ai[6]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- ai8 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.007</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[7]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.007</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(7)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.007</object-name>
+		<property>instrumentation/mptcas/ai[7]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.007</object-name>
+		<property>instrumentation/mptcas/ai[7]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- ai9 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.008</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[8]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.008</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(8)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.008</object-name>
+		<property>instrumentation/mptcas/ai[8]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.008</object-name>
+		<property>instrumentation/mptcas/ai[8]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- ai10 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.009</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[9]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.009</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(9)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.009</object-name>
+		<property>instrumentation/mptcas/ai[9]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.009</object-name>
+		<property>instrumentation/mptcas/ai[9]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- ai11 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.010</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[10]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.010</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(10)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.010</object-name>
+		<property>instrumentation/mptcas/ai[10]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.001</object-name>
+		<property>instrumentation/mptcas/ai[10]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+		
+<!-- ai12 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.011</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[11]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.011</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(11)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.011</object-name>
+		<property>instrumentation/mptcas/ai[11]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.011</object-name>
+		<property>instrumentation/mptcas/ai[11]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai13 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.012</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[12]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.012</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(12)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.012</object-name>
+		<property>instrumentation/mptcas/ai[12]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.012</object-name>
+		<property>instrumentation/mptcas/ai[12]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai14 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.013</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[13]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.013</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(13)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.013</object-name>
+		<property>instrumentation/mptcas/ai[13]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.013</object-name>
+		<property>instrumentation/mptcas/ai[13]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai15 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.014</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[14]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.014</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(14)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.014</object-name>
+		<property>instrumentation/mptcas/ai[14]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.014</object-name>
+		<property>instrumentation/mptcas/ai[14]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai16 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.015</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[15]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.015</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(15)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.015</object-name>
+		<property>instrumentation/mptcas/ai[15]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.015</object-name>
+		<property>instrumentation/mptcas/ai[15]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+<!-- ai17 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.016</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[16]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.016</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(16)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.016</object-name>
+		<property>instrumentation/mptcas/ai[16]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.016</object-name>
+		<property>instrumentation/mptcas/ai[16]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- ai18 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.017</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[17]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.017</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(17)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.017</object-name>
+		<property>instrumentation/mptcas/ai[17]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.017</object-name>
+		<property>instrumentation/mptcas/ai[17]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- ai19 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.018</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[18]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.018</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(18)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.018</object-name>
+		<property>instrumentation/mptcas/ai[18]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.018</object-name>
+		<property>instrumentation/mptcas/ai[18]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+<!-- ai20 -->
+
+	<animation>
+		<type>select</type>
+		<object-name>ai.019</object-name>
+		<condition>
+			<property>instrumentation/mptcas/ai[19]/show</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>ai.019</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>			
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_ai_info(19)</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ai.019</object-name>
+		<property>instrumentation/mptcas/ai[19]/dis-x</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>ai.019</object-name>
+		<property>instrumentation/mptcas/ai[19]/dis-y</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>	
+	
+</PropertyList>

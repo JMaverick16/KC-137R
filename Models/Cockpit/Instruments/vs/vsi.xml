@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+<path>vs.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>VSI.Face</object-name>
+		<object-name>VSI.Needle</object-name>
+		<object-name>VSset.Needle</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+			<object-name>VSI.Face</object-name>
+			<object-name>VSI.Needle</object-name>
+			<object-name>VSset.Needle</object-name>
+			<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+<animation>
+	<type>noshadow</type>
+	<object-name>shadow</object-name>
+</animation>
+
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+	<object-name>shadow</object-name>
+</effect>
+
+<animation>
+  <type>rotate</type>
+  <object-name>VSI.Needle</object-name>
+  <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+  <min>-6000.0</min>
+  <max>6000.0</max>
+  <scale>1.0</scale>
+  <interpolation>
+    <entry><ind>-6000</ind><dep>-168</dep></entry>
+    <entry><ind>-4000</ind><dep>-124</dep></entry>
+    <entry><ind>-2000</ind><dep>-80</dep></entry>
+    <entry><ind>-1000</ind><dep>-40</dep></entry>
+    <entry><ind>    0</ind><dep>  0</dep></entry>
+    <entry><ind> 1000</ind><dep> 40</dep></entry>
+    <entry><ind> 2000</ind><dep> 80</dep></entry>
+    <entry><ind> 4000</ind><dep>124</dep></entry>
+    <entry><ind> 6000</ind><dep>168</dep></entry> 
+  </interpolation>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>VSset.Needle</object-name>
+  <property>/autopilot/settings/vertical-speed-fpm</property>
+  <min>-6000.0</min>
+  <max>6000.0</max>
+  <scale>1.0</scale>
+  <interpolation>
+    <entry><ind>-6000</ind><dep>-168</dep></entry>
+    <entry><ind>-4000</ind><dep>-124</dep></entry>
+    <entry><ind>-2000</ind><dep>-80</dep></entry>
+    <entry><ind>-1000</ind><dep>-40</dep></entry>
+    <entry><ind>    0</ind><dep>  0</dep></entry>
+    <entry><ind> 1000</ind><dep> 40</dep></entry>
+    <entry><ind> 2000</ind><dep> 80</dep></entry>
+    <entry><ind> 4000</ind><dep>124</dep></entry>
+    <entry><ind> 6000</ind><dep>168</dep></entry> 
+  </interpolation>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>VSI.Face</object-name>
+    <visible>true</visible>
+    <action>
+      <name>small increase (scrollwheel)</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/vertical-speed-fpm</property>
+        <step>100</step>
+        <min>-6000</min>
+        <max>6000</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>small decrease (scrollwheel)</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/vertical-speed-fpm</property>
+        <step>-100</step>
+        <min>-6000</min>
+        <max>6000</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>increase</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/vertical-speed-fpm</property>
+        <step>1000</step>
+        <min>-6000</min>
+        <max>6000</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>decrease</name>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/autopilot/settings/vertical-speed-fpm</property>
+        <step>-1000</step>
+        <min>-6000</min>
+        <max>6000</max>
+        <wrap>1</wrap>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>heater.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmber</object-name>
+		<object-name>sockle</object-name>
+		<object-name>sockle.001</object-name>  
+		<object-name>switch</object-name>
+		<object-name>cover</object-name>
+		<condition>		
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmberON</object-name>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON</object-name>
+		<emission>
+		  <red>   1.0 </red>
+		  <green> 0.8 </green>
+		  <blue>  0.4 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+			<or>
+				<and>
+					<not><property>/b707/fuel/heater[2]</property></not>
+					<less-than>
+				  	<property>/environment/temperature-degc</property>
+				  	<value>-8</value>
+				  </less-than>
+				</and>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+  <!-- Cover -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover</object-name>
+    <property>/b707/fuel/heater-cover[2]</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 1</x>
+     <y> 0</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m>-0.0003</y-m>
+    <z-m>-0.0178</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/heater-cover[2]</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch</object-name>
+		  <property>/b707/fuel/heater[2]</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>-0.0048</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch</object-name>
+		  <object-name>sockle</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/heater[2]</property>
+		    </binding>          
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+ 
+</PropertyList>

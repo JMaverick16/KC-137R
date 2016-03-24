@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+ <path>alt.ac</path>
+
+	<animation>
+		<type>material</type>
+    <object-name>ALTface</object-name>
+    <object-name>needle</object-name>
+    <object-name>altnum10000</object-name>
+    <object-name>altnum1000</object-name>
+    <object-name>altnum100</object-name>
+    <object-name>inhg01</object-name>
+    <object-name>inhg02</object-name>
+    <object-name>inhg03</object-name>
+    <object-name>inhg04</object-name>
+    <object-name>mb01</object-name>
+    <object-name>mb02</object-name>
+    <object-name>mb03</object-name>
+    <object-name>mb04</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>BaroKnob</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+    <object-name>ALTface</object-name>
+    <object-name>needle</object-name>
+    <object-name>altnum10000</object-name>
+    <object-name>altnum1000</object-name>
+    <object-name>altnum100</object-name>
+    <object-name>inhg01</object-name>
+    <object-name>inhg02</object-name>
+    <object-name>inhg03</object-name>
+    <object-name>inhg04</object-name>
+    <object-name>mb01</object-name>
+    <object-name>mb02</object-name>
+    <object-name>mb03</object-name>
+    <object-name>mb04</object-name>
+		<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>BaroKnob</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+
+<!--####    InHg    ####-->
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>inhg01</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>0.01</factor>
+        <step>10</step>
+		<bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>inhg02</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>0.1</factor>
+        <step>1</step>
+		<bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>inhg03</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>1.0</factor>
+        <step>0.1</step>
+		<bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>inhg04</object-name>
+        <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>10.0</factor>
+        <step>0.01</step>
+		<bias>0.005</bias>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>mb01</object-name>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>mb02</object-name>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <factor>0.001</factor>
+        <step>100</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>mb03</object-name>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <factor>0.01</factor>
+        <step>10</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>mb04</object-name>
+        <property>/instrumentation/altimeter/setting-hpa</property>
+        <factor>0.1</factor>
+        <step>1</step>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+<!--####    altimeter    ####-->
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>altnum100</object-name>
+        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <factor>0.001</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>altnum1000</object-name>
+        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <factor>0.0001</factor>
+        <step>1000</step>
+        <scroll>20</scroll>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>textranslate</type>
+        <object-name>altnum10000</object-name>
+        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <factor>0.00001</factor>
+        <step>10000</step>
+        <scroll>20</scroll>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+  <animation>
+      <type>rotate</type>
+      <object-name>needle</object-name>
+      <object-name>needle.001</object-name>
+      <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+      <factor>0.36</factor>
+      <axis>
+          <x>-1.0</x>
+          <y>0</y>
+          <z>0.0</z>
+      </axis>
+  </animation>
+
+<!-- Hotspots -->
+    <animation>
+      <type>rotate</type>
+      <object-name>BaroKnob</object-name>
+      <property>/instrumentation/altimeter/setting-inhg</property>
+        <factor>-1000</factor>
+      <center>
+      <x-m> 0</x-m>
+      <y-m>-0.0231</y-m>
+      <z-m>-0.0366</z-m>
+      </center>
+      <axis>
+        <x> -1 </x>
+        <y>  0 </y>
+        <z>  0 </z>
+      </axis>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+      	<object-name>BaroKnob</object-name>
+      	<object-name>ALTface</object-name>
+        <visible>true</visible>      
+        <action>
+		      <name>show info</name>
+		      <button>0</button>
+		    	<repeatable>true</repeatable>			
+		      <binding>
+						<command>nasal</command>
+						<script>b707.show_alti()</script>
+					</binding>
+		    </action>
+        <action>
+            <button>3</button>
+            <binding>
+	          <condition>
+	              <not><property>devices/status/keyboard/shift</property></not>
+	              <not><property>devices/status/keyboard/super</property></not>
+	          </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/altimeter/setting-inhg</property>
+            <step>0.01</step>
+            <min>26.0</min>
+            <max>33.0</max>
+            <wrap>false</wrap>
+            </binding>
+            <binding>
+	          <condition>
+	  	         <or>
+	  	          <property>devices/status/keyboard/shift</property>
+	  	          <property>devices/status/keyboard/super</property>
+	  	         </or>
+	          </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/altimeter/setting-inhg</property>
+            <step>0.1</step>
+            <min>26.0</min>
+            <max>33.0</max>
+            <wrap>false</wrap>
+            </binding>			
+        </action>
+        <action>
+            <button>4</button>
+            <binding>
+  	          <condition>
+  	              <not><property>devices/status/keyboard/shift</property></not>
+  	              <not><property>devices/status/keyboard/super</property></not>
+  	          </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/altimeter/setting-inhg</property>
+            <step>-0.01</step>
+            <min>26.0</min>
+            <max>33.0</max>
+            <wrap>false</wrap>
+            </binding>
+            <binding>
+	          <condition>
+	  	         <or>
+	  	          <property>devices/status/keyboard/shift</property>
+	  	          <property>devices/status/keyboard/super</property>
+	  	         </or>
+	          </condition>
+            <command>property-adjust</command>
+            <property>/instrumentation/altimeter/setting-inhg</property>
+            <step>-0.1</step>
+            <min>26.0</min>
+            <max>33.0</max>
+            <wrap>false</wrap>
+            </binding>	
+        </action>
+    </animation>
+
+</PropertyList>

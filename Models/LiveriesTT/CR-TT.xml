@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Czech Tanker</name>
+            <texture>LiveriesTT/CR-TT.png</texture>
+	        <texture-container>LiveriesTT/FAE-container.png</texture-container>
+	    </livery>
+    </model>
+    <multiplay>
+    	<generic>
+    		<int n="8">1</int>   <!-- engine type -->
+    		<int n="9">1</int>   <!-- cargo aircraft -->
+    		<int n="16">2</int>  <!-- immat position -->
+			<!-- 0 no immat, 1 on fuselage down, 2 on fuselage upper back, 3 on rudder and wings -->
+    	</generic>
+    </multiplay>
+</sim>
+</PropertyList>

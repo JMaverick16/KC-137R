@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+    <path>wiperleft.ac</path>
+
+		<animation>
+		  <type>noshadow</type>
+		  <object-name>wiperView</object-name>
+      <object-name>wiper</object-name>
+      <object-name>wiper.001</object-name>
+		</animation>
+
+		<animation>
+		  <type>shader</type>
+		  <shader>chrome</shader>
+		  <texture>Aircraft/707/Models/Instruments/wiper/transparent.png</texture>
+		  <object-name>wiperView</object-name>
+		</animation>
+
+		<animation>
+			<type>material</type>
+      <object-name>wiperSup</object-name>
+      <object-name>wiperSup.001</object-name>
+      <object-name>wiper</object-name>
+      <object-name>wiperView</object-name>		
+      <condition>
+				<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			</condition>
+			<emission>
+				<red>0.2</red>
+				<green>0.2</green>
+				<blue>0.2</blue>
+				<factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+			</emission>
+		</animation>
+
+		<animation>
+		  <type>select</type>
+		  <object-name>wiperView</object-name>
+		  <condition>
+		    <or>
+					<and>
+				   <property>/controls/special/wiper-switch</property>
+					 	<greater-than>
+					 		<property>/controls/special/wiper-deg</property>
+					 		<value>2</value>
+					  </greater-than>
+					 	<less-than>
+					 		<property>/controls/special/wiper-deg</property>
+					 		<value>108</value>
+					  </less-than>
+				  </and>
+				  <property>/b707/rain/rain-repellent-captain</property>
+				</or>
+		  </condition>
+		</animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>wiperSup</object-name>
+      <object-name>wiperSup.001</object-name>
+      <object-name>wiper</object-name>
+      <object-name>wiper.001</object-name>
+      <property>sim/multiplay/generic/float[9]</property>
+        <factor>-1.1</factor>
+      <center>
+      <x-m> 0.0 </x-m>
+      <y-m> 0.298 </y-m>
+      <z-m> 0.0</z-m>
+      </center>
+      <axis>
+        <x> 1 </x>
+        <y> 0 </y>
+        <z> 0 </z>
+      </axis>
+    </animation>
+
+		<animation>
+			<type>translate</type>
+			<object-name>wiper</object-name>
+      <object-name>wiper.001</object-name>
+      <object-name>wiperSup.001</object-name>
+			<property>sim/multiplay/generic/float[9]</property>
+			<interpolation>
+				<entry><ind>0 </ind><dep>  0.0</dep></entry>
+				<entry><ind>25</ind><dep> -0.08</dep></entry>
+				<entry><ind>30</ind><dep> -0.04</dep></entry>
+				<entry><ind>35</ind><dep>  0.00</dep></entry>
+				<entry><ind>40</ind><dep>  0.03</dep></entry>
+				<entry><ind>45</ind><dep>  0.06</dep></entry>
+				<entry><ind>50</ind><dep>  0.08</dep></entry>
+				<entry><ind>60</ind><dep>  0.10</dep></entry>
+				<entry><ind>70</ind><dep>  0.11</dep></entry>
+				<entry><ind>80</ind><dep>  0.10</dep></entry>
+				<entry><ind>90</ind><dep>  0.09</dep></entry>
+				<entry><ind>100</ind><dep> 0.08</dep></entry>
+				<entry><ind>110</ind><dep> 0.07</dep></entry>
+			</interpolation>
+		  <axis>   
+		    <x1-m> -0.014</x1-m>
+		    <y1-m> -0.014</y1-m>
+		    <z1-m>  0.045</z1-m>
+		    <x2-m> -0.014</x2-m>
+		    <y2-m>  0.297</y2-m>
+		    <z2-m>  0.0</z2-m>
+		  </axis>
+		</animation>
+
+    <animation>
+      <type>rotate</type>
+      <object-name>wiper</object-name>
+      <object-name>wiper.001</object-name>
+      <property>sim/multiplay/generic/float[9]</property>
+			<interpolation>
+				<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+				<entry><ind>10</ind><dep>  0.0</dep></entry>
+				<entry><ind>70</ind><dep> -12</dep></entry>
+				<entry><ind>110</ind><dep> 48</dep></entry>
+			</interpolation>
+      <center>
+      <x-m> 0.0 </x-m>
+      <y-m>-0.017 </y-m>
+      <z-m> 0.045</z-m>
+      </center>
+      <axis>
+        <x> 1 </x>
+        <y> 0 </y>
+        <z> 0 </z>
+      </axis>
+    </animation>   
+
+</PropertyList>

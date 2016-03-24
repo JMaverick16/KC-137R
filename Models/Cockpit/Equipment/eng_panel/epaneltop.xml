@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>epaneltop.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>panelAuxtop</object-name>
+		<object-name>panelEtop</object-name> 
+		<condition>		
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<model>
+		<name>bat</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/battery.xml</path>
+		<offsets>
+		  <x-m>-0.0385</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.102</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>gD1</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/genDrive1.xml</path>
+		<offsets>
+		  <x-m>-0.2639</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.1268</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>gD2</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/genDrive2.xml</path>
+		<offsets>
+		  <x-m>-0.2059</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.1268</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>gD3</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/genDrive3.xml</path>
+		<offsets>
+		  <x-m>-0.1488</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.1268</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>gD4</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/genDrive4.xml</path>
+		<offsets>
+		  <x-m>-0.0905</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.1268</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>groundConnect</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/extPower.xml</path>
+		<offsets>
+		  <x-m>-0.0176</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0337</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>essentialPower</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/essPower.xml</path>
+		<offsets>
+		  <x-m> 0.0026</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m>-0.0241</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>ACParalleling</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/acParallel.xml</path>
+		<offsets>
+		  <x-m>-0.022</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m>-0.154</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>g1</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/generator1.xml</path>
+		<offsets>
+		  <x-m>-0.264</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0069</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>g2</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/generator2.xml</path>
+		<offsets>
+		  <x-m>-0.207</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0069</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>g3</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/generator3.xml</path>
+		<offsets>
+		  <x-m>-0.1497</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0069</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>g4</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/generator4.xml</path>
+		<offsets>
+		  <x-m>-0.0915</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0069</z-m>
+		</offsets>
+	</model>	
+	
+  <!-- Pressurization switches and knobs -->
+	<model>
+		<name>pressurizationSwitches</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/pressurization.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>
+	
+  <!-- Fuel Dump in  auxilliary panel -->
+	<model>
+		<name>fuelDump</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/fuelDump.xml</path>
+		<offsets>
+		  <x-m> 0.3935</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m>-0.1669</z-m>
+		</offsets>
+	</model>
+		
+  <!-- Cabin rate of climb -->
+	<model>
+		<name>cabinClimb</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/cabinClimb/cabinClimb.xml</path>
+		<offsets>
+		  <x-m> 0.0682</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m>-0.1123</z-m>
+		</offsets>
+	</model>
+		
+  <!-- Cabin altitude -->
+	<model>
+		<name>cabinAlt</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/cabinAlt/alt.xml</path>
+		<offsets>
+		  <x-m> 0.127</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m>-0.106</z-m>
+		</offsets>
+	</model>
+	
+  <!-- Cabin differential pressure -->
+	<model>
+		<name>cabinPress</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/cabinPress/cabinPress.xml</path>
+		<offsets>
+		  <x-m> 0.1866</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m>-0.1123</z-m>
+		</offsets>
+	</model>
+	
+  <!-- Air Conditioning -->
+	<model>
+		<name>airCond</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airConditioning.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.0</z-m>
+		</offsets>
+	</model>
+	
+  <!-- Air Compressor -->
+	<model>
+		<name>airComp1</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor1.xml</path>
+		<offsets>
+		  <x-m> 0.067</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m> 0.154</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>airComp2</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor2.xml</path>
+		<offsets>
+		  <x-m> 0.123</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m> 0.154</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>airComp3</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor3.xml</path>
+		<offsets>
+		  <x-m> 0.179</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m> 0.154</z-m>
+		</offsets>
+	</model>
+		
+  <!-- Air Supply -->
+	<model>
+		<name>airSupply</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airSupply/airSupply.xml</path>
+		<offsets>
+		  <x-m> 0.0682</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m>-0.0548</z-m>
+		</offsets>
+	</model>
+		
+  <!-- cabin comnditioned air in inches of water -->
+	<model>
+		<name>cabinTemperature</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/inchesWater/inchesWater.xml</path>
+		<offsets>
+		  <x-m> 0.1841</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m>-0.0564</z-m>
+		</offsets>
+	</model>
+		
+  <!-- Cabin Temperature -->
+	<model>
+		<name>cabinTemperature</name>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/cabinTemp/cabinTemp.xml</path>
+		<offsets>
+		  <x-m> 0.2364</x-m>
+		  <y-m>-0.0005</y-m>
+		  <z-m>-0.0929</z-m>
+		</offsets>
+	</model>
+	
+</PropertyList>

@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+  <path>starter_switch.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>cover</object-name>	
+		<object-name>sockle</object-name>
+		<object-name>switch</object-name>	
+		<texture>starter3.png</texture>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>cover</object-name>	
+		<object-name>sockle</object-name>
+		<object-name>switch</object-name>		
+		<condition>	
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampGreenON</object-name>
+		<emission>
+		  <red>   0 </red>
+		  <green> 1.0 </green>
+		  <blue>  0 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampGreenON</object-name>
+		<condition>
+		<and>
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+			<or>
+				<property>/controls/test/warn-knob</property>
+				<and>
+					<property>/b707/external-power-connected</property>
+					<property>/b707/ground-connect</property>	
+					<property>/b707/generator/gen-breaker[2]</property>
+					<property>/b707/generator/gen-bus-tie[2]</property>
+					<property>/b707/generator/gen-control[2]</property>
+					<not><property>/engines/engine[2]/running</property></not> 
+				</and>
+				<and>
+					<greater-than>
+						<property>/b707/ess-bus</property>
+						<value>24</value>
+				 </greater-than>
+					<property>/b707/generator/gen-breaker[2]</property>
+					<property>/b707/generator/gen-bus-tie[2]</property>
+					<property>/b707/generator/gen-control[2]</property>
+					<not><property>/engines/engine[2]/running</property></not> 
+				</and>
+				<and>
+					<property>/b707/apu/off-start-run</property>	
+					<property>/b707/generator/gen-drive[4]</property>
+					<not><property>/engines/engine[2]/running</property></not> 
+				</and>
+			</or>
+		</and>
+		</condition>
+	</animation>
+	
+  <!-- Cover -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover</object-name>
+    <property>/b707/start/startercover[2]</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+    </axis>
+    <center>
+    <x-m> 0.0045</x-m>
+    <y-m> 0.0</y-m>
+    <z-m>-0.018</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/start/startercover[2]</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch</object-name>
+		  <property>/controls/engines/engine[2]/starter</property>
+      <factor>-50</factor>
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch</object-name>
+		  <object-name>sockle</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/controls/engines/engine[2]/starter</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+
+</PropertyList>

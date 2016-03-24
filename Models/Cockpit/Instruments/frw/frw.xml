@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList> 
+    
+  <path>frw.ac</path>
+    
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>btnStartStop</object-name>
+    <object-name>btnReset</object-name>
+    <object-name>btnMode</object-name>
+    <object-name>activeMode</object-name>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>needle3</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- START the swing-effect -->  <!-- START the swing-effect -->
+  <animation>
+    <type>rotate</type>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>btnStartStop</object-name>
+    <object-name>btnReset</object-name>
+    <object-name>btnStartStopOut</object-name>
+    <object-name>btnResetOut</object-name>
+    <object-name>btnMode</object-name>
+    <object-name>activeMode</object-name>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>needle3</object-name>
+    <object-name>vitre</object-name>
+		<condition>
+			<property>/b707/compass-pos</property>
+		</condition>
+		<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <interpolation>
+      <entry><ind>  4.0</ind><dep>-50.0</dep></entry>
+      <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+      <entry><ind> -4.0</ind><dep> 50.0</dep></entry>
+    </interpolation>
+    <center> 
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>btnStartStop</object-name>
+    <object-name>btnReset</object-name>
+    <object-name>btnStartStopOut</object-name>
+    <object-name>btnResetOut</object-name>
+    <object-name>btnMode</object-name>
+    <object-name>activeMode</object-name>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>needle3</object-name>
+    <object-name>vitre</object-name>
+		<condition>
+			<not><property>/b707/compass-pos</property></not>
+		</condition>
+		<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <interpolation>
+      <entry><ind> 	 4.0</ind><dep>-50.0</dep></entry>
+      <entry><ind>   0.0</ind><dep>  0.0</dep></entry>
+      <entry><ind>  -4.0</ind><dep> 10.0</dep></entry>
+    </interpolation>
+    <center> 
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>fond</object-name>
+    <object-name>visses</object-name>
+    <object-name>btnStartStop</object-name>
+    <object-name>btnReset</object-name>
+    <object-name>btnStartStopOut</object-name>
+    <object-name>btnResetOut</object-name>
+    <object-name>btnMode</object-name>
+    <object-name>activeMode</object-name>
+    <object-name>face</object-name>
+    <object-name>needle1</object-name>
+    <object-name>needle2</object-name>
+    <object-name>needle3</object-name>
+    <object-name>vitre</object-name>
+    <property>/orientation/pitch-deg</property>
+    <interpolation>
+      <entry><ind> -10.0</ind><dep>  -10.0</dep></entry>
+      <entry><ind>   0.0</ind><dep>    0.0</dep></entry>
+      <entry><ind>  35.0</ind><dep>   35.0</dep></entry>
+    </interpolation>
+    <center> 
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  <!-- the END of swing-effect -->
+
+  <animation>
+		<type>material</type>
+		  <object-name>face</object-name>
+		  <object-name>fond</object-name>
+		  <object-name>activeMode</object-name>
+		  <object-name>needle1</object-name>
+		  <object-name>needle2</object-name>
+		  <object-name>needle3</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		  <object-name>face</object-name>
+		  <object-name>fond</object-name>
+		  <object-name>activeMode</object-name>
+		  <object-name>needle1</object-name>
+		  <object-name>needle2</object-name>
+		  <object-name>needle3</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>btnStartStopOut</object-name>
+    <object-name>btnResetOut</object-name>
+    <object-name>btnStartStop</object-name>
+    <object-name>btnReset</object-name>
+    <object-name>btnMode</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+		</condition>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>		
+		<object-name>btnStartStopOut</object-name>
+    <object-name>btnResetOut</object-name>
+    <object-name>btnStartStop</object-name>
+    <object-name>btnReset</object-name>
+    <object-name>btnMode</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.5</red>
+		  <green>0.5</green>
+		  <blue>0.5</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation> 
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle1</object-name>
+    <property>/instrumentation/frw/flight-time/minutes</property>
+    <interpolation>
+      <entry><ind> 0</ind><dep> 0 </dep></entry>
+      <entry><ind>60</ind><dep>360</dep></entry>
+    </interpolation>
+    <center> 
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.190 </z-m>
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+    
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle2</object-name>
+    <property>/instrumentation/frw/flight-time/hours</property>
+    <interpolation>
+      <entry><ind> 0</ind><dep> 0 </dep></entry>
+      <entry><ind>60</ind><dep>360</dep></entry>
+    </interpolation>
+    <center>   
+      <x-m> 0 </x-m> 
+      <y-m> 0 </y-m>
+      <z-m>-0.190 </z-m>
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+    
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle3</object-name>
+    <property>/instrumentation/frw/flight-time/seconds</property>
+    <interpolation>
+      <entry><ind> 0</ind><dep> 0 </dep></entry>
+      <entry><ind>60</ind><dep>360</dep></entry>
+    </interpolation>
+    <center>  
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m>-0.190 </z-m>
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+   <!-- Start and Stop Button -->
+    <animation>
+      <type>select</type>
+      <object-name>btnStartStop</object-name>
+      <condition>
+        <not-equals>
+          <property>/instrumentation/frw/btn-mode</property>
+          <value>1</value>
+        </not-equals>
+      </condition>
+    </animation>
+
+   <animation>
+    <type>translate</type>
+    <object-name>btnStartStop</object-name>
+    <property>/instrumentation/frw/btn-start-stop</property>
+    <factor>0.002</factor>
+    <axis>
+     <x>0</x>
+     <y>-0.5</y>
+     <z>-0.5</z>
+    </axis>
+   </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>btnStartStop</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>/instrumentation/frw/btn-start-stop</property>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>/instrumentation/frw/btn-start-stop</property>
+          </binding>
+        </mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>b707.frw_start_stop()</script>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/sim/sound/switch2</property>
+        </binding>
+      </action>
+    </animation>
+   <!-- Reset - Button -->
+    <animation>
+      <type>select</type>
+      <object-name>btnReset</object-name>
+      <condition>
+        <not-equals>
+          <property>/instrumentation/frw/btn-mode</property>
+          <value>1</value>
+        </not-equals>
+      </condition>
+    </animation>
+
+   <animation>
+    <type>translate</type>
+    <object-name>btnReset</object-name>
+    <property>/instrumentation/frw/btn-reset</property>
+    <factor>0.002</factor>
+    <axis>
+     <x>0</x>
+     <y>0.5</y>
+     <z>-0.5</z>
+    </axis>
+   </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>btnReset</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>/instrumentation/frw/btn-reset</property>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>/instrumentation/frw/btn-reset</property>
+          </binding>
+        </mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>b707.frw_reset()</script>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/sim/sound/switch2</property>
+        </binding>
+      </action>
+    </animation>
+
+  <!-- Mode -Button -->
+   <animation>
+    <type>translate</type>
+    <object-name>btnMode</object-name>
+    <property>/instrumentation/frw/btn-mode</property>
+    <factor>0.002</factor>
+    <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>1</z>
+    </axis>
+   </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>activeMode</object-name>
+      <condition>
+        <equals>
+          <property>/instrumentation/frw/btn-mode</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>btnMode</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>/instrumentation/frw/btn-mode</property>
+        </binding>
+			  <binding>
+				  <command>nasal</command>
+				  <script>b707.frw_mode()</script>
+			  </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/sim/sound/switch2</property>
+        </binding>
+      </action>
+    </animation>
+
+    <!-- The two fake button start_stop and reset if btn-mode on -->    
+    <animation>
+      <type>select</type>
+      <object-name>btnStartStopOut</object-name>
+      <condition>
+        <equals>
+          <property>/instrumentation/frw/btn-mode</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    </animation>
+
+    <animation>
+      <type>select</type>
+      <object-name>btnResetOut</object-name>
+      <condition>
+        <equals>
+          <property>/instrumentation/frw/btn-mode</property>
+          <value>1</value>
+        </equals>
+      </condition>
+    </animation>
+
+    <!-- Click on the vitre showing the flighttime on the screen -->    
+    <animation>
+      <type>pick</type>
+      <object-name>vitre</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+			  <binding>
+				  <command>nasal</command>
+				  <script>b707.frw_show_time_on_screen()</script>
+			  </binding>
+      </action>
+    </animation>
+    
+</PropertyList>

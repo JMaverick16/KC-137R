@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+
+ <path>tat.ac</path>
+ 
+	<animation>
+		<type>material</type>
+      <object-name>t1</object-name>
+      <object-name>t10</object-name>
+      <object-name>t100</object-name>
+      <object-name>dec10</object-name>
+      <object-name>minus</object-name>
+      <object-name>off</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0.4</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+      <object-name>t1</object-name>
+      <object-name>t10</object-name>
+      <object-name>t100</object-name>
+      <object-name>dec10</object-name>
+      <object-name>minus</object-name>
+      <object-name>off</object-name>
+			<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.8</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>face</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>shadow</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+  
+	<animation>
+		<type>select</type>
+		<object-name>minus</object-name>
+		<object-name>dec-10</object-name>
+		<condition>		
+			<less-than-equals>
+				<property>/b707/anti-ice/total-air-temperature</property>
+				<value>0</value>
+			</less-than-equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>dec10</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/anti-ice/total-air-temperature</property>
+				<value>0</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>t100</object-name>
+		<condition>	
+		  <or>	
+				<less-than>
+					<property>/b707/anti-ice/total-air-temperature</property>
+					<value>-99.9</value>
+				</less-than>
+				<greater-than>
+					<property>/b707/anti-ice/total-air-temperature</property>
+					<value>99.9</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>off</object-name>
+		<condition>		
+			<less-than>
+				<property>/b707/ess-bus</property>
+				<value>22</value>
+			</less-than>
+		</condition>
+	</animation>
+  
+  <animation>
+      <type>textranslate</type>
+      <object-name>t100</object-name>
+         <property>/b707/anti-ice/total-air-temperature-digit</property>
+      <step>100</step>
+      <factor>0.001</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+  
+  <animation>
+      <type>textranslate</type>
+      <object-name>t10</object-name>
+              <property>/b707/anti-ice/total-air-temperature-digit</property>
+      <step>10</step>
+      <factor>0.01</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>textranslate</type>
+      <object-name>t1</object-name>
+              <property>/b707/anti-ice/total-air-temperature-digit</property>
+      <step>1</step>
+      <factor>0.1</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>textranslate</type>
+      <object-name>dec10</object-name>
+              <property>/b707/anti-ice/total-air-temperature</property>
+      <step>0.1</step>
+      <factor>1</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+      <type>textranslate</type>
+      <object-name>dec-10</object-name>
+              <property>/b707/anti-ice/total-air-temperature</property>
+      <step>0.1</step>
+      <factor>1</factor>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+  
+	<animation>
+			<type>pick</type>
+			<object-name>face</object-name>
+			<visible>true</visible>
+      <action>
+        <name>show tat info</name>
+        <button>0</button>
+      	<repeatable>true</repeatable>			
+        <binding>
+				  <command>nasal</command>
+				  <script>b707.show_tat()</script>
+				</binding>
+      </action>
+  </animation>
+
+
+</PropertyList>

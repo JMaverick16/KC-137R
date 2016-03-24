@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>windowHeat.ac</path>
+ 
+	<animation>
+		<type>material</type>
+		<object-name>sockle</object-name> 
+		<object-name>sockle.001</object-name> 
+		<object-name>sockleLamp</object-name>
+		<condition>			
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmber.001</object-name>
+		<object-name>switch</object-name> 
+		<object-name>switch.001</object-name>
+		<condition>			
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON</object-name>
+		<object-name>LampAmberON.001</object-name>
+		<emission>
+		  <red>   1.0 </red>
+		  <green> 0.8 </green>
+		  <blue>  0.4 </blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<and>
+					<property>/b707/anti-ice/window-heat-cap-switch</property>
+					<equals>
+						<property>/b707/anti-ice/window-alpha-capt</property>
+						<value>1</value>
+					</equals>
+					<greater-than>
+						<property>/b707/anti-ice/total-air-temperature</property>
+						<value>0</value>
+					</greater-than>
+				</and>
+		    <property>/controls/test/warn-knob</property>
+		    <property>/b707/anti-ice/window-cap-control</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.001</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		  	<and>
+					<property>/b707/anti-ice/window-heat-fo-switch</property>
+					<equals>
+						<property>/b707/anti-ice/window-alpha-fo</property>
+						<value>1</value>
+					</equals>
+					<greater-than>
+						<property>/b707/anti-ice/total-air-temperature</property>
+						<value>0</value>
+					</greater-than>
+				</and>
+		    <property>/controls/test/warn-knob</property>
+		    <property>/b707/anti-ice/window-fo-control</property>
+		  </or>
+		</condition>
+	</animation>
+	
+  <!-- captain window heat -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch</object-name>
+		  <property>/b707/anti-ice/window-heat-cap-switch</property>
+		 	<interpolation>
+				<entry><ind>  2.0</ind><dep> -50.0</dep></entry>
+				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep>  50.0</dep></entry>
+			</interpolation>  
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>-0.1157</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.001</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/anti-ice/window-heat-cap-switch") or 0;
+            	if(bt == 2){
+            		setprop("/b707/anti-ice/window-heat-cap-switch", 0);
+            	}else{
+            		setprop("/b707/anti-ice/window-heat-cap-switch", 2);
+		    				setprop("/b707/anti-ice/window-cap-control", 1);
+		    				settimer(func{setprop("/b707/anti-ice/window-cap-control", 0)}, 0.5);
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.002</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/anti-ice/window-heat-cap-switch") or 0;
+            	if(bt == 1){
+            		setprop("/b707/anti-ice/window-heat-cap-switch", 0);
+            	}else{
+            		setprop("/b707/anti-ice/window-heat-cap-switch", 1);
+		    				setprop("/b707/anti-ice/window-cap-control", 1);
+		    				settimer(func{setprop("/b707/anti-ice/window-cap-control", 0)}, 0.5);
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Flight Officer window heat -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.001</object-name>
+		  <property>/b707/anti-ice/window-heat-fo-switch</property>
+		 	<interpolation>
+				<entry><ind>  2.0</ind><dep> -50.0</dep></entry>
+				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep>  50.0</dep></entry>
+			</interpolation>  
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>-0.1157</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.003</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/anti-ice/window-heat-fo-switch") or 0;
+            	if(bt == 2){
+            		setprop("/b707/anti-ice/window-heat-fo-switch", 0);
+            	}else{
+            		setprop("/b707/anti-ice/window-heat-fo-switch", 2);
+		    				setprop("/b707/anti-ice/window-fo-control", 1);
+		    				settimer(func{setprop("/b707/anti-ice/window-fo-control", 0)}, 0.5);
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.004</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/anti-ice/window-heat-fo-switch") or 0;
+            	if(bt == 1){
+            		setprop("/b707/anti-ice/window-heat-fo-switch", 0);
+            	}else{
+            		setprop("/b707/anti-ice/window-heat-fo-switch", 1);
+		    				setprop("/b707/anti-ice/window-fo-control", 1);
+		    				settimer(func{setprop("/b707/anti-ice/window-fo-control", 0)}, 0.5);
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+  
+	
+</PropertyList>

@@ -1,0 +1,1017 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>emerYawAndMore.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>sockle</object-name> 
+		<object-name>sockle.001</object-name>
+		<object-name>sockle.002</object-name>
+		<object-name>sockle.003</object-name>
+		<object-name>sockle.004</object-name>
+		<object-name>sockle.005</object-name>
+		<object-name>sockle.006</object-name>
+		<object-name>sockle.007</object-name>
+		<object-name>sockle.008</object-name>
+		<object-name>sockle.009</object-name>
+		<object-name>sockle.010</object-name>
+		<object-name>sockleLamp</object-name> 
+		<object-name>cover</object-name> 
+		<object-name>cover.001</object-name> 
+		<object-name>cover.002</object-name> 
+		<object-name>cover.003</object-name> 
+		<object-name>cover.004</object-name> 
+		<object-name>knob</object-name>
+		<object-name>knob.001</object-name>
+		<object-name>knob.002</object-name>
+		<object-name>knobsup</object-name>
+		<object-name>knobsup.001</object-name>
+		<object-name>knobsup.002</object-name>
+		<object-name>bracket</object-name>
+		<object-name>bracket.001</object-name>
+		<condition>	
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmber.001</object-name>
+		<object-name>LampAmber.002</object-name>
+		<object-name>LampGreen</object-name>
+		<object-name>switch</object-name> 
+		<object-name>switch.001</object-name>
+		<object-name>switch.002</object-name>
+		<object-name>switch.003</object-name>
+		<object-name>switch.004</object-name>
+		<object-name>switch.005</object-name>
+		<object-name>switch.006</object-name>
+		<object-name>switch.007</object-name>
+		<object-name>switch.008</object-name>
+		<object-name>switch.009</object-name>
+		<object-name>switch.010</object-name>
+		<condition>			
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON</object-name>
+		<object-name>LampAmberON.001</object-name>
+		<object-name>LampAmberON.002</object-name>
+		<emission>
+		  <red>   1.0 </red>
+		  <green> 0.8 </green>
+		  <blue>  0.4 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampGreenON</object-name>
+		<emission>
+		  <red>   0 </red>
+		  <green> 1.0 </green>
+		  <blue>  0 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampGreenON</object-name>
+		<condition>		
+		  <and>
+				<greater-than>
+					<property>/b707/ess-bus</property>
+					<value>20</value>
+				</greater-than>
+				<or>
+					<property>/autopilot/internal/yaw-damper</property>
+		    	<property>/controls/test/warn-knob</property>
+		    </or>
+		  </and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+				<property>/b707/emergency/oxygen-valve[0]</property>
+				<not><property>/b707/emergency/oxygen-switch</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.001</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+				<property>/b707/emergency/oxygen-valve[1]</property>
+				<not><property>/b707/emergency/oxygen-switch</property></not>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON.002</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+				<property>/b707/call/cabin-attend</property>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+	
+  <!-- Oxygen regulation -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch</object-name>
+		  <property>/b707/emergency/oxygen-switch</property>
+		 	<interpolation>
+				<entry><ind>  2.0</ind><dep> -50.0</dep></entry>
+				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep>  50.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.001</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/emergency/oxygen-switch") or 0;
+            	if(bt == 2){
+            		setprop("/b707/emergency/oxygen-switch", 0);
+            	}else{
+            		setprop("/b707/emergency/oxygen-switch", 2);
+            	}
+            	setprop("/b707/emergency/oxygen-valve[0]", 1);
+            	settimer( func { setprop("/b707/emergency/oxygen-valve[0]", 0)}, 1.0);
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.002</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/emergency/oxygen-switch") or 0;
+            	if(bt == 1){
+            		setprop("/b707/emergency/oxygen-switch", 0);
+            	}else{
+            		setprop("/b707/emergency/oxygen-switch", 1);
+            	}
+            	setprop("/b707/emergency/oxygen-valve[1]", 1);
+            	settimer( func { setprop("/b707/emergency/oxygen-valve[1]", 0)}, 1.0);
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- NO SMOKING and SEAT BELTS lights -->
+  <animation>
+      <type>rotate</type>
+      <object-name>switch.001</object-name>
+      <property>/b707/call/no-smoking</property>
+      <factor>50</factor>
+      <axis>
+       <x>0</x>
+       <y>1</y>
+       <z>0</z>
+      </axis>
+      <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m>-0.056</z-m>
+      </center>  
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>switch.001</object-name>
+      <object-name>sockle.001</object-name>		
+      <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+            <command>property-toggle</command>
+            <property>/b707/call/no-smoking</property>
+          </binding>		
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch2</property>
+          </binding>		
+      </action>
+  </animation>	
+	
+  <animation>
+      <type>rotate</type>
+      <object-name>switch.002</object-name>
+      <property>/b707/call/seat-belts</property>
+      <factor>50</factor>
+      <axis>
+       <x>0</x>
+       <y>1</y>
+       <z>0</z>
+      </axis>
+      <center>
+      <x-m> 0.0</x-m>
+      <y-m> 0.0</y-m>
+      <z-m>-0.056</z-m>
+      </center>  
+  </animation>
+
+  <animation>
+      <type>pick</type>
+      <object-name>switch.002</object-name>
+      <object-name>sockle.002</object-name>		
+      <action>
+          <button>0</button>
+          <repeatable>false</repeatable>
+          <binding>
+            <command>property-toggle</command>
+            <property>/b707/call/seat-belts</property>
+          </binding>		
+          <binding>
+            <command>property-toggle</command>
+            <property>/sim/sound/switch2</property>
+          </binding>		
+      </action>
+  </animation>		
+	
+  <!-- Crew and cabin call -->
+  <animation>
+      <type>translate</type>
+      <object-name>knob</object-name>
+      <property>/b707/call/crew-call</property>
+      <factor>-0.0030</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob</object-name>
+    <object-name>knobsup</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/call/crew-call</property>  
+          <value type="double">1</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/call/crew-call</property>  
+          <value type="double">0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+  <animation>
+      <type>translate</type>
+      <object-name>knob.001</object-name>
+      <property>/b707/call/pers-accom</property>
+      <factor>-0.0030</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis> 
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob.001</object-name>
+    <object-name>knobsup.001</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/call/pers-accom</property>  
+          <value type="double">1</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/call/pers-accom</property>  
+          <value type="double">0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+      <type>translate</type>
+      <object-name>knob.002</object-name>
+      <property>/b707/call/cabin-attend</property>
+      <factor>-0.0030</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis> 
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>knob.002</object-name>
+    <object-name>knobsup.002</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/call/cabin-attend</property>  
+          <value type="double">1</value>
+        </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/b707/call/cabin-attend</property>  
+          <value type="double">0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+	<!-- EXIT-LIGHTS -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover</object-name>
+    <property>/b707/emergency/exit-lights-cover</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>70.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 0</x>
+     <y> 1</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m> 0.0</y-m>
+    <z-m>-0.133</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/emergency/exit-lights-cover</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+  <!-- EXIT-LIGHTS -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.003</object-name>
+		  <property>/b707/emergency/exit-lights</property>
+		 	<interpolation>
+				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep> 50.0</dep></entry>
+				<entry><ind>  2.0</ind><dep>100.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>-0.0012</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m>-0.115</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.003</object-name>
+		  <object-name>sockle.003</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+		      <command>property-adjust</command>
+		      <property>/b707/emergency/exit-lights</property>
+		      <step>1</step>
+		      <min>0</min>
+		      <max>3</max>
+		      <wrap>true</wrap>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- Yaw Damper -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.004</object-name>
+		  <property>/autopilot/internal/yaw-damper</property>
+		 	<interpolation>
+				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep> 90.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>-0.0012</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m>-0.194</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.004</object-name>
+		  <object-name>sockle.004</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+		      <command>property-toggle</command>
+		      <property>/autopilot/internal/yaw-damper</property>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- EMERCENCY FLAP -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover.001</object-name>
+    <property>/b707/emergency/emer-flap-cover</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>70.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 0</x>
+     <y> 1</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m> 0.0</y-m>
+    <z-m> 0.211</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover.001</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/emergency/emer-flap-cover</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.005</object-name>
+		  <property>/b707/emergency/emer-flap-switch</property>
+		 	<interpolation>
+				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep> 80.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.229</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.005</object-name>
+		  <object-name>sockle.005</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+		      <command>property-toggle</command>
+		      <property>/b707/emergency/emer-flap-switch</property>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>	
+	
+	<!-- Emer Flap Inbd -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.006</object-name>
+		  <property>/b707/emergency/emer-flap-inbd</property>
+		 	<interpolation>
+				<entry><ind>  2.0</ind><dep>-50.0</dep></entry>
+				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep> 50.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.228</z-m>
+		  </center>  
+	</animation>
+	
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.003</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/emergency/emer-flap-inbd") or 0;
+            	if(bt == 2){
+            		setprop("/b707/emergency/emer-flap-inbd", 0);
+            	}else{
+            		setprop("/b707/emergency/emer-flap-inbd", 2);
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.004</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/emergency/emer-flap-inbd") or 0;
+            	if(bt == 1){
+            		setprop("/b707/emergency/emer-flap-inbd", 0);
+            	}else{
+            		setprop("/b707/emergency/emer-flap-inbd", 1);
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	
+	<!-- Emer Flap Outbd -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.007</object-name>
+		  <property>/b707/emergency/emer-flap-outbd</property>
+		 	<interpolation>
+				<entry><ind>  2.0</ind><dep>-50.0</dep></entry>
+				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep> 50.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.228</z-m>
+		  </center>  
+	</animation>
+	
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.005</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/emergency/emer-flap-outbd") or 0;
+            	if(bt == 2){
+            		setprop("/b707/emergency/emer-flap-outbd", 0);
+            	}else{
+            		setprop("/b707/emergency/emer-flap-outbd", 2);
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>plane.006</object-name>
+		  <visible>false</visible>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+            <command>nasal</command>
+            <script>
+            	var bt = getprop("/b707/emergency/emer-flap-outbd") or 0;
+            	if(bt == 1){
+            		setprop("/b707/emergency/emer-flap-outbd", 0);
+            	}else{
+            		setprop("/b707/emergency/emer-flap-outbd", 1);
+            	}
+            </script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- RUDDER HYDRAULIC -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover.004</object-name>
+    <property>/b707/hydraulic/rudder-cover</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 0</x>
+     <y> 0</y>
+     <z> 1</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m>-0.217</y-m>
+    <z-m> 0.0</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover.004</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/rudder-cover</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.010</object-name>
+		  <property>/b707/hydraulic/rudder-switch</property>
+		 	<interpolation>
+				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep>-80.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>0</y>
+		   <z>1</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m>-0.236</y-m>
+		  <z-m> 0.0</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.010</object-name>
+		  <object-name>sockle.010</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+		      <command>property-toggle</command>
+		      <property>/b707/hydraulic/rudder-switch</property>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- SPOILER HYDRAULIC 1 -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover.003</object-name>
+    <property>/b707/hydraulic/spoiler-cover[0]</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>70.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 0</x>
+     <y> 1</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m> 0.0</y-m>
+    <z-m> 0.147</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover.003</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/spoiler-cover[0]</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.009</object-name>
+		  <property>/b707/hydraulic/spoiler-switch[0]</property>
+		 	<interpolation>
+				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep> 80.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.164</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.009</object-name>
+		  <object-name>sockle.009</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+		      <command>property-toggle</command>
+		      <property>/b707/hydraulic/spoiler-switch[0]</property>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+	<!-- SPOILER HYDRAULIC 2 -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cover.002</object-name>
+    <property>/b707/hydraulic/spoiler-cover[1]</property>
+    <interpolation> 
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>70.0</dep>
+            </entry>		
+        </interpolation>
+    <axis>
+     <x> 0</x>
+     <y> 1</y>
+     <z> 0</z>
+    </axis>
+    <center>
+    <x-m> 0.0</x-m>
+    <y-m> 0.0</y-m>
+    <z-m> 0.147</z-m>
+    </center>  
+  </animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>cover.002</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/hydraulic/spoiler-cover[1]</property>
+		    </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch3</property>
+		    </binding>
+		  </action>
+	</animation>
+
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch.008</object-name>
+		  <property>/b707/hydraulic/spoiler-switch[1]</property>
+		 	<interpolation>
+				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+				<entry><ind>  1.0</ind><dep> 80.0</dep></entry>
+			</interpolation> 
+		  <axis>
+		   <x>0</x>
+		   <y>1</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.164</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch.008</object-name>
+		  <object-name>sockle.008</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+        <binding>
+		      <command>property-toggle</command>
+		      <property>/b707/hydraulic/spoiler-switch[1]</property>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+	
+</PropertyList>

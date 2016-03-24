@@ -1,0 +1,949 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<!-- For the Boeing 707 from M.Kraus :: Lake of Constance Hangar   -->
+
+<PropertyList>
+
+<path>lights.ac</path>
+
+<!-- No preview for fgrun-->
+<animation>
+	<object-name>BeaconVolume_1</object-name>
+	<object-name>BeaconVolume_2</object-name>	
+	<object-name>NavLightVolume_left</object-name>
+	<object-name>NavLightVolume_right</object-name>
+	<object-name>NavLightBackVolume</object-name>
+  <object-name>LightBeaconGlow</object-name>	
+  <object-name>LightTaxiGlowH</object-name>
+  <object-name>LightTaxiGlowH.001</object-name>
+  <object-name>LightTaxiGlowH.002</object-name>
+  <object-name>LightTailGlow</object-name>
+  <object-name>LightNavGlowL</object-name>
+  <object-name>LightNavGlowR</object-name>
+	<object-name>LightVolume</object-name>
+	<object-name>LightVolume.001</object-name>
+	<object-name>LightVolume.002</object-name>
+  <object-name>Cone-texture</object-name>
+  <object-name>Cone-texture.001</object-name>
+  <object-name>Cone-texture.002</object-name>
+  <object-name>Strobes</object-name>
+  <object-name>Spot</object-name>
+  <object-name>Spot.001</object-name>
+ 	<object-name>Spot.002</object-name>
+  <object-name>lightconeRudderL</object-name>
+ 	<object-name>lightconeRudderR</object-name>	
+	<nopreview/>
+</animation>
+
+<!-- Special Shaders -->
+
+<animation>
+  <type>noshadow</type>
+  <object-name>BeaconL</object-name>
+  <object-name>BeaconU</object-name>
+  <object-name>BeaconLOn</object-name>
+  <object-name>BeaconUOn</object-name>
+  <object-name>TailLight</object-name>
+  <object-name>TailLampL</object-name>
+  <object-name>TailLampLOn</object-name>
+  <object-name>TailLampU</object-name>
+  <object-name>WingtipL</object-name>
+  <object-name>WingtipR</object-name>
+  <object-name>WingtipLampL</object-name>
+  <object-name>WingtipLampR</object-name>
+  <object-name>WingtipLampLOn</object-name>
+  <object-name>WingtipLampROn</object-name>
+  <object-name>LightTaxiGlowH</object-name>
+  <object-name>LightTaxiGlowH.001</object-name>
+  <object-name>LightTaxiGlowH.002</object-name>
+  <object-name>LightTailGlow</object-name>
+  <object-name>LightNavGlowL</object-name>
+  <object-name>LightNavGlowR</object-name>		
+  <object-name>Cone-texture</object-name>	
+  <object-name>Cone-texture.001</object-name>
+  <object-name>Cone-texture.002</object-name>
+  <object-name>Spot</object-name>
+  <object-name>Spot.001</object-name>
+ 	<object-name>Spot.002</object-name>	
+	<object-name>NavLightBackVolume</object-name>
+	<object-name>NavLightVolume_right</object-name>
+	<object-name>NavLightVolume_left</object-name>
+	<object-name>BeaconVolume_1</object-name>
+	<object-name>BeaconVolume_2</object-name>
+	<object-name>LightVolume</object-name>
+	<object-name>LightVolume.001</object-name>
+	<object-name>LightVolume.002</object-name>
+	<object-name>LightBall</object-name>
+  <object-name>Strobes</object-name>
+  <object-name>CabinWindows</object-name>	
+  <object-name>CargoWindows</object-name>
+  <object-name>CabinWindowsDoorF</object-name>
+  <object-name>CabinWindowsDoorR</object-name>
+  <object-name>lightconeRudderL</object-name>
+ 	<object-name>lightconeRudderR</object-name>
+</animation>
+
+<!-- working for Rembrandt -->
+<effect>
+	<inherits-from>Effects/model-transparent</inherits-from>
+  <object-name>BeaconL</object-name>
+  <object-name>BeaconU</object-name>
+  <object-name>BeaconLOn</object-name>
+  <object-name>BeaconUOn</object-name>
+  <object-name>TailLight</object-name>
+  <object-name>TailLampL</object-name>
+  <object-name>TailLampLOn</object-name>
+  <object-name>TailLampU</object-name>
+  <object-name>WingtipL</object-name>
+  <object-name>WingtipR</object-name>
+  <object-name>WingtipLampL</object-name>
+  <object-name>WingtipLampR</object-name>
+  <object-name>WingtipLampLOn</object-name>
+  <object-name>WingtipLampROn</object-name>
+  <object-name>LightTaxiGlowH</object-name>
+  <object-name>LightTaxiGlowH.001</object-name>
+  <object-name>LightTaxiGlowH.002</object-name>
+  <object-name>LightTailGlow</object-name>
+  <object-name>LightNavGlowL</object-name>
+  <object-name>LightNavGlowR</object-name>
+	<object-name>Cone-texture</object-name>
+  <object-name>Cone-texture.001</object-name>
+  <object-name>Cone-texture.002</object-name>
+  <object-name>Spot</object-name>
+  <object-name>Spot.001</object-name>
+ 	<object-name>Spot.002</object-name>	
+  <object-name>Strobes</object-name>
+  <object-name>CabinWindows</object-name>
+  <object-name>CargoWindows</object-name>
+  <object-name>CabinWindowsDoorF</object-name>
+  <object-name>CabinWindowsDoorR</object-name>
+  <object-name>lightconeRudderL</object-name>
+ 	<object-name>lightconeRudderR</object-name>		
+</effect>
+
+<!-- Landing and Search Light fake cone - disable in rembrand  -->
+	<animation>
+	<type>select</type>
+		<object-name>Cone-texture</object-name>
+		<condition>
+			<and>
+				<property>sim/multiplay/generic/int[0]</property>
+				<property>gear/gear[0]/position-norm</property>
+		          <greater-than>
+		            <property>sim/multiplay/generic/float[8]</property>
+		            <value>15</value>
+		          </greater-than>	
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+	<type>select</type>
+  	<object-name>Cone-texture.001</object-name>
+ 		<object-name>Cone-texture.002</object-name>
+		<condition>
+			<and>
+				<property>sim/multiplay/generic/int[1]</property>
+		          <greater-than>
+		            <property>sim/multiplay/generic/float[8]</property>
+		            <value>15</value>
+		          </greater-than>	
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+	<type>select</type>
+		<object-name>Spot</object-name>
+		<condition>
+			<and>
+				<not>
+					<property>/sim/rendering/rembrandt/enabled</property>
+				</not>
+				<property>sim/multiplay/generic/int[0]</property>
+				<property>gear/gear[0]/position-norm</property>	     
+				  <less-than>
+		            <property>sim/multiplay/generic/float[8]</property>
+		            <value>15</value>
+		          </less-than>
+		          <greater-than>
+		            <property>sim/multiplay/generic/float[8]</property>
+		            <value>0</value>
+		          </greater-than>			
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+	<type>select</type>
+  	<object-name>Spot.001</object-name>
+ 	<object-name>Spot.002</object-name>
+		<condition>
+			<and>
+				<not>
+					<property>/sim/rendering/rembrandt/enabled</property>
+				</not>
+				<property>sim/multiplay/generic/int[1]</property>	          
+				  <less-than>
+		            <property>sim/multiplay/generic/float[8]</property>
+		            <value>15</value>
+		          </less-than>
+		          <greater-than>
+		            <property>sim/multiplay/generic/float[8]</property>
+		            <value>0</value>
+		          </greater-than>
+			</and>
+		</condition>
+	</animation>
+
+<!-- Animations -->
+<animation>
+	<type>select</type>
+	<object-name>CabinWindowsDoorF</object-name>
+	<condition>
+		<property>sim/multiplay/generic/float[0]</property>
+		<not><property>sim/multiplay/generic/float[6]</property></not>
+		<not><property>sim/multiplay/generic/int[19]</property></not>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>CabinWindowsDoorR</object-name>
+	<condition>
+		<property>sim/multiplay/generic/float[0]</property>
+		<not><property>sim/multiplay/generic/float[7]</property></not>
+		<not><property>sim/multiplay/generic/int[19]</property></not>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>CabinWindows</object-name>
+	<condition>
+		<property>sim/multiplay/generic/float[0]</property>
+		<not><property>sim/multiplay/generic/int[9]</property></not>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>CargoWindows</object-name>
+	<condition>
+		<property>sim/multiplay/generic/float[0]</property>
+		<property>sim/multiplay/generic/int[9]</property>
+	</condition>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>CabinWindows</object-name>
+  <object-name>CargoWindows</object-name>
+	<object-name>CabinWindowsDoorF</object-name>
+	<object-name>CabinWindowsDoorR</object-name>
+  <emission>
+    <red>0.4</red>
+    <green>0.4</green>
+    <blue>0.3</blue>
+    <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+  </emission>
+</animation>
+	
+<!-- Rembrand - Position strobe red top / bottom -->
+<animation>
+	<type>select</type>
+	<object-name>BeaconVolume_1</object-name>
+	<object-name>BeaconVolume_2</object-name>
+	<condition>
+		<and>
+			<property>/sim/rendering/rembrandt/enabled</property>
+	    <property>sim/multiplay/generic/int[3]</property>
+	    <property>sim/multiplay/generic/int[4]</property>
+		</and>
+	</condition>
+</animation>
+	
+
+<animation>
+  <type>select</type>
+  <object-name>LightBeaconGlow</object-name>
+  <condition>
+    <and>
+    	<not><property>/sim/rendering/rembrandt/enabled</property></not>
+	    <property>sim/multiplay/generic/int[3]</property>
+	    <property>sim/multiplay/generic/int[4]</property>
+    </and>
+  </condition>
+</animation>
+
+<animation>
+	<type>material</type>
+  <object-name>BeaconLOn</object-name>
+  <object-name>BeaconUOn</object-name>
+	<condition>
+	    <property>sim/multiplay/generic/int[3]</property>
+	    <property>sim/multiplay/generic/int[4]</property>
+	</condition>
+	<emission>
+		<red>1.0</red>
+		<green>1.0</green>
+		<blue>1.0</blue>
+	</emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>BeaconLOn</object-name>
+  <object-name>BeaconUOn</object-name>
+  <condition>
+    <and>
+	    <property>sim/multiplay/generic/int[3]</property>
+	    <property>sim/multiplay/generic/int[4]</property>
+    </and>
+  </condition>
+</animation>
+
+<animation>
+	<type>material</type>
+  <object-name>Strobes</object-name>
+	<condition>
+	    <property>sim/multiplay/generic/int[3]</property>
+	    <property>sim/multiplay/generic/int[5]</property>
+	</condition>
+	<emission>
+		<red>1.0</red>
+		<green>1.0</green>
+		<blue>1.0</blue>
+	</emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Strobes</object-name>
+  <condition>
+    <and>
+	    <property>sim/multiplay/generic/int[3]</property>
+	    <property>sim/multiplay/generic/int[5]</property>
+    </and>
+  </condition>
+</animation>
+
+<!--  Rembrand - Nav light - Left, Right, Tail -->
+<animation>
+	<type>select</type>
+	<object-name>NavLightVolume_right</object-name>
+	<object-name>NavLightVolume_left</object-name>
+	<condition>
+		<and>
+			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/multiplay/generic/int[3]</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>WingtipLampLOn</object-name>
+  <object-name>WingtipLampROn</object-name>
+  <condition>
+    <property>sim/multiplay/generic/int[3]</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>WingtipLampL</object-name>
+  <object-name>WingtipLampR</object-name>
+  <condition>
+    <not><property>sim/multiplay/generic/int[3]</property></not>
+  </condition>
+</animation>
+
+
+<!-- Left (red) nav light -->
+
+<animation>
+  <type>select</type>
+  <object-name>LightNavGlowL</object-name>
+  <condition>
+    <property>sim/multiplay/generic/int[3]</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>flash</type>
+  <object-name>LightNavGlowL</object-name>
+  <center>
+   <x-m> 10.79</x-m>
+   <y-m>-21.04</y-m>
+   <z-m> 5.52</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>22</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+<!-- Right (green) nav light -->
+
+<animation>
+  <type>select</type>
+  <object-name>LightNavGlowR</object-name>
+  <condition>
+    <property>sim/multiplay/generic/int[3]</property>
+  </condition>
+</animation>
+
+<animation>
+  <type>flash</type>
+  <object-name>LightNavGlowR</object-name>
+  <center>
+   <x-m>10.79</x-m>
+   <y-m>21.04</y-m>
+   <z-m> 5.52</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+  <power>4</power>
+  <factor>1</factor>
+  <offset>22</offset>
+  <two-sides type="bool">false</two-sides>
+  <min>0.01</min>
+  <max>1</max>
+</animation>
+
+
+<!-- Tail Light -->
+<!--  Rembrand - Nav light - Left, Right, Tail -->
+<animation>
+	<type>select</type>
+	<object-name>NavLightBackVolume</object-name>
+	<condition>
+		<and>
+			<property>sim/rendering/rembrandt/enabled</property>
+			<property>sim/multiplay/generic/int[2]</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LightTailGlow</object-name>
+  <condition>
+    <property>sim/multiplay/generic/int[2]</property>
+  </condition>
+</animation>
+
+<!--  Rembrand  -->
+<animation>
+	<type>select</type>
+	<object-name>LightVolume</object-name>
+	<condition>
+		<and>
+			<property>sim/rendering/rembrandt/enabled</property>
+		  <property>sim/multiplay/generic/int[0]</property>
+		  <property>gear/gear[0]/position-norm</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>LightTaxiGlowH</object-name>
+	<condition>
+		<and>
+		  <property>sim/multiplay/generic/int[0]</property>
+		  <property>gear/gear[0]/position-norm</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>LightTaxiGlowH.001</object-name>
+	<condition>
+		<and>
+		  <property>sim/multiplay/generic/int[1]</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>LightTaxiGlowH.002</object-name>
+	<condition>
+		<and>
+		  <property>sim/multiplay/generic/int[1]</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>LightVolume.001</object-name>
+	<condition>
+		<and>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		  <property>sim/multiplay/generic/int[1]</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>LightVolume.002</object-name>
+	<condition>
+		<and>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		  <property>sim/multiplay/generic/int[1]</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+  <object-name>lightconeRudderL</object-name>
+	<condition>
+		<and>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		  <property>sim/multiplay/generic/int[7]</property>
+		</and>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+  <object-name>lightconeRudderR</object-name>
+	<condition>
+		<and>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		  <property>sim/multiplay/generic/int[7]</property>
+		</and>
+	</condition>
+</animation>
+
+<!-- Rembrand lights -->
+	<!-- Nav light back -->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>NavLightBack</name>
+		<object-name>NavLightBackVolume</object-name>
+		<position>
+			<x>26.51</x>
+			<y>0.000</y>
+			<z>-1.25</z>
+		</position>
+		<direction>
+			<x> 1.0</x>
+			<y> 0.0</y>
+			<z> 0.0</z>
+		</direction>
+		<ambient>
+			<r>0.99</r>
+			<g>0.99</g>
+			<b>0.96</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.99</r>
+			<g>0.99</g>
+			<b>0.96</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.99</r>
+			<g>0.99</g>
+			<b>0.96</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.0</l>
+			<q>0.75</q>
+		</attenuation>
+		<exponent>3</exponent>
+		<near-m>0.01</near-m>
+		<far-m>36</far-m>
+		<cutoff>150</cutoff>
+	</animation>
+	
+	<!-- Nav light left -->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>NavLightLeft</name>
+		<object-name>NavLightVolume_left</object-name>
+		<position>
+			<x>0.07</x>
+			<y>-24.88</y>
+			<z>1.48</z>
+		</position>
+		<direction>
+			<x> 0.0</x>
+			<y>-1.0</y>
+			<z> 0.0</z>
+		</direction>
+		<ambient>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.0</l>
+			<q>0.75</q>
+		</attenuation>
+		<exponent>3</exponent>
+		<near-m>0.01</near-m>
+		<far-m>18</far-m>
+		<cutoff>150</cutoff>
+	</animation>
+	
+	<!-- Nav light right -->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>NavLightRight</name>
+		<object-name>NavLightVolume_right</object-name>
+		<position>
+			<x>0.07</x>
+			<y>24.88</y>
+			<z>1.48</z>
+		</position>
+		<direction>
+			<x> 0.0</x>
+			<y>1.0</y>
+			<z> 0.0</z>
+		</direction>
+		<ambient>
+			<r>0.0</r>
+			<g>0.99</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.9</r>
+			<g>0.99</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.0</r>
+			<g>0.99</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.0</l>
+			<q>0.75</q>
+		</attenuation>
+		<exponent>3</exponent>
+		<near-m>0.01</near-m>
+		<far-m>18</far-m>
+		<cutoff>150</cutoff>
+	</animation>
+	
+	<!-- Taxi light -->
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>Landinglight</name>
+		<object-name>LightVolume</object-name>
+		<position>
+			<x>-15.6</x>
+			<y> 0.0</y>
+			<z>-1.11</z>
+		</position>
+		<direction>
+			<x>-600.0</x>
+			<y>   0.0</y>
+			<z>   0.0</z>
+		</direction>
+		<diffuse>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.002</l>
+			<q>0.00005</q>
+		</attenuation>
+		<exponent>40</exponent>
+		<near-m>0.05</near-m>
+		<far-m>450</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+	
+	<!-- Logo light -->
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>LogoLight</name>
+		<object-name>lightconeRudderL</object-name>
+		<position>
+			<x>21.19</x>
+			<y>-2.69</y>
+			<z> 1.79</z>
+		</position>
+		<direction>
+			<x>-0.3</x>
+			<y> 1.0</y>
+			<z> 1.0</z>
+		</direction>
+		<diffuse>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.002</l>
+			<q>0.00005</q>
+		</attenuation>
+		<exponent>1</exponent>
+		<near-m>0.01</near-m>
+		<far-m>10</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+	
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>LogoLight</name>
+		<object-name>lightconeRudderR</object-name>
+		<position>
+			<x>21.19</x>
+			<y> 2.69</y>
+			<z> 1.79</z>
+		</position>
+		<direction>
+			<x>-0.3</x>
+			<y>-1.0</y>
+			<z> 1.0</z>
+		</direction>
+		<diffuse>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.002</l>
+			<q>0.00005</q>
+		</attenuation>
+		<exponent>1</exponent>
+		<near-m>0.01</near-m>
+		<far-m>10</far-m>
+		<cutoff>40</cutoff>
+	</animation>	
+	
+	<!-- Landing light right-->
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>LandinglightRight</name>
+		<object-name>LightVolume.001</object-name>
+		<position>
+			<x>-10.0</x>
+			<y> 3.92</y>
+			<z>-0.68</z>
+		</position>
+		<direction>
+			<x>-1.0</x>
+			<y> 0.0</y>
+			<z> 0.0</z>
+		</direction>
+		<diffuse>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.002</l>
+			<q>0.00005</q>
+		</attenuation>
+		<exponent>40</exponent>
+		<near-m>0.05</near-m>
+		<far-m>450</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+	
+	<!-- Landing light left-->
+	<animation>
+		<type>light</type>
+		<light-type>spot</light-type>
+		<name>LandinglightLeft</name>
+		<object-name>LightVolume.002</object-name>
+		<position>
+			<x>-10.0</x>
+			<y>-3.92</y>
+			<z>-0.68</z>
+		</position>
+		<direction>
+			<x>-1.0</x>
+			<y> 0.0</y>
+			<z> 0.0</z>
+		</direction>
+		<diffuse>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>1.0</r>
+			<g>1.0</g>
+			<b>1.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.002</l>
+			<q>0.00005</q>
+		</attenuation>
+		<exponent>40</exponent>
+		<near-m>0.05</near-m>
+		<far-m>450</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+	
+		<!-- beacon red top -->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>Beacon_top</name>
+		<object-name>BeaconVolume_1</object-name>
+		<position>
+			<x> -0.65</x>
+			<y>  0.0</y>
+			<z>  2.73</z>
+		</position>
+		<ambient>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.7</l>
+			<q>8</q>
+		</attenuation>
+		<near-m>0.01</near-m>
+		<far-m>10</far-m>
+	</animation>
+	
+	<!-- beacon red bottom -->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>Beacon_bottom</name>
+		<object-name>BeaconVolume_2</object-name>
+		<position>
+			<x>-0.94</x>
+			<y> 0.0</y>
+			<z>-1.76</z>
+		</position>
+		<ambient>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.7</l>
+			<q>8</q>
+		</attenuation>
+		<near-m>0.01</near-m>
+		<far-m>10</far-m>
+	</animation>
+
+
+</PropertyList>
+

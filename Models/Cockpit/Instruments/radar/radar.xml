@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+	<path>radar.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>bg</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>1</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+  		<object-name>sup</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+			<object-name>KnobRange</object-name>
+			<object-name>KnobOnOff</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+		</condition>
+		<emission>
+			<red>0.3</red>
+			<green>0.3</green>
+			<blue>0.3</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+			<object-name>KnobRange</object-name>
+			<object-name>KnobOnOff</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.6</red>
+		  <green>0.6</green>
+		  <blue>0.6</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>radarblade</object-name>
+		<object-name>bg</object-name>
+		<condition>
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+			<property>/instrumentation/mptcas/on</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bg.001</object-name>
+		<condition>
+			<or>
+				<less-than>
+					<property>/b707/ess-bus</property>
+					<value>20</value>
+				</less-than>
+				<not><property>/instrumentation/mptcas/on</property></not>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>radarblade</object-name>
+		<property>/sim/time/elapsed-sec</property>
+		<factor>40</factor>
+		<center>
+			<x-m> 0.0</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>noshadow</type>
+		<object-name>radarblade</object-name>
+		<object-name>cover</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>radarblade</object-name>
+		<object-name>cover</object-name>
+	</effect>
+	
+	<!-- the knob animations -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>KnobOnOff</object-name>
+		<property>/instrumentation/mptcas/on</property>
+		<factor>-90</factor>
+		<center>
+			<x-m> 0.0</x-m>
+			<y-m> 0.0521</y-m>
+			<z-m>-0.0536</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>KnobOnOff</object-name>
+		<visible>true</visible>
+		<action>
+			<name>show info</name>
+			<button>0</button>
+			<repeatable>true</repeatable>			
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/mptcas/on</property>
+			</binding>
+		  <binding>
+				<command>property-toggle</command>
+				<property>/sim/sound/switch1</property>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>KnobRange</object-name>
+		<property>/instrumentation/mptcas/display-factor</property>
+		<factor>180</factor>
+		<center>
+			<x-m> 0.0</x-m>
+			<y-m>-0.0509</y-m>
+			<z-m>-0.0536</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>KnobRange</object-name>
+		<visible>true</visible>
+		<action>
+			<name>calibrate fine dec</name>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>	          
+				<condition>
+		            <not><property>devices/status/keyboard/shift</property></not>
+		            <not><property>devices/status/keyboard/super</property></not>
+		        </condition>
+				<command>property-adjust</command>
+				<property>/instrumentation/mptcas/display-factor</property>
+				<step>-0.01</step>
+				<min>0.03</min>
+				<max>0.62</max>
+				<wrap>false</wrap>
+			</binding>
+			<binding>	          
+				<condition>
+		            <or>
+						<property>devices/status/keyboard/shift</property>
+						<property>devices/status/keyboard/super</property>
+					</or>
+		        </condition>
+				<command>property-adjust</command>
+				<property>/instrumentation/mptcas/display-factor</property>
+				<step>-0.1</step>
+				<min>0.03</min>
+				<max>0.62</max>
+				<wrap>false</wrap>
+			</binding>
+		  	<binding>
+				<command>property-toggle</command>
+				<property>/sim/sound/switch3</property>
+			</binding>
+		</action>
+		<action>
+			<name>calibrate fine inc</name>
+			<button>1</button>
+		<repeatable>true</repeatable>
+			<binding>	          
+				<condition>
+		            <not><property>devices/status/keyboard/shift</property></not>
+		            <not><property>devices/status/keyboard/super</property></not>
+		        </condition>
+				<command>property-adjust</command>
+				<property>/instrumentation/mptcas/display-factor</property>
+				<step>0.01</step>
+				<min>0.03</min>
+				<max>0.62</max>
+				<wrap>false</wrap>
+			</binding>
+			<binding>	          
+				<condition>
+		            <or>
+						<property>devices/status/keyboard/shift</property>
+						<property>devices/status/keyboard/super</property>
+					</or>
+		        </condition>
+				<command>property-adjust</command>
+				<property>/instrumentation/mptcas/display-factor</property>
+				<step>0.1</step>
+				<min>0.03</min>
+				<max>0.62</max>
+				<wrap>false</wrap>
+			</binding>
+		  <binding>
+				<command>property-toggle</command>
+				<property>/sim/sound/switch3</property>
+			</binding>
+		</action>
+		<action>
+			<name>calibrate fine dec</name>
+			<button>3</button>
+		<repeatable>true</repeatable>
+			<binding>	          
+				<condition>
+		            <not><property>devices/status/keyboard/shift</property></not>
+		            <not><property>devices/status/keyboard/super</property></not>
+		        </condition>
+				<command>property-adjust</command>
+				<property>/instrumentation/mptcas/display-factor</property>
+				<step>-0.01</step>
+				<min>0.03</min>
+				<max>0.62</max>
+				<wrap>false</wrap>
+			</binding>
+			<binding>	          
+				<condition>
+		            <or>
+						<property>devices/status/keyboard/shift</property>
+						<property>devices/status/keyboard/super</property>
+					</or>
+		        </condition>
+				<command>property-adjust</command>
+				<property>/instrumentation/mptcas/display-factor</property>
+				<step>-0.1</step>
+				<min>0.03</min>
+				<max>0.62</max>
+				<wrap>false</wrap>
+			</binding>
+		  <binding>
+				<command>property-toggle</command>
+				<property>/sim/sound/switch3</property>
+			</binding>
+		</action>
+		<action>
+			<name>calibrate fine inc</name>
+			<button>4</button>
+		<repeatable>true</repeatable>
+			<binding>	          
+				<condition>
+		            <not><property>devices/status/keyboard/shift</property></not>
+		            <not><property>devices/status/keyboard/super</property></not>
+		        </condition>
+				<command>property-adjust</command>
+				<property>/instrumentation/mptcas/display-factor</property>
+				<step>0.01</step>
+				<min>0.03</min>
+				<max>0.62</max>
+				<wrap>false</wrap>
+			</binding>
+			<binding>	          
+				<condition>
+		            <or>
+						<property>devices/status/keyboard/shift</property>
+						<property>devices/status/keyboard/super</property>
+					</or>
+		        </condition>
+				<command>property-adjust</command>
+				<property>/instrumentation/mptcas/display-factor</property>
+				<step>0.1</step>
+				<min>0.03</min>
+				<max>0.62</max>
+				<wrap>false</wrap>
+			</binding>
+		  <binding>
+				<command>property-toggle</command>
+				<property>/sim/sound/switch3</property>
+			</binding>
+		</action>
+	</animation>
+
+<!-- TCAS ANIMATIONS -->
+
+<!-- MULTIPLAYER -->
+
+<model>
+  <name>multis</name>
+  <path>Aircraft/707/Models/Cockpit/Instruments/radar/mps.xml</path>
+  <offsets>
+    <x-m>0</x-m>
+    <y-m>0</y-m>
+    <z-m>0</z-m>
+  </offsets>
+</model>
+
+<animation>
+	<type>rotate</type>
+	<object-name>multis</object-name>
+	<property>orientation/heading-deg</property>
+	<factor>1</factor>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>multis</object-name>
+	<condition>
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+	</condition>
+</animation>
+
+
+
+	
+</PropertyList>

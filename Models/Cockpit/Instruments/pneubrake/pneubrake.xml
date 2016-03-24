@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>pneubrake.ac</path>
+  
+	<animation>
+		<type>material</type>
+		<object-name>brake</object-name>
+		<object-name>sup</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.2</red>
+			<green>0.2</green>
+			<blue>0.2</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>brake</object-name>
+		<object-name>sup</object-name>
+		<object-name>shadow</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+			<red>0.4</red>
+			<green>0.4</green>
+			<blue>0.4</blue>
+			<factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>	
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>shadow</object-name>
+  </effect>
+  
+    <!-- The pneubrake knob -->
+    <animation>
+        <type>rotate</type>
+        <object-name>brake</object-name>
+        <property>/controls/gear/brake-parking</property>
+        <factor>90</factor>
+        <axis>
+            <x> 1.0</x>
+            <y> 0.0</y>
+            <z> 0.0</z>
+        </axis>
+        <center>
+            <x-m> 0.0</x-m>
+            <y-m>-0.213</y-m>
+            <z-m>0.976</z-m>
+        </center>
+    </animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>brake</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/gear/brake-parking</property>  
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          	var brakeR = getprop("/controls/gear/brake-right") or 0;
+          	var brakeL = getprop("/controls/gear/brake-left") or 0;
+          	var stop = getprop("/controls/gear/barke-parking") or 0;
+          	if (!stop and (brakeR or brakeL)){
+          		setprop("/controls/gear/brake-right", 0);
+          		setprop("/controls/gear/brake-left", 0);
+            }
+          </script>  
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/sim/sound/switch1</property>
+        </binding>
+	      <mod-up>
+	        <binding>
+		        <command>property-toggle</command>
+		        <property>/controls/gear/brake-parking</property> 
+	        </binding>
+	      </mod-up>
+      </action>
+    </animation>
+
+</PropertyList>

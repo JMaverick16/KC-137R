@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>extPower.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampGreen</object-name>
+		<object-name>LampBlue</object-name>
+		<object-name>sockle</object-name>
+		<object-name>switch</object-name>
+		<condition>	
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>LampGreen</object-name>
+		<object-name>LampBlue</object-name>
+		<object-name>LampGreenON</object-name>
+		<object-name>LampBlueON</object-name>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampGreenON</object-name>
+		<emission>
+		  <red>   0 </red>
+		  <green> 1.0 </green>
+		  <blue>  0 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampBlueON</object-name>
+		<emission>
+		  <red>   0.5 </red>
+		  <green> 1.0 </green>
+		  <blue>  1.0 </blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LampGreenON</object-name>
+		<condition>		
+		  <or>
+		    <property>/b707/external-power-connected</property>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampBlueON</object-name>
+		<condition>	
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		    <and>
+		    	<property>/b707/external-power-connected</property>
+		    	<property>/controls/electric/battery-switch</property>		    
+				  <property>/b707/ground-connect</property>	
+				  <equals>	    
+		    		<property>/b707/ess-power-switch</property>
+		    		<value>5</value>
+		    	</equals>
+				</and>
+		    <and>
+		      <equals>
+		    		<property>/b707/apu/off-start-run</property>
+		    		<value>2</value>
+		    	</equals>
+		    	<property>/b707/generator/gen-drive[4]</property>	
+				  <equals>	    
+		    		<property>/b707/ess-power-switch</property>
+		    		<value>0</value>
+		    	</equals>
+				</and>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+  <!-- ground switch -->
+	<animation>
+		  <type>rotate</type>
+		  <object-name>switch</object-name>
+		  <property>/b707/ground-connect</property>
+      <factor>-60</factor>
+		  <axis>
+		   <x>1</x>
+		   <y>0</y>
+		   <z>0</z>
+		  </axis>
+		  <center>
+		  <x-m>0.0</x-m>
+		  <y-m>0.004</y-m>
+		  <z-m>0.0</z-m>
+		  </center>  
+	</animation>
+
+	<animation>
+		  <type>pick</type>
+		  <object-name>switch</object-name>
+		  <action>
+		    <button>0</button>
+		    <repeatable>false</repeatable>
+		    <binding>
+		        <command>property-toggle</command>
+		  			<property>/b707/ground-connect</property>
+		    </binding>
+        <binding>
+            <command>nasal</command>
+            <script>	
+							var exco = getprop("/b707/external-power-connected") or 0;
+							var elbat = getprop("/controls/electric/battery-switch") or 0;
+							var epow = getprop("/b707/ess-power-switch") or 0;
+							var ofstaru = getprop("/b707/apu/off-start-run") or 0;
+							var g4d = getprop("/b707/generator/gen-drive[4]") or 0;
+
+							if(!elbat or !exco or epow != 5){
+								settimer(func{ setprop("/b707/ground-connect", 0);}, 0.2);
+							}
+						</script>
+        </binding>
+		    <binding>
+		      <command>property-toggle</command>
+		      <property>/sim/sound/switch2</property>
+		    </binding>
+		  </action>
+	</animation>
+
+</PropertyList>

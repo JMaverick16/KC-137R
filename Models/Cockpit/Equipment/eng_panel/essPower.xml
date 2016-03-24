@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>essPower.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>LampAmber</object-name>
+		<object-name>sockle</object-name>
+		<object-name>turn</object-name>
+		<condition>			
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>LampAmber</object-name>
+		<object-name>LampAmberON</object-name>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>LampAmberON</object-name>
+		<emission>
+		  <red>   5.0 </red>
+		  <green> 0.0 </green>
+		  <blue>  0.0 </blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>LampAmberON</object-name>
+		<condition>		
+			<greater-than>
+				<property>/b707/ess-bus</property>
+				<value>20</value>
+			</greater-than>
+		  <or>
+		    <and>
+				  <property>/b707/ess-source-failure</property>
+				  <property>/b707/battery-switch</property>
+		    </and>
+		    <property>/controls/test/warn-knob</property>
+		  </or>
+		</condition>
+	</animation>
+
+  <!-- select essential power --> 
+	<animation>
+		<type>rotate</type>
+		<object-name>turn</object-name>
+		<property>/b707/ess-power-switch</property>
+		<interpolation>
+		  <entry><ind> 0</ind><dep> 180</dep></entry>
+		  <entry><ind> 5</ind><dep> 135</dep></entry>
+		  <entry><ind> 4</ind><dep>  90</dep></entry>
+		  <entry><ind> 3</ind><dep>  45</dep></entry>
+		  <entry><ind> 2</ind><dep>   0</dep></entry>
+		  <entry><ind> 1</ind><dep> -45</dep></entry>
+		</interpolation>
+		<axis>
+		 <x>0</x>
+		 <y>1</y>
+		 <z>0</z>
+		</axis>
+		<center>
+		<x-m> 0.0</x-m>
+		<y-m> 0.0</y-m>
+		<z-m> 0.0</z-m>
+		</center>  
+	</animation>
+     
+	<animation>
+		<type>pick</type>
+		<object-name>turn</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/ess-power-switch</property>
+		    <step>1</step>
+		    <min>0</min>
+		    <max>6</max>
+		    <wrap>1</wrap>
+		  </binding>
+		   <binding>
+		      <command>nasal</command>
+		      <script>b707.ac_sync();</script>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+		<action>
+		  <button>1</button>
+		  <repeatable>true</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+				<property>/b707/ess-power-switch</property>
+		    <step>-1</step>
+		    <min>0</min>
+		    <max>6</max>
+		    <wrap>1</wrap>
+		  </binding>
+		  <binding>
+		      <command>nasal</command>
+		      <script>b707.ac_sync();</script>
+		  </binding>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/sim/sound/switch3</property>
+		  </binding>
+		</action>
+	</animation>
+
+</PropertyList>

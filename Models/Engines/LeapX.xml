@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+
+	<path>res/a320.nacelle.cfmleapx.ac</path>
+
+	<!-- offsets> Defined in Wings!
+		<heading-deg>-1</heading-deg>
+		<pitch-deg>2.2</pitch-deg>
+	</offsets -->
+
+	<!-- Reflection Shader -->
+	<!--effect>
+		<inherits-from>Aircraft/KC-137R/Models/Effects/NEOreflect</inherits-from>
+		<object-name>Reverser</object-name>
+		<object-name>Nacelle</object-name>
+	</effect-->
+    
+    <animation>
+    <type>scale</type>
+    <x-offset>0.9</x-offset>
+    <y-offset>0.8</y-offset>
+    <z-offset>0.8</z-offset>
+    </animation>
+
+	<!-- Reverse thrust animation -->
+	<animation>
+		<type>translate</type>
+		<object-name>Reverser</object-name>
+		<object-name>Nozzle</object-name>
+		<property>engines/engine[0]/reverser-pos-norm</property>
+		<factor>0.25</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Chrome shader -->
+	<animation>
+		<name>Chrome shader</name>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>../Models/chrome.png</texture>
+		<object-name>Nozzle</object-name>
+	</animation>
+
+	<!-- LIVERY SELECT -->
+	<!-- Animation 
+	<animation>
+		<type>material</type>
+		<object-name>Intake</object-name>
+		<object-name>Nacelle</object-name>
+		<object-name>Reverser</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>neo-texture</texture-prop>
+		
+	</animation>
+-->
+
+	<model>
+		<path>Aircraft/KC-137R/Models/Engines/res/cfmleapx.ac</path>
+		<!--texture-path>../Textures/Livery/House</texture-path-->
+
+		<!-- Reflection Shader -->
+		<effect>
+			<inherits-from>Aircraft/KC-137R/Models/Effects/NEOreflect</inherits-from>
+			<object-name>cone</object-name>
+			<object-name>fan</object-name>
+		</effect>
+	</model>
+
+	<!--model>
+		<path>Aircraft/KC-137R/Models/Engines/res/a320.pylon.cfmleapx.right.ac</path>
+        <offsets>
+			<x-m>0</x-m>
+			<y-m>0.055</y-m>
+			<z-m>-0.04</z-m>
+		</offsets>
+	</model-->
+
+	<model>
+		<name>Contrail</name>
+		<path>Aircraft/KC-137R/Models/Effects/contrail-eng2.xml</path>
+		<offsets>
+			<x-m>5.137</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Engine fire</name>
+		<path>Aircraft/KC-137R/Models/Effects/enginefire.xml</path>
+		<offsets>
+			<x-m>3.316</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</offsets>
+		<condition>
+			<property>engines/engine[0]/on-fire</property>
+		</condition>
+	</model>
+
+	<animation>
+		<name>Fan</name>
+		<type>spin</type>
+		<object-name>cone</object-name>
+		<object-name>fan</object-name>
+		<factor>67</factor>
+		<property>engines/engine[0]/n1</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<!-- Nasal code 
+	<nasal>
+		<load>
+		 var livery_update = aircraft.livery_update.new("Aircraft/KC-135R/Models/Liveries/" ~ getprop("sim/aero"));
+		</load>
+		<unload>
+		 livery_update.stop();
+		</unload>
+	</nasal>-->
+
+</PropertyList>

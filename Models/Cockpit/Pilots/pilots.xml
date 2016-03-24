@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <path>pilots.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>pilots</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>FAE</value>
+      </equals>
+    </condition>
+    <texture>military.png</texture>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>pilots</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>ITAF</value>
+      </equals>
+    </condition>
+    <texture>military.png</texture>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>pilots</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>USAF</value>
+      </equals>
+    </condition>
+    <texture>military.png</texture>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>pilots</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>USAF-EC</value>
+      </equals>
+    </condition>
+    <texture>military.png</texture>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>pilots</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>NATO-EC</value>
+      </equals>
+    </condition>
+    <texture>military.png</texture>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>pilots</object-name>
+    <condition>
+      <equals>
+        <property>sim/model/livery/file</property>
+        <value>FAB</value>
+      </equals>
+    </condition>
+    <texture>military.png</texture>
+  </animation>
+    
+	<animation>
+		<type>material</type>
+		<object-name>pilots</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>sim/multiplay/generic/float[0]</property>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+		</emission>
+	</animation>	
+
+</PropertyList>

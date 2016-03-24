@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+
+<PropertyList>
+	<path>fuel-truck.ac</path>
+ 
+	<animation>
+		<type>material</type>
+		<object-name>fuel_truck</object-name>
+		<condition>
+			<and>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		      <greater-than>
+		        <property>/sim/time/sun-angle-rad</property>
+		        <value>1.22</value>
+		      </greater-than>
+		    </and>
+		</condition>
+		<emission>
+		  <red>0.02</red>
+		  <green>0.02</green>
+		  <blue>0.02</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>spot-light</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/multiplay/generic/float[13]</property>
+				<value>1.1</value>
+			</greater-than>
+		</condition>
+		<emission>
+		  <red>4.0</red>
+		  <green>3.0</green>
+		  <blue>0</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>light</object-name>
+	    <condition>
+	      <greater-than>
+	        <property>/sim/time/sun-angle-rad</property>
+	        <value>1.22</value>
+	      </greater-than>
+	    </condition>
+		<emission>
+		  <red>2.0</red>
+		  <green>2.0</green>
+		  <blue>2.0</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>tube</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/multiplay/generic/float[13]</property>
+				<value>1.0</value>
+			</greater-than>
+		</condition>
+	</animation>
+		
+</PropertyList>
