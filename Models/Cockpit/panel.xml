@@ -38,18 +38,18 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/asi/asi.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
-    <y-m>-0.523</y-m>
+    <y-m>-0.545</y-m>
     <z-m>0.882</z-m>
   </offsets>
 </model>
 
 <model>
-  <name>ai</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ai/ai.xml</path>
+  <name>EADI</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EADI/AI.xml</path>
   <offsets>
-    <x-m>-18.967</x-m>
-    <y-m>-0.428</y-m>
-    <z-m>0.883</z-m>
+    <x-m>-18.918</x-m>
+    <y-m>-0.422</y-m>
+    <z-m>0.888</z-m>
   </offsets>
 </model>
 
@@ -58,8 +58,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl.xml</path>
   <offsets>
     <x-m>-18.967</x-m>
-    <y-m>-0.343</y-m>
-    <z-m>0.878</z-m>
+    <y-m>-0.23</y-m>
+    <z-m>0.789</z-m>
   </offsets>
 </model>
 
@@ -67,9 +67,9 @@
   <name>agl-switch</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl-switch.xml</path>
   <offsets>
-    <x-m>-18.967</x-m>
-    <y-m>-0.343</y-m>
-    <z-m>0.878</z-m>
+	<x-m>-18.967</x-m>
+    <y-m>-0.195</y-m>
+    <z-m>0.72</z-m>
   </offsets>
 </model>
 
@@ -78,7 +78,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/alt/alt.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.271</y-m>
+    <y-m>-0.30</y-m>
     <z-m>0.888</z-m>
   </offsets>
 </model>
@@ -88,8 +88,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/marker_beacon.xml</path>
   <offsets>
     <x-m>-18.921</x-m>
-    <y-m>-0.21</y-m>
-    <z-m>0.885</z-m>
+    <y-m>-0.20</y-m>
+    <z-m>0.889</z-m>
   </offsets>
 </model>
 
@@ -108,27 +108,27 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/rmi/rmi.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
-    <y-m>-0.523</y-m>
+    <y-m>-0.544</y-m>
     <z-m>0.797</z-m>
   </offsets>
 </model>
 
 <model>
-  <name>hsi</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/hsi/hsi.xml</path>
+  <name>EHSI</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EHSI/EHSI.xml</path>
   <offsets>
-    <x-m>-18.967</x-m>
-    <y-m>-0.426</y-m>
+    <x-m>-18.918</x-m>
+    <y-m>-0.422</y-m>
     <z-m>0.773</z-m>
   </offsets>
 </model>
 
 <model>
-  <name>vsi</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/vs/vsi.xml</path>
+  <name>EVSI</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EVSI/vsi.xml</path>
   <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.33</y-m>
+    <x-m>-18.918</x-m>
+    <y-m>-0.3</y-m>
     <z-m>0.789</z-m>
   </offsets>
 </model>
@@ -136,66 +136,16 @@
 <model>
   <name>clock</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
-	<condition>
-		<and>
-			<equals>
-				<property>sim/aircraft</property>
-				<value type="string">707</value>
-			</equals>
-			<not>
-				<equals>
-					<property>sim/model/livery/file</property>
-					<value type="string">USA</value>
-				</equals>
-			</not>
-			<not>
-				<equals>
-					<property>sim/model/livery/file</property>
-					<value type="string">FAE</value>
-				</equals>
-			</not>
-			<not>
-				<equals>
-					<property>sim/model/livery/file</property>
-					<value type="string">CR</value>
-				</equals>
-			</not>
-		</and>
-	</condition>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.25</y-m>
-    <z-m>0.80</z-m>
+    <y-m>-0.62</y-m>
+    <z-m>0.715</z-m>
   </offsets>
 </model>
 
 <model>
     <name>tancan_dme</name>
     <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tacan/dme/dme.xml</path>
-	<condition>
-		<or>		
-		<equals>
-			<property>sim/aircraft</property>
-			<value type="string">EC-137D</value>
-		</equals>
-		<equals>
-			<property>sim/aircraft</property>
-			<value type="string">707-TT</value>
-		</equals>
-		<equals>
-			<property>sim/model/livery/file</property>
-			<value type="string">USA</value>
-		</equals>
-		<equals>
-			<property>sim/model/livery/file</property>
-			<value type="string">FAE</value>
-		</equals>
-		<equals>
-			<property>sim/model/livery/file</property>
-			<value type="string">CR</value>
-		</equals>
-		</or>
-	</condition>
     <offsets>
         <x-m>-18.916</x-m>
         <y-m>-0.286</y-m>
@@ -206,34 +156,10 @@
 <model>
   <name>tancan_rmi</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tacan/ci/ci.xml</path>
-	<condition>
-		<or>		
-		<equals>
-			<property>sim/aircraft</property>
-			<value type="string">EC-137D</value>
-		</equals>
-		<equals>
-			<property>sim/aircraft</property>
-			<value type="string">707-TT</value>
-		</equals>
-		<equals>
-			<property>sim/model/livery/file</property>
-			<value type="string">USA</value>
-		</equals>
-		<equals>
-			<property>sim/model/livery/file</property>
-			<value type="string">FAE</value>
-		</equals>
-		<equals>
-			<property>sim/model/livery/file</property>
-			<value type="string">CR</value>
-		</equals>
-		</or>
-	</condition>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.25</y-m>
-    <z-m>0.8</z-m>
+    <y-m>-0.225</y-m>
+    <z-m>0.71</z-m>
   </offsets>
 </model>
 
@@ -242,7 +168,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.6</y-m>
+    <y-m>-0.62</y-m>
     <z-m>0.78</z-m>
   </offsets>
 </model>
@@ -252,28 +178,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mach/mach.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.6</y-m>
-    <z-m>0.71</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>turn</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/turn/turn.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.523</y-m>
-    <z-m>0.71</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>dme</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/dme/dme.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.33</y-m>
-    <z-m>0.71</z-m>
+    <y-m>-0.544</y-m>
+    <z-m>0.715</z-m>
   </offsets>
 </model>
 
@@ -282,7 +188,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/trim/trim.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.25</y-m>
+    <y-m>-0.3</y-m>
     <z-m>0.71</z-m>
   </offsets>
 </model>
@@ -333,8 +239,8 @@
 </model>
 
 <model>
-  <name>adi</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/adi/adi.xml</path>
+  <name>stby-ai</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/stby-ai.xml</path>
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
@@ -628,18 +534,18 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/asi/asi.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
-    <y-m> 0.305</y-m>
+    <y-m>0.305</y-m>
     <z-m>0.882</z-m>
   </offsets>
 </model>
 
 <model>
-  <name>ai_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ai/ai.xml</path>
+  <name>EADI_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EADI/AI.xml</path>
   <offsets>
-    <x-m>-18.967</x-m>
-    <y-m> 0.399</y-m>
-    <z-m>0.883</z-m>
+    <x-m>-18.918</x-m>
+    <y-m>0.422</y-m>
+    <z-m>0.888</z-m>
   </offsets>
 </model>
 
@@ -648,8 +554,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl.xml</path>
   <offsets>
     <x-m>-18.967</x-m>
-    <y-m> 0.482</y-m>
-    <z-m>0.878</z-m>
+    <y-m> 0.61</y-m>
+    <z-m>0.789</z-m>
   </offsets>
 </model>
 
@@ -658,8 +564,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl-switch.xml</path>
   <offsets>
     <x-m>-18.967</x-m>
-    <y-m> 0.335</y-m>
-    <z-m>0.878</z-m>
+    <y-m>0.643</y-m>
+    <z-m>0.72</z-m>
   </offsets>
 </model>
 
@@ -668,7 +574,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/alt/alt.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>  0.549</y-m>
+    <y-m>0.544</y-m>
     <z-m>0.888</z-m>
   </offsets>
 </model>
@@ -688,27 +594,27 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/rmi/rmi.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
-    <y-m> 0.305</y-m>
+    <y-m>0.305</y-m>
     <z-m>0.797</z-m>
   </offsets>
 </model>
 
 <model>
-  <name>hsi_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/hsi/hsi-copilot.xml</path>
+  <name>EHSI_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EHSI/EHSI.xml</path>
   <offsets>
-    <x-m>-18.967</x-m>
-    <y-m>  0.401</y-m>
+    <x-m>-18.918</x-m>
+    <y-m>0.422</y-m>
     <z-m>0.773</z-m>
   </offsets>
 </model>
 
 <model>
-  <name>vsi_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/vs/vsi.xml</path>
+  <name>EVSI_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EVSI/vsi.xml</path>
   <offsets>
-    <x-m>-18.916</x-m>
-    <y-m> 0.495</y-m>
+    <x-m>-18.918</x-m>
+    <y-m>0.544</y-m>
     <z-m>0.789</z-m>
   </offsets>
 </model>
@@ -718,18 +624,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>0.575</y-m>    
-    <z-m>0.80</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>dme_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/dme/dme.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m> 0.495</y-m>
-    <z-m>0.71</z-m>
+    <y-m>0.227</y-m>
+    <z-m>0.715</z-m>
   </offsets>
 </model>
 
@@ -738,7 +634,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/trim/trim.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>0.575</y-m> 
+    <y-m>0.544</y-m>
     <z-m>0.71</z-m>
   </offsets>
 </model>
@@ -758,18 +654,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mach/mach.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m> 0.231</y-m>
-    <z-m>0.71</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>turn_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/turn/turn.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m> 0.308</y-m>
-    <z-m>0.71</z-m>
+    <y-m>0.305</y-m>
+    <z-m>0.715</z-m>
   </offsets>
 </model>
 

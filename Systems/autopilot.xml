@@ -225,7 +225,7 @@
 
   <!-- Heading Bug Hold.  2 stage cascade controller. -->
 
-  <filter>
+  <!--filter>
 	<name>heading bug error computer/normalizer</name>
 	<debug>false</debug>
 	<type>gain</type>
@@ -242,7 +242,7 @@
 		<max>180</max>
 	</period>
 	<gain>1.0</gain>
-  </filter>
+  </filter-->
 
   <!-- Stage #1 sets target roll based on diff between current heading -->
   <!-- and heading bug. -->
@@ -266,8 +266,10 @@
 	</output>
 	<config>
 		<Kp>/autopilot/internal/target-kp-for-heading-deg</Kp>
-		<u_min>/autopilot/internal/heading-min-roll</u_min>
-		<u_max>/autopilot/internal/heading-max-roll</u_max>
+		<u_min>-20</u_min>
+		<u_max>20</u_max>
+		<!--u_min>/autopilot/internal/heading-min-roll</u_min>
+		<u_max>/autopilot/internal/heading-max-roll</u_max-->
 	</config>
   </pi-simple-controller>
 

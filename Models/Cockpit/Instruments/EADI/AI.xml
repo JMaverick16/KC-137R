@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Boeing 757-200 for FlightGear -->
+<!-- Electronic Attitude Indicator -->
+
+<PropertyList>
+
+	<path>AI.ac</path>
+
+	<!-- ANIMATIONS -->
+	<!-- Lighting -->
+<!--	<animation>
+		<name>Cockpit illumination</name>
+		<type>material</type>
+		<object-name>Border</object-name>
+		<object-name>Off</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+			<factor-prop>controls/lighting/cockpit</factor-prop>
+		</emission>
+	</animation>-->
+	
+
+	<!-- Attitude indicator -->
+	<animation>
+		<name>Attitude indicator</name>
+		<type>texmultiple</type>
+		<object-name>AI</object-name>
+		<transform>
+			<subtype>textranslate</subtype>
+			<property>orientation/pitch-deg</property>
+			<factor>0.00314</factor>
+			<axis>
+				<x>0</x>
+				<y>1</y>
+			</axis>
+		</transform>
+		<transform>
+			<subtype>texrotate</subtype>
+			<property>orientation/roll-deg</property>
+			<axis>
+				<x>0</x>
+				<y>0</y>
+				<z>-1</z>
+			</axis>
+			<center>
+				<x>0.25</x>
+				<y>0.5</y>
+			</center>
+		</transform>
+	</animation>
+
+	<animation>
+		<name>Attitude indicator roll pointer</name>
+		<type>rotate</type>
+		<object-name>RollPtr</object-name>
+		<property>orientation/roll-deg</property>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+	<!-- Flight director -->
+	<animation>
+		<name>Flight director select</name>
+		<type>select</type>
+		<object-name>FDPitch</object-name>
+		<object-name>FDRoll</object-name>
+		<condition>
+			<property>autopilot/settings/flight-director</property>
+		</condition>
+	</animation>
+	<animation>
+		<name>Flight director pitch</name>
+		<type>translate</type>
+		<object-name>FDPitch</object-name>
+		<property>autopilot/internal/flight-director-pitch-deg</property>
+		<interpolation>
+			<entry><ind>-30</ind><dep>-0.0327</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>30</ind><dep>0.0327</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<name>Flight director roll</name>
+		<type>translate</type>
+		<object-name>FDRoll</object-name>
+		<property>autopilot/internal/flight-director-roll-deg</property>
+		<interpolation>
+			<entry><ind>-30</ind><dep>-0.034</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>30</ind><dep>0.034</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- ILS guide -->
+	<animation>
+		<name>ILS glideslope guide pointer translate</name>
+		<type>translate</type>
+		<object-name>GSPtr</object-name>
+		<property>instrumentation/nav[0]/gs-needle-deflection</property>
+		<factor>0.00272</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+	<!-- AP/AT Annunciators -->
+       	<text>
+		<name>A/T ON</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.032</y-m>
+			<z-m>-0.03</z-m>
+		</offsets>
+		<alignment>right-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">A/T</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>A/T ON</object-name>
+		<condition>
+			<property>instrumentation/afds/inputs/at-armed</property>
+		</condition>
+	</animation>
+	
+       	<text>
+		<name>A/T Mode</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.036</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">%s</format>
+		<property>instrumentation/afds/ap-modes/speed-mode</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+
+       	<text>
+		<name>V Mode Arm</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.042</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">%s</format>
+		<property>instrumentation/afds/ap-modes/pitch-mode-arm</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+
+       	<text>
+		<name>V Mode</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>-0.05</y-m>
+			<z-m>-0.048</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">%s</format>
+		<property>instrumentation/afds/ap-modes/pitch-mode</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+
+       	<text>
+		<name>AP Active</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m> 0.03</y-m>
+			<z-m>-0.036</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">CMD</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>AP Active</object-name>
+		<condition>
+			<property>instrumentation/afds/inputs/AP</property>
+		</condition>
+	</animation>
+
+       	<text>
+		<name>L Mode Arm</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.042</z-m>
+		</offsets>
+		<alignment>right-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">%s</format>
+		<property>instrumentation/afds/ap-modes/roll-mode-arm</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+
+       	<text>
+		<name>L Mode</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m> 0.05</y-m>
+			<z-m>-0.048</z-m>
+		</offsets>
+		<alignment>right-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">%s</format>
+		<property>instrumentation/afds/ap-modes/roll-mode</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+
+	<!-- Altitudes -->
+	<text>
+		<name>Minimums</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m> 0.06</y-m>
+			<z-m> 0.054</z-m>
+		</offsets>
+		<alignment>right-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">DH%03.0f</format>
+		<property>instrumentation/mk-viii/inputs/arinc429/decision-height</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.005</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+
+	<text>
+		<name>Radar Altitude</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m> 0.06</y-m>
+			<z-m> 0.048</z-m>
+		</offsets>
+		<alignment>right-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>position/altitude-agl-ft</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.007</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	<animation>
+		<type>select</type>
+		<object-name>Radar Altitude</object-name>
+		<condition>
+		    <less-than>
+			<property>position/altitude-agl-ft</property>
+			<value>2500</value>
+		    </less-than>
+		</condition>
+	</animation>
+		
+
+	<animation>
+		<name>Green text</name>
+		<type>material</type>
+		<object-name>A/T ON</object-name>
+		<object-name>A/T Mode</object-name>
+		<object-name>AP Active</object-name>
+		<object-name>V Mode</object-name>
+		<object-name>L Mode</object-name>
+		<object-name>Minimums</object-name>
+		<emission>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+	<animation>
+		<name>White text</name>
+		<type>material</type>
+		<object-name>Radar Altitude</object-name>
+		<object-name>V Mode Arm</object-name>
+		<object-name>L Mode Arm</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
+
+</PropertyList>

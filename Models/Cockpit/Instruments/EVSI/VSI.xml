@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>vsi.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/737-100/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <!--factor-prop>/controls/lighting/instrument-norm</factor-prop-->
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <name>needle</name>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>autopilot/internal/vert-speed-fpm</property>
+    <interpolation>
+      <entry><ind> -6000 </ind><dep> -180 </dep></entry>
+      <entry><ind> -4000 </ind><dep> -144 </dep></entry>
+      <entry><ind> -2000 </ind><dep> -103 </dep></entry>
+      <entry><ind> -1000 </ind><dep>  -58 </dep></entry>
+      <entry><ind>  -500 </ind><dep>  -27 </dep></entry>
+      <entry><ind>     0 </ind><dep>   0 </dep></entry>
+      <entry><ind>   500 </ind><dep>  30 </dep></entry>
+      <entry><ind>  1000 </ind><dep>  57 </dep></entry>
+      <entry><ind>  2000 </ind><dep> 101 </dep></entry>
+      <entry><ind>  4000 </ind><dep> 149 </dep></entry> 
+      <entry><ind>  6000 </ind><dep> 180 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
