@@ -15,10 +15,18 @@
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/KC-137R.xml</path>
       <livery>
-        <file type="string">707</file>
+        <file type="string">USAF</file>
       </livery>
   </model>
-
+  
+  <multiplay>
+    	<generic>
+    		<int n="8">1</int>   <!-- engine type -->
+    		<int n="9">1</int>   <!-- cargo aircraft -->
+    		<int n="16">3</int>  <!-- immat position -->
+    	</generic>
+  </multiplay>
+	
   <remote>
    <pilot-callsign type="string"/>
   </remote>
@@ -26,7 +34,7 @@
 	<menubar>
 		<default>
 			<menu n="100">
-				<label>Boeing 707</label>
+				<label>Boeing KC-137R</label>
 				<enabled type="bool">true</enabled>
 				<item>
 					<label>Autostart / shutdown</label>

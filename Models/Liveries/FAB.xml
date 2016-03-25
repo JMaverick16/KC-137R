@@ -10,16 +10,17 @@
 <sim>
     <model>
         <livery>
-            <name type="string">U.S.AIR FORCE</name>
-            <texture>LiveriesTT/USAF.png</texture>
-            <texture-container>LiveriesTT/FAE-container.png</texture-container>
-        </livery>
+            <name type="string">Forca Aerea Brasileira</name>
+            <texture>Liveries/FAB.png</texture>
+	        <texture-container>Liveries/FAE-container.png</texture-container>
+	    </livery>
     </model>
     <multiplay>
     	<generic>
     		<int n="8">1</int>   <!-- engine type -->
     		<int n="9">1</int>   <!-- cargo aircraft -->
-    		<int n="16">3</int>  <!-- immat position -->
+    		<int n="16">2</int>  <!-- immat position -->
+			<!-- 0 no immat, 1 on fuselage down, 2 on fuselage upper back, 3 on rudder and wings -->
     	</generic>
     </multiplay>
 </sim>

@@ -1,4 +1,4 @@
-aircraft.livery.init("Aircraft/KC-137R/Models/LiveriesTT");
+aircraft.livery.init("Aircraft/KC-137R/Models/Liveries");
 
 # Not the best place but liveries are independent to the aircraft
 

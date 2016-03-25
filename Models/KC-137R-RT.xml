@@ -94,7 +94,7 @@
   
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/KC-137R/Models/LiveriesTT", 10);
+      var livery_update = aircraft.livery_update.new("Aircraft/KC-137R/Models/Liveries", 10);
     </load>
 
     <unload>
@@ -161,7 +161,6 @@
 	<object-name>lhibail</object-name>
 	<object-name>rhobail</object-name>
 	<object-name>lhobail</object-name>
-    <object-name>doorRefuel</object-name>
 	<object-name>refuelAPURight</object-name>
 	<object-name>refuelAPULeft</object-name>
 	<object-name>refuelProbeRight</object-name>
@@ -186,18 +185,7 @@
     <object-name>cockpit</object-name>
     <object-name>operatorRoom</object-name>     
 	</animation>
-    
-	<animation>
-      <type>translate</type>
-      <object-name>doorRefuel</object-name>
-      <property>sim/multiplay/generic/float[18]</property>
-			<factor>1</factor>
-      <axis>
-          <x> 1.0</x>
-          <y> 0.0</y>
-          <z> 0.0</z>
-      </axis>
-  </animation>
+	
 		
 	<!-- inside fuselage -->
 	<animation>
@@ -2402,7 +2390,7 @@
      </axis>
     </animation>
 
- <!--Conway RCo.10 engines -->
+ <!-- CFM LEAP X -->
 	<model>
 		<name>engineOne</name>
 		<path>Aircraft/KC-137R/Models/Engines/LeapX.xml</path>
@@ -2415,20 +2403,17 @@
 	
 	<model>
 		<name>engineTwo</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/LeapX_2.xml</path>
 		<offsets>
-            <!--x-m> -1.25</x-m>
-		  <y-m>-10.077</y-m>
-		  <z-m> -1.10</z-m-->    
-		  <x-m> -3.50</x-m>
-		  <y-m>-10.077</y-m>
-		  <z-m> -1.43</z-m>
+		  <x-m>  0.22</x-m>
+		  <y-m>-14.835</y-m>
+		  <z-m> -0.99</z-m>
 		</offsets>
 	</model>
 	
 	<model>
 		<name>engineThree</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/LeapX_3.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m> 10.077</y-m>
@@ -2438,7 +2423,7 @@
 	
 	<model>
 		<name>engineFour</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/LeapX_4.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m> 14.835</y-m>
@@ -2466,7 +2451,7 @@
 		</condition>	
 	</animation>
 
- <!--Pratt and Whitney JT4 engines -->
+<!--Pratt and Whitney JT4 engines -->
 	<model>
 		<name>engineOnePW</name>
 		<path>Aircraft/KC-137R/Models/Engines/LeapX.xml</path>
