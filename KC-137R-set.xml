@@ -128,7 +128,7 @@
 	</menubar>
 
 	<help>
-	  <title>Boeing 707</title>
+	  <title>Boeing KC-137R</title>
 		<key>
 		  <name>L</name>
 		  <desc>toggle Landing Lights</desc>
@@ -227,36 +227,36 @@ For development I have used the BOEING 707 document
 no. D6-3071-00
 		</text>
 	</help>
-    <view n="105">
-      <name>Passengers View</name>
-      <enabled type="bool">true</enabled>
-      <type>lookfrom</type>
-      <internal type="bool">false</internal>
-      <config>
-  			<from-model type="bool">true</from-model>
-  			<from-model-idx type="int">0</from-model-idx>
-  			<!-- x/y/z == right/up/back -->
-  			<x-offset-m archive="y">-1.36</x-offset-m>
-  			<y-offset-m archive="y"> 1.05</y-offset-m>
-  			<z-offset-m archive="y"> 8.85</z-offset-m>
-  			<heading-offset-deg type="double">70.0</heading-offset-deg>
-  			<pitch-offset-deg type="double">-2.0</pitch-offset-deg>
-  			<from-model-idx type="int">0</from-model-idx>
-  			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-  			<default-field-of-view-deg type="double">90.0</default-field-of-view-deg>
-  			<default-pitch-deg type="double">-2.0</default-pitch-deg>
-  			<default-heading-deg type="double">0</default-heading-deg>
-  			<front-direction-deg type="double">0</front-direction-deg>
-  			<front-left-direction-deg type="double">45</front-left-direction-deg>
-  			<left-direction-deg type="double">90</left-direction-deg>
-  			<back-left-direction-deg type="double">135</back-left-direction-deg>
-  			<back-direction-deg type="double">180</back-direction-deg>
-  			<back-right-direction-deg type="double">225</back-right-direction-deg>
-  			<right-direction-deg type="double">270</right-direction-deg>
-  			<front-right-direction-deg type="double">315</front-right-direction-deg>
-  			<dynamic-view type="bool">true</dynamic-view>
-      </config>
-  	</view>
+  <view n="105">
+    <name>Operator Officer</name>
+    <enabled type="bool">true</enabled>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<!-- x/y/z == right/up/back -->
+			<x-offset-m archive="y"> 0.0</x-offset-m>
+			<y-offset-m archive="y">-1.05</y-offset-m>
+			<z-offset-m archive="y">12.65</z-offset-m>
+			<heading-offset-deg type="double">-180.0</heading-offset-deg>
+			<pitch-offset-deg type="double">-20.0</pitch-offset-deg>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<default-field-of-view-deg type="double">90.0</default-field-of-view-deg>
+			<default-pitch-deg type="double">-2.0</default-pitch-deg>
+			<default-heading-deg type="double">0</default-heading-deg>
+			<front-direction-deg type="double">0</front-direction-deg>
+			<front-left-direction-deg type="double">45</front-left-direction-deg>
+			<left-direction-deg type="double">90</left-direction-deg>
+			<back-left-direction-deg type="double">135</back-left-direction-deg>
+			<back-direction-deg type="double">180</back-direction-deg>
+			<back-right-direction-deg type="double">225</back-right-direction-deg>
+			<right-direction-deg type="double">270</right-direction-deg>
+			<front-right-direction-deg type="double">315</front-right-direction-deg>
+			<dynamic-view type="bool">true</dynamic-view>
+    </config>
+	</view>
  </sim>
 
 	<nasal>
