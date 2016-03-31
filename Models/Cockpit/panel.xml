@@ -34,8 +34,8 @@
 </model>
 
 <model>
-  <name>EASI</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EASI/asi.xml</path>
+  <name>asi</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/asi/asi.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
     <y-m>-0.545</y-m>
@@ -540,8 +540,8 @@
 </model>
 
 <model>
-  <name>EASI_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EASI/asi.xml</path>
+  <name>asi_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/asi/asi.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
     <y-m>0.305</y-m>
