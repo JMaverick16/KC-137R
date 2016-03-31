@@ -384,6 +384,11 @@ var update_virtual_bus = func {
 			essdcbus_volts = battery.get_output_volts();	  
 		  }
 		  
+		  	setprop("engines/engine[0]/egt-degc", (getprop("engines/engine[0]/egt-degf") - 32) / 1.8);
+			setprop("engines/engine[1]/egt-degc", (getprop("engines/engine[1]/egt-degf") - 32) / 1.8);
+			setprop("engines/engine[2]/egt-degc", (getprop("engines/engine[2]/egt-degf") - 32) / 1.8);
+			setprop("engines/engine[3]/egt-degc", (getprop("engines/engine[3]/egt-degf") - 32) / 1.8);
+			
 		  if (essdcbus_volts < 20 and count == 60){ 
 		  		# most switches fall back if ess-buss is low
 					setprop("/b707/generator/gen-drive[0]",0);
