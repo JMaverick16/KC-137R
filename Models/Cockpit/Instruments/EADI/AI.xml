@@ -69,49 +69,6 @@
 		</center>
 	</animation>
 
-	<!-- Flight director -->
-	<animation>
-		<name>Flight director select</name>
-		<type>select</type>
-		<object-name>FDPitch</object-name>
-		<object-name>FDRoll</object-name>
-		<condition>
-			<property>autopilot/settings/flight-director</property>
-		</condition>
-	</animation>
-	<animation>
-		<name>Flight director pitch</name>
-		<type>translate</type>
-		<object-name>FDPitch</object-name>
-		<property>autopilot/internal/flight-director-pitch-deg</property>
-		<interpolation>
-			<entry><ind>-30</ind><dep>-0.0327</dep></entry>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>30</ind><dep>0.0327</dep></entry>
-		</interpolation>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation>
-		<name>Flight director roll</name>
-		<type>translate</type>
-		<object-name>FDRoll</object-name>
-		<property>autopilot/internal/flight-director-roll-deg</property>
-		<interpolation>
-			<entry><ind>-30</ind><dep>-0.034</dep></entry>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>30</ind><dep>0.034</dep></entry>
-		</interpolation>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
 	<!-- ILS guide -->
 	<animation>
 		<name>ILS glideslope guide pointer translate</name>

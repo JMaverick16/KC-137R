@@ -12,13 +12,13 @@
 -->
 
 <turbine_engine name="CFM_LeapX">
-	<milthrust> 24000.0 </milthrust> <!-- Max thrust is actually 33000 but it acts really weird, so I'm trying 28000 -->
+	<milthrust> 28000.0 </milthrust> <!-- Max thrust is actually 33000 but it acts really weird, so I'm trying 28000 -->
 	<bypassratio>     1 </bypassratio>
 	<tsfc>            0.54 </tsfc>
-	<idlen1>         30.0 </idlen1>
-	<idlen2>         60.0 </idlen2>
-	<maxn1>         100.0 </maxn1>
-	<maxn2>         100.0 </maxn2>
+	<idlen1>         32.0 </idlen1>
+	<idlen2>         63.0 </idlen2>
+	<maxn1>         102.0 </maxn1>
+	<maxn2>         110.0 </maxn2>
 	<augmented>         0 </augmented>
 	<injected>          0 </injected>
 

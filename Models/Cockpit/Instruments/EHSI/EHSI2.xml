@@ -7,7 +7,6 @@
   <type>material</type>
   <object-name>Ticks</object-name>
   <object-name>CompassRose</object-name>
-  <object-name>VSI.needle</object-name>
   <object-name>LabelHdg</object-name>
   <object-name>LabelDME</object-name>
   <object-name>LabelCrs</object-name>
@@ -24,11 +23,6 @@
   <object-name>CrsNeedle</object-name>
   <object-name>CrsNeedle1</object-name>
   <object-name>HdgBug</object-name>
-  <object-name>Rudder.needle</object-name>
-  <object-name>Rudder.scale</object-name>
-  <object-name>ThrottleL</object-name>
-  <object-name>ThrottleR</object-name>
-  <object-name>Throttle.scale</object-name>
   <object-name>DMEDigit1</object-name>
   <object-name>DMEDigit2</object-name>
   <object-name>DMEDigit3</object-name>
@@ -36,7 +30,6 @@
     <red>1.0</red>
     <green>1.0</green>
     <blue>1.0</blue>
-    <!--factor-prop>/controls/lighting/nd-norm</factor-prop-->
   </emission>
 </animation>
 <!--
@@ -134,31 +127,6 @@
   <center>
     <x-m>0.0</x-m>
     <y-m>0.0</y-m>
-    <z-m>0.007</z-m>
-  </center>
-</animation>
-
-<animation>
-  <type>rotate</type>
-  <object-name>VSI.needle</object-name>
-  <property>autopilot/internal/vert-speed-fpm</property>
-  <interpolation>
-    <entry><ind>-3000.0</ind><dep>-31.0</dep></entry>
-    <entry><ind>-2000.0</ind><dep>-24.0</dep></entry>
-    <entry><ind>-1000.0</ind><dep>-17.5</dep></entry>
-    <entry><ind>    0.0</ind><dep>  0.0</dep></entry>
-    <entry><ind> 1000.0</ind><dep> 17.5</dep></entry>
-    <entry><ind> 2000.0</ind><dep> 24.0</dep></entry>
-    <entry><ind> 3000.0</ind><dep> 31.0</dep></entry>
-  </interpolation>
-  <axis>
-    <x>-1.0</x>
-    <y>0</y>
-    <z>0.0</z>
-  </axis>
-  <center>
-    <x-m>0.0</x-m>
-    <y-m>0.104</y-m>
     <z-m>0.007</z-m>
   </center>
 </animation>
@@ -320,76 +288,6 @@
             <z>0</z>
         </axis>
     </animation>
-
-<animation>
-  <type>select</type>
-  <object-name>Rudder.needle</object-name>
-  <object-name>Rudder.scale</object-name>
-  <object-name>ThrottleL</object-name>
-  <object-name>ThrottleR</object-name>
-  <object-name>Throttle.scale</object-name>
-  <condition>
-    <property>/sim/instrument-options/hsi/show-rudder</property>
-  </condition>
-</animation>
-<animation>
-  <type>translate</type>
-  <object-name>Rudder.needle</object-name>
-  <property>controls/flight/rudder</property>
-  <interpolation>
-    <entry><ind>-1</ind><dep>-0.0175</dep></entry>
-    <entry><ind> 0</ind><dep>      0</dep></entry>
-    <entry><ind> 1</ind><dep> 0.0175</dep></entry>
-  </interpolation>
-  <axis>
-    <x>0</x>
-    <y>1</y>
-    <z>0</z>
-  </axis>
-  <center>
-    <x-m>0</x-m>
-    <y-m>0</y-m>
-    <z-m>0</z-m>
-  </center>
-</animation>
-<animation>
-  <type>translate</type>
-  <object-name>ThrottleL</object-name>
-  <property>controls/engines/engine[0]/throttle</property>
-  <interpolation>
-    <entry><ind>0</ind><dep>   0</dep></entry>
-    <entry><ind>1</ind><dep>0.04</dep></entry>
-  </interpolation>
-  <axis>
-    <x>0</x>
-    <y>0</y>
-    <z>1</z>
-  </axis>
-  <center>
-    <x-m>0</x-m>
-    <y-m>0</y-m>
-    <z-m>0</z-m>
-  </center>
-</animation>
-<animation>
-  <type>translate</type>
-  <object-name>ThrottleR</object-name>
-  <property>controls/engines/engine[1]/throttle</property>
-  <interpolation>
-    <entry><ind>0</ind><dep>   0</dep></entry>
-    <entry><ind>1</ind><dep>0.04</dep></entry>
-  </interpolation>
-  <axis>
-    <x>0</x>
-    <y>0</y>
-    <z>1</z>
-  </axis>
-  <center>
-    <x-m>0</x-m>
-    <y-m>0</y-m>
-    <z-m>0</z-m>
-  </center>
-</animation>
 
 
 </PropertyList>
