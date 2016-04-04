@@ -452,6 +452,29 @@
 </model>
 
 <!-- middle pedestal -->
+
+  	<model>
+	  <name>FMC1</name>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/CDU/boeing.xml</path>
+      <offsets>
+          <x-m>-18.833</x-m>
+          <y-m>-0.12</y-m>
+          <z-m>0.727</z-m>
+          <pitch-deg>-70</pitch-deg>
+      </offsets>
+    </model>
+	
+  	<model>
+	  <name>FMC2</name>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/CDU/boeing.xml</path>
+      <offsets>
+          <x-m>-18.833</x-m>
+          <y-m> 0.12</y-m>
+          <z-m>0.727</z-m>
+          <pitch-deg>-70</pitch-deg>
+      </offsets>
+    </model>
+	
   	<!--model>
       <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/comm1.xml</path>
       <offsets>
