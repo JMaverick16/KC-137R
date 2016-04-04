@@ -19,6 +19,10 @@
       </livery>
   </model>
 
+  <instrument-options>
+	<canvas-popup-enable type="bool">true</canvas-popup-enable>
+  </instrument-options>
+  
   <multiplay>
     	<generic>
     		<int n="8">1</int>   <!-- engine type -->

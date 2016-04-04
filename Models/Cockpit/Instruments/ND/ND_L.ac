@@ -891,6 +891,8 @@ name "ND.screenL"
 loc 0.00147073 0.0236719 0.000183886
 data 10
 ND.screenL
+texture "../../screen.png"
+textrep 1.000000 1.000000
 crease 30.000002
 numvert 4
 0.0012003 0.0559317 -0.0558489

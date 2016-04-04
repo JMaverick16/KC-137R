@@ -9,399 +9,6 @@
 <PropertyList>
 
  <fx>
- 
-  <engine>
-		<name>startupOne</name>
- 		<path>Sounds/whine.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<property>/engines/engine[0]/n1</property>
-			<or>
-				<and>
-					<not><property>/sim/current-view/internal</property></not>
-					<not>
-						<equals>
-							<property>/sim/current-view/name</property>
-							<value type="string">Passengers View</value>
-						</equals>
-					</not>					
-					<not>
-						<equals>
-							<property>/sim/current-view/view-number</property>
-							<value>12</value>	
-						</equals>
-					</not>
-				</and>
-				<greater-than>
-					<property>/instrumentation/doors/pilotwin/position-norm</property>
-					<value>0.01</value>
-				</greater-than>
-			</or>
-		</condition>			    
-		<volume>
-			<property>/engines/engine[0]/n1</property>
-			<type>ln</type>
-			<factor>0.18</factor>
-			<offset>0.05</offset>
-		</volume>
-		<pitch>
-			<property>/engines/engine[0]/n1</property>
-			<type>log</type>
-			<factor>1.2</factor>
-			<offset>0.10</offset>
-		</pitch>
-		<position>
-			<x>4.5</x>
-			<y>4.7</y>
-			<z>1.2</z>
-		</position>
-		<orientation>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>180</inner-angle>
-			<outer-angle>360</outer-angle>
-			<outer-gain>0.5</outer-gain>
-			<reference-dist>20</reference-dist>
-		</orientation>
-  </engine>
- 
-  <engine>
-		<name>startupTwo</name>
- 		<path>Sounds/whine.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<property>/engines/engine[1]/n1</property>
-			<or>
-				<and>
-					<not><property>/sim/current-view/internal</property></not>
-					<not>
-						<equals>
-							<property>/sim/current-view/name</property>
-							<value type="string">Passengers View</value>
-						</equals>
-					</not>
-					<not>
-						<equals>
-							<property>/sim/current-view/view-number</property>
-							<value>12</value>	
-						</equals>
-					</not>
-				</and>
-				<greater-than>
-					<property>/instrumentation/doors/pilotwin/position-norm</property>
-					<value>0.01</value>
-				</greater-than>
-			</or>
-		</condition>	   
-		<volume>
-			<property>/engines/engine[1]/n1</property>
-			<type>ln</type>
-			<factor>0.18</factor>
-			<offset>0.05</offset>
-		</volume>
-		<pitch>
-			<property>/engines/engine[1]/n1</property>
-			<type>log</type>
-			<factor>1.2</factor>
-			<offset>0.10</offset>
-		</pitch>
-		<position>
-			<x>4.5</x>
-			<y>4.7</y>
-			<z>1.2</z>
-		</position>
-		<orientation>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>180</inner-angle>
-			<outer-angle>360</outer-angle>
-			<outer-gain>0.5</outer-gain>
-			<reference-dist>20</reference-dist>
-		</orientation>
-  </engine>
- 
-  <engine>
-		<name>startupThree</name>
- 		<path>Sounds/whine.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<property>/engines/engine[2]/n1</property>
-			<or>
-				<and>
-					<not><property>/sim/current-view/internal</property></not>
-					<not>
-						<equals>
-							<property>/sim/current-view/name</property>
-							<value type="string">Passengers View</value>
-						</equals>
-					</not>
-					<not>
-						<equals>
-							<property>/sim/current-view/view-number</property>
-							<value>12</value>	
-						</equals>
-					</not>
-				</and>
-				<greater-than>
-					<property>/instrumentation/doors/copilotwin/position-norm</property>
-					<value>0.01</value>
-				</greater-than>
-			</or>
-		</condition>	    
-		<volume>
-			<property>/engines/engine[2]/n1</property>
-			<type>ln</type>
-			<factor>0.18</factor>
-			<offset>0.05</offset>
-		</volume>
-		<pitch>
-			<property>/engines/engine[2]/n1</property>
-			<type>log</type>
-			<factor>1.2</factor>
-			<offset>0.10</offset>
-		</pitch>
-		<position>
-			<x>4.5</x>
-			<y>4.7</y>
-			<z>1.2</z>
-		</position>
-		<orientation>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>180</inner-angle>
-			<outer-angle>360</outer-angle>
-			<outer-gain>0.5</outer-gain>
-			<reference-dist>20</reference-dist>
-		</orientation>
-  </engine>
-
-  <engine>
-		<name>startupFour</name>
- 		<path>Sounds/whine.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<property>/engines/engine[3]/n1</property>
-			<or>
-				<and>
-					<not><property>/sim/current-view/internal</property></not>
-					<not>
-						<equals>
-							<property>/sim/current-view/name</property>
-							<value type="string">Passengers View</value>
-						</equals>
-					</not>
-					<not>
-						<equals>
-							<property>/sim/current-view/view-number</property>
-							<value>12</value>	
-						</equals>
-					</not>
-				</and>
-				<greater-than>
-					<property>/instrumentation/doors/copilotwin/position-norm</property>
-					<value>0.01</value>
-				</greater-than>
-			</or>
-		</condition>	   
-		<volume>
-			<property>/engines/engine[3]/n1</property>
-			<type>ln</type>
-			<factor>0.18</factor>
-			<offset>0.05</offset>
-		</volume>
-		<pitch>
-			<property>/engines/engine[3]/n1</property>
-			<type>log</type>
-			<factor>1.2</factor>
-			<offset>0.10</offset>
-		</pitch>
-		<position>
-			<x>4.5</x>
-			<y>4.7</y>
-			<z>1.2</z>
-		</position>
-		<orientation>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>180</inner-angle>
-			<outer-angle>360</outer-angle>
-			<outer-gain>0.5</outer-gain>
-			<reference-dist>20</reference-dist>
-		</orientation>
-  </engine>
-
-<!-- Internal Sounds -->
-  <engine>
-		<name>TheOne</name>
- 		<path>Sounds/whine.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<property>/engines/engine[0]/n1</property>
-			<or>
-				<property>/sim/current-view/internal</property>
-				<equals>
-					<property>/sim/current-view/name</property>
-					<value type="string">Passengers View</value>
-				</equals>
-			</or>
-		</condition>	   
-		<volume>
-			<property>/engines/engine[0]/n1</property>
-			<type>ln</type>
-			<factor>0.008</factor>
-			<offset>0.07</offset>
-		</volume>
-		<pitch>
-			<property>/engines/engine[0]/n1</property>
-			<type>log</type>
-			<factor>1.2</factor>
-			<offset>0.10</offset>
-		</pitch>
-		<position>
-			<x>4.5</x>
-			<y>4.7</y>
-			<z>1.2</z>
-		</position>
-		<orientation>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>180</inner-angle>
-			<outer-angle>360</outer-angle>
-			<outer-gain>0.5</outer-gain>
-			<reference-dist>20</reference-dist>
-		</orientation>
-  </engine>
-  
-  <engine>
-		<name>TheTwo</name>
- 		<path>Sounds/whine.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<property>/engines/engine[1]/n1</property>			
-			<or>
-				<property>/sim/current-view/internal</property>
-				<equals>
-					<property>/sim/current-view/name</property>
-					<value type="string">Passengers View</value>
-				</equals>
-			</or>
-		</condition>	   
-		<volume>
-			<property>/engines/engine[1]/n1</property>
-			<type>ln</type>
-			<factor>0.008</factor>
-			<offset>0.07</offset>
-		</volume>
-		<pitch>
-			<property>/engines/engine[1]/n1</property>
-			<type>log</type>
-			<factor>1.2</factor>
-			<offset>0.10</offset>
-		</pitch>
-		<position>
-			<x>4.5</x>
-			<y>4.7</y>
-			<z>1.2</z>
-		</position>
-		<orientation>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>180</inner-angle>
-			<outer-angle>360</outer-angle>
-			<outer-gain>0.5</outer-gain>
-			<reference-dist>20</reference-dist>
-		</orientation>
-  </engine>
-  
-  <engine>
-		<name>TheThree</name>
- 		<path>Sounds/whine.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<property>/engines/engine[2]/n1</property>			
-			<or>
-				<property>/sim/current-view/internal</property>
-				<equals>
-					<property>/sim/current-view/name</property>
-					<value type="string">Passengers View</value>
-				</equals>
-			</or>
-		</condition>	   
-		<volume>
-			<property>/engines/engine[2]/n1</property>
-			<type>ln</type>
-			<factor>0.008</factor>
-			<offset>0.07</offset>
-		</volume>
-		<pitch>
-			<property>/engines/engine[2]/n1</property>
-			<type>log</type>
-			<factor>1.2</factor>
-			<offset>0.10</offset>
-		</pitch>
-		<position>
-			<x>4.5</x>
-			<y>4.7</y>
-			<z>1.2</z>
-		</position>
-		<orientation>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>180</inner-angle>
-			<outer-angle>360</outer-angle>
-			<outer-gain>0.5</outer-gain>
-			<reference-dist>20</reference-dist>
-		</orientation>
-  </engine>
-  
-  <engine>
-		<name>TheFour</name>
- 		<path>Sounds/whine.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<property>/engines/engine[3]/n1</property>			
-			<or>
-				<property>/sim/current-view/internal</property>
-				<equals>
-					<property>/sim/current-view/name</property>
-					<value type="string">Passengers View</value>
-				</equals>
-			</or>
-		</condition>	   
-		<volume>
-			<property>/engines/engine[3]/n1</property>
-			<type>ln</type>
-			<factor>0.008</factor>
-			<offset>0.07</offset>
-		</volume>
-		<pitch>
-			<property>/engines/engine[3]/n1</property>
-			<type>log</type>
-			<factor>1.2</factor>
-			<offset>0.10</offset>
-		</pitch>
-		<position>
-			<x>4.5</x>
-			<y>4.7</y>
-			<z>1.2</z>
-		</position>
-		<orientation>
-			<x>-1 </x>
-			<y> 0 </y>
-			<z> 0 </z>
-			<inner-angle>180</inner-angle>
-			<outer-angle>360</outer-angle>
-			<outer-gain>0.5</outer-gain>
-			<reference-dist>20</reference-dist>
-		</orientation>
-  </engine>
 
 <!-- engines on work -->
 
@@ -424,14 +31,14 @@
 					<property>/engines/engine[0]/running</property>
 					<greater-than>
 						<property>/engines/engine[0]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[1]/running</property>
 					<greater-than>
 						<property>/engines/engine[1]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -468,14 +75,14 @@
 					<property>/engines/engine[0]/running</property>
 					<greater-than>
 						<property>/engines/engine[0]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[1]/running</property>
 					<greater-than>
 						<property>/engines/engine[1]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -514,14 +121,14 @@
 					<property>/engines/engine[0]/running</property>
 					<greater-than>
 						<property>/engines/engine[0]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[1]/running</property>
 					<greater-than>
 						<property>/engines/engine[1]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -560,14 +167,14 @@
 					<property>/engines/engine[2]/running</property>
 					<greater-than>
 						<property>/engines/engine[2]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[3]/running</property>
 					<greater-than>
 						<property>/engines/engine[3]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -604,14 +211,14 @@
 					<property>/engines/engine[2]/running</property>
 					<greater-than>
 						<property>/engines/engine[2]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[3]/running</property>
 					<greater-than>
 						<property>/engines/engine[3]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -650,14 +257,14 @@
 					<property>/engines/engine[2]/running</property>
 					<greater-than>
 						<property>/engines/engine[2]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[3]/running</property>
 					<greater-than>
 						<property>/engines/engine[3]/n1</property>
-						<value>30</value>
+						<value>20</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -1771,7 +1378,7 @@
 				</greater-than>
 				<less-than>
 					<property>/b707/hydraulic/rudder</property>
-					<value>3009</value>
+					<value>2009</value>
 				</less-than>
 		   </and>
      </condition>
@@ -1781,7 +1388,7 @@
       <pitch>
         <property>/b707/hydraulic/rudder</property>
         <factor>0.5</factor>
-        <offset>3009</offset>
+        <offset>2009</offset>
       </pitch>
     </aux-pump>
     
