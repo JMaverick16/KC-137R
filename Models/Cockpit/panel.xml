@@ -485,15 +485,15 @@
       </offsets>
     </model>
 	
-	<model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/ndset.xml</path>
+	<!--model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/</path>
 		<offsets>
 			<x-m>-18.85</x-m>
 			<y-m>-0.0</y-m>
 			<z-m>0.729</z-m>
 			<pitch-deg>-70</pitch-deg>
 		</offsets>
-	</model>
+	</model-->
 	
   	<!--model>
       <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/comm1.xml</path>
