@@ -192,9 +192,9 @@
   <name>reverser_warning_lights</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/reverser.xml</path>
   <offsets>
-      <x-m>-18.92</x-m>
-      <y-m> 0.0</y-m>
-      <z-m> 0.985</z-m>
+      <x-m>-18.918</x-m>
+      <y-m> 0.08</y-m>
+      <z-m> 1.01</z-m>
   </offsets>
 </model>
 
@@ -229,12 +229,22 @@
 </model>
 
 <model>
+  <name>altm</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/altm/altm.xml</path>
+  <offsets>
+      <x-m>-18.92</x-m>
+      <y-m>-0.141</y-m>
+      <z-m> 0.853</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>EICAS</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS/EICAS.xml</path>
   <offsets>
       <x-m>-18.919</x-m>
       <y-m>-0.015</y-m>
-      <z-m> 0.90</z-m>
+      <z-m> 0.91</z-m>
   </offsets>
 </model>
 
@@ -244,7 +254,7 @@
   <offsets>
       <x-m>-18.919</x-m>
       <y-m>-0.015</y-m>
-      <z-m> 0.85</z-m>
+      <z-m> 0.795</z-m>
   </offsets>
 </model>
 
@@ -259,8 +269,8 @@
 </model>
 
 <model>
-  <name>oil_and_flaps_warning</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/oil_and_flaps.xml</path>
+  <name>spoiler_and_flaps_warning</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/spoiler_and_flaps.xml</path>
   <offsets>
     <x-m>-18.924</x-m>
     <y-m>  0.093</y-m>
@@ -425,9 +435,9 @@
   <name>apset</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apset/apset.xml</path>
   <offsets>
-      <x-m>-18.812</x-m>
+      <x-m>-18.8121</x-m>
       <y-m>-0.03</y-m>
-      <z-m> 1.05</z-m>
+      <z-m> 1.052</z-m>
   </offsets>
 </model>
 
@@ -442,7 +452,7 @@
 </model>
 
 <!-- middle pedestal -->
-  	<model>
+  	<!--model>
       <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/comm1.xml</path>
       <offsets>
           <x-m>-18.885</x-m>
@@ -497,7 +507,7 @@
             <z-m>0.708</z-m>
             <pitch-deg>-70</pitch-deg>
         </offsets>
-    </model>
+    </model-->
 	
 	 <model>
 	    <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/tacan.xml</path>
@@ -533,7 +543,7 @@
 		</offsets>
 	 </model>
 
-	<model>
+	<!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar.xml</path>
 		<offsets>
 			<x-m>-18.85</x-m>
@@ -541,7 +551,7 @@
 			<z-m>0.729</z-m>
 			<pitch-deg>-70</pitch-deg>
 		</offsets>
-	</model>
+	</model-->
 
 </PropertyList>
 

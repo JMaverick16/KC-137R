@@ -98,6 +98,13 @@
 					</binding>
 				</item>
 				<item>
+					<label>Toggle Refuelling Boom/Drogues</label>
+					<binding>
+							<command>nasal</command>
+							<script>b707.toggleRefuelling();</script>
+					</binding>
+				</item>
+				<item>
 					<label>--- Registration ---</label>
 					<enabled>false</enabled>
 				</item>
