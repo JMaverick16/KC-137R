@@ -12,6 +12,19 @@
   <z-offset>0.90</z-offset>
  </animation>
 
+	<!-- Power on/off -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation>  
+
  <animation>
         <type>rotate</type>
         <object-name>Roll.needle</object-name>

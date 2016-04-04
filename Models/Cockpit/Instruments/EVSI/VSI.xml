@@ -16,7 +16,20 @@
     <inherits-from>Aircraft/737-100/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-  
+ 
+	<!-- Power on/off -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation> 
+
   <animation>
     <type>material</type>
     <object-name>face</object-name>

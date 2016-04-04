@@ -3,8 +3,27 @@ MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 
 MATERIAL "transparent" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "transparent" rgb 0.349 0.349 0.349  amb 0.486275 0.486275 0.486275  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "ac3dmat3" rgb 1 0 0  amb 1 0 0  emis 1 0 0  spec 1 0 0  shi 128  trans 0
+MATERIAL "DefaultWhite.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 64  trans 0
 OBJECT world
-kids 6
+kids 7
+OBJECT poly
+name "Off"
+loc 5.54037e-005 0.000176087 6.15485e-005
+crease 45.000000
+numvert 4
+0 0.0398161 -0.0405944
+0 -0.0398161 -0.0405944
+0 -0.0398161 0.0405944
+0 0.0398161 0.0405944
+numsurf 1
+SURF 0x10
+mat 4
+refs 4
+1 0.879687 0.45
+0 0.879687 0.55
+3 0.979688 0.55
+2 0.979688 0.45
+kids 0
 OBJECT poly
 name "needlevs"
 loc 6.35565e-005 0 -9.83365e-005
