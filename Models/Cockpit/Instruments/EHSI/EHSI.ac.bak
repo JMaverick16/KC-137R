@@ -3,73 +3,10 @@ MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0
 MATERIAL "DefaultWhite.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 64  trans 0
 MATERIAL "glow.002" rgb 1 1 1  amb 0.5 0.5 0.5  emis 1 1 1  spec 0.960784 0.00392157 0.0392157  shi 32  trans 0
 OBJECT world
-kids 27
-OBJECT poly
-name "cHdgDigit3"
-loc 0 0.0163902 0.0282993
-data 9
-Plane.082
-texture "digits2.rgb"
-crease 30.000000
-numvert 4
-0.001548 0.045319 -0.031774
-0.001548 0.035023 -0.031774
-0.001548 0.035023 -0.038331
-0.001548 0.045319 -0.038331
-numsurf 1
-SURF 0x0
-mat 2
-refs 4
-3 0.248159 0.0946916
-0 0.194039 0.0946916
-1 0.194039 0.00972338
-2 0.248159 0.00972338
-kids 0
-OBJECT poly
-name "cHdgDigit1"
-loc 0 0.0163902 0.0414663
-data 9
-Plane.082
-texture "digits2.rgb"
-crease 30.000000
-numvert 4
-0.001548 0.045319 -0.038331
-0.001548 0.035023 -0.038331
-0.001548 0.035023 -0.031774
-0.001548 0.045319 -0.031774
-numsurf 1
-SURF 0x0
-mat 2
-refs 4
-0 0.248159 0.0946916
-3 0.194039 0.0946916
-2 0.194039 0.00972338
-1 0.248159 0.00972338
-kids 0
-OBJECT poly
-name "cHdgDigit2"
-loc 0 0.0163902 0.0349091
-data 9
-Plane.082
-texture "digits2.rgb"
-crease 30.000000
-numvert 4
-0.001548 0.045319 -0.031774
-0.001548 0.035023 -0.031774
-0.001548 0.035023 -0.038331
-0.001548 0.045319 -0.038331
-numsurf 1
-SURF 0x0
-mat 2
-refs 4
-3 0.248159 0.0946916
-0 0.194039 0.0946916
-1 0.194039 0.00972338
-2 0.248159 0.00972338
-kids 0
+kids 24
 OBJECT poly
 name "Background"
-loc 0 0.00446936 0
+loc 0 -0.00486831 0
 crease 45.000000
 numvert 4
 0 0.0592443 0.0661535
@@ -87,7 +24,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Off"
-loc 0.00254817 0.00991981 0
+loc 0.00283484 0.000582147 0
 crease 45.000000
 numvert 4
 0 0.0537938 0.0661535
@@ -105,7 +42,7 @@ refs 4
 kids 0
 OBJECT poly
 name "block"
-loc -6.63958e-005 0.00987174 4.57838e-006
+loc -6.63958e-005 0.00053407 4.57838e-006
 crease 45.000000
 numvert 56
 -0.0665173 -0.0576287 -0.0708675
@@ -668,7 +605,6 @@ refs 3
 kids 0
 OBJECT poly
 name "CrsDigit1"
-loc 0 0.0152588 0.00331012
 data 9
 Plane.076
 texture "digits2.rgb"
@@ -689,7 +625,6 @@ refs 4
 kids 0
 OBJECT poly
 name "CrsDigit2"
-loc 0 0.0152749 0.00333776
 data 9
 Plane.088
 texture "digits2.rgb"
@@ -710,7 +645,6 @@ refs 4
 kids 0
 OBJECT poly
 name "CrsDigit3"
-loc 0 0.0152588 0.00339085
 data 9
 Plane.089
 texture "digits2.rgb"
@@ -833,7 +767,6 @@ refs 4
 kids 0
 OBJECT poly
 name "DMEDigit1"
-loc 0 0.00324384 0.00315572
 data 9
 Plane.141
 texture "digits2.rgb"
@@ -854,7 +787,6 @@ refs 4
 kids 0
 OBJECT poly
 name "DMEDigit2"
-loc 0 0.00315578 0.00317467
 data 9
 Plane.142
 texture "digits2.rgb"
@@ -875,7 +807,6 @@ refs 4
 kids 0
 OBJECT poly
 name "DMEDigit3"
-loc 0 0.00315572 0.00315572
 data 9
 Plane.143
 texture "digits2.rgb"
@@ -896,7 +827,6 @@ refs 4
 kids 0
 OBJECT poly
 name "GspdDigit1"
-loc 0 0.0152064 -0.00506264
 data 9
 Plane.081
 texture "digits2.rgb"
@@ -917,7 +847,6 @@ refs 4
 kids 0
 OBJECT poly
 name "GspdDigit2"
-loc 0 0.0152641 -0.00506264
 data 9
 Plane.086
 texture "digits2.rgb"
@@ -938,7 +867,6 @@ refs 4
 kids 0
 OBJECT poly
 name "GspdDigit3"
-loc 0 0.0152641 -0.00506265
 data 9
 Plane.087
 texture "digits2.rgb"
@@ -1006,7 +934,6 @@ refs 4
 kids 0
 OBJECT poly
 name "HdgDigit1"
-loc 0 0.00339085 -0.00573215
 data 9
 Plane.082
 texture "digits2.rgb"
@@ -1027,7 +954,6 @@ refs 4
 kids 0
 OBJECT poly
 name "HdgDigit2"
-loc 0 0.00343934 -0.00572013
 data 9
 Plane.090
 texture "digits2.rgb"
@@ -1048,7 +974,6 @@ refs 4
 kids 0
 OBJECT poly
 name "HdgDigit3"
-loc 0 0.00342103 -0.00573216
 data 9
 Plane.091
 texture "digits2.rgb"
@@ -1069,7 +994,6 @@ refs 4
 kids 0
 OBJECT poly
 name "LabelCrs"
-loc 0 0.0151257 0.0030469
 data 9
 Plane.075
 texture "hsi.rgb"
@@ -1090,7 +1014,6 @@ refs 4
 kids 0
 OBJECT poly
 name "LabelDME"
-loc 0 0.00315572 0.00315572
 data 9
 Plane.152
 texture "hsi.rgb"
@@ -1111,7 +1034,6 @@ refs 4
 kids 0
 OBJECT poly
 name "LabelGspd"
-loc 0 0.0150613 -0.00500563
 data 9
 Plane.071
 texture "hsi.rgb"
@@ -1132,7 +1054,6 @@ refs 4
 kids 0
 OBJECT poly
 name "LabelHdg"
-loc 0 0.00337341 -0.00630681
 data 9
 Plane.085
 texture "hsi.rgb"

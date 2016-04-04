@@ -235,7 +235,7 @@ no. D6-3071-00
 		</text>
 	</help>
   <view n="105">
-    <name>Operator Officer</name>
+    <name>Boom Officer</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
     <internal type="bool">true</internal>
