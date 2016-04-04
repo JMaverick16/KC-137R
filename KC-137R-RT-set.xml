@@ -281,7 +281,12 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/registration.nas</file>
 			<file>Aircraft/KC-137R/Nasal/manual.nas</file>
+			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND.nas</file>
 		</b707>
+		
+		<m877>
+			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
+		</m877>
 
 	    <dual_control_tools>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/dual-control-tools.nas</file>

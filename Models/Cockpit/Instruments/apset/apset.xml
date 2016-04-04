@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>MCP.ac</path>
+
+	<animation>
+		<name>Heading hold knob pick</name>
+		<type>pick</type>
+		<object-name>HDG.knob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/autopilot/settings/heading-bug-deg</property>
+				<step>1</step>
+				<min>0</min>
+				<max>360</max>
+				<wrap>true</wrap>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/autopilot/settings/heading-bug-deg</property>
+				<step>-1</step>
+				<min>0</min>
+				<max>360</max>
+				<wrap>true</wrap>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>Vertical speed hold wheel</name>
+		<type>pick</type>
+		<object-name>Pitchwheel</object-name>
+		<action>
+			<button>0</button>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/autopilot/settings/vertical-speed-fpm</property>
+				<step type="double">100</step>
+				<max>6000</max>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/autopilot/settings/vertical-speed-fpm</property>
+				<step type="double">-100</step>
+				<min>-8000</min>
+			</binding>
+		</action>
+	</animation>
+	
+	
+</PropertyList>

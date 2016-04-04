@@ -25,7 +25,7 @@
 	
 	<model>
 		<name>bat</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/battery.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/battery.xml</path>
 		<offsets>
 		  <x-m>-0.0385</x-m>
 		  <y-m> 0.0</y-m>
@@ -35,7 +35,7 @@
 	
 	<model>
 		<name>gD1</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/genDrive1.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/genDrive1.xml</path>
 		<offsets>
 		  <x-m>-0.2639</x-m>
 		  <y-m> 0.0</y-m>
@@ -45,7 +45,7 @@
 	
 	<model>
 		<name>gD2</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/genDrive2.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/genDrive2.xml</path>
 		<offsets>
 		  <x-m>-0.2059</x-m>
 		  <y-m> 0.0</y-m>
@@ -55,7 +55,7 @@
 	
 	<model>
 		<name>gD3</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/genDrive3.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/genDrive3.xml</path>
 		<offsets>
 		  <x-m>-0.1488</x-m>
 		  <y-m> 0.0</y-m>
@@ -65,7 +65,7 @@
 	
 	<model>
 		<name>gD4</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/genDrive4.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/genDrive4.xml</path>
 		<offsets>
 		  <x-m>-0.0905</x-m>
 		  <y-m> 0.0</y-m>
@@ -75,7 +75,7 @@
 
 	<model>
 		<name>groundConnect</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/extPower.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/extPower.xml</path>
 		<offsets>
 		  <x-m>-0.0176</x-m>
 		  <y-m> 0.0</y-m>
@@ -85,7 +85,7 @@
 
 	<model>
 		<name>essentialPower</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/essPower.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/essPower.xml</path>
 		<offsets>
 		  <x-m> 0.0026</x-m>
 		  <y-m> 0.0</y-m>
@@ -95,7 +95,7 @@
 	
 	<model>
 		<name>ACParalleling</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/acParallel.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/acParallel.xml</path>
 		<offsets>
 		  <x-m>-0.022</x-m>
 		  <y-m> 0.0</y-m>
@@ -105,7 +105,7 @@
 
 	<model>
 		<name>g1</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/generator1.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/generator1.xml</path>
 		<offsets>
 		  <x-m>-0.264</x-m>
 		  <y-m> 0.0</y-m>
@@ -115,7 +115,7 @@
 	
 	<model>
 		<name>g2</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/generator2.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/generator2.xml</path>
 		<offsets>
 		  <x-m>-0.207</x-m>
 		  <y-m> 0.0</y-m>
@@ -125,7 +125,7 @@
 	
 	<model>
 		<name>g3</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/generator3.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/generator3.xml</path>
 		<offsets>
 		  <x-m>-0.1497</x-m>
 		  <y-m> 0.0</y-m>
@@ -135,7 +135,7 @@
 	
 	<model>
 		<name>g4</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/generator4.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/generator4.xml</path>
 		<offsets>
 		  <x-m>-0.0915</x-m>
 		  <y-m> 0.0</y-m>
@@ -146,7 +146,7 @@
   <!-- Pressurization switches and knobs -->
 	<model>
 		<name>pressurizationSwitches</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/pressurization.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/pressurization.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
@@ -157,7 +157,7 @@
   <!-- Fuel Dump in  auxilliary panel -->
 	<model>
 		<name>fuelDump</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/fuelDump.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/fuelDump.xml</path>
 		<offsets>
 		  <x-m> 0.3935</x-m>
 		  <y-m> 0.0</y-m>
@@ -168,7 +168,7 @@
   <!-- Cabin rate of climb -->
 	<model>
 		<name>cabinClimb</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/cabinClimb/cabinClimb.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/cabinClimb/cabinClimb.xml</path>
 		<offsets>
 		  <x-m> 0.0682</x-m>
 		  <y-m>-0.0005</y-m>
@@ -179,7 +179,7 @@
   <!-- Cabin altitude -->
 	<model>
 		<name>cabinAlt</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/cabinAlt/alt.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/cabinAlt/alt.xml</path>
 		<offsets>
 		  <x-m> 0.127</x-m>
 		  <y-m>-0.0005</y-m>
@@ -190,7 +190,7 @@
   <!-- Cabin differential pressure -->
 	<model>
 		<name>cabinPress</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/cabinPress/cabinPress.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/cabinPress/cabinPress.xml</path>
 		<offsets>
 		  <x-m> 0.1866</x-m>
 		  <y-m>-0.0005</y-m>
@@ -201,7 +201,7 @@
   <!-- Air Conditioning -->
 	<model>
 		<name>airCond</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airConditioning.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/airConditioning.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
@@ -212,7 +212,7 @@
   <!-- Air Compressor -->
 	<model>
 		<name>airComp1</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor1.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor1.xml</path>
 		<offsets>
 		  <x-m> 0.067</x-m>
 		  <y-m>-0.0005</y-m>
@@ -222,7 +222,7 @@
 	
 	<model>
 		<name>airComp2</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor2.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor2.xml</path>
 		<offsets>
 		  <x-m> 0.123</x-m>
 		  <y-m>-0.0005</y-m>
@@ -232,7 +232,7 @@
 	
 	<model>
 		<name>airComp3</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor3.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/airCompressor/airCompressor3.xml</path>
 		<offsets>
 		  <x-m> 0.179</x-m>
 		  <y-m>-0.0005</y-m>
@@ -243,7 +243,7 @@
   <!-- Air Supply -->
 	<model>
 		<name>airSupply</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/airSupply/airSupply.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/airSupply/airSupply.xml</path>
 		<offsets>
 		  <x-m> 0.0682</x-m>
 		  <y-m>-0.0005</y-m>
@@ -254,7 +254,7 @@
   <!-- cabin comnditioned air in inches of water -->
 	<model>
 		<name>cabinTemperature</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/inchesWater/inchesWater.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/inchesWater/inchesWater.xml</path>
 		<offsets>
 		  <x-m> 0.1841</x-m>
 		  <y-m>-0.0005</y-m>
@@ -265,7 +265,7 @@
   <!-- Cabin Temperature -->
 	<model>
 		<name>cabinTemperature</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/cabinTemp/cabinTemp.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/cabinTemp/cabinTemp.xml</path>
 		<offsets>
 		  <x-m> 0.2364</x-m>
 		  <y-m>-0.0005</y-m>

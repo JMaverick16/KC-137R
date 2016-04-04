@@ -24,7 +24,7 @@
 	
 	<model>
 		<name>transponder</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/transponder.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/transponder.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
@@ -34,7 +34,7 @@
 
 	<model>
 		<name>emer_lights</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/emerYawAndMore.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/emerYawAndMore.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
@@ -44,7 +44,7 @@
 	
 	<model>
 		<name>window_heat</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/windowHeat.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/windowHeat.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
@@ -53,8 +53,18 @@
 	</model>
 	
 	<model>
+		<name>fuel</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/fuel/fuel.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.0985</y-m>
+		  <z-m>-0.115</z-m>
+		</offsets>
+	</model>
+	
+	<model>
 		<name>wing_anti_ice</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/wingAntiIce.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/wingAntiIce.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
@@ -64,7 +74,7 @@
 
 	<model>
 		<name>grd_start_and_more</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/grdStartAndMore.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/grdStartAndMore.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
@@ -74,17 +84,27 @@
 
 	<model>
 		<name>light_and_wiper</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/lightAndWiper.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/lightAndWiper.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
 		  <z-m> 0.0</z-m>
 		</offsets>
 	</model>
-	
+
+	<model>
+		<name>firewarning_lamps</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/firewarning/firewarning.xml</path>
+		<offsets>
+		  <x-m> 0.02</x-m>
+		  <y-m> 0.0</y-m>
+		  <z-m> 0.16</z-m>
+		</offsets>
+	</model>
+
 	<model>
 		<name>starter_switch_1</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch1.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch1.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m>-0.0885</y-m>
@@ -94,7 +114,7 @@
 	
 	<model>
 		<name>starter_switch_2</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch2.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch2.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m>-0.0222</y-m>
@@ -104,7 +124,7 @@
 		
 	<model>
 		<name>starter_switch_3</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch3.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch3.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0393</y-m>
@@ -114,7 +134,7 @@
 		
 	<model>
 		<name>starter_switch_4</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch4.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/starter_switches/starter_switch4.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.1033</y-m>
@@ -124,7 +144,7 @@
 		
 	<model>
 		<name>compass_control_1</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/oh_panel/compass_control/compass_control.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/compass_control/compass_control.xml</path>
 		<offsets>
 		  <x-m> 0.0</x-m>
 		  <y-m> 0.0</y-m>
