@@ -252,7 +252,7 @@
   <name>ND</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_L.xml</path>
   <offsets>
-      <x-m>-18.919</x-m>
+      <x-m>-18.92</x-m>
       <y-m>-0.015</y-m>
       <z-m> 0.795</z-m>
   </offsets>
@@ -586,6 +586,16 @@
 		</offsets>
 	 </model>
 
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis.xml</path>
+		<offsets>
+			<x-m>-18.85</x-m>
+			<y-m>-0.0</y-m>
+			<z-m>0.729</z-m>
+			<pitch-deg>-70</pitch-deg>
+		</offsets>
+	</model>
+	 
 	<!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar.xml</path>
 		<offsets>

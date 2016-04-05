@@ -1,8 +1,27 @@
 AC3Db
 MATERIAL "DefaultWhite.004" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "screws" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 16  trans 0
+MATERIAL "DefaultWhite.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 64  trans 0
 OBJECT world
-kids 7
+kids 8
+OBJECT poly
+name "Off"
+loc 0.00283484 -0.00759623 -0.000183722
+crease 45.000000
+numvert 4
+0 0.0108975 -0.0237137
+0 -0.0108975 -0.0237137
+0 -0.0108975 0.0237137
+0 0.0108975 0.0237137
+numsurf 1
+SURF 0x10
+mat 2
+refs 4
+1 0.879687 0.45
+0 0.879687 0.55
+3 0.979688 0.55
+2 0.979688 0.45
+kids 0
 OBJECT poly
 name "FuelT1"
 data 8

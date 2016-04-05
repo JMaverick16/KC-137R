@@ -49,7 +49,8 @@ var _list = setlistener("sim/signals/fdm-initialized", func() {
 	var ND = canvas.NavDisplay;
 
 	## TODO: We want to support multiple independent ND instances here!
-	# foreach(var pilot; var pilots = [ {name:'cpt', path:'instrumentation/efis']) {
+	# foreach(var pilot; var pilots = [ {name:'cpt', path:'instrumentation/efis',
+	#				     name:'fo',  path:'instrumentation[1]/efis']) {
 
 
 	##
@@ -78,6 +79,11 @@ var _list = setlistener("sim/signals/fdm-initialized", func() {
 		"mipmapping": 1
 	});
 
+	# nd_display.fo.addPlacement({"node": "ND.screenR"});
+	# var group = nd_display.fo.createGroup();
+	# NDFo.newMFD(group, nd_display.fo);
+	# NDFo.update();
+	
 	removelistener(_list); # run ONCE
 }); # fdm-initialized listener callback
 
