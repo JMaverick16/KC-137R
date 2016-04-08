@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--###################################################################################
 		Lake of Constance Hangar :: M.Kraus
-		Boeing 707 for Flightgear Septemper 2013
+		Boeing 707 for Flightgear Septemper 013
 		This file is licenced under the terms of the GNU General Public Licence V2 or later
 		###################################################################################
 -->
@@ -31,14 +31,14 @@
 					<property>/engines/engine[0]/running</property>
 					<greater-than>
 						<property>/engines/engine[0]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[1]/running</property>
 					<greater-than>
 						<property>/engines/engine[1]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -75,14 +75,14 @@
 					<property>/engines/engine[0]/running</property>
 					<greater-than>
 						<property>/engines/engine[0]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[1]/running</property>
 					<greater-than>
 						<property>/engines/engine[1]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -121,14 +121,14 @@
 					<property>/engines/engine[0]/running</property>
 					<greater-than>
 						<property>/engines/engine[0]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[1]/running</property>
 					<greater-than>
 						<property>/engines/engine[1]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -167,14 +167,14 @@
 					<property>/engines/engine[2]/running</property>
 					<greater-than>
 						<property>/engines/engine[2]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[3]/running</property>
 					<greater-than>
 						<property>/engines/engine[3]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -211,14 +211,14 @@
 					<property>/engines/engine[2]/running</property>
 					<greater-than>
 						<property>/engines/engine[2]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[3]/running</property>
 					<greater-than>
 						<property>/engines/engine[3]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -257,14 +257,14 @@
 					<property>/engines/engine[2]/running</property>
 					<greater-than>
 						<property>/engines/engine[2]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>
 				<and>
 					<property>/engines/engine[3]/running</property>
 					<greater-than>
 						<property>/engines/engine[3]/n1</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				</and>     
 			</or>
@@ -486,14 +486,14 @@
 			<and>
 				<greater-than>
 					<property>/b707/ess-bus</property>
-					<value>20</value>
+					<value>0</value>
 				</greater-than>
 				<or>
 					<property>/controls/test/warn-knob</property>
 					<and>
 						<less-than>
 							<property>/velocities/airspeed-kt</property>
-							<value>120.0</value>
+							<value>10.0</value>
 						</less-than>
 						<greater-than>
 							<property>/position/altitude-agl-ft</property>
@@ -520,7 +520,7 @@
         <and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 					<or>
 						<and>
@@ -555,7 +555,7 @@
       	<and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 		    	<or>
 						<property>/controls/test/warn-knob</property>
@@ -579,7 +579,7 @@
         <and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				  <property>/instrumentation/aglradar/power-btn</property>
 				  <property>/instrumentation/aglradar/mda-lamp</property>
@@ -598,7 +598,7 @@
         <and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				<property>/b707/warning/ice</property>
 				<not><property>/b707/pressurization/alt-cutout-horn</property></not>
@@ -617,7 +617,7 @@
         <and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				 	<property>/b707/call/no-smoking</property>
 				</and>
@@ -635,7 +635,7 @@
         <and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 				  <property>/b707/call/seat-belts</property>
 				</and>
@@ -653,7 +653,7 @@
         <and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 					<property>/b707/call/crew-call</property>
 				</and>
@@ -671,7 +671,7 @@
         <and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 					<property>/b707/call/cabin-attend</property>
 				</and>
@@ -689,7 +689,7 @@
         <and>
 					<greater-than>
 						<property>/b707/ess-bus</property>
-						<value>20</value>
+						<value>0</value>
 					</greater-than>
 					<property>/b707/call/pers-accom</property>
 				</and>
@@ -1378,7 +1378,7 @@
 				</greater-than>
 				<less-than>
 					<property>/b707/hydraulic/rudder</property>
-					<value>2009</value>
+					<value>009</value>
 				</less-than>
 		   </and>
      </condition>
@@ -1388,7 +1388,7 @@
       <pitch>
         <property>/b707/hydraulic/rudder</property>
         <factor>0.5</factor>
-        <offset>2009</offset>
+        <offset>009</offset>
       </pitch>
     </aux-pump>
     
@@ -1404,7 +1404,7 @@
 				</greater-than>
 				<less-than>
 					<property>/b707/hydraulic/system</property>
-					<value>2205</value>
+					<value>205</value>
 				</less-than>
 		   </and>
      </condition>
@@ -1414,7 +1414,7 @@
       <pitch>
         <property>/b707/hydraulic/system</property>
         <factor>0.5</factor>
-        <offset>2000</offset>
+        <offset>000</offset>
       </pitch>
     </hyd-pump>
     

@@ -259,7 +259,7 @@ var update_virtual_bus = func {
 		  if(battery.switch.getBoolValue()){		  
 				if (EssPwr.getValue() == 5 and ExternalConnected.getBoolValue()){
 					  power_source = "External Power";
-					  essdcbus_volts = 27.5;
+					  essdcbus_volts = 29.5;
 						EssSourceFailure.setBoolValue(0);
 					  #recharge
 					  if(essdcbus_volts > battery.actual_volts.getValue()){
@@ -612,9 +612,9 @@ var ac_sync = func{
 				# External Power		
 				}elsif(ACSelector.getValue() == 6 and EssPwr.getValue() == 5 ){
 				  var extGCcon = getprop("/b707/external-power-connected") or 0;
-				  if(extGCcon and ACSelVolts.getValue() != 27.5){
+				  if(extGCcon and ACSelVolts.getValue() != 29.5){
 						interpolate("/b707/ac-sel-para-freq", EssFreq.getValue(), 1.2);
-						ACSelVolts.setValue(27.5);
+						ACSelVolts.setValue(29.5);
 					}
 					sync_lamp(EssFreq.getValue(),EssFreq.getValue());
 				  
