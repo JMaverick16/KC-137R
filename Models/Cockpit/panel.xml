@@ -463,27 +463,33 @@
 
 <!-- middle pedestal -->
 
-  	<model>
+  	<!--model>
 	  <name>FMC1</name>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/CDU/boeing.xml</path>
+	  <path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
       <offsets>
           <x-m>-18.833</x-m>
           <y-m>-0.12</y-m>
           <z-m>0.727</z-m>
           <pitch-deg>-70</pitch-deg>
       </offsets>
-    </model>
+		<overlay>
+			<texture>boeing_grey.png</texture>
+		</overlay>
+    </model-->
 	
-  	<model>
+  	<!--model>
 	  <name>FMC2</name>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/CDU/boeing.xml</path>
+	  <path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
       <offsets>
           <x-m>-18.833</x-m>
           <y-m> 0.12</y-m>
           <z-m>0.727</z-m>
           <pitch-deg>-70</pitch-deg>
       </offsets>
-    </model>
+		<overlay>
+			<texture>boeing_grey.png</texture>
+		</overlay>
+    </model-->
 	
 	<!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/</path>
@@ -496,15 +502,16 @@
 	</model-->
 	
   	<!--model>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/comm1.xml</path>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radioo/comm1.xml</path>
       <offsets>
-          <x-m>-18.885</x-m>
-          <y-m>-0.12</y-m>
-          <z-m>0.746</z-m>
-          <pitch-deg>-70</pitch-deg>
+		  <x-m>-18.49</x-m>
+		  <y-m> -0.05</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>-90</pitch-deg>
       </offsets>
-    </model>
-  	<model>
+    </model-->
+	
+  	<!--model>
       <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/comm2.xml</path>
       <offsets>
           <x-m>-18.885</x-m>
@@ -586,7 +593,7 @@
 		</offsets>
 	 </model>
 
-	<model>
+	<!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis.xml</path>
 		<offsets>
 			<x-m>-18.85</x-m>
@@ -594,7 +601,7 @@
 			<z-m>0.729</z-m>
 			<pitch-deg>-70</pitch-deg>
 		</offsets>
-	</model>
+	</model-->
 	 
 	<!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar.xml</path>

@@ -3,7 +3,7 @@ MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  sh
 MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "DefaultWhite.004" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "transparent" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
-MATERIAL "ac3dmat3" rgb 0.756863 0 0  amb 0.756863 0 0  emis 0.756863 0 0  spec 0.756863 0 0  shi 0  trans 0
+MATERIAL "ac3dmat3" rgb 0.756863 0 0  amb 0.756863 0 0  emis 0.756863 0 0  spec 0.756863 0 0  shi 128  trans 0
 OBJECT world
 kids 8
 OBJECT poly

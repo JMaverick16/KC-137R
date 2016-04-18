@@ -270,6 +270,16 @@ no. D6-3071-00
 	</view>
  </sim>
 
+    <instrumentation n="0">
+        <cdu n="0">
+            <ident n="0">
+                <model>KC-137R</model>
+                <engines>CFM LeapX</engines>
+            </ident>
+        </cdu>
+    </instrumentation>
+	
+	
 	<nasal>
 		<b707>
 			<file>Aircraft/KC-137R/Nasal/shake.nas</file>

@@ -30,7 +30,7 @@
 
 	<instrumentation>
     <path>Aircraft/KC-137R/Systems/instrumentation.xml</path>
-  </instrumentation>
+    </instrumentation>
   
   <model>
 	 <pushback>

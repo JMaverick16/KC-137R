@@ -7,19 +7,33 @@
   <type>material</type>
   <object-name>Face</object-name>
   <object-name>Needle1</object-name>
-  <object-name>Needle2</object-name>
   <object-name>Mach1</object-name>
   <object-name>Mach2</object-name>
 		<condition>
 			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
-			<red>0.6</red>
+			<red>0.4</red>
 			<green>0.4</green>
-			<blue>0.3</blue>
+			<blue>0.4</blue>
 			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 </animation>
+
+<animation>
+  <type>material</type>
+  <object-name>Needle2</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.6</red>
+			<green>0</green>
+			<blue>0</blue>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+</animation>
+
 
 <animation>
   <type>rotate</type>

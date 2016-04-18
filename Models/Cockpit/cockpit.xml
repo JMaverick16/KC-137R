@@ -455,17 +455,6 @@
 		</offsets>
 	</model>
 
-	 <!-- Radio Volume Switches this lights must be here, for lighting without pedestal shadow-->
-	 <model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/radio-volume.xml</path>
-		<name>radio_volume</name>
-		<offsets>   
-		  <x-m>-18.395</x-m>
-		  <y-m>  0.0</y-m>
-		  <z-m>  0.626</z-m>
-		</offsets>
-	 </model>
-
   <!-- this light must be here, for lighting without pedestal shadow -->
 	<model>
 		<name>ap_and_brake_lamps</name>

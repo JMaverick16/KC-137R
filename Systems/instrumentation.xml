@@ -132,5 +132,11 @@ The only reason it's here is to specify a second ADF.
 		  <encoder-path type="string">/instrumentation/altimeter</encoder-path>
 		  <kt70-compatibility type="bool">0</kt70-compatibility>
 		</transponder>
-
+		
+        <cdu n="0">
+            <ident n="0">
+                <model>KC-137</model>
+                <engines>CFM LeapX</engines>
+            </ident>
+        </cdu>
 </PropertyList>
