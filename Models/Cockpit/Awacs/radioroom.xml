@@ -54,7 +54,7 @@
 
     <model>
         <name>RAD1</name>
-        <path>Aircraft/707/Models/Cockpit/Awacs/radar/radar.xml</path>
+        <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/radar.xml</path>
         <offsets>
             <x-m>-11.20</x-m>
             <y-m>  0.117</y-m>
@@ -64,7 +64,7 @@
 
     <model>
         <name>RAD2</name>
-        <path>Aircraft/707/Models/Cockpit/Awacs/radar/radardata.xml</path>
+        <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/radardata.xml</path>
         <offsets>
             <x-m>-11.20</x-m>
             <y-m>  0.617</y-m>
@@ -74,7 +74,7 @@
     
     <model>
         <name>RAD3</name>
-        <path>Aircraft/707/Models/Cockpit/Awacs/radar/radarblind.xml</path>
+        <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/radarblind.xml</path>
         <offsets>
             <x-m>-11.20</x-m>
             <y-m>  1.117</y-m>

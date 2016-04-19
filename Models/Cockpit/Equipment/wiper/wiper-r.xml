@@ -19,7 +19,7 @@
 		<animation>
 		  <type>shader</type>
 		  <shader>chrome</shader>
-		  <texture>Aircraft/707/Models/Instruments/wiper/transparent.png</texture>
+		  <texture>Aircraft/KC-137R/Models/Instruments/wiper/transparent.png</texture>
 		  <object-name>wiperView</object-name>
 		</animation>
 		

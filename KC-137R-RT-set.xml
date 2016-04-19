@@ -19,6 +19,10 @@
       </livery>
   </model>
 
+  <instrument-options>
+	<canvas-popup-enable type="bool">true</canvas-popup-enable>
+  </instrument-options>
+  
   <multiplay>
     	<generic>
     		<int n="8">1</int>   <!-- engine type -->
@@ -95,6 +99,13 @@
 					<binding>
 						<command>property-toggle</command>
 		    		<property>b707/external-power-connected</property>
+					</binding>
+				</item>
+				<item>
+					<label>Toggle Refuelling Boom/Drogues</label>
+					<binding>
+							<command>nasal</command>
+							<script>b707.toggleRefuelling();</script>
 					</binding>
 				</item>
 				<item>
@@ -228,7 +239,7 @@ no. D6-3071-00
 		</text>
 	</help>
   <view n="105">
-    <name>Operator Officer</name>
+    <name>Boom Officer</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
     <internal type="bool">true</internal>
@@ -281,7 +292,14 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/registration.nas</file>
 			<file>Aircraft/KC-137R/Nasal/manual.nas</file>
+			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND.nas</file>
+			<file>Aircraft/KC-137R/Nasal/boeing_cdu.nas</file>
+			<!--file>Aircraft/KC-137R/Nasal/systems.nas</file-->
 		</b707>
+		
+		<m877>
+			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
+		</m877>
 
 	    <dual_control_tools>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/dual-control-tools.nas</file>

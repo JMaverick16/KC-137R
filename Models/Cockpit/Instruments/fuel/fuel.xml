@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<path>fuel.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>FuelT1</object-name>
+  <object-name>FuelT2</object-name>
+  <object-name>FuelT3</object-name>
+  <object-name>FuelT4</object-name>
+  <object-name>FuelT5</object-name>
+  <emission>
+    <red>1</red>
+    <green>1</green>
+    <blue>1</blue>
+  </emission>
+</animation>
+
+<!-- Power on/off -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation>
+
+<!-- Fuel Total Digits -->
+
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelT1</object-name>
+  <property>/consumables/fuel/total-fuel-lbs</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelT2</object-name>
+  <property>/consumables/fuel/total-fuel-lbs</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelT3</object-name>
+  <property>/consumables/fuel/total-fuel-lbs</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelT4</object-name>
+  <property>/consumables/fuel/total-fuel-lbs</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>FuelT5</object-name>
+  <property>/consumables/fuel/total-fuel-lbs</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+</PropertyList>
+
+

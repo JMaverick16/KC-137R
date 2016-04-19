@@ -329,7 +329,7 @@
 
 <model>
   <name>multis</name>
-  <path>Aircraft/707/Models/Cockpit/Instruments/radar/mps.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/mps.xml</path>
   <offsets>
     <x-m>0</x-m>
     <y-m>0</y-m>

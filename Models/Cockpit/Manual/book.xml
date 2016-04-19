@@ -329,7 +329,7 @@
 	<!-- page number -->
 	<model>
 	  <name>pageNumber</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.14</x-m>
 			<y-m>-0.10</y-m>
@@ -363,7 +363,7 @@
 	<!-- Title -->
 	<model>
 	  <name>pageTitle</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.086</x-m>
 			<y-m> 0.070</y-m>
@@ -397,7 +397,7 @@
 	<!-- Subtitle 1 -->
 	<model>
 	  <name>pageSubTitle1</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.086</x-m>
 			<y-m> 0.055</y-m>
@@ -431,7 +431,7 @@
 	<!-- Text 1 -->
 	<model>
 	  <name>pageText1</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m> 0.045</y-m>
@@ -465,7 +465,7 @@
 	<!-- Subtitle 2 -->
 	<model>
 	  <name>pageSubTitle2</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.086</x-m>
 			<y-m> 0.015</y-m>
@@ -499,7 +499,7 @@
 	<!-- Text 2 -->
 	<model>
 	  <name>pageText2</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m> 0.005</y-m>
@@ -533,7 +533,7 @@
 	<!-- Subtitle 3 -->
 	<model>
 	  <name>pageSubTitle3</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.086</x-m>
 			<y-m>-0.025</y-m>
@@ -567,7 +567,7 @@
 	<!-- Text 3 -->
 	<model>
 	  <name>pageText3</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m>-0.035</y-m>
@@ -601,7 +601,7 @@
 	<!-- Subtitle 4 -->
 	<model>
 	  <name>pageSubTitle4</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.086</x-m>
 			<y-m>-0.055</y-m>
@@ -635,7 +635,7 @@
 	<!-- Text 4 -->
 	<model>
 	  <name>pageText4</name>
-		<path>Aircraft/707/Models/Cockpit/Manual/layout.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/layout.xml</path>
 		<offsets>
 			<x-m> 0.036</x-m>
 			<y-m>-0.065</y-m>

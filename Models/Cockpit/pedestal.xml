@@ -21,10 +21,10 @@
 		<object-name>ElevatorStabArrow</object-name>   
 		<object-name>ElevatorHelpL</object-name>   
 		<object-name>ElevatorHelpR</object-name>  
-		<object-name>RudderTab</object-name>  
+		<!--object-name>RudderTab</object-name>  
 		<object-name>RudderSup</object-name>
 		<object-name>RudderScale</object-name>
-		<object-name>RudderArrow</object-name>  
+		<object-name>RudderArrow</object-name-->  
 		<object-name>throttle.001</object-name>   
 		<object-name>throttle.002</object-name>   
 		<object-name>throttle.003</object-name>   
@@ -53,8 +53,8 @@
 		</emission>
 	</animation>
 
-	 <!-- Autopilot controller -->
-	 <model>
+	 <!-- Radios -->
+	 <!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/ap/autopilot.xml</path>
 		<name>ap_controller</name>
 		<offsets>   
@@ -62,7 +62,7 @@
 		  <y-m>  0.0</y-m>
 		  <z-m>  0.626</z-m>
 		</offsets>
-	 </model>
+	 </model-->
 
     <!-- The parking brake -->
 		<animation>
@@ -889,7 +889,7 @@
 		</axis>
 	</animation>
 	
-	<animation>
+	<!--animation>
 		<type>rotate</type>
 		<object-name>RudderArrow</object-name>
 		<property>/controls/flight/rudder-trim</property>
@@ -997,7 +997,7 @@
 		    <wrap>false</wrap>
 		  </binding>
 		</action>
-	</animation>
+	</animation-->
 	
     <!-- stab trim normaly switches ... here in FG for showing up, what level the electrical stab trim is  -->
     <animation>
