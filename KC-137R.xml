@@ -349,7 +349,7 @@
        <z>  -16.65 </z>
      </location>
      <capacity unit="LBS"> 2941.00 </capacity>
-     <contents unit="LBS">  700.00 </contents>
+     <contents unit="LBS"> 1470.00 </contents>
   </tank>
   <!-- Main 4 tank right -->
   <tank type="FUEL" number="1">
@@ -359,7 +359,7 @@
        <z>  -16.65 </z>
      </location>
      <capacity unit="LBS"> 15564.00 </capacity>
-     <contents unit="LBS">  4000.00 </contents>
+     <contents unit="LBS">  7782.00 </contents>
   </tank>
   <!-- Main 3 tank right -->
   <tank type="FUEL" number="2">
@@ -369,7 +369,7 @@
        <z>  -16.65 </z>
      </location>
      <capacity unit="LBS"> 27262.00 </capacity>
-     <contents unit="LBS">  5000.00 </contents>
+     <contents unit="LBS"> 13631.00 </contents>
   </tank>
   <!-- center tank -->
   <tank type="FUEL" number="3">
@@ -379,7 +379,7 @@
        <z> -16.65 </z>
      </location>
      <capacity unit="LBS"> 68293.00 </capacity>
-     <contents unit="LBS"> 10000.00 </contents>
+     <contents unit="LBS"> 34146.00 </contents>
   </tank>
   <!-- Main 2 tank left -->
   <tank type="FUEL" number="4">
@@ -389,7 +389,7 @@
        <z>  -16.65 </z>
      </location>
      <capacity unit="LBS"> 27262.00 </capacity>
-     <contents unit="LBS">  5000.00 </contents>
+     <contents unit="LBS"> 13631.00 </contents>
   </tank>
   <!-- Main 1 tank left --> 
   <tank type="FUEL" number="5">
@@ -399,7 +399,7 @@
        <z>  -16.65 </z>
      </location>
      <capacity unit="LBS"> 15564.00 </capacity>
-     <contents unit="LBS">  4000.00 </contents>
+     <contents unit="LBS">  7782.00 </contents>
   </tank>  
   <!-- Reserve 1 tank left -->
   <tank type="FUEL" number="6">
@@ -409,7 +409,7 @@
        <z>  -16.65 </z>
      </location>
      <capacity unit="LBS"> 2941.00 </capacity>
-     <contents unit="LBS">  700.00 </contents>
+     <contents unit="LBS"> 1470.00 </contents>
   </tank>
 
  </propulsion> 

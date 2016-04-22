@@ -5,12 +5,11 @@
 	<path>MCP2.ac</path>
 
 	<animation>
-		<name>Heading hold knob pick</name>
+		<name>Speed hold knob pick</name>
 		<type>pick</type>
 		<object-name>SPD.knob</object-name>
 		<action>
 			<button>0</button>
-			<button>3</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
 				<command>property-adjust</command>
@@ -23,12 +22,41 @@
 		</action>
 		<action>
 			<button>1</button>
-			<button>4</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>/autopilot/settings/target-speed-kt</property>
 				<step>-1</step>
+				<min>0</min>
+				<max>360</max>
+				<wrap>true</wrap>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>Speed hold knob pick scroll</name>
+		<type>pick</type>
+		<object-name>SPD.knob</object-name>
+		<action>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/autopilot/settings/target-speed-kt</property>
+				<step>10</step>
+				<min>0</min>
+				<max>360</max>
+				<wrap>true</wrap>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/autopilot/settings/target-speed-kt</property>
+				<step>-10</step>
 				<min>0</min>
 				<max>360</max>
 				<wrap>true</wrap>

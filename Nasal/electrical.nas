@@ -915,7 +915,7 @@ setlistener("/sim/signals/fdm-initialized", func {
     settimer(gen_kw,5);
     settimer(ac_sync,5);
     settimer(func{ setprop("b707/fuel/temperature", getprop("/environment/temperature-degc")) } , 5);
-    
+    nd_init();
     print("Electrical System ... Initialized");
     
     setprop("controls/engines/msg", 1);

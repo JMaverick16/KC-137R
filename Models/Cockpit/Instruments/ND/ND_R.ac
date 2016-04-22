@@ -887,12 +887,11 @@ refs 4
 55 0.666667 0.666667
 kids 0
 OBJECT poly
-name "ND.screenL"
+name "ND.screenR"
 loc 0.00147073 0.0236719 0.000183886
 data 10
 ND.screenL
 texture "../../screen.png"
-textrep 1.000000 1.000000
 crease 30.000002
 numvert 4
 0.0012003 0.0559317 -0.0558489
@@ -910,7 +909,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Power.off"
-loc 0.00140764 0.0231283 0.000188516
+loc 0.00140764 0.0230102 0.000188516
 data 9
 Power.off
 crease 30.000002
