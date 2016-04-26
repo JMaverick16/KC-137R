@@ -133,10 +133,10 @@ The only reason it's here is to specify a second ADF.
 		  <kt70-compatibility type="bool">0</kt70-compatibility>
 		</transponder>
 		
-        <cdu n="0">
+        <!--cdu n="0">
             <ident n="0">
                 <model>KC-137</model>
                 <engines>CFM LeapX</engines>
             </ident>
-        </cdu>
+        </cdu-->
 </PropertyList>
