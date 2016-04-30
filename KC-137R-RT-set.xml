@@ -310,6 +310,10 @@ no. D6-3071-00
 	    <dual_control>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/pilot-dual-control.nas</file>
 	    </dual_control>
+		
+		<damage>
+		  <file>Aircraft/KC-137R/Nasal/damage.nas</file>
+		</damage>
 	</nasal>
 
     <dual-control>
