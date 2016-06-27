@@ -18,11 +18,221 @@
 	</animation>
 	
 	<animation>
+		<type>select</type>
+		<object-name>eicas</object-name>
+		<object-name>osgtext-white</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[0]/starter</property>
+				<property>controls/engines/engine[1]/starter</property>
+				<property>controls/engines/engine[2]/starter</property>
+				<property>controls/engines/engine[3]/starter</property>
+				<greater-than>
+					<property>engines/engine[0]/n2</property>
+					<value>5</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[1]/n2</property>
+					<value>5</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[2]/n2</property>
+					<value>5</value>
+				</greater-than>
+				<greater-than>
+					<property>engines/engine[3]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>XX.1</object-name>
+		<condition>
+			<and>
+				<not><property>controls/engines/engine[0]/starter</property></not>
+				<less-than>
+					<property>engines/engine[0]/n2</property>
+					<value>5</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>XX.2</object-name>
+		<condition>
+			<and>
+				<not><property>controls/engines/engine[1]/starter</property></not>
+				<less-than>
+					<property>engines/engine[1]/n2</property>
+					<value>5</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>XX.3</object-name>
+		<condition>
+			<and>
+				<not><property>controls/engines/engine[2]/starter</property></not>
+				<less-than>
+					<property>engines/engine[2]/n2</property>
+					<value>5</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>XX.4</object-name>
+		<condition>
+			<and>
+				<not><property>controls/engines/engine[3]/starter</property></not>
+				<less-than>
+					<property>engines/engine[3]/n2</property>
+					<value>5</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>n1.1</object-name>
+		<object-name>egt.1</object-name>
+		<object-name>n2.1</object-name>
+		<object-name>n11</object-name>
+		<object-name>egt1</object-name>
+		<object-name>n21</object-name>
+		<object-name>ff1</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[0]/starter</property>
+				<greater-than>
+					<property>engines/engine[0]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>n1.2</object-name>
+		<object-name>egt.2</object-name>
+		<object-name>n2.2</object-name>
+		<object-name>n12</object-name>
+		<object-name>egt2</object-name>
+		<object-name>n22</object-name>
+		<object-name>ff2</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[1]/starter</property>
+				<greater-than>
+					<property>engines/engine[1]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>n1.3</object-name>
+		<object-name>egt.3</object-name>
+		<object-name>n2.3</object-name>
+		<object-name>n13</object-name>
+		<object-name>egt3</object-name>
+		<object-name>n23</object-name>
+		<object-name>ff3</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[2]/starter</property>
+				<greater-than>
+					<property>engines/engine[2]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>n1.4</object-name>
+		<object-name>egt.4</object-name>
+		<object-name>n2.4</object-name>
+		<object-name>n14</object-name>
+		<object-name>egt4</object-name>
+		<object-name>n24</object-name>
+		<object-name>ff4</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[3]/starter</property>
+				<greater-than>
+					<property>engines/engine[3]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
 		<type>material</type>
-		<object-name>osgtext-green</object-name>
+		<object-name>osgtext-white</object-name>
+		<object-name>n11</object-name>
+		<object-name>egt1</object-name>
+		<object-name>n21</object-name>
+		<object-name>ff1</object-name>
+		<object-name>n12</object-name>
+		<object-name>egt2</object-name>
+		<object-name>n22</object-name>
+		<object-name>ff2</object-name>
+		<object-name>n13</object-name>
+		<object-name>egt3</object-name>
+		<object-name>n23</object-name>
+		<object-name>ff3</object-name>
+		<object-name>n14</object-name>
+		<object-name>egt4</object-name>
+		<object-name>n24</object-name>
+		<object-name>ff4</object-name>
 		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
 			<red>0</red>
-			<green>0.543</green>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>XX.1</object-name>
+		<object-name>XX.2</object-name>
+		<object-name>XX.3</object-name>
+		<object-name>XX.4</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>0.5</green>
 			<blue>0</blue>
 		</diffuse>
 		<ambient>
@@ -36,8 +246,8 @@
 			<blue>0</blue>
 		</specular>
 		<emission>
-			<red>0</red>
-			<green>0.543</green>
+			<red>1</red>
+			<green>0.5</green>
 			<blue>0</blue>
 		</emission>
 	</animation>
@@ -45,11 +255,11 @@
 	<!-- N1 -->
 	
 	<text>
-		<name>osgtext-green</name>
+		<name>n11</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.06</y-m>
-			<z-m>0.0525</z-m>
+			<y-m>-0.049</y-m>
+			<z-m>0.054</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -67,15 +277,41 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
+    <text>
+        <name>XX.1</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.049</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
 	<animation>
     	<type>rotate</type>
-    	<object-name>n11.001</object-name>
+    	<object-name>n1.1</object-name>
     	<property>engines/engine/n1</property>
-    	<factor>1.8</factor>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>85</dep></entry>
+			<entry><ind>100</ind><dep>180</dep></entry>
+		</interpolation>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>-0.06</y-m>
-    		<z-m>0.0524</z-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.058</z-m>
     	</center>
     	<axis>
     		<x>-1</x>
@@ -84,11 +320,11 @@
     	</axis>
     </animation>
 	<text>
-		<name>osgtext-green</name>
+		<name>n12</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.024</y-m>
-			<z-m>0.0525</z-m>
+			<y-m>-0.013</y-m>
+			<z-m>0.054</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -106,16 +342,41 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-   
+    <text>
+        <name>XX.2</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.013</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
     <animation>
     	<type>rotate</type>
-    	<object-name>n11</object-name>
+    	<object-name>n1.2</object-name>
     	<property>engines/engine[1]/n1</property>
-    	<factor>1.8</factor>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>85</dep></entry>
+			<entry><ind>100</ind><dep>180</dep></entry>
+		</interpolation>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>-0.024</y-m>
-    		<z-m>0.0524</z-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.058</z-m>
     	</center>
     	<axis>
     		<x>-1</x>
@@ -125,11 +386,11 @@
     </animation>
 
 	<text>
-		<name>osgtext-green</name>
+		<name>n13</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>0.024</y-m>
-			<z-m>0.0525</z-m>
+			<y-m>0.035</y-m>
+			<z-m>0.054</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -147,17 +408,41 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-
-
+    <text>
+        <name>XX.3</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
  <animation>
     	<type>rotate</type>
-    	<object-name>n12</object-name>
+    	<object-name>n1.3</object-name>
     	<property>engines/engine[2]/n1</property>
-    	<factor>1.8</factor>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>85</dep></entry>
+			<entry><ind>100</ind><dep>180</dep></entry>
+		</interpolation>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.024</y-m>
-    		<z-m>0.0524</z-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.058</z-m>
     	</center>
     	<axis>
     		<x>-1</x>
@@ -167,11 +452,11 @@
     </animation>
 
 <text>
-		<name>osgtext-green</name>
+		<name>n14</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>0.06</y-m>
-			<z-m>0.0525</z-m>
+			<y-m>0.071</y-m>
+			<z-m>0.054</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -189,19 +474,41 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-
-	
-   
-
+    <text>
+        <name>XX.4</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.071</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
  <animation>
     	<type>rotate</type>
-    	<object-name>n12.001</object-name>
+    	<object-name>n1.4</object-name>
     	<property>engines/engine[3]/n1</property>
-    	<factor>1.8</factor>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>85</dep></entry>
+			<entry><ind>100</ind><dep>180</dep></entry>
+		</interpolation>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.06</y-m>
-    		<z-m>0.0524</z-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.058</z-m>
     	</center>
     	<axis>
     		<x>-1</x>
@@ -210,61 +517,13 @@
     	</axis>
     </animation>
 
-
-<!--text>
-		<name>osgtext-green</name>
-		<offsets>
-			<x-m>0.0004</x-m>
-			<y-m>-0.0373</y-m>
-			<z-m>0.0585</z-m>
-		</offsets>
-		<alignment>center-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">%s</format>
-		<property>warnings/ecam/rev-thr/msg</property>
-		<truncate type="bool">false</truncate>
-		<font type="string">helvetica_bold.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
-		<character-size>0.008</character-size>
-		<font-resolution>
-			<width type="int">32</width>
-			<height type="int">32</height>
-		</font-resolution>
-	</text>
-	<text>
-		<name>osgtext-green</name>
-		<offsets>
-			<x-m>0.0004</x-m>
-			<y-m>0.0366</y-m>
-			<z-m>0.0585</z-m>
-		</offsets>
-		<alignment>center-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">%s</format>
-		<property>warnings/ecam/rev-thr/msg</property>
-		<truncate type="bool">false</truncate>
-		<font type="string">helvetica_bold.txf</font>
-		<draw-text type="bool">true</draw-text>
-		<draw-alignment type="bool">false</draw-alignment>
-		<draw-boundingbox type="bool">false</draw-boundingbox>
-		<character-size>0.008</character-size>
-		<font-resolution>
-			<width type="int">32</width>
-			<height type="int">32</height>
-		</font-resolution>
-	</text-->
-
 	<!-- EGT -->
 	
 	<text>
-		<name>osgtext-green</name>
+		<name>egt1</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.06</y-m>
+			<y-m>-0.049</y-m>
 			<z-m>0.0249</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -283,16 +542,40 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-
+    <text>
+        <name>XX.1</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.049</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
     <animation>
     	<type>rotate</type>
-    	<object-name>egt1</object-name>
+    	<object-name>egt.1</object-name>
     	<property>engines/engine/egt-degc</property>
-    	<factor>0.19</factor>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1000</ind><dep>180</dep></entry>
+		</interpolation>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>-0.06</y-m>
-    		<z-m>0.0246</z-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.0299</z-m>
     	</center>
     	<axis>
     		<x>-1</x>
@@ -302,10 +585,10 @@
     </animation>
 	
 	<text>
-		<name>osgtext-green</name>
+		<name>egt2</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.024</y-m>
+			<y-m>-0.013</y-m>
 			<z-m>0.0249</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -324,17 +607,40 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-
-   
+    <text>
+        <name>XX.2</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.013</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
     <animation>
     	<type>rotate</type>
-    	<object-name>egt2</object-name>
+    	<object-name>egt.2</object-name>
     	<property>/engines/engine[1]/egt-degc</property>
-    	<factor>0.19</factor>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1000</ind><dep>180</dep></entry>
+		</interpolation>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>-0.024</y-m>
-    		<z-m>0.0246</z-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.0299</z-m>
     	</center>
     	<axis>
     		<x>-1</x>
@@ -345,10 +651,10 @@
     
 
 <text>
-		<name>osgtext-green</name>
+		<name>egt3</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>0.024</y-m>
+			<y-m>0.035</y-m>
 			<z-m>0.0249</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -367,16 +673,40 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-
+    <text>
+        <name>XX.3</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
  <animation>
     	<type>rotate</type>
-    	<object-name>egt2.001</object-name>
+    	<object-name>egt.3</object-name>
     	<property>/engines/engine[2]/egt-degc</property>
-    	<factor>0.19</factor>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1000</ind><dep>180</dep></entry>
+		</interpolation>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.024</y-m>
-    		<z-m>0.0246</z-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.0299</z-m>
     	</center>
     	<axis>
     		<x>-1</x>
@@ -388,10 +718,10 @@
 
 
 <text>
-		<name>osgtext-green</name>
+		<name>egt4</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>0.06</y-m>
+			<y-m>0.071</y-m>
 			<z-m>0.0249</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -410,17 +740,40 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-
-
+    <text>
+        <name>XX.4</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.071</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
      <animation>
     	<type>rotate</type>
-    	<object-name>egt2.002</object-name>
+    	<object-name>egt.4</object-name>
     	<property>/engines/engine[3]/egt-degc</property>
-    	<factor>0.19</factor>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>1000</ind><dep>180</dep></entry>
+		</interpolation>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.06</y-m>
-    		<z-m>0.0246</z-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.0299</z-m>
     	</center>
     	<axis>
     		<x>-1</x>
@@ -435,11 +788,11 @@
 	<!-- N2 -->
 	
 	<text>
-		<name>osgtext-green</name>
+		<name>n21</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.06</y-m>
-			<z-m>0.0035</z-m>
+			<y-m>-0.049</y-m>
+			<z-m>-0.0045</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -457,13 +810,55 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
+    <text>
+        <name>XX.1</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.049</y-m>
+			<z-m>-0.0045</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+ <animation>
+    	<type>rotate</type>
+    	<object-name>n2.1</object-name>
+    	<property>engines/engine[0]/n2</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>85</dep></entry>
+			<entry><ind>100</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>-0.0005</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
 	
 	<text>
-		<name>osgtext-green</name>
+		<name>n22</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.04</y-m>
-			<z-m>0.0035</z-m>
+			<y-m>-0.013</y-m>
+			<z-m>-0.0045</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -481,14 +876,56 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
+    <text>
+        <name>XX.2</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.013</y-m>
+			<z-m>-0.0045</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+ <animation>
+    	<type>rotate</type>
+    	<object-name>n2.2</object-name>
+    	<property>engines/engine[1]/n2</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>85</dep></entry>
+			<entry><ind>100</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>-0.0005</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
 
 
 	<text>
-		<name>osgtext-green</name>
+		<name>n23</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>0.04</y-m>
-			<z-m>0.0035</z-m>
+			<y-m>0.035</y-m>
+			<z-m>-0.0045</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -506,14 +943,56 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
+    <text>
+        <name>XX.3</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>-0.0045</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+ <animation>
+    	<type>rotate</type>
+    	<object-name>n2.3</object-name>
+    	<property>engines/engine[2]/n2</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>85</dep></entry>
+			<entry><ind>100</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>-0.0005</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
 
 
 	<text>
-		<name>osgtext-green</name>
+		<name>n24</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>0.06</y-m>
-			<z-m>0.0035</z-m>
+			<y-m>0.071</y-m>
+			<z-m>-0.0045</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -531,20 +1010,62 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
+    <text>
+        <name>XX.4</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.071</y-m>
+			<z-m>-0.0045</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+ <animation>
+    	<type>rotate</type>
+    	<object-name>n2.4</object-name>
+    	<property>engines/engine[3]/n2</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>85</dep></entry>
+			<entry><ind>100</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>-0.0005</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
 	
 	<!-- FF -->
 	
 	<text>
-		<name>osgtext-green</name>
+		<name>ff1</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.06</y-m>
-			<z-m>-0.0147</z-m>
+			<y-m>-0.059</y-m>
+			<z-m>-0.017</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%4.2f</format>
+		<format type="string">%4.0f</format>
 		<property>/engines/engine[0]/fuel-flow_pph</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
@@ -557,18 +1078,39 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+    <text>
+        <name>XX.1</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.059</y-m>
+			<z-m>-0.017</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
 	<text>
-		<name>osgtext-green</name>
+		<name>ff2</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.04</y-m>
-			<z-m>-0.0147</z-m>
+			<y-m>-0.0239</y-m>
+			<z-m>-0.017</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%4.2f</format>
+		<format type="string">%4.0f</format>
 		<property>/engines/engine[1]/fuel-flow_pph</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
@@ -581,18 +1123,39 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+    <text>
+        <name>XX.2</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0239</y-m>
+			<z-m>-0.017</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
 		<text>
-		<name>osgtext-green</name>
+		<name>ff3</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>0.04</y-m>
-			<z-m>-0.0147</z-m>
+			<y-m>0.0235</y-m>
+			<z-m>-0.017</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%4.2f</format>
+		<format type="string">%4.0f</format>
 		<property>/engines/engine[2]/fuel-flow_pph</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
@@ -605,18 +1168,39 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-
+    <text>
+        <name>XX.3</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.0235</y-m>
+			<z-m>-0.017</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
 		<text>
-		<name>osgtext-green</name>
+		<name>ff4</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>0.06</y-m>
-			<z-m>-0.0147</z-m>
+    		<y-m>0.0605</y-m>
+			<z-m>-0.017</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%4.2f</format>
+		<format type="string">%4.0f</format>
 		<property>/engines/engine[3]/fuel-flow_pph</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
@@ -629,7 +1213,28 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-
+    <text>
+        <name>XX.4</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0605</y-m>
+			<z-m>-0.017</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
 
 <!-- LoD -->
  <animation>

@@ -220,9 +220,9 @@
 		<int n="18" type="int">0</int> <!-- fire 1 = eng 3, 2 = eng 4, 3 = both -->
 		<int n="19" alias="/b707/crashed"/>
 		<float n="0" alias="/systems/electrical/outputs/cabin-dim"/> 							<!-- cabin light dimmer -->
-		<float n="1" alias="/gear/gear[0]/compression-norm"/> 									<!-- multiplayer see the wheels turning -->
-		<float n="2" alias="/gear/gear[0]/rollspeed-ms"/> 										<!-- multiplayer see the hanging backwheels -->
-		<float n="3" alias="/gear/gear[1]/compression-norm"/>
+		<float n="1" alias="/gear/gear[0]/compression-norm"/> 	
+		<float n="2" alias="/gear/gear[0]/rollspeed-ms"/> 										<!-- multiplayer see the wheels turning -->
+		<float n="3" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging backwheels -->
 		<float n="4" alias="/instrumentation/doors/pilotwin/position-norm"/>					<!-- Cockpit - left -->
 		<float n="5" alias="/instrumentation/doors/copilotwin/position-norm"/>					<!-- Cockpit - right -->
 		<float n="6" alias="/instrumentation/doors/pasfront/position-norm"/>					<!-- Passenger - front -->

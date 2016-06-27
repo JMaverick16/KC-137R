@@ -78,7 +78,7 @@
 		<object-name>plane.down.001</object-name>
 		<object-name>plane.out.001</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor> -8 </factor>
+    <factor> -15 </factor>
     <center>
       <x-m>-18.718 </x-m>
       <y-m>-0.462 </y-m>
@@ -102,7 +102,7 @@
 		<object-name>plane.down</object-name>
 		<object-name>plane.out</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor> -50 </factor>
+    <factor> -65 </factor>
     <center>
       <x-m> 0.000 </x-m>
       <y-m>-0.462 </y-m>
@@ -126,7 +126,7 @@
 		<object-name>plane.down.001</object-name>
 		<object-name>plane.out.001</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor> -50 </factor>
+    <factor> -65 </factor>
     <center>
       <x-m> 0.000 </x-m>
       <y-m> 0.447 </y-m>
