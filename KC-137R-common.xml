@@ -93,7 +93,7 @@
 		 <x-offset-m archive="y">-0.46</x-offset-m>
 		 <y-offset-m archive="y">1.14</y-offset-m>
 		 <z-offset-m archive="y">-18.2</z-offset-m>
-		 <pitch-offset-deg archive="y">-16.0</pitch-offset-deg>
+		 <pitch-offset-deg archive="y">-6.0</pitch-offset-deg>
 		 <default-field-of-view-deg type="double">80</default-field-of-view-deg>
    </config>
   </view>
@@ -173,7 +173,7 @@
     </config>
 	</view>
 	<view n="104">
-    <name>Autopilot View</name>
+    <name>Overhead View</name>
     <enabled type="bool">true</enabled>
     <type>lookfrom</type>
     <internal type="bool">true</internal>
@@ -185,9 +185,9 @@
 			<y-offset-m archive="y"> 0.9</y-offset-m>
 			<z-offset-m archive="y">-18.45</z-offset-m>
 			<heading-offset-deg type="double"> 0.0</heading-offset-deg>
-			<pitch-offset-deg type="double">-75.0</pitch-offset-deg>
+			<pitch-offset-deg type="double">75.0</pitch-offset-deg>
 			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-			<default-field-of-view-deg type="double">70.0</default-field-of-view-deg>
+			<default-field-of-view-deg type="double">102.0</default-field-of-view-deg>
 			<default-pitch-deg type="double">-5.0</default-pitch-deg>
 			<default-heading-deg type="double">0</default-heading-deg>
 			<front-direction-deg type="double">0</front-direction-deg>
@@ -195,7 +195,7 @@
     </config>
 	</view>
 		
-  <chase-distance-m>-45</chase-distance-m>
+  <chase-distance-m>-66</chase-distance-m>
 	
 	<multiplay>  
     <generic>
@@ -222,7 +222,6 @@
 		<float n="0" alias="/systems/electrical/outputs/cabin-dim"/> 							<!-- cabin light dimmer -->
 		<float n="1" alias="/gear/gear[0]/compression-norm"/> 	
 		<float n="2" alias="/gear/gear[0]/rollspeed-ms"/> 										<!-- multiplayer see the wheels turning -->
-		<float n="3" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging backwheels -->
 		<float n="4" alias="/instrumentation/doors/pilotwin/position-norm"/>					<!-- Cockpit - left -->
 		<float n="5" alias="/instrumentation/doors/copilotwin/position-norm"/>					<!-- Cockpit - right -->
 		<float n="6" alias="/instrumentation/doors/pasfront/position-norm"/>					<!-- Passenger - front -->
@@ -238,6 +237,8 @@
 		<float n="16" alias="/instrumentation/doors/belly/position-norm"/>						<!-- Belly door -->
 		<float n="17" alias="/orientation/pitch-deg"/>       									<!-- for the shadow without rembrandt -->
 		<float n="18" alias="/instrumentation/doors/refuel-boom/position-norm"/>      			<!-- in the TT the refuel boom -->
+		<float n="19" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging backwheels -->
+		<float n="20" alias="/gear/gear[2]/compression-norm"/>									<!-- multiplayer see the hanging backwheels -->
 		<!-- <string n="0" alias="/sim/multiplay/callsign"/>									will be init in the registration.nas DO NOT USE string[0] for other properties -->
     </generic>
   </multiplay>

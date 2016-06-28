@@ -285,35 +285,6 @@
 	</engine>
 
 	<rumble>
-		<name>rumble</name>
-		<mode>looped</mode>
-		<path>Aircraft/KC-137R/Sounds/thrust.wav</path>
-		<condition>			
-			<or>
-				<property>/sim/current-view/internal</property>
-				<equals>
-					<property>/sim/current-view/name</property>
-					<value type="string">Passengers View</value>
-				</equals>
-			</or>
-			<or>
-				<property>/gear/gear[0]/wow</property>
-				<property>/gear/gear[1]/wow</property>
-				<property>/gear/gear[2]/wow</property>
-			</or>
-		</condition>
-		<volume>
-			<property>/velocities/groundspeed-kt</property>
-			<factor>1.5</factor>
-		</volume>
-		<pitch>
-			<property>/velocities/groundspeed-kt</property>
-			<factor>0.005</factor>
-			<offset>0.5</offset>
-		</pitch>
-	</rumble>
-
-	<rumble>
 		<name>rumbleOnGround</name>
 		<mode>looped</mode>
 		<path>Aircraft/KC-137R/Sounds/rumblingOnGround.wav</path>
