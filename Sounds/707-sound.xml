@@ -14,7 +14,7 @@
 
 	<engine>
 		<name>leftengine</name>
-		<path>Sounds/jet.wav</path>
+		<path>jet.wav</path>
 		<mode>looped</mode>
 		<condition>	
 			<and>
@@ -60,7 +60,7 @@
 
 	<engine>
 		<name>leftengineInner</name>
-		<path>Sounds/jet.wav</path>
+		<path>jet.wav</path>
 		<mode>looped</mode>
 		<condition>			
 			<or>
@@ -150,7 +150,7 @@
 
 	<engine>
 		<name>rightengine</name>
-		<path>Sounds/jet.wav</path>
+		<path>jet.wav</path>
 		<mode>looped</mode>
 		<condition>		
 			<and>
@@ -196,7 +196,7 @@
 	
 	<engine>
 		<name>rightengineInner</name>
-		<path>Sounds/jet.wav</path>
+		<path>jet.wav</path>
 		<mode>looped</mode>
 		<condition>			
 			<or>
@@ -345,7 +345,7 @@
 	<gear>
 		<name>gear</name>
 		<mode>in-transit</mode>
-		<path>Sounds/gear.wav</path>
+		<path>gear.wav</path>
 		<property>/gear/gear[0]/position-norm</property>
 		<pitch>
 			<internal>dt_play</internal>
@@ -414,7 +414,7 @@
 	<flap>
 		<name>flaps</name>
 		<mode>in-transit</mode>
-		<path>Sounds/flaps.wav</path>
+		<path>Aircraft/KC-137R/Sounds/Flaps.wav</path>
 		<property>/surface-positions/flap-pos-norm</property>
 		<volume>
 			<factor>0.45</factor>
@@ -424,7 +424,7 @@
 	<speedbrake>
 		<name>speedbrake</name>	
 		<mode>in-transit</mode>
-		<path>Sounds/flaps.wav</path>
+		<path>Aircraft/KC-137R/Sounds/speedbrake.wav</path>
 		<property>/surface-positions/speedbrake-pos-norm</property>
 		<volume>
 			<factor>1.0</factor>
@@ -457,7 +457,7 @@
 	<wind>
 		<name>wind</name>
 		<mode>looped</mode>
-		<path>Sounds/wind-8khz.wav</path>
+		<path>wind.wav</path>
 		<property>/velocities/airspeed-kt</property>
 		<volume>
 			<property>/position/altitude-ft</property>
@@ -1250,7 +1250,7 @@
 
     <apu>
 			<name>APU-internal</name>
-			<path>Aircraft/KC-137R/Sounds/apu.wav</path>
+			<path>Aircraft/KC-137R/Sounds/apu_strt.wav</path>
 			<mode>looped</mode>
 			<condition>			
 				<or>
@@ -1267,7 +1267,7 @@
 			</condition>
 			<volume>
 				<property>/engines/APU/rpm</property>
-				<factor>0.0015</factor>
+				<factor>0.0035</factor>
 			</volume>
       <pitch>
         <property>/engines/APU/rpm</property>
