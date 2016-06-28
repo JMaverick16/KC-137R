@@ -91,10 +91,10 @@
      </limits>
      <!-- x/y/z == right/up/back -->
 		 <x-offset-m archive="y">-0.46</x-offset-m>
-		 <y-offset-m archive="y">1.19</y-offset-m>
+		 <y-offset-m archive="y">1.14</y-offset-m>
 		 <z-offset-m archive="y">-18.2</z-offset-m>
 		 <pitch-offset-deg archive="y">-16.0</pitch-offset-deg>
-		 <default-field-of-view-deg type="double">72</default-field-of-view-deg>
+		 <default-field-of-view-deg type="double">80</default-field-of-view-deg>
    </config>
   </view>
   <view n="1">

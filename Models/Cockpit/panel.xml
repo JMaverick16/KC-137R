@@ -199,16 +199,6 @@
 
 <!-- Center Panel -->
 <model>
-  <name>reverser_warning_lights</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/reverser.xml</path>
-  <offsets>
-      <x-m>-18.918</x-m>
-      <y-m> 0.08</y-m>
-      <z-m> 1.01</z-m>
-  </offsets>
-</model>
-
-<model>
   <name>ALT-Setting</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/alt-set/alt-set.xml</path>
   <offsets>
@@ -622,6 +612,30 @@
 			<pitch-deg>-70</pitch-deg>
 		</offsets>
 	</model-->
+	
+	<!-- HUD -->
+
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/hud/hud.xml</path>
+		<offsets>
+			<x-m>-18.75</x-m>
+			<y-m>-0.428</y-m>
+			<z-m>1.15</z-m>
+                <pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	
+	<!-- HUD -->
+
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/hud/hud.xml</path>
+		<offsets>
+			<x-m>-18.75</x-m>
+			<y-m>0.428</y-m>
+			<z-m>1.15</z-m>
+                <pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
 </PropertyList>
 

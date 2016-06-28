@@ -19,36 +19,6 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>eicas</object-name>
-		<object-name>osgtext-white</object-name>
-		<condition>
-			<or>
-				<property>controls/engines/engine[0]/starter</property>
-				<property>controls/engines/engine[1]/starter</property>
-				<property>controls/engines/engine[2]/starter</property>
-				<property>controls/engines/engine[3]/starter</property>
-				<greater-than>
-					<property>engines/engine[0]/n2</property>
-					<value>5</value>
-				</greater-than>
-				<greater-than>
-					<property>engines/engine[1]/n2</property>
-					<value>5</value>
-				</greater-than>
-				<greater-than>
-					<property>engines/engine[2]/n2</property>
-					<value>5</value>
-				</greater-than>
-				<greater-than>
-					<property>engines/engine[3]/n2</property>
-					<value>5</value>
-				</greater-than>
-			</or>
-		</condition>
-	</animation>
-	
-	<animation>
-		<type>select</type>
 		<object-name>XX.1</object-name>
 		<condition>
 			<and>
@@ -105,6 +75,7 @@
 	
 	<animation>
 		<type>select</type>
+		<object-name>eicas1</object-name>
 		<object-name>n1.1</object-name>
 		<object-name>egt.1</object-name>
 		<object-name>n2.1</object-name>
@@ -125,6 +96,7 @@
 	
 	<animation>
 		<type>select</type>
+		<object-name>eicas2</object-name>
 		<object-name>n1.2</object-name>
 		<object-name>egt.2</object-name>
 		<object-name>n2.2</object-name>
@@ -145,6 +117,7 @@
 	
 	<animation>
 		<type>select</type>
+		<object-name>eicas3</object-name>
 		<object-name>n1.3</object-name>
 		<object-name>egt.3</object-name>
 		<object-name>n2.3</object-name>
@@ -165,6 +138,7 @@
 	
 	<animation>
 		<type>select</type>
+		<object-name>eicas4</object-name>
 		<object-name>n1.4</object-name>
 		<object-name>egt.4</object-name>
 		<object-name>n2.4</object-name>
@@ -184,7 +158,7 @@
 	</animation>
 	
 	<animation>
-		<type>material</type>
+		<type>material</type> <!-- White -->
 		<object-name>osgtext-white</object-name>
 		<object-name>n11</object-name>
 		<object-name>egt1</object-name>
@@ -225,7 +199,7 @@
 	</animation>
 	
 	<animation>
-		<type>material</type>
+		<type>material</type> <!-- Orange -->
 		<object-name>XX.1</object-name>
 		<object-name>XX.2</object-name>
 		<object-name>XX.3</object-name>
@@ -251,6 +225,360 @@
 			<blue>0</blue>
 		</emission>
 	</animation>
+	
+	<animation>
+		<type>material</type> <!-- Green -->
+		<object-name>REV1.g</object-name>
+		<object-name>REV2.g</object-name>
+		<object-name>REV3.g</object-name>
+		<object-name>REV4.g</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type> <!-- Yellow -->
+		<object-name>REV1.y</object-name>
+		<object-name>REV2.y</object-name>
+		<object-name>REV3.y</object-name>
+		<object-name>REV4.y</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+
+<!-- REV -->
+
+	<animation>
+		<type>select</type>
+        <object-name>REV1.y</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[0]/reverser-pos-norm</property>
+					<value>0.01</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[0]/reverser-pos-norm</property>
+					<value>0.9500000001</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV2.y</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[1]/reverser-pos-norm</property>
+					<value>0.01</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[1]/reverser-pos-norm</property>
+					<value>0.9500000001</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV3.y</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[2]/reverser-pos-norm</property>
+					<value>0.01</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[2]/reverser-pos-norm</property>
+					<value>0.9500000001</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV4.y</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[3]/reverser-pos-norm</property>
+					<value>0.01</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[3]/reverser-pos-norm</property>
+					<value>0.9500000001</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+        <object-name>REV1.g</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[0]/reverser-pos-norm</property>
+				<value>0.95</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV2.g</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[1]/reverser-pos-norm</property>
+				<value>0.95</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV3.g</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[2]/reverser-pos-norm</property>
+				<value>0.95</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV4.g</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[3]/reverser-pos-norm</property>
+				<value>0.95</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+    <text>
+        <name>REV1.y</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">D/L</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV2.y</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">D/L</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV3.y</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">D/L</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV4.y</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">D/L</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+
+    <text>
+        <name>REV1.g</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV2.g</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV3.g</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV4.g</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
 	
 	<!-- N1 -->
 	

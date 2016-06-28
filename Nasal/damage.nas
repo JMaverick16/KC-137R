@@ -10,6 +10,8 @@ var warhead_lbs = {
     "aim-7":                88.00,
     "RB-71":                88.00,
     "aim-9":                20.80,
+    "AIM-9":                20.80,
+    "RB-24":                20.80,
     "RB-24J":               20.80,
     "RB-74":                20.80,
     "R74":                  16.00,
@@ -25,6 +27,13 @@ var warhead_lbs = {
     "GBU16":               450.00,
     "Sea Eagle":           505.00,
     "AGM65":               200.00,
+    "RB-04E":              661.00,
+    "RB-05A":              353.00,
+    "RB-75":               126.00,
+    "M90":                 500.00,
+    "M71":                 200.00,
+    "MK-82":               192.00,
+    "LAU-68":               10.00,
 };
 
 var incoming_listener = func {
@@ -101,7 +110,7 @@ var incoming_listener = func {
             }
           }
         }
-      } elsif (1 == 1) { # change here if you want to enable/disable damage based on a property.
+      } elsif ( 1 == 1) { #
         # latest version of failure manager and taking damage enabled
         #print("damage enabled");
         var last1 = split(" ", last_vector[1]);
@@ -133,9 +142,9 @@ var incoming_listener = func {
               if (diff < 0) {
                 diff = 0;
               }
-             
+              
               diff = diff * diff;
-             
+              
               var probability = diff / (maxDist*maxDist);
 
               var failed = fail_systems(probability);
@@ -143,8 +152,8 @@ var incoming_listener = func {
               printf("Took %.1f%% damage from %s missile at %0.1f meters. %s systems was hit", percent,type,dist,failed);
               nearby_explosion();
             }
-          }
-        } elsif (last_vector[1] == " M70 rocket hit" or last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " M61A1 shell hit") {
+          } 
+        } elsif (last_vector[1] == " M70 rocket hit" or last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " M61A1 shell hit" or last_vector[1] == " GAU-8/A hit") {
           # cannon hitting someone
           #print("cannon");
           if (size(last_vector) > 2 and last_vector[2] == " "~callsign) {
@@ -152,7 +161,7 @@ var incoming_listener = func {
             #print("hitting me");
 
             var probability = 0.20; # take 20% damage from each hit
-            if (last_vector[1] == " M70 rocket hit" or last_vector[1] == " Gun Splash On ") {
+            if (last_vector[1] == " M70 rocket hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " GAU-8/A hit") {
               probability = 0.30;
             }
             var failed = fail_systems(probability);
@@ -194,12 +203,6 @@ var stopIncomingSound = func (clock) {
   setprop("sound/incoming"~clock, 0);
 }
 
-var callsign_struct = {};
-var getCallsign = func (callsign) {
-  var node = callsign_struct[callsign];
-  return node;
-}
-
 var nearby_explosion = func {
   setprop("damage/sounds/nearby-explode-on", 0);
   settimer(nearby_explosion_a, 0);
@@ -212,6 +215,12 @@ var nearby_explosion_a = func {
 
 var nearby_explosion_b = func {
   setprop("damage/sounds/nearby-explode-on", 0);
+}
+
+var callsign_struct = {};
+var getCallsign = func (callsign) {
+  var node = callsign_struct[callsign];
+  return node;
 }
 
 var processCallsigns = func () {
@@ -228,6 +237,7 @@ var processCallsigns = func () {
 
 processCallsigns();
 
+
 var logTime = func{
   #log time and date for outputing ucsv files for converting into KML files for google earth.
   if (getprop("logging/log[0]/enabled") == TRUE and getprop("sim/time/utc/year") != nil) {
@@ -243,10 +253,10 @@ var ct = func (type) {
   if (type == "c-u") {
     setprop("sim/ct/c-u", 1);
   }
-  if (type == "rl" and getprop("fdm/jsbsim/gear/unit[0]/WOW") != TRUE) {
+  if (type == "rl" and getprop("gear/gear[0]/wow") != TRUE) {
     setprop("sim/ct/rl", 1);
   }
-  if (type == "rp" and getprop("fdm/jsbsim/gear/unit[0]/WOW") != TRUE) {
+  if (type == "rp" and getprop("gear/gear[0]/wow") != TRUE) {
     setprop("sim/ct/rp", 1);
   }
   if (type == "a") {
@@ -255,10 +265,10 @@ var ct = func (type) {
   if (type == "lst") {
     setprop("sim/ct/list", 1);
   }
-  if (type == "ifa" and getprop("fdm/jsbsim/gear/unit[0]/WOW") != TRUE) {
+  if (type == "ifa" and getprop("gear/gear[0]/wow") != TRUE) {
     setprop("sim/ct/ifa", 1);
   }
-  if (type == "sf" and getprop("fdm/jsbsim/gear/unit[0]/WOW") != TRUE) {
+  if (type == "sf" and getprop("gear/gear[0]/wow") != TRUE) {
     setprop("sim/ct/sf", 1);
   }
 }
@@ -286,6 +296,9 @@ var code_ct = func () {
     ff = 0;
   }
   var cl = 0;
+  if (cl > (ll*1.05) and getprop("gear/gear[0]/wow") != TRUE) {
+    setprop("sim/ct/rl", 1);
+  }
   ll = cl;
   var rl = getprop("sim/ct/rl");
   if (rl == nil or rl != 1) {
@@ -299,9 +312,8 @@ var code_ct = func () {
             +getprop("/consumables/fuel/tank[1]/level-gal_us")
             +getprop("/consumables/fuel/tank[2]/level-gal_us")
             +getprop("/consumables/fuel/tank[3]/level-gal_us")
-            +getprop("/consumables/fuel/tank[4]/level-gal_us")
-            +getprop("/consumables/fuel/tank[5]/level-gal_us");
-  if (cf != nil and lf != -1 and cf > (lf*1.1) and getprop("fdm/jsbsim/gear/unit[0]/WOW") != TRUE and getprop("/systems/refuel/contact") == FALSE) {
+            +getprop("/consumables/fuel/tank[4]/level-gal_us");
+  if (cf != nil and lf != -1 and cf > (lf*1.1) and getprop("gear/gear[0]/wow") != TRUE and getprop("/systems/refuel/contact") == FALSE) {
     setprop("sim/ct/rf", 1);
   }
   var rf = getprop("sim/ct/rf");
@@ -309,7 +321,7 @@ var code_ct = func () {
     rf = 0;
   }
   lf = cf == nil?0:cf;
-  var dm = !getprop("sim/model/f-14b/systems/armament/mp-messaging");
+  var dm = !getprop("/controls/armament/mp-messaging");
   if (dm == nil or dm != 1) {
     dm = 0;
   }
@@ -320,7 +332,7 @@ var code_ct = func () {
   var rd = 0;#!getprop("sim/ja37/radar/doppler-enabled");
   if (rd == nil or rd != 1) {
     rd = 0;
-  } 
+  }  
   var ml = getprop("sim/ct/list");
   if (ml == nil or ml != 1) {
     ml = 0;
@@ -339,7 +351,7 @@ var code_ct = func () {
 }
 
 var not = func {
-  if (getprop("sim/model/f-14b/systems/armament/mp-messaging") == TRUE and getprop("fdm/jsbsim/gear/unit[0]/WOW") != TRUE) {
+  if (getprop("/controls/armament/mp-messaging") == TRUE and getprop("gear/gear[0]/wow") != TRUE) {
     var ct = getprop("sim/multiplay/generic/string[15]") ;
     var msg = "I might be chea"~"ting..";
     if (ct != nil) {
@@ -401,7 +413,7 @@ var changeGuiLoad = func()
     var searchname2 = "instrument-failures";
     var searchname3 = "system-failures";
     var state = 0;
-   
+    
     foreach(var menu ; props.globals.getNode("/sim/menubar/default").getChildren("menu")) {
         foreach(var item ; menu.getChildren("item")) {
             foreach(var name ; item.getChildren("name")) {
@@ -414,15 +426,18 @@ var changeGuiLoad = func()
                     #item.getNode("binding").remove();
                     #item.getNode("name",1).setValue(searchname1);
                     item.getNode("binding/command").setValue("nasal");
+                    item.getNode("binding/script").setValue("missile.loadMPList()");
                     #item.getNode("enabled",1).setBoolValue(TRUE);
                 }
                 if(name.getValue() == searchname2) {
                     item.getNode("binding/command").setValue("nasal");
                     item.getNode("binding/dialog-name").remove();
+                    item.getNode("binding/script",1).setValue("missile.loadIFail()");
                 }
                 if(name.getValue() == searchname3) {
                     item.getNode("binding/command").setValue("nasal");
                     item.getNode("binding/dialog-name").remove();
+                    item.getNode("binding/script",1).setValue("missile.loadSysFail()");
                 }
             }
         }
@@ -442,13 +457,13 @@ var loadIFail = func () {
   ct("ifa");fgcommand("dialog-show", props.Node.new({"dialog-name":"instrument-failures"}));
 }
 
-setlistener("/sim/multiplay/chat-history", incoming_listener, 0, 0);
-
-setprop("/sim/failure-manager/display-on-screen", FALSE);
-
 changeGuiLoad();
 settimer(code_ct, 5);
 settimer(not, 11);
+
+setlistener("/sim/multiplay/chat-history", incoming_listener, 0, 0);
+
+setprop("/sim/failure-manager/display-on-screen", FALSE);
 
 var re_init = func {
   # repair the aircraft

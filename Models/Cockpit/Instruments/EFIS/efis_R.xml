@@ -75,7 +75,7 @@
         <object-name>Range.knob</object-name>
         <action>
             <button>0</button>
-            <repeatable>true</repeatable>
+            <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
                 <script>b707.ctl_func2("range",1);</script>
@@ -93,7 +93,7 @@
         <object-name>Range.knob</object-name>
         <action>
             <button>1</button>
-            <repeatable>true</repeatable>
+            <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
                 <script>b707.ctl_func2("range",-1);</script>
@@ -160,7 +160,7 @@
         <object-name>MDTop</object-name>
         <action>
             <button>0</button>
-            <repeatable>true</repeatable>
+            <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
                 <script>b707.mode_inc2();</script>
@@ -177,7 +177,7 @@
         <object-name>MDTop</object-name>
         <action>
             <button>1</button>
-            <repeatable>true</repeatable>
+            <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
                 <script>b707.mode_dec2();</script>
@@ -198,7 +198,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>b707.ctl_func2("display",1);</script>
+                <script>b707.mode_inc2();</script>
             </binding>
         </action>
     </animation>
@@ -215,7 +215,7 @@
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>b707.ctl_func2("display",-1);</script>
+                <script>b707.mode_dec2();</script>
             </binding>
         </action>
     </animation>
