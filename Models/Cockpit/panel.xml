@@ -559,39 +559,15 @@
         </offsets>
     </model-->
 	
-	 <model>
+	 <!--model>
 	    <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/tacan.xml</path>
-		<condition>
-			<or>		
-			<equals>
-				<property>sim/aircraft</property>
-				<value type="string">EC-137D</value>
-			</equals>
-			<equals>
-				<property>sim/aircraft</property>
-				<value type="string">707-TT</value>
-			</equals>
-			<equals>
-				<property>sim/model/livery/file</property>
-				<value type="string">USA</value>
-			</equals>
-			<equals>
-				<property>sim/model/livery/file</property>
-				<value type="string">FAE</value>
-			</equals>
-			<equals>
-				<property>sim/model/livery/file</property>
-				<value type="string">CR</value>
-			</equals>
-			</or>
-		</condition>
 		<offsets>   
 		  <x-m>-18.325</x-m>
 		  <y-m>  0.0675</y-m>
 		  <z-m>  0.625</z-m>
 	      <pitch-deg>-90</pitch-deg>
 		</offsets>
-	 </model>
+	 </model-->
 
 	<!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis.xml</path>
