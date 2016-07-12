@@ -10,7 +10,7 @@
 <sim>
     <model>
         <livery>
-            <name type="string">U.S.AIR FORCE</name>
+            <name type="string">USAF 168 ARW</name>
             <texture>USAF.png</texture>
             <texture-container>Liveries/FAE-container.png</texture-container>
         </livery>
