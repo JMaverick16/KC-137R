@@ -11,9 +11,6 @@
 	<animation>
 		<type>material</type>
 		<object-name>pedestal</object-name> 
-		<object-name>AileronTab</object-name> 
-		<object-name>AileronScale</object-name>
-		<object-name>AileronArrow</object-name> 
 		<object-name>ElevatorScale</object-name>
 		<object-name>ElevatorArrow</object-name>
 		<object-name>ElevatorTab</object-name>    
@@ -54,15 +51,6 @@
 	</animation>
 
 	 <!-- Radios -->
-	 <!--model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/ap/autopilot.xml</path>
-		<name>ap_controller</name>
-		<offsets>   
-		  <x-m>-18.48</x-m>
-		  <y-m>  0.0</y-m>
-		  <z-m>  0.626</z-m>
-		</offsets>
-	 </model-->
 
     <!-- The parking brake -->
 		<animation>
@@ -631,111 +619,6 @@
 				  <command>nasal</command>
 				  <script>b707.togglereverser();</script>
 			</binding>
-		</action>
-	</animation>
-	
-	<!-- Trim wheels -->
-	<animation>
-		<type>translate</type>
-		<object-name>AileronArrow</object-name>
-		<property>/controls/flight/aileron-trim</property>
-		<factor>0.02</factor>
-		<axis>
-		  <x>0</x>
-		  <y>1</y>
-		  <z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>AileronTab</object-name>
-		<property>/controls/flight/aileron-trim</property>
-		<factor>-8680</factor>
-		<center>
-		  <x-m>0.0</x-m>
-		  <y-m>0.05414</y-m>
-		  <z-m>0.579</z-m>
-		</center>
-		<axis>
-		  <x>1.0</x>
-		  <y>0.0</y>
-		  <z>0.0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>pick</type>
-		<object-name>AileronTab</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		   <binding>
-		    <command>nasal</command>
-		    <script>b707.applyTrimWheels(0, 2)</script>
-		   </binding>
-		</action>
-		<action>
-		  <button>3</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-        <condition>
-            <not><property>devices/status/keyboard/shift</property></not>
-            <not><property>devices/status/keyboard/super</property></not>
-        </condition>
-		    <command>property-adjust</command>
-		    <property>/controls/flight/aileron-trim</property>
-		    <step>0.001</step>
-		    <min>-1</min>
-		    <max>1</max>
-		    <wrap>false</wrap>
-		  </binding>
-		  <binding>
-        <condition>
-           <or>
-            <property>devices/status/keyboard/shift</property>
-            <property>devices/status/keyboard/super</property>
-           </or>
-        </condition>
-		    <command>property-adjust</command>
-		    <property>/controls/flight/aileron-trim</property>
-		    <step>0.01</step>
-		    <min>-1</min>
-		    <max>1</max>
-		    <wrap>false</wrap>
-		  </binding>
-		</action>
-		<action>
-		  <button>4</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-        <condition>
-            <not><property>devices/status/keyboard/shift</property></not>
-            <not><property>devices/status/keyboard/super</property></not>
-        </condition>
-		    <command>property-adjust</command>
-		    <property>/controls/flight/aileron-trim</property>
-		    <step>-0.001</step>
-		    <min>-1</min>
-		    <max>1</max>
-		    <wrap>false</wrap>
-		  </binding>
-		  <binding>
-        <condition>
-           <or>
-            <property>devices/status/keyboard/shift</property>
-            <property>devices/status/keyboard/super</property>
-           </or>
-        </condition>
-		    <command>property-adjust</command>
-		    <property>/controls/flight/aileron-trim</property>
-		    <step>-0.01</step>
-		    <min>-1</min>
-		    <max>1</max>
-		    <wrap>false</wrap>
-		  </binding>
 		</action>
 	</animation>
 

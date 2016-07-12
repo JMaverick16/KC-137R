@@ -76,6 +76,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>eicas1</object-name>
+		<object-name>thrpos1</object-name>
 		<object-name>n1.1</object-name>
 		<object-name>egt.1</object-name>
 		<object-name>n2.1</object-name>
@@ -97,6 +98,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>eicas2</object-name>
+		<object-name>thrpos2</object-name>
 		<object-name>n1.2</object-name>
 		<object-name>egt.2</object-name>
 		<object-name>n2.2</object-name>
@@ -118,6 +120,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>eicas3</object-name>
+		<object-name>thrpos3</object-name>
 		<object-name>n1.3</object-name>
 		<object-name>egt.3</object-name>
 		<object-name>n2.3</object-name>
@@ -139,6 +142,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>eicas4</object-name>
+		<object-name>thrpos4</object-name>
 		<object-name>n1.4</object-name>
 		<object-name>egt.4</object-name>
 		<object-name>n2.4</object-name>
@@ -647,6 +651,26 @@
     		<z>0</z>
     	</axis>
     </animation>
+	<animation>
+    	<type>rotate</type>
+    	<object-name>thrpos1</object-name>
+    	<property>controls/engines/engine[0]/throttle</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>50</dep></entry>
+			<entry><ind>0.2857</ind><dep>85</dep></entry>
+			<entry><ind>1</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.058</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
 	<text>
 		<name>n12</name>
 		<offsets>
@@ -712,7 +736,26 @@
     		<z>0</z>
     	</axis>
     </animation>
-
+	<animation>
+    	<type>rotate</type>
+    	<object-name>thrpos2</object-name>
+    	<property>controls/engines/engine[1]/throttle</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>50</dep></entry>
+			<entry><ind>0.2857</ind><dep>85</dep></entry>
+			<entry><ind>1</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.058</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
 	<text>
 		<name>n13</name>
 		<offsets>
@@ -778,8 +821,27 @@
     		<z>0</z>
     	</axis>
     </animation>
-
-<text>
+	<animation>
+    	<type>rotate</type>
+    	<object-name>thrpos3</object-name>
+    	<property>controls/engines/engine[2]/throttle</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>50</dep></entry>
+			<entry><ind>0.2857</ind><dep>85</dep></entry>
+			<entry><ind>1</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.058</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+	<text>
 		<name>n14</name>
 		<offsets>
 			<x-m>0.0004</x-m>
@@ -844,7 +906,26 @@
     		<z>0</z>
     	</axis>
     </animation>
-
+	<animation>
+    	<type>rotate</type>
+    	<object-name>thrpos4</object-name>
+    	<property>controls/engines/engine[3]/throttle</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>50</dep></entry>
+			<entry><ind>0.2857</ind><dep>85</dep></entry>
+			<entry><ind>1</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.058</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
 	<!-- EGT -->
 	
 	<text>

@@ -9,6 +9,386 @@
 <PropertyList>
 
  <fx>
+ 
+  <apoff>
+   <name>apoff</name>
+   <path>/Aircraft/KC-137R/Sounds/apoff.wav</path>
+   <condition>
+     <property>/controls/it2/apoffsound</property>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </apoff>
+  
+  <tchdwn0>
+   <name>tchdwn0</name>
+   <path>/Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+   <condition>
+     <property>/gear/gear[0]wow</property>
+   </condition>
+   <volume>
+    <factor>25.0</factor>
+   </volume>
+  </tchdwn0>
+  
+  <tchdwn1>
+   <name>tchdwn1</name>
+   <path>/Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+   <condition>
+     <property>/gear/gear[1]wow</property>
+   </condition>
+   <volume>
+    <factor>30.0</factor>
+   </volume>
+  </tchdwn1>
+  
+  <tchdwn2>
+   <name>tchdwn2</name>
+   <path>/Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+   <condition>
+     <property>/gear/gear[2]/wow</property>
+   </condition>
+   <volume>
+    <factor>30.0</factor>
+   </volume>
+  </tchdwn2>
+  
+  <twothoufivehun>
+   <name>twothoufivehun</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/2500.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>2502</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>2495</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </twothoufivehun>
+  
+  <onethou>
+   <name>onethou</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/1000.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>1002</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>995</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </onethou>
+  
+  <fivehun>
+   <name>fivehun</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/500.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>502</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>495</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </fivehun>
+  
+  <fourhun>
+   <name>fourhun</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/400.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>402</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>395</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </fourhun>
+  
+  <threehun>
+   <name>threehun</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/300.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>302</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>295</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </threehun>
+  
+  <twohun>
+   <name>twohun</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/200.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>202</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>195</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </twohun>
+  
+  <onehun>
+   <name>onehun</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/100.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>102</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>95</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </onehun>
+  
+  <seventy>
+   <name>seventy</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/70.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>72</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>65</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </seventy>
+  
+  <sixty>
+   <name>sixty</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/60.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>62</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>55</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </sixty>
+  
+  <fifty>
+   <name>fifty</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/50.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>52</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>45</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </fifty>
+  
+  <fourty>
+   <name>fourty</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/40.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>42</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>35</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </fourty>
+  
+  <thirty>
+   <name>thirty</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/30.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>32</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>25</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </thirty>
+  
+  <twenty>
+   <name>twenty</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/20.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>22</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>15</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </twenty>
+  
+  <ten>
+   <name>ten</name>
+   <path>/Aircraft/KC-137R/Sounds/callout/10.wav</path>
+   <condition>
+    <and>
+	<less-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>12</value>
+	</less-than>
+	<greater-than>
+	  <property>/position/altitude-agl-ft</property>
+	  <value>5</value>
+	</greater-than>
+	<less-than>
+	  <property>/autopilot/internal/vert-speed-fpm</property>
+	  <value>-5</value>
+	</less-than>	
+	</and>
+   </condition>
+   <volume>
+    <factor>40.0</factor>
+   </volume>
+  </ten>
 
 <!-- engines on work -->
 
@@ -541,25 +921,6 @@
 			<factor>1</factor>
 		</volume>
 	</firewarning>
-	
-	<mdawarning>
-		<name>mda warning</name>
-		<mode>once</mode>
-		<path>Aircraft/KC-137R/Sounds/warning.wav</path>
-      <condition>
-        <and>
-					<greater-than>
-						<property>/b707/ess-bus</property>
-						<value>0</value>
-					</greater-than>
-				  <property>/instrumentation/aglradar/power-btn</property>
-				  <property>/instrumentation/aglradar/mda-lamp</property>
-				</and>
-      </condition>
-		<volume>
-			<factor>1</factor>
-		</volume>
-	</mdawarning>
 	
 	<icewarning>
 		<name>ice warning</name>
@@ -1272,70 +1633,7 @@
         <factor>0.01</factor>
         <offset>1.0</offset>
       </pitch>
-		</apu>
-		
-  <music>
-    <name>Big Band one</name>
-    <mode>looped</mode>
-    <path>Aircraft/KC-137R/Sounds/50.wav</path>
-     <condition>
-     		<and>
-		     <greater-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
-		       <value>132.98</value>
-		     </greater-than>
-		     <less-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
-		       <value>133.02</value>
-		     </less-than>
-		    </and>
-     </condition>
-		  <volume>
-		    <offset> 1 </offset>
-		  </volume>
-    </music> 		
-		
-  <music>
-    <name>Rock n Roll one</name>
-    <mode>looped</mode>
-    <path>Aircraft/KC-137R/Sounds/paul_anka.wav</path>
-     <condition>
-     		<and>
-		     <greater-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
-		       <value>133.98</value>
-		     </greater-than>
-		     <less-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
-		       <value>134.02</value>
-		     </less-than>
-		    </and>
-     </condition>
-		  <volume>
-		    <offset> 1 </offset>
-		  </volume>
-    </music> 
-
-  <music>
-    <name>Jack Sparrow Theme three</name>
-    <mode>looped</mode>
-    <path>Aircraft/KC-137R/Sounds/jack_sparrow.wav</path>
-     <condition>
-     		<and>
-		     <greater-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
-		       <value>134.98</value>
-		     </greater-than>
-		     <less-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
-		       <value>135.02</value>
-		     </less-than>
-		    </and>
-     </condition>
-		  <volume>
-		    <offset>0.3</offset>
-		  </volume>
-    </music>
+		</apu>	
 
   <aux-pump>
     <name>Auxilliary Pumps</name>
@@ -1388,16 +1686,6 @@
         <offset>000</offset>
       </pitch>
     </hyd-pump>
-    
-		<trim-wheels>
-			<name>Trim Wheels</name>
-			<mode>in-transit</mode>
-			<path>Aircraft/KC-137R/Sounds/trimwheel.wav</path>
-			<property>/b707/trim/elevator-trim-turn</property>
-			<volume>
-				<property>/sim/current-view/internal</property>
-			</volume>
-		</trim-wheels>
 		
 </fx>
 

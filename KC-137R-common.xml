@@ -23,8 +23,8 @@
   </rating>
   
   <systems n="0">
-    <autopilot n="0">
-        <path>Aircraft/KC-137R/Systems/autopilot.xml</path>
+    <autopilot>
+        <path>Aircraft/KC-137R/Systems/it-autoflight.xml</path>
     </autopilot>
 	</systems>
 
@@ -237,8 +237,8 @@
 		<float n="16" alias="/instrumentation/doors/belly/position-norm"/>						<!-- Belly door -->
 		<float n="17" alias="/orientation/pitch-deg"/>       									<!-- for the shadow without rembrandt -->
 		<float n="18" alias="/instrumentation/doors/refuel-boom/position-norm"/>      			<!-- in the TT the refuel boom -->
-		<float n="19" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging backwheels -->
-		<float n="20" alias="/gear/gear[2]/compression-norm"/>									<!-- multiplayer see the hanging backwheels -->
+		<float n="19" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
+		<float n="20" alias="/gear/gear[2]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
 		<!-- <string n="0" alias="/sim/multiplay/callsign"/>									will be init in the registration.nas DO NOT USE string[0] for other properties -->
     </generic>
   </multiplay>
@@ -417,40 +417,6 @@
 	<input>
 		<keyboard include="Systems/keyboard.xml"/>
 	</input>
- 
-	<autopilot>
-		<settings>
-		    <target-speed-kt type="double">220</target-speed-kt>
-		    <target-pitch-deg type="double">0</target-pitch-deg>
-		    <target-altitude-ft type="int">0</target-altitude-ft>
-		    <vertical-speed-fpm type="int">0</vertical-speed-fpm>
-		    <heading-bug-deg type="int">0</heading-bug-deg>
-		</settings>
-		<switches>
-		  <ap type="bool">0</ap>
-		  <hdg type="bool">0</hdg>
-		  <alt type="bool">0</alt>
-		  <ias type="bool">0</ias>
-		  <nav type="bool">0</nav>
-		  <appr type="bool">0</appr>
-		  <gps type="bool">0</gps>
-		  <selected-nav type="bool">1</selected-nav>
-		</switches> 
-		<constant>
-			<flare-base type="double">0.2</flare-base>
-			<derate-lowalt type="double">0.77</derate-lowalt>
-			<descent-profile-high-base type="double">0.18</descent-profile-high-base>
-			<descent-profile-high-rate type="double">-0.00096774</descent-profile-high-rate>
-			<descent-profile-low-base type="double">0.13</descent-profile-low-base>
-			<descent-profile-low-rate type="double">-0.00029032</descent-profile-low-rate>
-		</constant> 
-		<Bendix-PB-20>
-			<controls>
-				<mode-selector type="int">2</mode-selector>	  <!-- 2 is manual control-->
-				<active type="bool">0</active>	  			  <!-- the AP engage switch -->	
-			</controls>	
-		</Bendix-PB-20> 
-	</autopilot>
 
  <controls>
 		<APU>

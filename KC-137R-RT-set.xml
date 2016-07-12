@@ -287,15 +287,19 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/doors.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tyresmoke.nas</file>
 			<file>Aircraft/KC-137R/Nasal/brakesystem.nas</file>
-			<file>Aircraft/KC-137R/Nasal/autopilot-routemanager.nas</file>
-			<file>Aircraft/KC-137R/Nasal/autopilot-Bendix-PB-20.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/registration.nas</file>
 			<file>Aircraft/KC-137R/Nasal/manual.nas</file>
 			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND.nas</file>
 			<!--file>Aircraft/KC-137R/Nasal/boeing_cdu.nas</file-->
 			<file>Aircraft/KC-137R/Nasal/efis.nas</file>
+			<file>Aircraft/KC-137R/Nasal/systems-init.nas</file>
 		</b707>
+		
+		<it2>
+            <file>Aircraft/KC-137R/Nasal/autoflight.nas</file>
+            <file>Aircraft/KC-137R/Nasal/autoflight-logic.nas</file>
+		</it2> 
 		
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>

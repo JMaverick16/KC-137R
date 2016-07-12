@@ -502,7 +502,7 @@
 	</model-->
 	
   	<!--model>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radioo/comm1.xml</path>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/Radiopanel.xml</path>
       <offsets>
 		  <x-m>-18.49</x-m>
 		  <y-m> -0.05</y-m>
