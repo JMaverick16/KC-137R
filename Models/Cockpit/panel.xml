@@ -429,38 +429,6 @@
   </offsets>
 </model>
 
-<!-- center top panel -->
-
-<model>
-  <name>apset</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apset/apset.xml</path>
-  <offsets>
-      <x-m>-18.8121</x-m>
-      <y-m>-0.03</y-m>
-      <z-m> 1.052</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>spdset</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apset/spdset.xml</path>
-  <offsets>
-      <x-m>-18.8121</x-m>
-      <y-m>-0.064</y-m>
-      <z-m> 1.044</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>Autopilot Helper</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ap/ap-fg.xml</path>
-  <offsets>
-      <x-m>-18.812</x-m>
-      <y-m>-0.126</y-m>
-      <z-m> 1.043</z-m>
-  </offsets>
-</model>
-
 <!-- middle pedestal -->
 
   	<!--model>
