@@ -7,7 +7,7 @@ kids 72
 OBJECT poly
 name "antenaasa"
 loc 1.3128090 -0.4890490 -0.4825050
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 51
 6.0629058 1.4503170 -20.2055683
@@ -390,7 +390,7 @@ kids 0
 OBJECT poly
 name "doorBelly"
 loc 0.0000000 0.0000150 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 88
 -11.1141558 -0.0102420 -1.7250479
@@ -810,7 +810,7 @@ kids 0
 OBJECT poly
 name "doorCargo"
 loc 0.0000000 0.0000150 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 116
 -11.9214907 2.0796120 1.1366870
@@ -1398,7 +1398,7 @@ kids 0
 OBJECT poly
 name "doorFL"
 loc 0.0000000 0.0000150 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 124
 -15.3816500 0.7235200 1.6231630
@@ -2294,7 +2294,7 @@ kids 0
 OBJECT poly
 name "doorRL"
 loc 0.0000000 0.0000150 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 144
 15.6734457 1.9232910 1.1530319
@@ -3110,7 +3110,7 @@ kids 0
 OBJECT poly
 name "elevwing"
 loc 0.0000000 0.0000000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 252
 24.2488289 2.1580069 7.0672870
@@ -27738,7 +27738,7 @@ kids 0
 OBJECT poly
 name "fuselage.belly"
 loc 0.0000000 0.0000150 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 92
 -9.9463224 -1.3294801 -0.9512000
@@ -28189,7 +28189,7 @@ kids 0
 OBJECT poly
 name "fuselage.inner"
 loc 0.0000000 0.0000150 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 204
 -15.6058273 0.0399080 1.4297700
@@ -29505,7 +29505,7 @@ kids 0
 OBJECT poly
 name "lampFrame"
 loc -5.5133729 -0.8425830 -3.8132329
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 20
 0.0758300 0.1135980 7.4990740
@@ -29589,7 +29589,7 @@ kids 0
 OBJECT poly
 name "LeftGear"
 loc 5.1062932 -0.2750500 -7.4884129
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 324
 -3.1989250 -0.4132010 10.1339931
@@ -31601,7 +31601,7 @@ kids 0
 OBJECT poly
 name "LeftGear.001"
 loc 5.1062932 -0.0392370 -7.4863420
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 57
 -3.2415011 -0.2148680 7.6219711
@@ -32050,7 +32050,7 @@ kids 0
 OBJECT poly
 name "LeftGearCompressor"
 loc 5.1062932 0.4399380 -6.2935910
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 134
 -3.3946061 -2.7381690 8.9090977
@@ -32888,7 +32888,7 @@ kids 0
 OBJECT poly
 name "LeftGearCompressor1"
 loc 5.1062932 0.6844180 -6.2935910
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 385
 -3.5754161 -2.3200760 9.2146168
@@ -34923,7 +34923,7 @@ kids 0
 OBJECT poly
 name "lhdoorinner"
 loc 0.0000000 0.0000000 0.0211650
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 32
 3.5949199 -1.7128659 0.1355640
@@ -35033,7 +35033,7 @@ kids 0
 OBJECT poly
 name "lhdoorouter"
 loc 0.0000000 0.0139710 0.0211650
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 20
 -0.0549700 -1.2852660 1.7601640
@@ -35117,7 +35117,7 @@ kids 0
 OBJECT poly
 name "lhelevator"
 loc 0.0000000 0.0000000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 20
 24.1629314 2.2389710 6.9476051
@@ -35185,7 +35185,7 @@ kids 0
 OBJECT poly
 name "lhfiletflap"
 loc -0.0688110 -0.6710440 2.1703069
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 86
 2.9097550 -0.4386860 -0.4173990
@@ -35874,7 +35874,7 @@ kids 0
 OBJECT poly
 name "lhibail"
 loc 0.0000000 -5.7061319 -0.0233860
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 19
 5.1969781 5.5014839 8.6027365
@@ -35985,7 +35985,7 @@ kids 0
 OBJECT poly
 name "lhibflap"
 loc 4.0148811 -0.6710440 5.7924218
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 86
 -1.4891950 -0.1334560 -1.9911849
@@ -36674,7 +36674,7 @@ kids 0
 OBJECT poly
 name "lhngdoor"
 loc 0.0000000 -0.0047910 0.0766610
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 31
 -16.2902489 -1.3905700 0.4201160
@@ -36803,7 +36803,7 @@ kids 0
 OBJECT poly
 name "lhngdooraft"
 loc 0.0000000 0.0000000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 24
 -16.0043392 -1.5649750 0.0008770
@@ -36877,7 +36877,7 @@ kids 0
 OBJECT poly
 name "lhobail"
 loc 0.0000000 -5.7061319 -0.0233860
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 14
 8.0203209 6.0457840 14.1866474
@@ -36969,7 +36969,7 @@ kids 0
 OBJECT poly
 name "lhobflap"
 loc 5.2090130 -0.6713670 12.9151201
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 86
 0.0627880 0.6126630 -2.1688550
@@ -37658,7 +37658,7 @@ kids 0
 OBJECT poly
 name "lhsp1"
 loc -0.0038370 -5.7100182 -0.0281720
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 8
 6.2957559 6.1825409 14.1033411
@@ -37716,7 +37716,7 @@ kids 0
 OBJECT poly
 name "lhsp3"
 loc -0.2467860 -5.7100182 -0.0314440
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 8
 2.1758521 5.3737559 4.3572960
@@ -37774,7 +37774,7 @@ kids 0
 OBJECT poly
 name "mgdoora"
 loc 0.0000000 -5.7061148 -0.0233860
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 12
 1.0968210 4.5731001 2.2388971
@@ -37857,7 +37857,7 @@ kids 0
 OBJECT poly
 name "mgdoorb"
 loc 0.0000000 -5.7061148 -0.0233860
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 16
 1.0915930 4.4968300 1.9752530
@@ -37979,7 +37979,7 @@ kids 0
 OBJECT poly
 name "mgdoorc"
 loc 0.0000000 -5.6500082 0.4329270
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 12
 1.0968699 4.5887370 2.2390070
@@ -38062,7 +38062,7 @@ kids 0
 OBJECT poly
 name "NGear"
 loc -15.8003063 -1.6779780 -0.0233830
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 1412
 0.5243970 -0.3648970 0.0188250
@@ -45068,7 +45068,7 @@ kids 0
 OBJECT poly
 name "NGearStrut"
 loc -15.7818594 -1.5901960 -0.0233830
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 616
 0.1639250 -0.6533620 0.0941270
@@ -48296,7 +48296,7 @@ kids 0
 OBJECT poly
 name "nonones"
 loc -1.8779520 -0.0004000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 24
 -11.8350019 2.2354839 0.0056550
@@ -48370,7 +48370,7 @@ kids 0
 OBJECT poly
 name "nose"
 loc 0.0000000 0.0000150 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 686
 -20.2273312 0.2540520 0.4399990
@@ -53276,7 +53276,7 @@ kids 0
 OBJECT poly
 name "NoseWheel"
 loc -19.5897827 22.3624897 -0.0233890
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 690
 4.2747960 -24.8659306 -0.1406350
@@ -59830,7 +59830,7 @@ kids 0
 OBJECT poly
 name "nosewheelwell"
 loc 0.0000000 0.0000000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 40
 -15.1109095 -1.6383671 -0.0089460
@@ -60033,7 +60033,7 @@ kids 0
 OBJECT poly
 name "operatorRoom"
 loc 11.8156452 -0.4659970 2.2878001
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 185
 0.9916820 -0.9455030 -2.6222429
@@ -61472,7 +61472,7 @@ kids 0
 OBJECT poly
 name "operatorRoomWin"
 loc 11.8156452 -0.4659970 2.2878001
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 96
 1.0397620 -0.6176740 -2.5766661
@@ -62080,7 +62080,7 @@ kids 0
 OBJECT poly
 name "probe"
 loc 0.4436680 -0.4507140 -0.0044480
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 20
 21.7695007 9.4408932 0.0634980
@@ -62204,7 +62204,7 @@ kids 0
 OBJECT poly
 name "refuelAPULeft"
 loc -9.5507174 -1.4091409 32.7008629
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 480
 20.4374275 2.2498779 -12.8257980
@@ -65431,7 +65431,7 @@ kids 0
 OBJECT poly
 name "refuelAPURight"
 loc -9.5507174 -1.4091409 32.7008629
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 480
 20.4828529 2.2508450 -52.6646042
@@ -68658,7 +68658,7 @@ kids 0
 OBJECT poly
 name "refuelBoom"
 loc 0.8949820 -2.7923360 0.0027150
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 168
 22.3238773 3.4641931 0.0158590
@@ -69496,7 +69496,7 @@ kids 0
 OBJECT poly
 name "refuelOperator"
 loc -0.7575600 -3.6779270 0.0000000
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 258
 11.5796089 2.4137111 -0.5065020
@@ -70732,7 +70732,7 @@ kids 0
 OBJECT poly
 name "refuelPivot"
 loc -1.4159400 -3.1612000 0.0000000
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 227
 17.0681000 2.6079099 -0.2385290
@@ -71851,7 +71851,7 @@ kids 0
 OBJECT poly
 name "refuelProbeLeft"
 loc -9.5849438 0.3801830 32.7160835
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 748
 22.0537987 -0.1701290 -12.8635979
@@ -77206,7 +77206,7 @@ kids 0
 OBJECT poly
 name "refuelProbeRight"
 loc -9.5849438 0.3801830 32.7160835
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 748
 22.0537968 -0.1701290 -52.7176247
@@ -82561,7 +82561,7 @@ kids 0
 OBJECT poly
 name "refuelTube"
 loc -2.9970479 -3.3881381 0.0000000
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 79
 27.1953030 4.3668070 0.0817220
@@ -83044,7 +83044,7 @@ kids 0
 OBJECT poly
 name "rhdoorinner"
 loc 0.0000000 0.0000000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 36
 -0.0558300 -1.7093940 -0.1772720
@@ -83158,7 +83158,7 @@ kids 0
 OBJECT poly
 name "rhdoorouter"
 loc 0.0000000 0.0183090 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 46
 -0.0549700 -1.2852390 -1.7712220
@@ -83338,7 +83338,7 @@ kids 0
 OBJECT poly
 name "rhelevator"
 loc 0.0000000 0.0000000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 20
 24.1815186 2.0836201 -6.9290748
@@ -83406,7 +83406,7 @@ kids 0
 OBJECT poly
 name "rhfiletflap"
 loc -0.0688110 -0.6710440 -0.0311030
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 86
 2.9097550 -0.4386860 -1.7749510
@@ -84095,7 +84095,7 @@ kids 0
 OBJECT poly
 name "rhibail"
 loc 0.0000000 -5.7061319 -0.0233860
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 19
 5.1722612 5.5014839 -8.5862579
@@ -84206,7 +84206,7 @@ kids 0
 OBJECT poly
 name "rhibflap"
 loc 4.0148811 -0.6710440 0.0251210
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 86
 -1.4891950 -0.1334560 -3.8706379
@@ -84895,7 +84895,7 @@ kids 0
 OBJECT poly
 name "rhmgdoora"
 loc 0.0000000 -5.7061148 -0.0151360
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 12
 1.0868560 4.5949631 -2.2390239
@@ -84978,7 +84978,7 @@ kids 0
 OBJECT poly
 name "rhmgdoorb"
 loc 0.0000000 -5.7061148 -0.0233860
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 16
 1.0909050 4.5029659 -1.9752530
@@ -85100,7 +85100,7 @@ kids 0
 OBJECT poly
 name "rhmgdoorc"
 loc 0.0000000 -5.6602788 -0.4799070
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 12
 1.0883890 4.6109400 -2.2394221
@@ -85183,7 +85183,7 @@ kids 0
 OBJECT poly
 name "rhngdoor"
 loc 0.0000000 0.0000000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 32
 -17.2922344 -1.2436030 -0.5355180
@@ -85313,7 +85313,7 @@ kids 0
 OBJECT poly
 name "rhngdooraft"
 loc 0.0000000 0.0000000 -0.0001010
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 25
 -16.0044518 -1.5648230 -0.0009120
@@ -85388,7 +85388,7 @@ kids 0
 OBJECT poly
 name "rhobail"
 loc 0.0000000 -5.7061319 -0.0233860
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 14
 8.0203209 6.0457840 -14.1866474
@@ -85480,7 +85480,7 @@ kids 0
 OBJECT poly
 name "rhobflap"
 loc 5.2090130 -0.6713670 12.9272451
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 86
 0.0640880 0.6109650 -23.7225685
@@ -86169,7 +86169,7 @@ kids 0
 OBJECT poly
 name "rhsp1"
 loc -0.0038370 -5.7100182 -0.0281720
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 8
 6.3285012 6.1825409 -14.0487919
@@ -86227,7 +86227,7 @@ kids 0
 OBJECT poly
 name "rhsp3"
 loc -0.2467860 -5.7100182 -0.0314440
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 8
 2.1887989 5.3737559 -4.3291612
@@ -86285,7 +86285,7 @@ kids 0
 OBJECT poly
 name "RightGear"
 loc 5.1062932 -0.2750820 4.9731250
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 324
 -3.1989250 -0.4171200 -7.6436210
@@ -88297,7 +88297,7 @@ kids 0
 OBJECT poly
 name "RightGear.001"
 loc 5.1062932 -0.0490950 4.9731250
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 57
 -3.2415011 -0.2424500 -5.0869250
@@ -88746,7 +88746,7 @@ kids 0
 OBJECT poly
 name "RightGearCompressor"
 loc 5.1062932 0.4399060 6.1679478
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 138
 -3.2793579 -2.9567101 -9.1054277
@@ -89600,7 +89600,7 @@ kids 0
 OBJECT poly
 name "RightGearCompressor1"
 loc 5.1062932 0.6843860 6.1679478
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 377
 -3.5754161 -2.3200760 -9.0884380
@@ -91599,7 +91599,7 @@ kids 0
 OBJECT poly
 name "rudder"
 loc 0.1992570 -0.1516580 -0.0005930
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 26
 22.3521557 8.1290951 0.0560260
@@ -91689,7 +91689,7 @@ kids 0
 OBJECT poly
 name "slatsL"
 loc -0.0065600 -5.1504698 -0.0519560
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 130
 8.9913740 6.0033140 20.2336025
@@ -92415,7 +92415,7 @@ kids 0
 OBJECT poly
 name "slatsR"
 loc -0.0000560 -5.6938138 -0.0367840
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 130
 9.0329561 6.5896640 -20.2336025
@@ -93141,7 +93141,7 @@ kids 0
 OBJECT poly
 name "vertstab"
 loc 0.1992570 -0.1516580 -0.0005930
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 89
 20.4142036 2.1146450 -0.1300870
@@ -93642,7 +93642,7 @@ kids 0
 OBJECT poly
 name "wing"
 loc -0.0260680 -5.6938138 -0.0215650
-texture "KC-137R.png"
+texture "USAF-TEST.png"
 texrep 1 1
 numvert 886
 4.2012229 4.7603140 1.7606260

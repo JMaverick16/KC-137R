@@ -5,7 +5,7 @@
 		This file is licenced under the terms of the GNU General Public Licence V2 or later
 		###################################################################################
 -->
-<PropertyList>
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
  <sim n="0">
   <description>Boeing 707</description>
   <author>J Maverick 16 (Textures/FDM/Systems), Joshua Davidson (it0uchpods/411)(Cockpit/FDM/Systems) Original: Lake of Constance Hangar [Original from Innis Cunningham]</author>
@@ -26,6 +26,9 @@
     <autopilot>
         <path>Aircraft/KC-137R/Systems/it-autoflight.xml</path>
     </autopilot>
+	<property-rule n="101">	
+		<path>Systems/sound_calc.xml</path>
+	</property-rule>
 	</systems>
 
 	<instrumentation>
@@ -90,11 +93,11 @@
         <enabled archive="y" type="bool">false</enabled>
      </limits>
      <!-- x/y/z == right/up/back -->
-		 <x-offset-m archive="y">-0.46</x-offset-m>
-		 <y-offset-m archive="y">1.14</y-offset-m>
+		 <x-offset-m archive="y">-0.45</x-offset-m>
+		 <y-offset-m archive="y">1.11</y-offset-m>
 		 <z-offset-m archive="y">-18.2</z-offset-m>
 		 <pitch-offset-deg archive="y">-6.0</pitch-offset-deg>
-		 <default-field-of-view-deg type="double">80</default-field-of-view-deg>
+		 <default-field-of-view-deg type="double">76.2</default-field-of-view-deg>
    </config>
   </view>
   <view n="1">
@@ -112,12 +115,12 @@
      <from-model type="bool">true</from-model>
 		 <from-model-idx type="int">true</from-model-idx>
      <!-- x/y/z == right/up/back -->
-		 <x-offset-m archive="y"> 0.46</x-offset-m>
-		 <y-offset-m archive="y">1.19</y-offset-m>
+		 <x-offset-m archive="y"> 0.45</x-offset-m>
+		 <y-offset-m archive="y">1.11</y-offset-m>
 		 <z-offset-m archive="y">-18.2</z-offset-m>
 		 <pitch-offset-deg archive="y">-16.0</pitch-offset-deg>
 		 <default-pitch-deg type="double">-16.0</default-pitch-deg>
-		 <default-field-of-view-deg type="double">72</default-field-of-view-deg>
+		 <default-field-of-view-deg type="double">76.2</default-field-of-view-deg>
     </config>
 	</view>
   <view n="102">

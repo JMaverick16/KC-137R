@@ -104,7 +104,7 @@
 		<type>spin</type>
 		<object-name>cone</object-name>
 		<object-name>fan</object-name>
-		<factor>67</factor>
+		<factor>150</factor>
 		<property>engines/engine[3]/n1</property>
 		<axis>
 			<x>-1</x>

@@ -198,25 +198,6 @@
 
 
 <!-- Center Panel -->
-<model>
-  <name>ALT-Setting</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/alt-set/alt-set.xml</path>
-  <offsets>
-      <x-m>-18.92</x-m>
-      <y-m>-0.141</y-m>
-      <z-m> 0.993</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>lamp-mach-trim</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/machtrim.xml</path>
-  <offsets>
-      <x-m>-18.919</x-m>
-      <y-m>-0.141</y-m>
-      <z-m> 0.974</z-m>
-  </offsets>
-</model>
 
 <model>
   <name>stby-ai</name>
@@ -275,16 +256,6 @@
     <x-m>-18.924</x-m>
     <y-m>  0.093</y-m>
     <z-m>  0.80</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>flight rallye watch</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/frw/frw.xml</path>
-  <offsets>
-    <x-m>-18.966</x-m>
-    <y-m>-0.06</y-m>
-    <z-m>1.35</z-m>
   </offsets>
 </model>
 
@@ -580,6 +551,16 @@
                 <pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
+	
+	<!-- AP -->
+	<!--model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/autoflight/APpanel.xml</path>
+		<offsets>
+			<x-m>-18.797</x-m>
+			<y-m>  0.00</y-m>
+			<z-m>  1.05</z-m>
+		</offsets>
+	</model-->
 
 </PropertyList>
 
