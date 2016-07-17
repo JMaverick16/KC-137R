@@ -743,7 +743,6 @@ var startup = func
 				setprop("/b707/fuel/valves/fuel-shutoff[3]", 1);
 				b707.shutoff_pos(3);
 				toggle_switch2();				
-				screen.log.write("Look down to your throttle levers on center pedestal.", 1, 1, 1);
 				step = 8;
 			}
 		}, t); t += 2.5;
@@ -751,10 +750,7 @@ var startup = func
 		# throttle levers
 		settimer( func{
 			if(step == 8 and auto_procedure.getValue()){
-			interpolate("controls/engines/engine[0]/throttle", 0.25, 0.4);
-			interpolate("controls/engines/engine[1]/throttle", 0.25, 0.4);
-			interpolate("controls/engines/engine[2]/throttle", 0.25, 0.4);
-			interpolate("controls/engines/engine[3]/throttle", 0.25, 0.4);
+				screen.log.write("Starting engines...", 1, 1, 1);
 			}
 		}, t); t += 1.0;
 	
