@@ -1618,10 +1618,6 @@ var short_startup = func
 		setprop("/b707/fuel/valves/fuel-shutoff[3]", 1);
 		b707.shutoff_pos(3);
 	
-		setprop("controls/engines/engine[0]/throttle", 0.25);
-		setprop("controls/engines/engine[1]/throttle", 0.25);
-		setprop("controls/engines/engine[2]/throttle", 0.25);
-		setprop("controls/engines/engine[3]/throttle", 0.25);
 		setprop("controls/engines/engine[0]/cutoff", 1);
 		setprop("controls/engines/engine[1]/cutoff", 1);
 		setprop("controls/engines/engine[2]/cutoff", 1);

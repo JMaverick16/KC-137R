@@ -9,7 +9,7 @@
  <!-- =============================================================== -->
 
 	<predict-simple>
-		<name>predicted altitude 5 seconds ahead</name>
+		<name>ALTITUDE 5 SECONDS AHEAD</name>
 		<debug>false</debug>
 		<input>/instrumentation/altimeter/indicated-altitude-ft</input>
 		<output>/autopilot/internal/altitude-5-sec-ahead</output>
@@ -18,7 +18,7 @@
 	</predict-simple>
 
 	<predict-simple>
-		<name>predicted nav1-error 5 seconds ahead</name>
+		<name>VOR/LOC 5 SECONDS AHEAD</name>
 		<input>/autopilot/internal/nav1-track-error-deg</input>
 		<output>/autopilot/internal/nav1-error-5-sec-ahead</output>
 		<seconds>12</seconds>
@@ -26,7 +26,7 @@
 	</predict-simple>
 	
 	<filter>
-		<name>Nav1 heading error Filter</name>
+		<name>VOR/LOC HEADING ERROR FILTER</name>
 		<debug>false</debug>
 		<type>noise-spike</type>
 		<input>/autopilot/internal/nav1-error-5-sec-ahead</input>
@@ -39,19 +39,19 @@
  <!-- =============================================================== -->
  
 	<filter>
-		<name>Target Roll Computer</name>
+		<name>IT-TARGET PITCH CONTROLLER</name>
 		<debug>false</debug>
 		<type>gain</type>
 		<enable>
 			<condition>
 				<or>
 					<equals>
-						<property>/autopilot/locks/heading</property>
-						<value>dg-heading-hold</value>
+						<property>/controls/it2/locks/lateral</property>
+						<value>it-hdg-sel</value>
 					</equals>
 					<equals>
-						<property>/autopilot/locks/heading</property>
-						<value>true-heading-hold</value>
+						<property>/controls/it2/locks/lateral</property>
+						<value>it-nav-fms</value>
 					</equals>
 				</or>
 			</condition>
@@ -59,8 +59,8 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/autopilot/locks/heading</property>
-					<value>dg-heading-hold</value>
+					<property>/controls/it2/locks/lateral</property>
+					<value>it-hdg-sel</value>
 				</equals>
 			</condition>
 			<property>/autopilot/internal/heading-bug-error-deg</property>
@@ -69,8 +69,8 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/autopilot/locks/heading</property>
-					<value>true-heading-hold</value>
+					<property>/controls/it2/locks/lateral</property>
+					<value>it-nav-fms</value>
 				</equals>
 			</condition>
 			<property>/autopilot/internal/true-heading-error-deg</property>
@@ -90,18 +90,18 @@
 	</filter>
 	
 	<pid-controller>
-		<name>System Command: Roll</name>
+		<name>IT-CONTROLLER: ROLL</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
 				<or>
 					<equals>
-						<property>/autopilot/locks/heading</property>
-						<value>dg-heading-hold</value>
+						<property>/controls/it2/locks/lateral</property>
+						<value>it-hdg-sel</value>
 					</equals>
 					<equals>
-						<property>/autopilot/locks/heading</property>
-						<value>true-heading-hold</value>
+						<property>/controls/it2/locks/lateral</property>
+						<value>it-nav-fms</value>
 					</equals>
 				</or>
 			</condition>
@@ -112,7 +112,7 @@
 		<reference>
 			<condition>
 				<not-equals> 
-					<property>/autopilot/locks/heading</property>
+					<property>/controls/it2/locks/lateral</property>
 					<value>wing-leveler</value>
 				</not-equals>
 			</condition>
@@ -121,7 +121,7 @@
 		<reference>
 			<condition>
 				<equals> 
-					<property>/autopilot/locks/heading</property>
+					<property>/controls/it2/locks/lateral</property>
 					<value>wing-leveler</value>
 				</equals>
 			</condition>
@@ -145,11 +145,11 @@
 
 	
   <pid-controller>
-    <name>Nav1 Hold Stage 1</name>
+    <name>VOR/LOC Hold Stage 1</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>nav1-hold</value>
+      <prop>/controls/it2/locks/lateral</prop>
+      <value>it-vorloc</value>
     </enable>
     <input>
       <prop>/autopilot/internal/nav1-heading-error-deg</prop>
@@ -174,11 +174,11 @@
   </pid-controller>
 
   <pid-controller>
-    <name>Nav1 Hold Stage 2</name>
+    <name>VOR/LOC Hold Stage 2</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/heading</prop>
-      <value>nav1-hold</value>
+      <prop>/controls/it2/locks/lateral</prop>
+      <value>it-vorloc</value>
     </enable>
     <input>
       <prop>/orientation/roll-deg</prop>
@@ -207,17 +207,17 @@
  <!-- =============================================================== -->
 	
 	<pid-controller>
-		<name>Altitude Hold Computer</name>
+		<name>ALTITUDE CAPTURE/HOLD</name>
 		<debug>false</debug>
 		<enable>
-			<property>/autopilot/locks/altitude</property>
-			<value>altitude-hold</value>
+			<property>/controls/it2/locks/pitch</property>
+			<value>it-alt-cap-hld</value>
 		</enable>
 		<input>
 			<property>/autopilot/internal/altitude-5-sec-ahead</property>
 		</input>
 		<reference>
-			<property>/autopilot/settings/target-altitude-ft</property>
+			<property>/autopilot/settings/target-altitude-ft-actual</property>
 		</reference>
 		<output>
 			<property>/autopilot/internal/target-pitch-deg</property>
@@ -243,8 +243,8 @@
 		<name>Vertical Speed Hold</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/autopilot/locks/altitude</prop>
-			<value>vertical-speed-hold</value>
+			<prop>/controls/it2/locks/pitch</prop>
+			<value>it-vert-spd</value>
 		</enable>
 		<input>
 			<prop>/velocities/vertical-speed-fps</prop>
@@ -275,8 +275,8 @@
 		<enable>
 			<condition>
 				<equals>
-					<property>/autopilot/locks/altitude</property>
-					<value>gs1-hold</value>
+					<property>/controls/it2/locks/pitch</property>
+					<value>it-gs</value>
 				</equals>
 			</condition>
 		</enable>
@@ -303,11 +303,11 @@
 	
 	<!-- Hold speed by varying pitch (Two stage cascading controller) --> 
 	<pid-controller>
-		<name>Speed hold (vary pitch) Stage #1</name>
+		<name>FLIGHT LEVEL CHANGE</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/autopilot/locks/altitude</prop>
-			<value>flch</value>
+			<prop>/controls/it2/locks/pitch</prop>
+			<value>it-flch</value>
 		</enable>
 		<input>
 			<condition>
@@ -364,11 +364,11 @@
 	</pid-controller>
 
 	<pid-controller>
-		<name>Speed hold (vary pitch) Stage #2</name>
+		<name>IT-CONTROLLER: FLCH</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/autopilot/locks/altitude</prop>
-			<value>flch</value>
+			<prop>/controls/it2/locks/pitch</prop>
+			<value>it-flch</value>
 		</enable>
 		<input>
 			<prop>/orientation/pitch-deg</prop>
@@ -393,11 +393,11 @@
 	</pid-controller>
 
 	<pid-controller>
-		<name>System Command: Pitch</name>
+		<name>IT-CONTROLLER: PITCH</name>
 		<debug>false</debug>
 		<enable>
-			<property>/autopilot/locks/altitude</property>
-			<value>altitude-hold</value>
+			<property>/controls/it2/locks/pitch</property>
+			<value>it-alt-cap-hld</value>
 		</enable>
 		<input>
 			<property>/orientation/pitch-deg</property>
@@ -421,7 +421,7 @@
 	</pid-controller>
 	
 	<filter>
-		<name>Elevator control filter</name>
+		<name>IT-CONTROLLER: PITCH LIMIT</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
@@ -434,7 +434,7 @@
 		</input>
 		<output>/controls/flight/elevator-trim</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.2</max-rate-of-change>
+		<max-rate-of-change>0.15</max-rate-of-change>
 	</filter>
 
  <!-- =============================================================== -->
@@ -443,14 +443,14 @@
 
  <!-- Auto throttle --> 
  <pid-controller>
-    <name>Auto Throttle</name>
+    <name>IAS THR</name>
     <debug>false</debug>
     <enable>
 	  <condition>
 		<and>
 		  <equals>
-			<property>/autopilot/locks/speed</property>
-			<value>thr</value>
+			<property>/controls/it2/locks/throttle</property>
+			<value>it-thr</value>
 		  </equals>
 		  <equals>
 			<property>/controls/it2/apthrmode</property>
@@ -491,14 +491,14 @@
 <!-- Auto throttle (Mach Hold)-->
 
  <pid-controller>
-    <name>Auto Throttle (Mach Hold)</name>
+    <name>MACH THR</name>
     <debug>false</debug>
     <enable>
 	  <condition>
 		<and>
 		  <equals>
-			<property>/autopilot/locks/speed</property>
-			<value>thr</value>
+			<property>/controls/it2/locks/throttle</property>
+			<value>it-thr</value>
 		  </equals>
 		  <equals>
 			<property>/controls/it2/apthrmode</property>
@@ -541,8 +541,8 @@
     <name>IDLE</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>idle</value>
+      <prop>/controls/it2/locks/throttle</prop>
+      <value>it-idle</value>
     </enable>
     <input>
       <prop>/velocities/airspeed-kt</prop>
@@ -578,8 +578,8 @@
     <name>CLB</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>clb</value>
+      <prop>/controls/it2/locks/throttle</prop>
+      <value>it-clb</value>
     </enable>
     <input>
       <prop>/velocities/airspeed-kt</prop>

@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT Logic by Joshua Davidson (it0uchpods/411).
-# V2.10
+# V2.11 Beta 2
 
 var ap_logic_init = func {
 	setprop("/controls/it2/ap_master", 0);
@@ -14,17 +14,18 @@ var ap_logic_init = func {
 	setprop("/controls/it2/app1", 0);
 	setprop("/controls/it2/altc", 0);
 	setprop("/controls/it2/flch", 1);
+	setprop("/controls/it2/vnav", 0);
+	setprop("/controls/it2/land", 0);
 	setprop("/controls/it2/aplatmode", 0);
 	setprop("/controls/it2/aphldtrk", 0);
 	setprop("/controls/it2/apvertmode", 3);
 	setprop("/controls/it2/aphldtrk2", 0);
-	setprop("/controls/it2/apoffsound", 1);
 	setprop("/controls/it2/thr", 1);
 	setprop("/controls/it2/idle", 0);
 	setprop("/controls/it2/clb", 0);
 	setprop("/controls/it2/apthrmode", 0);
 	setprop("/controls/it2/apthrmode2", 0);
-	print("AUTOFLIGHT LOGIC ... FINE!");
+	print("IT-AUTOFLIGHT LOGIC ... OK!");
 }
 
 # AP Master System
@@ -35,7 +36,6 @@ setlistener("/controls/it2/ap_mastersw", func {
     ap_off();
   } else if (apmas == 1) {
 	setprop("/controls/it2/ap_master", 1);
-	setprop("/controls/it2/apoffsound", 0);
     ap_refresh();
   }
 });
@@ -58,7 +58,7 @@ setlistener("/controls/it2/fd_mastersw", func {
   if (fdmas == 0) {
 	setprop("/controls/it2/fd_master", 0);
   } else if (fdmas == 1) {
-	setprop("/controls/it2/fd_master", 1);
+	setprop("/controls/it2/fd_master", 0);  # Because FD is not yet implemented. Will be 1 later.
   }
 });
 
@@ -122,9 +122,12 @@ setlistener("/controls/it2/apvertset", func {
 	setprop("/controls/it2/apilsmode", 0);
     var altnow = int((getprop("/instrumentation/altimeter/indicated-altitude-ft")+50)/100)*100;
 	setprop("/autopilot/settings/target-altitude-ft", altnow);
+	setprop("/autopilot/settings/target-altitude-ft-actual", altnow);
 	flchthrust();
     alt_master();
   } else if (vertset == 1) {
+    var altinput = getprop("/autopilot/settings/target-altitude-ft");
+	setprop("/autopilot/settings/target-altitude-ft-actual", altinput);
 	setprop("/controls/it2/alt", 0);
 	setprop("/controls/it2/vs", 1);
 	setprop("/controls/it2/app", 0);
@@ -159,6 +162,8 @@ setlistener("/controls/it2/apvertset", func {
 	setprop("/controls/it2/aphldtrk2", 0);
     altcap_master();
   } else if (vertset == 4) {
+    var altinput = getprop("/autopilot/settings/target-altitude-ft");
+	setprop("/autopilot/settings/target-altitude-ft-actual", altinput);
 	setprop("/controls/it2/alt", 0);
 	setprop("/controls/it2/vs", 0);
 	setprop("/controls/it2/app", 0);
@@ -187,18 +192,20 @@ setlistener("/controls/it2/apvertmode", func {
 
 var altcapt = func {
   var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
-  var alt = getprop("/autopilot/settings/target-altitude-ft");
+  var alt = getprop("/autopilot/settings/target-altitude-ft-actual");
   var dif = calt - alt;
-  if (dif < 400 and dif > -400) {
+  if (dif < 500 and dif > -500) {
     setprop("/controls/it2/apvertset", 3);
     setprop("/controls/it2/apthrmode2", 0);
   }
+  var altinput = getprop("/autopilot/settings/target-altitude-ft");
+  setprop("/autopilot/settings/target-altitude-ft-actual", altinput);
 }
 
 # FLCH Thrust Mode Selector
 var flchthrust = func {
   var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
-  var alt = getprop("/autopilot/settings/target-altitude-ft");
+  var alt = getprop("/autopilot/settings/target-altitude-ft-actual");
   var vertm = getprop("/controls/it2/apvertmode");
   if (vertm == 4) {
     if (calt < alt) {

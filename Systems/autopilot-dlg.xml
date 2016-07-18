@@ -13,7 +13,7 @@
         <layout>hbox</layout>
         <text>
             <halign>left</halign>
-            <label>AUTOFLIGHT</label>
+            <label>IT-AUTOFLIGHT</label>
         </text>
         <button>
             <halign>right</halign>
@@ -57,7 +57,7 @@
 	<group>
 		<layout>hbox</layout>
 		<text>
-			<label>A/T</label>
+			<label>[A/T]</label>
 			<visible>
 				<equals>
 					<property>/controls/it2/at_master</property>
@@ -66,7 +66,7 @@
 			</visible>
 		</text>
 		<text>
-			<label>AP</label>
+			<label>[AP]</label>
 			<visible>
 				<equals>
 					<property>/controls/it2/ap_master</property>
@@ -75,7 +75,7 @@
 			</visible>
 		</text>
 		<text>
-			<label>FD</label>
+			<label>[FD]</label>
 			<visible>
 				<equals>
 					<property>/controls/it2/fd_master</property>
@@ -672,7 +672,7 @@
 			
 			<button>
                 <pref-width>65</pref-width>
-				<legend>ILS</legend>
+				<legend>APPR</legend>
 				<binding>
 				<command>property-assign</command>
 				<property>/controls/it2/apvertset</property>
@@ -873,14 +873,8 @@
 			<button>
 				<legend>AFDS MASTER OVRD OFF</legend>
 				<binding>
-				<command>property-assign</command>
-				<property>/controls/it2/ap_mastersw</property>
-				<value>0</value>
-				</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>/controls/it2/at_mastersw</property>
-				<value>0</value>
+				<command>property-toggle</command>
+				<property>/controls/it2/afds_ovrdsw</property>
 				</binding>
 			</button>
 		</group>

@@ -7,7 +7,7 @@ var nd_init = func {
 	setprop("/instrumentation/efis[1]/inputs/range-nm", 10);
 	setprop("/controls/switches/modekb2", 2);
 	setprop("/instrumentation/efis[1]/inputs/tfc", "true");
-	print("EFIS ... FINE!");
+	print("EFIS ... OK!");
 }
 
 # Captain
