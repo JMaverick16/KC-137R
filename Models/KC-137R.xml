@@ -2442,9 +2442,9 @@
 		<name>engineTwoCFM</name>
 		<path>Aircraft/KC-137R/Models/Engines/CFM56_2.xml</path>
 		<offsets>
-		  <x-m>  0.22</x-m>
-		  <y-m>-14.835</y-m>
-		  <z-m> -0.99</z-m>
+		  <x-m> -3.50</x-m>
+		  <y-m>-10.077</y-m>
+		  <z-m> -1.47</z-m>
 		</offsets>
 	</model>
 	
