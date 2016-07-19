@@ -111,21 +111,4 @@
         </axis>
     </animation>
 
-    <!-- Click on the instrument showing the distance on the screen -->    
-    <animation>
-      <type>pick</type>
-      <object-name>face</object-name>
-      <visible>true</visible>
-      <action>
-        <button>0</button>
-        <repeatable>false</repeatable>
-		  <binding>
-			  <command>nasal</command>
-			  <script>
-				  b707.show_tacan_dme();
-      		</script>
-		  </binding>
-      </action>
-    </animation>
-
 </PropertyList>

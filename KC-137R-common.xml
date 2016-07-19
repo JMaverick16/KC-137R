@@ -7,11 +7,11 @@
 -->
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
  <sim n="0">
-  <description>Boeing 707</description>
+  <description>Boeing KC-137R</description>
   <author>J Maverick 16 (Textures/FDM/Systems), Joshua Davidson (it0uchpods/411)(Cockpit/FDM/Systems) Original: Lake of Constance Hangar [Original from Innis Cunningham]</author>
   <status>Beta</status>
-  <flight-model>jsb</flight-model>
   <aero>KC-137R</aero>
+  <flight-model>jsb</flight-model>
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
   
@@ -256,121 +256,15 @@
     <setting>1.0</setting>	<!-- 100% landing -->
   </flaps>
   
+  <engine-type>
+	<IAE type="bool">false</IAE>
+  </engine-type>
+  
 	<aircraft-data>
 		<path>/instrumentation/operating-time/total</path>
 	</aircraft-data>
  </sim>
-<radar>
-            <mode-control type="int" archive="y">1</mode-control>
-            <display-mode type="string">plan</display-mode>
-            <display-controls>
-                <WX type="bool" archive="y">false</WX>
-                <pos type="bool" archive="y">false</pos>
-                <data type="bool" archive="y">false</data>
-                <symbol type="bool" archive="y">true</symbol>
-                <rotate type="bool" archive="y">true</rotate>
-                <tcas type="bool" archive="n">true</tcas>
-                <abs-altitude type="bool" archive="y">false</abs-altitude>
-            </display-controls>
-            <serviceable type="bool">true</serviceable>
-            <range n="0" alias="/instrumentation/efis/inputs/range-nm"/>
-            <reference-range-nm type="double" archive="y">640</reference-range-nm>
-            <mode type="string" archive="y">WX</mode>
-            <font>
-                <color>
-                    <red type="float">0.7</red>
-                    <green type="float">0.7</green>
-                    <blue type="float">0.7</blue>
-                    <alpha type="float">1</alpha>
-                </color>
-                <tcas>
-                    <color n="0"> <!-- distant targets -->
-                        <red type="float">0</red>
-                        <green type="float">1</green>
-                        <blue type="float">1</blue>
-                    </color>
-                    <color n="1"> <!-- proximity targets -->
-                        <red type="float">0</red>
-                        <green type="float">1</green>
-                        <blue type="float">1</blue>
-                    </color>
-                    <color n="2"> <!-- TA threat targets -->
-                        <red type="float">1</red>
-                        <green type="float">0.5</green>
-                        <blue type="float">0</blue>
-                    </color>
-                    <color n="3"> <!-- RA threat targets -->
-                        <red type="float">1</red>
-                        <green type="float">0</green>
-                        <blue type="float">0</blue>
-                    </color>
-                </tcas>
-                <name type="string">helvetica_bold.txf</name>
-                <size type="float">12</size>
-                <line-spacing type="float">0.01</line-spacing>
-            </font>
-            <lightning type="bool">true</lightning>
-            <minimized type="bool">false</minimized>
-            <heading-marker type="bool">true</heading-marker>
-            <limit-deg type="int">360</limit-deg>
-        </radar>
-        <groundradar>
-            <range type="double">1.2</range>
-        </groundradar>
-        <mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
-            <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
-            <configuration-module>
-                <category-1>                    <!-- AIRCRAFT_MODE_TYPE_SELECT -->
-                   255 <!-- aircraft type T1, fast turbofan -->
-                </category-1>
-                <category-4>                    <!-- ALTITUDE_CALLOUTS -->
-                    13 <!-- enable all altitude callouts -->
-                </category-4>
-                <category-8>                    <!-- RADIO_ALTITUDE_INPUT_SELECT -->
-                     3 <!-- use precise (but YASim-specific) gear altitude -->
-                </category-8>
-                <category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
-                     5 <!-- flashing warning lamp -->
-                </category-13>
-            </configuration-module>
-            <voice>
-                <file-prefix type="string">Aircraft/KC-137R/Sounds/mk-viii/</file-prefix>
-            </voice>
-            <inputs>                            <!-- Module I/O -->
-                <arinc429>
-                    <!-- provide fixed value for decision height -->
-                    <decision-height-ncd> false </decision-height-ncd>
-                    <decision-height> 250 </decision-height>
-                </arinc429>
-            </inputs>
-            <input-feeders>    <!-- disable some internal default feeders -->
-                <discretes>
-                    <!-- will provide custom (nasal) sources for the following input feeders -->
-                    <glideslope-inhibit> false </glideslope-inhibit>
-                    <landing-gear> false </landing-gear>
-                    <landing-flaps> false </landing-flaps>
-                </discretes>
-            </input-feeders>
-     <speaker>                         <!-- Speaker Configuration -->
-       <max-dist> 8 </max-dist>        <!-- Max. distance where speaker is heard -->
-       <reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
-       <volume> 0.4 </volume>          <!-- Volume at reference distance -->
-     </speaker>
-        </mk-viii>
-        <tcas>
-            <serviceable type="bool">true</serviceable>
-            <inputs>
-                <mode type="int">0</mode>       <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
-            </inputs>
-            <!--voice>
-                <file-prefix type="string">Sounds/tcas/</file-prefix>
-            </voice-->
-            <speaker>                           <!-- Speaker Configuration -->
-                <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
-                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
-                <volume type="double"> 1 </volume>          <!-- Volume at reference distance -->
-            </speaker>
-        </tcas>
+
 	<engines>
 		<APU>
 			<rpm type="double">0</rpm>

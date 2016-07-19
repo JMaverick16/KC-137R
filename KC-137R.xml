@@ -14,7 +14,7 @@
   <author>M.Kraus :: Lake of Constance Hangar</author>
   <filecreationdate>2014-02-24</filecreationdate>
   <version>2.2.4</version>
-  <description>Boeing 707 CFM Leap X</description>
+  <description>Boeing 707 CFM-56</description>
  </fileheader>
 
 <!--
@@ -237,7 +237,7 @@
 
  <propulsion>
 
-   <engine file="MK508">
+   <engine file="CFM-56">
     <location unit="IN">
       <x>  22.11 </x>
       <y>-586.50 </y>
@@ -263,7 +263,7 @@
     </thruster>
   </engine>
 
-   <engine file="MK508">
+   <engine file="CFM-56">
     <location unit="IN">
       <x>-164.20 </x>
       <y>-393.62 </y>
@@ -289,7 +289,7 @@
     </thruster>
   </engine>
 
-   <engine file="MK508">
+   <engine file="CFM-56">
     <location unit="IN">
       <x>-164.20 </x>
       <y> 393.62 </y>
@@ -315,7 +315,7 @@
     </thruster>
   </engine>
 
-   <engine file="MK508">
+   <engine file="CFM-56">
     <location unit="IN">
       <x>  22.11 </x>
       <y> 586.50 </y>

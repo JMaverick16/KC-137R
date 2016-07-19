@@ -7,7 +7,7 @@
 -->
 <PropertyList include="KC-137R-common.xml">
  <sim n="0">
-  <description>Boeing KC-137R-RT</description>
+  <description>Boeing KC-137R-RT (CFM56-5B4)</description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/splashTT.png</splash-texture>
 	</startup>
@@ -281,7 +281,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/mk-agl-radar.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-frw.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-stopwatch.nas</file>
-			<file>Aircraft/KC-137R/Nasal/mk-rmi.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-wiper.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-ci-tacan.nas</file>
 			<file>Aircraft/KC-137R/Nasal/doors.nas</file>

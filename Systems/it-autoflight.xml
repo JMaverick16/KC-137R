@@ -46,11 +46,11 @@
 			<condition>
 				<or>
 					<equals>
-						<property>/controls/it2/locks/lateral</property>
+						<property>/it-autoflight/locks/lateral</property>
 						<value>it-hdg-sel</value>
 					</equals>
 					<equals>
-						<property>/controls/it2/locks/lateral</property>
+						<property>/it-autoflight/locks/lateral</property>
 						<value>it-nav-fms</value>
 					</equals>
 				</or>
@@ -59,7 +59,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/controls/it2/locks/lateral</property>
+					<property>/it-autoflight/locks/lateral</property>
 					<value>it-hdg-sel</value>
 				</equals>
 			</condition>
@@ -69,7 +69,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/controls/it2/locks/lateral</property>
+					<property>/it-autoflight/locks/lateral</property>
 					<value>it-nav-fms</value>
 				</equals>
 			</condition>
@@ -96,11 +96,11 @@
 			<condition>
 				<or>
 					<equals>
-						<property>/controls/it2/locks/lateral</property>
+						<property>/it-autoflight/locks/lateral</property>
 						<value>it-hdg-sel</value>
 					</equals>
 					<equals>
-						<property>/controls/it2/locks/lateral</property>
+						<property>/it-autoflight/locks/lateral</property>
 						<value>it-nav-fms</value>
 					</equals>
 				</or>
@@ -112,7 +112,7 @@
 		<reference>
 			<condition>
 				<not-equals> 
-					<property>/controls/it2/locks/lateral</property>
+					<property>/it-autoflight/locks/lateral</property>
 					<value>wing-leveler</value>
 				</not-equals>
 			</condition>
@@ -121,7 +121,7 @@
 		<reference>
 			<condition>
 				<equals> 
-					<property>/controls/it2/locks/lateral</property>
+					<property>/it-autoflight/locks/lateral</property>
 					<value>wing-leveler</value>
 				</equals>
 			</condition>
@@ -148,7 +148,7 @@
     <name>VOR/LOC Hold Stage 1</name>
     <debug>false</debug>
     <enable>
-      <prop>/controls/it2/locks/lateral</prop>
+      <prop>/it-autoflight/locks/lateral</prop>
       <value>it-vorloc</value>
     </enable>
     <input>
@@ -177,7 +177,7 @@
     <name>VOR/LOC Hold Stage 2</name>
     <debug>false</debug>
     <enable>
-      <prop>/controls/it2/locks/lateral</prop>
+      <prop>/it-autoflight/locks/lateral</prop>
       <value>it-vorloc</value>
     </enable>
     <input>
@@ -210,14 +210,14 @@
 		<name>ALTITUDE CAPTURE/HOLD</name>
 		<debug>false</debug>
 		<enable>
-			<property>/controls/it2/locks/pitch</property>
+			<property>/it-autoflight/locks/pitch</property>
 			<value>it-alt-cap-hld</value>
 		</enable>
 		<input>
 			<property>/autopilot/internal/altitude-5-sec-ahead</property>
 		</input>
 		<reference>
-			<property>/autopilot/settings/target-altitude-ft-actual</property>
+			<property>/it-autoflight/settings/target-altitude-ft-actual</property>
 		</reference>
 		<output>
 			<property>/autopilot/internal/target-pitch-deg</property>
@@ -243,14 +243,14 @@
 		<name>Vertical Speed Hold</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/controls/it2/locks/pitch</prop>
+			<prop>/it-autoflight/locks/pitch</prop>
 			<value>it-vert-spd</value>
 		</enable>
 		<input>
 			<prop>/velocities/vertical-speed-fps</prop>
 		</input>
 		<reference>
-			<prop>/autopilot/settings/vertical-speed-fpm</prop>
+			<prop>/it-autoflight/settings/vertical-speed-fpm</prop>
 			<scale>0.01667</scale>
 		</reference>
 		<output>
@@ -275,7 +275,7 @@
 		<enable>
 			<condition>
 				<equals>
-					<property>/controls/it2/locks/pitch</property>
+					<property>/it-autoflight/locks/pitch</property>
 					<value>it-gs</value>
 				</equals>
 			</condition>
@@ -306,13 +306,13 @@
 		<name>FLIGHT LEVEL CHANGE</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/controls/it2/locks/pitch</prop>
+			<prop>/it-autoflight/locks/pitch</prop>
 			<value>it-flch</value>
 		</enable>
 		<input>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/it-autoflight/apthrmode</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -321,7 +321,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/it-autoflight/apthrmode</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -331,24 +331,24 @@
 		<reference>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/it-autoflight/apthrmode</property>
 					<value>0</value>
 				</equals>
 			</condition>
-			<prop>/autopilot/settings/target-speed-kt</prop>
+			<prop>/it-autoflight/settings/target-speed-kt</prop>
 		</reference>
 		<reference>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/it-autoflight/apthrmode</property>
 					<value>1</value>
 				</equals>
 			</condition>
-			<prop>/autopilot/settings/target-mach</prop>
+			<prop>/it-autoflight/settings/target-mach</prop>
 			<scale>10.0</scale>
 		</reference>
 		<output>
-			<prop>/autopilot/settings/target-pitch-deg</prop>
+			<prop>/it-autoflight/settings/target-pitch-deg</prop>
 		</output>
 		<config>
 			<Kp>-0.25</Kp>       <!-- proportional gain -->
@@ -358,8 +358,42 @@
 			<!-- unfiltered derivative error -->
 			<Ti>10.0</Ti>        <!-- integrator time -->
 			<Td>0.00001</Td>    <!-- derivator time -->
-			<u_min>-15.0</u_min><!-- minimum output clamp -->
-			<u_max>15.0</u_max> <!-- maximum output clamp -->
+            <u_min>
+                <condition>
+                    <greater-than>
+                        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                    </greater-than>
+                </condition>
+                <value>3.0</value>
+            </u_min>
+            <u_min>
+                <condition>
+                    <less-than>
+                        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                    </less-than>
+                </condition>
+                <value>-15.0</value>
+            </u_min>
+            <u_max>
+                <condition>
+                    <greater-than>
+                        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                    </greater-than>
+                </condition>
+                <value>20.0</value>
+            </u_max>
+            <u_max>
+                <condition>
+                    <less-than>
+                        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                    </less-than>
+                </condition>
+                <value>0.0</value>
+            </u_max>
 		</config>
 	</pid-controller>
 
@@ -367,14 +401,14 @@
 		<name>IT-CONTROLLER: FLCH</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/controls/it2/locks/pitch</prop>
+			<prop>/it-autoflight/locks/pitch</prop>
 			<value>it-flch</value>
 		</enable>
 		<input>
 			<prop>/orientation/pitch-deg</prop>
 		</input>
 		<reference>
-			<prop>/autopilot/settings/target-pitch-deg</prop>
+			<prop>/it-autoflight/settings/target-pitch-deg</prop>
 		</reference>
 		<output>
 			<prop>/controls/flight/elevator-trim-filter</prop>
@@ -396,7 +430,7 @@
 		<name>IT-CONTROLLER: PITCH</name>
 		<debug>false</debug>
 		<enable>
-			<property>/controls/it2/locks/pitch</property>
+			<property>/it-autoflight/locks/pitch</property>
 			<value>it-alt-cap-hld</value>
 		</enable>
 		<input>
@@ -426,7 +460,7 @@
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
 		<enable>
-			<prop>/controls/it2/ap_master</prop>
+			<prop>/it-autoflight/ap_master</prop>
 			<value>1</value>
 		</enable>
 		<input>
@@ -449,11 +483,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/controls/it2/locks/throttle</property>
+			<property>/it-autoflight/locks/throttle</property>
 			<value>it-thr</value>
 		  </equals>
 		  <equals>
-			<property>/controls/it2/apthrmode</property>
+			<property>/it-autoflight/apthrmode</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -463,7 +497,7 @@
       <prop>/velocities/airspeed-kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-speed-kt</prop>
+      <prop>/it-autoflight/settings/target-speed-kt</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
@@ -497,11 +531,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/controls/it2/locks/throttle</property>
+			<property>/it-autoflight/locks/throttle</property>
 			<value>it-thr</value>
 		  </equals>
 		  <equals>
-			<property>/controls/it2/apthrmode</property>
+			<property>/it-autoflight/apthrmode</property>
 			<value>1</value>
 		  </equals>
 		</and>
@@ -511,7 +545,7 @@
       <prop>/velocities/mach</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-mach</prop>
+      <prop>/it-autoflight/settings/target-mach</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
@@ -541,14 +575,14 @@
     <name>IDLE</name>
     <debug>false</debug>
     <enable>
-      <prop>/controls/it2/locks/throttle</prop>
+      <prop>/it-autoflight/locks/throttle</prop>
       <value>it-idle</value>
     </enable>
     <input>
       <prop>/velocities/airspeed-kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/idlethr</prop>
+      <prop>/it-autoflight/settings/idlethr</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
@@ -578,14 +612,14 @@
     <name>CLB</name>
     <debug>false</debug>
     <enable>
-      <prop>/controls/it2/locks/throttle</prop>
+      <prop>/it-autoflight/locks/throttle</prop>
       <value>it-clb</value>
     </enable>
     <input>
       <prop>/velocities/airspeed-kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/clbthr</prop>
+      <prop>/it-autoflight/settings/clbthr</prop>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>

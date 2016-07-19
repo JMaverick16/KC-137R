@@ -3,48 +3,8 @@ MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  sh
 MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "DefaultWhite.004" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "transparent" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
-MATERIAL "ac3dmat3" rgb 0.756863 0 0  amb 0.756863 0 0  emis 0.756863 0 0  spec 0.756863 0 0  shi 128  trans 0
 OBJECT world
-kids 8
-OBJECT poly
-name "Needle2"
-loc 0.00197559 -0.014357 -8.93561e-006
-data 10
-Mesh.11275
-texture "asi.rgb"
-crease 30.000000
-numvert 9
-0 0.0472846 0.000281489
-0 0.0499694 -1.91304e-005
-0 0.0472846 -0.000319751
-0 0.0472846 0.000281489
-0 0.0472846 -0.000319751
-0 0.0271697 -0.000770681
-0 0.0124589 -0.000685957
-0 0.0124589 0.0006477
-0 0.0271697 0.000732423
-numsurf 3
-SURF 0x10
-mat 4
-refs 3
-0 0.0277338 0.975332
-2 0.0381895 0.975332
-1 0.0329616 0.985121
-SURF 0x10
-mat 4
-refs 4
-3 0.0277338 0.975332
-8 0.0198929 0.901996
-5 0.0460303 0.901996
-4 0.0381895 0.975332
-SURF 0x10
-mat 4
-refs 4
-6 0.0445599 0.848363
-5 0.0460303 0.901996
-8 0.0198929 0.901996
-7 0.0213633 0.848363
-kids 0
+kids 7
 OBJECT poly
 name "Needle1"
 loc 0.00204485 0.000146055 0

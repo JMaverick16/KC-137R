@@ -60,7 +60,7 @@
 		<engine>
 			<name>kc137_a12</name>
 			<mode>looped</mode>
-			<path>engine/whee.wav</path>
+			<path>engineCFM/whee.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property>
 				<less-than>
@@ -85,7 +85,7 @@
 		<engine>
 			<name>kc137_b12</name>
 			<mode>looped</mode>
-			<path>engine/whee.wav</path>
+			<path>engineCFM/whee.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property>
 				<less-than>
@@ -110,7 +110,7 @@
 		<engine>
 			<name>kc137_c12</name>
 			<mode>looped</mode>
-			<path>engine/whee.wav</path>
+			<path>engineCFM/whee.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property>
 				<less-than>
@@ -123,7 +123,7 @@
 			</volume>
 			<pitch>
 				<property>sim/sound/engines/c12p</property>
-				<offset>0.1</offset>
+				<offset>0</offset>
 			</pitch>
 			<position>
 				<x>0.0</x>
@@ -135,7 +135,7 @@
 		<engine>
 			<name>kc137_d12</name>
 			<mode>looped</mode>
-			<path>engine/whee.wav</path>
+			<path>engineCFM/whee.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property><less-than>
 					<property>sim/current-view/z-offset-m</property>
@@ -147,7 +147,7 @@
 			</volume>
 			<pitch>
 				<property>sim/sound/engines/d12p</property>
-				<offset>0.1</offset>
+				<offset>0</offset>
 			</pitch>
 			<position>
 				<x>0.0</x>
@@ -161,7 +161,7 @@
 		<engine>
 			<name>kc137_a13</name>
 			<mode>looped</mode>
-			<path>engine/rrrr.wav</path>
+			<path>engineCFM/rrrr.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property>
 				<less-than>
@@ -186,7 +186,7 @@
 		<engine>
 			<name>kc137_b13</name>
 			<mode>looped</mode>
-			<path>engine/rrrr.wav</path>
+			<path>engineCFM/rrrr.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property>
 				<less-than>
@@ -211,7 +211,7 @@
 		<engine>
 			<name>kc137_c13</name>
 			<mode>looped</mode>
-			<path>engine/rrrr.wav</path>
+			<path>engineCFM/rrrr.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property>
 				<less-than>
@@ -236,7 +236,7 @@
 		<engine>
 			<name>kc137_d13</name>
 			<mode>looped</mode>
-			<path>engine/rrrr.wav</path>
+			<path>engineCFM/rrrr.wav</path>
 			<condition>
 				<property>sim/current-view/internal</property><less-than>
 					<property>sim/current-view/z-offset-m</property>

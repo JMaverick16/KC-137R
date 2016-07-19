@@ -123,6 +123,21 @@ The only reason it's here is to specify a second ADF.
         <name>marker-beacon</name>
         <number>0</number>
     </marker-beacon> 
+	
+<gps>
+  <name>gps</name>
+  <number>0</number>
+</gps>
+
+<mk-viii>
+<name>mk-viii</name>
+<number>0</number>
+</mk-viii>
+
+<tcas>
+	<name>tcas</name>
+	<number>0</number>
+</tcas>
 
 		<transponder>
 		  <name type="string">transponder</name>

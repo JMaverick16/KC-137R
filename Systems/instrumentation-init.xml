@@ -248,4 +248,91 @@
   <inputs><knob-mode type="int">0</knob-mode></inputs>
 </transponder>
 
+<rmi-needle n="0">
+  <mode type="int">0</mode>
+</rmi-needle>
+<rmi-needle n="1">
+  <mode type="int">0</mode>
+</rmi-needle>
+        <mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
+            <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
+            <configuration-module>
+                <category-1>                    <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+                   255 <!-- aircraft type T1, fast turbofan -->
+                </category-1>
+                <category-4>                    <!-- ALTITUDE_CALLOUTS -->
+                    13 <!-- enable all altitude callouts -->
+                </category-4>
+                <category-8>                    <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+                     3 <!-- use precise (but YASim-specific) gear altitude -->
+                </category-8>
+                <category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+                     5 <!-- flashing warning lamp -->
+                </category-13>
+            </configuration-module>
+            <voice>
+                <file-prefix type="string">Aircraft/KC-137R/Sounds/mk-viii/</file-prefix>
+            </voice>
+            <inputs>                            <!-- Module I/O -->
+                <arinc429>
+                    <!-- provide fixed value for decision height -->
+                    <decision-height-ncd> false </decision-height-ncd>
+                    <decision-height> 250 </decision-height>
+                </arinc429>
+            </inputs>
+            <input-feeders>    <!-- disable some internal default feeders -->
+                <discretes>
+                    <!-- will provide custom (nasal) sources for the following input feeders -->
+                    <glideslope-inhibit> false </glideslope-inhibit>
+                    <landing-gear> true </landing-gear>
+                    <landing-flaps> false </landing-flaps>
+                </discretes>
+            </input-feeders>
+            <speaker>                           <!-- Speaker Configuration -->
+                <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
+                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
+                <volume type="double"> 2.6 </volume>          <!-- Volume at reference distance -->
+            </speaker>
+        </mk-viii>
+        <tcas>
+            <serviceable type="bool">true</serviceable>
+            <inputs>
+                <mode type="int">0</mode>       <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+            </inputs>
+            <!--voice>
+                <file-prefix type="string">Sounds/tcas/</file-prefix>
+            </voice-->
+            <speaker>                           <!-- Speaker Configuration -->
+                <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
+                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
+                <volume type="double"> 1 </volume>          <!-- Volume at reference distance -->
+            </speaker>
+        </tcas>
+        <efis>
+            <inputs>
+                <tfc  type="bool">true</tfc>
+                <sta  type="bool">false</sta>
+                <arpt type="bool">false</arpt>
+                <wpt  type="bool">false</wpt>
+                <wxr  type="bool">false</wxr>
+                <range-nm type="int">10</range-nm>
+            </inputs>
+            <mfd>
+                <display-type type="string">LCD</display-type>
+            </mfd>
+        </efis>
+        <efis n="1">
+            <inputs>
+                <tfc  type="bool">true</tfc>
+                <sta  type="bool">false</sta>
+                <arpt type="bool">false</arpt>
+                <wpt  type="bool">false</wpt>
+                <wxr  type="bool">false</wxr>
+                <range-nm type="int">10</range-nm>
+            </inputs>
+            <mfd>
+                <display-type type="string">LCD</display-type>
+            </mfd>
+        </efis>
+
 </PropertyList>

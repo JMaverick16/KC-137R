@@ -2,7 +2,7 @@
 <!--###################################################################################
 		Lake of Constance Hangar :: M.Kraus
 		Boeing 707 for Flightgear Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later 
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
 		###################################################################################
 -->
 
@@ -1598,11 +1598,30 @@
 	 <animation>
 		<type>rotate</type>
 		<object-name>LeftGearBase</object-name>		
-		<object-name>RightGearBase</object-name>
-		<property>sim/multiplay/generic/float[3]</property>
+		<property>sim/multiplay/generic/float[19]</property>
 		<interpolation>
-		    <entry><ind>0</ind><dep>5</dep></entry>
-		    <entry><ind>0.01</ind><dep>0</dep></entry>
+		    <entry><ind>0</ind><dep>-25</dep></entry>
+		    <entry><ind>0.001</ind><dep>0</dep></entry>
+		</interpolation>
+		<center>
+		    <x-m>1.82</x-m>
+		    <y-m>0</y-m>
+		    <z-m>-2.30</z-m>
+		</center>
+		<axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+	
+	 <animation>
+		<type>rotate</type>	
+		<object-name>RightGearBase</object-name>
+		<property>sim/multiplay/generic/float[20]</property>
+		<interpolation>
+		    <entry><ind>0</ind><dep>-25</dep></entry>
+		    <entry><ind>0.001</ind><dep>0</dep></entry>
 		</interpolation>
 		<center>
 		    <x-m>1.82</x-m>
@@ -2172,44 +2191,44 @@
      </axis>
     </animation>
 
- <!--Conway RCo.10 engines -->
+<!-- CFM LEAP X -->
 	<model>
 		<name>engineOne</name>
-		<path>Aircraft/KC-137R/Models/RCo10_1.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_1.xml</path>
 		<offsets>
-		  <x-m>  2.42</x-m>
+		  <x-m>  0.22</x-m>
 		  <y-m>-14.835</y-m>
-		  <z-m> -0.647</z-m>
+		  <z-m> -0.99</z-m>
 		</offsets>
 	</model>
 	
 	<model>
 		<name>engineTwo</name>
-		<path>Aircraft/KC-137R/Models/RCo10_2.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_2.xml</path>
 		<offsets>
-		  <x-m> -1.25</x-m>
-		  <y-m>-10.077</y-m>
-		  <z-m> -1.10</z-m>
+		  <x-m>  0.22</x-m>
+		  <y-m>-14.835</y-m>
+		  <z-m> -0.99</z-m>
 		</offsets>
 	</model>
 	
 	<model>
 		<name>engineThree</name>
-		<path>Aircraft/KC-137R/Models/RCo10_3.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_3.xml</path>
 		<offsets>
-		  <x-m> -1.25</x-m>
+		  <x-m> -3.50</x-m>
 		  <y-m> 10.077</y-m>
-		  <z-m> -1.10</z-m>
+		  <z-m> -1.47</z-m>
 		</offsets>
 	</model>
 	
 	<model>
 		<name>engineFour</name>
-		<path>Aircraft/KC-137R/Models/RCo10_4.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_4.xml</path>
 		<offsets>
-		  <x-m>  2.42</x-m>
+		  <x-m>  0.22</x-m>
 		  <y-m> 14.835</y-m>
-		  <z-m> -0.647</z-m>
+		  <z-m> -0.99</z-m>
 		</offsets>
 	</model>
 
@@ -2233,44 +2252,44 @@
 		</condition>	
 	</animation>
 
- <!--Pratt and Whitney JT4 engines -->
+<!-- CFM LEAP X -->
 	<model>
 		<name>engineOnePW</name>
-		<path>Aircraft/KC-137R/Models/PWJT4_1.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_1.xml</path>
 		<offsets>
-		  <x-m>  2.47</x-m>
+		  <x-m>  0.22</x-m>
 		  <y-m>-14.835</y-m>
-		  <z-m> -0.73</z-m>
+		  <z-m> -0.99</z-m>
 		</offsets>
 	</model>
 	
 	<model>
 		<name>engineTwoPW</name>
-		<path>Aircraft/KC-137R/Models/PWJT4_2.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_2.xml</path>
 		<offsets>
-		  <x-m> -1.18</x-m>
+		  <x-m> -3.50</x-m>
 		  <y-m>-10.077</y-m>
-		  <z-m> -1.18</z-m>
+		  <z-m> -1.47</z-m>
 		</offsets>
 	</model>
 	
 	<model>
 		<name>engineThreePW</name>
-		<path>Aircraft/KC-137R/Models/PWJT4_3.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_3.xml</path>
 		<offsets>
-		  <x-m> -1.18</x-m>
+		  <x-m> -3.50</x-m>
 		  <y-m> 10.077</y-m>
-		  <z-m> -1.18</z-m>
+		  <z-m> -1.47</z-m>
 		</offsets>
 	</model>
 	
 	<model>
 		<name>engineFourPW</name>
-		<path>Aircraft/KC-137R/Models/PWJT4_4.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_4.xml</path>
 		<offsets>
-		  <x-m>  2.47</x-m>
+		  <x-m>  0.22</x-m>
 		  <y-m> 14.835</y-m>
-		  <z-m> -0.73</z-m>
+		  <z-m> -0.99</z-m>
 		</offsets>
 	</model>
 	
@@ -2877,5 +2896,3 @@
 </animation>
   
 </PropertyList>
-
-

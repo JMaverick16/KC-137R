@@ -268,12 +268,38 @@
 	 <name>operationRadar</name>
 	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar.xml</path>
 		<offsets>
-      <x-m>12.8</x-m>
-      <y-m>0</y-m>
+      <x-m> 12.8</x-m>
+      <y-m> 0.07</y-m>
       <z-m>-0.9</z-m>
       <heading-deg>180</heading-deg>
-    	<pitch-deg>-30</pitch-deg>
-    	<roll-deg>180</roll-deg>
+    	<pitch-deg>30</pitch-deg>
+    	<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<model>
+	 <name>ND_R</name>
+	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_R.xml</path>
+		<offsets>
+      <x-m> 12.8</x-m>
+      <y-m>-0.07</y-m>
+      <z-m>-0.9</z-m>
+      <heading-deg>180</heading-deg>
+    	<pitch-deg>30</pitch-deg>
+    	<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+	
+	<model>
+	 <name>EFIS_R</name>
+	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis_R.xml</path>
+		<offsets>
+      <x-m> 12.8</x-m>
+      <y-m>-0.145</y-m>
+      <z-m>-0.9</z-m>
+      <heading-deg>180</heading-deg>
+    	<pitch-deg>30</pitch-deg>
+    	<roll-deg>0</roll-deg>
 		</offsets>
 	</model>
 	
@@ -2409,10 +2435,10 @@
      </axis>
     </animation>
 
- <!-- CFM LEAP X -->
+<!-- CFM LEAP X -->
 	<model>
 		<name>engineOne</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_1.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m>-14.835</y-m>
@@ -2422,7 +2448,7 @@
 	
 	<model>
 		<name>engineTwo</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX_2.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_2.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m>-14.835</y-m>
@@ -2432,7 +2458,7 @@
 	
 	<model>
 		<name>engineThree</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX_3.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_3.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m> 10.077</y-m>
@@ -2442,7 +2468,7 @@
 	
 	<model>
 		<name>engineFour</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX_4.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_4.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m> 14.835</y-m>
@@ -2473,7 +2499,7 @@
 <!-- CFM LEAP X -->
 	<model>
 		<name>engineOnePW</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_1.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m>-14.835</y-m>
@@ -2483,7 +2509,7 @@
 	
 	<model>
 		<name>engineTwoPW</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX_2.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_2.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m>-10.077</y-m>
@@ -2493,7 +2519,7 @@
 	
 	<model>
 		<name>engineThreePW</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX_3.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_3.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m> 10.077</y-m>
@@ -2503,7 +2529,7 @@
 	
 	<model>
 		<name>engineFourPW</name>
-		<path>Aircraft/KC-137R/Models/Engines/LeapX_4.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_4.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m> 14.835</y-m>
@@ -2540,6 +2566,7 @@
 			<z-m>0</z-m>
 		</offsets>
 	</model> 
+
 
 
 <!-- Fire , #1 -->

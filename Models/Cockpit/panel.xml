@@ -220,14 +220,40 @@
 </model>
 
 <model>
-  <name>EICAS</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS/EICAS.xml</path>
+  <name>EICAS-CFM</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS/EICAS-CFM.xml</path>
   <offsets>
       <x-m>-18.919</x-m>
       <y-m>-0.015</y-m>
       <z-m> 0.91</z-m>
   </offsets>
 </model>
+
+<animation>
+  <type>select</type>
+  <object-name>EICAS-CFM</object-name>
+  <condition>
+	<not><property>/sim/engine-type/IAE</property></not>
+  </condition>
+</animation>
+
+<model>
+  <name>EICAS-IAE</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS/EICAS-IAE.xml</path>
+  <offsets>
+      <x-m>-18.919</x-m>
+      <y-m>-0.015</y-m>
+      <z-m> 0.91</z-m>
+  </offsets>
+</model>
+
+<animation>
+  <type>select</type>
+  <object-name>EICAS-IAE</object-name>
+  <condition>
+	<property>/sim/engine-type/IAE</property>
+  </condition>
+</animation>
 
 <model>
   <name>ND</name>

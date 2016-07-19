@@ -1,10 +1,15 @@
-<!--
-777 Navigation display
--->
+<?xml version="1.0"?>
 
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
 <PropertyList>
 
-<path>ND_L.ac</path>
+	<path>ND_R.ac</path>
+
     <animation>
         <type>select</type>
         <object-name>Power.off</object-name>
@@ -18,7 +23,7 @@
 
     <animation>
         <type>select</type>
-        <object-name>ND.screenL</object-name>
+        <object-name>ND.screenR</object-name>
         <condition>
             <greater-than>
                 <property>systems/electrical/outputs/efis</property>
@@ -29,15 +34,15 @@
 
 <animation>
 	<type>pick</type>
-	<object-name>ND.screenL</object-name>
+	<object-name>ND.screenR</object-name>
 	<action>
 		<button>0</button>
 		<repeatable>true</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>b707.showNd();</script>
+			<script>b707.showNd("fo");</script>
 		</binding>
 	</action>
 </animation>
-
+	
 </PropertyList>
