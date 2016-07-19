@@ -5,7 +5,7 @@ MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0
 MATERIAL "ac3dmat14" rgb 0.867 0.902 0.718  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "ac3dmat13" rgb 0.533 0.533 0.533  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.29 0.302 0.353  shi 28  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 0  trans 0
-MATERIAL "grey_seat" rgb 0.137255 0.137255 0.137255  amb 0.137255 0.137255 0.137255  emis 0 0 0  spec 0.137255 0.137255 0.137255  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0.0862745 0.0862745 0.0862745  amb 0.0862745 0.0862745 0.0862745  emis 0 0 0  spec 0.0862745 0.0862745 0.0862745  shi 128  trans 0
 OBJECT world
 kids 4
 OBJECT poly

@@ -13,7 +13,7 @@
 	</startup>
 
   <model n="0">
-   	 <path>Aircraft/KC-137R/Models/KC-137R-RT-IAE.xml</path>
+   	 <path>Aircraft/KC-137R/Models/KC-137R-RT.xml</path>
       <livery>
         <file type="string">USAF</file>
       </livery>

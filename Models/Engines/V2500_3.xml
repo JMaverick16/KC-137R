@@ -16,13 +16,6 @@
 		<object-name>Reverser</object-name>
 		<object-name>Nacelle</object-name>
 	</effect-->
-    
-    <animation>
-    <type>scale</type>
-    <x-offset>0.9</x-offset>
-    <y-offset>0.8</y-offset>
-    <z-offset>0.8</z-offset>
-    </animation>
 
 	<!-- Reverse thrust animation -->
 	<animation>
