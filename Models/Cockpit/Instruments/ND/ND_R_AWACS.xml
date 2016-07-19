@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+	<path>ND_R_AWACS.ac</path>
+	
+    <animation>
+    <type>scale</type>
+    <x-offset>0.8</x-offset>
+    <y-offset>0.8</y-offset>
+    <z-offset>0.8</z-offset>
+    </animation>
+
+
+    <animation>
+        <type>select</type>
+        <object-name>Power.off</object-name>
+        <condition>
+            <less-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </less-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>ND.screenR</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>ND.screenR</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>nasal</command>
+			<script>b707.showNd("fo");</script>
+		</binding>
+	</action>
+</animation>
+	
+</PropertyList>

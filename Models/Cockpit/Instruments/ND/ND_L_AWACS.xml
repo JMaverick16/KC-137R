@@ -1,0 +1,51 @@
+<!--
+777 Navigation display
+-->
+
+<PropertyList>
+
+<path>ND_L_AWACS.ac</path>
+
+    <animation>
+    <type>scale</type>
+    <x-offset>0.8</x-offset>
+    <y-offset>0.8</y-offset>
+    <z-offset>0.8</z-offset>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>Power.off</object-name>
+        <condition>
+            <less-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </less-than>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>ND.screenL</object-name>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>15</value>
+            </greater-than>
+        </condition>
+    </animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>ND.screenL</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<binding>
+			<command>nasal</command>
+			<script>b707.showNd();</script>
+		</binding>
+	</action>
+</animation>
+
+</PropertyList>
