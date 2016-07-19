@@ -1590,7 +1590,7 @@
 	 <animation>
 		<type>rotate</type>
 		<object-name>LeftGearBase</object-name>		
-		<property>sim/multiplay/generic/float[19]</property>
+		<property>sim/multiplay/generic/float[10]</property>
 		<interpolation>
 		    <entry><ind>0</ind><dep>-25</dep></entry>
 		    <entry><ind>0.001</ind><dep>0</dep></entry>
@@ -1610,7 +1610,7 @@
 	 <animation>
 		<type>rotate</type>	
 		<object-name>RightGearBase</object-name>
-		<property>sim/multiplay/generic/float[20]</property>
+		<property>sim/multiplay/generic/float[11]</property>
 		<interpolation>
 		    <entry><ind>0</ind><dep>-25</dep></entry>
 		    <entry><ind>0.001</ind><dep>0</dep></entry>

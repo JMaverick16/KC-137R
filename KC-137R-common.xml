@@ -231,8 +231,8 @@
 		<float n="7" alias="/instrumentation/doors/pasrear/position-norm"/>						<!-- Passenger - back -->
 		<float n="8" alias="/position/altitude-agl-ft"/>    <!-- for the kind of fire or lights -->
 		<float n="9" alias="/controls/special/wiper-deg"/>
-		<float n="10" alias="/b707/anti-ice/window-alpha-fo"/> <!-- the icing on the windshield -->
-		<float n="11" alias="/b707/anti-ice/window-alpha-capt"/> <!-- the icing on the windshield -->
+		<float n="10" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
+		<float n="11" alias="/gear/gear[2]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
 		<float n="12" alias="/instrumentation/doors/nose/position-norm"/>						<!-- Nose -->
 		<float n="13" alias="/b707/ground-service/fuel-truck/state"/>							<!-- fuel-truck -->
 		<float n="14" alias="/engines/engine/reverser-pos-norm"/>								<!-- multiplayer see the cowl flaps -->
@@ -240,8 +240,6 @@
 		<float n="16" alias="/instrumentation/doors/belly/position-norm"/>						<!-- Belly door -->
 		<float n="17" alias="/orientation/pitch-deg"/>       									<!-- for the shadow without rembrandt -->
 		<float n="18" alias="/instrumentation/doors/refuel-boom/position-norm"/>      			<!-- in the TT the refuel boom -->
-		<float n="19" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
-		<float n="20" alias="/gear/gear[2]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
 		<!-- <string n="0" alias="/sim/multiplay/callsign"/>									will be init in the registration.nas DO NOT USE string[0] for other properties -->
     </generic>
   </multiplay>
