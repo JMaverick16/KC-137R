@@ -551,14 +551,14 @@
 	</model>
 	
 	<!-- AP -->
-	<!--model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/FGCP/fgcp.xml</path>
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/MCP/MCP.xml</path>
 		<offsets>
-			<x-m>-21.20</x-m>
-			<y-m>  0.00</y-m>
-			<z-m> -0.13</z-m>
+			<x-m>-18.812</x-m>
+			<y-m> -0.04</y-m>
+			<z-m>  1.0465</z-m>
 		</offsets>
-	</model-->
+	</model>
 
 </PropertyList>
 

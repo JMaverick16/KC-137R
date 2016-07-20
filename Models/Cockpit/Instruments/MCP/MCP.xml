@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Boeing 717-200 for FlightGear -->
+<!-- Mode Control Panel -->
+
+<PropertyList>
+
+	<path>MCP.ac</path>
+	
+    <animation>
+    <type>scale</type>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.7</y-offset>
+    <z-offset>0.7</z-offset>
+    </animation>
+
+	<!-- ANIMATIONS -->
+	<!-- Lighting -->
+	<animation>
+		<name>Cockpit illumination</name>
+		<type>material</type>
+		<object-name>APPRbtn</object-name>
+		<object-name>FLCHbtn</object-name>
+		<object-name>ALTHbtn</object-name>
+		<object-name>VSbtn</object-name>
+		<object-name>HDGHbtn</object-name>
+		<object-name>HDGSbtn</object-name>
+		<object-name>LNAVbtn</object-name>
+		<object-name>LOCbtn</object-name>
+		<object-name>ALTknb</object-name>
+		<object-name>ATbtn</object-name>
+		<object-name>APbtn</object-name>
+		<object-name>APdis</object-name>
+		<object-name>APdisplane</object-name>
+		<object-name>APsettings</object-name>
+		<object-name>HDGknb</object-name>
+		<object-name>MCP</object-name>
+		<object-name>MCPtxt</object-name>
+		<object-name>SPDbtn</object-name>
+		<object-name>SPDknb</object-name>
+		<object-name>VS-FPA</object-name>
+		<object-name>VSknb</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+			<factor-prop>/controls/lighting/overhead-dim</factor-prop>
+		</emission>
+	</animation>
+
+	<!-- Speed hold -->
+	<animation>
+		<name>IAS/Mach toggle</name>
+		<type>pick</type>
+		<object-name>IAS-Mach</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>/it-autoflight/apthrmode</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<name>IAS setting select</name>
+		<type>select</type>
+		<object-name>APias100</object-name>
+		<object-name>APias10</object-name>
+		<object-name>APias1</object-name>
+		<object-name>APias</object-name>
+		<object-name>SPDknb</object-name>
+		<condition>
+			<equals>
+			    <property>/it-autoflight/apthrmode</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>IAS setting 100's</name>
+		<type>textranslate</type>
+		<object-name>APias100</object-name>
+		<property>/it-autoflight/settings/target-speed-kt</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>IAS setting 10's</name>
+		<type>textranslate</type>
+		<object-name>APias10</object-name>
+		<property>/it-autoflight/settings/target-speed-kt</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>IAS setting 1's</name>
+		<type>textranslate</type>
+		<object-name>APias1</object-name>
+		<property>/it-autoflight/settings/target-speed-kt</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Mach setting select</name>
+		<type>select</type>
+		<object-name>APmach1</object-name>
+		<object-name>APmach.1</object-name>
+		<object-name>APmach.01</object-name>
+		<object-name>APmach</object-name>
+		<object-name>MACHknb</object-name>
+		<condition>
+			<equals>
+				<property>/it-autoflight/apthrmode</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Mach setting 1's</name>
+		<type>textranslate</type>
+		<object-name>APmach1</object-name>
+		<property>/it-autoflight/settings/target-mach</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Mach setting .1's</name>
+		<type>textranslate</type>
+		<object-name>APmach.1</object-name>
+		<property>/it-autoflight/settings/target-mach</property>
+		<step>0.1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Mach setting .01's</name>
+		<type>textranslate</type>
+		<object-name>APmach.01</object-name>
+		<property>/it-autoflight/settings/target-mach</property>
+		<factor>10</factor>
+		<step>0.01</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>SPDknb</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/it-autoflight/settings/target-speed-kt</property>
+      <step>1</step>
+      <min>0</min>
+      <max>300</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>SPDknb</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/it-autoflight/settings/target-speed-kt</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>300</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>MACHknb</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/it-autoflight/settings/target-mach</property>
+      <step>0.01</step>
+      <min>0.60</min>
+      <max>0.92</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>MACHknb</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/it-autoflight/settings/target-mach</property>
+      <step>-0.01</step>
+      <min>0.60</min>
+      <max>0.92</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+	
+	<animation>
+		<name>Speed knob kt rotate</name>
+		<type>rotate</type>
+		<object-name>SPDknb</object-name>
+		<property>/it-autoflight/settings/target-speed-kt</property>
+		<factor>2</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.124</y-m>
+			<z-m>-0.0055</z-m>
+		</center>
+	</animation>
+	<animation>
+		<name>Speed knob Mach rotate</name>
+		<type>rotate</type>
+		<object-name>SPDknb</object-name>
+		<property>/it-autoflight/settings/target-speed-mach</property>
+		<factor>2000</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.124</y-m>
+			<z-m>-0.0055</z-m>
+		</center>
+	</animation>
+
+	<!-- Heading hold -->
+	<!--animation>
+		<name>Magnetic heading/ground track toggle</name>
+		<type>pick</type>
+		<object-name>HDG-TRK</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>/it-autoflight/settings/heading-mode</property>
+				<value>magnetic</value>
+				<value>track</value>
+			</binding>
+		</action>
+	</animation-->
+
+	<animation>
+		<name>Heading setting 100's</name>
+		<type>textranslate</type>
+		<object-name>APhdg100</object-name>
+		<property>/it-autoflight/settings/heading-bug-deg</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Heading setting 10's</name>
+		<type>textranslate</type>
+		<object-name>APhdg10</object-name>
+		<property>/it-autoflight/settings/heading-bug-deg</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Heading setting 1's</name>
+		<type>textranslate</type>
+		<object-name>APhdg1</object-name>
+		<property>/it-autoflight/settings/heading-bug-deg</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<!--animation>
+		<name>Heading setting select</name>
+		<type>select</type>
+		<object-name>APhdg</object-name>
+		<condition>
+			<equals>
+				<property>/it-autoflight/settings/heading-mode</property>
+				<value>magnetic</value>
+			</equals>
+		</condition>
+	</animation-->
+	<!--animation>
+		<name>Track setting select</name>
+		<type>select</type>
+		<object-name>APtrk</object-name>
+		<condition>
+			<property>/it-autoflight/unimplemented-controls</property>
+		</condition>
+	</animation-->
+
+<animation>
+  <type>pick</type>
+  <object-name>HDGknb</object-name>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/it-autoflight/settings/heading-bug-deg</property>
+      <step>1</step>
+      <min>1</min>
+      <max>361</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>HDGknb</object-name>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/it-autoflight/settings/heading-bug-deg</property>
+      <step>-1</step>
+      <min>1</min>
+      <max>361</max>
+      <wrap>true</wrap>
+    </binding>
+  </action>
+</animation>
+	<animation>
+		<name>Heading knob rotate</name>
+		<type>rotate</type>
+		<object-name>HDGknb</object-name>
+		<property>/it-autoflight/settings/heading-bug-deg</property>
+		<factor>3</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.054</y-m>
+			<z-m>-0.013</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>HDGHLD button pick</name>
+		<type>pick</type>
+		<object-name>HDGHbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/aplatset</property>
+				<value>3</value>
+				</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>HDGSEL button pick</name>
+		<type>pick</type>
+		<object-name>HDGSbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/aplatset</property>
+				<value>0</value>
+				</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>LNAV button pick</name>
+		<type>pick</type>
+		<object-name>LNAVbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/aplatset</property>
+				<value>1</value>
+				</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>VOR/LOC button pick</name>
+		<type>pick</type>
+		<object-name>LOCbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/aplatset</property>
+				<value>2</value>
+				</binding>
+		</action>
+	</animation>
+
+	<!-- Autoflight engage/disengage -->
+	<animation>
+		<name>Autothrust button</name>
+		<type>pick</type>
+		<object-name>ATbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+			<command>property-toggle</command>
+			<property>/it-autoflight/at_mastersw</property>
+			</binding>			
+		</action>
+	</animation>
+	
+	<animation>
+		<name>Autopilot button</name>
+		<type>pick</type>
+		<object-name>APbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>		
+			<binding>
+			<command>property-toggle</command>
+			<property>/it-autoflight/ap_mastersw</property>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<name>Autopilot disengage bar pick</name>
+		<type>pick</type>
+		<object-name>APdis</object-name>
+		<object-name>APdisplane</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+			<command>property-assign</command>
+			<property>/it-autoflight/ap_mastersw</property>
+			<value>0</value>
+			</binding>
+			<binding>
+			<command>property-assign</command>
+			<property>/it-autoflight/at_mastersw</property>
+			<value>0</value>
+			</binding>
+		</action>
+	</animation>
+	<!--animation>
+		<name>Autopilot disengage bar</name>
+		<type>translate</type>
+		<object-name>APdis</object-name>
+		<property>/autopilot/disengaged-btn</property>
+		<factor>0.006</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+	</animation-->
+
+	<!-- Altitude hold -->
+	<animation>
+		<name>Altitude setting 10,000's</name>
+		<type>textranslate</type>
+		<object-name>APalt10000</object-name>
+		<property>/it-autoflight/settings/target-altitude-ft</property>
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altitude setting 1,000's</name>
+		<type>textranslate</type>
+		<object-name>APalt1000</object-name>
+		<property>/it-autoflight/settings/target-altitude-ft</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altitude setting 100's</name>
+		<type>textranslate</type>
+		<object-name>APalt100</object-name>
+		<property>/it-autoflight/settings/target-altitude-ft</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altitude setting 10's</name>
+		<type>textranslate</type>
+		<object-name>APalt10</object-name>
+		<property>/it-autoflight/settings/target-altitude-ft</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altitude setting 1's</name>
+		<type>textranslate</type>
+		<object-name>APalt1</object-name>
+		<property>/it-autoflight/settings/target-altitude-ft</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Altitude knob pick</name>
+		<type>pick</type>
+		<object-name>ALTknb</object-name>
+		<action>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/it-autoflight/settings/target-altitude-ft</property>
+				<step type="double">100</step>
+				<max>99999</max>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/it-autoflight/settings/target-altitude-ft</property>
+				<step type="double">-100</step>
+				<min>0</min>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Altitude knob rotate</name>
+		<type>rotate</type>
+		<object-name>ALTknb</object-name>
+		<property>/it-autoflight/settings/target-altitude-ft</property>
+		<factor>0.36</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.07</y-m>
+			<z-m>-0.0055</z-m>
+		</center>
+	</animation>
+
+	<animation>
+		<name>Positive vertical speed setting select</name>
+		<type>select</type>
+		<object-name>APvs1000</object-name>
+		<object-name>APvs100</object-name>
+		<object-name>APvs10</object-name>
+		<object-name>APvs1</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>/it-autoflight/settings/vertical-speed-fpm</property>
+				<value>0</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Vertical speed setting 1,000's</name>
+		<type>textranslate</type>
+		<object-name>APvs1000</object-name>
+		<property>/it-autoflight/settings/vertical-speed-fpm</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Vertical speed setting 100's</name>
+		<type>textranslate</type>
+		<object-name>APvs100</object-name>
+		<property>/it-autoflight/settings/vertical-speed-fpm</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Vertical speed setting 10's</name>
+		<type>textranslate</type>
+		<object-name>APvs10</object-name>
+		<property>/it-autoflight/settings/vertical-speed-fpm</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Vertical speed setting 1's</name>
+		<type>textranslate</type>
+		<object-name>APvs1</object-name>
+		<property>/it-autoflight/settings/vertical-speed-fpm</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Negative vertical speed setting select</name>
+		<type>select</type>
+		<object-name>APvs-1000</object-name>
+		<object-name>APvs-100</object-name>
+		<object-name>APvs-10</object-name>
+		<object-name>APvs-1</object-name>
+		<object-name>APvs-</object-name>
+		<condition>
+			<less-than>
+				<property>/it-autoflight/settings/vertical-speed-fpm</property>
+				<value>0</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
+		<name>Negative vertical speed setting 1,000's</name>
+		<type>textranslate</type>
+		<object-name>APvs-1000</object-name>
+		<property>/it-autoflight/settings/vertical-speed-fpm</property>
+		<factor>-0.0001</factor>
+		<bias>999</bias>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Negative vertical speed setting 100's</name>
+		<type>textranslate</type>
+		<object-name>APvs-100</object-name>
+		<property>/it-autoflight/settings/vertical-speed-fpm</property>
+		<factor>0.001</factor>
+		<step>-100</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Negative vertical speed setting 10's</name>
+		<type>textranslate</type>
+		<object-name>APvs-10</object-name>
+		<property>/it-autoflight/settings/vertical-speed-fpm</property>
+		<factor>0.01</factor>
+		<step>-10</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Negative vertical speed setting 1's</name>
+		<type>textranslate</type>
+		<object-name>APvs-1</object-name>
+		<property>/it-autoflight/settings/vertical-speed-fpm</property>
+		<factor>0.1</factor>
+		<step>-1</step>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+		</axis>
+	</animation>
+
+	<!--animation>
+		<name>Flight path angle setting select</name>
+		<type>select</type>
+		<object-name>APfpa</object-name>
+		<condition>
+			<property>sim/model/B717/unimplemented-controls</property>
+		</condition>
+	</animation-->
+
+	<animation>
+		<name>Vertical speed knob</name>
+		<type>pick</type>
+		<object-name>VSknb</object-name>
+		<action>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/it-autoflight/settings/vertical-speed-fpm</property>
+				<step type="double">100</step>
+				<max>9999</max>
+			</binding>
+		</action>
+		<action>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/it-autoflight/settings/vertical-speed-fpm</property>
+				<step type="double">-100</step>
+				<min>-9999</min>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>ALTHLD button pick</name>
+		<type>pick</type>
+		<object-name>ALTHbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/apvertset</property>
+				<value>0</value>
+				</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>VS button pick</name>
+		<type>pick</type>
+		<object-name>VSbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/apvertset</property>
+				<value>1</value>
+				</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>APPR button pick</name>
+		<type>pick</type>
+		<object-name>APPRbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/apvertset</property>
+				<value>2</value>
+				</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<name>FLCH button pick</name>
+		<type>pick</type>
+		<object-name>FLCHbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/apvertset</property>
+				<value>4</value>
+				</binding>
+		</action>
+	</animation>
+
+</PropertyList>
