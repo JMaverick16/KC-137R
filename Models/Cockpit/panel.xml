@@ -138,8 +138,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.544</y-m>
-    <z-m>0.71</z-m>
+    <y-m>-0.3</y-m>
+    <z-m>0.705</z-m>
   </offsets>
 </model>
 
@@ -173,16 +173,6 @@
   </offsets>
 </model>
 
-<model>
-  <name>trim</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/trim/trim.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.3</y-m>
-    <z-m>0.705</z-m>
-  </offsets>
-</model>
-
 
 <!-- Hood Console -->
 
@@ -201,8 +191,8 @@
 </model>
 
 <model>
-  <name>stby-ai</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/stby-ai.xml</path>
+  <name>altm</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/altm/altm.xml</path>
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
@@ -211,12 +201,22 @@
 </model>
 
 <model>
-  <name>altm</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/altm/altm.xml</path>
+  <name>stby-ai</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/stby-ai.xml</path>
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.853</z-m>
+      <z-m> 0.855</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>trim</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/trim/trim-smaller.xml</path>
+  <offsets>
+      <x-m>-18.919</x-m>
+      <y-m>-0.141</y-m>
+      <z-m> 0.785</z-m>
   </offsets>
 </model>
 
@@ -389,16 +389,6 @@
 </model>
 
 <model>
-  <name>trim_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/trim/trim.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>0.544</y-m>
-    <z-m>0.705</z-m>
-  </offsets>
-</model>
-
-<model>
   <name>speed-limit-lamps_cp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
@@ -562,11 +552,11 @@
 	
 	<!-- AP -->
 	<!--model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/autoflight/APpanel.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/FGCP/fgcp.xml</path>
 		<offsets>
-			<x-m>-18.797</x-m>
+			<x-m>-21.20</x-m>
 			<y-m>  0.00</y-m>
-			<z-m>  1.05</z-m>
+			<z-m> -0.13</z-m>
 		</offsets>
 	</model-->
 

@@ -2142,7 +2142,7 @@
  <!--cockpit -->
 	<model>
 		<name>cockpit</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/cockpit-AWACS.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/cockpit.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>

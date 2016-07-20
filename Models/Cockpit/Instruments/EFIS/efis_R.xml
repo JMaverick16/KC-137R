@@ -5,7 +5,7 @@
     <animation>
         <type>rotate</type>
         <object-name>Range.knob</object-name>
-        <property>instrumentation/efis/inputs/range-nm</property>
+        <property>instrumentation/efis[1]/inputs/range-nm</property>
         <interpolation>
             <entry><ind>10</ind><dep>0</dep></entry>
             <entry><ind>20</ind><dep>30</dep></entry>
@@ -30,7 +30,7 @@
     <animation>
         <type>rotate</type>
         <object-name>MODE.knob</object-name>
-        <property>controls/switches/modekb</property>
+        <property>controls/switches/modekb2</property>
         <interpolation>
             <entry><ind>0</ind><dep>0</dep></entry>
             <entry><ind>1</ind><dep>30</dep></entry>

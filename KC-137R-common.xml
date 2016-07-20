@@ -398,20 +398,6 @@
 		<ap-loop type="bool">0</ap-loop>
 		<compass-pos type="double">1.0</compass-pos> <!-- compass is closed -->
 		<over-water type="bool">0</over-water>
-		<manual>
-			<board type="double">0.0</board>
-			<page type="int">0</page>
-			<title type="string">BOEING</title>
-			<subtitle1 type="string">OPERATION MANUAL</subtitle1>
-			<text1 type="string"></text1>
-			<subtitle2 type="string"></subtitle2>
-			<text2 type="string"></text2>
-			<subtitle3 type="string">MODEL 707 - 420/430</subtitle3>
-			<text3 type="string">FOR FLIGHTGEAR SIMULATION ONLY</text3>
-			<subtitle4 type="string"></subtitle4>
-			<text4 type="string">Lake of Constance Hangar Vol. 1.1.5</text4>
-			<content include="Models/Cockpit/Manual/manual.xml"/>
-		</manual>
 		<ground-service>
 			<fuel-truck>
 				<state type="double">0.0</state>

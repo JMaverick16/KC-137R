@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- Lake of Constance Hangar :: M.Kraus Avril 2013 -->
+<!-- This file is licenced under the terms of the GNU General Public Licence V2 or later -->
+<PropertyList>
+
+  <path>seatspass.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>seats</object-name>
+		<object-name>fe-seat</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+</PropertyList>

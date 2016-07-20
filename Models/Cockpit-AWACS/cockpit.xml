@@ -447,7 +447,7 @@
 	<!-- equipment -->
 	<model>
 		<name>pedestal</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/pedestal.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/pedestal.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>
@@ -468,7 +468,7 @@
 	
 	<model>
 		<name>panel-equipment</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/panel-AWACS.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/panel.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>
@@ -545,7 +545,7 @@
 	
 	<model>
 		<name>seats</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/seats/seats.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/Equipment/seats/seats.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>
@@ -555,7 +555,7 @@
 
 	<model>
 		<name>yokes</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/yokes/yokes.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/Equipment/yokes/yokes.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>
@@ -565,7 +565,7 @@
 	
 	<model>
 		<name>tiller</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/yokes/tiller.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/Equipment/yokes/tiller.xml</path>
 		<offsets>
 		  <x-m>-18.816</x-m>
 		  <y-m> -0.701</y-m>
@@ -606,7 +606,7 @@
 
 	<model>
 		<name>book</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Manual/book.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/book-AWACS.xml</path>
 		<offsets>
 		  <x-m>-17.72</x-m>
 		  <y-m> 0.61</y-m>

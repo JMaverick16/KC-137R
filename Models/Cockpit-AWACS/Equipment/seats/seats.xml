@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- Lake of Constance Hangar :: M.Kraus Avril 2013 -->
+<!-- This file is licenced under the terms of the GNU General Public Licence V2 or later -->
+<PropertyList>
+
+  <path>seats.ac</path>
+
+	<animation>
+		<type>material</type>
+		<object-name>seats</object-name>
+		<object-name>fe-seat</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>/systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+    <!-- FE seat for approach -->
+    <animation>
+  		<type>rotate</type>
+  		<object-name>fe-seat</object-name>
+  		<property>/b707/fe-pos</property>
+  		<factor>80</factor>
+  		<center>
+  		  <x-m>-17.535</x-m>
+  		  <y-m>0.2688</y-m>
+  		  <z-m>0.0</z-m>
+  		</center>
+  		<axis>
+  		  <x>0.0</x>
+  		  <y>0.0</y>
+  		  <z>1.0</z>
+  		</axis>
+  	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>fe-seat</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/b707/fe-pos</property>
+		  </binding>
+		</action>
+	</animation>
+
+</PropertyList>
