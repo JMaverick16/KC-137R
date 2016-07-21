@@ -8,7 +8,7 @@
 
 <PropertyList>
 
-<path>machtrim.ac</path>
+<path>asb.ac</path>
 
 <animation>
 	<type>material</type>
@@ -76,10 +76,7 @@
 		</greater-than>
     <or>
     	<and>
-      	<property>/controls/special/mach-trim-switch</property>
-      	<not><property>/controls/flight/aileron-trim</property></not>
-      	<not><property>/controls/flight/elevator-trim</property></not>
-      	<not><property>/controls/flight/rudder-trim</property></not>
+      	<property>/controls/flight/speedbrake-arm</property>
       </and>
       <property>/controls/test/warn-knob</property>
     </or>
@@ -89,7 +86,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>/controls/special/mach-trim-switch</property>
+		<property>/controls/flight/speedbrake-arm</property>
 		<factor>-60</factor>
 		<axis>
 		  <x>0</x>
@@ -108,8 +105,10 @@
 		    <button>0</button>
 		    <repeatable>true</repeatable>
 				<binding>
-					 <command>property-toggle</command>
-					 <property>/controls/special/mach-trim-switch</property>
+					 <command>property-cycle</command>
+					 <property>/controls/flight/speedbrake-arm</property>
+					 <value>0</value>
+					 <value>1</value>
 				</binding>
         <binding>
           <command>property-toggle</command>

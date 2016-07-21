@@ -29,6 +29,9 @@
 	<property-rule n="101">	
 		<path>Systems/sound_calc.xml</path>
 	</property-rule>
+    <property-rule n="102">
+         <path>Aircraft/KC-137R/Systems/autospoiler.xml</path>
+    </property-rule>
 	</systems>
 
 	<instrumentation>

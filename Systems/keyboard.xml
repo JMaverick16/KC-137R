@@ -95,14 +95,6 @@
   </binding>
 </key>
 -->
-<key n="62">
-  <name>Shift + ></name>
-  <desc>Pop up autopilot dialog</desc>
-  <binding>
-		  <command>nasal</command>
-		  <script>b707.changeView(11);</script>
-  </binding>
-</key>
 
 <key n="79">
   <name>O</name>
@@ -118,6 +110,11 @@
   <binding>
 		  <command>nasal</command>
 		  <script>b707.fullSpeedbrakes();</script>
+  </binding>
+  <binding>
+	<command>property-assign</command>
+	<property>/controls/flight/speedbrake-arm</property>
+    <value>0</value>
   </binding>
 </key>
 

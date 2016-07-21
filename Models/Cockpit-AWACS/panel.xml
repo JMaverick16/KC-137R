@@ -338,93 +338,55 @@
 		</offsets>
 	</model-->
 	
-  	<!--model>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/Radiopanel.xml</path>
+  	<model>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/comm1.xml</path>
       <offsets>
-		  <x-m>-18.49</x-m>
-		  <y-m> -0.05</y-m>
+		  <x-m>-18.485</x-m>
+		  <y-m> -0.063</y-m>
 		  <z-m>  0.626</z-m>
-          <pitch-deg>-90</pitch-deg>
-      </offsets>
-    </model-->
-	
-  	<!--model>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/comm2.xml</path>
-      <offsets>
-          <x-m>-18.885</x-m>
-          <y-m> 0.12</y-m>
-          <z-m>0.746</z-m>
-          <pitch-deg>-70</pitch-deg>
+          <pitch-deg>0</pitch-deg>
       </offsets>
     </model>
+	
   	<model>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/nav1.xml</path>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/comm2.xml</path>
       <offsets>
-          <x-m>-18.833</x-m>
-          <y-m>-0.12</y-m>
-          <z-m>0.727</z-m>
-          <pitch-deg>-70</pitch-deg>
+		  <x-m>-18.485</x-m>
+		  <y-m>  0.063</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
       </offsets>
     </model>
+	
   	<model>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/nav2.xml</path>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/nav1.xml</path>
       <offsets>
-          <x-m>-18.833</x-m>
-          <y-m> 0.12</y-m>
-          <z-m>0.727</z-m>
-          <pitch-deg>-70</pitch-deg>
+		  <x-m>-18.410</x-m>
+		  <y-m> -0.063</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
       </offsets>
     </model>
 	
-    <model>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/adf1.xml</path>		
-        <offsets>
-            <x-m>-18.782</x-m>
-          	<y-m>-0.12</y-m>
-            <z-m>0.708</z-m>
-            <pitch-deg>-70</pitch-deg>
-        </offsets>
+  	<model>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/nav2.xml</path>
+      <offsets>
+		  <x-m>-18.410</x-m>
+		  <y-m>  0.063</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
+      </offsets>
     </model>
 	
-    <model>
-      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/adf2.xml</path>
-        <offsets>
-            <x-m>-18.782</x-m>
-          	<y-m> 0.12</y-m>
-            <z-m>0.708</z-m>
-            <pitch-deg>-70</pitch-deg>
-        </offsets>
-    </model-->
-	
-	 <!--model>
-	    <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radio/tacan.xml</path>
-		<offsets>   
-		  <x-m>-18.325</x-m>
-		  <y-m>  0.0675</y-m>
-		  <z-m>  0.625</z-m>
-	      <pitch-deg>-90</pitch-deg>
-		</offsets>
-	 </model-->
-
-	<!--model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis.xml</path>
-		<offsets>
-			<x-m>-18.85</x-m>
-			<y-m>-0.0</y-m>
-			<z-m>0.729</z-m>
-			<pitch-deg>-70</pitch-deg>
-		</offsets>
-	</model-->
-	 
-	<!--model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar.xml</path>
-		<offsets>
-			<x-m>-18.85</x-m>
-			<y-m>-0.0</y-m>
-			<z-m>0.729</z-m>
-			<pitch-deg>-70</pitch-deg>
-		</offsets>
-	</model-->
+  	<model>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tacan/tacan_octal.xml</path>
+      <offsets>
+		  <x-m>-20.210</x-m>
+		  <y-m>  0.132</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
+      </offsets>
+    </model>
 	
 	<!-- HUD -->
 
@@ -457,6 +419,16 @@
 			<x-m>-18.812</x-m>
 			<y-m> -0.04</y-m>
 			<z-m>  1.0465</z-m>
+		</offsets>
+	</model>
+
+	<!-- AutoSpdBrkArm -->
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/asb.xml</path>
+		<offsets>
+			<x-m>-18.812</x-m>
+			<y-m>  0.11 </y-m>
+			<z-m>  1.047</z-m>
 		</offsets>
 	</model>
 

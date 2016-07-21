@@ -264,7 +264,7 @@
                     13 <!-- enable all altitude callouts -->
                 </category-4>
                 <category-8>                    <!-- RADIO_ALTITUDE_INPUT_SELECT -->
-                     3 <!-- use precise (but YASim-specific) gear altitude -->
+                     2 <!-- use precise (but YASim-specific) gear altitude -->
                 </category-8>
                 <category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
                      5 <!-- flashing warning lamp -->
