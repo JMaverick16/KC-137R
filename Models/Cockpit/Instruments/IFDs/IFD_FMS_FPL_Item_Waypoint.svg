@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1252"
+   height="210"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="IFD_FMS_FPL_Item_Waypoint.svg">
+  <defs
+     id="defs2987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="543.54925"
+     inkscape:cy="100.45563"
+     inkscape:document-units="px"
+     inkscape:current-layer="FPL_Item_Detail"
+     showgrid="false"
+     inkscape:snap-page="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
+     inkscape:window-x="1918"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="false"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:bbox-paths="true"
+     fit-margin-bottom="2.7755576e-17">
+    <sodipodi:guide
+       orientation="1,0"
+       position="1232,295.89645"
+       id="guide3857" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="64,171.9328"
+       id="guide3088" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1216,146.66172"
+       id="guide3090" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="1184.2291,212.00001"
+       id="guide3092" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="1176.51,12.000003"
+       id="guide3094" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid3332"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="611.0905,110.63954"
+       id="guide5215" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="default"
+     inkscape:label="FPL_Item_back"
+     style="display:inline"
+     transform="translate(0,-14)">
+    <rect
+       style="color:#000000;fill:#303030;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="FPL_Item_back"
+       width="1152"
+       height="200"
+       x="63.999992"
+       y="19.000002"
+       ry="15.6724" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="FPL_Item_Detail"
+     inkscape:label="FPL_Item_detail"
+     style="display:inline"
+     transform="translate(0,-14)">
+    <path
+       style="color:#000000;fill:#616660;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 628.72999,25.312507 c -10.37969,0 -18.74558,8.568216 -18.72999,19.218755 l 0,38.593742 -519.999995,0 0,30.875006 19.999995,0 L 110,105 122,119.00001 110,133 l 0,-8.99999 -30.000006,0 0,-40.875006 -15.999997,0 0,71.749996 546.000003,0 410.2949,0 77.3259,0 c 10.3797,0 18.73,-8.56819 18.73,-19.21874 l 0,-91.124998 c 0,-10.65055 -8.3503,-19.218755 -18.73,-19.218755 z"
+       id="FPL_Item_Detail_back"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssccccccccccccccsssss" />
+    <text
+       xml:space="preserve"
+       style="font-size:32.38931274px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#60ffb8;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="827.74799"
+       y="127.90865"
+       id="text4795-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4797-9"
+         x="827.74799"
+         y="127.90865">L</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4486"
+       y="74.697662"
+       x="826.72021"
+       style="font-size:32.38931274px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#60ffb8;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       xml:space="preserve"><tspan
+         y="74.697662"
+         x="826.72021"
+         id="tspan4488"
+         sodipodi:role="line">NM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32.38931274px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#60ffb8;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="1044.1887"
+       y="74.697662"
+       id="ETE_unit"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4492"
+         x="1044.1887"
+         y="74.697662">M:S</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4494"
+       y="127.90865"
+       x="1045.8177"
+       style="font-size:32.38931274px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#60ffb8;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       xml:space="preserve"><tspan
+         y="127.90865"
+         x="1045.8177"
+         id="tspan4496"
+         sodipodi:role="line">Z</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:41.64340591px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="1033.1658"
+       y="127.90865"
+       id="ETA"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4801-7"
+         x="1033.1658"
+         y="127.90865">--:--</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="ETE"
+       y="74.697662"
+       x="1033.2267"
+       style="font-size:41.64340591px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       xml:space="preserve"><tspan
+         y="74.697662"
+         x="1033.2267"
+         id="tspan4521"
+         sodipodi:role="line">--:--</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="Fuel"
+       y="127.90865"
+       x="817.88904"
+       style="font-size:41.64340591px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       xml:space="preserve"><tspan
+         y="127.90865"
+         x="817.88904"
+         id="tspan4525"
+         sodipodi:role="line">---</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:41.64340591px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="818.0108"
+       y="74.697662"
+       id="Distance"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4529"
+         x="818.0108"
+         y="74.697662">---</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4531"
+       y="74.697662"
+       x="683.83313"
+       style="font-size:41.64340591px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       xml:space="preserve"><tspan
+         y="74.697662"
+         x="683.83313"
+         id="tspan4533"
+         sodipodi:role="line">To:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:41.64340591px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="683.83313"
+       y="127.90865"
+       id="text4535"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4537"
+         x="683.83313"
+         y="127.90865">At:</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="FPL_Item_Constrains_Edit"
+     inkscape:label="constrains_edit"
+     style="display:inline"
+     transform="translate(0,-14)">
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="Constain_before_back"
+       width="177.17188"
+       height="45"
+       x="222.42099"
+       y="164.62212"
+       ry="5.9940391" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="Constain_alt_back"
+       width="189.09883"
+       height="45"
+       x="926.52673"
+       y="164.62212"
+       ry="4.8193722" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="Constain_at_back"
+       width="240.38844"
+       height="45"
+       x="673.08136"
+       y="164.62212"
+       ry="6.8022242" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3167"
+       style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion3169"><rect
+           id="rect3171"
+           width="96.809601"
+           height="36.665432"
+           x="102.92051"
+           y="162.89095" /></flowRegion><flowPara
+         id="flowPara3173" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="103.56376"
+       y="201.60201"
+       id="text3175"><tspan
+         sodipodi:role="line"
+         id="tspan3177"
+         x="103.56376"
+         y="201.60201">Cross</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#ffffff;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="336.50854"
+       y="201.60201"
+       id="Constain_before"><tspan
+         sodipodi:role="line"
+         id="tspan3177-3"
+         x="336.50854"
+         y="201.60201">100.0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="347.4758"
+       y="201.60201"
+       id="Constain_before_unit"
+       inkscape:label="#edit_before_unit"><tspan
+         sodipodi:role="line"
+         id="tspan3177-5"
+         x="347.4758"
+         y="201.60201">nm</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="412.33347"
+       y="201.60201"
+       id="text3175-8"><tspan
+         sodipodi:role="line"
+         id="tspan3177-6"
+         x="412.33347"
+         y="201.60201">before</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="532.70459"
+       y="201.60201"
+       id="Constain_icao"><tspan
+         sodipodi:role="line"
+         id="tspan3177-60"
+         x="532.70459"
+         y="201.60201">XXXXX</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#ffffff;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="793.13885"
+       y="201.60201"
+       id="Constain_at"><tspan
+         sodipodi:role="line"
+         id="tspan3177-3-9"
+         x="793.13885"
+         y="201.60201">at or above</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="1070.4187"
+       y="201.60201"
+       id="Constain_alt_unit"
+       inkscape:label="#edit_alt_unit"><tspan
+         sodipodi:role="line"
+         id="tspan3177-5-6"
+         x="1070.4187"
+         y="201.60201">FT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#ffffff;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="1058.8002"
+       y="201.60201"
+       id="Constain_alt"><tspan
+         sodipodi:role="line"
+         id="tspan3177-3-8"
+         x="1058.8002"
+         y="201.60201">10000</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="FPL_Item_General"
+     inkscape:label="All"
+     style="display:inline"
+     transform="matrix(1,0,0,0.97560972,0,-11.268289)">
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="FPL_Item_ICAO_back"
+       width="265.3862"
+       height="62.769115"
+       x="132.81581"
+       y="87.790443"
+       ry="6.1192102" />
+    <text
+       xml:space="preserve"
+       style="font-size:49.97325897px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#60ffb8;fill-opacity:1;stroke:#60ffb8;stroke-width:1.37645352;stroke-opacity:1;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="85.248169"
+       y="60.981915"
+       id="FPL_Item_Headline"
+       sodipodi:linespacing="125%"
+       transform="scale(0.87941822,1.1371154)"
+       inkscape:label="#text5341-2"><tspan
+         sodipodi:role="line"
+         x="85.248169"
+         y="60.981915"
+         id="tspan4032-6"
+         style="stroke-width:1.37645352">Headline</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:44.6174469px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.37645364;stroke-opacity:1;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="149.36705"
+       y="178.25394"
+       id="FPL_Item_Constrains"
+       sodipodi:linespacing="125%"
+       transform="scale(0.8805119,1.135703)"
+       inkscape:label="#text5341-2"><tspan
+         style="stroke-width:1.37645364"
+         sodipodi:role="line"
+         x="149.36705"
+         y="178.25394"
+         id="tspan4032-6-3-1">Constrains</tspan></text>
+    <text
+       inkscape:label="#text5341-2"
+       transform="scale(0.87692405,1.1403496)"
+       sodipodi:linespacing="125%"
+       id="FPL_Item_ICAO"
+       y="123.78477"
+       x="168.4048"
+       style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.37645364;stroke-opacity:1;display:inline;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan4459-4"
+         y="123.78477"
+         x="168.4048"
+         sodipodi:role="line"
+         style="font-size:56px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:#ffffff;stroke-width:1.37645364;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold">XXXX-25R</tspan></text>
+    <path
+       style="color:#000000;fill:none;stroke:#00ffff;stroke-width:5.06211424;stroke-miterlimit:4;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 79.672391,19.174999 1120.655209,0 c 8.6825,0 15.6724,6.989891 15.6724,15.672401 l 0,168.6552 c 0,8.68251 -6.9899,15.6724 -15.6724,15.6724 l -1120.655209,0 c -8.682513,0 -15.672394,-6.98989 -15.672394,-15.6724 l 0,-168.6552 c 0,-8.68251 6.989881,-15.672401 15.672394,-15.672401 z"
+       id="FPL_Item_Focus"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -173,6 +173,16 @@
   </offsets>
 </model>
 
+<model>
+  <name>air_temp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/airtemp/airtemp.xml</path>
+  <offsets>
+    <x-m>-18.916</x-m>
+    <y-m>-0.544</y-m>
+    <z-m>0.71</z-m>
+  </offsets>
+</model>
+
 
 <!-- Hood Console -->
 
@@ -398,45 +408,55 @@
   </offsets>
 </model>
 
+<model>
+  <name>air_temp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/airtemp/airtemp.xml</path>
+  <offsets>
+    <x-m>-18.916</x-m>
+    <y-m>0.544</y-m>
+    <z-m>0.705</z-m>
+  </offsets>
+</model>
+
 <!-- middle pedestal -->
 
-  	<!--model>
-	  <name>FMC1</name>
-	  <path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
-      <offsets>
-          <x-m>-18.833</x-m>
-          <y-m>-0.12</y-m>
-          <z-m>0.727</z-m>
-          <pitch-deg>-70</pitch-deg>
-      </offsets>
-		<overlay>
-			<texture>boeing_grey.png</texture>
-		</overlay>
-    </model-->
-	
-  	<!--model>
-	  <name>FMC2</name>
-	  <path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
-      <offsets>
-          <x-m>-18.833</x-m>
-          <y-m> 0.12</y-m>
-          <z-m>0.727</z-m>
-          <pitch-deg>-70</pitch-deg>
-      </offsets>
-		<overlay>
-			<texture>boeing_grey.png</texture>
-		</overlay>
-    </model-->
-	
-	<!--model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/</path>
-		<offsets>
-			<x-m>-18.85</x-m>
-			<y-m>-0.0</y-m>
-			<z-m>0.729</z-m>
-			<pitch-deg>-70</pitch-deg>
-		</offsets>
-	</model-->
+<!--model>
+<name>cdu1</name>
+<path>Aircraft/KC-137R/Models/Cockpit/Instruments/cdu/boeing.xml</path>
+<offsets>
+<x-m>-18.822</x-m>
+<y-m>-0.128</y-m>
+<z-m>0.723</z-m>
+<pitch-deg>-70</pitch-deg>
+</offsets>
+<overlay>
+<texture>boeing_grey.png</texture>
+</overlay>
+</model>
+
+<model>
+<name>cdu2</name>
+<path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
+<offsets>
+<x-m>-18.822</x-m>
+<y-m>0.128</y-m>
+<z-m>0.723</z-m>
+<pitch-deg>-70</pitch-deg>
+</offsets>
+<overlay>
+<texture>boeing_grey.png</texture>
+</overlay>
+</model>
+
+<model>
+<path>Aircraft/KC-137R/Models/Cockpit/Instruments/IFDs/LH-IFD.xml</path>
+<offsets>
+<x-m>-18.86</x-m>
+<y-m>-0.0</y-m>
+<z-m>0.73</z-m>
+<pitch-deg>-70</pitch-deg>
+</offsets>
+</model-->
 	
   	<model>
       <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/comm1.xml</path>
@@ -521,7 +541,15 @@
 			<z-m>  1.0465</z-m>
 		</offsets>
 	</model>
+	
+	<!-- AutoSpdBrkArm -->
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/asb.xml</path>
+		<offsets>
+			<x-m>-18.812</x-m>
+			<y-m>  0.11 </y-m>
+			<z-m>  1.047</z-m>
+		</offsets>
+	</model>
 
 </PropertyList>
-
-
