@@ -2178,7 +2178,7 @@
 <!-- IAE V2500 -->
 	<model>
 		<name>engineOneIAE</name>
-		<path>Aircraft/KC-137R/Models/Engines/v2500_1.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/V2500_1.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m>-14.835</y-m>
@@ -2188,7 +2188,7 @@
 	
 	<model>
 		<name>engineTwoIAE</name>
-		<path>Aircraft/KC-137R/Models/Engines/v2500_2.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/V2500_2.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m>-10.077</y-m>
@@ -2198,7 +2198,7 @@
 	
 	<model>
 		<name>engineThreeIAE</name>
-		<path>Aircraft/KC-137R/Models/Engines/v2500_3.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/V2500_3.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m> 10.077</y-m>
@@ -2208,7 +2208,7 @@
 	
 	<model>
 		<name>engineFourIAE</name>
-		<path>Aircraft/KC-137R/Models/Engines/v2500_4.xml</path>
+		<path>Aircraft/KC-137R/Models/Engines/V2500_4.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m> 14.835</y-m>
