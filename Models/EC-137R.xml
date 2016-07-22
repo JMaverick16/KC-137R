@@ -115,14 +115,6 @@
     <object-name>rhdoorinner</object-name>
     <object-name>rhdoorouter</object-name>
     <object-name>rhfwdfairing</object-name>
-    <object-name>engineOne</object-name>
-    <object-name>engineTwo</object-name>
-    <object-name>engineThree</object-name>
-    <object-name>engineFour</object-name>
-    <object-name>engineOnePW</object-name>
-    <object-name>engineTwoPW</object-name>
-    <object-name>engineThreePW</object-name>
-    <object-name>engineFourPW</object-name>
     <object-name>engineSupport</object-name>
     <object-name>slats</object-name>
     <object-name>lhngdoor</object-name>
