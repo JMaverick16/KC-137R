@@ -115,14 +115,6 @@
     <object-name>rhdoorinner</object-name>
     <object-name>rhdoorouter</object-name>
     <object-name>rhfwdfairing</object-name>
-    <object-name>engineOneCFM</object-name>
-    <object-name>engineTwoCFM</object-name>
-    <object-name>engineThreeCFM</object-name>
-    <object-name>engineFourCFM</object-name>
-    <object-name>engineOneIAE</object-name>
-    <object-name>engineTwoIAE</object-name>
-    <object-name>engineThreeIAE</object-name>
-    <object-name>engineFourIAE</object-name>
     <object-name>engineSupport</object-name>
     <object-name>slats</object-name>
     <object-name>lhngdoor</object-name>
@@ -284,7 +276,7 @@
 	
 	<model>
 	 <name>EFIS_TT</name>
-	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis_TT.xml</path>
+	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/EFIS_TT.xml</path>
 		<offsets>
       <x-m> 12.8</x-m>
       <y-m>-0.145</y-m>
