@@ -22,7 +22,7 @@
 		<type>translate</type>
 		<object-name>Reverser</object-name>
 		<object-name>Nozzle</object-name>
-		<property>engines/engine[3]/reverser-pos-norm</property>
+		<property>sim/multiplay/generic/float[14]</property>
 		<factor>0.25</factor>
 		<axis>
 			<x>1</x>
