@@ -36,6 +36,7 @@ setlistener("/it-autoflight/ap_mastersw", func {
     ap_off();
   } else if (apmas == 1) {
 	setprop("/it-autoflight/ap_master", 1);
+	setprop("/it-autoflight/apoffsound", 0);
     ap_refresh();
   }
 });

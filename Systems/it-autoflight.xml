@@ -39,7 +39,7 @@
  <!-- =============================================================== -->
  
 	<filter>
-		<name>IT-TARGET PITCH CONTROLLER</name>
+		<name>IT-TARGET ROLL CONTROLLER</name>
 		<debug>false</debug>
 		<type>gain</type>
 		<enable>
@@ -240,7 +240,7 @@
 	</pid-controller>
 	
 	<pid-controller>
-		<name>Vertical Speed Hold</name>
+		<name>VERTICAL SPEED HOLD</name>
 		<debug>false</debug>
 		<enable>
 			<prop>/it-autoflight/locks/pitch</prop>
@@ -270,7 +270,7 @@
 	</pid-controller>
 	
 	<pid-controller>
-		<name>Glideslope Hold</name>
+		<name>GLIDESLOPE HOLD</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -301,7 +301,6 @@
 		</config>
 	</pid-controller>
 	
-	<!-- Hold speed by varying pitch (Two stage cascading controller) --> 
 	<pid-controller>
 		<name>FLIGHT LEVEL CHANGE</name>
 		<debug>false</debug>
