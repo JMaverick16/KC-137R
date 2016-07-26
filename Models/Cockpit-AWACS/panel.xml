@@ -300,43 +300,27 @@
 
 <!-- middle pedestal -->
 
-  	<!--model>
-	  <name>FMC1</name>
-	  <path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
-      <offsets>
-          <x-m>-18.833</x-m>
-          <y-m>-0.12</y-m>
-          <z-m>0.727</z-m>
-          <pitch-deg>-70</pitch-deg>
-      </offsets>
-		<overlay>
-			<texture>boeing_grey.png</texture>
-		</overlay>
-    </model-->
-	
-  	<!--model>
-	  <name>FMC2</name>
-	  <path>Aircraft/Instruments-3d/cdu/boeing.xml</path>
-      <offsets>
-          <x-m>-18.833</x-m>
-          <y-m> 0.12</y-m>
-          <z-m>0.727</z-m>
-          <pitch-deg>-70</pitch-deg>
-      </offsets>
-		<overlay>
-			<texture>boeing_grey.png</texture>
-		</overlay>
-    </model-->
-	
-	<!--model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/</path>
-		<offsets>
-			<x-m>-18.85</x-m>
-			<y-m>-0.0</y-m>
-			<z-m>0.729</z-m>
-			<pitch-deg>-70</pitch-deg>
-		</offsets>
-	</model-->
+<model>
+  <name>FMS1</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/cdu/boeing_smaller.xml</path>
+  <offsets>
+    <x-m>-18.817</x-m>
+    <y-m>-0.131</y-m>
+    <z-m>0.727</z-m>
+    <pitch-deg>-70</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>FMS2</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/cdu/boeing_smaller.xml</path>
+  <offsets>
+    <x-m>-18.817</x-m>
+    <y-m>0.131</y-m>
+    <z-m>0.727</z-m>
+    <pitch-deg>-70</pitch-deg>
+  </offsets>
+</model>
 	
   	<model>
       <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/comm1.xml</path>

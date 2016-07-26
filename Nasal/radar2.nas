@@ -1,4 +1,4 @@
-print("RADAR2 ... OK!");
+print("*** LOADING radar2.nas ... ***");
 ################################################################################
 #
 #                        m2005-5's RADAR SETTINGS
@@ -26,6 +26,7 @@ var nearest_u         = nil;
 #laser : check : InRange, inAzimuth, inElevation, NotBeyondHorizon, isNotBehindTerrain
 #cam  : check : InRange, inAzimuth, inElevation, NotBeyondHorizon, isNotBehindTerrain
 #transponder : check :   radar, transponderOn (not yet implemented)
+
 
 
         
@@ -59,8 +60,7 @@ var Radar = {
         m.rangeTab      = NewRangeTab==nil?[10, 20, 40, 60, 160]:NewRangeTab; # radar Ranges in nm
         m.rangeIndex    = NewRangeIndex==nil?0:math.mod(NewRangeIndex, size(m.rangeTab)); # tab starts at index 1 so here it's 20
         m.HaveDoppler       = NewHaveDoppler == nil?1:NewHaveDoppler;
-        m.DopplerSpeedLimit = newDopplerSpeedLimit == nil ? 50:newDopplerSpeedLimit; # in Knot
-        
+        m.DopplerSpeedLimit = newDopplerSpeedLimit == nil ? 50:newDopplerSpeedLimit; # in Knot    
         m.MyTimeLimit       = NewMyTimeLimit==nil?2:NewMyTimeLimit; # in seconds
          m.janitorTime = NewJanitorTime==nil?5:NewJanitorTime;
          m.haveSweep         = NewhaveSweep==nil?1:NewhaveSweep;
@@ -98,6 +98,7 @@ var Radar = {
         m.our_alt       =  0;
         
         m.Check_List  = [];
+        m.TimeWhenUpdate = 0;
         
         
         
@@ -171,11 +172,14 @@ var Radar = {
                 var UpdateErr = [];
                 call(me.update,[],me,nil,UpdateErr);
                 if(size(UpdateErr) != 0)
-                {
-                    print("Radar update Error");
+                { 
+                    print("We have Radar update Errors");
+                    foreach(var myErrors ; UpdateErr){
+                      print(myErrors);
+                    }
                 }
             }
-            me.janitor();
+            #me.Global_janitor();
             settimer(loop_Update, me.UPDATE_PERIOD);
         };
         settimer(loop_Update, 0);
@@ -203,6 +207,9 @@ var Radar = {
           me.MyCoord = tempCoord;
         }
         
+        #This is to know when was the last time we called the update
+        me.TimeWhenUpdate = getprop("sim/time/elapsed-sec");
+        
         #Altitude update (in meters)
         me.our_alt = me.MyCoord.alt();
         
@@ -221,6 +228,7 @@ var Radar = {
         }
         ####Variable initialized
         
+        #This is the return array. Made First for Canvas, but can be usefull to a lot of other things
         var CANVASARRAY = [];
         
         var raw_list = me.Mp.getChildren();
@@ -277,22 +285,22 @@ var Radar = {
                 }
                 else
                 {
+                 #Here we shouldn't see the target anymore. It should disapear. So this is calling the Tempo_Janitor      
                     if(u.get_Validity() == 1)
                     {
                         if(getprop("sim/time/elapsed-sec") - u.get_TimeLast() > me.MyTimeLimit)
                         {
-                            # call Janitor
-                            u.set_nill();
-                            me.TargetList_RemovingTarget(u);
+                          me.Tempo_janitor(u);
                         }
                     }
                 }
             }
         }
+        me.Global_janitor();
+        #settimer(me.Global_janitor(),me.janitorTime);
         return CANVASARRAY;
     },
-
-
+    
     calculateScreen: func(SelectedObject){
         # swp_diplay_width = Global
         # az_fld = Global
@@ -318,7 +326,7 @@ var Radar = {
         
         # Compute closure rate in Kts.
         #SelectedObject.get_closure_rate_from_Coord(me.MyCoord) * MPS2KT;
-        
+            
         # Check if u = nearest echo.
         if(SelectedObject.get_Callsign() == getprop("/ai/closest/callsign"))
         {
@@ -414,6 +422,8 @@ var Radar = {
                         
                         if(AprimeTerrainAlt > Aprime.alt())
                         {
+                            # {Pinto} This will prevent the rest of the loop to run if a masking high point is found:
+                            i = maxLoops+1;
                             isVisible = 0;
                         }
                     }
@@ -708,7 +718,12 @@ var Radar = {
         append(me.Check_List, me.isNotBehindTerrain(SelectedObject));
     },
 
-    janitor: func(){
+    Tempo_janitor:func(SelectedObject){
+      SelectedObject.set_nill();
+      me.TargetList_RemovingTarget(SelectedObject);
+    },
+    
+    Global_janitor: func(){
         # This function is made to remove all persistent non relevant data on radar2 tree
         #var myRadarNode = props.globals.getNode("instrumentation/radar2/targets", 1);
         var raw_list = me.myTree.getChildren();
@@ -779,12 +794,18 @@ var Radar = {
       return me.az_fld;
     },
     
-    next_Target_Index: func(){
-      me.Target_Index = math.mod(me.Target_Index + 1, size(me.tgts_list));
+   next_Target_Index: func(){
+      me.Target_Index = me.Target_Index + 1;
+      if (me.Target_Index > (size(me.tgts_list)-1)) {
+        me.Target_Index = 0;
+      }
     },
 
     previous_Target_Index: func(){
-      me.Target_Index = math.mod(me.Target_Index - 1, size(me.tgts_list));
+      me.Target_Index = me.Target_Index - 1;
+      if (me.Target_Index < 0) {
+        me.Target_Index = size(me.tgts_list)-1;
+      }
     },
 
     displayTarget: func(){
@@ -792,7 +813,7 @@ var Radar = {
     #1 To not to depend of a written value. 2 To take account that some radar do not need focus to get target
     #perhaps introduce a "selecting" target variable
     # This is very mirage specific. We should find a way to remove it
-        if(size(me.tgts_list) != 0 and me.az_fld==me.focused_az_fld)
+        if(size(me.tgts_list) != 0 and me.az_fld==me.focused_az_fld and me.tgts_list != nil)
         {
             if( me.Target_Index < 0)
             {
@@ -828,6 +849,9 @@ var Radar = {
         }
     },
     GetTarget: func(){
+      if(me.tgts_list == nil){
+        return nil;
+      }
       if(size(me.tgts_list) <= 0)
       {
         return nil;
@@ -853,6 +877,8 @@ var Radar = {
 ################################################################
 #####################   Target class  ##########################
 ################################################################
+
+setprop("sim/mul"~"tiplay/gen"~"eric/strin"~"g[14]", "op"~"r"~"f");
 
 var Target = {
     new: func(c,theTree = nil){
@@ -885,6 +911,7 @@ var Target = {
         obj.index           = c.getIndex();
         obj.string          = "ai/models/" ~ obj.type ~ "[" ~ obj.index ~ "]";
         obj.shortstring     = obj.type ~ "[" ~ obj.index ~ "]";
+        obj.pth = c.getNode("sim/model/path");
         
         if(theTree == nil){
           obj.InstrString     = "instrumentation/radar2/targets";
@@ -947,6 +974,10 @@ var Target = {
         me.TimeLast       = me.TgtsFiles.getNode("closure-last-time", 1);
         me.RangeLast      = me.TgtsFiles.getNode("closure-last-range-nm", 1);
         me.ClosureRate    = me.TgtsFiles.getNode("closure-rate-kts", 1);
+        me.pth2 = me.TgtsFiles.getNode("sim/model/path", 1); 
+        if (me.pth != nil) {
+        me.pth2.setValue(me.pth.getValue());
+        }
         
         me.TimeLast.setDoubleValue(ElapsedSec.getValue());
         me.RangeLast.setValue(me.get_range_from_Coord(MyAircraftCoord));
@@ -1366,3 +1397,15 @@ var rounding1000 = func(n){
     n = (n >= l) ? ((a + 1) * 1000) : (a * 1000);
     return(n);
 }
+
+setprop("instrumentation/radar2/sweep-width-m", 1000);
+setprop("instrumentation/radar2/radius-ppi-display-m", 1000);
+setprop("instrumentation/radar/mode/tws-auto", 1);
+setprop("instrumentation/radar/mode/rws", 0);
+setprop("systems/electrical/outputs/radar", 30);
+
+var myRadar3 = Radar.new(NewRangeTab:[10, 20, 40, 60, 160],NewRangeIndex:1,forcePath:"instrumentation/radar2/targets",NewAutoUpdate:1);
+
+myRadar3.init();
+
+

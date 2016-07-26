@@ -269,6 +269,18 @@ no. D6-3071-00
 	</view>
  </sim>
  
+ <instrumentation>
+	<cdu>
+		<display>IDENT</display>
+		<ident>
+			<model>EC-137R</model>
+			<engines>IAE V2533-A5</engines>
+		</ident>
+		<input type="string"/>
+		<serviceable type="bool">1</serviceable>
+	</cdu>
+ </instrumentation>
+ 
   <b707>
 		<manual>
 			<board type="double">0.0</board>
@@ -302,14 +314,14 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/doors.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tyresmoke.nas</file>
 			<file>Aircraft/KC-137R/Nasal/brakesystem.nas</file>
-			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
+			<file>Aircraft/KC-137R/Nasal/radar2.nas</file>
 			<file>Aircraft/KC-137R/Nasal/registration.nas</file>
 			<file>Aircraft/KC-137R/Nasal/manual.nas</file>
 			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND.nas</file>
-			<file>Aircraft/KC-137R/Nasal/efis.nas</file>
+			<file>Aircraft/KC-137R/Nasal/efis-boom.nas</file>
 			<file>Aircraft/KC-137R/Nasal/systems-init.nas</file>
 			<file>Aircraft/KC-137R/Nasal/radio.nas</file>
-			<!--file>Aircraft/KC-137R/Nasal/radar2.nas</file-->
+			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 		</b707>
 		
 		<it2>
@@ -320,7 +332,7 @@ no. D6-3071-00
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
 		</m877>
-
+-
 	    <dual_control_tools>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/dual-control-tools.nas</file>
 	    </dual_control_tools>
@@ -334,6 +346,10 @@ no. D6-3071-00
 		<damage>
 		  <file>Aircraft/KC-137R/Nasal/damage.nas</file>
 		</damage>
+		
+		<cdu>
+			<file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
+		</cdu>
 	</nasal>
 
     <dual-control>
