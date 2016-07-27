@@ -20,16 +20,10 @@
 <model>
   <name>refuel_Lamp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/refuel_lamp_pilot.xml</path>
-  <condition>		
-	<equals>
-		<property>sim/aircraft</property>
-		<value type="string">EC-137D</value>
-	</equals>
-  </condition>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.612</y-m>
-    <z-m>0.806</z-m>
+    <y-m>-0.39</y-m>
+    <z-m>0.692</z-m>
   </offsets>
 </model>
 
@@ -304,9 +298,9 @@
   <name>FMS1</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/cdu/boeing_smaller.xml</path>
   <offsets>
-    <x-m>-18.817</x-m>
-    <y-m>-0.131</y-m>
-    <z-m>0.727</z-m>
+    <x-m>-18.827</x-m>
+    <y-m>-0.127</y-m>
+    <z-m>0.7225</z-m>
     <pitch-deg>-70</pitch-deg>
   </offsets>
 </model>
@@ -315,9 +309,9 @@
   <name>FMS2</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/cdu/boeing_smaller.xml</path>
   <offsets>
-    <x-m>-18.817</x-m>
-    <y-m>0.131</y-m>
-    <z-m>0.727</z-m>
+    <x-m>-18.827</x-m>
+    <y-m>0.127</y-m>
+    <z-m>0.7225</z-m>
     <pitch-deg>-70</pitch-deg>
   </offsets>
 </model>
