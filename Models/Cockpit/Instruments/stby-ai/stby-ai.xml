@@ -60,7 +60,7 @@
    <transform>
      <property>orientation/pitch-deg</property>
      <subtype>textranslate</subtype>
-     <factor>0.00435</factor>
+     <factor>0.00475</factor>
      <axis>
        <x>0</x>
        <y>1</y>

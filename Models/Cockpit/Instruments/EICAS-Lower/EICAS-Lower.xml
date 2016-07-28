@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>res/eicas.ac</path>
+
+	<!-- Power on/off -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>status</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.070</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">STATUS</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<!-- Engine Shutdown Indicator -->
+    <text>
+		<name>ensh</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.060</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">ENGINE SHUTDOWN</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>ensh</object-name>
+		<condition>
+			<or>
+				<less-than>
+					<property>engines/engine[0]/n2</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[1]/n2</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[2]/n2</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[3]/n2</property>
+					<value>45</value>
+				</less-than>
+			</or>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>en1sh</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.030</y-m>
+			<z-m>0.060</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">1</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>en1sh</object-name>
+		<condition>
+			<less-than>
+				<property>engines/engine[0]/n2</property>
+				<value>45</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>en2sh</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.060</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">2</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>en2sh</object-name>
+		<condition>
+			<less-than>
+				<property>engines/engine[1]/n2</property>
+				<value>45</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>en3sh</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.040</y-m>
+			<z-m>0.060</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">3</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>en3sh</object-name>
+		<condition>
+			<less-than>
+				<property>engines/engine[2]/n2</property>
+				<value>45</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>en4sh</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.045</y-m>
+			<z-m>0.060</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">4</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>en4sh</object-name>
+		<condition>
+			<less-than>
+				<property>engines/engine[3]/n2</property>
+				<value>45</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+	
+	<!-- Nacelle AntiIce Indicator -->
+    <text>
+		<name>nai</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.052</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">NACELLE ANTI-ICE OFF</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nai</object-name>
+		<condition>
+			<or>
+				<not><property>b707/anti-ice/engine-inlet[0]</property></not>
+				<not><property>b707/anti-ice/engine-inlet[1]</property></not>
+				<not><property>b707/anti-ice/engine-inlet[2]</property></not>
+				<not><property>b707/anti-ice/engine-inlet[3]</property></not>
+			</or>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>nai1</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.030</y-m>
+			<z-m>0.052</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">1</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nai1</object-name>
+		<condition>
+			<not><property>b707/anti-ice/engine-inlet[0]</property></not>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>nai2</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.052</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">2</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nai2</object-name>
+		<condition>
+			<not><property>b707/anti-ice/engine-inlet[1]</property></not>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>nai3</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.040</y-m>
+			<z-m>0.052</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">3</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nai3</object-name>
+		<condition>
+			<not><property>b707/anti-ice/engine-inlet[2]</property></not>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>nai4</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.045</y-m>
+			<z-m>0.052</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">4</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nai4</object-name>
+		<condition>
+			<not><property>b707/anti-ice/engine-inlet[3]</property></not>
+		</condition>
+	</animation>
+	
+	<!-- Nacelle Valve Indicator -->
+    <text>
+		<name>nv</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.044</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">NACELLE VALVE CLOSED</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nv</object-name>
+		<condition>
+			<not-equals>
+				<property>b707/anti-ice/valve-selector</property>
+				<value>2</value>
+			</not-equals>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>nvL</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.044</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">L</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nvL</object-name>
+		<condition>
+			<and>
+			<not-equals>
+				<property>b707/anti-ice/valve-selector</property>
+				<value>1</value>
+			</not-equals>
+			<not-equals>
+				<property>b707/anti-ice/valve-selector</property>
+				<value>2</value>
+			</not-equals>
+			</and>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>nvR</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.040</y-m>
+			<z-m>0.044</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">R</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nvR</object-name>
+		<condition>
+			<and>
+			<not-equals>
+				<property>b707/anti-ice/valve-selector</property>
+				<value>2</value>
+			</not-equals>
+			<not-equals>
+				<property>b707/anti-ice/valve-selector</property>
+				<value>3</value>
+			</not-equals>
+			</and>
+		</condition>
+	</animation>
+	
+	<!-- Fuel heater Indicator -->
+    <text>
+		<name>fh</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.036</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">FUEL HEATER OFF</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>fh</object-name>
+		<condition>
+			<or>
+				<not><property>b707/fuel/heater[0]</property></not>
+				<not><property>b707/fuel/heater[1]</property></not>
+				<not><property>b707/fuel/heater[2]</property></not>
+				<not><property>b707/fuel/heater[3]</property></not>
+			</or>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>fh1</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.030</y-m>
+			<z-m>0.036</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">1</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>fh1</object-name>
+		<condition>
+			<not><property>b707/fuel/heater[0]</property></not>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>fh2</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.036</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">2</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>fh2</object-name>
+		<condition>
+			<not><property>b707/fuel/heater[1]</property></not>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>fh3</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.040</y-m>
+			<z-m>0.036</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">3</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>fh3</object-name>
+		<condition>
+			<not><property>b707/fuel/heater[2]</property></not>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>fh4</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.045</y-m>
+			<z-m>0.036</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">4</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>fh4</object-name>
+		<condition>
+			<not><property>b707/fuel/heater[3]</property></not>
+		</condition>
+	</animation>
+	
+	<!-- Emergency Lights Not Armed Indicator -->
+    <text>
+		<name>elna</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.028</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">EMER LIGHT NOT ARMED</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>elna</object-name>
+		<condition>
+			<not-equals>
+				<property>b707/emergency/exit-lights</property>
+				<value>1</value>
+			</not-equals>
+		</condition>
+	</animation>
+	
+	<!-- Window Heat Indicator -->
+    <text>
+		<name>wh</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.020</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">WINDOW HEAT OFF</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>wh</object-name>
+		<condition>
+			<or>
+			<equals>
+				<property>b707/anti-ice/window-heat-cap-switch</property>
+				<value>0</value>
+			</equals>
+			<equals>
+				<property>b707/anti-ice/window-heat-fo-switch</property>
+				<value>0</value>
+			</equals>
+			</or>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>whCP</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.030</y-m>
+			<z-m>0.020</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">CAP</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>whCP</object-name>
+		<condition>
+			<equals>
+				<property>b707/anti-ice/window-heat-cap-switch</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>whFO</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.045</y-m>
+			<z-m>0.020</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">F/O</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>whFO</object-name>
+		<condition>
+			<equals>
+				<property>b707/anti-ice/window-heat-fo-switch</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<!-- No Smoking/Seatbelts Indicator -->
+    <text>
+		<name>nosmoke</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.012</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">NO SMOKING</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nosmoke</object-name>
+		<condition>
+			<property>b707/call/no-smoking</property>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>seatbelt</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.004</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">SEATBELTS</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>seatbelt</object-name>
+		<condition>
+			<property>b707/call/seat-belts</property>
+		</condition>
+	</animation>
+	
+    <text>
+		<name>gndspdbrk</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>-0.004</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">AUTOSPEEDBRK ARMED</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>gndspdbrk</object-name>
+		<condition>
+			<property>controls/flight/speedbrake-arm</property>
+		</condition>
+	</animation>
+	
+	<!-- Color stuff -->
+	<!-- White -->
+	<animation>
+		<type>material</type>
+		<object-name>status</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
+	
+	<!-- Orange -->
+	<!--animation>
+		<type>material</type> 
+		<object-name>osgtext-orange</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>0.5</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>0.5</green>
+			<blue>0</blue>
+		</emission>
+	</animation-->
+	
+	<!-- Green -->
+	<!--animation>
+		<type>material</type> 
+		<object-name>osgtext-green</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</emission>
+	</animation-->
+	
+	<!-- Light Blue -->
+	<animation>
+		<type>material</type> 
+		<object-name>nosmoke</object-name>
+		<object-name>seatbelt</object-name>
+		<object-name>gndspdbrk</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>0.75</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>0.75</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
+	
+	<!-- Yellow -->
+	<animation>
+		<type>material</type>
+		<object-name>ensh</object-name>
+		<object-name>en1sh</object-name>
+		<object-name>en2sh</object-name>
+		<object-name>en3sh</object-name>
+		<object-name>en4sh</object-name>
+		<object-name>nai</object-name>
+		<object-name>nai1</object-name>
+		<object-name>nai2</object-name>
+		<object-name>nai3</object-name>
+		<object-name>nai4</object-name>
+		<object-name>nv</object-name>
+		<object-name>nvL</object-name>
+		<object-name>nvR</object-name>
+		<object-name>fh</object-name>
+		<object-name>fh1</object-name>
+		<object-name>fh2</object-name>
+		<object-name>fh3</object-name>
+		<object-name>fh4</object-name>
+		<object-name>elna</object-name>
+		<object-name>wh</object-name>
+		<object-name>whCP</object-name>
+		<object-name>whFO</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
+
+</PropertyList>

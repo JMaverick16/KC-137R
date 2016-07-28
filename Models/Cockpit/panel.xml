@@ -28,8 +28,8 @@
   </condition>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.39</y-m>
-    <z-m>0.692</z-m>
+    <y-m>-0.544</y-m>
+    <z-m>0.695</z-m>
   </offsets>
 </model>
 
@@ -114,8 +114,8 @@
 </model>
 
 <model>
-  <name>EHSI</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EHSI/EHSI.xml</path>
+  <name>ND_L</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_L.xml</path>
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>-0.422</y-m>
@@ -170,16 +170,6 @@
     <x-m>-18.916</x-m>
     <y-m>-0.62</y-m>
     <z-m>0.855</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>air_temp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/airtemp/airtemp.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.544</y-m>
-    <z-m>0.71</z-m>
   </offsets>
 </model>
 
@@ -267,8 +257,8 @@
 </animation>
 
 <model>
-  <name>ND</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_L.xml</path>
+  <name>EICAS-Lower</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS-Lower/EICAS-Lower.xml</path>
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.015</y-m>
@@ -359,6 +349,16 @@
 </model>
 
 <model>
+  <name>EFIS_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis_R.xml</path>
+  <offsets>
+    <x-m>-18.92</x-m>
+    <y-m> 0.30</y-m>
+    <z-m> 0.9595</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>rmi_cp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/rmi/rmi.xml</path>
   <offsets>
@@ -369,8 +369,8 @@
 </model>
 
 <model>
-  <name>EHSI_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EHSI/EHSI.xml</path>
+  <name>ND_R</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_R.xml</path>
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>0.422</y-m>
@@ -403,7 +403,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>0.30</y-m>
+    <y-m>0.40</y-m>
     <z-m>0.96</z-m>
   </offsets>
 </model>

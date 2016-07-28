@@ -261,33 +261,7 @@
 	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar.xml</path>
 		<offsets>
       <x-m> 12.8</x-m>
-      <y-m> 0.07</y-m>
-      <z-m>-0.9</z-m>
-      <heading-deg>180</heading-deg>
-    	<pitch-deg>30</pitch-deg>
-    	<roll-deg>0</roll-deg>
-		</offsets>
-	</model>
-	
-	<model>
-	 <name>ND_R</name>
-	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_R.xml</path>
-		<offsets>
-      <x-m> 12.8</x-m>
-      <y-m>-0.07</y-m>
-      <z-m>-0.9</z-m>
-      <heading-deg>180</heading-deg>
-    	<pitch-deg>30</pitch-deg>
-    	<roll-deg>0</roll-deg>
-		</offsets>
-	</model>
-	
-	<model>
-	 <name>EFIS_TT</name>
-	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis_TT.xml</path>
-		<offsets>
-      <x-m> 12.8</x-m>
-      <y-m>-0.145</y-m>
+      <y-m> 0.00</y-m>
       <z-m>-0.9</z-m>
       <heading-deg>180</heading-deg>
     	<pitch-deg>30</pitch-deg>

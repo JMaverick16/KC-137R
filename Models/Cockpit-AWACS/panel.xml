@@ -22,8 +22,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/refuel_lamp_pilot.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.39</y-m>
-    <z-m>0.692</z-m>
+    <y-m>-0.544</y-m>
+    <z-m>0.71</z-m>
   </offsets>
 </model>
 
@@ -104,16 +104,6 @@
     <x-m>-18.916</x-m>
     <y-m>-0.62</y-m>
     <z-m>0.855</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>air_temp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/airtemp/airtemp.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.544</y-m>
-    <z-m>0.71</z-m>
   </offsets>
 </model>
 
@@ -199,6 +189,16 @@
 	<property>/sim/engine-type/IAE</property>
   </condition>
 </animation>
+
+<model>
+  <name>EICAS-Lower</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS-Lower/EICAS-Lower.xml</path>
+  <offsets>
+      <x-m>-18.92</x-m>
+      <y-m>-0.015</y-m>
+      <z-m> 0.795</z-m>
+  </offsets>
+</model>
 
 <model>
   <name>gears_and_flaps</name>

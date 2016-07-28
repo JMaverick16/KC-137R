@@ -159,18 +159,8 @@
     
 <animation>
   <type>pick</type>
-  <object-name>ALT.Face</object-name>
   <object-name>ALT.Knob</object-name>
   <visible>true</visible>
-      <action>
-        <name>show info</name>
-        <button>0</button>
-      	<repeatable>true</repeatable>			
-        <binding>
-				  <command>nasal</command>
-				  <script>b707.show_alti()</script>
-				</binding>
-      </action>
       <action>
         <name>calibrate fine dec</name>
         <button>3</button>
