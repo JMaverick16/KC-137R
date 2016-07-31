@@ -179,7 +179,7 @@
       <property>/it-autoflight/settings/target-speed-kt</property>
       <step>1</step>
       <min>0</min>
-      <max>300</max>
+      <max>380</max>
       <wrap>false</wrap>
     </binding>
   </action>
@@ -195,7 +195,7 @@
       <property>/it-autoflight/settings/target-speed-kt</property>
       <step>-1</step>
       <min>0</min>
-      <max>300</max>
+      <max>380</max>
       <wrap>false</wrap>
     </binding>
   </action>
