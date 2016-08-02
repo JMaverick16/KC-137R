@@ -54,6 +54,16 @@
 </model>
 
 <model>
+  <name>apstatus</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apstatus/apstatus.xml</path>
+  <offsets>
+    <x-m>-18.918</x-m>
+    <y-m>-0.23</y-m>
+    <z-m>0.908</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>agl</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl.xml</path>
   <offsets>

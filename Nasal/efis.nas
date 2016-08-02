@@ -3,10 +3,10 @@
 var nd_init = func {
 	setprop("/instrumentation/efis/inputs/range-nm", 10);
 	setprop("/controls/switches/modekb", 2);
-	setprop("/instrumentation/efis/inputs/tfc", "true");
+	setprop("/instrumentation/efis/inputs/tfc", "false");
 	setprop("/instrumentation/efis[1]/inputs/range-nm", 10);
 	setprop("/controls/switches/modekb2", 2);
-	setprop("/instrumentation/efis[1]/inputs/tfc", "true");
+	setprop("/instrumentation/efis[1]/inputs/tfc", "false");
 	print("EFIS ... OK!");
 }
 

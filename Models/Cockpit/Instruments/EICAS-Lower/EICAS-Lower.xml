@@ -417,6 +417,35 @@
 			</and>
 		</condition>
 	</animation>
+
+	<!-- Wing Anti-Ice Indicator-->
+    <text>
+		<name>wai</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0415</y-m>
+			<z-m>0.036</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">WING ANTI-ICE OFF</format>
+		<property>autopilot/serviceable</property>
+		<font>helvetica.txf</font>
+		<character-size>0.0073</character-size>
+		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>wai</object-name>
+		<condition>
+			<not-equals>
+				<property>b707/anti-ice/switch</property>
+				<value>2</value>
+			</not-equals>
+		</condition>
+	</animation>
 	
 	<!-- Fuel heater Indicator -->
     <text>
@@ -424,7 +453,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0415</y-m>
-			<z-m>0.036</z-m>
+			<z-m>0.028</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -454,7 +483,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>0.030</y-m>
-			<z-m>0.036</z-m>
+			<z-m>0.028</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -479,7 +508,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>0.035</y-m>
-			<z-m>0.036</z-m>
+			<z-m>0.028</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -504,7 +533,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>0.040</y-m>
-			<z-m>0.036</z-m>
+			<z-m>0.028</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -529,7 +558,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>0.045</y-m>
-			<z-m>0.036</z-m>
+			<z-m>0.028</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -555,7 +584,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0415</y-m>
-			<z-m>0.028</z-m>
+			<z-m>0.020</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -584,7 +613,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0415</y-m>
-			<z-m>0.020</z-m>
+			<z-m>0.012</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -618,7 +647,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>0.030</y-m>
-			<z-m>0.020</z-m>
+			<z-m>0.012</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -646,7 +675,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>0.045</y-m>
-			<z-m>0.020</z-m>
+			<z-m>0.012</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -675,7 +704,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0415</y-m>
-			<z-m>0.012</z-m>
+			<z-m>0.004</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -700,7 +729,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0415</y-m>
-			<z-m>0.004</z-m>
+			<z-m>-0.004</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -725,7 +754,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0415</y-m>
-			<z-m>-0.004</z-m>
+			<z-m>-0.012</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -868,6 +897,7 @@
 		<object-name>nv</object-name>
 		<object-name>nvL</object-name>
 		<object-name>nvR</object-name>
+		<object-name>wai</object-name>
 		<object-name>fh</object-name>
 		<object-name>fh1</object-name>
 		<object-name>fh2</object-name>

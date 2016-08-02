@@ -92,6 +92,8 @@ setlistener("/it-autoflight/aplatset", func {
 	setprop("/it-autoflight/nav", 0);
 	setprop("/it-autoflight/loc", 1);
 	setprop("/it-autoflight/loc1", 1);
+	setprop("/it-autoflight/app", 0);
+	setprop("/it-autoflight/app1", 0);
 	setprop("/it-autoflight/apilsmode", 0);
   } else if (latset == 3) {
 	setprop("/it-autoflight/hdg", 1);

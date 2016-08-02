@@ -364,7 +364,7 @@
                         <property>/instrumentation/altimeter/indicated-altitude-ft</property>
                     </greater-than>
                 </condition>
-                <value>3.0</value>
+                <value>1.5</value>
             </u_min>
             <u_min>
                 <condition>

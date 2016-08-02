@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<path>apindicator.ac</path>
+
+<animation>
+  <object-name>HHLD</object-name>
+  <object-name>VHLD</object-name>
+  <object-name>LAT</object-name>
+  <object-name>VERT</object-name>
+  <object-name>SPD</object-name>
+  <object-name>ILS</object-name>
+  <object-name>SPDN1</object-name>
+  <object-name>SPDN2</object-name>
+  <object-name>SPDN3</object-name>
+  <object-name>MACHPNT</object-name>
+  <object-name>MACHN2</object-name>
+  <object-name>MACHN3</object-name>
+  <emission>
+    <red>0.5</red>
+    <green>0.5</green>
+    <blue>0.5</blue>
+  </emission>
+</animation>
+
+<!-- Power on/off -->
+<animation>
+	<name>Power on/off</name>
+	<type>select</type>
+	<object-name>Off</object-name>
+	<condition>
+		<less-than>
+			<property>systems/electrical/outputs/efis</property>
+			<value>15</value>
+		</less-than>
+	</condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>ILS</object-name>
+  <condition>
+	<or>
+    <equals>
+      <property>/it-autoflight/loc</property>
+      <value>1</value>
+    </equals>
+    <greater-than>
+      <property>/it-autoflight/app</property>
+	  <value>1</value>
+    </greater-than>
+	</or>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>SPDN1</object-name>
+  <condition>
+    <equals>
+      <property>/it-autoflight/apthrmode</property>
+      <value>0</value>
+    </equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>SPDN2</object-name>
+  <condition>
+    <equals>
+      <property>/it-autoflight/apthrmode</property>
+      <value>0</value>
+    </equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>SPDN3</object-name>
+  <condition>
+    <equals>
+      <property>/it-autoflight/apthrmode</property>
+      <value>0</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>MACHPNT</object-name>
+  <condition>
+    <equals>
+      <property>/it-autoflight/apthrmode</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>MACHN2</object-name>
+  <condition>
+    <equals>
+      <property>/it-autoflight/apthrmode</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>MACHN3</object-name>
+  <condition>
+    <equals>
+      <property>/it-autoflight/apthrmode</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>HHLD</object-name>
+  <property>/it-autoflight/aphldtrk</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>VHLD</object-name>
+  <property>/it-autoflight/aphldtrk2</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>LAT</object-name>
+  <property>/it-autoflight/aplatmode</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>VERT</object-name>
+  <property>/it-autoflight/apvertmode</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>SPD</object-name>
+  <property>/it-autoflight/apthrmode</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>ILS</object-name>
+  <property>/it-autoflight/apilsmode</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>SPDN1</object-name>
+  <property>/it-autoflight/settings/target-speed-kt</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>SPDN2</object-name>
+  <property>/it-autoflight/settings/target-speed-kt</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>SPDN3</object-name>
+  <property>/it-autoflight/settings/target-speed-kt</property>
+  <factor>0.1</factor>
+  <step>1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>MACHN2</object-name>
+  <property>/it-autoflight/settings/target-mach</property>
+  <factor>1.0</factor>
+  <step>0.1</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>MACHN3</object-name>
+  <property>/it-autoflight/settings/target-mach</property>
+  <factor>10</factor>
+  <step>.01</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+</PropertyList>
