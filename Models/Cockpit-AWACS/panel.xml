@@ -22,8 +22,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/refuel_lamp_pilot.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.544</y-m>
-    <z-m>0.71</z-m>
+    <y-m>-0.537</y-m>
+    <z-m>0.693</z-m>
   </offsets>
 </model>
 
