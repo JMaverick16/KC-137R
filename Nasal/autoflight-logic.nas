@@ -64,6 +64,14 @@ setlistener("/it-autoflight/fd_mastersw", func {
   }
 });
 
+# AFDS OVRD OFF
+setlistener("/it-autoflight/afds_ovrdsw", func {
+  setprop("/it-autoflight/at_master", 0);
+  at_off();
+  setprop("/it-autoflight/ap_master", 0);
+  ap_off();
+});
+
 # Master Lateral
 setlistener("/it-autoflight/aplatset", func {
   var latset = getprop("/it-autoflight/aplatset");
