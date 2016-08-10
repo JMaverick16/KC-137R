@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT Logic by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Beta 2
+# V3.0.0 Beta 4
 
 var ap_logic_init = func {
 	setprop("/it-autoflight/ap_master", 0);
@@ -23,6 +23,7 @@ var ap_logic_init = func {
 	setprop("/it-autoflight/thr", 1);
 	setprop("/it-autoflight/idle", 0);
 	setprop("/it-autoflight/clb", 0);
+	setprop("/it-autoflight/autothrarm", 0);
 	setprop("/it-autoflight/apthrmode", 0);
 	setprop("/it-autoflight/apthrmode2", 0);
 	print("IT-AUTOFLIGHT LOGIC ... OK!");
@@ -59,7 +60,7 @@ setlistener("/it-autoflight/fd_mastersw", func {
   if (fdmas == 0) {
 	setprop("/it-autoflight/fd_master", 0);
   } else if (fdmas == 1) {
-	setprop("/it-autoflight/fd_master", 0);  # Because FD is not yet implemented. Will be 1 later.
+	setprop("/it-autoflight/fd_master", 1);
   }
 });
 
@@ -246,12 +247,30 @@ setlistener("/it-autoflight/apthrmode2", func {
   }
 });
 
+# Autothrottle arm
+setlistener("/it-autoflight/autothrarm", func {
+  var atarm = getprop("/it-autoflight/autothrarm");
+  if (atarm == 0) {
+	atarmt.stop();
+  } else if (atarm == 1) {
+	atarmt.start();
+  }
+});
+
+var atarmchk = func {
+  var altpos = getprop("/position/gear-agl-ft");
+  if (altpos >= 10) {
+	setprop("/it-autoflight/at_mastersw", 1);
+	setprop("/it-autoflight/autothrarm", 1);
+  }
+}
+
 # Timers
 var altcaptt = maketimer(0.5, altcapt);
 var flchtimer = maketimer(0.5, flchthrust);
+var atarmt = maketimer(0.5, atarmchk);
 
 # For Canvas Nav Display.
-
 setlistener("/it-autoflight/settings/heading-bug-deg", func {
   setprop("/autopilot/settings/heading-bug-deg", getprop("/it-autoflight/settings/heading-bug-deg"));
 });

@@ -481,6 +481,20 @@
 			</binding>
 		</action>
 	</animation>
+	
+	<animation>
+		<name>Flight Director button</name>
+		<type>pick</type>
+		<object-name>FDbtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>		
+			<binding>
+			<command>property-toggle</command>
+			<property>/it-autoflight/fd_mastersw</property>
+			</binding>
+		</action>
+	</animation>
 
 	<animation>
 		<name>Autopilot disengage bar pick</name>

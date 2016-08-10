@@ -1433,6 +1433,16 @@
         <offset>000</offset>
       </pitch>
     </hyd-pump>
+	
+		<trim-wheels>
+			<name>Trim Wheels</name>
+			<mode>in-transit</mode>
+			<path>Aircraft/KC-137R/Sounds/trimwheel.wav</path>
+			<property>/b707/trim/elevator-trim-turn</property>
+			<volume>
+				<property>/sim/current-view/internal</property>
+			</volume>
+		</trim-wheels>
 		
 </fx>
 

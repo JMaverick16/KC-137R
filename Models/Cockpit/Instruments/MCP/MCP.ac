@@ -2,7 +2,60 @@ AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "GlassCockpit" rgb 0.8 0.8 0.8  amb 0.5 0.5 0.5  emis 1 1 1  spec 1 1 1  shi 32  trans 0
 OBJECT world
-kids 48
+kids 49
+OBJECT poly
+name "FDbtn"
+loc 0 -0.0158933 -0.00439983
+data 4
+Cube
+texture "MCP3.png"
+crease 30.000000
+numvert 8
+0.001 -0.006 -0.026
+0.001 -0.006 0.026
+0 -0.006 0.026
+0 -0.006 -0.026
+0.001 0.006 -0.026
+0.001 0.006 0.026
+0 0.006 0.026
+0 0.006 -0.026
+numsurf 5
+SURF 0x0
+mat 0
+refs 4
+0 0.3375 0.433984
+1 0.101953 0.433984
+2 0.101953 0.433984
+3 0.3375 0.433984
+SURF 0x0
+mat 0
+refs 4
+4 0.3375 0.483984
+7 0.3375 0.483984
+6 0.101953 0.483984
+5 0.101953 0.483984
+SURF 0x0
+mat 0
+refs 4
+0 0.3375 0.433984
+4 0.3375 0.483984
+5 0.101953 0.483984
+1 0.101953 0.433984
+SURF 0x0
+mat 0
+refs 4
+1 0.101953 0.433984
+5 0.101953 0.483984
+6 0.101953 0.483984
+2 0.101953 0.433984
+SURF 0x0
+mat 0
+refs 4
+4 0.3375 0.483984
+0 0.3375 0.433984
+3 0.3375 0.433984
+7 0.3375 0.483984
+kids 0
 OBJECT poly
 name "FLCHbtn"
 loc -0.00023205 0.0102102 0.089726
@@ -323,7 +376,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APbtn"
-loc 0 -0.0060059 -0.00368507
+loc 0 -0.000745878 -0.00439983
 data 4
 Cube
 texture "MCP2.png"
@@ -1029,7 +1082,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ATbtn"
-loc 0 0.0121621 -0.00376518
+loc 0 0.0150701 -0.00441488
 data 4
 Cube
 texture "MCP.png"
@@ -3156,6 +3209,7 @@ refs 4
 kids 0
 OBJECT poly
 name "MCP"
+loc 0 0 -0.000649705
 data 9
 Plane.026
 texture "MCP.png"

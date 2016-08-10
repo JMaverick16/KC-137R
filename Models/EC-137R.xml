@@ -8,7 +8,7 @@
 
 <PropertyList>
 
- <path>EC-137.ac</path>
+ <path>EC-137R.ac</path>
 
 <animation>
 	<type>select</type>		
@@ -358,7 +358,6 @@
 		  <or>
       	<property>sim/multiplay/generic/float[6]</property>
       	<property>sim/multiplay/generic/float[7]</property>
-      	<property>sim/multiplay/generic/float[12]</property>
       	<property>sim/multiplay/generic/float[15]</property>
       	<property>sim/multiplay/generic/float[16]</property>
       </or>
@@ -373,7 +372,6 @@
 		  <or>
       	<property>sim/multiplay/generic/float[6]</property>
       	<property>sim/multiplay/generic/float[7]</property>
-      	<property>sim/multiplay/generic/float[12]</property>
       </or>
 		</condition>
 	</animation>
@@ -459,7 +457,6 @@
 				<or>
 		    	<property>sim/multiplay/generic/float[6]</property>
 		    	<property>sim/multiplay/generic/float[7]</property>
-		    	<property>sim/multiplay/generic/float[12]</property>
 		    	<property>sim/multiplay/generic/float[15]</property>
 		    </or>
 		  </and>
@@ -517,7 +514,6 @@
 				<or>
 		    	<property>sim/multiplay/generic/float[6]</property>
 		    	<property>sim/multiplay/generic/float[7]</property>
-		    	<property>sim/multiplay/generic/float[12]</property>
 		    	<property>sim/multiplay/generic/float[16]</property>
 		    </or>
 		  </and>
@@ -574,7 +570,6 @@
 				<or>
 		    	<property>sim/multiplay/generic/float[6]</property>
 		    	<property>sim/multiplay/generic/float[7]</property>
-		    	<property>sim/multiplay/generic/float[12]</property>
 		    	<property>sim/multiplay/generic/float[16]</property>
 		    </or>
 		  </and>
@@ -645,7 +640,7 @@
 	<animation>
       <type>rotate</type>
       <object-name>nose</object-name>
-      <property>sim/multiplay/generic/float[12]</property>
+      <property>/instrumentation/doors/nose/position-norm</property>
       <factor>120</factor>
       <center>
           <x-m>-19.962</x-m>
@@ -1659,7 +1654,7 @@
   <type>rotate</type>
   <object-name>lhibail</object-name>
   <property>controls/flight/aileron</property>
-  <factor>-30</factor>
+  <factor>-20</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  4.32</x1-m>
@@ -1675,7 +1670,47 @@
   <type>rotate</type>
   <object-name>lhobail</object-name>
   <property>controls/flight/aileron</property>
-  <factor>-30</factor>
+  <factor>-20</factor>
+  <offset-deg>0</offset-deg>   
+  <axis>
+		<x1-m>  7.35</x1-m>
+		<y1-m>-14.57</y1-m>
+		<z1-m>  0.41</z1-m>
+    <x2-m> 10.00</x2-m>
+    <y2-m>-19.35</y2-m>
+    <z2-m>  0.86</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>lhibail</object-name>
+        <property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.20</ind><dep>-5</dep></entry>
+			<entry><ind>0.25</ind><dep>0</dep></entry>
+		</interpolation>
+  <offset-deg>0</offset-deg>   
+  <axis>
+		<x1-m>  4.32</x1-m>
+		<y1-m> -9.01</y1-m>
+		<z1-m> -0.15</z1-m>
+    <x2-m>  5.22</x2-m>
+    <y2-m>-10.70</y2-m>
+    <z2-m>  0.04</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhobail</object-name>
+        <property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.20</ind><dep>-5</dep></entry>
+			<entry><ind>0.25</ind><dep>0</dep></entry>
+		</interpolation>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  7.35</x1-m>
@@ -1725,7 +1760,7 @@
   <type>rotate</type>
   <object-name>rhibail</object-name>
   <property>controls/flight/aileron</property>
-  <factor>-30</factor>
+  <factor>-20</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  4.32</x1-m>
@@ -1741,7 +1776,47 @@
   <type>rotate</type>
   <object-name>rhobail</object-name>
   <property>controls/flight/aileron</property>
-  <factor>-30</factor>
+  <factor>-20</factor>
+  <offset-deg>0</offset-deg>   
+  <axis>
+		<x1-m>  7.35</x1-m>
+		<y1-m> 14.57</y1-m>
+		<z1-m>  0.41</z1-m>
+    <x2-m> 10.00</x2-m>
+    <y2-m> 19.35</y2-m>
+    <z2-m>  0.86</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhibail</object-name>
+        <property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.20</ind><dep>5</dep></entry>
+			<entry><ind>0.25</ind><dep>0</dep></entry>
+		</interpolation>
+  <offset-deg>0</offset-deg>   
+  <axis>
+		<x1-m>  4.32</x1-m>
+		<y1-m>  9.01</y1-m>
+		<z1-m> -0.15</z1-m>
+    <x2-m>  5.22</x2-m>
+    <y2-m> 10.70</y2-m>
+    <z2-m>  0.04</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rhobail</object-name>
+        <property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>0.20</ind><dep>5</dep></entry>
+			<entry><ind>0.25</ind><dep>0</dep></entry>
+		</interpolation>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  7.35</x1-m>
@@ -2071,7 +2146,7 @@
   <type>rotate</type>
   <object-name>lhsp1</object-name>
   <property>surface-positions/speedbrake-pos-norm</property>
-  <factor>59</factor>
+  <factor>45</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  4.87</x1-m>
@@ -2087,7 +2162,7 @@
   <type>rotate</type>
   <object-name>lhsp3</object-name>
   <property>surface-positions/speedbrake-pos-norm</property>
-  <factor>59</factor>
+  <factor>45</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  1.98</x1-m>
@@ -2098,12 +2173,37 @@
     <z2-m> -0.15</z2-m>
   </axis>
  </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>lhsp1</object-name>
+  <property>/sim/multiplay/generic/float[12]</property>
+	        <interpolation>
+	            <entry>
+	                <ind>0</ind>
+	                <dep>0</dep>
+	            </entry>
+	            <entry>
+	                <ind>-1.0</ind>
+	                <dep>20</dep>
+	            </entry>
+	        </interpolation>
+  <offset-deg>0</offset-deg>   
+  <axis>
+		<x1-m>  4.87</x1-m>
+		<y1-m>-11.26</y1-m>
+		<z1-m>  0.22</z1-m>
+    <x2-m>  6.30</x2-m>
+    <y2-m>-14.09</y2-m>
+    <z2-m>  0.46</z2-m>
+  </axis>
+ </animation>  
 
  <animation>
   <type>rotate</type>
   <object-name>rhsp1</object-name>
   <property>surface-positions/speedbrake-pos-norm</property>
-  <factor>-59</factor>
+  <factor>-45</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  4.87</x1-m>
@@ -2119,7 +2219,7 @@
   <type>rotate</type>
   <object-name>rhsp3</object-name>   
   <property>surface-positions/speedbrake-pos-norm</property>
-  <factor>-59</factor>
+  <factor>-45</factor>
   <offset-deg>0</offset-deg>  
   <axis>
 		<x1-m>  1.98</x1-m>
@@ -2130,6 +2230,31 @@
     <z2-m> -0.15</z2-m>
   </axis>
  </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>rhsp1</object-name>
+  <property>/sim/multiplay/generic/float[12]</property>
+	        <interpolation>
+	            <entry>
+	                <ind>0</ind>
+	                <dep>0</dep>
+	            </entry>
+	            <entry>
+	                <ind>1.0</ind>
+	                <dep>-20</dep>
+	            </entry>
+	        </interpolation>
+  <offset-deg>0</offset-deg>   
+  <axis>
+		<x1-m>  4.87</x1-m>
+		<y1-m> 11.26</y1-m>
+		<z1-m>  0.22</z1-m>
+    <x2-m>  6.30</x2-m>
+    <y2-m> 14.09</y2-m>
+    <z2-m>  0.46</z2-m>
+  </axis>
+ </animation>  
  
  <!--cockpit -->
 	<model>
@@ -2225,7 +2350,6 @@
 			<z-m>0</z-m>
 		</offsets>
 	</model> 
-
 
 <!-- Fire , #1 -->
 <model>

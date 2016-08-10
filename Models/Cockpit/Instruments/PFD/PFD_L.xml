@@ -181,11 +181,10 @@ Syd Adams
         <object-name>FDroll_rembrandt</object-name>
         <object-name>FDpitch_rembrandt</object-name>
         <condition>
-            <property>sim/rendering/rembrandt/enabled</property>
-            <or>
-                <property>instrumentation/afds/inputs/FD</property>
-                <property>instrumentation/afds/settings/auto-pop-up</property>
-            </or>
+			<and>
+				<property>sim/rendering/rembrandt/enabled</property>
+				<property>/it-autoflight/fd_master</property>
+			</and>
         </condition>
     </animation>
 
@@ -194,11 +193,10 @@ Syd Adams
         <object-name>FDroll</object-name>
         <object-name>FDpitch</object-name>
         <condition>
-            <not><property>sim/rendering/rembrandt/enabled</property></not>
-            <or>
-                <property>instrumentation/afds/inputs/FD</property>
-                <property>instrumentation/afds/settings/auto-pop-up</property>
-            </or>
+			<and>
+				<not><property>sim/rendering/rembrandt/enabled</property></not>
+				<property>/it-autoflight/fd_master</property>
+			</and>
         </condition>
     </animation>
 
@@ -206,8 +204,8 @@ Syd Adams
         <type>translate</type>
         <object-name>FDpitch</object-name>
         <object-name>FDpitch_rembrandt</object-name>
-        <property>autopilot/internal/target-pitch-deg</property>
-        <factor>0.00093</factor>
+        <property>/it-autoflight/fd/pitch-bar</property>
+        <factor>0.0015</factor>
         <axis>
             <x>0</x>
             <y>0</y>
@@ -217,39 +215,13 @@ Syd Adams
 
     <animation>
         <type>translate</type>
-        <object-name>FDpitch</object-name>
-        <object-name>FDpitch_rembrandt</object-name>
-        <property>orientation/pitch-deg</property>
-        <factor>0.00093</factor>
-        <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>-1</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>translate</type>
         <object-name>FDroll</object-name>
         <object-name>FDroll_rembrandt</object-name>
-        <property>autopilot/internal/target-roll-deg</property>
-        <factor>0.0005</factor>
+        <property>/it-autoflight/fd/roll-bar</property>
+        <factor>0.0010</factor>
         <axis>
             <x>0</x>
             <y>1</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>translate</type>
-        <object-name>FDroll</object-name>
-        <object-name>FDroll_rembrandt</object-name>
-        <property>orientation/roll-deg</property>
-        <factor>0.0005</factor>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
             <z>0</z>
         </axis>
     </animation>

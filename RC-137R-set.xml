@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList include="common.xml">
+ <sim n="0">
+  <description>Boeing RC-137R (CFM56-5B4)</description>
+	<startup>
+		<splash-texture>Aircraft/KC-137R/splashTT.png</splash-texture>
+	</startup>
+
+  <model n="0">
+   	 <path>Aircraft/KC-137R/Models/RC-137R.xml</path>
+      <livery>
+        <file type="string">RC-137R</file>
+      </livery>
+  </model>
+
+  <instrument-options>
+	<canvas-popup-enable type="bool">true</canvas-popup-enable>
+  </instrument-options>
+  
+  <multiplay>
+    	<generic>
+    		<int n="8">1</int>   <!-- engine type -->
+    		<int n="9">1</int>   <!-- cargo aircraft -->
+    		<int n="16">3</int>  <!-- immat position -->
+    	</generic>
+  </multiplay>
+  
+  <remote>
+   <pilot-callsign type="string"/>
+  </remote>
+
+	<menubar>
+		<default>
+			<menu n="100">
+				<label>Boeing RC-137R</label>
+				<enabled type="bool">true</enabled>
+				<item>
+					<label>Autostart / shutdown</label>
+					<binding>
+						<command>property-toggle</command>
+						<property>sim/model/start-idling</property>
+					</binding>
+				</item>
+				<item>
+			        <label>Checklists</label>
+			        <binding>
+			          <command>dialog-show</command>
+			          <dialog-name>checklist</dialog-name>
+			        </binding>
+			    </item>
+				<item>
+					<label>--- Selection ---</label>
+					<enabled>false</enabled>
+				</item>
+				<item>
+					<label>Select livery</label>
+					<binding>
+						<command>nasal</command>
+						<script>aircraft.livery.dialog.open()</script>
+					</binding>
+				</item>
+				<item>
+					<label>Show/hide yokes</label>
+					<binding>
+						<command>property-toggle</command>
+		    		<property>sim/yokes-visible</property>
+					</binding>
+				</item>
+				<item>
+					<label>--- Equipment ---</label>
+					<enabled>false</enabled>
+				</item>
+				<item>
+					<label>Pushback</label>
+					<name>pushback</name>
+					<binding>
+						 <command>dialog-show</command>
+						 <dialog-name>pushback</dialog-name>
+					</binding>
+				</item>
+				<item>
+					<label>Fuel Truck Controls</label>
+					<binding>
+						<command>nasal</command>
+							<script>
+						 	   var fuel = gui.Dialog.new("sim/gui/dialogs/fuel/dialog", "Aircraft/KC-137R/Systems/fuel-truck.xml");
+							   fuel.open();
+							</script>
+					</binding>
+				</item>
+				<item>
+					<label>External Power Unit</label>
+					<binding>
+						<command>property-toggle</command>
+		    		<property>b707/external-power-connected</property>
+					</binding>
+				</item>
+				<item>
+					<label>Toggle Refuelling Boom/Drogues</label>
+					<binding>
+							<command>nasal</command>
+							<script>b707.toggleRefuelling();</script>
+					</binding>
+				</item>
+				<item>
+					<label>--- Registration ---</label>
+					<enabled>false</enabled>
+				</item>
+	            <item>
+	              <label>A/C Registration</label>
+	              <binding>
+	                <command>nasal</command>
+	                <script><![CDATA[
+	                  b707.registrationDialog.toggle();
+	                ]]></script>
+	              </binding>
+	            </item>
+				<item>
+					<label>--- Boarding ---</label>
+					<enabled>false</enabled>
+				</item>
+		        <item>
+		         <label>Select Passenger</label>
+		         <binding>
+		          <command>nasal</command>
+		          <script>
+		            dual_control_tools.copilot_dialog.show(aircraft_dual_control.copilot_type);
+		           </script>
+		          </binding>
+		         </item>
+			</menu>
+		</default>
+	</menubar>
+
+	<help>
+	  <title>Boeing RC-137R</title>
+		<key>
+		  <name>L</name>
+		  <desc>toggle Landing Lights</desc>
+		</key>
+		<key>
+		  <name>Ctrl + B</name>
+		  <desc>Full Speedbrakes</desc>
+		</key>
+		<key>
+		  <name>k/j</name>
+		  <desc>Step Speedbrake</desc>
+		</key>
+		<key>
+		  <name>Del</name>
+		  <desc>toggle Reverser</desc>
+		</key>
+		<key>
+		  <name>y</name>
+		  <desc>toggle Yokes</desc>
+		</key>
+		<key>
+			<name>></name>
+			<desc>toggle Pilot - Engineer view</desc>
+		</key>
+		<key>
+			<name>Shift + ></name>
+			<desc>toggle Pilot - Autopilot view</desc>
+		</key>
+		<key>
+			<name>Ctrl + ></name>
+			<desc>toggle Pilot - Officer view</desc>
+		</key>
+		<key>
+		  <name>F1</name>
+		  <desc>Checklists</desc>
+		</key>
+		<key>
+		  <name>F7</name>
+		  <desc>open Map</desc>
+		</key>
+		<key>
+		  <name>F8</name>
+		  <desc>open Route-manager</desc>
+		</key>
+		<key>
+		  <name>F9</name>
+		  <desc>open Fuel &amp; Weight Menu</desc>
+		</key>
+		<text>
+_______________ Boeing 707-420/430 ___________________
+
+Startup engines:
+follow the tutorials or use Autostart
+
+Quick startup engines:
+Switch GRD START at the Overhead Panel to HIGH PRESS
+
+Shutdown engines:
+with autostart / shutdown menu
+or cutoff levers down
+
+WARNING: Control the air compressors in the engineer panel.
+You need them for Anti-Ice System and Pressurization.
+Often they fall back at startup procedure or
+to high airspeed. Also if engines goes down by fire or no fuel.
+Restart them and wait that all control lamps extinguished.
+If air compressor won't work, open BLEED AIR valves
+on ENG 2, 3 and 4. This can replace one air compressor.
+
+_____________________ TAKEOFF  _______________________
+
+lightly load, less than 215000 lbs / 14 deg FLAPS + LE FLAPS / 120 - 140 kts
+up to 215000 less than 280000 lbs / 25 deg FLAPS + LE FLAPS / 130 - 140 kts
+max. takeoff weight	/ 25 deg FLAPS + LE FLAPS / 150 - 160 kts
+
+_____________________ LANDING  _______________________
+
+lightly load, less than 170000 lbs / 50 deg FLAPS + LE FLAPS / 120 - 130 kts
+up to 170000 less than 190000 lbs / 50 deg FLAPS + LE FLAPS / 120 - 140 kts
+max. landing weight	/ 50 deg FLAPS + LE FLAPS / 130 - 150 kts
+
+touchdown 120 kts | max. 130 kts
+
+_____________________ STABILIZER TRIM  _______________________
+
+On both yokes there are white switches for the electrical stabilizer system.
+If you reached cruise altitude, you can trim the aircraft pitch independend 
+the mechanical elevator trim system. Its also independed to the autopilot system.
+
+_______________________________________________________
+The first 707 for Flightgear was created by Innis Cunningham.
+This version is a revamp of that original. Nearly
+everthing in 3D models is written and painted new.
+Also the jsb fdm and the autopilot.
+For development I have used the BOEING 707 document
+no. D6-3071-00
+		</text>
+	</help>
+  <view n="105">
+    <name>Awacs Officer</name>
+    <enabled type="bool">true</enabled>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">0</from-model-idx>
+			<!-- x/y/z == right/up/back -->
+			<x-offset-m archive="y"> 0.63</x-offset-m>
+			<y-offset-m archive="y">1.26</y-offset-m>
+			<z-offset-m archive="y">-10.57</z-offset-m>
+			<pitch-offset-deg type="double">-9.0</pitch-offset-deg>
+			<default-pitch-deg type="double">-9.0</default-pitch-deg>
+			<from-model-idx type="int">0</from-model-idx>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<default-field-of-view-deg type="double">90.0</default-field-of-view-deg>
+			<default-heading-deg type="double">0</default-heading-deg>
+			<front-direction-deg type="double">0</front-direction-deg>
+			<front-left-direction-deg type="double">45</front-left-direction-deg>
+			<left-direction-deg type="double">90</left-direction-deg>
+			<back-left-direction-deg type="double">135</back-left-direction-deg>
+			<back-direction-deg type="double">180</back-direction-deg>
+			<back-right-direction-deg type="double">225</back-right-direction-deg>
+			<right-direction-deg type="double">270</right-direction-deg>
+			<front-right-direction-deg type="double">315</front-right-direction-deg>
+			<dynamic-view type="bool">true</dynamic-view>
+    </config>
+	</view>
+  <model-type>
+	<KCR type="bool">false</KCR>
+	<KCRT type="bool">false</KCRT>
+	<ECR type="bool">false</ECR>
+	<RCR type="bool">true</RCR>
+	<E8R type="bool">false</E8R>
+  </model-type>
+ </sim>
+ 
+ <instrumentation>
+	<cdu>
+		<display>IDENT</display>
+		<ident>
+			<model>RC-137R</model>
+			<engines>CFM56-5B4</engines>
+		</ident>
+		<input type="string"/>
+		<serviceable type="bool">1</serviceable>
+	</cdu>
+ </instrumentation>
+ 
+  <b707>
+		<manual>
+			<board type="double">0.0</board>
+			<page type="int">0</page>
+			<title type="string">BOEING</title>
+			<subtitle1 type="string">OPERATION MANUAL</subtitle1>
+			<text1 type="string"></text1>
+			<subtitle2 type="string"></subtitle2>
+			<text2 type="string"></text2>
+			<subtitle3 type="string">MODEL RC-137R</subtitle3>
+			<text3 type="string">FOR FLIGHTGEAR SIMULATION ONLY</text3>
+			<subtitle4 type="string"></subtitle4>
+			<text4 type="string">J Maverick 16, it0uchpods Hanger</text4>
+			<content include="Models/Cockpit/Manual/manual-RC.xml"/>
+		</manual>
+  </b707>
+
+	<nasal>
+		<b707>
+			<file>Aircraft/KC-137R/Nasal/shake.nas</file>
+			<file>Aircraft/KC-137R/Nasal/autostart.nas</file>
+			<file>Aircraft/KC-137R/Nasal/fuel-and-payload.nas</file>
+			<file>Aircraft/KC-137R/Nasal/liveriesRC.nas</file>
+			<file>Aircraft/KC-137R/Nasal/electrical.nas</file>
+			<file>Aircraft/KC-137R/Nasal/mk-707.nas</file>
+			<file>Aircraft/KC-137R/Nasal/mk-agl-radar.nas</file>
+			<file>Aircraft/KC-137R/Nasal/mk-frw.nas</file>
+			<file>Aircraft/KC-137R/Nasal/mk-stopwatch.nas</file>
+			<file>Aircraft/KC-137R/Nasal/mk-wiper.nas</file>
+			<file>Aircraft/KC-137R/Nasal/mk-ci-tacan.nas</file>
+			<file>Aircraft/KC-137R/Nasal/doors.nas</file>
+			<file>Aircraft/KC-137R/Nasal/tyresmoke.nas</file>
+			<file>Aircraft/KC-137R/Nasal/brakesystem.nas</file>
+			<file>Aircraft/KC-137R/Nasal/radar2.nas</file>
+			<file>Aircraft/KC-137R/Nasal/registration.nas</file>
+			<file>Aircraft/KC-137R/Nasal/manual.nas</file>
+			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND.nas</file>
+			<file>Aircraft/KC-137R/Nasal/efis.nas</file>
+			<file>Aircraft/KC-137R/Nasal/systems-init.nas</file>
+			<file>Aircraft/KC-137R/Nasal/radio.nas</file>
+			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
+		</b707>
+		
+		<itaf>
+            <file>Aircraft/KC-137R/Nasal/autoflight.nas</file>
+            <file>Aircraft/KC-137R/Nasal/autoflight-logic.nas</file>
+		</itaf> 
+		
+		<m877>
+			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
+		</m877>
+-
+	    <dual_control_tools>
+	     <file>Aircraft/KC-137R/Nasal/DualControl/dual-control-tools.nas</file>
+	    </dual_control_tools>
+	    <aircraft_dual_control>
+	     <file>Aircraft/KC-137R/Nasal/DualControl/707-dual-control.nas</file>
+	    </aircraft_dual_control>
+	    <dual_control>
+	     <file>Aircraft/KC-137R/Nasal/DualControl/pilot-dual-control.nas</file>
+	    </dual_control>
+		
+		<damage>
+		  <file>Aircraft/KC-137R/Nasal/damage.nas</file>
+		</damage>
+		
+		<cdu>
+			<file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
+		</cdu>
+	</nasal>
+
+    <dual-control>
+      <active type="bool">0</active>
+    </dual-control>
+
+</PropertyList>

@@ -563,6 +563,35 @@
 		</offsets>
 	</model>
 	
+	<animation>
+		<type>select</type>
+		<object-name>yokes</object-name>	
+		<condition>
+			<or>
+				<property>/sim/model-type/KCR</property>
+				<property>/sim/model-type/KCRT</property>
+			</or>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>yokesJS</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/yokesJS/yokes.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>-0.08</z-m>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>yokesJS</object-name>	
+		<condition>
+			<property>/sim/model-type/E8R</property>
+		</condition>
+	</animation>
+	
 	<model>
 		<name>tiller</name>
 		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/yokes/tiller.xml</path>
@@ -578,6 +607,7 @@
 	<animation>
 		<type>select</type>
 		<object-name>yokes</object-name>
+		<object-name>yokesJS</object-name>
 		<condition>
       <not>
        <property>sim/yokes-visible</property>
@@ -605,7 +635,7 @@
 	</animation>
 
 	<model>
-		<name>book</name>
+		<name>bookKC</name>
 		<path>Aircraft/KC-137R/Models/Cockpit/Manual/book.xml</path>
 		<offsets>
 		  <x-m>-17.72</x-m>
@@ -616,8 +646,39 @@
 	</model>
 	
 	<animation>
+		<type>select</type>
+		<object-name>bookKC</object-name>	
+		<condition>
+			<or>
+				<property>/sim/model-type/KCR</property>
+				<property>/sim/model-type/KCRT</property>
+			</or>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bookJS</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/book-JSTARS.xml</path>
+		<offsets>
+		  <x-m>-17.72</x-m>
+		  <y-m> 0.61</y-m>
+		  <z-m> 0.756</z-m>
+			<heading-deg>10.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bookJS</object-name>	
+		<condition>
+			<property>/sim/model-type/E8R</property>
+		</condition>
+	</animation>
+	
+	<animation>
 		<type>select</type>		
 			<object-name>yokes</object-name>		
+			<object-name>yokesJS</object-name>
 			<object-name>tiller</object-name>
 			<object-name>panel-equipment</object-name>
 			<object-name>overhead-panel-equipment</object-name>

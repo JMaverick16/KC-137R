@@ -3,8 +3,89 @@ MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0
 MATERIAL "GlassCockpit" rgb 0.8 0.8 0.8  amb 0.49 0.49 0.49  emis 1 1 1  spec 0.02 0.02 0.02  shi 50  trans 0
 MATERIAL "DefaultWhite.000" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.02 0.02 0.02  shi 50  trans 0
 MATERIAL "GlassCockpit" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 50  trans 0
+MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 OBJECT world
-kids 11
+kids 15
+OBJECT poly
+name "FDpitch_rembrandt"
+loc 9.41452e-005 -0.028446 -0.0108482
+data 9
+Plane.020
+crease 30.000000
+numvert 4
+0 0.0290272 -0.0151892
+0 0.0290272 0.0363025
+0 0.0272212 0.0363025
+0 0.0272212 -0.0151892
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+3 0 0
+0 0 0
+1 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "FDroll_rembrandt"
+loc 9.41452e-005 -0.00851062 -0.0412417
+data 9
+Plane.019
+crease 30.000000
+numvert 4
+0 0.0317313 0.0418347
+0 -0.0154571 0.0418347
+0 -0.0154571 0.0400644
+0 0.0317313 0.0400644
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+3 0 0
+0 0 0
+1 0 0
+2 0 0
+kids 0
+OBJECT poly
+name "FDpitch"
+loc 9.41452e-005 -0.028446 -0.0108482
+data 9
+Plane.020
+crease 30.000000
+numvert 4
+0 0.0272212 -0.0151892
+0 0.0272212 0.0363025
+0 0.0290272 0.0363025
+0 0.0290272 -0.0151892
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+0 0 0
+3 0 0
+2 0 0
+1 0 0
+kids 0
+OBJECT poly
+name "FDroll"
+loc 9.41452e-005 -0.00851062 -0.0412417
+data 9
+Plane.019
+crease 30.000000
+numvert 4
+0 0.0317313 0.0400644
+0 -0.0154571 0.0400644
+0 -0.0154571 0.0418347
+0 0.0317313 0.0418347
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+0 0 0
+3 0 0
+2 0 0
+1 0 0
+kids 0
 OBJECT poly
 name "block"
 loc -0.000626802 -0.000333814 0.0289435

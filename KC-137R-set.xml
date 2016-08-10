@@ -5,7 +5,7 @@
 		This file is licenced under the terms of the GNU General Public Licence V2 or later
 		###################################################################################
 -->
-<PropertyList include="KC-137R-common.xml">
+<PropertyList include="common.xml">
  <sim n="0">
   <description>Boeing KC-137R (CFM56-5B4)</description>
 	<startup>
@@ -268,6 +268,13 @@ no. D6-3071-00
 			<dynamic-view type="bool">true</dynamic-view>
     </config>
 	</view>
+  <model-type>
+	<KCR type="bool">true</KCR>
+	<KCRT type="bool">false</KCRT>
+	<ECR type="bool">false</ECR>
+	<RCR type="bool">false</RCR>
+	<E8R type="bool">false</E8R>
+  </model-type>
  </sim>
  
  <instrumentation>
@@ -325,10 +332,10 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 		</b707>
 		
-		<it2>
+		<itaf>
             <file>Aircraft/KC-137R/Nasal/autoflight.nas</file>
             <file>Aircraft/KC-137R/Nasal/autoflight-logic.nas</file>
-		</it2> 
+		</itaf> 
 		
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>

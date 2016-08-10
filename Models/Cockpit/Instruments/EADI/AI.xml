@@ -34,6 +34,57 @@
 			</less-than>
 		</condition>
 	</animation>
+	
+	<!-- Flight Director System -->
+    <animation>
+        <type>select</type>
+        <object-name>FDroll_rembrandt</object-name>
+        <object-name>FDpitch_rembrandt</object-name>
+        <condition>
+			<and>
+				<property>sim/rendering/rembrandt/enabled</property>
+				<property>/it-autoflight/fd_master</property>
+			</and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>FDroll</object-name>
+        <object-name>FDpitch</object-name>
+        <condition>
+			<and>
+				<not><property>sim/rendering/rembrandt/enabled</property></not>
+				<property>/it-autoflight/fd_master</property>
+			</and>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>FDpitch</object-name>
+        <object-name>FDpitch_rembrandt</object-name>
+        <property>/it-autoflight/fd/pitch-bar</property>
+        <factor>0.0015</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>FDroll</object-name>
+        <object-name>FDroll_rembrandt</object-name>
+        <property>/it-autoflight/fd/roll-bar</property>
+        <factor>0.0010</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
 
 	<!-- Attitude indicator -->
 	<animation>

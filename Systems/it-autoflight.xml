@@ -12,7 +12,7 @@
 		<name>ALTITUDE 5 SECONDS AHEAD</name>
 		<debug>false</debug>
 		<input>/instrumentation/altimeter/indicated-altitude-ft</input>
-		<output>/autopilot/internal/altitude-5-sec-ahead</output>
+		<output>/it-autoflight/internal/altitude-5-sec-ahead</output>
 		<seconds>5.0</seconds>
 		<filter-gain>0.1</filter-gain>
 	</predict-simple>
@@ -20,7 +20,7 @@
 	<predict-simple>
 		<name>VOR/LOC 5 SECONDS AHEAD</name>
 		<input>/autopilot/internal/nav1-track-error-deg</input>
-		<output>/autopilot/internal/nav1-error-5-sec-ahead</output>
+		<output>/it-autoflight/internal/nav1-error-5-sec-ahead</output>
 		<seconds>12</seconds>
 		<filter-gain>0.1</filter-gain>
 	</predict-simple>
@@ -29,10 +29,217 @@
 		<name>VOR/LOC HEADING ERROR FILTER</name>
 		<debug>false</debug>
 		<type>noise-spike</type>
-		<input>/autopilot/internal/nav1-error-5-sec-ahead</input>
-		<output>/autopilot/internal/nav1-heading-error-deg-filtered</output>
+		<input>/it-autoflight/internal/nav1-error-5-sec-ahead</input>
+		<output>/it-autoflight/internal/nav1-heading-error-deg-filtered</output>
 		<max-rate-of-change>90.0</max-rate-of-change>
 	</filter>
+	
+ <!-- =============================================================== -->
+ <!-- Min and Max Pitch Computers                                     -->
+ <!-- =============================================================== -->
+	
+	<pid-controller>
+		<name>Max Pitch</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<and>
+					<or>
+						<equals>        
+							<property>/it-autoflight/locks/pitch</property>
+							<value>it-alt-cap-hld</value>
+						</equals>
+						<equals>   
+							<property>/it-autoflight/locks/pitch</property>
+							<value>it-vert-spd</value>
+						</equals>
+					</or>
+					<greater-than>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.83</value>
+					</greater-than>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>/controls/engines/engine[0]/throttle</property>
+			<offset>-0.83</offset>
+			<scale>4</scale>
+		</input>
+		<reference>
+			<value>0.83</value>
+			<offset>-0.83</offset>
+			<scale>4</scale>
+		</reference>
+		<output>
+			<property>/it-autoflight/internal-max-pitch</property>
+		</output>
+		<config>
+			<Kp>-0.25</Kp>        
+			<beta>1.0</beta>       
+			<alpha>0.5</alpha>     
+			<gamma>0.0</gamma>     
+			
+			<Ti>100.0</Ti>          
+			<Td>0.000001</Td>       
+			<u_min>
+				<property>/it-autoflight/min-pitch</property>
+			</u_min>   
+			<u_max>
+				<property>/it-autoflight/max-pitch</property>
+			</u_max>   
+		</config>
+	</pid-controller>
+  
+	<pid-controller>
+		<name>Min Pitch</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<and>
+					<or>
+						<equals>        
+							<property>/it-autoflight/locks/pitch</property>
+							<value>it-alt-cap-hld</value>
+						</equals>
+						<equals>   
+							<property>/it-autoflight/locks/pitch</property>
+							<value>it-vert-spd</value>
+						</equals>
+					</or>
+					<lesser-than>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.95</value>
+					</lesser-than>
+				</and>
+			</condition>
+		</enable>
+		<reference>
+			<property>/controls/engines/engine[0]/throttle</property>
+			<offset>-0.03</offset>
+			<scale>4</scale>
+		</reference>
+		<input>
+			<value>0.03</value>
+			<offset>-0.03</offset>
+			<scale>4</scale>
+		</input>
+		<output>
+			<property>/it-autoflight/internal-min-pitch</property>
+		</output>
+		<config>
+			<Kp>-0.25</Kp>        
+			<beta>1.0</beta>       
+			<alpha>0.5</alpha>     
+			<gamma>0.0</gamma>     
+			<Ti>10.0</Ti>          
+			<Td>0.000001</Td>       
+			<u_min>
+				<property>/it-autoflight/min-pitch</property>
+			</u_min>   
+			<u_max>
+				<property>/it-autoflight/max-pitch</property>
+			</u_max>   
+		</config>
+	</pid-controller>
+  
+	<pid-controller>
+		<name>Max Pitch 2</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<and>
+					<or>
+						<equals>        
+							<property>/it-autoflight/locks/pitch</property>
+							<value>it-alt-cap-hld</value>
+						</equals>
+						<equals>   
+							<property>/it-autoflight/locks/pitch</property>
+							<value>it-vert-spd</value>
+						</equals>
+					</or>
+					<lesser-equal>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<offset>-0.83</offset>
+					</lesser-equal>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>/it-autoflight/internal-max-pitch</property>
+		</input>
+		<reference>
+			<property>/it-autoflight/max-pitch</property>
+		</reference>
+		<output>
+			<property>/it-autoflight/internal-max-pitch</property>
+		</output>
+		<config>
+			<Kp>-0.25</Kp>        
+			<beta>1.0</beta>       
+			<alpha>0.5</alpha>     
+			<gamma>0.0</gamma>     
+			
+			<Ti>100.0</Ti>          
+			<Td>0.000001</Td>       
+			<u_min>
+				<property>/it-autoflight/min-pitch</property>
+			</u_min>   
+			<u_max>
+				<property>/it-autoflight/max-pitch</property>
+			</u_max>   
+		</config>
+	</pid-controller>
+  
+	<pid-controller>
+		<name>Min Pitch 2</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<and>
+					<or>
+						<equals>        
+							<property>/it-autoflight/locks/pitch</property>
+							<value>it-alt-cap-hld</value>
+						</equals>
+						<equals>   
+							<property>/it-autoflight/locks/pitch</property>
+							<value>it-vert-spd</value>
+						</equals>
+					</or>
+					<greater-equal>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.03</value>
+					</greater-equal>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>/it-autoflight/internal-min-pitch</property>
+		</input>
+		<reference>
+			<property>/it-autoflight/min-pitch</property>
+		</reference>
+		<output>
+			<property>/it-autoflight/internal-min-pitch</property>
+		</output>
+		<config>
+			<Kp>-0.25</Kp>        
+			<beta>1.0</beta>       
+			<alpha>0.5</alpha>     
+			<gamma>0.0</gamma>     
+			
+			<Ti>100.0</Ti>          
+			<Td>0.000001</Td>       
+			<u_min>
+				<property>/it-autoflight/min-pitch</property>
+			</u_min>   
+			<u_max>
+				<property>/it-autoflight/max-pitch</property>
+			</u_max>   
+		</config>
+	</pid-controller>
 
  <!-- =============================================================== -->
  <!-- Lateral  Modes                                                  -->
@@ -46,12 +253,12 @@
 			<condition>
 				<or>
 					<equals>
-						<property>/it-autoflight/locks/lateral</property>
-						<value>it-hdg-sel</value>
+						<property>/it-autoflight/aplatmode</property>
+						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/locks/lateral</property>
-						<value>it-nav-fms</value>
+						<property>/it-autoflight/aplatmode</property>
+						<value>1</value>
 					</equals>
 				</or>
 			</condition>
@@ -59,30 +266,29 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/locks/lateral</property>
-					<value>it-hdg-sel</value>
+					<property>/it-autoflight/aplatmode</property>
+					<value>0</value>
 				</equals>
 			</condition>
 			<property>/autopilot/internal/heading-bug-error-deg</property>
-			<scale>7.3</scale>
+			<scale>6.3</scale>
 		</input>
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/locks/lateral</property>
-					<value>it-nav-fms</value>
+					<property>/it-autoflight/aplatmode</property>
+					<value>1</value>
 				</equals>
 			</condition>
 			<property>/autopilot/internal/true-heading-error-deg</property>
-			<scale>7.3</scale>
+			<scale>6.3</scale>
 		</input>
 		<output>
-			<property>/autopilot/internal/target-roll-deg</property>
+			<property>/it-autoflight/internal/target-roll-deg</property>
 		</output>
 		<gain>0.5</gain>
 		<u_min>
-			<value>30</value>
-			<scale>-1.0</scale>
+			<value>-30</value>
 		</u_min>
 		<u_max>
 			<value>30</value>
@@ -116,13 +322,13 @@
 					<value>wing-leveler</value>
 				</not-equals>
 			</condition>
-			<property>/autopilot/internal/target-roll-deg</property>
+			<property>/it-autoflight/internal/target-roll-deg</property>
 		</reference>
 		<reference>
 			<condition>
 				<equals> 
 					<property>/it-autoflight/locks/lateral</property>
-					<value>wing-leveler</value>
+					<value>it-wing-lvlr</value>
 				</equals>
 			</condition>
 			<value>0</value>
@@ -131,15 +337,15 @@
 			<property>/controls/flight/aileron</property>
 		</output>
 		<config>
-			<Kp>0.10</Kp>		<!-- proportional gain -->
-			<beta>1.0</beta>	<!-- input value weighing factor -->
-			<alpha>0.1</alpha>	<!-- low pass filter weighing factor -->
-			<gamma>0.0</gamma>	<!-- input value weighing factor for -->
-			<!-- unfiltered derivative error -->
-			<Ti>10</Ti>        	<!-- integrator time -->
-			<Td>0.00001</Td>     	<!-- derivator time -->
-			<u_min>-0.50</u_min> 	<!-- minimum output clamp -->
-			<u_max>0.50</u_max>  	<!-- maximum output clamp -->
+			<Kp>0.10</Kp>		
+			<beta>1.0</beta>	
+			<alpha>0.1</alpha>	
+			<gamma>0.0</gamma>	
+			
+			<Ti>10</Ti>        	
+			<Td>0.00001</Td>     	
+			<u_min>-0.70</u_min> 	
+			<u_max>0.70</u_max>  	
 		</config>
 	</pid-controller>
 
@@ -148,8 +354,8 @@
     <name>VOR/LOC Hold Stage 1</name>
     <debug>false</debug>
     <enable>
-      <prop>/it-autoflight/locks/lateral</prop>
-      <value>it-vorloc</value>
+      <property>/it-autoflight/aplatmode</property>
+      <value>2</value>
     </enable>
     <input>
       <prop>/autopilot/internal/nav1-heading-error-deg</prop>
@@ -158,18 +364,18 @@
       <value>0.0</value>
     </reference>
     <output>
-      <prop>/autopilot/internal/target-roll-deg</prop>
+      <prop>/it-autoflight/internal/target-roll-deg</prop>
     </output>
     <config>
-      <Kp>-5.0</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>1.0</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>     <!-- derivator time -->
-      <u_min>-20.0</u_min> <!-- minimum output clamp -->
-      <u_max>20.0</u_max>  <!-- maximum output clamp -->
+      <Kp>-5.0</Kp>        
+      <beta>1.0</beta>     
+      <alpha>1.0</alpha>   
+      <gamma>0.0</gamma>   
+                           
+      <Ti>10.0</Ti>        
+      <Td>0.00001</Td>     
+      <u_min>-25.0</u_min> 
+      <u_max>25.0</u_max>  
     </config>
   </pid-controller>
 
@@ -184,21 +390,20 @@
       <prop>/orientation/roll-deg</prop>
     </input>
     <reference>
-      <prop>/autopilot/internal/target-roll-deg</prop>
+      <prop>/it-autoflight/internal/target-roll-deg</prop>
     </reference>
     <output>
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.25</Kp>        <!-- proportional gain -->
-      <beta>0.5</beta>    <!-- input value weighing factor -->
-      <alpha>1.0</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
+	  <Kp>0.10</Kp>		
+	  <beta>1.0</beta>	
+	  <alpha>0.1</alpha>	
+	  <gamma>0.0</gamma>		
+	  <Ti>10</Ti>        	
+	  <Td>0.00001</Td>     	
+	  <u_min>-0.70</u_min> 	
+	  <u_max>0.70</u_max>  	
     </config>
   </pid-controller>
 
@@ -210,64 +415,68 @@
 		<name>ALTITUDE CAPTURE/HOLD</name>
 		<debug>false</debug>
 		<enable>
-			<property>/it-autoflight/locks/pitch</property>
-			<value>it-alt-cap-hld</value>
+			<prop>/it-autoflight/apvertmode</prop>
+			<value>0</value>
 		</enable>
 		<input>
-			<property>/autopilot/internal/altitude-5-sec-ahead</property>
+			<property>/it-autoflight/internal/altitude-5-sec-ahead</property>
 		</input>
 		<reference>
 			<property>/it-autoflight/settings/target-altitude-ft-actual</property>
 		</reference>
 		<output>
-			<property>/autopilot/internal/target-pitch-deg</property>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
-			<Kp>0.025</Kp>        <!-- proportional gain -0.01 -->
-			<beta>1.0</beta>       <!-- input value weighing factor -->
-			<alpha>0.5</alpha>     <!-- low pass filter weighing factor -->
-			<gamma>0.0</gamma>     <!-- input value weighing factor for -->
-			<!-- unfiltered derivative error -->
-			<Ti>10.0</Ti>          <!-- integrator time  10.0 -->
-			<Td>0.0001</Td>       <!-- derivator time -->
+			<Kp>0.025</Kp>        
+			<beta>1.0</beta>       
+			<alpha>0.5</alpha>     
+			<gamma>0.0</gamma>     
+			<Ti>10.0</Ti>
+			<Td>0.0001</Td>
 			<u_min>
-				<value>-4.333</value>
+				<property>/it-autoflight/internal-min-pitch</property>
 			</u_min>
 			<u_max>
-				<value>4.333</value>
+				<property>/it-autoflight/internal-max-pitch</property>
 			</u_max>
 		</config>
 	</pid-controller>
 	
-	<pid-controller>
+	<pi-simple-controller>
 		<name>VERTICAL SPEED HOLD</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/it-autoflight/locks/pitch</prop>
-			<value>it-vert-spd</value>
+			<prop>/it-autoflight/apvertmode</prop>
+			<value>1</value>
 		</enable>
 		<input>
-			<prop>/velocities/vertical-speed-fps</prop>
+			<prop>/autopilot/internal/vert-speed-fpm</prop>
+			<scale>0.05</scale>
 		</input>
 		<reference>
 			<prop>/it-autoflight/settings/vertical-speed-fpm</prop>
-			<scale>0.01667</scale>
+			<scale>0.05</scale>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator-trim-filter</prop>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
-			<Kp>-0.01</Kp>      <!-- -0.01 proportional gain -->
-			<beta>1.0</beta>    <!-- input value weighing factor -->
-			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
-								<!-- unfiltered derivative error -->
-			<Ti>40.0</Ti>       <!-- integrator time -->
-			<Td>0.00001</Td>    <!-- derivator time -->
-			<u_min>-0.85</u_min> <!-- minimum output clamp -->
-			<u_max>0.85</u_max>  <!-- maximum output clamp -->
+			<Kp>0.025</Kp>
+			<Ki>0.010</Ki>
+			<beta>1.0</beta>       
+			<alpha>0.5</alpha>     
+			<gamma>0.0</gamma>     
+			<Ti>10.0</Ti>
+			<Td>0.0001</Td>
+			<min>
+				<property>/it-autoflight/internal-min-pitch</property>
+			</min>
+			<max>
+				<property>/it-autoflight/internal-max-pitch</property>
+			</max>
 		</config>
-	</pid-controller>
+	</pi-simple-controller>
 	
 	<pid-controller>
 		<name>GLIDESLOPE HOLD</name>
@@ -287,17 +496,17 @@
 			<prop>/instrumentation/nav[0]/gs-rate-of-climb</prop>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator-trim-filter</prop>
+			<prop>/controls/flight/elevator-filter</prop>
 		</output>
 		<config>
-			<Kp>-0.01</Kp>      <!-- proportional gain -->
-			<beta>1.0</beta>    <!-- input value weighing factor -->
-			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-			<gamma>0.0</gamma>  <!-- input value weighing factor for unfiltered derivative error -->
-			<Ti>10.0</Ti>       <!-- integrator time -->
-			<Td>0.00001</Td>    <!-- derivator time -->
-			<u_min>-0.50</u_min> <!-- minimum output clamp -->
-			<u_max>0.50</u_max>  <!-- maximum output clamp -->
+			<Kp>-0.01</Kp>      
+			<beta>1.0</beta>    
+			<alpha>0.1</alpha>  
+			<gamma>0.0</gamma>  
+			<Ti>10.0</Ti>       
+			<Td>0.00001</Td>    
+			<u_min>-0.85</u_min>
+			<u_max>0.85</u_max>
 		</config>
 	</pid-controller>
 	
@@ -305,8 +514,8 @@
 		<name>FLIGHT LEVEL CHANGE</name>
 		<debug>false</debug>
 		<enable>
-			<prop>/it-autoflight/locks/pitch</prop>
-			<value>it-flch</value>
+			<prop>/it-autoflight/apvertmode</prop>
+			<value>4</value>
 		</enable>
 		<input>
 			<condition>
@@ -325,7 +534,7 @@
 				</equals>
 			</condition>
 			<prop>/velocities/mach</prop>
-			<scale>15.0</scale>
+			<scale>500.0</scale>
 		</input>
 		<reference>
 			<condition>
@@ -344,19 +553,19 @@
 				</equals>
 			</condition>
 			<prop>/it-autoflight/settings/target-mach</prop>
-			<scale>10.0</scale>
+			<scale>500.0</scale>
 		</reference>
 		<output>
-			<prop>/it-autoflight/settings/target-pitch-deg</prop>
+			<prop>/it-autoflight/internal/target-pitch-deg</prop>
 		</output>
 		<config>
-			<Kp>-0.25</Kp>       <!-- proportional gain -->
-			<beta>1.0</beta>    <!-- input value weighing factor -->
-			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
-			<!-- unfiltered derivative error -->
-			<Ti>10.0</Ti>        <!-- integrator time -->
-			<Td>0.00001</Td>    <!-- derivator time -->
+			<Kp>-0.25</Kp>       
+			<beta>1.0</beta>    
+			<alpha>0.1</alpha>  
+			<gamma>0.0</gamma>  
+			
+			<Ti>10.0</Ti>        
+			<Td>0.00001</Td>    
             <u_min>
                 <condition>
                     <greater-than>
@@ -407,21 +616,21 @@
 			<prop>/orientation/pitch-deg</prop>
 		</input>
 		<reference>
-			<prop>/it-autoflight/settings/target-pitch-deg</prop>
+			<prop>/it-autoflight/internal/target-pitch-deg</prop>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator-trim-filter</prop>
+			<prop>/controls/flight/elevator-filter</prop>
 		</output>
 		<config>
-			<Kp>-0.08</Kp>      <!-- proportional gain -->
-			<beta>1.0</beta>    <!-- input value weighing factor -->
-			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
-			<!-- unfiltered derivative error -->
-			<Ti>10.0</Ti>        <!-- integrator time -->
-			<Td>0.00001</Td>    <!-- derivator time -->
-			<u_min>-1.0</u_min> <!-- minimum output clamp -->
-			<u_max>1.0</u_max>  <!-- maximum output clamp -->
+			<Kp>-0.08</Kp>      
+			<beta>1.0</beta>    
+			<alpha>0.1</alpha>  
+			<gamma>0.0</gamma>  
+			
+			<Ti>10.0</Ti>        
+			<Td>0.00001</Td>    
+			<u_min>-0.45</u_min>
+			<u_max>0.45</u_max> 
 		</config>
 	</pid-controller>
 
@@ -429,32 +638,40 @@
 		<name>IT-CONTROLLER: PITCH</name>
 		<debug>false</debug>
 		<enable>
-			<property>/it-autoflight/locks/pitch</property>
-			<value>it-alt-cap-hld</value>
+			<or>
+				<equals>
+					<property>/it-autoflight/locks/pitch</property>
+					<value>it-alt-cap-hld</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/locks/pitch</property>
+					<value>it-vert-spd</value>
+				</equals>
+			</or>
 		</enable>
 		<input>
 			<property>/orientation/pitch-deg</property>
 		</input>
 		<reference>
-			<property>/autopilot/internal/target-pitch-deg</property>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</reference>
 		<output>
-			<property>/controls/flight/elevator-trim-filter</property>
+			<property>/controls/flight/elevator-filter</property>
 		</output>
 		<config>
 			<Kp>-0.10</Kp>      
-			<beta>1.0</beta>    <!-- input value weighing factor -->
-			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
-			<Ti>10.0</Ti>       <!-- integrator time  10.0 -->
-			<Td>0.0001</Td>    <!-- derivator time -->
-			<u_min>-0.85</u_min> <!-- -0.45 for elevator -->
-			<u_max>0.85</u_max>  <!-- 0.45 for elevator -->
+			<beta>1.0</beta>    
+			<alpha>0.1</alpha>  
+			<gamma>0.0</gamma>  
+			<Ti>10.0</Ti>       
+			<Td>0.0001</Td>    
+			<u_min>-0.45</u_min>
+			<u_max>0.45</u_max>
 		</config>
 	</pid-controller>
 	
 	<filter>
-		<name>IT-CONTROLLER: PITCH LIMIT</name>
+		<name>IT-CONTROLLER: PITCH FILTER</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
@@ -463,11 +680,204 @@
 			<value>1</value>
 		</enable>
 		<input>
+			<property>/controls/flight/elevator-filter</property>
+		</input>
+		<output>/controls/flight/elevator</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>0.15</max-rate-of-change>
+	</filter>
+	
+	<pid-controller>
+		<name>AP PITCH HELPER PLUS</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<and>
+					<greater-than>
+						<property>/controls/flight/elevator-filter</property>
+						<value>0.03</value>
+					</greater-than>
+					<equals>
+						<property>/it-autoflight/ap_master</property>
+						<value>1</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<value>0</value>
+		</input>
+		<reference>
+			<value>1</value>
+		</reference>
+		<output>
+			<property>/controls/flight/elevator-trim-filter</property>
+		</output>
+		<config>
+			<Kp>0.10</Kp>
+			<beta>1.0</beta>
+			<alpha>0.1</alpha>
+			<gamma>0.0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>-0.70</u_min>
+			<u_max>0.70</u_max>
+		</config>
+	</pid-controller>
+	
+	<pid-controller>
+		<name>AP PITCH HELPER MINUS</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<and>
+					<less-than>
+						<property>/controls/flight/elevator-filter</property>
+						<value>-0.03</value>
+					</less-than>
+					<equals>
+						<property>/it-autoflight/ap_master</property>
+						<value>1</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<value>0</value>
+		</input>
+		<reference>
+			<value>1</value>
+		</reference>
+		<output>
+			<property>/controls/flight/elevator-trim-filter</property>
+		</output>
+		<config>
+			<Kp>-0.10</Kp>
+			<beta>1.0</beta>
+			<alpha>0.1</alpha>
+			<gamma>0.0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>-0.70</u_min>
+			<u_max>0.70</u_max>
+		</config>
+	</pid-controller>
+		
+	<filter>
+		<name>IT-CONTROLLER: PITCH TRIM FILTER</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<enable>
+			<condition>
+				<and>
+					<equals>
+						<property>/it-autoflight/ap_master</property>
+						<value>1</value>
+					</equals>
+					<or>
+						<greater-than>
+							<property>/controls/flight/elevator-filter</property>
+							<value>0.03</value>
+						</greater-than>
+						<less-than>
+							<property>/controls/flight/elevator-filter</property>
+							<value>-0.03</value>
+						</less-than>
+					</or>
+				</and>
+			</condition>
+		</enable>
+		<input>
 			<property>/controls/flight/elevator-trim-filter</property>
 		</input>
 		<output>/controls/flight/elevator-trim</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.15</max-rate-of-change>
+		<max-rate-of-change>0.05</max-rate-of-change>
+	</filter>
+	
+ <!-- =============================================================== -->
+ <!-- Flight Director                                                 -->
+ <!-- =============================================================== -->
+	
+	<filter>
+		<name>FD: ROLL</name>
+		<debug>false</debug>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<expression>
+				<dif>
+					<property>/it-autoflight/internal/target-roll-deg</property>
+					<property>/orientation/roll-deg</property>
+				</dif>
+			</expression>
+		</input>
+		<output>/it-autoflight/fd/roll-bar</output>
+	</filter>
+	
+	<pid-controller>
+		<name>FD: G/S</name>
+		<debug>false</debug>
+		<enable>
+			<property>/it-autoflight/apvertmode</property>
+			<value>2</value>
+		</enable>
+		<input>
+			<prop>/velocities/vertical-speed-fps</prop>
+		</input>
+		<reference>
+			<prop>/instrumentation/nav[0]/gs-rate-of-climb</prop>
+		</reference>
+		 <output>
+			<prop>/it-autoflight/internal/target-pitch-deg</prop>
+		</output>
+		<config>
+			<Kp>0.3075</Kp>
+			<beta>1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>-15</u_min>
+			<u_max>20</u_max>
+		</config>
+	</pid-controller>
+ 
+	<filter>
+		<name>FD: PITCH</name>
+		<debug>false</debug>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<enable>
+			<or>
+				<equals>
+					<property>/it-autoflight/apvertmode</property>
+					<value>0</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/apvertmode</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/apvertmode</property>
+					<value>2</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/apvertmode</property>
+					<value>4</value>
+				</equals>
+			</or>
+		</enable>
+		<input>
+			<expression>
+				<dif>
+					<property>/it-autoflight/internal/target-pitch-deg</property>
+					<property>/orientation/pitch-deg</property>
+				</dif>
+			</expression>
+		</input>
+		<output>/it-autoflight/fd/pitch-bar</output>
 	</filter>
 
  <!-- =============================================================== -->
@@ -509,15 +919,15 @@
       <prop>/controls/engines/engine[7]/throttle</prop>
     </output>
     <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>0.0</u_min>  <!-- minimum output clamp -->
-      <u_max>0.88</u_max>  <!-- maximum output clamp -->
+      <Kp>0.1</Kp>        
+      <beta>1.0</beta>    
+      <alpha>0.1</alpha>  
+      <gamma>0.0</gamma>  
+                          
+      <Ti>10.0</Ti>       
+      <Td>0.00001</Td>    
+      <u_min>0.0</u_min>  
+      <u_max>0.86</u_max>  
     </config>
   </pid-controller>
 
@@ -542,9 +952,11 @@
     </enable>
     <input>
       <prop>/velocities/mach</prop>
+	  <scale>500.0</scale>
     </input>
     <reference>
       <prop>/it-autoflight/settings/target-mach</prop>
+	  <scale>500.0</scale>
     </reference>
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
@@ -557,15 +969,15 @@
       <prop>/controls/engines/engine[7]/throttle</prop>
     </output>
     <config>
-      <Kp>3.5</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>0.0</u_min>  <!-- minimum output clamp -->
-      <u_max>0.88</u_max>  <!-- maximum output clamp -->
+      <Kp>0.1</Kp>        
+      <beta>1.0</beta>    
+      <alpha>0.1</alpha>  
+      <gamma>0.0</gamma>  
+                          
+      <Ti>10.0</Ti>       
+      <Td>0.00001</Td>    
+      <u_min>0.0</u_min>  
+      <u_max>0.86</u_max>  
     </config>
   </pid-controller>
   
@@ -594,15 +1006,15 @@
       <prop>/controls/engines/engine[7]/throttle</prop>
     </output>
     <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>0.0</u_min>  <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
+      <Kp>0.1</Kp>        
+      <beta>1.0</beta>    
+      <alpha>0.1</alpha>  
+      <gamma>0.0</gamma>  
+                          
+      <Ti>10.0</Ti>       
+      <Td>0.00001</Td>    
+      <u_min>0.0</u_min>  
+      <u_max>0.2</u_max>  
     </config>
   </pid-controller>
   
@@ -631,15 +1043,15 @@
       <prop>/controls/engines/engine[7]/throttle</prop>
     </output>
     <config>
-      <Kp>0.1</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>0.0</u_min>  <!-- minimum output clamp -->
-      <u_max>0.9</u_max>  <!-- maximum output clamp -->
+      <Kp>0.1</Kp>        
+      <beta>1.0</beta>    
+      <alpha>0.1</alpha>  
+      <gamma>0.0</gamma>  
+                          
+      <Ti>10.0</Ti>       
+      <Td>0.00001</Td>    
+      <u_min>0.0</u_min>  
+      <u_max>0.9</u_max>  
     </config>
   </pid-controller>
 

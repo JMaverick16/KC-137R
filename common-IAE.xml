@@ -236,7 +236,7 @@
 		<float n="9" alias="/controls/special/wiper-deg"/>
 		<float n="10" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
 		<float n="11" alias="/gear/gear[2]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
-		<float n="12" alias="/instrumentation/doors/nose/position-norm"/>						<!-- Nose -->
+		<float n="12" alias="/controls/flight/aileron"/>										<!-- Spoilerons -->
 		<float n="13" alias="/b707/ground-service/fuel-truck/state"/>							<!-- fuel-truck -->
 		<float n="14" alias="/engines/engine/reverser-pos-norm"/>								<!-- multiplayer see the cowl flaps -->
 		<float n="15" alias="/instrumentation/doors/cargo/position-norm"/>						<!-- Cargo door -->
@@ -251,8 +251,8 @@
 
   <flaps>
     <setting>0.0</setting>
-    <setting>0.2</setting>	<!-- 20% -->
-    <setting>0.4</setting>	<!-- 40% takeoff-->
+    <setting>0.2</setting>	<!-- 20% takeoff-->
+    <setting>0.4</setting>	<!-- 40% -->
     <setting>0.6</setting>	<!-- 60% approach-->
     <setting>1.0</setting>	<!-- 100% landing -->
   </flaps>
