@@ -695,7 +695,7 @@
 				<and>
 					<greater-than>
 						<property>/controls/flight/elevator-filter</property>
-						<value>0.03</value>
+						<value>0.05</value>
 					</greater-than>
 					<equals>
 						<property>/it-autoflight/ap_master</property>
@@ -733,7 +733,7 @@
 				<and>
 					<less-than>
 						<property>/controls/flight/elevator-filter</property>
-						<value>-0.03</value>
+						<value>-0.05</value>
 					</less-than>
 					<equals>
 						<property>/it-autoflight/ap_master</property>
@@ -778,11 +778,11 @@
 					<or>
 						<greater-than>
 							<property>/controls/flight/elevator-filter</property>
-							<value>0.03</value>
+							<value>0.05</value>
 						</greater-than>
 						<less-than>
 							<property>/controls/flight/elevator-filter</property>
-							<value>-0.03</value>
+							<value>-0.05</value>
 						</less-than>
 					</or>
 				</and>
