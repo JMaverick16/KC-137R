@@ -428,7 +428,7 @@
 			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
-			<Kp>0.025</Kp>        
+			<Kp>0.030</Kp>        
 			<beta>1.0</beta>       
 			<alpha>0.5</alpha>     
 			<gamma>0.0</gamma>     
@@ -505,8 +505,8 @@
 			<gamma>0.0</gamma>  
 			<Ti>10.0</Ti>       
 			<Td>0.00001</Td>    
-			<u_min>-0.85</u_min>
-			<u_max>0.85</u_max>
+			<u_min>-0.25</u_min>
+			<u_max>0.25</u_max>
 		</config>
 	</pid-controller>
 	
@@ -559,7 +559,7 @@
 			<prop>/it-autoflight/internal/target-pitch-deg</prop>
 		</output>
 		<config>
-			<Kp>-0.25</Kp>       
+			<Kp>-0.30</Kp>       
 			<beta>1.0</beta>    
 			<alpha>0.1</alpha>  
 			<gamma>0.0</gamma>  
@@ -622,15 +622,15 @@
 			<prop>/controls/flight/elevator-filter</prop>
 		</output>
 		<config>
-			<Kp>-0.08</Kp>      
+			<Kp>-0.10</Kp>      
 			<beta>1.0</beta>    
 			<alpha>0.1</alpha>  
 			<gamma>0.0</gamma>  
 			
 			<Ti>10.0</Ti>        
 			<Td>0.00001</Td>    
-			<u_min>-0.45</u_min>
-			<u_max>0.45</u_max> 
+			<u_min>-0.25</u_min>
+			<u_max>0.25</u_max>
 		</config>
 	</pid-controller>
 
@@ -659,14 +659,14 @@
 			<property>/controls/flight/elevator-filter</property>
 		</output>
 		<config>
-			<Kp>-0.10</Kp>      
+			<Kp>-0.09</Kp>      
 			<beta>1.0</beta>    
 			<alpha>0.1</alpha>  
 			<gamma>0.0</gamma>  
 			<Ti>10.0</Ti>       
 			<Td>0.0001</Td>    
-			<u_min>-0.45</u_min>
-			<u_max>0.45</u_max>
+			<u_min>-0.25</u_min>
+			<u_max>0.25</u_max>
 		</config>
 	</pid-controller>
 	
@@ -714,14 +714,14 @@
 			<property>/controls/flight/elevator-trim-filter</property>
 		</output>
 		<config>
-			<Kp>0.10</Kp>
+			<Kp>0.08</Kp>
 			<beta>1.0</beta>
 			<alpha>0.1</alpha>
 			<gamma>0.0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
-			<u_min>-0.70</u_min>
-			<u_max>0.70</u_max>
+			<u_min>-0.90</u_min>
+			<u_max>0.90</u_max>
 		</config>
 	</pid-controller>
 	
@@ -752,14 +752,14 @@
 			<property>/controls/flight/elevator-trim-filter</property>
 		</output>
 		<config>
-			<Kp>-0.10</Kp>
+			<Kp>-0.08</Kp>
 			<beta>1.0</beta>
 			<alpha>0.1</alpha>
 			<gamma>0.0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
-			<u_min>-0.70</u_min>
-			<u_max>0.70</u_max>
+			<u_min>-0.90</u_min>
+			<u_max>0.90</u_max>
 		</config>
 	</pid-controller>
 		
@@ -793,7 +793,7 @@
 		</input>
 		<output>/controls/flight/elevator-trim</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.05</max-rate-of-change>
+		<max-rate-of-change>0.01</max-rate-of-change>
 	</filter>
 	
  <!-- =============================================================== -->
