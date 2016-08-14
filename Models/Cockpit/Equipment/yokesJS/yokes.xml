@@ -102,7 +102,7 @@
 		<object-name>plane.down</object-name>
 		<object-name>plane.out</object-name>
     <property>controls/flight/aileron</property>
-    <factor> -50 </factor>
+    <factor> -90 </factor>
     <center>
       <x-m> 0.000 </x-m>
       <y-m>-0.462 </y-m>
@@ -126,7 +126,7 @@
 		<object-name>plane.down.001</object-name>
 		<object-name>plane.out.001</object-name>
     <property>controls/flight/aileron</property>
-    <factor> -50 </factor>
+    <factor> -90 </factor>
     <center>
       <x-m> 0.000 </x-m>
       <y-m> 0.447 </y-m>

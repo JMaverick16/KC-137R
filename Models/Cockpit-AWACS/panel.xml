@@ -419,6 +419,17 @@
 			<z-m>  1.047</z-m>
 		</offsets>
 	</model>
+	
+	<!-- Weather Radar -->
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/RDR-160/RDR-160.xml</path>
+		<offsets>
+			<x-m>-18.870</x-m>
+			<y-m>-0.0</y-m>
+			<z-m>0.736</z-m>
+			<pitch-deg>-70</pitch-deg>
+		</offsets>
+	</model>
 
 </PropertyList>
 

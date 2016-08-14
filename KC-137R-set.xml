@@ -358,6 +358,9 @@ no. D6-3071-00
 		<cdu>
 			<file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
 		</cdu>
+		<radar>
+			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/RDR-160/RDR160.nas</file>
+		</radar>
 	</nasal>
 
     <dual-control>

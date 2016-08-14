@@ -75,9 +75,6 @@
    <object-name>inhg01.003</object-name>
    <object-name>inhg</object-name>
    <object-name>headingribbon</object-name>
-   <object-name>ap.annun</object-name>
-   <object-name>vnav.annun</object-name>
-   <object-name>lnav.annun</object-name>
    <object-name>FDbars</object-name>
    <object-name>ptc20</object-name>
    <object-name>ptc15</object-name>
@@ -176,10 +173,6 @@
    <object-name>inhg01.002</object-name>
    <object-name>inhg01.003</object-name>
    <object-name>inhg</object-name>
-   <object-name>fd.annun</object-name>
-   <object-name>ap.annun</object-name>
-   <object-name>vnav.annun</object-name>
-   <object-name>lnav.annun</object-name>
    <object-name>FDbars</object-name>
    <object-name>ptc20</object-name>
    <object-name>ptc15</object-name>
@@ -232,55 +225,6 @@
 		<value>0.35</value>
 	</less-than>		
      </and>
-   </condition>
- </animation>
-
-<animation>
-   <type>select</type>
-   <object-name>fd.annun</object-name>
-   <condition>
-      <equals>
-       <property>/it-autoflight/fd_master</property>
-       <value>1</value>
-      </equals>
-   </condition>
- </animation>
-
-<animation>
-   <type>select</type>
-   <object-name>ap.annun</object-name>
-   <condition>
-       <equals>
-         <property>/it-autoflight/ap_master</property>
-         <value>1</value>
-       </equals>
-   </condition>
- </animation>
-
-<animation>
-   <type>select</type>
-   <object-name>vnav.annun</object-name>
-   <condition>
-       <equals>
-         <property>/it-autoflight/rubbishbin</property>
-         <value>999</value>
-       </equals>
-   </condition>
- </animation>
-
-<animation>
-   <type>select</type>
-   <object-name>lnav.annun</object-name>
-   <condition>
-   <and>
-      <not>
-      <property>sim/crashed</property>
-      </not>
-       <equals>
-         <property>/it-autoflight/rubbishbin</property>
-         <value>999</value>
-       </equals>
-   </and>
    </condition>
  </animation>
 

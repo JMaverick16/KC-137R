@@ -64,7 +64,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apstatus/apstatus.xml</path>
   <offsets>
     <x-m>-18.918</x-m>
-    <y-m>-0.23</y-m>
+    <y-m>-0.227</y-m>
     <z-m>0.908</z-m>
   </offsets>
 </model>
@@ -74,7 +74,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl.xml</path>
   <offsets>
     <x-m>-18.967</x-m>
-    <y-m>-0.23</y-m>
+    <y-m>-0.227</y-m>
     <z-m>0.789</z-m>
   </offsets>
 </model>
@@ -140,8 +140,8 @@
 </model>
 
 <model>
-  <name>EVSI</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EVSI/vsi.xml</path>
+  <name>VSI</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/VSI/vsi.xml</path>
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>-0.3</y-m>
@@ -395,8 +395,8 @@
 </model>
 
 <model>
-  <name>EVSI_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EVSI/vsi.xml</path>
+  <name>VSI_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/VSI/vsi.xml</path>
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>0.544</y-m>
@@ -559,6 +559,17 @@
 			<x-m>-18.812</x-m>
 			<y-m>  0.11 </y-m>
 			<z-m>  1.047</z-m>
+		</offsets>
+	</model>
+	
+	<!-- Weather Radar -->
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/RDR-160/RDR-160.xml</path>
+		<offsets>
+			<x-m>-18.870</x-m>
+			<y-m>-0.0</y-m>
+			<z-m>0.736</z-m>
+			<pitch-deg>-70</pitch-deg>
 		</offsets>
 	</model>
 

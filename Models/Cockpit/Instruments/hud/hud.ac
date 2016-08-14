@@ -3,7 +3,7 @@ MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0
 MATERIAL "Lights.001" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 MATERIAL "Transparent" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 64  trans 0.95
 OBJECT world
-kids 89
+kids 85
 OBJECT poly
 name "ALTribbon"
 data 8
@@ -1412,26 +1412,6 @@ refs 4
 1 0.992188 0.00195312
 kids 0
 OBJECT poly
-name "ap.annun"
-data 9
-Mesh.1184
-texture "pfd3.png"
-crease 30.000000
-numvert 4
-0.001616 0.05678 -0.059267
-0.001616 0.052559 -0.059267
-0.001616 0.05678 -0.046304
-0.001616 0.052559 -0.046303
-numsurf 1
-SURF 0x0
-mat 1
-refs 4
-0 0.769531 0.416016
-2 0.673828 0.416016
-3 0.673828 0.384766
-1 0.769531 0.384766
-kids 0
-OBJECT poly
 name "dmetxt"
 data 9
 Mesh.1152
@@ -1450,26 +1430,6 @@ refs 4
 2 0.677734 0.0664062
 3 0.677734 0.0332031
 1 0.732422 0.0332031
-kids 0
-OBJECT poly
-name "fd.annun"
-data 9
-Mesh.1141
-texture "pfd3.png"
-crease 30.000000
-numvert 4
-0.001331 0.056655 -0.044387
-0.001331 0.05269 -0.044387
-0.001331 0.056655 -0.032211
-0.001331 0.05269 -0.032211
-numsurf 1
-SURF 0x0
-mat 1
-refs 4
-0 0.769531 0.478516
-2 0.673828 0.478516
-3 0.673828 0.447266
-1 0.769531 0.447266
 kids 0
 OBJECT poly
 name "gs"
@@ -2060,26 +2020,6 @@ refs 4
 39 0.13915 0.546977
 37 0.139153 0.546977
 36 0.139152 0.546977
-kids 0
-OBJECT poly
-name "lnav.annun"
-data 9
-Mesh.1211
-texture "pfd3.png"
-crease 30.000000
-numvert 4
-0.001331 0.050498 -0.045631
-0.001331 0.046533 -0.045631
-0.001331 0.050498 -0.033454
-0.001331 0.046533 -0.033454
-numsurf 1
-SURF 0x0
-mat 1
-refs 4
-0 0.774054 0.854951
-2 0.678351 0.854951
-3 0.678351 0.823701
-1 0.774054 0.823701
 kids 0
 OBJECT poly
 name "mach.001"
@@ -3630,26 +3570,6 @@ refs 3
 4 0.140996 0.539764
 2 0.140984 0.539776
 1 0.140994 0.539759
-kids 0
-OBJECT poly
-name "vnav.annun"
-data 9
-Mesh.1210
-texture "pfd3.png"
-crease 30.000000
-numvert 4
-0.001331 0.050498 -0.060555
-0.001331 0.046533 -0.060555
-0.001331 0.050498 -0.048379
-0.001331 0.046533 -0.048379
-numsurf 1
-SURF 0x0
-mat 1
-refs 4
-0 0.774054 0.791234
-2 0.678351 0.791234
-3 0.678351 0.759984
-1 0.774054 0.759984
 kids 0
 OBJECT poly
 name "vs-10"
