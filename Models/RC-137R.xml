@@ -1545,7 +1545,7 @@
 		<property>sim/multiplay/generic/float[10]</property>
 		<interpolation>
 		    <entry><ind>0</ind><dep>-25</dep></entry>
-		    <entry><ind>0.001</ind><dep>0</dep></entry>
+		    <entry><ind>0.04</ind><dep>0</dep></entry>
 		</interpolation>
 		<center>
 		    <x-m>1.82</x-m>
@@ -1565,7 +1565,7 @@
 		<property>sim/multiplay/generic/float[11]</property>
 		<interpolation>
 		    <entry><ind>0</ind><dep>-25</dep></entry>
-		    <entry><ind>0.001</ind><dep>0</dep></entry>
+		    <entry><ind>0.04</ind><dep>0</dep></entry>
 		</interpolation>
 		<center>
 		    <x-m>1.82</x-m>
@@ -2224,7 +2224,7 @@
  <!--cockpit -->
 	<model>
 		<name>cockpit</name>
-		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/cockpit.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-RC/cockpit.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>

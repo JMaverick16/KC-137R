@@ -20,11 +20,17 @@
 <model>
   <name>refuel_Lamp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/refuel_lamp_pilot.xml</path>
-  <condition> 
+  <condition>
+	<or>
     <equals>
-      <property>sim/aircraft</property>
-      <value type="string">KC-137R-RT</value>
+      <property>sim/model-type/KCRT</property>
+      <value>1</value>
     </equals>
+    <equals>
+      <property>sim/model-type/E8R</property>
+      <value>1</value>
+    </equals>
+	</or>
   </condition>
   <offsets>
     <x-m>-18.916</x-m>
@@ -497,6 +503,16 @@
       <offsets>
 		  <x-m>-20.210</x-m>
 		  <y-m>  0.132</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
+      </offsets>
+    </model>
+	
+  	<model>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/trims/trims.xml</path>
+      <offsets>
+		  <x-m>-18.2365</x-m>
+		  <y-m>  0.025</y-m>
 		  <z-m>  0.626</z-m>
           <pitch-deg>0</pitch-deg>
       </offsets>

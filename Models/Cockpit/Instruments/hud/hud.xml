@@ -176,6 +176,7 @@
    <object-name>inhg01.002</object-name>
    <object-name>inhg01.003</object-name>
    <object-name>inhg</object-name>
+   <object-name>fd.annun</object-name>
    <object-name>ap.annun</object-name>
    <object-name>vnav.annun</object-name>
    <object-name>lnav.annun</object-name>
@@ -238,15 +239,10 @@
    <type>select</type>
    <object-name>fd.annun</object-name>
    <condition>
-     <and>
-      <not>
-      <property>sim/crashed</property>
-      </not>
       <equals>
-       <property>instrumentation/flightdirector/fd-on</property>
+       <property>/it-autoflight/fd_master</property>
        <value>1</value>
       </equals>
-     </and>
    </condition>
  </animation>
 
@@ -255,7 +251,7 @@
    <object-name>ap.annun</object-name>
    <condition>
        <equals>
-         <property>/instrumentation/flightdirector/autopilot-on</property>
+         <property>/it-autoflight/ap_master</property>
          <value>1</value>
        </equals>
    </condition>
@@ -265,10 +261,10 @@
    <type>select</type>
    <object-name>vnav.annun</object-name>
    <condition>
-       <greater-than>
-         <property>/instrumentation/flightdirector/vnav</property>
-         <value>0</value>
-       </greater-than>
+       <equals>
+         <property>/it-autoflight/rubbishbin</property>
+         <value>999</value>
+       </equals>
    </condition>
  </animation>
 
@@ -280,10 +276,10 @@
       <not>
       <property>sim/crashed</property>
       </not>
-       <greater-than>
-         <property>/instrumentation/flightdirector/lnav</property>
-         <value>0</value>
-       </greater-than>
+       <equals>
+         <property>/it-autoflight/rubbishbin</property>
+         <value>999</value>
+       </equals>
    </and>
    </condition>
  </animation>
@@ -293,7 +289,7 @@
    <object-name>FDbars</object-name>
    <condition>
        <equals>
-         <property>instrumentation/flightdirector/fd-on</property>
+         <property>/it-autoflight/fd_master</property>
          <value>1</value>
        </equals>
    </condition>
@@ -944,11 +940,11 @@
    </center>
  </animation>
 
- <!--animation>
+ <animation>
    <type>translate</type>
    <object-name>FDbars</object-name>
-   <property>orientation/pitch-deg</property>
-   <factor>0.0014</factor>
+   <property>/it-autoflight/fd/pitch-bar</property>
+   <factor>0.005</factor>
     <axis>
      <x>0.0</x>
      <y>0.0</y>
@@ -959,9 +955,9 @@
  <animation>
    <type>rotate</type>
    <object-name>FDbars</object-name>
-   <property>orientation/roll-deg</property>
+   <property>/it-autoflight/fd/roll-bar</property>
    <axis>
-     <x>1.0</x>
+     <x>-1.0</x>
      <y>0.0</y>
      <z>0.0</z>
    </axis>
@@ -970,7 +966,7 @@
      <y-m>0</y-m>
      <z-m>0</z-m>
    </center>
- </animation-->
+ </animation>
 
  <animation>
    <type>translate</type>
@@ -1674,7 +1670,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>alttext</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
+   <property>/it-autoflight/settings/target-altitude-ft</property>
    <factor>0.00001</factor>
    <step>10000</step>
    <axis>
@@ -1687,7 +1683,7 @@
  <animation>
    <type>textranslate</type>
    <object-name>alttext.001</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
+   <property>/it-autoflight/settings/target-altitude-ft</property>
    <factor>0.0001</factor>
    <step>1000</step>
    <axis>
@@ -1700,7 +1696,7 @@
  <animation>
    <type>textranslate</type>
    <object-name>alttext.002</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
+   <property>/it-autoflight/settings/target-altitude-ft</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -1713,7 +1709,7 @@
  <animation>
    <type>textranslate</type>
    <object-name>alttext.003</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
+   <property>/it-autoflight/settings/target-altitude-ft</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -1726,7 +1722,7 @@
  <animation>
    <type>textranslate</type>
    <object-name>alttext.004</object-name>
-   <property>autopilot/settings/target-altitude-ft</property>
+   <property>/it-autoflight/settings/target-altitude-ft</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>
@@ -1803,7 +1799,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>hdg100</object-name>
-   <property>autopilot/settings/heading-bug-deg</property>
+   <property>/it-autoflight/settings/heading-bug-deg</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -1816,7 +1812,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>hdg10</object-name>
-   <property>autopilot/settings/heading-bug-deg</property>
+   <property>/it-autoflight/settings/heading-bug-deg</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -1829,7 +1825,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>hdg1</object-name>
-   <property>autopilot/settings/heading-bug-deg</property>
+   <property>/it-autoflight/settings/heading-bug-deg</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>
@@ -1842,7 +1838,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>ias100</object-name>
-   <property>autopilot/settings/target-speed-kt</property>
+   <property>/it-autoflight/settings/target-speed-kt</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -1855,7 +1851,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>ias10</object-name>
-   <property>autopilot/settings/target-speed-kt</property>
+   <property>/it-autoflight/settings/target-speed-kt</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -1868,7 +1864,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>ias1</object-name>
-   <property>autopilot/settings/target-speed-kt</property>
+   <property>/it-autoflight/settings/target-speed-kt</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>

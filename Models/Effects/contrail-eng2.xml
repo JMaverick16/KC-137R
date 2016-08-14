@@ -16,7 +16,7 @@
        </greater-than>
        <greater-than>
          <property>position/altitude-ft</property>
-         <value>19000</value>
+         <value>28000</value>
        </greater-than>
        <less-than>
          <property>environment/temperature-degc</property>

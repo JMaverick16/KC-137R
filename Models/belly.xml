@@ -8,23 +8,23 @@
 
 <PropertyList>
 
-	<path>belly.ac</path>
-  <animation>
-    <type>material</type>
-		<object-name>jourContainerBelly</object-name>
-    <property-base>sim/model/livery</property-base>
-    <texture-prop>texture-container</texture-prop>
-    <texture>container.png</texture>
-  </animation>
- 
+	<path>bellyLoader.ac</path>
+	
 	<animation>
 		<type>material</type>
-		<object-name>jour</object-name> 
-		<object-name>jourPlatform</object-name>
-		<object-name>jourContainerBelly</object-name>
-		<object-name>jourCylinder</object-name>
-		<object-name>jourShear</object-name>
-		<object-name>jourShear.001</object-name>
+		<object-name>Cube.001</object-name> 
+		<object-name>Cube.002</object-name>
+		<object-name>Cube.003</object-name>
+		<object-name>Cube.004</object-name>
+		<object-name>Cube.005</object-name>
+		<object-name>Cylinder.001</object-name>
+		<object-name>Light_front</object-name>
+		<object-name>Light_rear</object-name>
+		<object-name>Light_signal_fr</object-name>
+		<object-name>Lights_front_off</object-name>
+		<object-name>loader_arm_0</object-name>
+		<object-name>loader_arm_1</object-name>
+		<object-name>wheels</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
 		</condition>
@@ -35,96 +35,43 @@
 		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
 		</emission>
 	</animation>
-	
-  <animation>
-      <type>translate</type> 
-			<object-name>jourPlatform</object-name>
-			<object-name>jourContainerBelly</object-name>
-      <property>sim/multiplay/generic/float[16]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep>  -0.55</dep></entry>
-				<entry><ind>    0.2</ind><dep>  -0.55</dep></entry>
-				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
-			</interpolation>
-      <axis>
-          <x> 0.0</x>
-          <y> 0.0</y>
-          <z> 1.0</z>
-      </axis>
-  </animation>
-  
-  <animation>
-      <type>translate</type> 
-			<object-name>jourCylinder</object-name>
-      <property>sim/multiplay/generic/float[16]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep>  -0.5</dep></entry>
-				<entry><ind>    0.2</ind><dep>  -0.5</dep></entry>
-				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
-			</interpolation>
-      <axis>
-          <x> 0.0</x>
-          <y> 0.0</y>
-          <z> 1.0</z>
-      </axis>
-  </animation>
 
   <animation>
       <type>translate</type> 
-			<object-name>jourShear</object-name>
-			<object-name>jourShear.001</object-name>
+      <object-name>loader_arm_0</object-name>
+      <object-name>loader_arm_1</object-name>
       <property>sim/multiplay/generic/float[16]</property>
 			<interpolation>
-				<entry><ind>    0.0</ind><dep>  -0.23</dep></entry>
-				<entry><ind>    0.2</ind><dep>  -0.23</dep></entry>
-				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>    0.5</ind><dep>   0.0</dep></entry>
+				<entry><ind>    1.0</ind><dep>   0.4</dep></entry>
 			</interpolation>
       <axis>
           <x> 0.0</x>
           <y> 0.0</y>
           <z> 1.0</z>
       </axis>
-  </animation>
-	
-  <animation>
-      <type>rotate</type>
-      <object-name>jourShear.001</object-name>
-      <property>sim/multiplay/generic/float[16]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep> -15.0</dep></entry>
-				<entry><ind>    0.2</ind><dep> -15.0</dep></entry>
-				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
-			</interpolation>
-      <center>
-          <x-m> 0.0</x-m>
-          <y-m> 3.18</y-m>
-          <z-m>-1.92</z-m>
-      </center>
-      <axis>
-          <x>1</x>
-          <y>0</y>
-          <z>0</z>
-      </axis>
-  </animation>
+  </animation>	
   
   <animation>
       <type>rotate</type>
-      <object-name>jourShear</object-name>
+      <object-name>loader_arm_0</object-name>
+      <object-name>loader_arm_1</object-name>
       <property>sim/multiplay/generic/float[16]</property>
 			<interpolation>
-				<entry><ind>    0.0</ind><dep>  15.0</dep></entry>
-				<entry><ind>    0.2</ind><dep>  15.0</dep></entry>
-				<entry><ind>    1.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>    0.5</ind><dep>   0.0</dep></entry>
+				<entry><ind>    1.0</ind><dep>  -4.9</dep></entry>
 			</interpolation>
       <center>
-          <x-m> 0.0</x-m>
-          <y-m> 3.18</y-m>
-          <z-m>-1.92</z-m>
+          <x-m> 4.4</x-m>
+          <y-m> 5.6</y-m>
+          <z-m>-2.1</z-m>
       </center>
       <axis>
-          <x>1</x>
-          <y>0</y>
-          <z>0</z>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
       </axis>
   </animation>
 		

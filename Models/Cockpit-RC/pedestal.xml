@@ -1,0 +1,921 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>pedestal.ac</path>
+ 
+	<animation>
+		<type>material</type>
+		<object-name>pedestal</object-name> 
+		<object-name>ElevatorScale</object-name>
+		<object-name>ElevatorArrow</object-name>
+		<object-name>ElevatorTab</object-name>    
+		<object-name>ElevatorStab</object-name>   
+		<object-name>ElevatorStabArrow</object-name>   
+		<object-name>ElevatorHelpL</object-name>   
+		<object-name>ElevatorHelpR</object-name>  
+		<!--object-name>RudderTab</object-name>  
+		<object-name>RudderSup</object-name>
+		<object-name>RudderScale</object-name>
+		<object-name>RudderArrow</object-name-->  
+		<object-name>throttle.001</object-name>   
+		<object-name>throttle.002</object-name>   
+		<object-name>throttle.003</object-name>   
+		<object-name>throttle.004</object-name>  
+		<object-name>cutoff.001</object-name>  
+		<object-name>cutoff.002</object-name>  
+		<object-name>cutoff.003</object-name>  
+		<object-name>cutoff.004</object-name>  
+		<object-name>reverser.001</object-name>  
+		<object-name>reverser.002</object-name>  
+		<object-name>reverser.003</object-name>  
+		<object-name>reverser.004</object-name>
+		<object-name>PBrakeLever</object-name>
+		<object-name>BrkLever</object-name>
+		<object-name>FlapSBrakeSup</object-name>
+		<object-name>FlapLever</object-name>
+		<object-name>IdleSup</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.25</red>
+		  <green>0.25</green>
+		  <blue>0.25</blue>
+		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+
+	 <!-- Radios -->
+
+    <!-- The parking brake -->
+		<animation>
+			<type>translate</type>
+			<object-name>PBrakeLever</object-name>
+      <property>/controls/gear/brake-parking</property>
+      <factor>0.02</factor>
+			<axis>
+				<x>0</x>
+				<y>0</y>
+				<z>1</z>
+			</axis>
+		</animation>
+
+    <animation>
+      <type>pick</type>
+      <object-name>PBrakeLever</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/gear/brake-parking</property>  
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>
+          	var brakeR = getprop("/controls/gear/brake-right") or 0;
+          	var brakeL = getprop("/controls/gear/brake-left") or 0;
+          	var stop = getprop("/controls/gear/barke-parking") or 0;
+          	if (!stop and (brakeR or brakeL)){
+          		setprop("/controls/gear/brake-right", 0);
+          		setprop("/controls/gear/brake-left", 0);
+            }
+          </script>  
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/sim/sound/switch1</property>
+        </binding>
+      </action>
+    </animation>
+    
+  <!-- speedbrake lever -->
+  <animation>
+		<type>rotate</type>
+		<object-name>BrkLever</object-name>
+		<property>/controls/flight/spoilers</property>
+		<factor> 60</factor>
+		<center>
+		  <x-m>-18.6285</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.6411</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>BrkLever</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>nasal</command>
+		    <script>b707.stepSpeedbrakes(1)</script>
+		  </binding>
+		  <mod-up>
+		  <binding>
+		    <command>nasal</command>
+		    <script>b707.stepSpeedbrakes(0)</script>
+		  </binding>
+		  </mod-up>
+		</action>
+		<action>
+		  <button>1</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>nasal</command>
+		    <script>b707.stepSpeedbrakes(-1)</script>
+		  </binding>
+		  <mod-up>
+		  <binding>
+		    <command>nasal</command>
+		    <script>b707.stepSpeedbrakes(0)</script>
+		  </binding>
+		  </mod-up>
+		</action>
+	</animation>
+	
+  <!-- flap lever -->
+  <animation>
+		<type>rotate</type>
+		<object-name>FlapLever</object-name>
+		<property>controls/flight/flaps</property>
+		<interpolation>
+		  <entry><ind>   0</ind><dep>  0</dep></entry>
+		  <entry><ind> 0.2</ind><dep>8.5</dep></entry>
+		  <entry><ind> 0.4</ind><dep> 15</dep></entry>
+		  <entry><ind> 0.6</ind><dep> 28</dep></entry>
+		  <entry><ind>   1</ind><dep> 36</dep></entry>
+		</interpolation>
+		<center>
+		  <x-m>-18.6285</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.6411</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>FlapLever</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>nasal</command>
+		    <script>controls.flapsDown(1)</script>
+		  </binding>
+		  <mod-up>
+		  <binding>
+		    <command>nasal</command>
+		    <script>controls.flapsDown(0)</script>
+		  </binding>
+		  </mod-up>
+		</action>
+		<action>
+		  <button>1</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>nasal</command>
+		    <script>controls.flapsDown(-1)</script>
+		  </binding>
+		  <mod-up>
+		  <binding>
+		    <command>nasal</command>
+		    <script>controls.flapsDown(0)</script>
+		  </binding>
+		  </mod-up>
+		</action>
+	</animation>
+
+	<!-- Throttle lever -->
+	<animation>
+		<type>rotate</type>
+		<object-name>throttle.001</object-name>
+		<object-name>reverser.001</object-name>
+		<condition>
+			<not><property>engines/engine[0]/reversed</property></not>
+		</condition>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>-50</factor>
+		<center>
+		  <x-m>-18.64</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.65</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>throttle.001</object-name>
+		<action>
+		  <button>3</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+		    <property>/controls/engines/engine[0]/throttle</property>
+		    <step>0.05</step>
+		    <min>0</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+		<action>
+		  <button>4</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+		    <property>/controls/engines/engine[0]/throttle</property>
+		    <step>-0.05</step>
+		    <min>0</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>throttle.002</object-name>
+		<object-name>reverser.002</object-name>
+		<condition>
+			<not><property>engines/engine[1]/reversed</property></not>
+		</condition>
+		<property>/controls/engines/engine[1]/throttle</property>
+		<factor>-50</factor>
+		<center>
+		  <x-m>-18.64</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.65</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>throttle.002</object-name>
+		<action>
+		  <button>3</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+		    <property>/controls/engines/engine[1]/throttle</property>
+		    <step>0.05</step>
+		    <min>0</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+		<action>
+		  <button>4</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+		    <property>/controls/engines/engine[1]/throttle</property>
+		    <step>-0.05</step>
+		    <min>0</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>throttle.003</object-name>
+		<object-name>reverser.003</object-name>
+		<condition>
+			<not><property>engines/engine[2]/reversed</property></not>
+		</condition>
+		<property>/controls/engines/engine[2]/throttle</property>
+		<factor>-50</factor>
+		<center>
+		  <x-m>-18.64</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.65</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>throttle.003</object-name>
+		<action>
+		  <button>3</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+		    <property>/controls/engines/engine[2]/throttle</property>
+		    <step>0.05</step>
+		    <min>0</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+		<action>
+		  <button>4</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+		    <property>/controls/engines/engine[2]/throttle</property>
+		    <step>-0.05</step>
+		    <min>0</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>throttle.004</object-name>
+		<object-name>reverser.004</object-name>
+		<condition>
+			<not><property>engines/engine[3]/reversed</property></not>
+		</condition>
+		<property>/controls/engines/engine[3]/throttle</property>
+		<factor>-50</factor>
+		<center>
+		  <x-m>-18.64</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.65</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>throttle.004</object-name>
+		<action>
+		  <button>3</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+		    <property>/controls/engines/engine[3]/throttle</property>
+		    <step>0.05</step>
+		    <min>0</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+		<action>
+		  <button>4</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-adjust</command>
+		    <property>/controls/engines/engine[3]/throttle</property>
+		    <step>-0.05</step>
+		    <min>0</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+	</animation>
+	
+	<!-- Cutoff lever -->
+	<animation>
+		<type>rotate</type>
+		<object-name>cutoff.001</object-name>
+		<property>/controls/engines/engine[0]/cutoff</property>
+		<factor>30</factor>
+		<center>
+		  <x-m>-18.64</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.66</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>cutoff.001</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/controls/engines/engine[0]/cutoff</property>
+		  </binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>cutoff.002</object-name>
+		<property>/controls/engines/engine[1]/cutoff</property>
+		<factor>30</factor>
+		<center>
+		  <x-m>-18.64</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.66</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>cutoff.002</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/controls/engines/engine[1]/cutoff</property>
+		  </binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>cutoff.003</object-name>
+		<property>/controls/engines/engine[2]/cutoff</property>
+		<factor>30</factor>
+		<center>
+		  <x-m>-18.64</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.66</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>cutoff.003</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/controls/engines/engine[2]/cutoff</property>
+		  </binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>cutoff.004</object-name>
+		<property>/controls/engines/engine[3]/cutoff</property>
+		<factor>30</factor>
+		<center>
+		  <x-m>-18.64</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.66</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>cutoff.004</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-toggle</command>
+		    <property>/controls/engines/engine[3]/cutoff</property>
+		  </binding>
+		</action>
+	</animation>
+	
+	<!-- Reverser lever -->
+	<animation>
+		<type>rotate</type>
+		<object-name>reverser.001</object-name>		
+		<condition>
+			<property>engines/engine[0]/reversed</property>
+		</condition>
+		<property>/controls/engines/engine[0]/throttle</property>
+		<factor>140</factor>
+		<center>
+		  <x-m>-18.556</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.78</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>reverser.002</object-name>		
+		<condition>
+			<property>engines/engine[1]/reversed</property>
+		</condition>
+		<property>/controls/engines/engine[1]/throttle</property>
+		<factor>140</factor>
+		<center>
+		  <x-m>-18.556</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.78</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>reverser.003</object-name>		
+		<condition>
+			<property>engines/engine[2]/reversed</property>
+		</condition>
+		<property>/controls/engines/engine[2]/throttle</property>
+		<factor>140</factor>
+		<center>
+		  <x-m>-18.556</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.78</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>reverser.004</object-name>		
+		<condition>
+			<property>engines/engine[3]/reversed</property>
+		</condition>
+		<property>/controls/engines/engine[3]/throttle</property>
+		<factor>140</factor>
+		<center>
+		  <x-m>-18.556</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.78</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>reverser.001</object-name>
+		<object-name>reverser.002</object-name>
+		<object-name>reverser.003</object-name>
+		<object-name>reverser.004</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>false</repeatable>
+			<binding>
+				  <command>nasal</command>
+				  <script>b707.togglereverser();</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>ElevatorTab</object-name>   
+		<object-name>ElevatorHelpL</object-name>   
+		<object-name>ElevatorHelpR</object-name>
+		<property>/b707/trim/elevator-trim-turn</property>
+		<factor>-10500</factor>
+		<center>
+		  <x-m>-18.636</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.646</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>ElevatorArrow</object-name>
+		<property>/b707/trim/elevator-trim-turn</property>
+		<factor>-20</factor>
+		<center>
+		  <x-m>-18.6285</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.6411</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>1.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>
+		<object-name>ElevatorTab</object-name>
+		<object-name>ElevatorHelpL</object-name>
+		<object-name>ElevatorHelpR</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		   <binding>
+		    <command>nasal</command>
+		    <script>b707.applyTrimWheels(0, 0)</script>
+		   </binding>
+			<binding>
+			  <command>property-toggle</command>
+			  <property>/controls/special/elev-trim-help</property>
+			</binding>
+		</action>
+		<action>
+		  <button>3</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		  <binding>
+        <condition>
+            <not><property>devices/status/keyboard/shift</property></not>
+            <not><property>devices/status/keyboard/super</property></not>
+        </condition>
+		    <command>property-adjust</command>
+		    <property>/controls/flight/elevator-trim</property>
+		    <step>0.001</step>
+		    <min>-1</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		  <binding>
+        <condition>
+           <or>
+            <property>devices/status/keyboard/shift</property>
+            <property>devices/status/keyboard/super</property>
+           </or>
+        </condition>
+		    <command>property-adjust</command>
+		    <property>/controls/flight/elevator-trim</property>
+		    <step>0.01</step>
+		    <min>-1</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>   
+    </action>
+    <action>
+        <button>4</button>
+        <repeatable>true</repeatable>
+        <interval-sec>0.2</interval-sec>
+		  <binding>
+        <condition>
+            <not><property>devices/status/keyboard/shift</property></not>
+            <not><property>devices/status/keyboard/super</property></not>
+        </condition>
+		    <command>property-adjust</command>
+		    <property>/controls/flight/elevator-trim</property>
+		    <step>-0.001</step>
+		    <min>-1</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		  <binding>
+        <condition>
+           <or>
+            <property>devices/status/keyboard/shift</property>
+            <property>devices/status/keyboard/super</property>
+           </or>
+        </condition>
+		    <command>property-adjust</command>
+		    <property>/controls/flight/elevator-trim</property>
+		    <step>-0.01</step>
+		    <min>-1</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>                 
+    </action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>ElevatorHelpL</object-name> 
+		<property>/controls/special/elev-trim-help</property>
+		<factor>-90</factor>
+		<center>
+		  <x-m>  0.0</x-m>
+		  <y-m> -0.124</y-m>
+		  <z-m>  0.716</z-m>
+		</center>
+		<axis>
+		  <x>1.0</x>
+		  <y>0.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>ElevatorHelpR</object-name> 
+		<property>/controls/special/elev-trim-help</property>
+		<factor> 90</factor>
+		<center>
+		  <x-m>  0.0</x-m>
+		  <y-m>  0.124</y-m>
+		  <z-m>  0.716</z-m>
+		</center>
+		<axis>
+		  <x>1.0</x>
+		  <y>0.0</y>
+		  <z>0.0</z>
+		</axis>
+	</animation>
+	
+	<!--animation>
+		<type>rotate</type>
+		<object-name>RudderArrow</object-name>
+		<property>/controls/flight/rudder-trim</property>
+		<factor>-45</factor>
+		<center>
+		  <x-m>-18.288</x-m>
+		  <y-m>-0.04924</y-m>
+		  <z-m> 0.0</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>0.0</y>
+		  <z>1.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>RudderTab</object-name>
+		<property>/controls/flight/rudder-trim</property>
+		<factor>-4680</factor>
+		<center>
+		  <x-m>-18.288</x-m>
+		  <y-m>-0.04924</y-m>
+		  <z-m> 0.0</z-m>
+		</center>
+		<axis>
+		  <x>0.0</x>
+		  <y>0.0</y>
+		  <z>1.0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>pick</type>  
+		<object-name>RudderSup</object-name>
+		<object-name>RudderTab</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		   <binding>
+		    <command>nasal</command>
+		    <script>b707.applyTrimWheels(0, 1)</script>
+		   </binding>
+		</action>
+		<action>
+		  <button>3</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		  <binding>
+        <condition>
+            <not><property>devices/status/keyboard/shift</property></not>
+            <not><property>devices/status/keyboard/super</property></not>
+        </condition>
+		    <command>property-adjust</command>
+		    <property>/controls/flight/rudder-trim</property>
+		    <step>0.001</step>
+		    <min>-1</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		  <binding>
+        <condition>
+           <or>
+            <property>devices/status/keyboard/shift</property>
+            <property>devices/status/keyboard/super</property>
+           </or>
+        </condition>
+		    <command>property-adjust</command>
+		    <property>/controls/flight/rudder-trim</property>
+		    <step>0.01</step>
+		    <min>-1</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>  
+		</action>
+		<action>
+		  <button>4</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		  <binding>
+        <condition>
+            <not><property>devices/status/keyboard/shift</property></not>
+            <not><property>devices/status/keyboard/super</property></not>
+        </condition>
+		    <command>property-adjust</command>
+		    <property>/controls/flight/rudder-trim</property>
+		    <step>-0.001</step>
+		    <min>-1</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		  <binding>
+        <condition>
+           <or>
+            <property>devices/status/keyboard/shift</property>
+            <property>devices/status/keyboard/super</property>
+           </or>
+        </condition>
+		    <command>property-adjust</command>
+		    <property>/controls/flight/rudder-trim</property>
+		    <step>-0.01</step>
+		    <min>-1</min>
+		    <max>1</max>
+		    <wrap>false</wrap>
+		  </binding>
+		</action>
+	</animation-->
+	
+    <!-- stab trim normaly switches ... here in FG for showing up, what level the electrical stab trim is  -->
+    <animation>
+  		<type>rotate</type>
+  		<object-name>ElevatorStabArrow</object-name>
+  		<property>/b707/stabilizer/cutout</property>
+  		<interpolation>
+  		  <entry><ind> 4.0</ind><dep>-4.0</dep></entry>
+  		  <entry><ind>   0</ind><dep>   0</dep></entry>
+  		  <entry><ind>-1.0</ind><dep> 1.8</dep></entry>
+  		</interpolation>
+  		<center>
+  		  <x-m>-18.71</x-m>
+  		  <y-m>0.0</y-m>
+  		  <z-m>0.592</z-m>
+  		</center>
+  		<axis>
+  		  <x>0.0</x>
+  		  <y>1.0</y>
+  		  <z>0.0</z>
+  		</axis>
+  	</animation>
+	
+  	<animation>
+  		<type>pick</type>
+  		<object-name>ElevatorStab</object-name>
+  		<action>
+  		  <button>0</button>
+  		  <repeatable>false</repeatable>
+		  <binding>
+		    <command>property-assign</command>
+		    <property>/b707/stabilizer/cutout</property>
+		    <value>0.0</value>
+		  </binding>
+  		</action>
+  	</animation>
+
+</PropertyList>

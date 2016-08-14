@@ -1,0 +1,1009 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+ <path>cockpit.ac</path>
+ 
+	<!-- needed for tutorials -->
+	<model>
+		<path>Models/Aircraft/marker.xml</path>
+	</model>
+
+	<animation>
+		<object-name>LightVolume1</object-name>
+		<object-name>LightVolume2</object-name>
+		<nopreview/>
+	</animation>
+	
+  <!-- internal light effect without rembrandt -->	
+	<animation>
+		<type>material</type>
+		<object-name>firewarning</object-name>
+		<object-name>panel</object-name> 
+		<object-name>immat.text</object-name> 
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.4</red>
+		  <green>0.4</green>
+		  <blue>0.4</blue>
+		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>cover</object-name>
+		<object-name>interieur</object-name>
+		<object-name>door</object-name>
+		<object-name>floor</object-name>
+		<object-name>exit</object-name>
+		<object-name>internal.sky</object-name>
+		<object-name>window.pilot</object-name>
+		<object-name>window.copilot</object-name>
+		<object-name>window.piop</object-name>
+		<object-name>window.coop</object-name>
+		<object-name>window.side</object-name> 
+		<object-name>pedestal</object-name>
+		<object-name>PedalL</object-name>
+		<object-name>PedalR</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.25</red>
+		  <green>0.25</green>
+		  <blue>0.25</blue>
+		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>handle</object-name> 
+		<object-name>winslide</object-name> 
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.15</red>
+		  <green>0.15</green>
+		  <blue>0.15</blue>
+		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>exitON</object-name>
+		<emission>
+		  <red>1</red>
+		  <green>0.8</green>
+		  <blue>0.8</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>exitON</object-name>
+		<condition>
+			<property>/b707/emergency/exit-lights</property>
+		</condition>
+	</animation>	
+		  
+
+	<animation>
+		<type>material</type>
+		<object-name>panelE</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>window.front</object-name>  
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+		</condition>
+		<emission>
+		  <red>0.2</red>
+		  <green>0.2</green>
+		  <blue>0.2</blue>
+		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+		</emission>
+	</animation>	
+		
+	<!-- Rembrand -  light-->
+	<animation>
+		<type>select</type>
+		<object-name>LightVolume1</object-name>
+		<condition>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>LightVolume2</object-name>
+		<condition>
+				<greater-than>
+					<property>/b707/ess-bus</property>
+					<value>20</value>
+				</greater-than>
+				<property>/sim/rendering/rembrandt/enabled</property>
+				<or>
+					<property>/controls/test/warn-knob</property>
+					<and>
+						<property>/b707/warning/state</property>
+						<property>/controls/engines/engine[0]/fire</property>
+					</and>
+					<and>
+						<property>/b707/warning/state</property>
+						<property>/controls/engines/engine[1]/fire</property>
+					</and>
+					<and>
+						<property>/b707/warning/state</property>
+						<property>/controls/engines/engine[2]/fire</property>
+					</and>
+					<and>
+						<property>/b707/warning/state</property>
+						<property>/controls/engines/engine[3]/fire</property>
+					</and>
+					<greater-than>
+						<property>/b707/pressurization/cabin-altitude</property>
+						<value>8500</value>
+					</greater-than>
+					<and>
+						<greater-than>
+							<property>/b707/pressurization/cabin-altitude</property>
+							<value>4000</value>
+						</greater-than>
+						<not><property>/b707/pressurization/safety-valve</property></not>
+					</and>
+				</or>
+		</condition>
+	</animation>	 
+	
+		<!-- small lightcones for panel -->
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini.xml</path>
+		<name>capt_light_1</name>
+		<offsets>   
+		  <x-m>-18.6</x-m>
+		  <y-m> -0.125</y-m>
+		  <z-m>  1.2</z-m>
+		  <pitch-deg>45.0</pitch-deg>
+		  <roll-deg> 0.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini.xml</path>
+		<name>capt_light_2</name>
+		<offsets>   
+		  <x-m>-18.6</x-m>
+		  <y-m> -0.360</y-m>
+		  <z-m>  1.15</z-m>
+		  <pitch-deg>45.0</pitch-deg>
+		  <roll-deg> 0.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-small.xml</path>
+		<name>capt_light_3</name>
+		<offsets>   
+		  <x-m>-18.4</x-m>
+		  <y-m> -0.545</y-m>
+		  <z-m>  1.17</z-m>
+		  <pitch-deg>50.0</pitch-deg>
+		  <roll-deg>-20.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini.xml</path>
+		<name>capt_light_4</name>
+		<offsets>   
+		  <x-m>-18.5</x-m>
+		  <y-m>  0.09</y-m>
+		  <z-m>  1.2</z-m>
+		  <pitch-deg>50.0</pitch-deg>
+		  <roll-deg> 0.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini.xml</path>
+		<name>capt_light_5</name>
+		<offsets>   
+		  <x-m>-18.6</x-m>
+		  <y-m>  0.360</y-m>
+		  <z-m>  1.15</z-m>
+		  <pitch-deg>45.0</pitch-deg>
+		  <roll-deg> 0.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-small.xml</path>
+		<name>capt_light_6</name>
+		<offsets>   
+		  <x-m>-18.4</x-m>
+		  <y-m>  0.545</y-m>
+		  <z-m>  1.17</z-m>
+		  <pitch-deg>50.0</pitch-deg>
+		  <roll-deg> 20.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	<!-- pedestal light -->
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-small.xml</path>
+		<name>capt_light_7</name>
+		<offsets>   
+		  <x-m>-18.8</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  1.1</z-m>
+		  <pitch-deg>-25.0</pitch-deg>
+		  <roll-deg> 0.0</roll-deg>
+		</offsets>
+	 </model>
+
+	<!-- overhead light -->
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-small-overhead.xml</path>
+		<name>ov_light_1</name>
+		<offsets>   
+		  <x-m>-18.1</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.8</z-m>
+		  <pitch-deg>130.0</pitch-deg>
+		  <roll-deg> 0.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-small-overhead.xml</path>
+		<name>ov_light_2</name>
+		<offsets>   
+		  <x-m>-18.1</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.8</z-m>
+		  <pitch-deg>150.0</pitch-deg>
+		  <roll-deg> 0.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-small-overhead.xml</path>
+		<name>ov_light_3</name>
+		<offsets>   
+		  <x-m>-18.1</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  0.8</z-m>
+		  <pitch-deg>190.0</pitch-deg>
+		  <roll-deg> 0.0</roll-deg>
+		</offsets>
+	 </model>
+
+	<!-- engineer light -->
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini-engineer.xml</path>
+		<name>eng_light_1</name>
+		<offsets>   
+		  <x-m>-17.75</x-m>
+		  <y-m>  0.279</y-m>
+		  <z-m>  1.62</z-m>
+		  <pitch-deg>0.0</pitch-deg>
+		  <roll-deg> 60.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini-engineer.xml</path>
+		<name>eng_light_2</name>
+		<offsets>   
+		  <x-m>-17.55</x-m>
+		  <y-m>  0.279</y-m>
+		  <z-m>  1.62</z-m>
+		  <pitch-deg>0.0</pitch-deg>
+		  <roll-deg> 60.0</roll-deg>
+		</offsets>
+	 </model>	
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini-engineer.xml</path>
+		<name>eng_light_3</name>
+		<offsets>   
+		  <x-m>-17.35</x-m>
+		  <y-m>  0.279</y-m>
+		  <z-m>  1.62</z-m>
+		  <pitch-deg>0.0</pitch-deg>
+		  <roll-deg> 60.0</roll-deg>
+		</offsets>
+	 </model>	
+
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini-engineer.xml</path>
+		<name>eng_light_4</name>
+		<offsets>   
+		  <x-m>-17.15</x-m>
+		  <y-m>  0.279</y-m>
+		  <z-m>  1.62</z-m>
+		  <pitch-deg>0.0</pitch-deg>
+		  <roll-deg> 60.0</roll-deg>
+		</offsets>
+	 </model>	
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini-engineer.xml</path>
+		<name>eng_light_5</name>
+		<offsets>   
+		  <x-m>-17.75</x-m>
+		  <y-m>  0.68</y-m>
+		  <z-m>  1.37</z-m>
+		  <pitch-deg>0.0</pitch-deg>
+		  <roll-deg> 5.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini-engineer.xml</path>
+		<name>eng_light_6</name>
+		<offsets>   
+		  <x-m>-17.55</x-m>
+		  <y-m>  0.68</y-m>
+		  <z-m>  1.37</z-m>
+		  <pitch-deg>0.0</pitch-deg>
+		  <roll-deg> 5.0</roll-deg>
+		</offsets>
+	 </model>
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini-engineer.xml</path>
+		<name>eng_light_7</name>
+		<offsets>   
+		  <x-m>-17.35</x-m>
+		  <y-m>  0.68</y-m>
+		  <z-m>  1.37</z-m>
+		  <pitch-deg>0.0</pitch-deg>
+		  <roll-deg> 5.0</roll-deg>
+		</offsets>
+	 </model>	 
+	 
+	 <model>
+		<path>Aircraft/KC-137R/Models/Lights/lightcone-mini-engineer.xml</path>
+		<name>eng_light_8</name>
+		<offsets>   
+		  <x-m>-17.15</x-m>
+		  <y-m>  0.68</y-m>
+		  <z-m>  1.37</z-m>
+		  <pitch-deg>0.0</pitch-deg>
+		  <roll-deg> 5.0</roll-deg>
+		</offsets>
+	 </model>
+
+	<animation>
+		<type>select</type>
+		<object-name>capt_light_1</object-name>
+		<object-name>capt_light_2</object-name>
+		<object-name>capt_light_3</object-name>
+		<object-name>capt_light_4</object-name>
+		<object-name>capt_light_5</object-name>
+		<object-name>capt_light_6</object-name>
+		<object-name>capt_light_7</object-name>
+		<object-name>ov_light_1</object-name>
+		<object-name>ov_light_2</object-name>
+		<object-name>ov_light_3</object-name>
+		<object-name>eng_light_1</object-name>
+		<object-name>eng_light_2</object-name>
+		<object-name>eng_light_3</object-name>
+		<object-name>eng_light_4</object-name>
+		<object-name>eng_light_5</object-name>
+		<object-name>eng_light_6</object-name>
+		<object-name>eng_light_7</object-name>
+		<object-name>eng_light_8</object-name>
+		<condition>
+			<property>/sim/rendering/rembrandt/enabled</property>
+      <property>sim/current-view/internal</property>
+		</condition>
+	</animation>	 
+	
+	<!-- Ice on the windshield -->
+	 <model>
+		<path>Aircraft/KC-137R/Models/Cockpit/windowIce.xml</path>
+		<name>window_ice</name>
+		<offsets>   
+		  <x-m>0</x-m>
+		  <y-m>0</y-m>
+		  <z-m>0</z-m>
+		</offsets>
+	 </model>
+	 
+	<!-- The magnetic compass -->
+	 <model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/mag_compass/mag_compass.xml</path>
+		<name>window_ice</name>
+		<offsets>
+		  <x-m>-18.849</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  1.205</z-m>
+		</offsets>
+	 </model>
+	 	  
+	<!-- equipment -->
+	<model>
+		<name>pedestal</name>
+		<path>Aircraft/KC-137R/Models/Cockpit-JSTARS/pedestal.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		</offsets>
+	</model>
+
+  <!-- this light must be here, for lighting without pedestal shadow -->
+	<model>
+		<name>ap_and_brake_lamps</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/autopilot_and_brake.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>panel-equipment</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/panel.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>overhead-panel-equipment</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/ohpanel.xml</path>
+		<offsets>
+		  <x-m>-18.55</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  1.35</z-m>
+			<pitch-deg>69.5</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>circuit-breaker-panel</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/oh_panel/circuitBreaker.xml</path>
+		<offsets>
+		  <x-m>-18.04</x-m>
+		  <y-m>  0.0</y-m>
+		  <z-m>  1.52</z-m>
+			<pitch-deg>75</pitch-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>engineer-panel-top</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/epaneltop.xml</path>
+		<offsets>
+		  <x-m>-17.545</x-m>
+		  <y-m>  0.646</y-m>
+		  <z-m>  1.386</z-m>
+			<roll-deg>33.15</roll-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>engineer-panel-bottom</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/epanelbot.xml</path>
+		<offsets>
+		  <x-m>-17.545</x-m>
+		  <y-m>  0.761</y-m>
+		  <z-m>  0.980</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>wiper_pilot</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/wiper/wiper-l.xml</path>
+		<offsets>
+		  <x-m>-19.06</x-m>
+		  <y-m> -0.54</y-m>
+		  <z-m>  0.98</z-m>
+			<pitch-deg> 40</pitch-deg>
+			<heading-deg> 26.5</heading-deg>
+		</offsets>
+	</model>
+	<model>
+		<name>wiper_copilot</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/wiper/wiper-r.xml</path>
+		<offsets>
+		  <x-m>-19.06</x-m>
+		  <y-m>  0.54</y-m>
+		  <z-m>  0.98</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg> 40</pitch-deg>
+			<heading-deg> -26.5</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>seats</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/seats/seats.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>yokes</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/yokes/yokes.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>-0.08</z-m>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>yokes</object-name>	
+		<condition>
+			<or>
+				<property>/sim/model-type/KCR</property>
+				<property>/sim/model-type/KCRT</property>
+			</or>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>yokesJS</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/yokesJS/yokes.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>-0.08</z-m>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>yokesJS</object-name>	
+		<condition>
+			<property>/sim/model-type/E8R</property>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>tiller</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/yokes/tiller.xml</path>
+		<offsets>
+		  <x-m>-18.816</x-m>
+		  <y-m> -0.701</y-m>
+		  <z-m>  0.746</z-m>
+			<pitch-deg> 50</pitch-deg>
+			<heading-deg> -40.5</heading-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>yokes</object-name>
+		<object-name>yokesJS</object-name>
+		<condition>
+      <not>
+       <property>sim/yokes-visible</property>
+      </not>
+		</condition>
+	</animation>	
+
+	<model>
+		<name>pilots</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Pilots/pilots.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>0.0</z-m>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>pilots</object-name>	
+		<condition>
+      <not><property>sim/current-view/internal</property></not>
+			<not><property>sim/multiplay/generic/int[19]</property></not>
+		</condition>
+	</animation>
+
+	<model>
+		<name>bookKC</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/book.xml</path>
+		<offsets>
+		  <x-m>-17.72</x-m>
+		  <y-m> 0.61</y-m>
+		  <z-m> 0.756</z-m>
+			<heading-deg>10.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bookKC</object-name>	
+		<condition>
+			<or>
+				<property>/sim/model-type/KCR</property>
+				<property>/sim/model-type/KCRT</property>
+			</or>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bookJS</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/book-JSTARS.xml</path>
+		<offsets>
+		  <x-m>-17.72</x-m>
+		  <y-m> 0.61</y-m>
+		  <z-m> 0.756</z-m>
+			<heading-deg>10.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bookJS</object-name>	
+		<condition>
+			<property>/sim/model-type/E8R</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>		
+			<object-name>yokes</object-name>		
+			<object-name>yokesJS</object-name>
+			<object-name>tiller</object-name>
+			<object-name>panel-equipment</object-name>
+			<object-name>overhead-panel-equipment</object-name>
+			<object-name>circuit-breaker-panel</object-name>
+			<object-name>engineer-panel-top</object-name>	
+			<object-name>engineer-panel-bottom</object-name>		
+			<object-name>pedestal</object-name>		
+			<object-name>door</object-name>	
+			<object-name>book</object-name>
+			<object-name>canvasBook</object-name>
+			<condition>
+		    <property>sim/current-view/internal</property>
+			</condition>
+	</animation>	
+	
+	
+	<!-- rudder pedals -->
+	<animation>
+		<type>translate</type>
+		<object-name>PedalL</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>0.10</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>PedalR</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>-0.10</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+	
+	<!-- Window animations -->
+	<!-- Pilot window -->
+	
+ <animation>
+		<name>windowPiComplete</name>
+		<object-name>window.pilot</object-name>
+		<object-name>window.piop</object-name>
+ </animation>
+ <!-- turn the knob -->
+	<animation>
+	<type>rotate</type>
+		<object-name>window.piop</object-name>
+		<property>sim/multiplay/generic/float[4]</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.1</ind><dep>-45</dep></entry>
+			<entry><ind>1.0</ind><dep>-45</dep></entry>
+		</interpolation>
+    <axis>   
+      <x1-m> -18.812</x1-m>
+      <y1-m>  -0.751</y1-m>
+      <z1-m>   0.955</z1-m>
+      <x2-m> -18.805</x2-m>
+      <y2-m>  -0.745</y2-m>
+      <z2-m>   0.973</z2-m>
+    </axis>
+	</animation>
+	<!-- go inside -->
+	<animation>
+	<type>rotate</type>
+		<object-name>windowPiComplete</object-name>
+		<property>sim/multiplay/generic/float[4]</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.2</ind><dep> 4</dep></entry>
+			<entry><ind>1.0</ind><dep> 4</dep></entry>
+		</interpolation>
+		<axis>
+      <x1-m> -18.812</x1-m>
+      <y1-m>  -0.751</y1-m>
+      <z1-m>   0.955</z1-m>
+      <x2-m> -18.805</x2-m>
+      <y2-m>  -0.745</y2-m>
+      <z2-m>   0.973</z2-m>
+		</axis>
+	</animation>
+	<!-- slipping back 	-->
+	<animation>
+	<type>translate</type>
+		<object-name>windowPiComplete</object-name>
+		<property>sim/multiplay/generic/float[4]</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.2</ind><dep> 0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>-0.5</dep></entry>
+		</interpolation>
+    <axis>   
+      <x1-m> -17.8</x1-m>
+      <y1-m>  -1.23</y1-m>
+      <z1-m>   0.70</z1-m>
+      <x2-m> -18.805</x2-m>
+      <y2-m>  -0.80</y2-m>
+      <z2-m>   0.973</z2-m>
+    </axis>
+	</animation>
+
+	<animation>
+	<type>rotate</type>
+		<object-name>windowPiComplete</object-name>
+		<property>sim/multiplay/generic/float[4]</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.2</ind><dep> 0.01</dep></entry>
+			<entry><ind>1.0</ind><dep>  -8</dep></entry>
+		</interpolation>
+		<axis>
+      <x1-m> -17.8</x1-m>
+      <y1-m>  -1.23</y1-m>
+      <z1-m>   0.70</z1-m>
+      <x2-m> -18.805</x2-m>
+      <y2-m>  -0.78</y2-m>
+      <z2-m>   0.973</z2-m>
+		</axis>
+	</animation>
+
+  <animation>
+		<type>pick</type>
+		<object-name>window.piop</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		  <binding>
+		   <command>nasal</command>
+		   <script>b707.doorsystem.pilotwinexport();</script>
+		  </binding>
+		</action>
+  </animation>
+  
+	<!-- Copilot window -->
+ <animation>
+		<name>windowCoComplete</name>
+		<object-name>window.copilot</object-name>
+		<object-name>window.coop</object-name>
+ </animation>
+ <!-- turn the knob -->
+	<animation>
+	<type>rotate</type>
+		<object-name>window.coop</object-name>
+		<property>sim/multiplay/generic/float[5]</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.1</ind><dep> 45</dep></entry>
+			<entry><ind>1.0</ind><dep> 45</dep></entry>
+		</interpolation>
+    <axis>   
+      <x1-m> -18.812</x1-m>
+      <y1-m>   0.751</y1-m>
+      <z1-m>   0.955</z1-m>
+      <x2-m> -18.805</x2-m>
+      <y2-m>   0.745</y2-m>
+      <z2-m>   0.973</z2-m>
+    </axis>
+	</animation>
+	<!-- go inside -->
+	<animation>
+	<type>rotate</type>
+		<object-name>windowCoComplete</object-name>
+		<property>sim/multiplay/generic/float[5]</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.2</ind><dep>-4</dep></entry>
+			<entry><ind>1.0</ind><dep>-4</dep></entry>
+		</interpolation>
+		<axis>
+      <x1-m> -18.812</x1-m>
+      <y1-m>   0.751</y1-m>
+      <z1-m>   0.955</z1-m>
+      <x2-m> -18.805</x2-m>
+      <y2-m>   0.745</y2-m>
+      <z2-m>   0.973</z2-m>
+		</axis>
+	</animation>
+	<!-- slipping back 	-->
+	<animation>
+	<type>translate</type>
+		<object-name>windowCoComplete</object-name>
+		<property>sim/multiplay/generic/float[5]</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.2</ind><dep> 0.0</dep></entry>
+			<entry><ind>1.0</ind><dep>-0.5</dep></entry>
+		</interpolation>
+    <axis>   
+      <x1-m> -17.8</x1-m>
+      <y1-m>   1.23</y1-m>
+      <z1-m>   0.70</z1-m>
+      <x2-m> -18.805</x2-m>
+      <y2-m>   0.80</y2-m>
+      <z2-m>   0.973</z2-m>
+    </axis>
+	</animation>
+
+	<animation>
+	<type>rotate</type>
+		<object-name>windowCoComplete</object-name>
+		<property>sim/multiplay/generic/float[5]</property>
+		<interpolation>
+			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
+			<entry><ind>0.2</ind><dep> 0.01</dep></entry>
+			<entry><ind>1.0</ind><dep>   8</dep></entry>
+		</interpolation>
+		<axis>
+      <x1-m> -17.8</x1-m>
+      <y1-m>   1.23</y1-m>
+      <z1-m>   0.70</z1-m>
+      <x2-m> -18.805</x2-m>
+      <y2-m>   0.78</y2-m>
+      <z2-m>   0.973</z2-m>
+		</axis>
+	</animation>
+	
+  <animation>
+		<type>pick</type>
+		<object-name>window.coop</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		  <binding>
+		   <command>nasal</command>
+		   <script>b707.doorsystem.copilotwinexport();</script>
+		  </binding>
+		</action>
+  </animation>
+  
+	<!-- inner light-->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>InnerLight</name>
+		<object-name>LightVolume1</object-name>
+		<position>
+			<x>-17.0</x>
+			<y> 0.0</y>
+			<z> 1.5</z>
+		</position>
+		<direction>
+			<x>-18.41</x>
+			<y> 0.0</y>
+			<z>0.33</z>
+		</direction>
+    <dim-factor>
+      <property>/systems/electrical/outputs/cabin-dim</property>
+      <factor>1.0</factor>
+      <offset>0</offset>
+      <min>0</min>
+      <max>1.0</max>
+    </dim-factor>
+		<diffuse>
+			<r>0.9</r>
+			<g>0.9</g>
+			<b>0.9</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.2</r>
+			<g>0.2</g>
+			<b>0.2</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.002</l>
+			<q>0.00005</q>
+		</attenuation>
+		<exponent>40</exponent>
+		<near-m>0.05</near-m>
+		<far-m>250</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+	 
+	<!-- the fire warning -->
+	<animation>
+		<type>light</type>
+		<light-type>point</light-type>
+		<name>FireWarningLight</name>
+		<object-name>LightVolume2</object-name>
+		<position>
+			<x>-17.0</x>
+			<y> 0.0</y>
+			<z> 1.5</z>
+		</position>
+		<ambient>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</ambient>
+		<diffuse>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</diffuse>
+		<specular>
+			<r>0.99</r>
+			<g>0.0</g>
+			<b>0.0</b>
+			<a>1.0</a>
+		</specular>
+		<attenuation>
+			<c>1.0</c>
+			<l>0.7</l>
+			<q>8</q>
+		</attenuation>
+		<exponent>40</exponent>
+		<near-m>0.05</near-m>
+		<far-m>250</far-m>
+		<cutoff>40</cutoff>
+	</animation>
+
+</PropertyList>

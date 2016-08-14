@@ -2228,7 +2228,7 @@ refs 3
 kids 0
 OBJECT poly
 name "GPU"
-loc 1.14146 0 -0.140412
+loc 1.14146 0.0274121 -0.140412
 data 4
 Mesh
 texture "generic-trailer-GPU.png"
