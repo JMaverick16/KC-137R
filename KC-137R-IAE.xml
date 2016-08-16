@@ -432,8 +432,8 @@
             <input>fcs/pitch-trim-sum</input>
             <gain>0.007</gain>
             <range>
-                <min>-15</min>
-                <max>15</max>
+                <min>-20</min>
+                <max>20</max>
             </range>
             <output>fcs/elevator-pos-rad</output>
         </aerosurface_scale>

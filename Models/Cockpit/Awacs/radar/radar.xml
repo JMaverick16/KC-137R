@@ -12,25 +12,11 @@
 
 	<animation>
 		<type>material</type>
-		<object-name>bg</object-name>
+		<object-name>cover</object-name>
 		<emission>
-			<red>0.4</red>
-			<green>0.8</green>
-			<blue>0.0</blue>
-		</emission>
-	</animation>
-	
-	<animation>
-		<type>material</type>
-  		<object-name>sup</object-name>
-		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
-		</condition>
-		<emission>
-			<red>0.05</red>
-			<green>0.05</green>
-			<blue>0.05</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
 		</emission>
 	</animation>
 	
@@ -79,46 +65,19 @@
 		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
-
-	<animation>
-		<type>noshadow</type>
-			<object-name>sup</object-name>
-	</animation>
-
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-			<object-name>sup</object-name>
-  </effect>
 	
 	<animation>
 		<type>select</type>
-		<object-name>radarblade</object-name>
-		<object-name>bg</object-name>
-		<object-name>cover</object-name>
+		<object-name>Off</object-name>
 		<condition>
-			<greater-than>
-				<property>/b707/ess-bus</property>
-				<value>20</value>
-			</greater-than>
-			<property>/instrumentation/mptcas/on</property>
+			<or>
+				<less-than>
+					<property>/b707/ess-bus</property>
+					<value>20</value>
+				</less-than>
+				<not><property>/instrumentation/mptcas/on</property></not>
+			</or>
 		</condition>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>radarblade</object-name>
-		<property>/sim/time/elapsed-sec</property>
-		<factor>40</factor>
-		<center>
-			<x-m> 0.0</x-m>
-			<y-m> 0.0</y-m>
-			<z-m> 0.0</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
 	</animation>
 	
 	<animation>
@@ -339,17 +298,7 @@
 
 <model>
   <name>multis</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/mps.xml</path>
-  <offsets>
-    <x-m>0</x-m>
-    <y-m>0</y-m>
-    <z-m>0</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>multis-ai</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/mps-ai.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/mps.xml</path>
   <offsets>
     <x-m>0</x-m>
     <y-m>0</y-m>
@@ -360,7 +309,6 @@
 <animation>
 	<type>rotate</type>
 	<object-name>multis</object-name>
-	<object-name>multis-ai</object-name>
 	<property>orientation/heading-deg</property>
 	<factor>1</factor>
 	<axis>
@@ -373,15 +321,11 @@
 <animation>
 	<type>select</type>
 	<object-name>multis</object-name>
-	<object-name>multis-ai</object-name>
 	<condition>
-		<and>
-			<greater-than>
-				<property>/b707/ess-bus</property>
-				<value>20</value>
-			</greater-than>
-			<property>/instrumentation/mptcas/on</property>
-		</and>
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
 	</condition>
 </animation>
 

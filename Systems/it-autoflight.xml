@@ -482,12 +482,8 @@
 		<name>GLIDESLOPE HOLD</name>
 		<debug>false</debug>
 		<enable>
-			<condition>
-				<equals>
-					<property>/it-autoflight/locks/pitch</property>
-					<value>it-gs</value>
-				</equals>
-			</condition>
+			<prop>/it-autoflight/apvertmode</prop>
+			<value>2</value>
 		</enable>
 		<input>
 			<prop>/velocities/vertical-speed-fps</prop>
@@ -496,19 +492,19 @@
 			<prop>/instrumentation/nav[0]/gs-rate-of-climb</prop>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator-filter</prop>
+			<prop>/it-autoflight/internal/target-pitch-deg</prop>
 		</output>
 		<config>
-			<Kp>-0.01</Kp>      
-			<beta>1.0</beta>    
-			<alpha>0.1</alpha>  
-			<gamma>0.0</gamma>  
-			<Ti>10.0</Ti>       
-			<Td>0.00001</Td>    
-			<u_min>-0.25</u_min>
-			<u_max>0.25</u_max>
-		</config>
-	</pid-controller>
+			<Kp>0.50</Kp>
+			<beta>0.1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0.0</gamma>
+			<Ti>10.0</Ti>
+			<Td>0.00001</Td>
+			<u_min>-10</u_min>
+			<u_max>10</u_max>
+    </config>
+  </pid-controller>
 	
 	<pid-controller>
 		<name>FLIGHT LEVEL CHANGE</name>
@@ -646,6 +642,10 @@
 				<equals>
 					<property>/it-autoflight/locks/pitch</property>
 					<value>it-vert-spd</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/locks/pitch</property>
+					<value>it-gs</value>
 				</equals>
 			</or>
 		</enable>
@@ -815,60 +815,13 @@
 		</input>
 		<output>/it-autoflight/fd/roll-bar</output>
 	</filter>
-	
-	<pid-controller>
-		<name>FD: G/S</name>
-		<debug>false</debug>
-		<enable>
-			<property>/it-autoflight/apvertmode</property>
-			<value>2</value>
-		</enable>
-		<input>
-			<prop>/velocities/vertical-speed-fps</prop>
-		</input>
-		<reference>
-			<prop>/instrumentation/nav[0]/gs-rate-of-climb</prop>
-		</reference>
-		 <output>
-			<prop>/it-autoflight/internal/target-pitch-deg</prop>
-		</output>
-		<config>
-			<Kp>0.3075</Kp>
-			<beta>1</beta>
-			<alpha>0.1</alpha>
-			<gamma>0</gamma>
-			<Ti>10</Ti>
-			<Td>0.00001</Td>
-			<u_min>-15</u_min>
-			<u_max>20</u_max>
-		</config>
-	</pid-controller>
+
  
 	<filter>
 		<name>FD: PITCH</name>
 		<debug>false</debug>
 		<type>gain</type>
 		<gain>1.0</gain>
-		<enable>
-			<or>
-				<equals>
-					<property>/it-autoflight/apvertmode</property>
-					<value>0</value>
-				</equals>
-				<equals>
-					<property>/it-autoflight/apvertmode</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>/it-autoflight/apvertmode</property>
-					<value>2</value>
-				</equals>
-				<equals>
-					<property>/it-autoflight/apvertmode</property>
-					<value>4</value>
-				</equals>
-			</or>
-		</enable>
 		<input>
 			<expression>
 				<dif>

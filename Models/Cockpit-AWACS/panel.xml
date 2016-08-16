@@ -420,13 +420,13 @@
 		</offsets>
 	</model>
 	
-	<!-- Weather Radar -->
+	<!-- Radar -->
 	<model>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/RDR-160/RDR-160.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar-cockpit.xml</path>
 		<offsets>
-			<x-m>-18.870</x-m>
+			<x-m>-18.85</x-m>
 			<y-m>-0.0</y-m>
-			<z-m>0.736</z-m>
+			<z-m>0.729</z-m>
 			<pitch-deg>-70</pitch-deg>
 		</offsets>
 	</model>

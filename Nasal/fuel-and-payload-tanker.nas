@@ -201,19 +201,19 @@ var WeightFuelDialog = func {
     # rewrite the name of payload if cargo livery/aircraft selected
     if(cargo){
       var title = "Weight and Fuel Settings";
-    	setprop("/payload/weight[1]/name", "Cargo Upper 1");
-    	setprop("/payload/weight[2]/name", "Cargo Upper 2");
-    	setprop("/payload/weight[3]/name", "Cargo Upper 3");
-    	setprop("/payload/weight[4]/name", "Cargo Lower 1");
-    	setprop("/payload/weight[5]/name", "Cargo Lower 2");
-    	setprop("/payload/weight[6]/name", "Cargo Lower 3");  
+    	setprop("/payload/weight[1]/name", "Fuel Tank Upper 1");
+    	setprop("/payload/weight[2]/name", "Fuel Tank Upper 2");
+    	setprop("/payload/weight[3]/name", "Fuel Tank Upper 3");
+    	setprop("/payload/weight[4]/name", "Fuel Tank Lower 1");
+    	setprop("/payload/weight[5]/name", "Fuel Tank Lower 2");
+    	setprop("/payload/weight[6]/name", "Fuel Tank Lower 3");
     }else{
-    	setprop("/payload/weight[1]/name", "Cargo Upper 1");
-    	setprop("/payload/weight[2]/name", "Cargo Upper 2");
-    	setprop("/payload/weight[3]/name", "Cargo Upper 3");
-    	setprop("/payload/weight[4]/name", "Cargo Lower 1");
-    	setprop("/payload/weight[5]/name", "Cargo Lower 2");
-    	setprop("/payload/weight[6]/name", "Cargo Lower 3");   
+    	setprop("/payload/weight[1]/name", "Fuel Tank Upper 1");
+    	setprop("/payload/weight[2]/name", "Fuel Tank Upper 2");
+    	setprop("/payload/weight[3]/name", "Fuel Tank Upper 3");
+    	setprop("/payload/weight[4]/name", "Fuel Tank Lower 1");
+    	setprop("/payload/weight[5]/name", "Fuel Tank Lower 2");
+    	setprop("/payload/weight[6]/name", "Fuel Tank Lower 3")
     }
     #
     # General Dialog Structure

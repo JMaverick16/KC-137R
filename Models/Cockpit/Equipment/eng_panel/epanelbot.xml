@@ -272,84 +272,15 @@
 		  <z-m> 0.0</z-m>
 		</offsets>
 	</model>
-	
-	<model>
-		<name>n21e</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/n2/n21e.xml</path>
-		<offsets>
-		  <x-m> 0.1281</x-m>
-		  <y-m>-0.002</y-m>
-		  <z-m>-0.02</z-m>
-		</offsets>
-	</model>
 
 	<model>
-		<name>n22e</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/n2/n22e.xml</path>
+		<name>engineaux</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/eng/eng.xml</path>
 		<offsets>
-		  <x-m> 0.1834</x-m>
+		  <x-m> 0.21</x-m>
 		  <y-m>-0.002</y-m>
-		  <z-m>-0.02</z-m>
-		</offsets>
-	</model>
-
-	<model>
-		<name>n23e</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/n2/n23e.xml</path>
-		<offsets>
-		  <x-m> 0.2369</x-m>
-		  <y-m>-0.002</y-m>
-		  <z-m>-0.02</z-m>
-		</offsets>
-	</model>
-
-	<model>
-		<name>n24e</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/n2/n24e.xml</path>
-		<offsets>
-		  <x-m> 0.2911</x-m>
-		  <y-m>-0.002</y-m>
-		  <z-m>-0.02</z-m>
-		</offsets>
-	</model>
-	
-	<model>
-		<name>oilPress1</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/oil/oilPress1.xml</path>
-		<offsets>
-		  <x-m> 0.1281</x-m>
-		  <y-m>-0.002</y-m>
-		  <z-m> 0.0373</z-m>
-		</offsets>
-	</model>
-	
-	<model>
-		<name>oilPress2</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/oil/oilPress2.xml</path>
-		<offsets>
-		  <x-m> 0.1834</x-m>
-		  <y-m>-0.002</y-m>
-		  <z-m> 0.0373</z-m>
-		</offsets>
-	</model>
-
-	<model>
-		<name>oilPress3</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/oil/oilPress3.xml</path>
-		<offsets>
-		  <x-m> 0.2369</x-m>
-		  <y-m>-0.002</y-m>
-		  <z-m> 0.0373</z-m>
-		</offsets>
-	</model>
-
-	<model>
-		<name>oilPress4</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/oil/oilPress4.xml</path>
-		<offsets>
-		  <x-m> 0.2911</x-m>
-		  <y-m>-0.002</y-m>
-		  <z-m> 0.0373</z-m>
+		  <z-m>-0.04</z-m>
+		  <heading-deg>-90</heading-deg>
 		</offsets>
 	</model>
 	

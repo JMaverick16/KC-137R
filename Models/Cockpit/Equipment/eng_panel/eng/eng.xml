@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>res/eicas.ac</path>
+	
+    <animation>
+		<type>scale</type>
+		<x-offset>1.2</x-offset>
+		<y-offset>1.2</y-offset>
+		<z-offset>1.2</z-offset>
+    </animation>
+
+	<!-- Power on/off -->
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>XX.1</object-name>
+		<condition>
+			<and>
+				<not><property>controls/engines/engine[0]/starter</property></not>
+				<less-than>
+					<property>engines/engine[0]/n2</property>
+					<value>5</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>XX.2</object-name>
+		<condition>
+			<and>
+				<not><property>controls/engines/engine[1]/starter</property></not>
+				<less-than>
+					<property>engines/engine[1]/n2</property>
+					<value>5</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>XX.3</object-name>
+		<condition>
+			<and>
+				<not><property>controls/engines/engine[2]/starter</property></not>
+				<less-than>
+					<property>engines/engine[2]/n2</property>
+					<value>5</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>XX.4</object-name>
+		<condition>
+			<and>
+				<not><property>controls/engines/engine[3]/starter</property></not>
+				<less-than>
+					<property>engines/engine[3]/n2</property>
+					<value>5</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>eicas1</object-name>
+		<object-name>n2.1</object-name>
+		<object-name>op.1</object-name>
+		<object-name>n21</object-name>
+		<object-name>op1</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[0]/starter</property>
+				<greater-than>
+					<property>engines/engine[0]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>eicas2</object-name>
+		<object-name>n2.2</object-name>
+		<object-name>op.2</object-name>
+		<object-name>n22</object-name>
+		<object-name>op2</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[1]/starter</property>
+				<greater-than>
+					<property>engines/engine[1]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>eicas3</object-name>
+		<object-name>n2.3</object-name>
+		<object-name>op.3</object-name>
+		<object-name>n23</object-name>
+		<object-name>op3</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[2]/starter</property>
+				<greater-than>
+					<property>engines/engine[2]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>eicas4</object-name>
+		<object-name>n2.4</object-name>
+		<object-name>op.4</object-name>
+		<object-name>n24</object-name>
+		<object-name>op4</object-name>
+		<condition>
+			<or>
+				<property>controls/engines/engine[3]/starter</property>
+				<greater-than>
+					<property>engines/engine[3]/n2</property>
+					<value>5</value>
+				</greater-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>material</type> <!-- White -->
+		<object-name>osgtext-white</object-name>
+		<object-name>n21</object-name>
+		<object-name>n22</object-name>
+		<object-name>n23</object-name>
+		<object-name>n24</object-name>
+		<object-name>op1</object-name>
+		<object-name>op2</object-name>
+		<object-name>op3</object-name>
+		<object-name>op4</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type> <!-- Orange -->
+		<object-name>XX.1</object-name>
+		<object-name>XX.2</object-name>
+		<object-name>XX.3</object-name>
+		<object-name>XX.4</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>0.5</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>0.5</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type> <!-- Green -->
+		<object-name>REV1.g</object-name>
+		<object-name>REV2.g</object-name>
+		<object-name>REV3.g</object-name>
+		<object-name>REV4.g</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type> <!-- Yellow -->
+		<object-name>REV1.y</object-name>
+		<object-name>REV2.y</object-name>
+		<object-name>REV3.y</object-name>
+		<object-name>REV4.y</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+
+<!-- REV -->
+
+	<animation>
+		<type>select</type>
+        <object-name>REV1.y</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[0]/reverser-pos-norm</property>
+					<value>0.01</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[0]/reverser-pos-norm</property>
+					<value>0.9500000001</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV2.y</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[1]/reverser-pos-norm</property>
+					<value>0.01</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[1]/reverser-pos-norm</property>
+					<value>0.9500000001</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV3.y</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[2]/reverser-pos-norm</property>
+					<value>0.01</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[2]/reverser-pos-norm</property>
+					<value>0.9500000001</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV4.y</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>engines/engine[3]/reverser-pos-norm</property>
+					<value>0.01</value>
+				</greater-than>
+				<less-than>
+					<property>engines/engine[3]/reverser-pos-norm</property>
+					<value>0.9500000001</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+        <object-name>REV1.g</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[0]/reverser-pos-norm</property>
+				<value>0.95</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV2.g</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[1]/reverser-pos-norm</property>
+				<value>0.95</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV3.g</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[2]/reverser-pos-norm</property>
+				<value>0.95</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>REV4.g</object-name>
+		<condition>
+			<greater-than>
+				<property>engines/engine[3]/reverser-pos-norm</property>
+				<value>0.95</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
+    <text>
+        <name>REV1.y</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">D/L</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV2.y</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">D/L</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV3.y</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">D/L</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV4.y</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">D/L</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+
+    <text>
+        <name>REV1.g</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV2.g</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV3.g</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>REV4.g</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">REV</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<!-- N2 -->
+	
+	<text>
+		<name>n21</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.049</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>engines/engine/n2</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <text>
+        <name>XX.1</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.049</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<animation>
+    	<type>rotate</type>
+    	<object-name>n2.1</object-name>
+    	<property>engines/engine/n2</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>76</dep></entry>
+			<entry><ind>100</ind><dep>163</dep></entry>
+			<entry><ind>115</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.058</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+	<text>
+		<name>n22</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.013</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[1]/n2</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <text>
+        <name>XX.2</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.013</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <animation>
+    	<type>rotate</type>
+    	<object-name>n2.2</object-name>
+    	<property>engines/engine[1]/n2</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>76</dep></entry>
+			<entry><ind>100</ind><dep>163</dep></entry>
+			<entry><ind>112</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.058</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+	
+	<text>
+		<name>n23</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[2]/n2</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <text>
+        <name>XX.3</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+ <animation>
+    	<type>rotate</type>
+    	<object-name>n2.3</object-name>
+    	<property>engines/engine[2]/n2</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>76</dep></entry>
+			<entry><ind>100</ind><dep>163</dep></entry>
+			<entry><ind>112</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.058</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+
+	<text>
+		<name>n24</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.071</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[3]/n2</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <text>
+        <name>XX.4</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.071</y-m>
+			<z-m>0.054</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+ <animation>
+    	<type>rotate</type>
+    	<object-name>n2.4</object-name>
+    	<property>engines/engine[3]/n2</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>50</ind><dep>76</dep></entry>
+			<entry><ind>100</ind><dep>163</dep></entry>
+			<entry><ind>112</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.058</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+
+	<!-- OP -->
+	
+	<text>
+		<name>op1</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.049</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>/engines/engine[0]/oil-pressure-psi</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <text>
+        <name>XX.1</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.049</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <animation>
+    	<type>rotate</type>
+    	<object-name>op.1</object-name>
+    	<property>/engines/engine[0]/oil-pressure-psi</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>20</ind><dep>16.5</dep></entry>
+			<entry><ind>40</ind><dep>55</dep></entry>
+			<entry><ind>60</ind><dep>130</dep></entry>
+			<entry><ind>80</ind><dep>173</dep></entry>
+			<entry><ind>85</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.059</y-m>
+    		<z-m>0.0299</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+	
+	<text>
+		<name>op2</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.013</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>/engines/engine[1]/oil-pressure-psi</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <text>
+        <name>XX.2</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>-0.013</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <animation>
+    	<type>rotate</type>
+    	<object-name>op.2</object-name>
+    	<property>/engines/engine[1]/oil-pressure-psi</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>20</ind><dep>16.5</dep></entry>
+			<entry><ind>40</ind><dep>55</dep></entry>
+			<entry><ind>60</ind><dep>130</dep></entry>
+			<entry><ind>80</ind><dep>173</dep></entry>
+			<entry><ind>85</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>-0.0239</y-m>
+    		<z-m>0.0299</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+    
+
+<text>
+		<name>op3</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>/engines/engine[2]/oil-pressure-psi</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <text>
+        <name>XX.3</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.035</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+ <animation>
+    	<type>rotate</type>
+    	<object-name>op.3</object-name>
+    	<property>/engines/engine[2]/oil-pressure-psi</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>20</ind><dep>16.5</dep></entry>
+			<entry><ind>40</ind><dep>55</dep></entry>
+			<entry><ind>60</ind><dep>130</dep></entry>
+			<entry><ind>80</ind><dep>173</dep></entry>
+			<entry><ind>85</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0235</y-m>
+    		<z-m>0.0299</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+
+
+
+<text>
+		<name>op4</name>
+		<offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.071</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%4.0f</format>
+		<property>/engines/engine[3]/oil-pressure-psi</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+    <text>
+        <name>XX.4</name>
+        <offsets>
+			<x-m>0.0004</x-m>
+			<y-m>0.071</y-m>
+			<z-m>0.0249</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string"> XX</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+     <animation>
+    	<type>rotate</type>
+    	<object-name>op.4</object-name>
+    	<property>/engines/engine[3]/oil-pressure-psi</property>
+    	<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>20</ind><dep>16.5</dep></entry>
+			<entry><ind>40</ind><dep>55</dep></entry>
+			<entry><ind>60</ind><dep>130</dep></entry>
+			<entry><ind>80</ind><dep>173</dep></entry>
+			<entry><ind>85</ind><dep>180</dep></entry>
+		</interpolation>
+    	<center>
+    		<x-m>0</x-m>
+    		<y-m>0.0605</y-m>
+    		<z-m>0.0299</z-m>
+    	</center>
+    	<axis>
+    		<x>-1</x>
+    		<y>0</y>
+    		<z>0</z>
+    	</axis>
+    </animation>
+
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
+
+</PropertyList>

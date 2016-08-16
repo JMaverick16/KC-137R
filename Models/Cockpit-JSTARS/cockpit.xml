@@ -468,7 +468,7 @@
 	
 	<model>
 		<name>panel-equipment</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/panel.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-JSTARS/panel.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>

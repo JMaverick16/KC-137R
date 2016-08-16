@@ -284,7 +284,7 @@
 
 <model>
   <name>gears_and_flaps</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/flapstack/flapstack.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit-JSTARS/Instruments/flapstack/flapstack.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
     <y-m>  0.0</y-m>
@@ -561,7 +561,7 @@
 			<z-m>  1.047</z-m>
 		</offsets>
 	</model>
-
+	
 	<!-- Radar -->
 	<model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar-cockpit.xml</path>
@@ -572,5 +572,5 @@
 			<pitch-deg>-70</pitch-deg>
 		</offsets>
 	</model>
-
+	
 </PropertyList>

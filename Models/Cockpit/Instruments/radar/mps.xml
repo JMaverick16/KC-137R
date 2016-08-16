@@ -107,15 +107,10 @@
 		<object-name>ai.018</object-name>
 		<object-name>ai.019</object-name>
 		<object-name>ta</object-name>
-		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
-		</condition>
 		<emission>
-			<red>0.4</red>
-			<green>0.8</green>
-			<blue>0.0</blue>
-			<factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
 		</emission>
 	</animation>
 	
@@ -163,51 +158,6 @@
 		<object-name>ai.019</object-name>
 		<object-name>ta</object-name>
 	</animation>
-
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>mp</object-name>
-		<object-name>mp.001</object-name>
-		<object-name>mp.002</object-name>
-		<object-name>mp.003</object-name>
-		<object-name>mp.004</object-name>
-		<object-name>mp.005</object-name>
-		<object-name>mp.006</object-name>
-		<object-name>mp.007</object-name>
-		<object-name>mp.008</object-name>
-		<object-name>mp.009</object-name>
-		<object-name>mp.010</object-name>
-		<object-name>mp.011</object-name>
-		<object-name>mp.012</object-name>
-		<object-name>mp.013</object-name>
-		<object-name>mp.014</object-name>
-		<object-name>mp.015</object-name>
-		<object-name>mp.016</object-name>
-		<object-name>mp.017</object-name>
-		<object-name>mp.018</object-name>
-		<object-name>mp.019</object-name>
-		<object-name>ai</object-name>
-		<object-name>ai.001</object-name>
-		<object-name>ai.002</object-name>
-		<object-name>ai.003</object-name>
-		<object-name>ai.004</object-name>
-		<object-name>ai.005</object-name>
-		<object-name>ai.006</object-name>
-		<object-name>ai.007</object-name>
-		<object-name>ai.008</object-name>
-		<object-name>ai.009</object-name>
-		<object-name>ai.010</object-name>
-		<object-name>ai.011</object-name>
-		<object-name>ai.012</object-name>
-		<object-name>ai.013</object-name>
-		<object-name>ai.014</object-name>
-		<object-name>ai.015</object-name>
-		<object-name>ai.016</object-name>
-		<object-name>ai.017</object-name>
-		<object-name>ai.018</object-name>
-		<object-name>ai.019</object-name>
-		<object-name>ta</object-name>
-	</effect>
 
 <!-- TCAS ANIMATIONS -->
 	

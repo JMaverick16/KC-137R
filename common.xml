@@ -464,8 +464,8 @@
 	
 	<limits>
 		<mass-and-balance>
-			<maximum-takeoff-mass-lbs>311000</maximum-takeoff-mass-lbs>
-			<maximum-takeoff-mass-lbs-jt4>333000</maximum-takeoff-mass-lbs-jt4>
+			<maximum-takeoff-mass-lbs>322500</maximum-takeoff-mass-lbs>
+			<maximum-takeoff-mass-lbs-jt4>322500</maximum-takeoff-mass-lbs-jt4>
 			<maximum-landing-mass-lbs>215000</maximum-landing-mass-lbs>
 		</mass-and-balance>
 	</limits>

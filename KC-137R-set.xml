@@ -310,7 +310,7 @@ no. D6-3071-00
 		<b707>
 			<file>Aircraft/KC-137R/Nasal/shake.nas</file>
 			<file>Aircraft/KC-137R/Nasal/autostart.nas</file>
-			<file>Aircraft/KC-137R/Nasal/fuel-and-payload.nas</file>
+			<file>Aircraft/KC-137R/Nasal/fuel-and-payload-tanker.nas</file>
 			<file>Aircraft/KC-137R/Nasal/liveries.nas</file>
 			<file>Aircraft/KC-137R/Nasal/electrical.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-707.nas</file>
@@ -322,7 +322,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/doors.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tyresmoke.nas</file>
 			<file>Aircraft/KC-137R/Nasal/brakesystem.nas</file>
-			<file>Aircraft/KC-137R/Nasal/radar2.nas</file>
 			<file>Aircraft/KC-137R/Nasal/registration.nas</file>
 			<file>Aircraft/KC-137R/Nasal/manual.nas</file>
 			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND.nas</file>

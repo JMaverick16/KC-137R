@@ -12,7 +12,7 @@
 -->
 
 <turbine_engine name="IAE-V2500">
-	<milthrust> 29900.0 </milthrust> <!-- I'm using the IAE V2533-A5 version. 22900 Pounds Thrust. -->
+	<milthrust> 29900.0 </milthrust> <!-- I'm using the IAE V2533-A5 version. 29900 Pounds Thrust. -->
 	<bypassratio>     1 </bypassratio>
 	<tsfc>            0.54 </tsfc>
 	<idlen1>         26.4 </idlen1>
