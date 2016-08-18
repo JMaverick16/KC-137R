@@ -495,7 +495,7 @@
 			<prop>/it-autoflight/internal/target-pitch-deg</prop>
 		</output>
 		<config>
-			<Kp>0.50</Kp>        
+			<Kp>0.10</Kp>        
 			<beta>1.0</beta>       
 			<alpha>0.5</alpha>     
 			<gamma>0.0</gamma>     
