@@ -332,8 +332,7 @@ no. D6-3071-00
 		</b707>
 		
 		<itaf>
-            <file>Aircraft/KC-137R/Nasal/autoflight.nas</file>
-            <file>Aircraft/KC-137R/Nasal/autoflight-logic.nas</file>
+            <file>Aircraft/KC-137R/Nasal/it-autoflight.nas</file>
 		</itaf> 
 		
 		<m877>

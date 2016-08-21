@@ -873,8 +873,14 @@
 			<button>
 				<legend>AFDS MASTER OVRD OFF</legend>
 				<binding>
-				<command>property-toggle</command>
-				<property>/it-autoflight/afds_ovrdsw</property>
+				<command>property-assign</command>
+				<property>/it-autoflight/at_mastersw</property>
+				<value>0</value>
+				</binding>
+				<binding>
+				<command>property-assign</command>
+				<property>/it-autoflight/ap_mastersw</property>
+				<value>0</value>
 				</binding>
 			</button>
 		</group>
