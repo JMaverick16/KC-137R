@@ -6,18 +6,8 @@ print("IT-AUTOFLIGHT: Please Wait!");
 var ap_init = func {
 	setprop("/it-autoflight/ap_master", 0);
 	setprop("/it-autoflight/at_master", 0);
-	setprop("/it-autoflight/hdg", 1);
-	setprop("/it-autoflight/nav", 0);
-	setprop("/it-autoflight/loc", 0);
 	setprop("/it-autoflight/loc1", 0);
-	setprop("/it-autoflight/alt", 0);
-	setprop("/it-autoflight/vs", 0);
-	setprop("/it-autoflight/app", 0);
 	setprop("/it-autoflight/app1", 0);
-	setprop("/it-autoflight/altc", 0);
-	setprop("/it-autoflight/flch", 1);
-	setprop("/it-autoflight/vnav", 0);
-	setprop("/it-autoflight/land", 0);
 	setprop("/it-autoflight/aplatmode", 0);
 	setprop("/it-autoflight/aphldtrk", 0);
 	setprop("/it-autoflight/apvertmode", 3);
@@ -89,38 +79,22 @@ setlistener("/it-autoflight/fd_mastersw", func {
 setlistener("/it-autoflight/aplatset", func {
   var latset = getprop("/it-autoflight/aplatset");
   if (latset == 0) {
-	setprop("/it-autoflight/hdg", 1);
-	setprop("/it-autoflight/nav", 0);
-	setprop("/it-autoflight/loc", 0);
 	setprop("/it-autoflight/loc1", 0);
-	setprop("/it-autoflight/app", 0);
 	setprop("/it-autoflight/app1", 0);
 	setprop("/it-autoflight/aplatmode", 0);
 	setprop("/it-autoflight/aphldtrk", 0);
   } else if (latset == 1) {
-	setprop("/it-autoflight/hdg", 0);
-	setprop("/it-autoflight/nav", 1);
-	setprop("/it-autoflight/loc", 0);
 	setprop("/it-autoflight/loc1", 0);
-	setprop("/it-autoflight/app", 0);
 	setprop("/it-autoflight/app1", 0);
 	setprop("/it-autoflight/aplatmode", 1);
 	setprop("/it-autoflight/aphldtrk", 1);
   } else if (latset == 2) {
 	setprop("/instrumentation/nav/signal-quality-norm", 0);
-	setprop("/it-autoflight/hdg", 0);
-	setprop("/it-autoflight/nav", 0);
-	setprop("/it-autoflight/loc", 1);
 	setprop("/it-autoflight/loc1", 1);
-	setprop("/it-autoflight/app", 0);
 	setprop("/it-autoflight/app1", 0);
 	setprop("/it-autoflight/apilsmode", 0);
   } else if (latset == 3) {
-	setprop("/it-autoflight/hdg", 1);
-	setprop("/it-autoflight/nav", 0);
-	setprop("/it-autoflight/loc", 0);
 	setprop("/it-autoflight/loc1", 0);
-	setprop("/it-autoflight/app", 0);
 	setprop("/it-autoflight/app1", 0);
 	setprop("/it-autoflight/aplatmode", 0);
 	setprop("/it-autoflight/aphldtrk", 0);
@@ -133,12 +107,7 @@ setlistener("/it-autoflight/aplatset", func {
 setlistener("/it-autoflight/apvertset", func {
   var vertset = getprop("/it-autoflight/apvertset");
   if (vertset == 0) {
-	setprop("/it-autoflight/alt", 1);
-	setprop("/it-autoflight/vs", 0);
-	setprop("/it-autoflight/app", 0);
 	setprop("/it-autoflight/app1", 0);
-	setprop("/it-autoflight/altc", 0);
-	setprop("/it-autoflight/flch", 0);
 	setprop("/it-autoflight/apvertmode", 0);
 	setprop("/it-autoflight/aphldtrk2", 0);
 	setprop("/it-autoflight/apilsmode", 0);
@@ -149,46 +118,25 @@ setlistener("/it-autoflight/apvertset", func {
   } else if (vertset == 1) {
     var altinput = getprop("/it-autoflight/settings/target-altitude-ft");
 	setprop("/it-autoflight/settings/target-altitude-ft-actual", altinput);
-	setprop("/it-autoflight/alt", 0);
-	setprop("/it-autoflight/vs", 1);
-	setprop("/it-autoflight/app", 0);
 	setprop("/it-autoflight/app1", 0);
-	setprop("/it-autoflight/altc", 0);
-	setprop("/it-autoflight/flch", 0);
 	setprop("/it-autoflight/apvertmode", 1);
 	setprop("/it-autoflight/aphldtrk2", 0);
 	setprop("/it-autoflight/apilsmode", 0);
 	flchthrust();
   } else if (vertset == 2) {
 	setprop("/instrumentation/nav/signal-quality-norm", 0);
-	setprop("/it-autoflight/hdg", 0);
-	setprop("/it-autoflight/nav", 0);
-	setprop("/it-autoflight/loc", 1);
 	setprop("/it-autoflight/loc1", 1);
 	setprop("/instrumentation/nav/gs-rate-of-climb", 0);
-	setprop("/it-autoflight/alt", 0);
-	setprop("/it-autoflight/vs", 0);
-	setprop("/it-autoflight/app", 1);
 	setprop("/it-autoflight/app1", 1);
-	setprop("/it-autoflight/altc", 0);
-	setprop("/it-autoflight/flch", 0);
 	setprop("/it-autoflight/apilsmode", 1);
   } else if (vertset == 3) {
-	setprop("/it-autoflight/alt", 0);
-	setprop("/it-autoflight/vs", 0);
-	setprop("/it-autoflight/altc", 1);
-	setprop("/it-autoflight/flch", 0);
+	setprop("/it-autoflight/app1", 0);
 	setprop("/it-autoflight/apvertmode", 0);
 	setprop("/it-autoflight/aphldtrk2", 0);
   } else if (vertset == 4) {
     var altinput = getprop("/it-autoflight/settings/target-altitude-ft");
 	setprop("/it-autoflight/settings/target-altitude-ft-actual", altinput);
-	setprop("/it-autoflight/alt", 0);
-	setprop("/it-autoflight/vs", 0);
-	setprop("/it-autoflight/app", 0);
 	setprop("/it-autoflight/app1", 0);
-	setprop("/it-autoflight/altc", 0);
-	setprop("/it-autoflight/flch", 1);
 	setprop("/it-autoflight/apvertmode", 4);
 	setprop("/it-autoflight/aphldtrk2", 2);
 	setprop("/it-autoflight/apilsmode", 0);
