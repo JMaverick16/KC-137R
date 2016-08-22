@@ -208,8 +208,8 @@
 			<scale>4</scale>
 		</input>
 		<reference>
-			<value>0.83</value>
-			<offset>-0.83</offset>
+			<value>0.93</value>
+			<offset>-0.93</offset>
 			<scale>4</scale>
 		</reference>
 		<output>
@@ -478,7 +478,7 @@
 			<property>/it-autoflight/internal/target-roll-deg</property>
 		</reference>
 		<output>
-			<property>/controls/flight/aileron</property>
+			<property>/controls/flight/aileron-cmd</property>
 		</output>
 		<config>
 			<Kp>0.10</Kp>		
@@ -551,7 +551,7 @@
       <prop>/it-autoflight/internal/target-roll-deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/aileron</prop>
+      <prop>/controls/flight/aileron-cmd</prop>
     </output>
     <config>
 	  <Kp>0.10</Kp>		
@@ -564,6 +564,27 @@
 	  <u_max>0.70</u_max>  	
     </config>
   </pid-controller>
+  
+	<filter>
+		<name>IT-CONTROLLER: ROLL FILTER</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<enable>
+			<condition>
+				<equals>
+					<property>/it-autoflight/ap_master</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<property>/controls/flight/aileron-cmd</property>
+		</input>
+		<output>/controls/flight/aileron</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>0.4</max-rate-of-change>
+	</filter>
 
  <!-- =============================================================== -->
  <!-- Vertical Modes                                                  -->
@@ -799,7 +820,7 @@
 			<prop>/it-autoflight/internal/target-pitch-deg</prop>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator-filter</prop>
+			<prop>/controls/flight/elevator-cmd</prop>
 		</output>
 		<config>
 			<Kp>-0.10</Kp>      
@@ -848,7 +869,7 @@
 			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</reference>
 		<output>
-			<property>/controls/flight/elevator-filter</property>
+			<property>/controls/flight/elevator-cmd</property>
 		</output>
 		<config>
 			<Kp>-0.09</Kp>      
@@ -876,7 +897,7 @@
 			</condition>
 		</enable>
 		<input>
-			<property>/controls/flight/elevator-filter</property>
+			<property>/controls/flight/elevator-cmd</property>
 		</input>
 		<output>/controls/flight/elevator</output>
 		<type>noise-spike</type>
@@ -890,7 +911,7 @@
 			<condition>
 				<and>
 					<greater-than>
-						<property>/controls/flight/elevator-filter</property>
+						<property>/controls/flight/elevator-cmd</property>
 						<value>0.05</value>
 					</greater-than>
 					<equals>
@@ -907,7 +928,7 @@
 			<value>1</value>
 		</reference>
 		<output>
-			<property>/controls/flight/elevator-trim-filter</property>
+			<property>/controls/flight/elevator-trim-cmd</property>
 		</output>
 		<config>
 			<Kp>0.08</Kp>
@@ -928,7 +949,7 @@
 			<condition>
 				<and>
 					<less-than>
-						<property>/controls/flight/elevator-filter</property>
+						<property>/controls/flight/elevator-cmd</property>
 						<value>-0.05</value>
 					</less-than>
 					<equals>
@@ -945,7 +966,7 @@
 			<value>1</value>
 		</reference>
 		<output>
-			<property>/controls/flight/elevator-trim-filter</property>
+			<property>/controls/flight/elevator-trim-cmd</property>
 		</output>
 		<config>
 			<Kp>-0.08</Kp>
@@ -973,11 +994,11 @@
 					</equals>
 					<or>
 						<greater-than>
-							<property>/controls/flight/elevator-filter</property>
+							<property>/controls/flight/elevator-cmd</property>
 							<value>0.05</value>
 						</greater-than>
 						<less-than>
-							<property>/controls/flight/elevator-filter</property>
+							<property>/controls/flight/elevator-cmd</property>
 							<value>-0.05</value>
 						</less-than>
 					</or>
@@ -985,7 +1006,7 @@
 			</condition>
 		</enable>
 		<input>
-			<property>/controls/flight/elevator-trim-filter</property>
+			<property>/controls/flight/elevator-trim-cmd</property>
 		</input>
 		<output>/controls/flight/elevator-trim</output>
 		<type>noise-spike</type>
@@ -1056,20 +1077,13 @@
 	  </condition>
     </enable>
     <input>
-      <prop>/velocities/airspeed-kt</prop>
+      <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <prop>/it-autoflight/settings/target-speed-kt</prop>
+      <property>/it-autoflight/settings/target-speed-kt</property>
     </reference>
     <output>
-      <prop>/controls/engines/engine[0]/throttle</prop>
-      <prop>/controls/engines/engine[1]/throttle</prop>
-      <prop>/controls/engines/engine[2]/throttle</prop>
-      <prop>/controls/engines/engine[3]/throttle</prop>
-      <prop>/controls/engines/engine[4]/throttle</prop>
-      <prop>/controls/engines/engine[5]/throttle</prop>
-      <prop>/controls/engines/engine[6]/throttle</prop>
-      <prop>/controls/engines/engine[7]/throttle</prop>
+      <property>/controls/flight/throttle-cmd</property>
     </output>
     <config>
       <Kp>0.1</Kp>        
@@ -1108,22 +1122,15 @@
 	  </condition>
     </enable>
     <input>
-      <prop>/velocities/mach</prop>
+      <property>/velocities/mach</property>
 	  <scale>500.0</scale>
     </input>
     <reference>
-      <prop>/it-autoflight/settings/target-mach</prop>
+      <property>/it-autoflight/settings/target-mach</property>
 	  <scale>500.0</scale>
     </reference>
     <output>
-      <prop>/controls/engines/engine[0]/throttle</prop>
-      <prop>/controls/engines/engine[1]/throttle</prop>
-      <prop>/controls/engines/engine[2]/throttle</prop>
-      <prop>/controls/engines/engine[3]/throttle</prop>
-      <prop>/controls/engines/engine[4]/throttle</prop>
-      <prop>/controls/engines/engine[5]/throttle</prop>
-      <prop>/controls/engines/engine[6]/throttle</prop>
-      <prop>/controls/engines/engine[7]/throttle</prop>
+      <property>/controls/flight/throttle-cmd</property>
     </output>
     <config>
       <Kp>0.1</Kp>        
@@ -1157,20 +1164,13 @@
 	  </condition>
     </enable>
     <input>
-      <prop>/velocities/airspeed-kt</prop>
+      <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <prop>/it-autoflight/settings/idlethr</prop>
+      <property>/it-autoflight/settings/idlethr</property>
     </reference>
     <output>
-      <prop>/controls/engines/engine[0]/throttle</prop>
-      <prop>/controls/engines/engine[1]/throttle</prop>
-      <prop>/controls/engines/engine[2]/throttle</prop>
-      <prop>/controls/engines/engine[3]/throttle</prop>
-      <prop>/controls/engines/engine[4]/throttle</prop>
-      <prop>/controls/engines/engine[5]/throttle</prop>
-      <prop>/controls/engines/engine[6]/throttle</prop>
-      <prop>/controls/engines/engine[7]/throttle</prop>
+      <property>/controls/flight/throttle-cmd</property>
     </output>
     <config>
       <Kp>0.1</Kp>        
@@ -1204,20 +1204,13 @@
 	  </condition>
     </enable>
     <input>
-      <prop>/velocities/airspeed-kt</prop>
+      <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <prop>/it-autoflight/settings/clbthr</prop>
+      <property>/it-autoflight/settings/clbthr</property>
     </reference>
     <output>
-      <prop>/controls/engines/engine[0]/throttle</prop>
-      <prop>/controls/engines/engine[1]/throttle</prop>
-      <prop>/controls/engines/engine[2]/throttle</prop>
-      <prop>/controls/engines/engine[3]/throttle</prop>
-      <prop>/controls/engines/engine[4]/throttle</prop>
-      <prop>/controls/engines/engine[5]/throttle</prop>
-      <prop>/controls/engines/engine[6]/throttle</prop>
-      <prop>/controls/engines/engine[7]/throttle</prop>
+      <property>/controls/flight/throttle-cmd</property>
     </output>
     <config>
       <Kp>0.1</Kp>        
@@ -1231,5 +1224,35 @@
       <u_max>0.96</u_max>  
     </config>
   </pid-controller>
+  
+	<filter>
+		<name>IT-CONTROLLER: PITCH FILTER</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<enable>
+			<condition>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<property>/controls/flight/throttle-cmd</property>
+		</input>
+		<output>
+			<prop>/controls/engines/engine[0]/throttle</prop>
+			<prop>/controls/engines/engine[1]/throttle</prop>
+			<prop>/controls/engines/engine[2]/throttle</prop>
+			<prop>/controls/engines/engine[3]/throttle</prop>
+			<prop>/controls/engines/engine[4]/throttle</prop>
+			<prop>/controls/engines/engine[5]/throttle</prop>
+			<prop>/controls/engines/engine[6]/throttle</prop>
+			<prop>/controls/engines/engine[7]/throttle</prop>
+		</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>0.35</max-rate-of-change>
+	</filter>
 
 </PropertyList>
