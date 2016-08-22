@@ -120,8 +120,8 @@
 </model>
 
 <model>
-  <name>rmi</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/rmi/rmi.xml</path>
+  <name>clock</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
     <y-m>-0.544</y-m>
@@ -146,16 +146,6 @@
     <x-m>-18.918</x-m>
     <y-m>-0.3</y-m>
     <z-m>0.794</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>clock</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.3</y-m>
-    <z-m>0.705</z-m>
   </offsets>
 </model>
 
@@ -375,8 +365,8 @@
 </model>
 
 <model>
-  <name>rmi_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/rmi/rmi.xml</path>
+  <name>clock_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
     <y-m>0.30</y-m>
@@ -401,16 +391,6 @@
     <x-m>-18.918</x-m>
     <y-m>0.544</y-m>
     <z-m>0.794</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>clock</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>0.30</y-m>
-    <z-m>0.71</z-m>
   </offsets>
 </model>
 
