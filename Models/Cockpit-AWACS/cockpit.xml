@@ -590,6 +590,24 @@
 	</animation>
 	
 	<model>
+		<name>yokesC</name>
+		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/Equipment/yokesC/yokes.xml</path>
+		<offsets>
+		  <x-m>0.0</x-m>
+		  <y-m>0.0</y-m>
+		  <z-m>-0.08</z-m>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>yokesC</object-name>	
+		<condition>
+			<property>/sim/model-type/CR</property>
+		</condition>
+	</animation>
+	
+	<model>
 		<name>tiller</name>
 		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/Equipment/yokes/tiller.xml</path>
 		<offsets>
@@ -666,6 +684,25 @@
 		<object-name>bookRC</object-name>	
 		<condition>
 			<property>/sim/model-type/RCR</property>
+		</condition>
+	</animation>
+	
+	<model>
+		<name>bookC</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Manual/book-C.xml</path>
+		<offsets>
+		  <x-m>-17.72</x-m>
+		  <y-m> 0.61</y-m>
+		  <z-m> 0.756</z-m>
+			<heading-deg>10.0</heading-deg>
+		</offsets>
+	</model>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bookC</object-name>	
+		<condition>
+			<property>/sim/model-type/CR</property>
 		</condition>
 	</animation>
 	

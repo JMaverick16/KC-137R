@@ -7,15 +7,15 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Boeing EC-137R (IAE V2533-A5)</description>
+  <description>Boeing C-137R (IAE V2533-A5)</description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/splashTT.png</splash-texture>
 	</startup>
 
   <model n="0">
-   	 <path>Aircraft/KC-137R/Models/EC-137R.xml</path>
+   	 <path>Aircraft/KC-137R/Models/C-137R.xml</path>
       <livery>
-        <file type="string">EC-137R</file>
+        <file type="string">C-137R</file>
       </livery>
   </model>
 
@@ -38,7 +38,7 @@
 	<menubar>
 		<default>
 			<menu n="100">
-				<label>Boeing EC-137R</label>
+				<label>Boeing C-137R</label>
 				<enabled type="bool">true</enabled>
 				<item>
 					<label>Autostart / shutdown</label>
@@ -139,7 +139,7 @@
 	</menubar>
 
 	<help>
-	  <title>Boeing EC-137R</title>
+	  <title>Boeing C-137R</title>
 		<key>
 		  <name>L</name>
 		  <desc>toggle Landing Lights</desc>
@@ -238,42 +238,13 @@ For development I have used the BOEING 707 document
 no. D6-3071-00
 		</text>
 	</help>
-  <view n="105">
-    <name>Awacs Officer</name>
-    <enabled type="bool">true</enabled>
-    <type>lookfrom</type>
-    <internal type="bool">true</internal>
-    <config>
-			<from-model type="bool">true</from-model>
-			<from-model-idx type="int">0</from-model-idx>
-			<!-- x/y/z == right/up/back -->
-			<x-offset-m archive="y"> 0.63</x-offset-m>
-			<y-offset-m archive="y">1.26</y-offset-m>
-			<z-offset-m archive="y">-10.57</z-offset-m>
-			<pitch-offset-deg type="double">-9.0</pitch-offset-deg>
-			<default-pitch-deg type="double">-9.0</default-pitch-deg>
-			<from-model-idx type="int">0</from-model-idx>
-			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-			<default-field-of-view-deg type="double">90.0</default-field-of-view-deg>
-			<default-heading-deg type="double">0</default-heading-deg>
-			<front-direction-deg type="double">0</front-direction-deg>
-			<front-left-direction-deg type="double">45</front-left-direction-deg>
-			<left-direction-deg type="double">90</left-direction-deg>
-			<back-left-direction-deg type="double">135</back-left-direction-deg>
-			<back-direction-deg type="double">180</back-direction-deg>
-			<back-right-direction-deg type="double">225</back-right-direction-deg>
-			<right-direction-deg type="double">270</right-direction-deg>
-			<front-right-direction-deg type="double">315</front-right-direction-deg>
-			<dynamic-view type="bool">true</dynamic-view>
-    </config>
-	</view>
   <model-type>
 	<KCR type="bool">false</KCR>
 	<KCRT type="bool">false</KCRT>
-	<ECR type="bool">true</ECR>
+	<ECR type="bool">false</ECR>
 	<RCR type="bool">false</RCR>
 	<E8R type="bool">false</E8R>
-	<CR type="bool">false</CR>
+	<CR type="bool">true</CR>
   </model-type>
  </sim>
  
@@ -281,7 +252,7 @@ no. D6-3071-00
 	<cdu>
 		<display>IDENT</display>
 		<ident>
-			<model>EC-137R</model>
+			<model>C-137R</model>
 			<engines>IAE V2533-A5</engines>
 		</ident>
 		<input type="string"/>
@@ -298,11 +269,11 @@ no. D6-3071-00
 			<text1 type="string"></text1>
 			<subtitle2 type="string"></subtitle2>
 			<text2 type="string"></text2>
-			<subtitle3 type="string">MODEL EC-137R</subtitle3>
+			<subtitle3 type="string">MODEL C-137R</subtitle3>
 			<text3 type="string">FOR FLIGHTGEAR SIMULATION ONLY</text3>
 			<subtitle4 type="string"></subtitle4>
 			<text4 type="string">J Maverick 16, it0uchpods Hanger</text4>
-			<content include="Models/Cockpit/Manual/manual-AWACS.xml"/>
+			<content include="Models/Cockpit/Manual/manual-C.xml"/>
 		</manual>
   </b707>
 
@@ -311,7 +282,7 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/shake.nas</file>
 			<file>Aircraft/KC-137R/Nasal/autostart.nas</file>
 			<file>Aircraft/KC-137R/Nasal/fuel-and-payload.nas</file>
-			<file>Aircraft/KC-137R/Nasal/liveriesEC.nas</file>
+			<file>Aircraft/KC-137R/Nasal/liveriesC.nas</file>
 			<file>Aircraft/KC-137R/Nasal/electrical.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-707.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-agl-radar.nas</file>

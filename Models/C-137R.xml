@@ -8,11 +8,11 @@
 
 <PropertyList>
 
- <path>KC-137R.ac</path>
-
+ <path>C-137R.ac</path>
+ 
 <animation>
 	<type>select</type>		
-    <!--<object-name>fuselage</object-name> - in operator room we need the fuselage -->
+    <object-name>fuselage</object-name>
     <object-name>fuselage.inner</object-name>
     <object-name>fuselage.belly</object-name>
     <object-name>doorFL</object-name>
@@ -60,6 +60,9 @@
 	<object-name>lhibail</object-name>
 	<object-name>rhobail</object-name>
 	<object-name>lhobail</object-name>
+	<object-name>NGear</object-name>
+	<object-name>NGearStrut</object-name>
+	<object-name>NoseWheel</object-name>
 	<object-name>RightGear</object-name>
 	<object-name>RightGear.001</object-name>
 	<object-name>RightGearBase</object-name>
@@ -76,17 +79,10 @@
 </animation>
  
   <sound><path>Aircraft/KC-137R/Sounds/mp-sound.xml</path></sound>
-  
-	<multiplay>
-		<refuel>
-		 	<type>probe</type>
-		 	<type>boom</type>
-		</refuel>
-	</multiplay>
-  
+
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Aircraft/KC-137R/Models/Liveries", 10);
+      var livery_update = aircraft.livery_update.new("Aircraft/KC-137R/Models/LiveriesC", 10);
     </load>
 
     <unload>
@@ -104,6 +100,7 @@
     <object-name>doorCargo</object-name>
     <object-name>doorBelly</object-name>
     <object-name>nose</object-name>
+    <object-name>fuselage</object-name>
     <object-name>vertstab</object-name>
     <object-name>rudder</object-name>
     <object-name>nonones</object-name>
@@ -135,8 +132,6 @@
 	<object-name>lhibflap</object-name>
 	<object-name>rhobflap</object-name>
 	<object-name>lhobflap</object-name>
-	<object-name>rhobail</object-name>
-	<object-name>lhobail</object-name>
 	<object-name>rhsp1</object-name>
 	<object-name>lhsp1</object-name>
 	<object-name>rhsp3</object-name>
@@ -145,32 +140,35 @@
 	<object-name>lhibail</object-name>
 	<object-name>rhobail</object-name>
 	<object-name>lhobail</object-name>
-	<object-name>refuelAPURight</object-name>
-	<object-name>refuelAPULeft</object-name>
-	<object-name>refuelProbeRight</object-name>
-	<object-name>refuelProbeLeft</object-name>
-	<object-name>refuelPivot</object-name>
-	<object-name>refuelTube</object-name>
-	<object-name>refuelOperator</object-name>
-	<object-name>operatorRoom</object-name>
-	<object-name>operatorRoomWin</object-name>
-	<object-name>operatorPlace</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>KC-137R.png</texture>
+    <texture>C-137R.png</texture>
   </animation>
+  
+	<animation>
+		<type>material</type>
+		<object-name>rudder</object-name>
+		<object-name>vertstab</object-name>
+		<condition>
+		  	<not>
+      			<property>sim/rendering/rembrandt/enabled</property>
+      		</not>
+		</condition>
+		<emission>
+		  <red>0.35</red>
+		  <green>0.35</green>
+		  <blue>0.35</blue>
+		  <factor-prop>sim/multiplay/generic/int[7]</factor-prop>
+		</emission>
+	</animation>
 
-    
-    
 	<animation>
 		<type>noshadow</type>
-    <object-name>fuselage.inner</object-name>
-    <object-name>fuselage.belly</object-name>
-    <object-name>cockpit</object-name>
-    <object-name>operatorRoom</object-name>     
+	  <object-name>fuselage.inner</object-name>
+	  <object-name>fuselage.belly</object-name>
+	  <object-name>cockpit</object-name>     
 	</animation>
 	
-		
 	<!-- inside fuselage -->
 	<animation>
 		<type>material</type>
@@ -186,130 +184,43 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>fuselage.inner</object-name>
 		<object-name>fuselage.belly</object-name>
 		<condition>
-		  <or>
-      	<property>sim/multiplay/generic/float[6]</property>
-      	<property>sim/multiplay/generic/float[7]</property>
-      	<property>sim/multiplay/generic/float[15]</property>
-      	<property>sim/multiplay/generic/float[16]</property>
-      	<property>sim/multiplay/generic/int[19]</property>
-      </or>
+		<or>
+	      	<property>sim/multiplay/generic/float[6]</property>
+	      	<property>sim/multiplay/generic/float[7]</property>
+	      	<property>sim/multiplay/generic/float[15]</property>
+	      	<property>sim/multiplay/generic/float[16]</property>
+	      	<property>sim/multiplay/generic/int[19]</property>
+        </or>
 		</condition>
-	</animation>
-
-	<!-- see operators Room only on view number 12 -->
-	<model>
-		<name>operationLight1</name>
-		<path>Aircraft/KC-137R/Models/Lights/lightcone-small-oo.xml</path>
-		<offsets>   
-		  <x-m>12.65</x-m>
-		  <y-m>-0.24</y-m>
-		  <z-m>-0.65</z-m>
-		  <pitch-deg>-5.0</pitch-deg>
-		  <roll-deg> 0.0</roll-deg>
-		</offsets>
-	</model>
-	
-	<model>
-		<name>operationLight2</name>
-		<path>Aircraft/KC-137R/Models/Lights/lightcone-small-oo.xml</path>
-		<offsets>   
-		  <x-m>12.65</x-m>
-		  <y-m> 0.24</y-m>
-		  <z-m>-0.65</z-m>
-		  <pitch-deg>-5.0</pitch-deg>
-		  <roll-deg> 0.0</roll-deg>
-		</offsets>
-	</model>
-	
-	<model>
-		<name>operationLight3</name>
-		<path>Aircraft/KC-137R/Models/Lights/lightcone-small-oo.xml</path>
-		<offsets>   
-		  <x-m>11.0</x-m>
-		  <y-m> 0.0</y-m>
-		  <z-m>-0.96</z-m>
-		  <pitch-deg>-95.0</pitch-deg>
-		  <roll-deg> 0.0</roll-deg>
-		</offsets>
-	</model>
-		
-	<model>
-	 <name>operationPanel</name>
-	 <path>Aircraft/KC-137R/Models/Cockpit/Equipment/tt_panel/tt_panel.xml</path>
-		<offsets>
-      <x-m>12.75</x-m>
-      <y-m>0</y-m>
-      <z-m>-1.23</z-m>
-      <heading-deg>180</heading-deg>
-    	<pitch-deg>-70</pitch-deg>
-		</offsets>
-	</model>
-
-	<model>
-	 <name>operationRadar</name>
-	 <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/radar.xml</path>
-		<offsets>
-      <x-m> 12.8</x-m>
-      <y-m> 0.00</y-m>
-      <z-m>-0.9</z-m>
-      <heading-deg>180</heading-deg>
-    	<pitch-deg>30</pitch-deg>
-    	<roll-deg>0</roll-deg>
-		</offsets>
-	</model>
-	
-	<animation>
-		<type>material</type>
-		<object-name>operatorRoom</object-name>
-		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-		</condition>
-		<emission>
-		  <red>0.4</red>
-		  <green>0.4</green>
-		  <blue>0.4</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
-		</emission>
-	</animation>
-
-	<animation>
-		<type>material</type>
-		<object-name>operatorRoomWin</object-name>
-		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-		</condition>
-		<emission>
-		  <red>0.1</red>
-		  <green>0.1</green>
-		  <blue>0.1</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
-		</emission>
 	</animation>
 	
 	<animation>
 		<type>select</type>
-		<object-name>operatorRoom</object-name>
-		<object-name>operationPanel</object-name>
-		<object-name>operationLight1</object-name>
-		<object-name>operationLight2</object-name>
-		<object-name>operationLight3</object-name>
+		<object-name>fuselage.inner</object-name>
 		<condition>
-			<equals>
-		    <property>sim/current-view/view-number</property>
-		    <value>12</value>
-		  </equals>
+			<or>
+				<property>/sim/multiplay/generic/int[9]</property>
+				<and>
+					<not>
+						<equals>
+							<property>/sim/current-view/name</property>
+							<value type="string">Passengers View</value>
+						</equals>
+					</not>
+					<not><property>/sim/multiplay/generic/int[9]</property></not>
+				</and>
+			</or>
 		</condition>
 	</animation>
 
 <!-- Externe -->
 	<model>
 	 <name>Pushback</name>
-	 <path>Models/Airport/Pushback/Military.xml</path>
+	 <path>Models/Airport/Pushback/Goldhofert.xml</path>
 	 <offsets>
-		<x-m>-15.9</x-m>
+		<x-m>-17.5</x-m>
 		<y-m>0</y-m>
 		<z-m>-2.9</z-m>
 	 </offsets>
@@ -330,8 +241,8 @@
 		<type>select</type>
 		<object-name>ExternalPowerUnit</object-name>
 		<condition>
-		  <not><property>sim/multiplay/generic/int[19]</property></not>
 		  <property>sim/multiplay/generic/int[14]</property>
+		  <not><property>sim/multiplay/generic/int[19]</property></not>
 		</condition>
 	</animation>
 	
@@ -348,7 +259,7 @@
 		  </binding>
 		</action>
   </animation>
-
+  
   <!-- Fuel Truck -->
   <model>
   	<name>FuelTruck</name>
@@ -360,14 +271,14 @@
 	</offsets>
   </model>
 
-<animation>
-	<type>select</type>
-	<object-name>FuelTruck</object-name>
-	<condition>
-	  <property>sim/multiplay/generic/float[13]</property>
-	  <not><property>sim/multiplay/generic/int[19]</property></not>
-	</condition>
-</animation> 
+	<animation>
+		<type>select</type>
+		<object-name>FuelTruck</object-name>
+		<condition>
+		  <property>sim/multiplay/generic/float[13]</property>
+		  <not><property>sim/multiplay/generic/int[19]</property></not>
+		</condition>
+	</animation> 
   
   <animation>
 		<type>pick</type>
@@ -388,7 +299,7 @@
           </binding>
 		</action>
   </animation>
-  
+	
 	<!-- Stairways -->
 	<model>
 		<name>frontStair</name>
@@ -696,127 +607,7 @@
 				<not><property>/sim/rendering/rembrandt/enabled</property></not>
 			</and>
 		</condition>
-	</animation>
-	
-  <!-- Air-to-Air Refuelsystem -->
-	<animation>
-		<type>select</type>
-		<object-name>refuelProbeRight</object-name>
-		<condition>
-		  <property>sim/multiplay/generic/int[10]</property>
-		</condition>
-	</animation>
-	
-	<animation>
-		<type>select</type>
-		<object-name>refuelProbeLeft</object-name>
-		<condition>
-		  <property>sim/multiplay/generic/int[11]</property>
-		</condition>
-	</animation>
-	
-  <animation>
-		<type>pick</type>
-		<object-name>refuelAPULeft</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.toggleProbeLeft();</script>
-		  </binding>
-		</action>
-  </animation>
-  
-  <animation>
-		<type>pick</type>
-		<object-name>refuelAPURight</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.toggleProbeRight();</script>
-		  </binding>
-		</action>
-  </animation>	
-
-	<animation>
-		<type>rotate</type>
-		<object-name>refuelBoom</object-name>
-		<object-name>refuelTube</object-name>
-		<property>/b707/refuelling/boom-azimuth</property>
-		<factor>1.5</factor>
-		<axis>
-			<x> 0</x>
-			<y> 0</y>
-			<z> 1</z>
-		</axis>
-		<center>
-			<x-m>16.04</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-		</center>
-	</animation>
-	
-	<animation>
-		<name>Boom rotate</name>
-		<type>rotate</type>
-		<object-name>refuelBoom</object-name>
-		<object-name>refuelTube</object-name>
-		<property>sim/multiplay/generic/float[18]</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.7</ind><dep>40</dep></entry>
-			<entry><ind>1</ind><dep>40</dep></entry>
-		</interpolation>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-		<center>
-			<x-m>16.15</x-m>
-			<y-m>0</y-m>
-			<z-m>-0.6614</z-m>
-		</center>
-	</animation>
-	
-	<animation>
-		<name>Boom extend</name>
-		<type>translate</type>
-		<object-name>refuelTube</object-name>
-		<property>sim/multiplay/generic/float[18]</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>0.7</ind><dep>0</dep></entry>
-			<entry><ind>1</ind><dep>4.0</dep></entry>
-		</interpolation>
-		<axis>
-			<x1-m>16.15</x1-m>
-			<y1-m>0</y1-m>
-			<z1-m>-0.6614</z1-m>
-			<x2-m>24.293</x2-m>
-			<y2-m>0</y2-m>
-			<z2-m>0.9878</z2-m>
-		</axis>
-	</animation>
-	
-  <animation>
-		<type>pick</type>
-		<object-name>refuelPivot</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.doorsystem.refuelexport();</script>
-		  </binding>
-		</action>
-  </animation>	
+	</animation>v
   
 	<!-- animate the doors and the nose -->
 	<animation>
@@ -1098,7 +889,7 @@
 				 	<value>0.9</value>
 				</greater-than>
 			</condition>
-      <factor>50</factor>
+      <factor>25</factor>
       <center>
           <x-m>-15.58</x-m>
           <y-m>  0.0</y-m>
@@ -1833,6 +1624,7 @@
 
 
 <!-- End Gear Effects-->
+<!-- End Gear Effects-->
  <animation>
   <type>translate</type>
   <object-name>lhibail</object-name>
@@ -2476,14 +2268,14 @@
  <!--cockpit -->
 	<model>
 		<name>cockpit</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/cockpit.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit-AWACS/cockpit.xml</path>
 		<offsets>
 		  <x-m>0.0</x-m>
 		  <y-m>0.0</y-m>
 		  <z-m>0.0</z-m>
 		</offsets>
 	</model>
-
+	
 	<model>
 		<name>registrationCockpitPanel</name>
 	  <path>Aircraft/KC-137R/Models/Registration/flightnumber.xml</path>
@@ -2500,13 +2292,47 @@
 	    </params>
 	  </overlay>
 	</model>
+
+	<model> 
+		<name>theCabin</name>
+		<path>Aircraft/KC-137R/Models/cabin.xml</path>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>theCabin</object-name>
+		<condition>
+			<equals>
+				<property>/sim/current-view/name</property>
+				<value type="string">Passengers View</value>
+			</equals>
+			<not><property>/sim/multiplay/generic/int[9]</property></not>
+		</condition>	
+	</animation>
+
+	<model> 
+		<name>theContainerInside</name>
+		<path>Aircraft/KC-137R/Models/container.xml</path>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>theContainerInside</object-name>
+		<condition>
+			<equals>
+				<property>/sim/current-view/name</property>
+				<value type="string">Passengers View</value>
+			</equals>
+			<property>/sim/multiplay/generic/int[9]</property>
+		</condition>	
+	</animation>
 	
     <animation>
      <type>translate</type>
      <object-name>cockpit</object-name>
 	 <object-name>registrationCockpitPanel</object-name>
-	 <object-name>operatorRoom</object-name>
-	 <object-name>operationPanel</object-name>
+	 <object-name>theCabin</object-name>
+	 <object-name>theContainerInside</object-name>  
      <property>/b707/shake-effect/shaking</property>
      <axis>
    		<x1-m>  0</x1-m>
@@ -2518,44 +2344,44 @@
      </axis>
     </animation>
 
-<!-- CFM56 -->
+<!-- IAE V2500 -->
 	<model>
-		<name>engineOneCFM</name>
-		<path>Aircraft/KC-137R/Models/Engines/CFM56_1.xml</path>
+		<name>engineOneIAE</name>
+		<path>Aircraft/KC-137R/Models/Engines/V2500_1.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m>-14.835</y-m>
-		  <z-m> -0.99</z-m>
+		  <z-m> -0.93</z-m>
 		</offsets>
 	</model>
 	
 	<model>
-		<name>engineTwoCFM</name>
-		<path>Aircraft/KC-137R/Models/Engines/CFM56_2.xml</path>
+		<name>engineTwoIAE</name>
+		<path>Aircraft/KC-137R/Models/Engines/V2500_2.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m>-10.077</y-m>
-		  <z-m> -1.47</z-m>
+		  <z-m> -1.40</z-m>
 		</offsets>
 	</model>
 	
 	<model>
-		<name>engineThreeCFM</name>
-		<path>Aircraft/KC-137R/Models/Engines/CFM56_3.xml</path>
+		<name>engineThreeIAE</name>
+		<path>Aircraft/KC-137R/Models/Engines/V2500_3.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m> 10.077</y-m>
-		  <z-m> -1.47</z-m>
+		  <z-m> -1.40</z-m>
 		</offsets>
 	</model>
 	
 	<model>
-		<name>engineFourCFM</name>
-		<path>Aircraft/KC-137R/Models/Engines/CFM56_4.xml</path>
+		<name>engineFourIAE</name>
+		<path>Aircraft/KC-137R/Models/Engines/V2500_4.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m> 14.835</y-m>
-		  <z-m> -0.99</z-m>
+		  <z-m> -0.93</z-m>
 		</offsets>
 	</model>
 	
@@ -2568,6 +2394,7 @@
 			<z-m>0</z-m>
 		</offsets>
 	</model> 
+
 
 <!-- Fire , #1 -->
 <model>

@@ -273,6 +273,7 @@ no. D6-3071-00
 	<ECR type="bool">false</ECR>
 	<RCR type="bool">false</RCR>
 	<E8R type="bool">true</E8R>
+	<CR type="bool">false</CR>
   </model-type>
  </sim>
  
