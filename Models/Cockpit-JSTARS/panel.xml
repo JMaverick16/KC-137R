@@ -65,27 +65,7 @@
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>-0.227</y-m>
-    <z-m>0.908</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>agl</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl.xml</path>
-  <offsets>
-    <x-m>-18.967</x-m>
-    <y-m>-0.227</y-m>
-    <z-m>0.789</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>agl-switch</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl-switch.xml</path>
-  <offsets>
-	<x-m>-18.967</x-m>
-    <y-m>-0.195</y-m>
-    <z-m>0.72</z-m>
+    <z-m>0.858</z-m>
   </offsets>
 </model>
 
@@ -295,6 +275,16 @@
 <!-- Copilot Panel -->
 
 <model>
+  <name>apstatus</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apstatus/apstatus.xml</path>
+  <offsets>
+    <x-m>-18.918</x-m>
+    <y-m>0.62</y-m>
+    <z-m>0.858</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>operating_time_indicator</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/operating_time/opt.xml</path>
   <offsets>
@@ -321,26 +311,6 @@
     <x-m>-18.918</x-m>
     <y-m>0.422</y-m>
     <z-m>0.878</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>agl_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl.xml</path>
-  <offsets>
-    <x-m>-18.967</x-m>
-    <y-m> 0.61</y-m>
-    <z-m>0.789</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>agl-switch_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/agl/agl-switch.xml</path>
-  <offsets>
-    <x-m>-18.967</x-m>
-    <y-m>0.643</y-m>
-    <z-m>0.72</z-m>
   </offsets>
 </model>
 
