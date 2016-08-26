@@ -493,6 +493,10 @@
 			<command>property-toggle</command>
 			<property>/it-autoflight/fd_mastersw</property>
 			</binding>
+			<binding>
+			<command>property-toggle</command>
+			<property>/it-autoflight/fd_mastersw2</property>
+			</binding>
 		</action>
 	</animation>
 
@@ -507,6 +511,11 @@
 			<binding>
 			<command>property-assign</command>
 			<property>/it-autoflight/ap_mastersw</property>
+			<value>0</value>
+			</binding>
+			<binding>
+			<command>property-assign</command>
+			<property>/it-autoflight/ap_mastersw2</property>
 			<value>0</value>
 			</binding>
 			<binding>

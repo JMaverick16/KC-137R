@@ -183,7 +183,7 @@ Syd Adams
         <condition>
 			<and>
 				<property>sim/rendering/rembrandt/enabled</property>
-				<property>/it-autoflight/fd_master</property>
+				<property>/it-autoflight/fd_master2</property>
 			</and>
         </condition>
     </animation>
@@ -195,7 +195,7 @@ Syd Adams
         <condition>
 			<and>
 				<not><property>sim/rendering/rembrandt/enabled</property></not>
-				<property>/it-autoflight/fd_master</property>
+				<property>/it-autoflight/fd_master2</property>
 			</and>
         </condition>
     </animation>

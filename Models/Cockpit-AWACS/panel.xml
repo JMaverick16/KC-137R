@@ -234,7 +234,7 @@
 
 <model>
   <name>PFD_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/PFD/PFD_L.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/PFD/PFD_R.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
     <y-m>0.493</y-m>

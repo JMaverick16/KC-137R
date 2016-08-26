@@ -316,7 +316,7 @@
 
 <model>
   <name>EADI_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EADI/AI.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EADI/AI2.xml</path>
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>0.422</y-m>
