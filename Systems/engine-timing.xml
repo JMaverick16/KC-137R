@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <filter>
+        <name>EPR 1</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/epr</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>1</ind><dep>1</dep></entry>
+                    <entry><ind>2</ind><dep>1.55</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[0]/epr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 2</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[1]/epr</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>1</ind><dep>1</dep></entry>
+                    <entry><ind>2</ind><dep>1.55</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[1]/epr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 3</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[2]/epr</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>1</ind><dep>1</dep></entry>
+                    <entry><ind>2</ind><dep>1.55</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[2]/epr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 4</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[3]/epr</property> 
+                    <entry><ind>0</ind><dep>0</dep></entry>
+                    <entry><ind>1</ind><dep>1</dep></entry>
+                    <entry><ind>2</ind><dep>1.55</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[3]/epr-actual</output>
+    </filter>
+
+</PropertyList>

@@ -32,6 +32,9 @@
     <property-rule n="102">
          <path>Aircraft/KC-137R/Systems/autospoiler.xml</path>
     </property-rule>
+    <autopilot>
+         <path>Aircraft/KC-137R/Systems/engine-timing.xml</path>
+    </autopilot>
 	</systems>
 
 	<instrumentation>
@@ -234,8 +237,8 @@
 		<float n="7" alias="/instrumentation/doors/pasrear/position-norm"/>						<!-- Passenger - back -->
 		<float n="8" alias="/position/altitude-agl-ft"/>    <!-- for the kind of fire or lights -->
 		<float n="9" alias="/controls/special/wiper-deg"/>
-		<float n="10" alias="/gear/gear[1]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
-		<float n="11" alias="/gear/gear[2]/compression-norm"/>									<!-- multiplayer see the hanging wheels -->
+		<float n="10" alias="/position/gear-agl-ft"/>											<!-- multiplayer see the hanging wheels -->
+		<!--float n="11" alias="/gear/gear[2]/compression-norm"/-->								<!-- not used yet, reserve-->
 		<float n="12" alias="/controls/flight/aileron"/>										<!-- Spoilerons -->
 		<float n="13" alias="/b707/ground-service/fuel-truck/state"/>							<!-- fuel-truck -->
 		<float n="14" alias="/engines/engine/reverser-pos-norm"/>								<!-- multiplayer see the cowl flaps -->
