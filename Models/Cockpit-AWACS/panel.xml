@@ -22,8 +22,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/refuel_lamp_pilot.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.537</y-m>
-    <z-m>0.693</z-m>
+    <y-m>-0.236</y-m>
+    <z-m>0.7028</z-m>
   </offsets>
 </model>
 
@@ -61,9 +61,9 @@
   <name>mc</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mc/mc.xml</path>
   <offsets>
-    <x-m>-18.89</x-m>
-    <y-m>-0.381</y-m>
-    <z-m> 0.9595</z-m>
+    <x-m>-18.915</x-m>
+    <y-m>-0.377</y-m>
+    <z-m>0.955</z-m>
   </offsets>
 </model>
 
@@ -82,8 +82,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.3</y-m>
-    <z-m>0.705</z-m>
+    <y-m>-0.545</y-m>
+    <z-m>0.712</z-m>
   </offsets>
 </model>
 
@@ -93,7 +93,7 @@
 	<offsets>
       <x-m>-18.916</x-m>
       <y-m>-0.62</y-m>
-	  <z-m>0.71</z-m>
+	  <z-m>0.713</z-m>
 	</offsets>
 </model>
 
@@ -103,7 +103,7 @@
   <offsets>
     <x-m>-18.916</x-m>
       <y-m>-0.62</y-m>
-    <z-m>0.795</z-m>
+    <z-m>0.796</z-m>
   </offsets>
 </model>
 
@@ -113,7 +113,7 @@
   <offsets>
     <x-m>-18.916</x-m>
     <y-m>-0.62</y-m>
-    <z-m>0.855</z-m>
+    <z-m>0.853</z-m>
   </offsets>
 </model>
 
@@ -129,7 +129,7 @@
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.979</z-m>
+      <z-m> 0.980</z-m>
 	  <roll-deg>90</roll-deg>
   </offsets>
 </model>
@@ -140,7 +140,7 @@
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.928</z-m>
+      <z-m> 0.931</z-m>
   </offsets>
 </model>
 
@@ -150,7 +150,7 @@
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.855</z-m>
+      <z-m> 0.858</z-m>
   </offsets>
 </model>
 
@@ -160,7 +160,7 @@
   <offsets>
       <x-m>-18.919</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.785</z-m>
+      <z-m> 0.788</z-m>
   </offsets>
 </model>
 
@@ -237,8 +237,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/operating_time/opt.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.22</y-m>
-    <z-m>0.9595</z-m>
+    <y-m>0.219</y-m>
+    <z-m>0.96</z-m>
   </offsets>
 </model>
 
@@ -276,9 +276,9 @@
   <name>mc_cp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mc/mc.xml</path>
   <offsets>
-    <x-m>-18.89</x-m>
-    <y-m> 0.48</y-m>
-    <z-m> 0.9500</z-m>
+    <x-m>-18.915</x-m>
+    <y-m> 0.454</y-m>
+    <z-m> 0.947</z-m>
   </offsets>
 </model>
 
@@ -287,8 +287,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>0.30</y-m>
-    <z-m>0.71</z-m>
+    <y-m>0.29</y-m>
+    <z-m>0.712</z-m>
   </offsets>
 </model>
 
@@ -297,8 +297,18 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>0.40</y-m>
-    <z-m>0.96</z-m>
+    <y-m>0.39</y-m>
+    <z-m>0.958</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>tancan_rmi_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tacan/ci/ci.xml</path>
+  <offsets>
+    <x-m>-18.916</x-m>
+      <y-m>0.619</y-m>
+    <z-m>0.873</z-m>
   </offsets>
 </model>
 
@@ -307,8 +317,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/airtemp/airtemp.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>0.544</y-m>
-    <z-m>0.705</z-m>
+    <y-m>0.555</y-m>
+    <z-m>0.708</z-m>
   </offsets>
 </model>
 
