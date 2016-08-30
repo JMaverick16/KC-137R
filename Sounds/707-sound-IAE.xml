@@ -1346,7 +1346,7 @@
 			</condition>
 			<volume>
 				<property>/engines/APU/rpm</property>
-				<factor>0.0035</factor>
+				<factor>0.0055</factor>
 			</volume>
       <pitch>
         <property>/engines/APU/rpm</property>
@@ -1373,7 +1373,7 @@
 			</condition>
 			<volume>
 				<property>/engines/APU/rpm</property>
-				<factor>0.01</factor>
+				<factor>0.014</factor>
 			</volume>
       <pitch>
         <property>/engines/APU/rpm</property>
