@@ -200,18 +200,12 @@
 		<type>select</type>
 		<object-name>fuselage.inner</object-name>
 		<condition>
-			<or>
-				<property>/sim/multiplay/generic/int[9]</property>
-				<and>
-					<not>
-						<equals>
-							<property>/sim/current-view/name</property>
-							<value type="string">Passengers View</value>
-						</equals>
-					</not>
-					<not><property>/sim/multiplay/generic/int[9]</property></not>
-				</and>
-			</or>
+			<not>
+				<equals>
+					<property>/sim/current-view/name</property>
+					<value type="string">Passengers View</value>
+				</equals>
+			</not>
 		</condition>
 	</animation>
 
@@ -2301,35 +2295,6 @@
 		<name>theCabin</name>
 		<path>Aircraft/KC-137R/Models/cabin.xml</path>
 	</model>
-
-	<animation>
-		<type>select</type>
-		<object-name>theCabin</object-name>
-		<condition>
-			<equals>
-				<property>/sim/current-view/name</property>
-				<value type="string">Passengers View</value>
-			</equals>
-			<not><property>/sim/multiplay/generic/int[9]</property></not>
-		</condition>	
-	</animation>
-
-	<model> 
-		<name>theContainerInside</name>
-		<path>Aircraft/KC-137R/Models/container.xml</path>
-	</model>
-
-	<animation>
-		<type>select</type>
-		<object-name>theContainerInside</object-name>
-		<condition>
-			<equals>
-				<property>/sim/current-view/name</property>
-				<value type="string">Passengers View</value>
-			</equals>
-			<property>/sim/multiplay/generic/int[9]</property>
-		</condition>	
-	</animation>
 	
     <animation>
      <type>translate</type>

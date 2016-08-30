@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+		Lake of Constance Hangar :: M.Kraus
+		Boeing 707 for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+  <sim n="0">
+    <description>Boeing C-137R Passenger</description>
+    <author>J Maverick 16 (Textures/FDM/Systems), Joshua Davidson (it0uchpods/411)(Cockpit/FDM/Systems) Original: Lake of Constance Hangar [Original from Innis Cunningham]</author>
+	<status>Beta</status>
+    <flight-model>null</flight-model>
+    <variant-of>C-137R</variant-of>
+    
+    <model>
+      <path archive="y">Aircraft/KC-137R/Models/C-137R-PAX.xml</path>
+    </model>
+
+    <remote>
+     <pilot-callsign type="string"/>
+    </remote>
+
+    <sound>
+		<path>Aircraft/KC-137R/Sounds/707-sound-IAE.xml</path>
+    </sound>
+
+   	<startup>
+   		<splash-texture>Aircraft/KC-137R/splashTT.png</splash-texture>
+   	</startup>
+
+    <menubar>
+     <default>
+      <menu n="100">
+      <label>Boeing C-137R Passenger</label>
+      <enabled type="bool">true</enabled>
+      <item>
+       <label>Select C-137R in range</label>
+       <binding>
+        <command>nasal</command>
+        <script>
+         dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);
+        </script>
+       </binding>
+      </item>
+      </menu>
+     </default>
+    </menubar>
+
+    <view>
+     <internal archive="y">true</internal>
+      <enabled type="bool">false</enabled>
+     <config>
+       <limits>
+          <enabled archive="y" type="bool">false</enabled>
+       </limits>
+       <!-- x/y/z == right/up/back -->
+  		 <x-offset-m archive="y">-0.46</x-offset-m>
+  		 <y-offset-m archive="y">1.19</y-offset-m>
+  		 <z-offset-m archive="y">-18.2</z-offset-m>
+  		 <pitch-offset-deg archive="y">-16.0</pitch-offset-deg>
+  		 <default-field-of-view-deg type="double">72</default-field-of-view-deg>
+     </config>
+    </view>
+    <view n="1">
+      <enabled type="bool">true</enabled>
+     <config>
+       <!-- big plane, so extend chase view offset a bit -->
+       <z-offset-m type="double"  archive="y">-50.0</z-offset-m>
+     </config>
+    </view>
+    <view n="2">
+      <enabled type="bool">false</enabled>
+    </view>
+    <view n="3">
+      <enabled type="bool">false</enabled>
+    </view>
+    <view n="4">
+      <enabled type="bool">false</enabled>
+    </view>
+    <view n="5">
+      <enabled type="bool">true</enabled>
+    </view>
+    <view n="6">
+      <enabled type="bool">false</enabled>
+    </view>
+    <view n="7">
+      <enabled type="bool">true</enabled>
+    </view>
+    <view n="101">
+      <name>Passengers View</name>
+      <internal type="bool">false</internal>
+      <enabled type="bool">true</enabled>
+      <config>
+  			<from-model type="bool">true</from-model>
+  			<from-model-idx type="int">0</from-model-idx>
+  			<!-- x/y/z == right/up/back -->
+  			<x-offset-m archive="y">-1.36</x-offset-m>
+  			<y-offset-m archive="y"> 1.05</y-offset-m>
+  			<z-offset-m archive="y"> 8.85</z-offset-m>
+  			<heading-offset-deg type="double">70.0</heading-offset-deg>
+  			<pitch-offset-deg type="double">-2.0</pitch-offset-deg>
+  			<from-model-idx type="int">0</from-model-idx>
+  			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+  			<default-field-of-view-deg type="double">90.0</default-field-of-view-deg>
+  			<default-pitch-deg type="double">-2.0</default-pitch-deg>
+  			<default-heading-deg type="double">0</default-heading-deg>
+  			<front-direction-deg type="double">0</front-direction-deg>
+  			<front-left-direction-deg type="double">45</front-left-direction-deg>
+  			<left-direction-deg type="double">90</left-direction-deg>
+  			<back-left-direction-deg type="double">135</back-left-direction-deg>
+  			<back-direction-deg type="double">180</back-direction-deg>
+  			<back-right-direction-deg type="double">225</back-right-direction-deg>
+  			<right-direction-deg type="double">270</right-direction-deg>
+  			<front-right-direction-deg type="double">315</front-right-direction-deg>
+  			<dynamic-view type="bool">true</dynamic-view>
+      </config>
+  	</view>
+
+
+    <chase-distance-m>-45</chase-distance-m>
+
+  </sim>
+
+  <nasal>
+	<b707>
+		<file>Aircraft/KC-137R/Nasal/shake.nas</file>
+		<file>Aircraft/KC-137R/Nasal/DualControl/707-PAX.nas</file>
+	</b707>
+    <!-- Dual control. -->
+    <dual_control_tools>
+     <file>Aircraft/KC-137R/Nasal/DualControl/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+     <file>Aircraft/KC-137R/Nasal/DualControl/707-dual-control.nas</file>
+    </aircraft_dual_control>
+    <dual_control>
+     <file>Aircraft/KC-137R/Nasal/DualControl/copilot-dual-control.nas</file>
+    </dual_control>
+  </nasal>
+
+  <!-- Dual control depend on this value -->
+  <dual-control>
+    <active type="bool">0</active>
+  </dual-control>
+
+</PropertyList>

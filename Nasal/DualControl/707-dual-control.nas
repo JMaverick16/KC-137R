@@ -12,8 +12,8 @@
 var DCT = dual_control_tools;
 
 ## Pilot/copilot aircraft identifiers. Used by dual_control.
-var pilot_type   = "Aircraft/KC-137R/Models/707.xml";
-var copilot_type = "Aircraft/KC-137R/Models/707-PAX.xml";
+var pilot_type   = "Aircraft/KC-137R/Models/C-137R.xml";
+var copilot_type = "Aircraft/KC-137R/Models/C-137R-PAX.xml";
 
 ############################ PROPERTIES MP ###########################
 var compressionW      = "sim/multiplay/generic/float[1]";

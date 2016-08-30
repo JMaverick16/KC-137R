@@ -21,11 +21,11 @@
   <name>refuel_Lamp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/refuel_lamp_pilot.xml</path>
   <condition>
-            <equals>
-                <property>sim/aircraft</property>
-                <value type="string">EC-137R</value>
-            </equals>
-        </condition>
+    <equals>
+      <property>sim/model-type/ECR</property>
+      <value>1</value>
+    </equals>
+  </condition>
   <offsets>
     <x-m>-18.916</x-m>
     <y-m>-0.236</y-m>
