@@ -578,37 +578,45 @@
 	</wind>
 	
 	<stall>
-		<name>stall or overspeed</name>
-		<path>Aircraft/KC-137R/Sounds/speed.wav</path>		
+		<name>stall</name>
+		<path>Aircraft/KC-137R/Sounds/stall.wav</path> 
 		<condition>
 			<and>
 				<greater-than>
 					<property>/b707/ess-bus</property>
 					<value>0</value>
 				</greater-than>
-				<or>
-					<property>/controls/test/warn-knob</property>
-					<and>
-						<less-than>
-							<property>/velocities/airspeed-kt</property>
-							<value>10.0</value>
-						</less-than>
-						<greater-than>
-							<property>/position/altitude-agl-ft</property>
-							<value>600.0</value>					
-						</greater-than>
-					</and>
-					<greater-than>
-						<property>/velocities/mach</property>
-						<value>0.9</value>
-					</greater-than>
-				</or>
+				<property>/controls/test/warn-knob</property>
+				<less-than>
+					<property>/velocities/airspeed-kt</property>
+					<value>100.0</value>
+				</less-than>
 			</and>
 		</condition>
 		<volume>
 			<factor>1</factor>
 		</volume>
 	</stall>
+
+	<overspd>
+		<name>overspeed</name>
+		<path>Aircraft/KC-137R/Sounds/speed.wav</path> 
+		<condition>
+			<and>
+				<greater-than>
+					<property>/b707/ess-bus</property>
+					<value>0</value>
+				</greater-than>
+				<greater-than>
+					<property>/velocities/airspeed-kt</property>
+					<value>380.0</value>
+				</greater-than>
+			</and>
+		</condition>
+		<volume>
+			<factor>1</factor>
+		</volume>
+	</overspd>
 
 	<testwarning>
 		<name>test warning</name>
