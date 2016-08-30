@@ -164,6 +164,17 @@
 	</model>
 	
 	<model>
+		<name>mc</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/mc/mc.xml</path>
+		<offsets>
+		  <x-m> 0.070</x-m>
+		  <y-m>-0.009</y-m>
+		  <z-m>-0.002</z-m>
+		  <heading-deg>270</heading-deg>
+		</offsets>
+	</model>
+	
+	<model>
 		<name>start air</name>
 		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/startAir/startAir.xml</path>
 		<offsets>

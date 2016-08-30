@@ -299,89 +299,131 @@
 			<beta>1.0</beta>	
 			<alpha>0.1</alpha>	
 			<gamma>0.0</gamma>	
-			
 			<Ti>10</Ti>        	
 			<Td>0.00001</Td>     	
-			<u_min>-0.70</u_min> 	
-			<u_max>0.70</u_max>  	
+			<u_min>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/roll/umin</property>
+			</u_min>
+			<u_min>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>-0.50</value>
+			</u_min>
+			<u_max>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/roll/umax</property>
+			</u_max>
+			<u_max>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.50</value>
+			</u_max>
 		</config>
 	</pid-controller>
 
 	
-  <pid-controller>
-    <name>VOR/LOC Hold Stage 1</name>
-    <debug>false</debug>
-    <enable>
-		<condition>
-			<equals>
-				<property>/it-autoflight/aplatmode</property>
-				<value>2</value>
-			</equals>
-		</condition>
-    </enable>
-    <input>
-      <prop>/it-autoflight/internal/nav1-heading-error-deg</prop>
-    </input>
-    <reference>
-      <value>0.0</value>
-    </reference>
-    <output>
-      <prop>/it-autoflight/internal/target-roll-deg</prop>
-    </output>
-    <config>
-      <Kp>-5.0</Kp>        
-      <beta>1.0</beta>     
-      <alpha>1.0</alpha>   
-      <gamma>0.0</gamma>   
-                           
-      <Ti>10.0</Ti>        
-      <Td>0.00001</Td>     
-      <u_min>-25.0</u_min> 
-      <u_max>25.0</u_max>  
-    </config>
-  </pid-controller>
-
-  <pid-controller>
-    <name>VOR/LOC Hold Stage 2</name>
-    <debug>false</debug>
-    <enable>
-		<condition>
-			<and>
+	<pid-controller>
+		<name>VOR/LOC Stage 1</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
 				<equals>
 					<property>/it-autoflight/aplatmode</property>
 					<value>2</value>
 				</equals>
-				<or>
+			</condition>
+		</enable>
+		<input>
+			<prop>/it-autoflight/internal/nav1-heading-error-deg</prop>
+		</input>
+		<reference>
+			<value>0.0</value>
+		</reference>
+		<output>
+			<prop>/it-autoflight/internal/target-roll-deg</prop>
+		</output>
+		<config>
+			<Kp>-5.0</Kp>        
+			<beta>1.0</beta>     
+			<alpha>1.0</alpha>   
+			<gamma>0.0</gamma>   
+			<Ti>10.0</Ti>        
+			<Td>0.00001</Td>     
+			<u_min>-25.0</u_min> 
+			<u_max>25.0</u_max>  
+		</config>
+	</pid-controller>
+
+	<pid-controller>
+		<name>VOR/LOC Stage 2</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<and>
 					<equals>
-						<property>/it-autoflight/ap_master</property>
-						<value>1</value>
+						<property>/it-autoflight/aplatmode</property>
+						<value>2</value>
 					</equals>
-					<equals>
-						<property>/it-autoflight/ap_master2</property>
-						<value>1</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-    </enable>
-    <input>
-      <prop>/orientation/roll-deg</prop>
-    </input>
-    <reference>
-      <prop>/it-autoflight/internal/target-roll-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/aileron-cmd</prop>
-    </output>
-    <config>
-	  <Kp>0.10</Kp>		
-	  <beta>1.0</beta>	
-	  <alpha>0.1</alpha>	
-	  <gamma>0.0</gamma>		
-	  <Ti>10</Ti>        	
-	  <Td>0.00001</Td>     	
-	  <u_min>-0.70</u_min> 	
-	  <u_max>0.70</u_max>  	
+					<or>
+						<equals>
+							<property>/it-autoflight/ap_master</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/ap_master2</property>
+							<value>1</value>
+						</equals>
+					</or>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>/orientation/roll-deg</property>
+		</input>
+		<reference>
+			<property>/it-autoflight/internal/target-roll-deg</property>
+		</reference>
+		<output>
+			<property>/controls/flight/aileron-cmd</property>
+		</output>
+		<config>
+			<Kp>0.10</Kp>		
+			<beta>1.0</beta>	
+			<alpha>0.1</alpha>	
+			<gamma>0.0</gamma>		
+			<Ti>10</Ti>        	
+			<Td>0.00001</Td>     	
+			<u_min>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/roll/umin</property>
+			</u_min>
+			<u_min>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>-0.50</value>
+			</u_min>
+			<u_max>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/roll/umax</property>
+			</u_max>
+			<u_max>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.50</value>
+			</u_max>
     </config>
   </pid-controller>
   
@@ -662,8 +704,30 @@
 			
 			<Ti>10.0</Ti>        
 			<Td>0.00001</Td>    
-			<u_min>-0.25</u_min>
-			<u_max>0.25</u_max>
+			<u_min>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/flch/umin</property>
+			</u_min>
+			<u_min>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>-0.25</value>
+			</u_min>
+			<u_max>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/flch/umax</property>
+			</u_max>
+			<u_max>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.25</value>
+			</u_max>
 		</config>
 	</pid-controller>
 
@@ -716,8 +780,30 @@
 			<gamma>0.0</gamma>  
 			<Ti>10.0</Ti>       
 			<Td>0.0001</Td>    
-			<u_min>-0.25</u_min>
-			<u_max>0.25</u_max>
+			<u_min>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/pitch/umin</property>
+			</u_min>
+			<u_min>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>-0.25</value>
+			</u_min>
+			<u_max>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/pitch/umax</property>
+			</u_max>
+			<u_max>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.25</value>
+			</u_max>
 		</config>
 	</pid-controller>
 	
@@ -787,8 +873,8 @@
 			<gamma>0.0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
-			<u_min>-0.90</u_min>
-			<u_max>0.90</u_max>
+			<u_min>-1.00</u_min>
+			<u_max>1.00</u_max>
 		</config>
 	</pid-controller>
 	
@@ -831,8 +917,8 @@
 			<gamma>0.0</gamma>
 			<Ti>10</Ti>
 			<Td>0.00001</Td>
-			<u_min>-0.90</u_min>
-			<u_max>0.90</u_max>
+			<u_min>-1.00</u_min>
+			<u_max>1.00</u_max>
 		</config>
 	</pid-controller>
 		
@@ -1042,7 +1128,7 @@
                           
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
-      <u_min>0.0</u_min>  
+      <u_min>0.005</u_min>  
       <u_max>0.2</u_max>  
     </config>
   </pid-controller>
@@ -1083,12 +1169,12 @@
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
-      <u_max>0.96</u_max>  
+      <u_max>0.95</u_max>  
     </config>
   </pid-controller>
   
 	<filter>
-		<name>IT-CONTROLLER: PITCH FILTER</name>
+		<name>IT-CONTROLLER: THRUST FILTER</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
@@ -1114,7 +1200,24 @@
 			<prop>/controls/engines/engine[7]/throttle</prop>
 		</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.40</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<equals>
+					<property>/it-autoflight/apthrmode2</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<value>0.40</value>
+		</max-rate-of-change>
+		<max-rate-of-change>
+			<condition>
+				<not-equals>
+					<property>/it-autoflight/apthrmode2</property>
+					<value>0</value>
+				</not-equals>
+			</condition>
+			<value>0.05</value>
+		</max-rate-of-change>
 	</filter>
 
 </PropertyList>

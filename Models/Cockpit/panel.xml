@@ -120,16 +120,6 @@
 </model>
 
 <model>
-  <name>AoA</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AoA/AoA.xml</path>
-  <offsets>
-    <x-m>-18.917</x-m>
-    <y-m>-0.544</y-m>
-    <z-m>0.714</z-m>
-  </offsets>
-</model>
-
-<model>
   <name>ND_L</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_L.xml</path>
   <offsets>
@@ -371,16 +361,6 @@
     <x-m>-18.919</x-m>
     <y-m>0.30</y-m>
     <z-m>0.795</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>AoA_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AoA/AoA.xml</path>
-  <offsets>
-    <x-m>-18.917</x-m>
-    <y-m>0.30</y-m>
-    <z-m>0.714</z-m>
   </offsets>
 </model>
 
