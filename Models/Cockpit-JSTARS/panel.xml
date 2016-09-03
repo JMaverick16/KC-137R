@@ -120,6 +120,26 @@
 </model>
 
 <model>
+  <name>radar-alt</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
+  <offsets>
+    <x-m>-18.922</x-m>
+    <y-m>-0.544</y-m>
+    <z-m>0.71</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>radar-alt</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
+  <offsets>
+    <x-m>-18.922</x-m>
+    <y-m>-0.544</y-m>
+    <z-m>0.71</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>ND_L</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_L.xml</path>
   <offsets>
@@ -361,6 +381,26 @@
     <x-m>-18.919</x-m>
     <y-m>0.30</y-m>
     <z-m>0.795</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>radar-alt_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
+  <offsets>
+    <x-m>-18.922</x-m>
+    <y-m>0.30</y-m>
+    <z-m>0.71</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>radar-alt_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
+  <offsets>
+    <x-m>-18.922</x-m>
+    <y-m>0.30</y-m>
+    <z-m>0.71</z-m>
   </offsets>
 </model>
 

@@ -88,6 +88,16 @@
 </model>
 
 <model>
+  <name>radar-alt</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
+  <offsets>
+    <x-m>-18.922</x-m>
+    <y-m>-0.466</y-m>
+    <z-m>0.71</z-m>
+  </offsets>
+</model>
+
+<model>
     <name>tancan_dme</name>
     <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tacan/dme/dme.xml</path>
 	<offsets>
@@ -289,6 +299,16 @@
     <x-m>-18.916</x-m>
     <y-m>0.29</y-m>
     <z-m>0.712</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>radar-alt_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
+  <offsets>
+    <x-m>-18.922</x-m>
+    <y-m>0.369</y-m>
+    <z-m>0.71</z-m>
   </offsets>
 </model>
 
