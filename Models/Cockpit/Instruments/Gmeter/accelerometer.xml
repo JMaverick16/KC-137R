@@ -1,0 +1,30 @@
+
+<PropertyList>
+
+ <path>accelerometer.ac</path>
+ 
+<animation>
+    <type>scale</type>
+    <x-offset>0.78</x-offset>
+    <y-offset>0.78</y-offset>
+    <z-offset>0.78</z-offset>
+    </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>accelerometer.needle</object-name>
+  <property>/accelerations/pilot-gdamped</property>
+  <factor>45</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+</PropertyList>

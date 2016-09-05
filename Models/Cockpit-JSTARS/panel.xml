@@ -64,8 +64,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mc/mc.xml</path>
   <offsets>
     <x-m>-18.915</x-m>
-    <y-m>-0.227</y-m>
-    <z-m>0.910</z-m>
+    <y-m>-0.377</y-m>
+    <z-m>0.957</z-m>
   </offsets>
 </model>
 
@@ -74,8 +74,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apstatus/apstatus.xml</path>
   <offsets>
     <x-m>-18.918</x-m>
-    <y-m>-0.227</y-m>
-    <z-m>0.858</z-m>
+    <y-m>-0.226</y-m>
+    <z-m>0.8084</z-m>
   </offsets>
 </model>
 
@@ -84,8 +84,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/alt/alt.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.30</y-m>
-    <z-m>0.890</z-m>
+    <y-m>-0.307</y-m>
+    <z-m>0.892</z-m>
   </offsets>
 </model>
 
@@ -327,6 +327,16 @@
 <model>
   <name>operating_time_indicator</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/operating_time/opt.xml</path>
+  <offsets>
+    <x-m>-18.919</x-m>
+    <y-m> 0.22</y-m>
+    <z-m>0.97</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>Gmeter</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Gmeter/accelerometer.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
     <y-m> 0.22</y-m>

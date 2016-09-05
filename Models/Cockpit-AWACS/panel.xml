@@ -254,7 +254,7 @@
   <offsets>
     <x-m>-18.92</x-m>
     <y-m>0.219</y-m>
-    <z-m>0.96</z-m>
+    <z-m>0.963</z-m>
   </offsets>
 </model>
 
@@ -335,6 +335,16 @@
     <x-m>-18.916</x-m>
       <y-m>0.619</y-m>
     <z-m>0.873</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>Gmeter</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Gmeter/accelerometer.xml</path>
+  <offsets>
+    <x-m>-18.919</x-m>
+    <y-m>0.619</y-m>
+    <z-m>0.805</z-m>
   </offsets>
 </model>
 
