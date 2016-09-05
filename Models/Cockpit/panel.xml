@@ -79,13 +79,23 @@
   </offsets>
 </model>
 
-<model>
+<!--model>
   <name>alt</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/alt/alt.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
     <y-m>-0.307</y-m>
     <z-m>0.892</z-m>
+  </offsets>
+</model-->
+
+<model>
+  <name>altimeter</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/altimeter/altimeter.xml</path>
+  <offsets>
+    <x-m>-18.916</x-m>
+    <y-m>-0.307</y-m>
+    <z-m>0.898</z-m>
   </offsets>
 </model>
 
