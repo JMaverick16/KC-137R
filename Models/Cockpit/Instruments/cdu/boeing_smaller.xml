@@ -27,14 +27,92 @@
 	<texture alias="../../texture"/> 
 </animation>
 
+  <animation>
+	<object-name>CDU</object-name>
+ 	<object-name>Btn.A</object-name>
+	<object-name>Btn.B</object-name>
+	<object-name>Btn.C</object-name>
+	<object-name>Btn.D</object-name>
+	<object-name>Btn.E</object-name>
+	<object-name>Btn.F</object-name>
+	<object-name>Btn.G</object-name>
+	<object-name>Btn.H</object-name>
+	<object-name>Btn.I</object-name>
+	<object-name>Btn.J</object-name>
+	<object-name>Btn.K</object-name>
+	<object-name>Btn.L</object-name>
+	<object-name>Btn.M</object-name>
+	<object-name>Btn.N</object-name>
+	<object-name>Btn.O</object-name>
+	<object-name>Btn.P</object-name>
+	<object-name>Btn.Q</object-name>
+	<object-name>Btn.R</object-name>
+	<object-name>Btn.S</object-name>
+	<object-name>Btn.T</object-name>
+	<object-name>Btn.U</object-name>
+	<object-name>Btn.V</object-name>
+	<object-name>Btn.W</object-name>
+	<object-name>Btn.X</object-name>
+	<object-name>Btn.Y</object-name>
+	<object-name>Btn.Z</object-name>
+	<object-name>Btn.zero</object-name>
+	<object-name>Btn.num1</object-name>
+	<object-name>Btn.num2</object-name>
+	<object-name>Btn.num3</object-name>
+	<object-name>Btn.num4</object-name>
+	<object-name>Btn.num5</object-name>
+	<object-name>Btn.num6</object-name>
+	<object-name>Btn.num7</object-name>
+	<object-name>Btn.num8</object-name>
+	<object-name>Btn.num9</object-name>
+	<object-name>Btn.period</object-name>
+	<object-name>Btn.plusminus</object-name>
+	<object-name>Btn.sp</object-name>
+	<object-name>Btn.slash</object-name>
+	<object-name>Btn.del</object-name>
+	<object-name>Btn.clr</object-name>
+	<object-name>Btn.init-ref</object-name>
+	<object-name>Btn.rte</object-name>
+	<object-name>Btn.dep-arr</object-name>
+	<object-name>Btn.altn</object-name>
+	<object-name>Btn.vnav</object-name>
+	<object-name>Btn.fix</object-name>
+	<object-name>Btn.legs</object-name>
+	<object-name>Btn.hold</object-name>
+	<object-name>Btn.fmc-comm</object-name>
+	<object-name>Btn.prog</object-name>
+	<object-name>Btn.exec</object-name>
+	<object-name>Btn.menu</object-name>
+	<object-name>Btn.nav-rad</object-name>
+	<object-name>Btn.prev-page</object-name>
+	<object-name>Btn.next-page</object-name>
+	<object-name>Btn.side.l.1</object-name>
+	<object-name>Btn.side.l.2</object-name>
+	<object-name>Btn.side.l.3</object-name>
+	<object-name>Btn.side.l.4</object-name>
+	<object-name>Btn.side.l.5</object-name>
+	<object-name>Btn.side.l.6</object-name>
+	<object-name>Btn.side.r.1</object-name>
+	<object-name>Btn.side.r.2</object-name>
+	<object-name>Btn.side.r.3</object-name>
+	<object-name>Btn.side.r.4</object-name>
+	<object-name>Btn.side.r.5</object-name>
+	<object-name>Btn.side.r.6</object-name>
+    <type>material</type>
+    <emission>
+	  <factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+      <red>1</red>
+      <green>1</green>
+      <blue>1</blue>
+    </emission>
+  </animation>
+
 <effect>
 	<inherits-from>Effects/lightmap</inherits-from>
 	<parameters>
 		<texture n="1">
 			<image>Aircraft/KC-137R/Models/Cockpit/Instruments/cdu/boeing_lightmap.png</image>
 		</texture>
-		<condition><use>/instrumentation/cdu/serviceable</use></condition>
-		<factor><use>/controls/lighting/panel-norm</use></factor>
 	</parameters>
 	<object-name>CDU</object-name>
  	<object-name>Btn.A</object-name>
