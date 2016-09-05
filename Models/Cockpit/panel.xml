@@ -39,9 +39,19 @@
   </offsets>
 </model>
 
-<model>
+<!--model>
   <name>asi</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/asi/asi.xml</path>
+  <offsets>
+    <x-m>-18.919</x-m>
+    <y-m>-0.545</y-m>
+    <z-m>0.885</z-m>
+  </offsets>
+</model-->
+
+<model>
+  <name>asi</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ASI_new/asi.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
     <y-m>-0.545</y-m>
