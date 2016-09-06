@@ -48,16 +48,6 @@
 </model>
 
 <model>
-  <name>EFIS</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis_L.xml</path>
-  <offsets>
-    <x-m>-18.92</x-m>
-    <y-m>-0.30</y-m>
-    <z-m> 0.9595</z-m>
-  </offsets>
-</model>
-
-<model>
   <name>mc</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mc/mc.xml</path>
   <offsets>
@@ -269,16 +259,6 @@
     <x-m>-18.92</x-m>
     <y-m>0.296</y-m>
     <z-m>0.838</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>EFIS_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis_R.xml</path>
-  <offsets>
-    <x-m>-18.92</x-m>
-    <y-m>0.30</y-m>
-    <z-m>0.9595</z-m>
   </offsets>
 </model>
 

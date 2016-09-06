@@ -90,16 +90,6 @@
 </model>
 
 <model>
-  <name>EFIS</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis_L.xml</path>
-  <offsets>
-    <x-m>-18.92</x-m>
-    <y-m>-0.30</y-m>
-    <z-m> 0.9595</z-m>
-  </offsets>
-</model>
-
-<model>
   <name>pneumatic_brake</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/pneubrake/pneubrake.xml</path>
   <offsets>
@@ -371,16 +361,6 @@
     <x-m>-18.916</x-m>
     <y-m>0.544</y-m>
     <z-m>0.890</z-m>
-  </offsets>
-</model>
-
-<model>
-  <name>EFIS_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EFIS/efis_R.xml</path>
-  <offsets>
-    <x-m>-18.92</x-m>
-    <y-m> 0.30</y-m>
-    <z-m> 0.9595</z-m>
   </offsets>
 </model>
 
