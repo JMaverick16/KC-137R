@@ -325,6 +325,16 @@
 </model>
 
 <model>
+  <name>total_air_temp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tat/tat.xml</path>
+  <offsets>
+    <x-m>-18.919</x-m>
+    <y-m> 0.218</y-m>
+    <z-m>0.924</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>Gmeter</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Gmeter/accelerometer.xml</path>
   <offsets>
