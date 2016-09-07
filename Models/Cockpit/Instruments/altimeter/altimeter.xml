@@ -7,9 +7,9 @@
 
 	<animation>
     <type>scale</type>
-    <x-offset>2.1</x-offset>
-    <y-offset>2.1</y-offset>
-    <z-offset>2.1</z-offset>
+    <x-offset>1.05</x-offset>
+    <y-offset>1.05</y-offset>
+    <z-offset>1.05</z-offset>
     </animation>
 
 	<animation>
@@ -27,7 +27,7 @@
 		<type>rotate</type>
 		<object-name>needle</object-name>
 		<property>instrumentation/altimeter/indicated-altitude-ft</property>
-		<factor>3.6</factor>  
+		<factor>0.36</factor>  
 		<axis>
 			<x>-1</x>
 			<y>0</y>
@@ -41,7 +41,7 @@
 		<object-name>drum-1</object-name>
 		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.001</factor>
-		<offset>-75</offset>
+		<offset>-100</offset>
 		<step>100</step>
 		<scroll>10</scroll>
 		<axis>
@@ -57,7 +57,7 @@
 		<object-name>drum-2</object-name>
 		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.0001</factor>
-		<offset>-750</offset>
+		<offset>-1000</offset>
 		<step>1000</step>
 		<scroll>25</scroll>
 		<axis>
@@ -73,7 +73,7 @@
 		<object-name>drum-3</object-name>
 		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.00001</factor>
-		<offset>-7500</offset>
+		<offset>-10000</offset>
 		<step>10000</step>
 		<scroll>25</scroll>
 		<axis>
@@ -81,6 +81,37 @@
 			<y>-1</y>
 			<z>0</z>
 		</axis>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>negativ-flag</object-name>
+		<condition>
+			<less-than>
+				<property>instrumentation/altimeter/indicated-altitude-ft</property>
+				<value>0</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>below-1000-flag</object-name>
+		<condition>
+			<less-than>
+				<property>instrumentation/altimeter/indicated-altitude-ft</property>
+				<value>1000</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>below-10000-flag</object-name>
+		<condition>
+			<less-than>
+				<property>instrumentation/altimeter/indicated-altitude-ft</property>
+				<value>10000</value>
+			</less-than>
+		</condition>
 	</animation>
 
 	<!-- barometer drum counter -->
@@ -228,7 +259,7 @@
 		<object-name>mount</object-name>
 		<type>material</type>
 		<emission>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
 			<red>0.55</red>
 			<green>0.24</green>
 			<blue>0.10</blue>
@@ -239,7 +270,7 @@
 		<object-name>knobs</object-name>
 		<type>material</type>
 		<emission>
-			<factor-prop>controls/lighting/panel-norm</factor-prop>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
 			<red>0.55</red>
 			<green>0.24</green>
 			<blue>0.10</blue>
@@ -250,7 +281,7 @@
 		<object-name>face</object-name>
 		<type>material</type>
 		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
 			<red>0.55</red>
 			<green>0.24</green>
 			<blue>0.10</blue>
@@ -261,7 +292,7 @@
 		<object-name>drums</object-name>
 		<type>material</type>
 		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
 			<red>0.55</red>
 			<green>0.24</green>
 			<blue>0.10</blue>
@@ -272,7 +303,7 @@
 		<object-name>needle-w</object-name>
 		<type>material</type>
 		<emission>
-			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
 			<red>0.55</red>
 			<green>0.24</green>
 			<blue>0.10</blue>
