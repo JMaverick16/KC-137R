@@ -311,10 +311,10 @@
 	</animation>
 
 
-	<animation>
+	<!--animation>
 		<type>range</type>
 		<min-m>0</min-m>
 		<max-m>50</max-m>
-	</animation>
+	</animation-->
 
 </PropertyList>
