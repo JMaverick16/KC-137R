@@ -278,14 +278,14 @@
 			<kp>0.10</kp>
 		</roll>
 		<pitch>
-			<umin>-0.35</umin>
-			<umax>0.35</umax>
-			<kp>-0.09</kp>
+			<umin>-0.30</umin>
+			<umax>0.30</umax>
+			<kp>-0.08</kp>
 		</pitch>
 		<flch>
-			<umin>-0.35</umin>
-			<umax>0.35</umax>
-			<kp>-0.10</kp>
+			<umin>-0.30</umin>
+			<umax>0.30</umax>
+			<kp>-0.09</kp>
 		</flch>
 	</settings>
 </it-autoflight>
