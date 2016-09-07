@@ -12,7 +12,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/testwarn/testwarn.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
-    <y-m>-0.62</y-m>
+    <y-m>-0.622</y-m>
     <z-m>0.90</z-m>
   </offsets>
 </model>
@@ -32,7 +32,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/PFD/PFD_L.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>-0.493</y-m>
+    <y-m>-0.296</y-m>
     <z-m>0.838</z-m>
   </offsets>
 </model>
@@ -42,6 +42,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_L_AWACS.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
+    <y-m>-0.493</y-m>
     <y-m>-0.296</y-m>
     <z-m>0.838</z-m>
   </offsets>
@@ -72,7 +73,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.545</y-m>
+    <y-m>-0.546</y-m>
     <z-m>0.712</z-m>
   </offsets>
 </model>
@@ -82,7 +83,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
   <offsets>
     <x-m>-18.922</x-m>
-    <y-m>-0.466</y-m>
+    <y-m>-0.465</y-m>
     <z-m>0.71</z-m>
   </offsets>
 </model>
@@ -93,7 +94,7 @@
 	<offsets>
       <x-m>-18.916</x-m>
       <y-m>-0.62</y-m>
-	  <z-m>0.713</z-m>
+	  <z-m>0.757</z-m>
 	</offsets>
 </model>
 
@@ -103,7 +104,7 @@
   <offsets>
     <x-m>-18.916</x-m>
       <y-m>-0.62</y-m>
-    <z-m>0.796</z-m>
+    <z-m>0.833</z-m>
   </offsets>
 </model>
 
@@ -112,8 +113,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.62</y-m>
-    <z-m>0.853</z-m>
+    <y-m>-0.32</y-m>
+    <z-m>0.966</z-m>
   </offsets>
 </model>
 
@@ -140,7 +141,7 @@
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.931</z-m>
+      <z-m> 0.857</z-m>
   </offsets>
 </model>
 
@@ -150,7 +151,7 @@
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.858</z-m>
+      <z-m> 0.932</z-m>
   </offsets>
 </model>
 
@@ -257,7 +258,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/PFD/PFD_R.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.493</y-m>
+    <y-m>0.296</y-m>
     <z-m>0.838</z-m>
   </offsets>
 </model>
@@ -267,7 +268,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_R_AWACS.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.296</y-m>
+    <y-m>0.493</y-m>
     <z-m>0.838</z-m>
   </offsets>
 </model>
