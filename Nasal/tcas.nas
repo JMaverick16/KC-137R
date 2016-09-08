@@ -7,8 +7,18 @@ setlistener("/instrumentation/mptcas/on", func(state) {
   if(state) tcas();
 }, 0, 1);
 
-var tcas = func {
+setprop("systems/electrical/outputs/radar", 30);
 
+var myRadar = b707.Radar.new(NewRangeTab:[500],NewRangeIndex:0,forcePath:"instrumentation/radar2/targets",NewAutoUpdate:1,newDopplerSpeedLimit:50,NewhaveSweep:0,NewUnfocused_az_fld:360);
+
+
+#var path = "ai/models/multiplayer";
+var path ="instrumentation/radar2/targets/multiplayer";
+
+
+var tcas = func {
+    myRadar.update();
+    
 		var run = getprop("/instrumentation/mptcas/on") or 0;
 
 		var pos_lat = getprop("/position/latitude-deg") or 0;
@@ -26,13 +36,13 @@ var tcas = func {
 	
 		for (var n = 0; n < 30; n += 1) {
 		
-			var callsign = getprop("ai/models/multiplayer[" ~ n ~ "]/callsign") or 0;
+			var callsign = getprop(path~"[" ~ n ~ "]/callsign") or 0;
 	
-			if (getprop("ai/models/multiplayer[" ~ n ~ "]/valid") and callsign and run) {
+			if (getprop(path~"[" ~ n ~ "]/valid") and callsign and run) {
 		
-				var mp_lat = getprop("ai/models/multiplayer[" ~ n ~ "]/position/latitude-deg") or 0;
-				var mp_lon = getprop("ai/models/multiplayer[" ~ n ~ "]/position/longitude-deg") or 0;
-				var bearing = getprop("ai/models/multiplayer[" ~ n ~ "]/radar/bearing-deg") or 0;
+				var mp_lat = getprop(path~"[" ~ n ~ "]/position/latitude-deg") or 0;
+				var mp_lon = getprop(path~"[" ~ n ~ "]/position/longitude-deg") or 0;
+				var bearing = getprop(path~"[" ~ n ~ "]/radar/bearing-deg") or 0;
 					
 				var x = (mp_lon - pos_lon) * display_factor;
 				var y = (mp_lat - pos_lat) * display_factor;
@@ -49,9 +59,9 @@ var tcas = func {
 				var display = distance * display_factor; # for the range of the selected mp-aircrafts
 				var displayAwacs = distance * display_factor_awacs; # for the range of the selected mp-aircrafts
 				
-				var alt_ft = getprop("ai/models/multiplayer[" ~ n ~ "]/position/altitude-ft") or 0;
-			  var tas_kt = getprop("ai/models/multiplayer[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
-			  var t_code = getprop("ai/models/multiplayer[" ~ n ~ "]/instrumentation/transponder/transmitted-id") or 0;
+				var alt_ft = getprop(path~"[" ~ n ~ "]/position/altitude-ft") or 0;
+			  var tas_kt = getprop(path~"[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
+			  var t_code = getprop(path~"[" ~ n ~ "]/instrumentation/transponder/transmitted-id") or 0;
 			  var t_code = abs(t_code);
 			  
 				setprop("instrumentation/mptcas/mp[" ~ n ~ "]/dis-x", x);										# for the radar pos
@@ -67,11 +77,11 @@ var tcas = func {
 				setprop("instrumentation/mptcas/mp[" ~ n ~ "]/id-code", t_code);						# only info
 				
 				# fill the Awacs data array
-				if(getprop("sim/aircraft") == "EC-137D"){
-				  var true_hdg = getprop("ai/models/multiplayer[" ~ n ~ "]/orientation/true-heading-deg") or 0;
+				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
+				var true_hdg = getprop(path~"[" ~ n ~ "]/orientation/true-heading-deg") or 0;
 				  t_code = (t_code > 0) ? t_code : "----";
 				  
-				  var model_short = getprop("ai/models/multiplayer[" ~ n ~ "]/sim/model/path");
+				  var model_short = getprop(path~"[" ~ n ~ "]/sim/model/path");
 				  if(model_short != nil) {
 						var u = split("/", model_short); # give array
 						var s = size(u); # how many elements in array
@@ -147,7 +157,7 @@ var tcas = func {
 				setprop("instrumentation/mptcas/ai[" ~ n ~ "]/tas-kt", tas_kt);							# only info
 				
 				# fill the Awacs data array
-				if(getprop("sim/aircraft") == "EC-137D"){
+				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
 				  var true_hdg = getprop("ai/models/aircraft[" ~ n ~ "]/orientation/true-heading-deg") or 0;
 				  aircraft_list[callsign] = {cs: callsign, dis: distance, alt: alt_ft, th: true_hdg, ctm: course_to_mp, tas: tas_kt, at: "AI" };
 				}
@@ -213,7 +223,7 @@ var tcas = func {
 				setprop("instrumentation/mptcas/ta[" ~ n ~ "]/tas-kt", tas_kt);							# only info
 				
 				# fill the Awacs data array
-				if(getprop("sim/aircraft") == "EC-137D"){
+				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
 				  var true_hdg = getprop("ai/models/tanker[" ~ n ~ "]/orientation/true-heading-deg") or 0;
 				  aircraft_list[callsign] = {cs: callsign, dis: distance, alt: alt_ft, th: true_hdg, ctm: course_to_mp, tas: tas_kt, at: "TANKER" };
 				}
@@ -237,7 +247,7 @@ var tcas = func {
 	
 		}
 		
-		if(getprop("sim/aircraft") == "EC-137D"){
+		if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
 			# first reset the old inputs
 			foreach(var r; props.globals.getNode("/instrumentation/mptcas/table").getChildren("row")){
 				if(r.getNode("col[0]") != nil){
