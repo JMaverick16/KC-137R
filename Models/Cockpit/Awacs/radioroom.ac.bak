@@ -5,7 +5,7 @@ OBJECT world
 kids 5
 OBJECT poly
 name "keyboard"
-loc -12.0026 0.917657 -1.33132
+loc -12.0848 0.898314 -1.33345
 texture "tastatur.png"
 crease 45.000000
 numvert 12
@@ -14212,7 +14212,7 @@ refs 4
 kids 0
 OBJECT poly
 name "keyboard"
-loc -11.1236 0.920599 -0.0166673
+loc -11.0402 0.898314 -0.024
 texture "tastatur.png"
 crease 45.000000
 numvert 12
