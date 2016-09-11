@@ -12,7 +12,7 @@
     <z-offset>1.05</z-offset>
     </animation>
 
-	<animation>
+	<!--animation>
 		<type>select</type>
 		<object-name>altimeter</object-name>
 		<condition>
@@ -21,7 +21,7 @@
 				<value>Cockpit View</value>
 			</equals>
 		</condition>
-	</animation>
+	</animation-->
 
 	<animation>
 		<type>rotate</type>

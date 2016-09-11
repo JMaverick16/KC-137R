@@ -79,23 +79,13 @@
   </offsets>
 </model>
 
-<!--model>
-  <name>alt</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/alt/alt.xml</path>
-  <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.307</y-m>
-    <z-m>0.892</z-m>
-  </offsets>
-</model-->
-
 <model>
   <name>altimeter</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/altimeter/altimeter.xml</path>
   <offsets>
-    <x-m>-18.916</x-m>
-    <y-m>-0.307</y-m>
-    <z-m>0.898</z-m>
+    <x-m>-18.922</x-m>
+    <y-m>-0.306</y-m>
+    <z-m>0.897</z-m>
   </offsets>
 </model>
 
@@ -365,12 +355,12 @@
 </model>
 
 <model>
-  <name>alt_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/alt/alt.xml</path>
+  <name>altimeter_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/altimeter/altimeter.xml</path>
   <offsets>
-    <x-m>-18.916</x-m>
+    <x-m>-18.922</x-m>
     <y-m>0.536</y-m>
-    <z-m>0.890</z-m>
+    <z-m>0.893</z-m>
   </offsets>
 </model>
 
@@ -410,7 +400,7 @@
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>0.542</y-m>
-    <z-m>0.794</z-m>
+    <z-m>0.793</z-m>
   </offsets>
 </model>
 
