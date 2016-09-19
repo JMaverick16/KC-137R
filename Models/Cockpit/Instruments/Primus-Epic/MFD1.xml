@@ -14,7 +14,7 @@
 	<animation>
 		<name>Power on/off</name>
 		<type>select</type>
-		<object-name>off</object-name>
+		<object-name>Off</object-name>
 		<condition>
 			<less-than>
 				<property>systems/electrical/outputs/efis</property>
