@@ -26,6 +26,9 @@
     <autopilot>
         <path>Aircraft/KC-137R/Systems/it-autoflight.xml</path>
     </autopilot>
+    <autopilot>
+        <path>Aircraft/KC-137R/Systems/it-autothrust.xml</path>
+    </autopilot>
 	<property-rule n="101">	
 		<path>Systems/sound_calc.xml</path>
 	</property-rule>

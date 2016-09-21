@@ -291,7 +291,7 @@
             <speaker>                           <!-- Speaker Configuration -->
                 <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
                 <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
-                <volume type="double"> 2.6 </volume>          <!-- Volume at reference distance -->
+                <volume type="double"> 4 </volume>          <!-- Volume at reference distance -->
             </speaker>
         </mk-viii>
         <tcas>

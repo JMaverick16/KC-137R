@@ -14,10 +14,21 @@
    <name>apoff</name>
    <path>/Aircraft/KC-137R/Sounds/apoff.wav</path>
    <condition>
-     <property>/it-autoflight/apoffsound</property>
+	 <property>/it-autoflight/apoffsound</property>
    </condition>
    <volume>
-    <factor>40.0</factor>
+    <factor>10.0</factor>
+   </volume>
+  </apoff>
+  
+  <apoff>
+   <name>apoff2</name>
+   <path>/Aircraft/KC-137R/Sounds/apoff.wav</path>
+   <condition>
+	 <property>/it-autoflight/apoffsound2</property>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
    </volume>
   </apoff>
   
