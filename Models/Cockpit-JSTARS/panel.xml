@@ -169,6 +169,16 @@
   </offsets>
 </model>
 
+<model>
+    <name>hydPress</name>
+    <path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/hydraulic/hydSystem.xml</path>
+  <offsets>
+      <x-m>-18.916</x-m>
+      <y-m>-0.618</y-m>
+      <z-m>0.704</z-m>
+      <heading-deg>90</heading-deg>
+  </offsets>
+</model>
 
 <!-- Hood Console -->
 
