@@ -150,12 +150,22 @@
   </offsets>
 </model>
 
-<model>
+<!--model>
   <name>stby-ai</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/stby-ai.xml</path>
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
+      <z-m> 0.858</z-m>
+  </offsets>
+</model-->
+
+<model>
+  <name>stby-ai</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AI_new/stby-ai.xml</path>
+  <offsets>
+      <x-m>-18.919</x-m>
+      <y-m>-0.140</y-m>
       <z-m> 0.858</z-m>
   </offsets>
 </model>
