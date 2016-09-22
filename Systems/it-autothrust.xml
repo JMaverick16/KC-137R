@@ -133,7 +133,7 @@
       <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <property>/it-autoflight/settings/idlethr</property>
+      <value>0</value>
     </reference>
     <output>
       <property>/controls/flight/throttle-cmd</property>
@@ -177,7 +177,7 @@
       <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <property>/it-autoflight/settings/clbthr</property>
+      <value>900</value>
     </reference>
     <output>
       <property>/controls/flight/throttle-cmd</property>
@@ -217,7 +217,7 @@
       <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <property>/it-autoflight/settings/retardthr</property>
+      <value>0</value>
     </reference>
     <output>
       <property>/controls/flight/throttle-cmd</property>
@@ -252,14 +252,14 @@
 			<property>/controls/flight/throttle-cmd</property>
 		</input>
 		<output>
-			<prop>/controls/engines/engine[0]/throttle</prop>
-			<prop>/controls/engines/engine[1]/throttle</prop>
-			<prop>/controls/engines/engine[2]/throttle</prop>
-			<prop>/controls/engines/engine[3]/throttle</prop>
-			<prop>/controls/engines/engine[4]/throttle</prop>
-			<prop>/controls/engines/engine[5]/throttle</prop>
-			<prop>/controls/engines/engine[6]/throttle</prop>
-			<prop>/controls/engines/engine[7]/throttle</prop>
+			<property>/controls/engines/engine[0]/throttle</property>
+			<property>/controls/engines/engine[1]/throttle</property>
+			<property>/controls/engines/engine[2]/throttle</property>
+			<property>/controls/engines/engine[3]/throttle</property>
+			<property>/controls/engines/engine[4]/throttle</property>
+			<property>/controls/engines/engine[5]/throttle</property>
+			<property>/controls/engines/engine[6]/throttle</property>
+			<property>/controls/engines/engine[7]/throttle</property>
 		</output>
 		<type>noise-spike</type>
 		<max-rate-of-change>

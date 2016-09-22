@@ -26,9 +26,6 @@ var ap_init = func {
 	setprop("/it-autoflight/apthrmode2", 0);
 	setprop("/it-autoflight/settings/target-speed-kt", 200);
 	setprop("/it-autoflight/settings/target-mach", 0.68);
-	setprop("/it-autoflight/settings/idlethr", 0);
-	setprop("/it-autoflight/settings/retardthr", 0);
-	setprop("/it-autoflight/settings/clbthr", 900);
 	setprop("/it-autoflight/settings/heading-bug-deg", 360);
 	setprop("/it-autoflight/settings/target-altitude-ft", 10000);
 	setprop("/it-autoflight/settings/target-altitude-ft-actual", 10000);
