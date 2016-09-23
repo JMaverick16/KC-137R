@@ -12,8 +12,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/testwarn/testwarn.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
-    <y-m>-0.62</y-m>
-    <z-m>0.90</z-m>
+    <y-m>-0.623</y-m>
+    <z-m>0.901</z-m>
   </offsets>
 </model>
 
@@ -38,7 +38,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/PFD/PFD_L.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>-0.493</y-m>
+    <y-m>-0.492</y-m>
     <z-m>0.838</z-m>
   </offsets>
 </model>
@@ -58,7 +58,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mc/mc.xml</path>
   <offsets>
     <x-m>-18.915</x-m>
-    <y-m>-0.377</y-m>
+    <y-m>-0.372</y-m>
     <z-m>0.955</z-m>
   </offsets>
 </model>
@@ -78,7 +78,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.545</y-m>
+    <y-m>-0.546</y-m>
     <z-m>0.712</z-m>
   </offsets>
 </model>
@@ -99,7 +99,7 @@
 	<offsets>
       <x-m>-18.916</x-m>
       <y-m>-0.62</y-m>
-	  <z-m>0.713</z-m>
+	  <z-m>0.773</z-m>
 	</offsets>
 </model>
 
@@ -109,7 +109,7 @@
   <offsets>
     <x-m>-18.916</x-m>
       <y-m>-0.62</y-m>
-    <z-m>0.796</z-m>
+    <z-m>0.843</z-m>
   </offsets>
 </model>
 
@@ -118,11 +118,21 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.62</y-m>
-    <z-m>0.853</z-m>
+    <y-m>-0.313</y-m>
+    <z-m>0.968</z-m>
   </offsets>
 </model>
 
+<model>
+    <name>hydPress</name>
+    <path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/hydraulic/hydSystem.xml</path>
+  <offsets>
+      <x-m>-18.916</x-m>
+      <y-m>-0.618</y-m>
+      <z-m>0.705</z-m>
+      <heading-deg>90</heading-deg>
+  </offsets>
+</model>
 
 <!-- Hood Console -->
 
@@ -150,22 +160,12 @@
   </offsets>
 </model>
 
-<!--model>
+<model>
   <name>stby-ai</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/stby-ai.xml</path>
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.858</z-m>
-  </offsets>
-</model-->
-
-<model>
-  <name>stby-ai</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AI_new/stby-ai.xml</path>
-  <offsets>
-      <x-m>-18.919</x-m>
-      <y-m>-0.140</y-m>
       <z-m> 0.858</z-m>
   </offsets>
 </model>
@@ -253,7 +253,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/operating_time/opt.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.219</y-m>
+    <y-m>0.22</y-m>
     <z-m>0.963</z-m>
   </offsets>
 </model>
@@ -263,7 +263,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tat/tat.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.27</y-m>
+    <y-m>0.273</y-m>
     <z-m>0.963</z-m>
   </offsets>
 </model>
@@ -273,7 +273,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/PFD/PFD_R.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.493</y-m>
+    <y-m>0.492</y-m>
     <z-m>0.838</z-m>
   </offsets>
 </model>
@@ -283,7 +283,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/ND/ND_R_AWACS.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.296</y-m>
+    <y-m>0.295</y-m>
     <z-m>0.838</z-m>
   </offsets>
 </model>
@@ -293,7 +293,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mc/mc.xml</path>
   <offsets>
     <x-m>-18.915</x-m>
-    <y-m> 0.454</y-m>
+    <y-m> 0.444</y-m>
     <z-m> 0.947</z-m>
   </offsets>
 </model>
@@ -303,7 +303,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>0.29</y-m>
+    <y-m>0.289</y-m>
     <z-m>0.712</z-m>
   </offsets>
 </model>
@@ -323,7 +323,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>0.39</y-m>
+    <y-m>0.38</y-m>
     <z-m>0.958</z-m>
   </offsets>
 </model>
@@ -334,7 +334,7 @@
   <offsets>
     <x-m>-18.916</x-m>
       <y-m>0.619</y-m>
-    <z-m>0.873</z-m>
+    <z-m>0.825</z-m>
   </offsets>
 </model>
 
@@ -343,8 +343,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Gmeter/accelerometer.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
-    <y-m>0.619</y-m>
-    <z-m>0.805</z-m>
+    <y-m>0.617</y-m>
+    <z-m>0.888</z-m>
   </offsets>
 </model>
 
@@ -357,6 +357,7 @@
     <z-m>0.708</z-m>
   </offsets>
 </model>
+
 
 <!-- middle pedestal -->
 
