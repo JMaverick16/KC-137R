@@ -7,9 +7,9 @@
  
         <animation>
   <type>scale</type>
-  <x-offset>0.90</x-offset>
-  <y-offset>0.90</y-offset>
-  <z-offset>0.90</z-offset>
+  <x-offset>0.91</x-offset>
+  <y-offset>0.91</y-offset>
+  <z-offset>0.91</z-offset>
  </animation>
 
 	<!-- Power on/off -->
