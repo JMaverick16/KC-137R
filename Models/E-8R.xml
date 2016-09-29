@@ -222,8 +222,8 @@
 	 <name>ExternalPowerUnit</name>
 	 <path>Aircraft/KC-137R/Models/epu.xml</path>
 		<offsets>
-      <x-m>-17.5</x-m>
-      <y-m>7.0</y-m>
+      <x-m>-23.4</x-m>
+      <y-m>7.4</y-m>
       <z-m>-2.92</z-m>
       <heading-deg> 25 </heading-deg>
 		</offsets>
