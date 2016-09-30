@@ -176,7 +176,7 @@
  <!-- =============================================================== -->
  
 	<filter>
-		<name>IT-TARGET ROLL CONTROLLER</name>
+		<name>TARGET ROLL CONTROLLER</name>
 		<debug>false</debug>
 		<type>gain</type>
 		<enable>
@@ -341,7 +341,7 @@
 
 	
 	<pid-controller>
-		<name>VOR/LOC Stage 1</name>
+		<name>VORLOC TRK</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -373,7 +373,7 @@
 	</pid-controller>
 
 	<pid-controller>
-		<name>VOR/LOC Stage 2</name>
+		<name>IT-CONTROLLER: VORLOC</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -409,7 +409,7 @@
 				<condition>
 					<property>/it-autoflight/settings/no-generics</property>
 				</condition>
-				<property>/it-autoflight/settings/roll/kp</property>
+				<property>/it-autoflight/settings/roll/kp-vorloc</property>
 			</Kp>
 			<Kp>
 				<condition>
