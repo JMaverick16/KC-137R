@@ -10,10 +10,10 @@
         <input> 
             <expression>
                 <table>
-                    <property>/engines/engine[0]/epr</property> 
-                    <entry><ind>0</ind><dep>0</dep></entry>
-                    <entry><ind>1</ind><dep>1</dep></entry>
-                    <entry><ind>2</ind><dep>1.55</dep></entry>
+                    <property>/engines/engine[0]/n1</property> 
+                    <entry><ind>    0</ind><dep>1.00</dep></entry>
+                    <entry><ind>   26</ind><dep>1.01</dep></entry>
+                    <entry><ind>110.6</ind><dep>1.55</dep></entry>
                 </table>
             </expression>
         </input>
@@ -28,10 +28,10 @@
         <input> 
             <expression>
                 <table>
-                    <property>/engines/engine[1]/epr</property> 
-                    <entry><ind>0</ind><dep>0</dep></entry>
-                    <entry><ind>1</ind><dep>1</dep></entry>
-                    <entry><ind>2</ind><dep>1.55</dep></entry>
+                    <property>/engines/engine[1]/n1</property> 
+                    <entry><ind>    0</ind><dep>1.00</dep></entry>
+                    <entry><ind>   26</ind><dep>1.01</dep></entry>
+                    <entry><ind>110.6</ind><dep>1.55</dep></entry>
                 </table>
             </expression>
         </input>
@@ -46,10 +46,10 @@
         <input> 
             <expression>
                 <table>
-                    <property>/engines/engine[2]/epr</property> 
-                    <entry><ind>0</ind><dep>0</dep></entry>
-                    <entry><ind>1</ind><dep>1</dep></entry>
-                    <entry><ind>2</ind><dep>1.55</dep></entry>
+                    <property>/engines/engine[2]/n1</property> 
+                    <entry><ind>    0</ind><dep>1.00</dep></entry>
+                    <entry><ind>   26</ind><dep>1.01</dep></entry>
+                    <entry><ind>110.6</ind><dep>1.55</dep></entry>
                 </table>
             </expression>
         </input>
@@ -64,10 +64,10 @@
         <input> 
             <expression>
                 <table>
-                    <property>/engines/engine[3]/epr</property> 
-                    <entry><ind>0</ind><dep>0</dep></entry>
-                    <entry><ind>1</ind><dep>1</dep></entry>
-                    <entry><ind>2</ind><dep>1.55</dep></entry>
+                    <property>/engines/engine[3]/n1</property> 
+                    <entry><ind>    0</ind><dep>1.00</dep></entry>
+                    <entry><ind>   26</ind><dep>1.01</dep></entry>
+                    <entry><ind>110.6</ind><dep>1.55</dep></entry>
                 </table>
             </expression>
         </input>

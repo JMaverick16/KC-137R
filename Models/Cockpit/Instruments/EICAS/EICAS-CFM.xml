@@ -77,11 +77,6 @@
 		<type>select</type>
         <object-name>thrpos1</object-name>
 		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>20.1</value>
-				</less-than>
 			<or>
 				<property>controls/engines/engine[0]/starter</property>
 				<greater-than>
@@ -89,7 +84,6 @@
 					<value>5</value>
 				</greater-than>
 			</or>
-			</and>
 		</condition>
 	</animation>
 	
@@ -97,11 +91,6 @@
 		<type>select</type>
         <object-name>thrpos2</object-name>
 		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>20.1</value>
-				</less-than>
 			<or>
 				<property>controls/engines/engine[1]/starter</property>
 				<greater-than>
@@ -109,7 +98,6 @@
 					<value>5</value>
 				</greater-than>
 			</or>
-			</and>
 		</condition>
 	</animation>
 	
@@ -117,11 +105,6 @@
 		<type>select</type>
         <object-name>thrpos3</object-name>
 		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>20.1</value>
-				</less-than>
 			<or>
 				<property>controls/engines/engine[2]/starter</property>
 				<greater-than>
@@ -129,7 +112,6 @@
 					<value>5</value>
 				</greater-than>
 			</or>
-			</and>
 		</condition>
 	</animation>
 	
@@ -137,11 +119,6 @@
 		<type>select</type>
         <object-name>thrpos4</object-name>
 		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>20.1</value>
-				</less-than>
 			<or>
 				<property>controls/engines/engine[3]/starter</property>
 				<greater-than>
@@ -149,7 +126,6 @@
 					<value>5</value>
 				</greater-than>
 			</or>
-			</and>
 		</condition>
 	</animation>
 	

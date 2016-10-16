@@ -77,11 +77,6 @@
 		<type>select</type>
         <object-name>thrpos1</object-name>
 		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>20.1</value>
-				</less-than>
 			<or>
 				<property>controls/engines/engine[0]/starter</property>
 				<greater-than>
@@ -89,7 +84,6 @@
 					<value>5</value>
 				</greater-than>
 			</or>
-			</and>
 		</condition>
 	</animation>
 	
@@ -97,11 +91,6 @@
 		<type>select</type>
         <object-name>thrpos2</object-name>
 		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>20.1</value>
-				</less-than>
 			<or>
 				<property>controls/engines/engine[1]/starter</property>
 				<greater-than>
@@ -109,7 +98,6 @@
 					<value>5</value>
 				</greater-than>
 			</or>
-			</and>
 		</condition>
 	</animation>
 	
@@ -117,11 +105,6 @@
 		<type>select</type>
         <object-name>thrpos3</object-name>
 		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>20.1</value>
-				</less-than>
 			<or>
 				<property>controls/engines/engine[2]/starter</property>
 				<greater-than>
@@ -129,7 +112,6 @@
 					<value>5</value>
 				</greater-than>
 			</or>
-			</and>
 		</condition>
 	</animation>
 	
@@ -137,11 +119,6 @@
 		<type>select</type>
         <object-name>thrpos4</object-name>
 		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>20.1</value>
-				</less-than>
 			<or>
 				<property>controls/engines/engine[3]/starter</property>
 				<greater-than>
@@ -149,7 +126,6 @@
 					<value>5</value>
 				</greater-than>
 			</or>
-			</and>
 		</condition>
 	</animation>
 	
@@ -720,13 +696,7 @@
     	<object-name>epr.1</object-name>
     	<property>engines/engine/epr-actual</property>
     	<interpolation>
-			<entry><ind>1.03</ind><dep>  6</dep></entry>
-			<entry><ind>1.04</ind><dep> 10</dep></entry>
-			<entry><ind>1.05</ind><dep> 13</dep></entry>
-			<entry><ind>1.06</ind><dep> 16</dep></entry>
-			<entry><ind>1.07</ind><dep> 19</dep></entry>
-			<entry><ind>1.08</ind><dep> 22</dep></entry>
-			<entry><ind>1.09</ind><dep> 25</dep></entry>
+			<entry><ind>1.01</ind><dep>  6</dep></entry>
 			<entry><ind>1.10</ind><dep> 28</dep></entry>
 			<entry><ind>1.20</ind><dep> 52</dep></entry>
 			<entry><ind>1.30</ind><dep> 81</dep></entry>
@@ -750,19 +720,12 @@
     	<object-name>thrpos1</object-name>
     	<property>controls/engines/engine[0]/throttle</property>
     	<interpolation>
-			<entry><ind>0.0833</ind><dep>  6</dep></entry>
-			<entry><ind>0.1620</ind><dep> 10</dep></entry>
-			<entry><ind>0.2127</ind><dep> 13</dep></entry>
-			<entry><ind>0.2526</ind><dep> 16</dep></entry>
-			<entry><ind>0.2896</ind><dep> 19</dep></entry>
-			<entry><ind>0.3195</ind><dep> 22</dep></entry>
-			<entry><ind>0.3501</ind><dep> 25</dep></entry>
-			<entry><ind>0.3760</ind><dep> 28</dep></entry>
-			<entry><ind>0.5781</ind><dep> 52</dep></entry>
-			<entry><ind>0.7240</ind><dep> 81</dep></entry>
-			<entry><ind>0.8458</ind><dep>110</dep></entry>
-			<entry><ind>0.9570</ind><dep>140</dep></entry>
-			<entry><ind>     1</ind><dep>153</dep></entry>
+			<entry><ind>0.0000</ind><dep>  6</dep></entry>
+			<entry><ind>0.1797</ind><dep> 28</dep></entry>
+			<entry><ind>0.3850</ind><dep> 52</dep></entry>
+			<entry><ind>0.5903</ind><dep> 81</dep></entry>
+			<entry><ind>0.7956</ind><dep>110</dep></entry>
+			<entry><ind>1.0000</ind><dep>140</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
@@ -825,13 +788,7 @@
     	<object-name>epr.2</object-name>
     	<property>engines/engine[1]/epr-actual</property>
     	<interpolation>
-			<entry><ind>1.03</ind><dep>  6</dep></entry>
-			<entry><ind>1.04</ind><dep> 10</dep></entry>
-			<entry><ind>1.05</ind><dep> 13</dep></entry>
-			<entry><ind>1.06</ind><dep> 16</dep></entry>
-			<entry><ind>1.07</ind><dep> 19</dep></entry>
-			<entry><ind>1.08</ind><dep> 22</dep></entry>
-			<entry><ind>1.09</ind><dep> 25</dep></entry>
+			<entry><ind>1.01</ind><dep>  6</dep></entry>
 			<entry><ind>1.10</ind><dep> 28</dep></entry>
 			<entry><ind>1.20</ind><dep> 52</dep></entry>
 			<entry><ind>1.30</ind><dep> 81</dep></entry>
@@ -855,19 +812,12 @@
     	<object-name>thrpos2</object-name>
     	<property>controls/engines/engine[1]/throttle</property>
     	<interpolation>
-			<entry><ind>0.0833</ind><dep>  6</dep></entry>
-			<entry><ind>0.1620</ind><dep> 10</dep></entry>
-			<entry><ind>0.2127</ind><dep> 13</dep></entry>
-			<entry><ind>0.2526</ind><dep> 16</dep></entry>
-			<entry><ind>0.2896</ind><dep> 19</dep></entry>
-			<entry><ind>0.3195</ind><dep> 22</dep></entry>
-			<entry><ind>0.3501</ind><dep> 25</dep></entry>
-			<entry><ind>0.3760</ind><dep> 28</dep></entry>
-			<entry><ind>0.5781</ind><dep> 52</dep></entry>
-			<entry><ind>0.7240</ind><dep> 81</dep></entry>
-			<entry><ind>0.8458</ind><dep>110</dep></entry>
-			<entry><ind>0.9570</ind><dep>140</dep></entry>
-			<entry><ind>     1</ind><dep>153</dep></entry>
+			<entry><ind>0.0000</ind><dep>  6</dep></entry>
+			<entry><ind>0.1797</ind><dep> 28</dep></entry>
+			<entry><ind>0.3850</ind><dep> 52</dep></entry>
+			<entry><ind>0.5903</ind><dep> 81</dep></entry>
+			<entry><ind>0.7956</ind><dep>110</dep></entry>
+			<entry><ind>1.0000</ind><dep>140</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
@@ -930,13 +880,7 @@
     	<object-name>epr.3</object-name>
     	<property>engines/engine[2]/epr-actual</property>
     	<interpolation>
-			<entry><ind>1.03</ind><dep>  6</dep></entry>
-			<entry><ind>1.04</ind><dep> 10</dep></entry>
-			<entry><ind>1.05</ind><dep> 13</dep></entry>
-			<entry><ind>1.06</ind><dep> 16</dep></entry>
-			<entry><ind>1.07</ind><dep> 19</dep></entry>
-			<entry><ind>1.08</ind><dep> 22</dep></entry>
-			<entry><ind>1.09</ind><dep> 25</dep></entry>
+			<entry><ind>1.01</ind><dep>  6</dep></entry>
 			<entry><ind>1.10</ind><dep> 28</dep></entry>
 			<entry><ind>1.20</ind><dep> 52</dep></entry>
 			<entry><ind>1.30</ind><dep> 81</dep></entry>
@@ -960,19 +904,12 @@
     	<object-name>thrpos3</object-name>
     	<property>controls/engines/engine[2]/throttle</property>
     	<interpolation>
-			<entry><ind>0.0833</ind><dep>  6</dep></entry>
-			<entry><ind>0.1620</ind><dep> 10</dep></entry>
-			<entry><ind>0.2127</ind><dep> 13</dep></entry>
-			<entry><ind>0.2526</ind><dep> 16</dep></entry>
-			<entry><ind>0.2896</ind><dep> 19</dep></entry>
-			<entry><ind>0.3195</ind><dep> 22</dep></entry>
-			<entry><ind>0.3501</ind><dep> 25</dep></entry>
-			<entry><ind>0.3760</ind><dep> 28</dep></entry>
-			<entry><ind>0.5781</ind><dep> 52</dep></entry>
-			<entry><ind>0.7240</ind><dep> 81</dep></entry>
-			<entry><ind>0.8458</ind><dep>110</dep></entry>
-			<entry><ind>0.9570</ind><dep>140</dep></entry>
-			<entry><ind>     1</ind><dep>153</dep></entry>
+			<entry><ind>0.0000</ind><dep>  6</dep></entry>
+			<entry><ind>0.1797</ind><dep> 28</dep></entry>
+			<entry><ind>0.3850</ind><dep> 52</dep></entry>
+			<entry><ind>0.5903</ind><dep> 81</dep></entry>
+			<entry><ind>0.7956</ind><dep>110</dep></entry>
+			<entry><ind>1.0000</ind><dep>140</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
@@ -1035,13 +972,7 @@
     	<object-name>epr.4</object-name>
     	<property>engines/engine[3]/epr-actual</property>
     	<interpolation>
-			<entry><ind>1.03</ind><dep>  6</dep></entry>
-			<entry><ind>1.04</ind><dep> 10</dep></entry>
-			<entry><ind>1.05</ind><dep> 13</dep></entry>
-			<entry><ind>1.06</ind><dep> 16</dep></entry>
-			<entry><ind>1.07</ind><dep> 19</dep></entry>
-			<entry><ind>1.08</ind><dep> 22</dep></entry>
-			<entry><ind>1.09</ind><dep> 25</dep></entry>
+			<entry><ind>1.01</ind><dep>  6</dep></entry>
 			<entry><ind>1.10</ind><dep> 28</dep></entry>
 			<entry><ind>1.20</ind><dep> 52</dep></entry>
 			<entry><ind>1.30</ind><dep> 81</dep></entry>
@@ -1065,19 +996,12 @@
     	<object-name>thrpos4</object-name>
     	<property>controls/engines/engine[3]/throttle</property>
     	<interpolation>
-			<entry><ind>0.0833</ind><dep>  6</dep></entry>
-			<entry><ind>0.1620</ind><dep> 10</dep></entry>
-			<entry><ind>0.2127</ind><dep> 13</dep></entry>
-			<entry><ind>0.2526</ind><dep> 16</dep></entry>
-			<entry><ind>0.2896</ind><dep> 19</dep></entry>
-			<entry><ind>0.3195</ind><dep> 22</dep></entry>
-			<entry><ind>0.3501</ind><dep> 25</dep></entry>
-			<entry><ind>0.3760</ind><dep> 28</dep></entry>
-			<entry><ind>0.5781</ind><dep> 52</dep></entry>
-			<entry><ind>0.7240</ind><dep> 81</dep></entry>
-			<entry><ind>0.8458</ind><dep>110</dep></entry>
-			<entry><ind>0.9570</ind><dep>140</dep></entry>
-			<entry><ind>     1</ind><dep>153</dep></entry>
+			<entry><ind>0.0000</ind><dep>  6</dep></entry>
+			<entry><ind>0.1797</ind><dep> 28</dep></entry>
+			<entry><ind>0.3850</ind><dep> 52</dep></entry>
+			<entry><ind>0.5903</ind><dep> 81</dep></entry>
+			<entry><ind>0.7956</ind><dep>110</dep></entry>
+			<entry><ind>1.0000</ind><dep>140</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
