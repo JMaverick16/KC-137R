@@ -29,14 +29,6 @@
  	 	<animation>
 		<type>material</type>
 		<object-name>Chrono.needle</object-name>
-		<object-name>colon</object-name>
-		<object-name>colon.001</object-name>
-		<object-name>ET.01</object-name>
-		<object-name>ET.10</object-name>
-		<object-name>Hr.01</object-name>
-		<object-name>Hr.10</object-name>
-		<object-name>Mn.01</object-name>
-		<object-name>Mn.10</object-name>
 		<object-name>Plane.001</object-name>
 		<!--condition>
 			 <greater-than>

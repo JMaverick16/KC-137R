@@ -4,6 +4,7 @@ MATERIAL "Flat" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 0 
 MATERIAL "interior" rgb 0.9 0.9 0.9  amb 0.9 0.9 0.9  emis 0.053 0.053 0.053  spec 0 0 0  shi 0  trans 0
 MATERIAL "flatblack" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "greenglow" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0.5 0.5 0.5  spec 0 0 0  shi 0  trans 0
+MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 OBJECT world
 kids 23
 OBJECT poly
@@ -1640,7 +1641,7 @@ numvert 4
 0 0.0060181 0.0027489
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.482096 0.096007
 3 0.456352 0.096007
@@ -1661,7 +1662,7 @@ numvert 4
 0 0.0060181 0.0027489
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.482096 0.096007
 3 0.456352 0.096007
@@ -1970,7 +1971,7 @@ numvert 4
 0 0.0060181 0.0027489
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.482096 0.096007
 3 0.456352 0.096007
@@ -1991,7 +1992,7 @@ numvert 4
 0 0.0060181 0.0027489
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.482096 0.096007
 3 0.456352 0.096007
@@ -2012,7 +2013,7 @@ numvert 4
 0 0.0060181 0.0027489
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.482096 0.096007
 3 0.456352 0.096007
@@ -2033,7 +2034,7 @@ numvert 4
 0 0.0060181 0.0027489
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.482096 0.096007
 3 0.456352 0.096007
@@ -2552,7 +2553,7 @@ numvert 4
 0 0.0060181 0.0027489
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.482096 0.096007
 3 0.456352 0.096007
@@ -2573,7 +2574,7 @@ numvert 4
 0 0.0060181 0.0027489
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.482096 0.096007
 3 0.456352 0.096007
@@ -13922,14 +13923,14 @@ numvert 8
 0 -0.0013937 -0.0004158
 numsurf 2
 SURF 0x0
-mat 0
+mat 5
 refs 4
 6 0.472544 0.848231
 0 0.472544 0.854461
 3 0.467046 0.854461
 5 0.467046 0.848231
 SURF 0x0
-mat 0
+mat 5
 refs 4
 4 0.466909 0.854326
 2 0.466909 0.847913
@@ -13950,7 +13951,7 @@ numvert 4
 0 0.0008184 0.000451
 numsurf 1
 SURF 0x0
-mat 0
+mat 5
 refs 4
 0 0.473495 0.847952
 2 0.473495 0.855074
