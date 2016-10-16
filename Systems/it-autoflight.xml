@@ -40,18 +40,18 @@
  <!-- =============================================================== -->
   
   <filter>
-    <name>heading bug error computer/normalizer</name>
+    <name>MAGNETIC HDG ERROR DEG</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>autopilot/settings/heading-bug-deg</property>
+      <property>/it-autoflight/settings/heading-bug-deg</property>
       <offset>
-        <property>orientation/heading-magnetic-deg</property>
+        <property>/orientation/heading-magnetic-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/heading-bug-error-deg</output>
-    <output>it-autoflight/internal/fdm-heading-bug-error-deg</output>
+    <output>/it-autoflight/internal/heading-bug-error-deg</output>
+    <output>/it-autoflight/internal/fdm-heading-bug-error-deg</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -60,17 +60,17 @@
   </filter>
 
   <filter>
-    <name>true heading error computer/normalizer</name>
+    <name>TRUE HDG ERROR DEG</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>autopilot/settings/true-heading-deg</property>
+      <property>/it-autoflight/settings/heading-bug-deg</property>
       <offset>
-        <property>orientation/heading-deg</property>
+        <property>/orientation/heading-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/true-heading-error-deg</output>
+    <output>/it-autoflight/internal/true-heading-error-deg</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -79,17 +79,17 @@
   </filter>
 
   <filter>
-    <name>nav1 heading error computer/normalizer</name>
+    <name>NAV1 ERROR DEG</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
+      <property>/instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
       <offset>
-        <property>orientation/heading-deg</property>
+        <property>/orientation/heading-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/nav1-heading-error-deg</output>
+    <output>/it-autoflight/internal/nav1-heading-error-deg</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -98,17 +98,17 @@
   </filter>
 
   <filter>
-    <name>nav1 selected course error computer/normalizer</name>
+    <name>NAV1 COURSE ERROR</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>instrumentation/nav[0]/radials/selected-deg</property>
+      <property>/instrumentation/nav[0]/radials/selected-deg</property>
       <offset>
-        <property>orientation/heading-magnetic-deg</property>
+        <property>/orientation/heading-magnetic-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/nav1-course-error</output>
+    <output>/it-autoflight/internal/nav1-course-error</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -117,53 +117,53 @@
   </filter>
 
   <filter>
-    <name>vertical speed fpm computer</name>
+    <name>INTERNAL VERTICAL SPEED COMPUTER</name>
     <debug>false</debug>
     <type>gain</type>
-    <input>velocities/vertical-speed-fps</input>
-    <output>it-autoflight/internal/vert-speed-fpm</output>
+    <input>/velocities/vertical-speed-fps</input>
+    <output>/it-autoflight/internal/vert-speed-fpm</output>
     <gain>60.0</gain>
   </filter>
 
   <predict-simple>
-    <name>speed in 5 seconds predictor</name>
+    <name>IAS 5 SECOND PREDICTOR</name>
     <debug>false</debug>
-    <input>velocities/airspeed-kt</input>
-    <output>it-autoflight/internal/lookahead-5-sec-airspeed-kt</output>
+    <input>/velocities/airspeed-kt</input>
+    <output>/it-autoflight/internal/lookahead-5-sec-airspeed-kt</output>
     <seconds>5.0</seconds>
     <filter-gain>0.0</filter-gain>
   </predict-simple>
 
   <predict-simple>
-    <name>speed in 10 seconds predictor</name>
+    <name>IAS 10 SECOND PREDICTOR</name>
     <debug>false</debug>
-    <input>velocities/airspeed-kt</input>
-    <output>it-autoflight/internal/lookahead-10-sec-airspeed-kt</output>
+    <input>/velocities/airspeed-kt</input>
+    <output>/it-autoflight/internal/lookahead-10-sec-airspeed-kt</output>
     <seconds>10.0</seconds>
     <filter-gain>0.0</filter-gain>
   </predict-simple>
 
   <filter>
-    <name>static port pressure rate computer</name>
+    <name>STATIC PRESSURE COMPUTER</name>
     <debug>false</debug>
     <type>derivative</type>
-    <input>systems/static[0]/pressure-inhg</input>
-    <output>it-autoflight/internal/pressure-rate</output>
+    <input>/systems/static[0]/pressure-inhg</input>
+    <output>/it-autoflight/internal/pressure-rate</output>
     <filter-time>1.0</filter-time>
   </filter>
 
   <filter>
-    <name>nav1 track error computer</name>
+    <name>NAV1 TRACK ERROR</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
-      <property>instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
+      <property>/instrumentation/nav[0]/radials/target-auto-hdg-deg</property>
       <offset>
-        <property>orientation/track-deg</property>
+        <property>/orientation/track-deg</property>
         <scale>-1.0</scale>
       </offset>
     </input>
-    <output>it-autoflight/internal/nav1-track-error-deg</output>
+    <output>/it-autoflight/internal/nav1-track-error-deg</output>
     <period>
       <min>-180</min>
       <max>180</max>
@@ -195,12 +195,34 @@
 		</enable>
 		<input>
 			<condition>
-				<equals>
-					<property>/it-autoflight/aplatmode</property>
-					<value>0</value>
-				</equals>
+				<and>
+					<equals>
+						<property>/it-autoflight/aplatmode</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/settings/use-true-hdg-error</property>
+						<value>0</value>
+					</equals>
+				</and>
 			</condition>
 			<property>/it-autoflight/internal/heading-bug-error-deg</property>
+			<scale>6.3</scale>
+		</input>
+		<input>
+			<condition>
+				<and>
+					<equals>
+						<property>/it-autoflight/aplatmode</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/settings/use-true-hdg-error</property>
+						<value>1</value>
+					</equals>
+				</and>
+			</condition>
+			<property>/it-autoflight/internal/true-heading-error-deg</property>
 			<scale>6.3</scale>
 		</input>
 		<input>

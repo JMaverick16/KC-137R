@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Milestone 2 Build 51G
+# V3.0.0 Milestone 2 Build 54F
 
 print("IT-AUTOFLIGHT: Please Wait!");
 setprop("/it-autoflight/settings/retard-enable", 1);  # Do not change this here! See IT-AUTOFLIGHT's Help.txt
@@ -15,9 +15,6 @@ var ap_init = func {
 	setprop("/it-autoflight/fd_master2", 0);
 	setprop("/it-autoflight/loc-armed", 0);
 	setprop("/it-autoflight/appr-armed", 0);
-	setprop("/it-autoflight/thr", 1);
-	setprop("/it-autoflight/idle", 0);
-	setprop("/it-autoflight/clb", 0);
 	setprop("/it-autoflight/autothrarm", 0);
 	setprop("/it-autoflight/apthrmode", 0);
 	setprop("/it-autoflight/apthrmode2", 0);
@@ -28,8 +25,8 @@ var ap_init = func {
 	setprop("/it-autoflight/settings/target-altitude-ft-actual", 10000);
 	setprop("/it-autoflight/settings/vertical-speed-fpm", 0);
 	setprop("/it-autoflight/settings/bank-limit", 30);
-	setprop("/it-autoflight/min-pitch", -4);
-	setprop("/it-autoflight/max-pitch", 8);
+	setprop("/it-autoflight/settings/min-pitch", -4);
+	setprop("/it-autoflight/settings/max-pitch", 8);
 	setprop("/it-autoflight/internal/min-pitch", -4);
 	setprop("/it-autoflight/internal/max-pitch", 8);
 	setprop("/it-autoflight/settings/vertical-speed-fpm", 0);
@@ -37,6 +34,7 @@ var ap_init = func {
 	setprop("/it-autoflight/apvertset", 4);
 	setprop("/it-autoflight/retard", 0);
     setprop("/it-autoflight/autoland/target-vs", "-500");
+	setprop("/it-autoflight/settings/use-true-hdg-error", 0);
 	update_arms();
 	print("IT-AUTOFLIGHT: Done!");
 }
@@ -274,11 +272,11 @@ var flchthrust = func {
     if (calt < alt) {
 	  setprop("/it-autoflight/apthrmode2", 2);
 	  setprop("/it-autoflight/txtthrmode", "PITCH");
-	    setprop("/it-autoflight/txtvertmode", "THR CLB");
+	    setprop("/it-autoflight/txtvertmode", "CLB THR");
     } else if (calt > alt) {
       setprop("/it-autoflight/apthrmode2", 1);
 	  setprop("/it-autoflight/txtthrmode", "PITCH");
-	    setprop("/it-autoflight/txtvertmode", "THR IDLE");
+	    setprop("/it-autoflight/txtvertmode", "IDLE DES");
     } else {
 	  setprop("/it-autoflight/apthrmode2", 0);
 	  setprop("/it-autoflight/txtthrmode", "THRUST");
