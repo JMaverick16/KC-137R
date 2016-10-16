@@ -99,16 +99,6 @@
   </offsets>
 </model>
 
-<!--model>
-  <name>clock</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
-  <offsets>
-    <x-m>-18.919</x-m>
-    <y-m>-0.543</y-m>
-    <z-m>0.796</z-m>
-  </offsets>
-</model-->
-
 <model>
   <name>clock</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/chronometer/chronometer.xml</path>
@@ -215,16 +205,6 @@
       <z-m> 0.931</z-m>
   </offsets>
 </model>
-
-<!--model>
-  <name>stby-ai</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/stby-ai.xml</path>
-  <offsets>
-      <x-m>-18.92</x-m>
-      <y-m>-0.141</y-m>
-      <z-m> 0.858</z-m>
-  </offsets>
-</model-->
 
 <model>
   <name>stby-ai</name>
@@ -396,10 +376,10 @@
 
 <model>
   <name>clock_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/chronometer/chronometer.xml</path>
   <offsets>
     <x-m>-18.919</x-m>
-    <y-m>0.30</y-m>
+    <y-m>0.303</y-m>
     <z-m>0.802</z-m>
   </offsets>
 </model>
