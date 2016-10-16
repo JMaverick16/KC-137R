@@ -42,13 +42,13 @@
   <condition>
 	<or>
     <equals>
-      <property>/it-autoflight/loc</property>
+      <property>/it-autoflight/loc-armed</property>
       <value>1</value>
     </equals>
-    <greater-than>
-      <property>/it-autoflight/app</property>
+    <equals>
+      <property>/it-autoflight/appr-armed</property>
 	  <value>1</value>
-    </greater-than>
+    </equals>
 	</or>
   </condition>
 </animation>
@@ -183,7 +183,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>ILS</object-name>
-  <property>/it-autoflight/apilsmode</property>
+  <property>/it-autoflight/appr-armedr-armed</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>

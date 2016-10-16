@@ -1056,7 +1056,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/loc1</property>
+				<property>/it-autoflight/loc-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1067,7 +1067,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/app1</property>
+				<property>/it-autoflight/appr-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1079,7 +1079,7 @@ Syd Adams
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/app1</property>
+				<property>/it-autoflight/appr-armed</property>
 				<value>0</value>
 			</equals>
 			<or>

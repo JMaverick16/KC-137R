@@ -473,7 +473,7 @@
 		</input>
 		<output>/controls/flight/aileron</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.8</max-rate-of-change>
+		<max-rate-of-change>0.6</max-rate-of-change>
 	</filter>
 
  <!-- =============================================================== -->
@@ -529,16 +529,17 @@
 		</enable>
 		<input>
 			<prop>/it-autoflight/internal/vert-speed-fpm</prop>
-			<scale>0.05</scale>
+			<scale>0.1</scale>
 		</input>
 		<reference>
 			<prop>/it-autoflight/settings/vertical-speed-fpm</prop>
-			<scale>0.05</scale>
+			<scale>0.1</scale>
 		</reference>
 		<output>
 			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
+			<Kp>0.025</Kp>
 			<Kp>0.025</Kp>
 			<Ki>0.010</Ki>
 			<beta>1.0</beta>       
@@ -551,6 +552,46 @@
 			</min>
 			<max>
 				<value>30</value>
+			</max>
+		</config>
+	</pi-simple-controller>
+	
+	<pi-simple-controller>
+		<name>AUTOLAND VS HOLD</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<equals>
+					<property>/it-autoflight/apvertmode</property>
+					<value>6</value>
+				</equals>
+				
+			</condition>
+		</enable>
+		<input>
+			<prop>/it-autoflight/internal/vert-speed-fpm</prop>
+			<scale>0.2</scale>
+		</input>
+		<reference>
+			<prop>/it-autoflight/autoland/target-vs</prop>
+			<scale>0.2</scale>
+		</reference>
+		<output>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
+		</output>
+		<config>
+			<Kp>0.06</Kp>
+			<Ki>0.010</Ki>
+			<beta>1.0</beta>       
+			<alpha>0.5</alpha>     
+			<gamma>0.0</gamma>     
+			<Ti>10.0</Ti>
+			<Td>0.0001</Td>
+			<min>
+				<value>0</value>
+			</min>
+			<max>
+				<value>15</value>
 			</max>
 		</config>
 	</pi-simple-controller>
@@ -793,6 +834,10 @@
 						<equals>
 							<property>/it-autoflight/apvertmode</property>
 							<value>2</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/apvertmode</property>
+							<value>6</value>
 						</equals>
 					</or>
 					<or>
@@ -1038,7 +1083,7 @@
 			</condition>
 		</enable>
 		<input>
-			<value>0</value>
+			<value>/controls/flight/rudder</value>
 		</input>
 		<reference>
 			<value>0</value>
@@ -1047,7 +1092,7 @@
 			<property>/controls/flight/rudder</property>
 		</output>
 		<config>
-			<Kp>1</Kp>
+			<Kp>5</Kp>
 			<beta>1.0</beta>	
 			<alpha>0.1</alpha>	
 			<gamma>0.0</gamma>	
