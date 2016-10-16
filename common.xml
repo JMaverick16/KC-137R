@@ -276,9 +276,9 @@
 	<settings>
 		<no-generics>1</no-generics>
 		<roll>
-			<umin>-0.6</umin>
-			<umax>0.6</umax>
-			<kp>0.04</kp>
+			<umin>-0.7</umin>
+			<umax>0.7</umax>
+			<kp>0.10</kp>
 			<kp-vorloc>0.08</kp-vorloc>
 		</roll>
 		<pitch>

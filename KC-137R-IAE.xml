@@ -462,8 +462,8 @@
             <input>fcs/roll-trim-sum</input>
             <gain>0.006</gain>
             <range>
-                <min>-80</min>
-                <max>80</max>
+                <min>-40</min>
+                <max>40</max>
             </range>
             <output>fcs/left-aileron-pos-rad</output>
         </aerosurface_scale>
@@ -480,8 +480,8 @@
             <input>fcs/roll-trim-sum</input>
             <gain>0.006</gain>
             <range>
-                <min>-80</min>
-                <max>80</max>
+                <min>-40</min>
+                <max>40</max>
             </range>
             <output>fcs/right-aileron-pos-rad</output>
         </aerosurface_scale>

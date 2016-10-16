@@ -53,7 +53,7 @@
       <y-m>0</y-m>
       <z-m>0.0007</z-m>
     </center>
-    <axis><x>-1</x></axis>
+    <axis><x>1</x></axis>
   </animation>
 
   <!-- Turn indicator -->

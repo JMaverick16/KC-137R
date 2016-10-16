@@ -5,6 +5,13 @@
 <PropertyList>
  
     <path>clock.ac</path>
+	
+    <animation>
+    <type>scale</type>
+    <x-offset>0.9</x-offset>
+    <y-offset>0.9</y-offset>
+    <z-offset>0.9</z-offset>
+    </animation>
 
     <animation>
     <type>scale</type>
@@ -265,7 +272,7 @@
 		<object-name>Mn.10</object-name>
 		<condition>
 			 <greater-than>
-				<property>systems/electrical/CPT-FLT-INST</property>
+				<property>systems/electrical/outputs/efis</property>
 				<value>24.0</value>
 			 </greater-than>
 		</condition>

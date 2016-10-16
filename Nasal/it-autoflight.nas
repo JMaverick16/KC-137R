@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Milestone 2 Build 50X
+# V3.0.0 Milestone 2 Build 51G
 
 print("IT-AUTOFLIGHT: Please Wait!");
 setprop("/it-autoflight/settings/retard-enable", 1);  # Do not change this here! See IT-AUTOFLIGHT's Help.txt
@@ -208,7 +208,8 @@ setlistener("/it-autoflight/apvertset", func {
 	# VNAV not ready yet, so do nothing
   } else if (vertset == 6) {
 	setprop("/it-autoflight/apvertmode", 6);
-	setprop("/it-autoflight/txtarmmode", "LND");
+	setprop("/it-autoflight/txtvertmode", "LAND");
+	setprop("/it-autoflight/txtarmmode", " ");
 	flchthrust();
 	alandt.stop();
 	alandt1.start();
@@ -351,8 +352,9 @@ var retardchk = func {
 }
 
 var atoffchk = func{
-  var altpos = getprop("/position/altitude-agl-ft");
-  if (altpos <= 15) {
+  var gear1 = getprop("/gear/gear[1]/wow");
+  var gear2 = getprop("/gear/gear[2]/wow");
+  if (gear1 == 1 or gear2 == 1) {
 	setprop("/it-autoflight/at_mastersw", 0);
 	setprop("/controls/engines/engine[0]/throttle", 0);
 	setprop("/controls/engines/engine[1]/throttle", 0);
