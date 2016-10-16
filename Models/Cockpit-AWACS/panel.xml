@@ -75,11 +75,11 @@
 
 <model>
   <name>clock</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/chronometer/chronometer.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
     <y-m>-0.546</y-m>
-    <z-m>0.712</z-m>
+    <z-m>0.709</z-m>
   </offsets>
 </model>
 
@@ -299,12 +299,12 @@
 </model>
 
 <model>
-  <name>clock</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/clock/clock.xml</path>
+  <name>clock_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/chronometer/chronometer.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
     <y-m>0.289</y-m>
-    <z-m>0.712</z-m>
+    <z-m>0.709</z-m>
   </offsets>
 </model>
 
