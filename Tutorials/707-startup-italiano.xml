@@ -6,8 +6,8 @@
 		###################################################################################
 -->
 <PropertyList>
-	<name>Engines: Start-up [italiano]</name>
-	<description>Motores avviare (with external Power Unit)</description>
+	<name>Motori: Avviamento [italiano]</name>
+	<description>Avviare i motori (con l'unita' di alimentazione esterna)</description>
 
 	<init>
 		<set>
@@ -243,8 +243,8 @@
 
 	<step>
 		<message>
-			Collegare l'unita di alimentazione esterna.
-			Nel menu principale: Boeing 707 / Unita di alimentazione esterna
+			Collegare l'unita' di alimentazione esterna.
+			Nel menu principale: Boeing 707 / Unita' di alimentazione esterna
 			(o External Power Unit).
 		</message>
 		<view>
@@ -273,7 +273,7 @@
 	
 	<step>
 		<message>
-			L'unita di alimentazione esterna e stata collegata.
+			L'unita' di alimentazione esterna e' stata collegata.
 		</message>
 		<view>
 		    <view-number>1</view-number>
@@ -420,7 +420,7 @@
 	<step>
 		<message>
 			Porre il selettore AC PARALLELING su EXTERNAL POWER
-			(la sorgente AC verra poi sincronizzata a 400Hz).
+			(la sorgente AC verra' poi sincronizzata a 400Hz).
 		</message>
 		<view>
 				<heading-offset-deg>241.4</heading-offset-deg>
@@ -685,9 +685,9 @@
 
 	<step>
 		<message>
-			Attivare le unita GEN DRIVE. Aprire i coperchi rossi
+			Attivare le unita' GEN DRIVE. Aprire i coperchi rossi
 			e alzare le levette. Richiudere i coperchi.
-			ATTENZIONE: non e possibile farlo in volo!
+			ATTENZIONE: non e' possibile farlo in volo!
 		</message>
 		<view>
 				<heading-offset-deg>241.8</heading-offset-deg>
@@ -707,7 +707,7 @@
 		</marker>
 		<error>
 			<message>
-				Attivare tutte le unita GEN DRIVE e richiudere i coperchi.
+				Attivare tutte le unita' GEN DRIVE e richiudere i coperchi.
 				ATTENZIONE: non e possibile farlo in volo!
 			</message>
 			<condition>
@@ -802,7 +802,7 @@
 		</marker>
 		<error>
 			<message>
-				Attivare tutti i regolatori (sollevare ogni levetta) e richiudere i coperchi!
+				Attivare tutti i regolatori (sollevare ogni levetta) e richiudere i coperchi.
 			</message>
 			<condition>
 				<not><property>/b707/generator/gen-control[0]</property></not>
@@ -869,7 +869,7 @@
 	
 	<step>
 		<message>
-			Commutare ogni valvola di percorso del carburante fino a
+			Commutare ogni valvola di percorso del carburante fino ad
 			attuazione completata (luci blu spente) e riportarla alla
 			posizione precedente.
 		</message>
@@ -1129,7 +1129,7 @@
 	
 	<step>
 		<message>Starter 3: la luce verde 
-		         (in alto vicino al coperchio) e spenta?</message>
+		         (in alto vicino al coperchio) e' spenta?</message>
 		<view>
 				<heading-offset-deg>315.9</heading-offset-deg>
 				<pitch-offset-deg>-29.3</pitch-offset-deg>
@@ -2021,7 +2021,7 @@
 	
 	<step>
 		<message>
-			Chiudere tutti i BUS-TIE BREAKER, ora (alzare ogni levetta).
+			Chiudere tutti i BUS-TIE BREAKER ora (alzare ogni levetta).
 			Richiudere i coperchi.
 		</message>
 		<view>
@@ -2064,7 +2064,7 @@
 	
 	<step>
 		<message>
-			La nostra fonte principale di energia sara adesso il generatore 1.
+			La nostra fonte principale di energia sara' adesso il generatore 1.
 			Girare il selettore su GEN 1.
 		</message>
 		<view>
@@ -2110,8 +2110,8 @@
 	
 	<step>
 		<message>
-			Interrompere la connessione all'unita di alimentazione esterna.
-			Nel menu principale: Boeing 707 / Unita di alimentazione esterna
+			Interrompere la connessione all'unita' di alimentazione esterna.
+			Nel menu principale: Boeing 707 / Unita' di alimentazione esterna
 			(o External Power Unit).
 		</message>
 		<view>
@@ -2148,7 +2148,7 @@
 	<step>
 		<message>
 			Scollegare il generatore esterno ora.
-			Nel menu principale: B707 / Unita di alimentazione esterna
+			Nel menu principale: B707 / Unita' di alimentazione esterna
 			(o External Power Unit).
 		</message>
 		<view>
@@ -2475,7 +2475,7 @@
 
 	<step>
 		<message>
-			WING VALVE (condotto trasversale):
+			WING VALVE (condotto trasversale alare):
 			porre entrambi su OPEN.
 		</message>
 		<view>
@@ -2496,7 +2496,7 @@
 		</marker>
 		<error>
 			<message>
-				WING VALVE (condotto trasversale):
+				WING VALVE (condotto trasversale alare):
 				porre L e R su OPEN.
 			</message>
 			<condition>
@@ -2514,7 +2514,7 @@
 
 	<step>
 		<message>
-			Attivare le unita di aria condizionata, dopo aver aperto il coperchio.
+			Attivare le unita' di aria condizionata, dopo aver aperto il coperchio.
 			Richiudere il coperchio.
 		</message>
 		<view>
@@ -2535,7 +2535,7 @@
 		</marker>
 		<error>
 			<message>
-				Attivare entrambe le unita di aria condizionata, porre su ON.
+				Attivare entrambe le unita' di aria condizionata, porre su ON.
 				Richiudere il coperchio.
 			</message>
 			<condition>
@@ -2590,7 +2590,7 @@
 	
 	<step>
 		<message>
-			Ora attivare la modalita AUTO della pressurizzazione. 
+			Ora attivare la modalita' AUTO della pressurizzazione. 
 		</message>
 		<view>
 				<heading-offset-deg>227.6</heading-offset-deg>
