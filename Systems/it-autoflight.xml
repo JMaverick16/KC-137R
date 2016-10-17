@@ -77,6 +77,26 @@
     </period>
     <gain>1.0</gain>
   </filter>
+  
+
+  <filter>
+    <name>LNAV HDG ERROR DEG</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>
+      <property>/autopilot/settings/true-heading-deg</property>
+      <offset>
+        <property>/orientation/heading-deg</property>
+        <scale>-1.0</scale>
+      </offset>
+    </input>
+    <output>/it-autoflight/internal/lnav-hdg-error-deg</output>
+    <period>
+      <min>-180</min>
+      <max>180</max>
+    </period>
+    <gain>1.0</gain>
+  </filter>
 
   <filter>
     <name>NAV1 ERROR DEG</name>
@@ -232,7 +252,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/true-heading-error-deg</property>
+			<property>/it-autoflight/internal/lnav-hdg-error-deg</property>
 			<scale>6.3</scale>
 		</input>
 		<output>
