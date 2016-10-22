@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Milestone 2 Build 54F
+# V3.0.0 Milestone 2 Build 54H
 
 print("IT-AUTOFLIGHT: Please Wait!");
 setprop("/it-autoflight/settings/retard-enable", 1);  # Do not change this here! See IT-AUTOFLIGHT's Help.txt
@@ -223,7 +223,7 @@ var flch_on = func {
 var alt_on = func {
   setprop("/it-autoflight/appr-armed", 0);
   setprop("/it-autoflight/apvertmode", 0);
-  setprop("/it-autoflight/txtvertmode", "ALT HLD");
+  setprop("/it-autoflight/txtvertmode", "ALT CAP");
   setprop("/it-autoflight/internal/max-pitch", 8);
   setprop("/it-autoflight/internal/min-pitch", -4);
 }
@@ -297,7 +297,12 @@ var minmax = func {
   if (dif < 100 and dif > -100) {
       setprop("/it-autoflight/internal/max-pitch", 8);
       setprop("/it-autoflight/internal/min-pitch", -4);
-	  setprop("/it-autoflight/txtvertmode", "ALT HLD");
+	  var vertmode = getprop("/it-autoflight/apvertmode");
+	  if (vertmode == 1 or vertmode == 2 or vertmode == 4) {
+	    # Do not change the vertical mode because we are not trying to capture altitude.
+	  } else {
+	    setprop("/it-autoflight/txtvertmode", "ALT HLD");
+	  }
 	  minmaxtimer.stop();
   }
 }

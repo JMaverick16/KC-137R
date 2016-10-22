@@ -709,7 +709,7 @@
 				</equals>
 			</condition>
 			<prop>/velocities/mach</prop>
-			<scale>500.0</scale>
+			<scale>1000.0</scale>
 		</input>
 		<reference>
 			<condition>
@@ -728,7 +728,7 @@
 				</equals>
 			</condition>
 			<prop>/it-autoflight/settings/target-mach</prop>
-			<scale>500.0</scale>
+			<scale>1000.0</scale>
 		</reference>
 		<output>
 			<prop>/it-autoflight/internal/target-pitch-deg</prop>
