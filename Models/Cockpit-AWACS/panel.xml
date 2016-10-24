@@ -94,6 +94,16 @@
 </model>
 
 <model>
+  <name>stby-asi</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-asi/stby-asi.xml</path>
+  <offsets>
+    <x-m>-18.92</x-m>
+    <y-m>-0.385</y-m>
+    <z-m>0.707</z-m>
+  </offsets>
+</model>
+
+<model>
     <name>tancan_dme</name>
     <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tacan/dme/dme.xml</path>
 	<offsets>
@@ -315,6 +325,16 @@
     <x-m>-18.922</x-m>
     <y-m>0.369</y-m>
     <z-m>0.71</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>stby-asi_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-asi/stby-asi.xml</path>
+  <offsets>
+    <x-m>-18.92</x-m>
+    <y-m>0.448</y-m>
+    <z-m>0.707</z-m>
   </offsets>
 </model>
 
