@@ -6,7 +6,7 @@ OBJECT world
 kids 4
 OBJECT group
 name "lights"
-loc 1.17856 -0.195138 0.36131
+loc 1.17856 -0.177661 0.352036
 kids 17
 OBJECT poly
 name "GPU"
@@ -2228,7 +2228,7 @@ refs 3
 kids 0
 OBJECT poly
 name "GPU"
-loc 1.13666 0.0993264 -0.191369
+loc 1.13666 0.116804 -0.200643
 data 4
 Mesh
 texture "generic-trailer-GPU.png"
