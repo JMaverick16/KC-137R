@@ -32,38 +32,80 @@
    </volume>
   </apoff>
   
-  <tchdwn0>
-   <name>tchdwn0</name>
-   <path>/Aircraft/KC-137R/Sounds/tchdwn.wav</path>
-   <condition>
-     <property>/gear/gear[0]wow</property>
-   </condition>
-   <volume>
-    <factor>25.0</factor>
-   </volume>
-  </tchdwn0>
-  
-  <tchdwn1>
-   <name>tchdwn1</name>
-   <path>/Aircraft/KC-137R/Sounds/tchdwn.wav</path>
-   <condition>
-     <property>/gear/gear[1]wow</property>
-   </condition>
-   <volume>
-    <factor>30.0</factor>
-   </volume>
-  </tchdwn1>
-  
-  <tchdwn2>
-   <name>tchdwn2</name>
-   <path>/Aircraft/KC-137R/Sounds/tchdwn.wav</path>
-   <condition>
-     <property>/gear/gear[2]/wow</property>
-   </condition>
-   <volume>
-    <factor>30.0</factor>
-   </volume>
-  </tchdwn2>
+                 <wow>
+			<name>wow 0</name>
+			<mode>once</mode>
+			<path>Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+			<condition>
+				<property>gear/gear[0]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		<wow>
+			<name>wow 1</name>
+			<mode>once</mode>
+			<path>Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+			<condition>
+				<property>gear/gear[1]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		<wow>
+			<name>wow 2</name>
+			<mode>once</mode>
+			<path>Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+			<condition>
+				<property>gear/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+		<wow>
+			<name>wow 3</name>
+			<mode>once</mode>
+			<path>Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+			<condition>
+				<property>gears/gear[0]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		<wow>
+			<name>wow 4</name>
+			<mode>once</mode>
+			<path>Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+			<condition>
+				<property>gears/gear[1]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		<wow>
+			<name>wow 5</name>
+			<mode>once</mode>
+			<path>Aircraft/KC-137R/Sounds/tchdwn.wav</path>
+			<condition>
+				<property>gears/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+
   
 <!-- internal -->
 <!-- CFM whee -->
@@ -566,7 +608,7 @@
 	<wind>
 		<name>wind</name>
 		<mode>looped</mode>
-		<path>wind.wav</path>
+		<path>Aircraft/KC-137R/wind.wav</path>
 		<property>/velocities/airspeed-kt</property>
 		<volume>
 			<property>/position/altitude-ft</property>
@@ -589,25 +631,31 @@
 	</wind>
 
 	<stall>
-		<name>stall</name>
-		<path>Aircraft/KC-137R/Sounds/stall.wav</path> 
-		<condition>
-			<and>
-				<greater-than>
-					<property>/b707/ess-bus</property>
-					<value>0</value>
-				</greater-than>
-				<property>/controls/test/warn-knob</property>
-				<less-than>
-					<property>/velocities/airspeed-kt</property>
-					<value>100.0</value>
-				</less-than>
-			</and>
-		</condition>
-		<volume>
-			<factor>1</factor>
-		</volume>
-	</stall>
+        <name>stall</name>
+        <mode>looped</mode>
+        <path>Aircraft/KC-137R/Sounds/stall.wav</path>
+        <condition>
+			<greater-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>200</value>
+			</greater-than>
+			<less-than>
+				<property>/velocities/airspeed-kt</property>
+				<value>125</value>
+			</less-than>
+        </condition>
+        <volume>
+            <offset>0.5</offset>
+        </volume>
+        <position>
+            <x>-24</x>
+            <y>0</y>
+            <z>0.18</z>
+        </position>
+        <reference-dist>0.5</reference-dist>
+        <max-dist>1.0</max-dist>
+    </stall>
+
 
 	<overspd>
 		<name>overspeed</name>
