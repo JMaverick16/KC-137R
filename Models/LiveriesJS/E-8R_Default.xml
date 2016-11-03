@@ -10,8 +10,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Northrop Grumman E-8R JSTARS</name>
-            <texture>LiveriesJS/E-8R.png</texture>
+            <name type="string">E-8R Default</name>
+            <texture>E-8R.png</texture>
             <texture-container>LiveriesJS/FAE-container.png</texture-container>
         </livery>
     </model>
