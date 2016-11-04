@@ -588,7 +588,7 @@
 		</pitch>
 	</wind>
 
-	<stall>
+	<!--stall>
 		<name>stall</name>
 		<path>Aircraft/KC-137R/Sounds/stall.wav</path> 
 		<condition>
@@ -607,7 +607,33 @@
 		<volume>
 			<factor>1</factor>
 		</volume>
-	</stall>
+	</stall-->
+
+	<stall>
+        <name>stall</name>
+        <mode>looped</mode>
+        <path>Aircraft/KC-137R/Sounds/stall.wav</path>
+        <condition>
+			<greater-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>200</value>
+			</greater-than>
+			<less-than>
+				<property>/velocities/airspeed-kt</property>
+				<value>125</value>
+			</less-than>
+        </condition>
+        <volume>
+            <offset>0.5</offset>
+        </volume>
+        <position>
+            <x>-24</x>
+            <y>0</y>
+            <z>0.18</z>
+        </position>
+        <reference-dist>0.5</reference-dist>
+        <max-dist>1.0</max-dist>
+    </stall>
 
 	<overspd>
 		<name>overspeed</name>
