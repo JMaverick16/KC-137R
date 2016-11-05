@@ -526,7 +526,7 @@
 		<path>Aircraft/KC-137R/Sounds/Flaps.wav</path>
 		<property>/surface-positions/flap-pos-norm</property>
 		<volume>
-			<factor>0.45</factor>
+			<factor>0.48</factor>
 		</volume>
 	</flap>
   
