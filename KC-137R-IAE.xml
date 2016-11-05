@@ -248,7 +248,9 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
+	<feed>3</feed>
     <feed>5</feed>
+    <feed>6</feed>
     <thruster file="direct">
      <location unit="IN">
       <x>  22.11 </x>
@@ -274,7 +276,9 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
+	<feed>3</feed>
     <feed>4</feed>
+    <feed>6</feed>
     <thruster file="direct">
      <location unit="IN">
       <x>-164.20 </x>
@@ -300,7 +304,9 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
+	<feed>3</feed>
     <feed>2</feed>
+    <feed>0</feed>
     <thruster file="direct">
      <location unit="IN">
       <x>-164.20 </x>
@@ -326,7 +332,9 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
+	<feed>3</feed>
     <feed>1</feed>
+    <feed>0</feed>
     <thruster file="direct">
      <location unit="IN">
       <x>  22.11 </x>
@@ -350,6 +358,7 @@
      </location>
      <capacity unit="LBS"> 2941.00 </capacity>
      <contents unit="LBS"> 1470.00 </contents>
+	 <priority>2</priority>
   </tank>
   <!-- Main 4 tank right -->
   <tank type="FUEL" number="1">
@@ -360,6 +369,7 @@
      </location>
      <capacity unit="LBS"> 15564.00 </capacity>
      <contents unit="LBS">  7782.00 </contents>
+	 <priority>1</priority>
   </tank>
   <!-- Main 3 tank right -->
   <tank type="FUEL" number="2">
@@ -370,6 +380,7 @@
      </location>
      <capacity unit="LBS"> 27262.00 </capacity>
      <contents unit="LBS"> 13631.00 </contents>
+	 <priority>1</priority>
   </tank>
   <!-- center tank -->
   <tank type="FUEL" number="3">
@@ -380,6 +391,7 @@
      </location>
      <capacity unit="LBS"> 68293.00 </capacity>
      <contents unit="LBS"> 34146.00 </contents>
+	 <priority>0</priority>
   </tank>
   <!-- Main 2 tank left -->
   <tank type="FUEL" number="4">
@@ -390,6 +402,7 @@
      </location>
      <capacity unit="LBS"> 27262.00 </capacity>
      <contents unit="LBS"> 13631.00 </contents>
+	 <priority>1</priority>
   </tank>
   <!-- Main 1 tank left --> 
   <tank type="FUEL" number="5">
@@ -400,6 +413,7 @@
      </location>
      <capacity unit="LBS"> 15564.00 </capacity>
      <contents unit="LBS">  7782.00 </contents>
+	 <priority>1</priority>
   </tank>  
   <!-- Reserve 1 tank left -->
   <tank type="FUEL" number="6">
@@ -410,6 +424,7 @@
      </location>
      <capacity unit="LBS"> 2941.00 </capacity>
      <contents unit="LBS"> 1470.00 </contents>
+	 <priority>2</priority>
   </tank>
 
  </propulsion> 
