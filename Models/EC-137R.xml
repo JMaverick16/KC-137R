@@ -177,7 +177,7 @@
 			<property>sim/multiplay/generic/int[13]</property>
 		</condition>
 		<property>/sim/time/elapsed-sec</property>
-		<factor>20</factor>
+		<factor>-20</factor>
 		<center>
 			<x-m>10.022</x-m>
 			<y-m>0.05</y-m>
