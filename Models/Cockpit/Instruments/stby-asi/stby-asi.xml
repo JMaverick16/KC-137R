@@ -30,18 +30,6 @@
 			<factor-prop>controls/lighting/cockpit</factor-prop>
 		</emission>
 	</animation>-->
-	<animation>
-		<name>Instrument illumination</name>
-		<type>material</type>
-		<object-name>Face</object-name>
-		<object-name>Needle1</object-name>
-		<emission>
-			<red>0.56</red>
-			<green>0.20</green>
-			<blue>0.12</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
-		</emission>
-	</animation>
 
 	<animation>
 	<name>Power on/off</name>
