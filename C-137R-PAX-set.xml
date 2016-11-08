@@ -22,6 +22,10 @@
      <pilot-callsign type="string"/>
     </remote>
 
+    <damage>
+     <enable type="bool">false</enable>
+    </damage>
+
     <sound>
 		<path>Aircraft/KC-137R/Sounds/707-sound-IAE.xml</path>
     </sound>
@@ -43,6 +47,13 @@
          dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);
         </script>
        </binding>
+      </item>
+      <item>
+        <label>Toggle damage</label>
+        <binding>
+          <command>property-toggle</command>
+        <property>damage/enable</property>
+        </binding>
       </item>
       </menu>
      </default>

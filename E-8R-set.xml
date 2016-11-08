@@ -22,6 +22,10 @@
   <instrument-options>
 	<canvas-popup-enable type="bool">true</canvas-popup-enable>
   </instrument-options>
+
+  <damage>
+    <enable type="bool">false</enable>
+  </damage>
   
   <multiplay>
     	<generic>
@@ -72,6 +76,13 @@
 		    		<property>sim/yokes-visible</property>
 					</binding>
 				</item>
+				<item>
+                    <label>Toggle damage</label>
+                    <binding>
+                        <command>property-toggle</command>
+                    <property>damage/enable</property>
+                    </binding>
+                </item>
 				<item>
 					<label>--- Equipment ---</label>
 					<enabled>false</enabled>
