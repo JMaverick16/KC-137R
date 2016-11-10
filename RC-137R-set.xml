@@ -72,8 +72,8 @@
 				<item>
 					<label>Show/hide yokes</label>
 					<binding>
-						<command>property-toggle</command>
-		    		<property>sim/yokes-visible</property>
+						 <command>nasal</command>
+                            <script>damage.toggleDamage();</script>
 					</binding>
 				</item>
 				<item>

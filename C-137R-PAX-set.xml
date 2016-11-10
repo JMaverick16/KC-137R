@@ -51,8 +51,8 @@
       <item>
         <label>Toggle damage</label>
         <binding>
-          <command>property-toggle</command>
-        <property>damage/enable</property>
+           <command>nasal</command>
+              <script>damage.toggleDamage();</script>
         </binding>
       </item>
       </menu>
