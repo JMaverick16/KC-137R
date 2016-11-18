@@ -22,6 +22,10 @@
   <instrument-options>
 	<canvas-popup-enable type="bool">true</canvas-popup-enable>
   </instrument-options>
+
+  <damage>
+    <enable type="bool">false</enable>
+  </damage>
   
   <multiplay>
     	<generic>
@@ -72,6 +76,13 @@
 		    		<property>sim/yokes-visible</property>
 					</binding>
 				</item>
+				<item>
+                    <label>Toggle damage</label>
+                    <binding>
+                         <command>nasal</command>
+                            <script>damage.toggleDamage();</script>
+                    </binding>
+                </item>
 				<item>
 					<label>--- Equipment ---</label>
 					<enabled>false</enabled>
@@ -189,7 +200,7 @@
 		  <desc>open Fuel &amp; Weight Menu</desc>
 		</key>
 		<text>
-_______________ Boeing 707-420/430 ___________________
+_______________ Northrop Grumman E-8R Joint STARS ___________________
 
 Startup engines:
 follow the tutorials or use Autostart
@@ -230,6 +241,8 @@ If you reached cruise altitude, you can trim the aircraft pitch independend
 the mechanical elevator trim system. Its also independed to the autopilot system.
 
 _______________________________________________________
+This particular version was edited by J Maverick 16 and it0uchpods Hanger,
+with the help of others.
 The first 707 for Flightgear was created by Innis Cunningham.
 This version is a revamp of that original. Nearly
 everthing in 3D models is written and painted new.

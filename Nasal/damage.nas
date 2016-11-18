@@ -142,7 +142,7 @@ var incoming_listener = func {
             }
           }
         }
-      } elsif (1==1) { # mirage: getprop("/controls/armament/mp-messaging")
+      } elsif (getprop("damage/enable")==1) { # mirage: getprop("/controls/armament/mp-messaging")
         # latest version of failure manager and taking damage enabled
         #print("damage enabled");
         var last1 = split(" ", last_vector[1]);
@@ -294,3 +294,13 @@ var re_init = func {
 }
 
 setlistener("/sim/signals/reinit", re_init, 0, 0);
+
+var toggleDamage = func {
+  var enabled = getprop("damage/enable");
+  setprop("damage/enable", !enabled);
+  if(enabled == 0) {
+    gui.popupTip("Damage is ON");
+  } else {
+    gui.popupTip("Damage is OFF");
+  }
+}

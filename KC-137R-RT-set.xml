@@ -23,6 +23,10 @@
 	<canvas-popup-enable type="bool">true</canvas-popup-enable>
   </instrument-options>
   
+  <damage>
+    <enable type="bool">false</enable>
+  </damage>
+
   <multiplay>
     	<generic>
     		<int n="8">1</int>   <!-- engine type -->
@@ -65,6 +69,13 @@
 						<script>aircraft.livery.dialog.open()</script>
 					</binding>
 				</item>
+				<item>
+                    <label>Toggle damage</label>
+                    <binding>
+                         <command>nasal</command>
+                            <script>damage.toggleDamage();</script>
+                    </binding>
+                </item>
 				<item>
 					<label>Show/hide yokes</label>
 					<binding>
