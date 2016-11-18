@@ -282,7 +282,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>EC-137R</model>
-			<engines>IAE V2533-A5</engines>
+			<engines>IAE V2530-A5</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>

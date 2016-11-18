@@ -16,13 +16,21 @@
 		<object-name>Reverser</object-name>
 		<object-name>Nacelle</object-name>
 	</effect-->
+    
+    <animation>
+    <type>scale</type>
+    <x-offset>0.85</x-offset>
+    <y-offset>0.8</y-offset>
+    <z-offset>0.8</z-offset>
+    </animation>
 
 	<!-- Reverse thrust animation -->
 	<animation>
 		<type>translate</type>
 		<object-name>Reverser</object-name>
+		<object-name>Nozzle</object-name>
 		<property>sim/multiplay/generic/float[14]</property>
-		<factor>0.40</factor>
+		<factor>0.25</factor>
 		<axis>
 			<x>1</x>
 			<y>0</y>
@@ -54,9 +62,6 @@
 
 	<model>
 		<path>Aircraft/KC-137R/Models/Engines/res/cfm56.ac</path>
-		<offsets>
-			<x-m>0.941</x-m>
-		</offsets>
 		<!--texture-path>../Textures/Livery/House</texture-path-->
 
 		<!-- Reflection Shader -->
@@ -68,7 +73,7 @@
 	</model>
 
 	<!--model>
-		<path>Aircraft/KC-137R/Models/Engines/res/a320.pylon.cfmleapx.right.ac</path>
+		<path>Aircraft/KC-137R/Models/Engines/res/a320.pylon.cfmleapx.left.ac</path>
         <offsets>
 			<x-m>0</x-m>
 			<y-m>0.055</y-m>
@@ -95,7 +100,7 @@
 			<z-m>0</z-m>
 		</offsets>
 		<condition>
-			<property>engines/engine[0]/on-fire</property>
+			<property>engines/engine[1]/on-fire</property>
 		</condition>
 	</model>
 
@@ -103,9 +108,9 @@
 		<name>Fan</name>
 		<type>spin</type>
 		<object-name>cone</object-name>
-		<object-name>blades</object-name>
+		<object-name>fan</object-name>
 		<factor>150</factor>
-		<property>engines/engine[0]/n1</property>
+		<property>engines/engine[1]/n1</property>
 		<axis>
 			<x>-1</x>
 			<y>0</y>

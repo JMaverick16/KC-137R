@@ -701,8 +701,6 @@
 			<entry><ind>1.20</ind><dep> 52</dep></entry>
 			<entry><ind>1.30</ind><dep> 81</dep></entry>
 			<entry><ind>1.40</ind><dep>110</dep></entry>
-			<entry><ind>1.50</ind><dep>140</dep></entry>
-			<entry><ind>1.60</ind><dep>170</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
@@ -721,11 +719,10 @@
     	<property>controls/engines/engine[0]/throttle</property>
     	<interpolation>
 			<entry><ind>0.0000</ind><dep>  6</dep></entry>
-			<entry><ind>0.1797</ind><dep> 28</dep></entry>
-			<entry><ind>0.3850</ind><dep> 52</dep></entry>
-			<entry><ind>0.5903</ind><dep> 81</dep></entry>
-			<entry><ind>0.7956</ind><dep>110</dep></entry>
-			<entry><ind>1.0000</ind><dep>140</dep></entry>
+			<entry><ind>0.2275</ind><dep> 28</dep></entry>
+			<entry><ind>0.5143</ind><dep> 52</dep></entry>
+			<entry><ind>0.8008</ind><dep> 81</dep></entry>
+			<entry><ind>1.0000</ind><dep>102</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
@@ -813,11 +810,10 @@
     	<property>controls/engines/engine[1]/throttle</property>
     	<interpolation>
 			<entry><ind>0.0000</ind><dep>  6</dep></entry>
-			<entry><ind>0.1797</ind><dep> 28</dep></entry>
-			<entry><ind>0.3850</ind><dep> 52</dep></entry>
-			<entry><ind>0.5903</ind><dep> 81</dep></entry>
-			<entry><ind>0.7956</ind><dep>110</dep></entry>
-			<entry><ind>1.0000</ind><dep>140</dep></entry>
+			<entry><ind>0.2275</ind><dep> 28</dep></entry>
+			<entry><ind>0.5143</ind><dep> 52</dep></entry>
+			<entry><ind>0.8008</ind><dep> 81</dep></entry>
+			<entry><ind>1.0000</ind><dep>102</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
@@ -905,11 +901,10 @@
     	<property>controls/engines/engine[2]/throttle</property>
     	<interpolation>
 			<entry><ind>0.0000</ind><dep>  6</dep></entry>
-			<entry><ind>0.1797</ind><dep> 28</dep></entry>
-			<entry><ind>0.3850</ind><dep> 52</dep></entry>
-			<entry><ind>0.5903</ind><dep> 81</dep></entry>
-			<entry><ind>0.7956</ind><dep>110</dep></entry>
-			<entry><ind>1.0000</ind><dep>140</dep></entry>
+			<entry><ind>0.2275</ind><dep> 28</dep></entry>
+			<entry><ind>0.5143</ind><dep> 52</dep></entry>
+			<entry><ind>0.8008</ind><dep> 81</dep></entry>
+			<entry><ind>1.0000</ind><dep>102</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
@@ -997,11 +992,10 @@
     	<property>controls/engines/engine[3]/throttle</property>
     	<interpolation>
 			<entry><ind>0.0000</ind><dep>  6</dep></entry>
-			<entry><ind>0.1797</ind><dep> 28</dep></entry>
-			<entry><ind>0.3850</ind><dep> 52</dep></entry>
-			<entry><ind>0.5903</ind><dep> 81</dep></entry>
-			<entry><ind>0.7956</ind><dep>110</dep></entry>
-			<entry><ind>1.0000</ind><dep>140</dep></entry>
+			<entry><ind>0.2275</ind><dep> 28</dep></entry>
+			<entry><ind>0.5143</ind><dep> 52</dep></entry>
+			<entry><ind>0.8008</ind><dep> 81</dep></entry>
+			<entry><ind>1.0000</ind><dep>102</dep></entry>
 		</interpolation>
     	<center>
     		<x-m>0</x-m>
