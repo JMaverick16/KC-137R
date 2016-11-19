@@ -70,6 +70,11 @@
 	<object-name>LeftGearBase</object-name>
 	<object-name>LeftGearCompressor</object-name>
 	<object-name>LeftGearCompressor1</object-name>
+	<object-name>RadarBulgeLH</object-name>
+	<object-name>RadarBulgeRH</object-name>
+	<object-name>RadarNose</object-name>
+	<object-name>NewDoor</object-name>
+	<object-name>doorCargo.001</object-name>
 	<condition>
 		<or>
 	    	<not><property>sim/current-view/internal</property></not>				
@@ -297,24 +302,13 @@
 		<name>frontStair</name>
 		<path>Aircraft/KC-137R/Models/stairs.xml</path>
 		<offsets>
-			<x-m>-15.39</x-m>
-			<y-m>-5.1</y-m>
+			<x-m>-10.5686</x-m>
+			<y-m>-5.498</y-m>
       <z-m>-2.92</z-m>
-			<heading-deg>-6</heading-deg>
+			<heading-deg>0</heading-deg>
 		</offsets>
 	</model>
 
-	<model>
-		<name>rearStair</name>
-		<path>Aircraft/KC-137R/Models/stairs.xml</path>
-		<offsets>
-			<x-m>16.0</x-m>
-			<y-m>-4.2</y-m>
-      <z-m>-2.92</z-m>
-			<heading-deg>10</heading-deg>
-		</offsets>
-	</model>
-	
 	<animation>
 		<type>select</type>
 		<object-name>frontStair</object-name>
@@ -330,18 +324,6 @@
 	</animation>
 	
 	<animation>
-		<type>select</type>
-		<object-name>rearStair</object-name>
-		<condition>
-		  <not><property>sim/multiplay/generic/int[19]</property></not>
-		  <or>
-      	<property>sim/multiplay/generic/float[6]</property>
-      	<property>sim/multiplay/generic/float[7]</property>
-      </or>
-		</condition>
-	</animation>
-	
-  <animation>
       <type>translate</type>
       <object-name>frontStair</object-name>
       <property>sim/multiplay/generic/float[6]</property>
@@ -349,22 +331,6 @@
 				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
 				<entry><ind>    0.2</ind><dep>   0.0</dep></entry>
 				<entry><ind>    1.0</ind><dep>   4.55</dep></entry>
-			</interpolation>
-      <axis>
-          <x> 0.0</x>
-          <y> 1.0</y>
-          <z> 0.0</z>
-      </axis>
-  </animation>
-  
-  <animation>
-      <type>translate</type>
-      <object-name>rearStair</object-name>
-      <property>sim/multiplay/generic/float[7]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
-				<entry><ind>    0.2</ind><dep>   0.0</dep></entry>
-				<entry><ind>    1.0</ind><dep>   4.0</dep></entry>
 			</interpolation>
       <axis>
           <x> 0.0</x>
@@ -387,198 +353,14 @@
 		</action>
   </animation>
 
-  <animation>
-		<type>pick</type>
-		<object-name>rearStair</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.doorsystem.pasrearexport();</script>
-		  </binding>
-		</action>
-  </animation>	
-  
-	<!-- cargo equipment -->
-	<model>
-	 <name>Loader1</name>
-	 <path>Aircraft/KC-137R/Models/loader.xml</path>
-	 <offsets>
-		<x-m>0</x-m>
-		<y-m>-6.2</y-m>
-		<z-m>0</z-m>
-	 </offsets>
-	</model>
-	
-	<animation>
-		<type>select</type>
-		<object-name>Loader1</object-name>
-		<condition>
-		  <and>
-		  	<not><property>sim/multiplay/generic/int[19]</property></not>
-		    <property>sim/multiplay/generic/int[9]</property>
-				<or>
-		    	<property>sim/multiplay/generic/float[6]</property>
-		    	<property>sim/multiplay/generic/float[7]</property>
-		    	<property>sim/multiplay/generic/float[15]</property>
-		    </or>
-		  </and>
-		</condition>
-	</animation>
-	
-  <animation>
-      <type>translate</type>
-      <object-name>Loader1</object-name>
-      <property>sim/multiplay/generic/float[15]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
-				<entry><ind>    0.1</ind><dep>   0.0</dep></entry>
-				<entry><ind>    0.5</ind><dep>   6.2</dep></entry>
-				<entry><ind>    1.0</ind><dep>   6.2</dep></entry>
-			</interpolation>
-      <axis>
-          <x> 0.0</x>
-          <y> 1.0</y>
-          <z> 0.0</z>
-      </axis>
-  </animation>
-  
-  <animation>
-		<type>pick</type>
-		<object-name>Loader1</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.doorsystem.cargoexport();</script>
-		  </binding>
-		</action>
-  </animation>
-  
-	<model>
-	 <name>Loader2</name>
-	 <path>Aircraft/KC-137R/Models/belly.xml</path>
-	 <offsets>
-		<x-m>0</x-m>
-		<y-m>6.2</y-m>
-		<z-m>0</z-m>
-	 </offsets>
-	</model>
-	
-	<animation>
-		<type>select</type>
-		<object-name>Loader2</object-name>
-		<condition>
-		  <and>
-		  	<not><property>sim/multiplay/generic/int[19]</property></not>
-		    <property>sim/multiplay/generic/int[9]</property>
-				<or>
-		    	<property>sim/multiplay/generic/float[6]</property>
-		    	<property>sim/multiplay/generic/float[7]</property>
-		    	<property>sim/multiplay/generic/float[16]</property>
-		    </or>
-		  </and>
-		</condition>
-	</animation>
-	
-  <animation>
-      <type>translate</type>
-      <object-name>Loader2</object-name>
-      <property>sim/multiplay/generic/float[16]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
-				<entry><ind>    0.2</ind><dep>   0.0</dep></entry>
-				<entry><ind>    1.0</ind><dep>  -6.2</dep></entry>
-			</interpolation>
-      <axis>
-          <x> 0.0</x>
-          <y> 1.0</y>
-          <z> 0.0</z>
-      </axis>
-  </animation>
-  
-  <animation>
-		<type>pick</type>
-		<object-name>Loader2</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.doorsystem.bellyexport();</script>
-		  </binding>
-		</action>
-  </animation>
-  
-  	<model>
-	 <name>Loader3</name>
-	 <path>Aircraft/KC-137R/Models/bellyLoader.xml</path>
-	 <offsets>
-		<x-m>0</x-m>
-		<y-m>6.2</y-m>
-		<z-m>0</z-m>
-	 </offsets>
-	</model>
-	
-	<animation>
-		<type>select</type>
-		<object-name>Loader3</object-name>
-		<condition>
-		  <and>
-		  	<not><property>sim/multiplay/generic/int[19]</property></not>
-		    <not><property>sim/multiplay/generic/int[9]</property></not>
-				<or>
-		    	<property>sim/multiplay/generic/float[6]</property>
-		    	<property>sim/multiplay/generic/float[7]</property>
-		    	<property>sim/multiplay/generic/float[16]</property>
-		    </or>
-		  </and>
-		</condition>
-	</animation>
-	
-  <animation>
-      <type>translate</type>
-      <object-name>Loader3</object-name>
-      <property>sim/multiplay/generic/float[16]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
-				<entry><ind>    1.0</ind><dep>  -7.0</dep></entry>
-			</interpolation>
-      <axis>
-          <x> 0.0</x>
-          <y> 1.0</y>
-          <z> 0.0</z>
-      </axis>
-  </animation>
-  
-  <animation>
-		<type>pick</type>
-		<object-name>Loader3</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.doorsystem.bellyexport();</script>
-		  </binding>
-		</action>
-  </animation>
-
   <!-- if crashed -->
 	<animation>
 		<type>select</type>
 		<object-name>rhfiletflap</object-name>
 	  	<object-name>rhibflap</object-name>
 	  	<object-name>lhobflap</object-name>
-	  	<object-name>nose</object-name>
-	  	<object-name>doorFL</object-name>
-	  	<object-name>doorRL</object-name>
+		<object-name>doorCargo</object-name>
+	  	<object-name>doorCargo.001</object-name>
 		<condition>
 			<not><property>sim/multiplay/generic/int[19]</property></not>
 		</condition>	
@@ -604,24 +386,22 @@
 	<!-- animate the doors and the nose -->
 	<animation>
       <type>rotate</type>
-      <object-name>nose</object-name>
+      <object-name>NewDoor</object-name>
       <property>/instrumentation/doors/nose/position-norm</property>
-      <factor>120</factor>
-      <center>
-          <x-m>-19.962</x-m>
-          <y-m> -0.538</y-m>
-          <z-m>  0.0</z-m>
-      </center>
+      <factor>90</factor>
       <axis>
-          <x>0</x>
-          <y>0</y>
-          <z>1.0</z>
+          <x1-m>-16.0995</x1-m>
+          <y1-m> -1.3279</y1-m>
+          <z1-m> -0.73103</z1-m>
+		  <x2-m>-16.0995</x2-m>
+          <y2-m> -1.00875</y2-m>
+          <z2-m> -1.18954</z2-m>
       </axis>
   </animation>
 
   <animation>
 		<type>pick</type>
-		<object-name>nose</object-name>		
+		<object-name>NewDoor</object-name>	
 		<action>
 		  <button>0</button>
 		  <repeatable>true</repeatable>
@@ -631,30 +411,34 @@
 		   <script>b707.doorsystem.noseexport();</script>
 		  </binding>
 		</action>
-  </animation>
-
-	<animation>
+  </animation>	
+  
+<animation>
       <type>rotate</type>
-      <object-name>doorFL</object-name>
+      <object-name>doorCargo</object-name>
+      <object-name>doorCargo.001</object-name>
+ 
       <property>sim/multiplay/generic/float[6]</property>
 			<interpolation>
 				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
-				<entry><ind>    0.2</ind><dep> 178.0</dep></entry>
-				<entry><ind>    1.0</ind><dep> 178.0</dep></entry>
+				<entry><ind>    0.5</ind><dep> 100.0</dep></entry>
+				<entry><ind>    1.0</ind><dep> 100.0</dep></entry>
 			</interpolation>
-			<axis>
-				<x1-m>-16.27</x1-m>
-				<y1-m> -1.1</y1-m>
-				<z1-m>  2.27</z1-m>
-				<x2-m>-16.27</x2-m>
-				<y2-m> -1.73</y2-m>
-				<z2-m> -0.06</z2-m>
-			</axis>
+      <center>
+          <x-m> 0.0</x-m>
+          <y-m>-1.07</y-m>
+          <z-m> 2.13</z-m>
+      </center>
+      <axis>
+          <x>-1</x>
+          <y> 0</y>
+          <z> 0</z>
+      </axis>
   </animation>
 
   <animation>
-		<type>pick</type>
-		<object-name>doorFL</object-name>
+		<type>pick</type>     <object-name>doorCargo</object-name>
+	<object-name>doorCargo.001</object-name>
 		<action>
 		  <button>0</button>
 		  <repeatable>true</repeatable>
@@ -665,75 +449,6 @@
 		  </binding>
 		</action>
   </animation>
-  
-	<animation>
-      <type>rotate</type>
-      <object-name>doorRL</object-name>
-      <property>sim/multiplay/generic/float[7]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
-				<entry><ind>    0.2</ind><dep> 178.0</dep></entry>
-				<entry><ind>    1.0</ind><dep> 178.0</dep></entry>
-			</interpolation>
-      <center>
-          <x-m> 15.47</x-m>
-          <y-m> -1.576</y-m>
-          <z-m>  0.0</z-m>
-      </center>
-      <axis>
-          <x>0</x>
-          <y>0</y>
-          <z>-1.0</z>
-      </axis>
-  </animation>
-
-  <animation>
-		<type>pick</type>
-		<object-name>doorRL</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.doorsystem.pasrearexport();</script>
-		  </binding>
-		</action>
-  </animation>	
-  
-	<animation>
-      <type>rotate</type>
-      <object-name>doorBelly</object-name>
-      <property>sim/multiplay/generic/float[16]</property>
-			<interpolation>
-				<entry><ind>    0.0</ind><dep>  0.0</dep></entry>
-				<entry><ind>    1.0</ind><dep> 60.0</dep></entry>
-			</interpolation>
-      <center>
-          <x-m> 0.0</x-m>
-          <y-m> 1.688</y-m>
-          <z-m> -0.0025</z-m>
-      </center>
-      <axis>
-          <x>-1</x>
-          <y> 0</y>
-          <z> 0</z>
-      </axis>
-  </animation>
-
-  <animation>
-		<type>pick</type>		
-		<object-name>doorBelly</object-name>
-		<action>
-		  <button>0</button>
-		  <repeatable>true</repeatable>
-		  <interval-sec>0.2</interval-sec>
-		  <binding>
-		   <command>nasal</command>
-		   <script>b707.doorsystem.bellyexport();</script>
-		  </binding>
-		</action>
-  </animation>	
     
 <!-- Emergency slide-->
 	<model>
