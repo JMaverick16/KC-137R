@@ -435,6 +435,80 @@
 		  </binding>
 		</action>
   </animation>	
+
+  <!-- Gear chokes -->
+
+  <model>
+		<name>chokeNose</name>
+		<path>Aircraft/KC-137R/Models/Chokes/choke_nose.xml</path>
+		<offsets>
+		<x-m>-15.75</x-m>
+		<y-m>0</y-m>
+		<z-m>-2.82</z-m>
+	 </offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>chokeNose</object-name>
+		<condition>
+		  <not><property>sim/multiplay/generic/int[19]</property></not>
+		  <or>
+      	<property>sim/multiplay/generic/float[6]</property>
+      	<property>sim/multiplay/generic/float[7]</property>
+      	<property>sim/multiplay/generic/float[15]</property>
+      	<property>sim/multiplay/generic/float[16]</property>
+      </or>
+		</condition>
+	</animation>
+
+	<model>
+		<name>chokeLeft</name>
+		<path>Aircraft/KC-137R/Models/Chokes/choke_left.xml</path>
+		<offsets>
+		<x-m>1.8</x-m>
+		<y-m>-3.1</y-m>
+		<z-m>-2.88</z-m>
+	 </offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>chokeLeft</object-name>
+		<condition>
+		  <not><property>sim/multiplay/generic/int[19]</property></not>
+		  <or>
+      	<property>sim/multiplay/generic/float[6]</property>
+      	<property>sim/multiplay/generic/float[7]</property>
+      	<property>sim/multiplay/generic/float[15]</property>
+      	<property>sim/multiplay/generic/float[16]</property>
+      </or>
+		</condition>
+	</animation>
+
+    <model>
+		<name>chokeRight</name>
+		<path>Aircraft/KC-137R/Models/Chokes/choke_left.xml</path>
+		<offsets>
+		<x-m>1.8</x-m>
+		<y-m>3.05</y-m>
+		<z-m>-2.88</z-m>
+	 </offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>chokeRight</object-name>
+		<condition>
+		  <not><property>sim/multiplay/generic/int[19]</property></not>
+		  <or>
+      	<property>sim/multiplay/generic/float[6]</property>
+      	<property>sim/multiplay/generic/float[7]</property>
+      	<property>sim/multiplay/generic/float[15]</property>
+      	<property>sim/multiplay/generic/float[16]</property>
+      </or>
+		</condition>
+	</animation>
   
 	<!-- cargo equipment -->
 	
