@@ -404,13 +404,70 @@
   </animation>	
   
 	<!-- cargo equipment -->
+
+	<model>
+ 	 <name>Loader1</name>
+ 	 <path>Aircraft/KC-137R/Models/loader.xml</path>
+ 	 <offsets>
+ 		<x-m>0</x-m>
+ 		<y-m>-6.2</y-m>
+ 		<z-m>0</z-m>
+ 	 </offsets>
+ 	</model>
+ 	
+ 	<animation>
+ 		<type>select</type>
+ 		<object-name>Loader1</object-name>
+ 		<condition>
+ 		  <and>
+ 		  	<not><property>sim/multiplay/generic/int[19]</property></not>
+ 		    <property>sim/multiplay/generic/int[9]</property>
+ 				<or>
+ 		    	<property>sim/multiplay/generic/float[6]</property>
+ 		    	<property>sim/multiplay/generic/float[7]</property>
+ 		    	<property>sim/multiplay/generic/float[15]</property>
+ 		    </or>
+ 		  </and>
+ 		</condition>
+ 	</animation>
+ 	
+   <animation>
+       <type>translate</type>
+       <object-name>Loader1</object-name>
+       <property>sim/multiplay/generic/float[15]</property>
+ 			<interpolation>
+ 				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+ 				<entry><ind>    0.1</ind><dep>   0.0</dep></entry>
+ 				<entry><ind>    0.5</ind><dep>   6.2</dep></entry>
+ 				<entry><ind>    1.0</ind><dep>   6.2</dep></entry>
+ 			</interpolation>
+       <axis>
+           <x> 0.0</x>
+           <y> 1.0</y>
+           <z> 0.0</z>
+       </axis>
+   </animation>
+   
+   <animation>
+ 		<type>pick</type>
+ 		<object-name>Loader1</object-name>
+ 		<action>
+ 		  <button>0</button>
+ 		  <repeatable>true</repeatable>
+ 		  <interval-sec>0.2</interval-sec>
+ 		  <binding>
+ 		   <command>nasal</command>
+  		   <script>b707.doorsystem.cargoexport();</script>
+  		  </binding>
+  		</action>
+    </animation>
   
 	<model>
 	 <name>Loader2</name>
 	 <path>Aircraft/KC-137R/Models/belly.xml</path>
 	 <offsets>
 		<x-m>0</x-m>
-		<y-m>6.2</y-m>
+		<y-m>5.4</y-m>
 		<z-m>0</z-m>
 	 </offsets>
 	</model>
