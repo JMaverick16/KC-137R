@@ -1496,9 +1496,26 @@
             <property>systems/electrical/outputs/efis</property>
             <volume>
             	<property>/sim/current-view/internal</property>
-                <factor>0.057</factor>
+                <factor>0.058</factor>
             </volume>
         </avionics>
+
+        <caution-warning>
+            <name>caution-warning</name>
+            <mode>once</mode>
+            <type>avionics</type>
+            <path>Aircraft/KC-137R/Sounds/warning-tone.wav</path>
+            <condition>
+                <greater-than>
+                    <property>warnings/mc</property>
+                    <value>0</value>
+                </greater-than>
+            </condition>
+            <volume>
+            	<property>sim/current-view/internal</property>
+                <value>1</value>
+            </volume>
+        </caution-warning>
 </fx>
 
 </PropertyList>
