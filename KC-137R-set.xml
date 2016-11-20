@@ -296,7 +296,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>KC-137R</model>
-			<engines>CFM56-5B4</engines>
+			<engines>CFM56-5B7</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>

@@ -4,9 +4,9 @@
 	Author:   Aero-Matic v 0.8
 	
 	Inputs:
-	name:           CFM-56
+	name:           CFM56-5B
 	type:           turbine
-	thrust:         35000 lb
+	thrust:         30000 lb
 	augmented?      no
 	injected?       no
 -->

@@ -4,15 +4,15 @@
 	Author:   Aero-Matic v 0.8
 	
 	Inputs:
-	name:           IAE-V2500
+	name:           IAE V2500-D
 	type:           turbine
-	thrust:         35000 lb
+	thrust:         25000 lb
 	augmented?      no
 	injected?       no
 -->
 
 <turbine_engine name="IAE-V2500">
-	<milthrust> 28000.0 </milthrust> <!-- I'm using the IAE V2528-A5 version. 28000 Pounds Thrust. -->
+	<milthrust> 28000.0 </milthrust> <!-- I'm using the IAE V2528-D5 version. 28000 Pounds Thrust. -->
 	<bypassratio>     1 </bypassratio>
 	<tsfc>            0.54 </tsfc>
 	<idlen1>         26.4 </idlen1>

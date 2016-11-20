@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Boeing E-8R JSTARS (IAE V2528-D5)</description>
+  <description>Northrop Grumman E-8R JSTARS (IAE V2528-D5)</description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/splashJS.png</splash-texture>
 	</startup>
@@ -42,7 +42,7 @@
 	<menubar>
 		<default>
 			<menu n="100">
-				<label>Boeing E-8R JSTARS</label>
+				<label>Northrop Grumman E-8R JSTARS</label>
 				<enabled type="bool">true</enabled>
 				<item>
 					<label>Autostart / shutdown</label>
@@ -150,7 +150,7 @@
 	</menubar>
 
 	<help>
-	  <title>Boeing E-8R JSTARS</title>
+	  <title>Northrop Grumman E-8R JSTARS</title>
 		<key>
 		  <name>L</name>
 		  <desc>toggle Landing Lights</desc>
@@ -295,7 +295,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>E-8R</model>
-			<engines>IAE V2530-A5</engines>
+			<engines>IAE V2528-D5</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
@@ -306,7 +306,7 @@ no. D6-3071-00
 		<manual>
 			<board type="double">0.0</board>
 			<page type="int">0</page>
-			<title type="string">BOEING</title>
+			<title type="string">NORTHROP GRUMMAN</title>
 			<subtitle1 type="string">OPERATION MANUAL</subtitle1>
 			<text1 type="string"></text1>
 			<subtitle2 type="string"></subtitle2>
