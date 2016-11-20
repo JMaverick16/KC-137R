@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing KC-137R-RT (CFM56-5B4)</description>
+  <description>Boeing KC-137R-RT (CFM56-5B7)</description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/splashKCRT.png</splash-texture>
 	</startup>

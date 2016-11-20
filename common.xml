@@ -8,7 +8,7 @@
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
  <sim n="0">
   <description>Boeing KC-137R</description>
-  <author>J Maverick 16 (Textures/FDM/Systems), Joshua Davidson (it0uchpods/411)(Cockpit/FDM/Systems) Original: Lake of Constance Hangar [Original from Innis Cunningham]</author>
+  <author>J Maverick 16 (Textures/FDM/Systems/Sounds), Joshua Davidson (it0uchpods/411)(Cockpit/FDM/Systems) Original: Lake of Constance Hangar [Original from Innis Cunningham]</author>
   <status>Beta</status>
   <aero>KC-137R</aero>
   <flight-model>jsb</flight-model>

@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Boeing EC-137R (IAE V2533-A5)</description>
+  <description>Boeing EC-137R (IAE V2528-D5)</description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/splashTT.png</splash-texture>
 	</startup>
