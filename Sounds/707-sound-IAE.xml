@@ -1496,7 +1496,7 @@
             <property>systems/electrical/outputs/efis</property>
             <volume>
             	<property>/sim/current-view/internal</property>
-                <factor>0.054</factor>
+                <factor>0.057</factor>
             </volume>
         </avionics>
 </fx>
