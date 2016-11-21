@@ -485,7 +485,32 @@
 		   <script>b707.doorsystem.noseexport();</script>
 		  </binding>
 		</action>
-  </animation>	
+  </animation>
+
+<animation>
+      <type>translate</type>
+	  <object-name>Ladder</object-name>
+      <property>/instrumentation/doors/nose/position-norm</property>
+      <interpolation>
+       <entry>
+          <ind>0.0</ind>
+          <dep>0.0</dep>
+       </entry>
+       <entry>
+          <ind>0</ind>
+          <dep>0</dep>
+       </entry>
+       <entry>
+          <ind>1.0</ind>
+          <dep>1.620</dep>
+       </entry>
+      </interpolation>
+      <axis>
+          <x>0</x>
+          <y>0</y>
+          <z>-1</z>
+      </axis>
+</animation>  
   
 <animation>
       <type>rotate</type>
