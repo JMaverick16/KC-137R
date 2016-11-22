@@ -64,6 +64,18 @@
     <factor>30.0</factor>
    </volume>
   </tchdwn2>
+
+  <tchdwn3>
+   <name>tchdwn3</name>
+   <path>/Aircraft/KC-137R/Sounds/touch_IN.wav</path>
+   <condition>
+     <property>/gear/gear[2]/wow</property>
+   </condition>
+   <volume>
+   	<property>sim/current-view/internal</property>
+    <factor>24.0</factor>
+   </volume>
+  </tchdwn3>
   
 <!-- internal -->
 <!-- IAE whee -->
@@ -837,8 +849,8 @@
         <property>/environment/metar/rain-norm</property>
         <factor>1.00</factor>
         <offset>0.00</offset>
-        <min>0.4</min>
-        <max>0.9</max>
+        <min>0.6</min>
+        <max>1.2</max>
       </volume>
       <pitch>
         <property>/velocities/airspeed-kt</property>
@@ -1486,6 +1498,7 @@
 			<property>/b707/trim/elevator-trim-turn</property>
 			<volume>
 				<property>/sim/current-view/internal</property>
+				<value>0.8</value>
 			</volume>
 		</trim-wheels>
 
@@ -1496,7 +1509,7 @@
             <property>systems/electrical/outputs/efis</property>
             <volume>
             	<property>/sim/current-view/internal</property>
-                <factor>0.058</factor>
+                <factor>0.06</factor>
             </volume>
         </avionics>
 
@@ -1513,7 +1526,7 @@
             </condition>
             <volume>
             	<property>sim/current-view/internal</property>
-                <value>1</value>
+                <value>1.05</value>
             </volume>
         </caution-warning>
 </fx>
