@@ -476,6 +476,63 @@
 	</animation>
   
 	<!-- cargo equipment -->
+
+	<model>
+		<name>cargoStair</name>
+		<path>Aircraft/KC-137R/Models/stairs.xml</path>
+		<offsets>
+			<x-m>-10.5686</x-m>
+			<y-m>-5.37</y-m>
+            <z-m>-2.90</z-m>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>cargoStair</object-name>
+		<condition>
+		  <and>
+		  	<not><property>sim/multiplay/generic/int[19]</property></not>
+		    <property>sim/multiplay/generic/int[9]</property>
+				<or>
+		    	<property>sim/multiplay/generic/float[6]</property>
+		    	<property>sim/multiplay/generic/float[7]</property>
+		    	<property>sim/multiplay/generic/float[15]</property>
+		    </or>
+		  </and>
+		</condition>
+	</animation>
+	
+	<animation>
+      <type>translate</type>
+      <object-name>cargoStair</object-name>
+      <property>sim/multiplay/generic/float[15]</property>
+			<interpolation>
+				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>    0.2</ind><dep>   0.0</dep></entry>
+				<entry><ind>    1.0</ind><dep>   4.55</dep></entry>
+			</interpolation>
+      <axis>
+          <x> 0.0</x>
+          <y> 1.0</y>
+          <z> 0.0</z>
+      </axis>
+  </animation>
+  
+  <animation>
+		<type>pick</type>
+		<object-name>cargoStair</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		  <binding>
+		   <command>nasal</command>
+           <script>b707.doorsystem.cargoexport();</script>
+		  </binding>
+		</action>
+  </animation>
   
 	<model>
 	 <name>Loader2</name>
@@ -752,6 +809,41 @@
 		  </binding>
 		</action>
   </animation>	
+  
+  <animation>
+      <type>rotate</type>
+      <object-name>doorCargo</object-name>
+      <property>sim/multiplay/generic/float[15]</property>
+			<interpolation>
+				<entry><ind>    0.0</ind><dep>   0.0</dep></entry>
+				<entry><ind>    0.5</ind><dep> 100.0</dep></entry>
+				<entry><ind>    1.0</ind><dep> 100.0</dep></entry>
+			</interpolation>
+      <center>
+          <x-m> 0.0</x-m>
+          <y-m>-1.07</y-m>
+          <z-m> 2.13</z-m>
+      </center>
+      <axis>
+          <x>-1</x>
+          <y> 0</y>
+          <z> 0</z>
+      </axis>
+  </animation>
+
+  <animation>
+		<type>pick</type>
+		<object-name>doorCargo</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		  <binding>
+		   <command>nasal</command>
+		   <script>b707.doorsystem.cargoexport();</script>
+		  </binding>
+		</action>
+  </animation>
     
 <!-- Emergency slide-->
 	<model>
