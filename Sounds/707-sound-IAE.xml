@@ -39,7 +39,7 @@
      <property>/gear/gear[0]wow</property>
    </condition>
    <volume>
-    <factor>25.0</factor>
+    <factor>26.0</factor>
    </volume>
   </tchdwn0>
   
@@ -50,7 +50,7 @@
      <property>/gear/gear[1]wow</property>
    </condition>
    <volume>
-    <factor>30.0</factor>
+    <factor>31.0</factor>
    </volume>
   </tchdwn1>
   
@@ -61,7 +61,7 @@
      <property>/gear/gear[2]/wow</property>
    </condition>
    <volume>
-    <factor>30.0</factor>
+    <factor>31.0</factor>
    </volume>
   </tchdwn2>
 
