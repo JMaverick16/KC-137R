@@ -1546,9 +1546,43 @@
             </condition>
             <volume>
             	<property>sim/current-view/internal</property>
-                <value>0.6</value>
+                <value>0.4</value>
             </volume>
         </welcome>
+
+        <refueling>
+            <name>refueling</name>
+            <mode>once</mode>
+            <type>avionics</type>
+            <path>Aircraft/KC-137R/Sounds/refuelready.wav</path>
+            <condition>
+                <greater-than>
+                    <property>b707/refuelling/ready</property>
+                    <value>0</value>
+                </greater-than>
+            </condition>
+            <volume>
+            	<property>sim/current-view/internal</property>
+                <value>1.4</value>
+            </volume>
+        </refueling>
+
+        <refueling2>
+            <name>refueling2</name>
+            <mode>once</mode>
+            <type>avionics</type>
+            <path>Aircraft/KC-137R/Sounds/refuelready.wav</path>
+            <condition>
+                <greater-than>
+                    <property>b707/refuelling/contact</property>
+                    <value>0</value>
+                </greater-than>
+            </condition>
+            <volume>
+            	<property>sim/current-view/internal</property>
+                <value>1.4</value>
+            </volume>
+        </refueling2>
 </fx>
 
 </PropertyList>
