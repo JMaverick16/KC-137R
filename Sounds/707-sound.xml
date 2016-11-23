@@ -39,7 +39,7 @@
      <property>/gear/gear[0]wow</property>
    </condition>
    <volume>
-    <factor>26.0</factor>
+    <factor>30.0</factor>
    </volume>
   </tchdwn0>
   
@@ -50,7 +50,7 @@
      <property>/gear/gear[1]wow</property>
    </condition>
    <volume>
-    <factor>31.0</factor>
+    <factor>35.0</factor>
    </volume>
   </tchdwn1>
   
@@ -61,7 +61,7 @@
      <property>/gear/gear[2]/wow</property>
    </condition>
    <volume>
-    <factor>31.0</factor>
+    <factor>35.0</factor>
    </volume>
   </tchdwn2>
 
@@ -73,7 +73,7 @@
    </condition>
    <volume>
    	<property>sim/current-view/internal</property>
-    <factor>24.0</factor>
+    <factor>20.0</factor>
    </volume>
   </tchdwn3>
   
@@ -551,7 +551,7 @@
 		<path>Aircraft/KC-137R/Sounds/speedbrake.wav</path>
 		<property>/surface-positions/speedbrake-pos-norm</property>
 		<volume>
-			<factor>0.85</factor>
+			<factor>0.6</factor>
 		</volume>
 		<pitch>
 			<property>/surface-positions/speedbrake-pos-norm</property>
@@ -1501,7 +1501,7 @@
 			<property>/b707/trim/elevator-trim-turn</property>
 			<volume>
 				<property>/sim/current-view/internal</property>
-				<value>0.8</value>
+				<value>0.6</value>
 			</volume>
 		</trim-wheels>
 		
@@ -1532,6 +1532,23 @@
                 <value>1.05</value>
             </volume>
         </caution-warning>
+
+        <welcome>
+            <name>welcome</name>
+            <mode>once</mode>
+            <type>avionics</type>
+            <path>Aircraft/KC-137R/Sounds/welcome.wav</path>
+            <condition>
+                <greater-than>
+                    <property>b707/battery-switch</property>
+                    <value>1</value>
+                </greater-than>
+            </condition>
+            <volume>
+            	<property>sim/current-view/internal</property>
+                <value>1.0</value>
+            </volume>
+        </welcome>
 </fx>
 
 </PropertyList>
