@@ -1541,12 +1541,12 @@
             <condition>
                 <greater-than>
                     <property>b707/battery-switch</property>
-                    <value>1</value>
+                    <value>0</value>
                 </greater-than>
             </condition>
             <volume>
             	<property>sim/current-view/internal</property>
-                <value>1.0</value>
+                <value>0.6</value>
             </volume>
         </welcome>
 </fx>
