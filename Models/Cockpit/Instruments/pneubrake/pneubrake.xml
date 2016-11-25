@@ -51,7 +51,7 @@
         <type>rotate</type>
         <object-name>brake</object-name>
         <property>/controls/gear/brake-parking</property>
-        <factor>90</factor>
+        <factor>-90</factor>
         <axis>
             <x> 1.0</x>
             <y> 0.0</y>
@@ -75,28 +75,6 @@
           <command>property-toggle</command>
           <property>/controls/gear/brake-parking</property>  
         </binding>
-        <binding>
-          <command>nasal</command>
-          <script>
-          	var brakeR = getprop("/controls/gear/brake-right") or 0;
-          	var brakeL = getprop("/controls/gear/brake-left") or 0;
-          	var stop = getprop("/controls/gear/barke-parking") or 0;
-          	if (!stop and (brakeR or brakeL)){
-          		setprop("/controls/gear/brake-right", 0);
-          		setprop("/controls/gear/brake-left", 0);
-            }
-          </script>  
-        </binding>
-        <binding>
-          <command>property-toggle</command>
-          <property>/sim/sound/switch1</property>
-        </binding>
-	      <mod-up>
-	        <binding>
-		        <command>property-toggle</command>
-		        <property>/controls/gear/brake-parking</property> 
-	        </binding>
-	      </mod-up>
       </action>
     </animation>
 
