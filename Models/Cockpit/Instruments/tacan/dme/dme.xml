@@ -62,7 +62,7 @@
 					<value>22</value>
 				</less-than>
 				<less-than>
-					<property>/instrumentation/tacan/switch-position</property>
+					<property>/instrumentation/tacan/powered</property>
 					<value>1</value>
 				</less-than>
 	            <not><property>/instrumentation/tacan/in-range</property></not>
