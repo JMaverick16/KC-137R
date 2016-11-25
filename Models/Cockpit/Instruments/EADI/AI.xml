@@ -193,7 +193,7 @@
         <object-name>FDpitch</object-name>
         <object-name>FDpitch_rembrandt</object-name>
         <property>/it-autoflight/fd/pitch-bar</property>
-        <factor>0.0015</factor>
+        <factor>0.0005</factor>
         <axis>
             <x>0</x>
             <y>0</y>
@@ -206,7 +206,7 @@
         <object-name>FDroll</object-name>
         <object-name>FDroll_rembrandt</object-name>
         <property>/it-autoflight/fd/roll-bar</property>
-        <factor>0.0010</factor>
+        <factor>0.0002</factor>
         <axis>
             <x>0</x>
             <y>1</y>

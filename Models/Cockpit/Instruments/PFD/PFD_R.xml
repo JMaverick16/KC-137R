@@ -205,7 +205,7 @@ Syd Adams
         <object-name>FDpitch</object-name>
         <object-name>FDpitch_rembrandt</object-name>
         <property>/it-autoflight/fd/pitch-bar</property>
-        <factor>0.0015</factor>
+        <factor>0.0005</factor>
         <axis>
             <x>0</x>
             <y>0</y>
@@ -218,7 +218,7 @@ Syd Adams
         <object-name>FDroll</object-name>
         <object-name>FDroll_rembrandt</object-name>
         <property>/it-autoflight/fd/roll-bar</property>
-        <factor>0.0010</factor>
+        <factor>0.0002</factor>
         <axis>
             <x>0</x>
             <y>1</y>
@@ -698,15 +698,41 @@ Syd Adams
             <height type="int">64</height>
         </font-resolution>
 	</text>
+    <text>
+        <name>RTD</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>-0.042</y-m>
+            <z-m>0.088</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">RETARD</format>
+		<property>autopilot/serviceable</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.007</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+	</text>
 
 	<animation>
 		<object-name>THR</object-name>
 		<type>select</type>
 		<condition>
-			<equals>
-				<property>/it-autoflight/apthrmode2</property>
-				<value>0</value>
-			</equals>
+			<and>
+				<equals>
+					<property>/it-autoflight/apthrmode2</property>
+					<value>0</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/retard</property>
+					<value>0</value>
+				</equals>
+			</and>
 		</condition>
 	</animation>
 	
@@ -714,10 +740,16 @@ Syd Adams
 		<object-name>IDLE</object-name>
 		<type>select</type>
 		<condition>
-			<equals>
-				<property>/it-autoflight/apthrmode2</property>
-				<value>1</value>
-			</equals>
+			<and>
+				<equals>
+					<property>/it-autoflight/apthrmode2</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/retard</property>
+					<value>0</value>
+				</equals>
+			</and>
 		</condition>
 	</animation>
 	
@@ -725,9 +757,26 @@ Syd Adams
 		<object-name>CLB</object-name>
 		<type>select</type>
 		<condition>
+			<and>
+				<equals>
+					<property>/it-autoflight/apthrmode2</property>
+					<value>2</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/retard</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<object-name>RTD</object-name>
+		<type>select</type>
+		<condition>
 			<equals>
-				<property>/it-autoflight/apthrmode2</property>
-				<value>2</value>
+				<property>/it-autoflight/retard</property>
+				<value>1</value>
 			</equals>
 		</condition>
 	</animation>
@@ -907,6 +956,48 @@ Syd Adams
         </font-resolution>
 	</text>
 	
+    <text>
+        <name>LAND</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>0.024</y-m>
+            <z-m>0.088</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">LAND</format>
+		<property>autopilot/serviceable</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.007</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+	</text>
+	
+    <text>
+        <name>FLARE</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>0.024</y-m>
+            <z-m>0.088</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">FLARE</format>
+		<property>autopilot/serviceable</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.007</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+	</text>
+	
 	<animation>
 		<object-name>ALT</object-name>
 		<type>select</type>
@@ -947,6 +1038,28 @@ Syd Adams
 			<equals>
 				<property>/it-autoflight/apvertmode</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<object-name>LAND</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/it-autoflight/txtvertmode</property>
+				<value>DUAL LND</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<object-name>FLARE</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/it-autoflight/txtvertmode</property>
+				<value>FLARE</value>
 			</equals>
 		</condition>
 	</animation>
@@ -1034,6 +1147,27 @@ Syd Adams
         </font-resolution>
 	</text>
 	
+    <text>
+        <name>FLARE arm</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>0.024</y-m>
+            <z-m>0.081</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">FLARE</format>
+		<property>autopilot/serviceable</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.006</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+	</text>
+	
 	<animation>
 		<object-name>THR arm</object-name>
 		<type>select</type>
@@ -1092,6 +1226,19 @@ Syd Adams
 				<value>4</value>
 			</equals>
 			</or>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<object-name>FLARE arm</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+			<equals>
+				<property>/it-autoflight/txtvertmode</property>
+				<value>DUAL LND</value>
+			</equals>
 			</and>
 		</condition>
 	</animation>
@@ -1235,7 +1382,7 @@ Syd Adams
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%4.0f</format>
-        <property>autopilot/internal/vert-speed-fpm</property>
+        <property>/it-autoflight/internal/vert-speed-fpm</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.008</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1256,7 +1403,7 @@ Syd Adams
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%4.0f</format>
-        <property>autopilot/internal/vert-speed-fpm</property>
+        <property>/it-autoflight/internal/vert-speed-fpm</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.008</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1708,6 +1855,7 @@ Syd Adams
         <object-name>THR</object-name>
         <object-name>CLB</object-name>
         <object-name>IDLE</object-name>
+        <object-name>RTD</object-name>
         <object-name>HDG</object-name>
         <object-name>NAV</object-name>
         <object-name>LOC</object-name>
@@ -1715,6 +1863,8 @@ Syd Adams
         <object-name>FLCH</object-name>
         <object-name>V/S</object-name>
         <object-name>G/S</object-name>
+        <object-name>LAND</object-name>
+        <object-name>FLARE</object-name>
         <object-name>AT</object-name>
         <object-name>AP</object-name>
         <object-name>ATAP</object-name>
@@ -1756,6 +1906,7 @@ Syd Adams
         <object-name>LOC arm</object-name>
         <object-name>G/S arm</object-name>
         <object-name>ALT arm</object-name>
+        <object-name>FLARE arm</object-name>
         <object-name>VS-POS</object-name>
         <object-name>VS-NEG</object-name>
         <object-name>BARO-source</object-name>

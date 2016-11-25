@@ -12,6 +12,8 @@
 
 	<animation>
 		<type>material</type>
+			<object-name>min.needle</object-name>
+			<object-name>max.needle</object-name>
 			<object-name>accelerometer.needle</object-name>
 			<object-name>accelerometer</object-name>
 		<condition>
@@ -27,6 +29,8 @@
 	
 	<animation>
 		<type>material</type>
+			<object-name>min.needle</object-name>
+			<object-name>max.needle</object-name>
 			<object-name>accelerometer.needle</object-name>
 			<object-name>accelerometer</object-name>
 		<condition>
@@ -57,5 +61,52 @@
    <z>0</z>
   </axis>
  </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>min.needle</object-name>
+  <property>/gmeter/min</property>
+  <factor>45</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>max.needle</object-name>
+  <property>/gmeter/max</property>
+  <factor>45</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center> 
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+     <animation>
+        <type>pick</type>
+        <object-name>button</object-name>
+        <action>
+            <button>0</button>
+			<repeatable>false</repeatable>
+            <binding>
+            	<command>nasal</command>
+				<script>b707.gmeter_reset();</script>
+			</binding>
+        </action>
+    </animation>
  
 </PropertyList>

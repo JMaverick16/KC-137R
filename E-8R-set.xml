@@ -344,6 +344,7 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/radar2.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
+			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
 		</b707>
 		
 		<itaf>

@@ -1,11 +1,12 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Milestone 2 Build 54H
+# V3.0.0 Milestone 2 Build 66Y
 
 print("IT-AUTOFLIGHT: Please Wait!");
-setprop("/it-autoflight/settings/retard-enable", 1);  # Do not change this here! See IT-AUTOFLIGHT's Help.txt
-setprop("/it-autoflight/settings/retard-ft", 50);     # Do not change this here! See IT-AUTOFLIGHT's Help.txt
-setprop("/it-autoflight/settings/land-flap", 0.6);    # Do not change this here! See IT-AUTOFLIGHT's Help.txt
-setprop("/it-autoflight/settings/land-enable", 1);    # Do not change this here! See IT-AUTOFLIGHT's Help.txt
+setprop("/it-autoflight/settings/retard-enable", 1);   # Do not change this here! See IT-AUTOFLIGHT's Help.txt
+setprop("/it-autoflight/settings/retard-ft", 50);      # Do not change this here! See IT-AUTOFLIGHT's Help.txt
+setprop("/it-autoflight/settings/land-flap", 0.6);     # Do not change this here! See IT-AUTOFLIGHT's Help.txt
+setprop("/it-autoflight/settings/land-enable", 1);     # Do not change this here! See IT-AUTOFLIGHT's Help.txt
+setprop("/it-autoflight/autoland/flare-altitude", 20); # Altitude when the flare mode starts in an autoland.
 
 var ap_init = func {
 	setprop("/it-autoflight/ap_master", 0);
@@ -49,10 +50,10 @@ setlistener("/it-autoflight/ap_mastersw", func {
 	  setprop("/it-autoflight/enableapoffsound", 0);	  
 	}
   } else if (apmas == 1) {
+	setprop("/controls/flight/rudder", 0);
 	setprop("/it-autoflight/ap_master", 1);
 	setprop("/it-autoflight/enableapoffsound", 1);
 	setprop("/it-autoflight/apoffsound", 0);
-	setprop("/controls/flight/rudder", 0);
   }
 });
 
@@ -66,10 +67,10 @@ setlistener("/it-autoflight/ap_mastersw2", func {
 	  setprop("/it-autoflight/enableapoffsound", 0);	  
 	}
   } else if (apmas == 1) {
+	setprop("/controls/flight/rudder", 0);
 	setprop("/it-autoflight/ap_master2", 1);
 	setprop("/it-autoflight/enableapoffsound2", 1);
 	setprop("/it-autoflight/apoffsound2", 0);
-	setprop("/controls/flight/rudder", 0);
   }
 });
 
@@ -133,7 +134,7 @@ setlistener("/it-autoflight/aplatset", func {
 	setprop("/it-autoflight/settings/heading-bug-deg", hdgnow);
   } else if (latset == 4) {
 	setprop("/it-autoflight/aplatmode", 4);
-	setprop("/it-autoflight/txtlatmode", "LAND");
+	setprop("/it-autoflight/txtlatmode", "ALGN");
   }
 });
 
@@ -206,12 +207,12 @@ setlistener("/it-autoflight/apvertset", func {
 	# VNAV not ready yet, so do nothing
   } else if (vertset == 6) {
 	setprop("/it-autoflight/apvertmode", 6);
-	setprop("/it-autoflight/txtvertmode", "LAND");
+	setprop("/it-autoflight/txtvertmode", "LAND 3");
 	setprop("/it-autoflight/txtarmmode", " ");
 	flchthrust();
 	alandt.stop();
 	alandt1.start();
-    setprop("/it-autoflight/autoland/target-vs", "-500");
+    setprop("/it-autoflight/autoland/target-vs", "-700");
   }
 });
 
@@ -272,11 +273,11 @@ var flchthrust = func {
     if (calt < alt) {
 	  setprop("/it-autoflight/apthrmode2", 2);
 	  setprop("/it-autoflight/txtthrmode", "PITCH");
-	    setprop("/it-autoflight/txtvertmode", "CLB THR");
+	    setprop("/it-autoflight/txtvertmode", "SPD CLB");
     } else if (calt > alt) {
       setprop("/it-autoflight/apthrmode2", 1);
 	  setprop("/it-autoflight/txtthrmode", "PITCH");
-	    setprop("/it-autoflight/txtvertmode", "IDLE DES");
+	    setprop("/it-autoflight/txtvertmode", "SPD DES");
     } else {
 	  setprop("/it-autoflight/apthrmode2", 0);
 	  setprop("/it-autoflight/txtthrmode", "THRUST");
@@ -344,7 +345,7 @@ var retardchk = func {
     if (altpos < retardalt) {
 	  if (aton == 1) {
 	    setprop("/it-autoflight/retard", 1);
-	      setprop("/it-autoflight/txtthrmode", "RETARD");
+	    setprop("/it-autoflight/txtthrmode", "RETARD");
 		atofft.start();
 	  } else {
 	    setprop("/it-autoflight/retard", 0);
@@ -436,13 +437,18 @@ var apparmcheck = func {
 
 # Autoland Stage 1 Logic (Land)
 var aland = func {
-  if (getprop("/position/gear-agl-ft") <= 150) {
-    setprop("/it-autoflight/apvertset", 6);
+  var ap1 = getprop("/it-autoflight/ap_master");
+  var ap2 = getprop("/it-autoflight/ap_master2");
+  if (ap1 or ap2) {
+    if (getprop("/position/gear-agl-ft") <= 150) {
+      setprop("/it-autoflight/apvertset", 6);
+    }
   }
 }
 var aland1 = func {
   var aglal = getprop("/position/gear-agl-ft");
-  if (aglal <= 20 and aglal > 5) {
+  var flarealt = getprop("/it-autoflight/autoland/flare-altitude");
+  if (aglal <= flarealt and aglal > 5) {
 	setprop("/it-autoflight/txtvertmode", "FLARE");
     setprop("/it-autoflight/autoland/target-vs", "-200");
   }

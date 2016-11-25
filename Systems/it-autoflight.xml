@@ -162,6 +162,15 @@
     <seconds>10.0</seconds>
     <filter-gain>0.0</filter-gain>
   </predict-simple>
+  
+  <predict-simple>
+    <name>MACH 10 SECOND PREDICTOR</name>
+    <debug>false</debug>
+    <input>/velocities/mach</input>
+    <output>/it-autoflight/internal/lookahead-10-sec-mach</output>
+    <seconds>10.0</seconds>
+    <filter-gain>0.0</filter-gain>
+  </predict-simple>
 
   <filter>
     <name>STATIC PRESSURE COMPUTER</name>
@@ -352,8 +361,30 @@
 			<beta>1.0</beta>	
 			<alpha>0.1</alpha>	
 			<gamma>0.0</gamma>	
-			<Ti>10</Ti>        	
-			<Td>0.00001</Td>     	
+			<Ti>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/roll/ti</property>
+			</Ti>
+			<Ti>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>10.0</value>
+			</Ti>        
+			<Td>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/roll/td</property>
+			</Td>
+			<Td>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.00001</value>
+			</Td>       	
 			<u_min>
 				<condition>
 					<property>/it-autoflight/settings/no-generics</property>
@@ -394,13 +425,13 @@
 			</condition>
 		</enable>
 		<input>
-			<prop>/it-autoflight/internal/nav1-heading-error-deg</prop>
+			<property>/it-autoflight/internal/nav1-heading-error-deg</property>
 		</input>
 		<reference>
 			<value>0.0</value>
 		</reference>
 		<output>
-			<prop>/it-autoflight/internal/target-roll-deg</prop>
+			<property>/it-autoflight/internal/target-roll-deg</property>
 		</output>
 		<config>
 			<Kp>-5.0</Kp>        
@@ -409,8 +440,8 @@
 			<gamma>0.0</gamma>   
 			<Ti>10.0</Ti>        
 			<Td>0.00001</Td>     
-			<u_min>-25.0</u_min> 
-			<u_max>25.0</u_max>  
+			<u_min>-30.0</u_min> 
+			<u_max>30.0</u_max>  
 		</config>
 	</pid-controller>
 
@@ -451,7 +482,7 @@
 				<condition>
 					<property>/it-autoflight/settings/no-generics</property>
 				</condition>
-				<property>/it-autoflight/settings/roll/kp-vorloc</property>
+				<property>/it-autoflight/settings/vorloc/kp</property>
 			</Kp>
 			<Kp>
 				<condition>
@@ -462,8 +493,30 @@
 			<beta>1.0</beta>	
 			<alpha>0.1</alpha>	
 			<gamma>0.0</gamma>		
-			<Ti>10</Ti>        	
-			<Td>0.00001</Td>     	
+			<Ti>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/vorloc/ti</property>
+			</Ti>
+			<Ti>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>10.0</value>
+			</Ti>        
+			<Td>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/vorloc/td</property>
+			</Td>
+			<Td>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.00001</value>
+			</Td>    	
 			<u_min>
 				<condition>
 					<property>/it-autoflight/settings/no-generics</property>
@@ -558,7 +611,7 @@
 		</config>
 	</pid-controller>
 	
-	<pi-simple-controller>
+	<pid-controller>
 		<name>VERTICAL SPEED HOLD</name>
 		<debug>false</debug>
 		<enable>
@@ -570,33 +623,30 @@
 			</condition>
 		</enable>
 		<input>
-			<prop>/it-autoflight/internal/vert-speed-fpm</prop>
-			<scale>0.1</scale>
+			<property>/velocities/vertical-speed-fps</property>
 		</input>
 		<reference>
-			<prop>/it-autoflight/settings/vertical-speed-fpm</prop>
-			<scale>0.1</scale>
+			<property>/it-autoflight/settings/vertical-speed-fpm</property>
+			<scale>0.01666666</scale>
 		</reference>
 		<output>
 			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
-			<Kp>0.025</Kp>
-			<Kp>0.025</Kp>
-			<Ki>0.010</Ki>
-			<beta>1.0</beta>       
-			<alpha>0.5</alpha>     
-			<gamma>0.0</gamma>     
-			<Ti>10.0</Ti>
-			<Td>0.0001</Td>
-			<min>
+			<Kp>0.07</Kp>
+			<beta>1.0</beta>
+			<alpha>0.1</alpha>
+			<gamma>0.0</gamma>
+			<Ti>5.0</Ti>
+			<Td>0.00001</Td>
+			<u_min>
 				<value>-10</value>
-			</min>
-			<max>
+			</u_min>
+			<u_max>
 				<value>30</value>
-			</max>
+			</u_max>
 		</config>
-	</pi-simple-controller>
+	</pid-controller>
 	
 	<pi-simple-controller>
 		<name>AUTOLAND VS HOLD</name>
@@ -607,7 +657,6 @@
 					<property>/it-autoflight/apvertmode</property>
 					<value>6</value>
 				</equals>
-				
 			</condition>
 		</enable>
 		<input>
@@ -622,7 +671,7 @@
 			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
-			<Kp>0.06</Kp>
+			<Kp>0.07</Kp>
 			<Ki>0.010</Ki>
 			<beta>1.0</beta>       
 			<alpha>0.5</alpha>     
@@ -650,13 +699,13 @@
 			</condition>
 		</enable>
 		<input>
-			<prop>/velocities/vertical-speed-fps</prop>
+			<property>/velocities/vertical-speed-fps</property>
 		</input>
 		<reference>
-			<prop>/instrumentation/nav[0]/gs-rate-of-climb</prop>
+			<property>/instrumentation/nav[0]/gs-rate-of-climb</property>
 		</reference>
 		<output>
-			<prop>/it-autoflight/internal/target-pitch-deg</prop>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
 			<Kp>
@@ -673,13 +722,13 @@
 			</Kp>        
 			<beta>1.0</beta>       
 			<alpha>0.5</alpha>     
-			<gamma>0.0</gamma>     
+			<gamma>0.0</gamma>			
 			<Ti>10.0</Ti>
 			<Td>0.0001</Td>
 			<u_min>-10</u_min>
 			<u_max>7</u_max>
-    </config>
-  </pid-controller>
+		</config>
+	</pid-controller>
 	
 	<pid-controller>
 		<name>FLIGHT LEVEL CHANGE</name>
@@ -699,7 +748,7 @@
 					<value>0</value>
 				</equals>
 			</condition>
-			<prop>/it-autoflight/internal/lookahead-10-sec-airspeed-kt</prop>
+			<property>/it-autoflight/internal/lookahead-10-sec-airspeed-kt</property>
 		</input>
 		<input>
 			<condition>
@@ -708,7 +757,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<prop>/velocities/mach</prop>
+			<property>/it-autoflight/internal/lookahead-10-sec-mach</property>
 			<scale>1000.0</scale>
 		</input>
 		<reference>
@@ -718,7 +767,7 @@
 					<value>0</value>
 				</equals>
 			</condition>
-			<prop>/it-autoflight/settings/target-speed-kt</prop>
+			<property>/it-autoflight/settings/target-speed-kt</property>
 		</reference>
 		<reference>
 			<condition>
@@ -727,11 +776,11 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<prop>/it-autoflight/settings/target-mach</prop>
+			<property>/it-autoflight/settings/target-mach</property>
 			<scale>1000.0</scale>
 		</reference>
 		<output>
-			<prop>/it-autoflight/internal/target-pitch-deg</prop>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</output>
 		<config>
 			<Kp>-0.30</Kp>       
@@ -804,13 +853,13 @@
 			</condition>
 		</enable>
 		<input>
-			<prop>/orientation/pitch-deg</prop>
+			<property>/orientation/pitch-deg</property>
 		</input>
 		<reference>
-			<prop>/it-autoflight/internal/target-pitch-deg</prop>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator-cmd</prop>
+			<property>/controls/flight/elevator-cmd</property>
 		</output>
 		<config>
 			<Kp>
@@ -828,9 +877,30 @@
 			<beta>1.0</beta>    
 			<alpha>0.1</alpha>  
 			<gamma>0.0</gamma>  
-			
-			<Ti>10.0</Ti>        
-			<Td>0.00001</Td>    
+			<Ti>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/flch/ti</property>
+			</Ti>
+			<Ti>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>10.0</value>
+			</Ti>        
+			<Td>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/flch/td</property>
+			</Td>
+			<Td>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.00001</value>
+			</Td>    
 			<u_min>
 				<condition>
 					<property>/it-autoflight/settings/no-generics</property>
@@ -920,8 +990,30 @@
 			<beta>1.0</beta>    
 			<alpha>0.1</alpha>  
 			<gamma>0.0</gamma>  
-			<Ti>10.0</Ti>       
-			<Td>0.0001</Td>    
+			<Ti>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/pitch/ti</property>
+			</Ti>
+			<Ti>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>10.0</value>
+			</Ti>        
+			<Td>
+				<condition>
+					<property>/it-autoflight/settings/no-generics</property>
+				</condition>
+				<property>/it-autoflight/settings/pitch/td</property>
+			</Td>
+			<Td>
+				<condition>
+					<not><property>/it-autoflight/settings/no-generics</property></not>
+				</condition>
+				<value>0.0001</value>
+			</Td>     
 			<u_min>
 				<condition>
 					<property>/it-autoflight/settings/no-generics</property>
