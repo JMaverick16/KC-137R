@@ -39,7 +39,7 @@
      <property>/gear/gear[0]wow</property>
    </condition>
    <volume>
-    <factor>30.0</factor>
+    <factor>33.0</factor>
    </volume>
   </tchdwn0>
   
@@ -50,7 +50,7 @@
      <property>/gear/gear[1]wow</property>
    </condition>
    <volume>
-    <factor>35.0</factor>
+    <factor>38.0</factor>
    </volume>
   </tchdwn1>
   
@@ -61,7 +61,7 @@
      <property>/gear/gear[2]/wow</property>
    </condition>
    <volume>
-    <factor>35.0</factor>
+    <factor>38.0</factor>
    </volume>
   </tchdwn2>
 
@@ -73,7 +73,7 @@
    </condition>
    <volume>
    	<property>sim/current-view/internal</property>
-    <factor>20.0</factor>
+    <factor>19.0</factor>
    </volume>
   </tchdwn3>
   
@@ -1501,7 +1501,7 @@
 			<property>/b707/trim/elevator-trim-turn</property>
 			<volume>
 				<property>/sim/current-view/internal</property>
-				<value>0.6</value>
+				<value>0.55</value>
 			</volume>
 		</trim-wheels>
 		
@@ -1512,7 +1512,7 @@
             <property>systems/electrical/outputs/efis</property>
             <volume>
             	<property>/sim/current-view/internal</property>
-                <factor>0.06</factor>
+                <factor>0.062</factor>
             </volume>
         </avionics>
 
@@ -1546,7 +1546,7 @@
             </condition>
             <volume>
             	<property>sim/current-view/internal</property>
-                <value>0.4</value>
+                <value>0.35</value>
             </volume>
         </welcome>
 
