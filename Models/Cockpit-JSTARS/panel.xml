@@ -60,16 +60,6 @@
 </model>
 
 <model>
-  <name>apstatus</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apstatus/apstatus.xml</path>
-  <offsets>
-    <x-m>-18.918</x-m>
-    <y-m>-0.228</y-m>
-    <z-m>0.8084</z-m>
-  </offsets>
-</model>
-
-<model>
   <name>mc</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/mc/mc.xml</path>
   <offsets>
@@ -293,16 +283,6 @@
 </model>
 
 <!-- Copilot Panel -->
-
-<model>
-  <name>apstatus</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apstatus/apstatus.xml</path>
-  <offsets>
-    <x-m>-18.918</x-m>
-    <y-m>0.617</y-m>
-    <z-m>0.808</z-m>
-  </offsets>
-</model>
 
 <model>
   <name>mc_cp</name>
