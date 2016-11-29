@@ -650,25 +650,20 @@
         <max-dist>1.0</max-dist>
     </stall>
 
-	<overspd>
-		<name>overspeed</name>
-		<path>Aircraft/KC-137R/Sounds/speed.wav</path> 
-		<condition>
-			<and>
-				<greater-than>
-					<property>/b707/ess-bus</property>
-					<value>0</value>
-				</greater-than>
-				<greater-than>
-					<property>/velocities/airspeed-kt</property>
-					<value>380.0</value>
-				</greater-than>
-			</and>
-		</condition>
-		<volume>
-			<factor>1</factor>
-		</volume>
-	</overspd>
+	<overspeed>
+        <name>Overspeed warning</name>
+        <path>Aircraft/KC-137R/Sounds/speed.wav</path>
+        <mode>looped</mode>
+        <condition>
+            <greater-than>
+                <property>velocities/airspeed-kt</property>
+                <value>380</value>
+            </greater-than>
+        </condition>
+        <volume>
+            <factor>1.0</factor>
+        </volume>
+    </overspeed>
 
 	<testwarning>
 		<name>test warning</name>
