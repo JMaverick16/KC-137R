@@ -3,7 +3,7 @@
 <PropertyList>
 
 
-	<path>res/nacelle.cfm56.ac</path>
+	<path>res/nacelle.cfmleap1B.ac</path>
 
 	<!-- offsets> Defined in Wings!
 		<heading-deg>-1</heading-deg>
@@ -61,7 +61,7 @@
 -->
 
 	<model>
-		<path>Aircraft/KC-137R/Models/Engines/res/cfm56.ac</path>
+		<path>Aircraft/KC-137R/Models/Engines/res/cfmleap1B.ac</path>
 		<!--texture-path>../Textures/Livery/House</texture-path-->
 
 		<!-- Reflection Shader -->
