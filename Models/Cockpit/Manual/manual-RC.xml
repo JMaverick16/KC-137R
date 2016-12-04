@@ -54,7 +54,7 @@
 	
 	<!-- ####################### english ##################### -->
 	<!-- page 2 -->	
-	<title n="2">MANUAL 707</title>
+	<title n="2">MANUAL RC-137R</title>
 	<subtitle1 n="2">English</subtitle1>
 	<text1 n="2">
 		     EMERGENCY PROC.
@@ -78,7 +78,7 @@
 	<text4 n="2"></text4>
 	
 	<!-- page 3 -->
-	<title n="3">EMERGENCY 707</title>
+	<title n="3">EMERGENCY RC-137R</title>
 	<subtitle1 n="3">ENGINE FIRE</subtitle1>
 	<text1 n="3">
 		Thrust Lever - CLOSE
@@ -105,7 +105,7 @@
 	</text4>
 	
 	<!-- page 4 -->	
-	<title n="4">EMERGENCY 707</title>
+	<title n="4">EMERGENCY RC-137R</title>
 	<subtitle1 n="4">ICE WARNING</subtitle1>
 	<text1 n="4">
 		--------- Overhead Panel ----------
@@ -128,7 +128,7 @@
 	<text4 n="4"></text4>
 	
 	<!-- page 5 -->	
-	<title n="5">EMERGENCY 707</title>
+	<title n="5">EMERGENCY RC-137R</title>
 	<subtitle1 n="5">PRESSURIZATION WARNING</subtitle1>
 	<text1 n="5">
 		--------- Overhead Panel ----------
@@ -341,7 +341,7 @@
 	
 	<!-- ####################### spanish ##################### -->
 	<!-- page 13 -->	
-	<title n="13">MANUAL 707</title>
+	<title n="13">MANUAL RC-137R</title>
 	<subtitle1 n="13">Spanish</subtitle1>
 	<text1 n="13">
 		     EMERGENCIA PROC.
@@ -365,7 +365,7 @@
 	<text4 n="13"></text4>
 	
 	<!-- pagina 14 -->
-	<title n="14">EMERGENCIA 707</title>
+	<title n="14">EMERGENCIA RC-137R</title>
 	<subtitle1 n="14">FUEGO EN MOTOR</subtitle1>
 	<text1 n="14">
 		Palanca de Empuje - CERRADA
@@ -393,7 +393,7 @@
 	</text4>
 	
 	<!-- pagina 15 -->	
-	<title n="15">EMERGENCICA 707</title>
+	<title n="15">EMERGENCICA RC-137R</title>
 	<subtitle1 n="15">ALERTA DE HIELO</subtitle1>
 	<text1 n="15">
 		--------- Panel Superior ----------
@@ -417,7 +417,7 @@
 	<text4 n="15"></text4>
 	
 	<!-- page 16 -->	
-	<title n="16">EMERGENCIA 707</title>
+	<title n="16">EMERGENCIA RC-137R</title>
 	<subtitle1 n="16">ALERTA DE PRESURIZACION</subtitle1>
 	<text1 n="16">
 		--------- Panel Superior ----------
@@ -632,7 +632,7 @@
 	
 	<!-- ################## german ################### -->
 	<!-- page 24 -->	
-	<title n="24">MANUAL 707</title>
+	<title n="24">MANUAL RC-137R</title>
 	<subtitle1 n="24">German</subtitle1>
 	<text1 n="24">
 		     NOTFALL PROZEDUREN
@@ -656,7 +656,7 @@
 	<text4 n="24"></text4>
 	
 	<!-- page 25 -->
-	<title n="25">NOTFALL 707</title>
+	<title n="25">NOTFALL RC-137R</title>
 	<subtitle1 n="25">TRIEBWERK FEUER</subtitle1>
 	<text1 n="25">
 		Schubhebel - ZURUECK
@@ -684,7 +684,7 @@
 	</text4>
 	
 	<!-- page 26 -->	
-	<title n="26">NOTFALL 707</title>
+	<title n="26">NOTFALL RC-137R</title>
 	<subtitle1 n="26">EIS WARNUNG</subtitle1>
 	<text1 n="26">
 		--------- Overhead Panel ----------
@@ -708,7 +708,7 @@
 	<text4 n="26"></text4>	
 	
 	<!-- page 27 -->	
-	<title n="27">NOTFALL 707</title>
+	<title n="27">NOTFALL RC-137R</title>
 	<subtitle1 n="27">KABINENDRUCK WARNUNG</subtitle1>
 	<text1 n="27">
 		--------- Overhead Panel ----------
@@ -923,7 +923,7 @@
 	
 	<!-- ####################### czech ##################### -->
 	<!-- page 35 -->	
-	<title n="35">MANUAL 707</title>
+	<title n="35">MANUAL RC-137R</title>
 	<subtitle1 n="35">Czech</subtitle1>
 	<text1 n="35">
 		     PRIPAD NOUZE
@@ -947,7 +947,7 @@
 	<text4 n="35"></text4>
 	
 	<!-- page 36 -->
-	<title n="36">PRIPAD NOUZE 707</title>
+	<title n="36">PRIPAD NOUZE RC-137R</title>
 	<subtitle1 n="36">POZAR MOTORU</subtitle1>
 	<text1 n="36">
 		Pripuste motoru - ZAVRENO
@@ -972,7 +972,7 @@
 	</text4>
 	
 	<!-- page 37 -->	
-	<title n="37">PRIPAD NOUZE 707</title>
+	<title n="37">PRIPAD NOUZE RC-137R</title>
 	<subtitle1 n="37">VAROVANI PRED NAMRAZOU</subtitle1>
 	<text1 n="37">
 		--------- NAHLAVNI PANEL----------
@@ -994,7 +994,7 @@
 	<text4 n="37"></text4>
 	
 	<!-- page 38 -->	
-	<title n="38">PRIPAD NOUZE 707</title>
+	<title n="38">PRIPAD NOUZE RC-137R</title>
 	<subtitle1 n="38">VAROVANI PRI POKLESU TLAKU V KABINE</subtitle1>
 	<text1 n="38">
 		--------- Nahlavni panel ----------
@@ -1205,7 +1205,7 @@
 	
 	<!-- ####################### portugues ##################### -->
 	<!-- page 46 -->	
-	<title n="46">Manual 707</title>
+	<title n="46">Manual RC-137R</title>
 	<subtitle1 n="46">Portugues</subtitle1>
 	<text1 n="46">
 		     EMERGENCIA PROC.
@@ -1229,7 +1229,7 @@
 	<text4 n="46"></text4>
 		
 	<!-- page 47 -->
-	<title n="47">EMERGENCIA 707</title>
+	<title n="47">EMERGENCIA RC-137R</title>
 	<subtitle1 n="47">FOGO NO MOTOR</subtitle1>
 	<text1 n="47">
 		Alavanca de empuxe - Fechar
@@ -1257,7 +1257,7 @@
 	</text4>
 	
 	<!-- page 48 -->	
-	<title n="48">EMERGENCIA 707</title>
+	<title n="48">EMERGENCIA RC-137R</title>
 	<subtitle1 n="48">AVISO DE GELO</subtitle1>
 	<text1 n="48">
 		--------- Painel Superior ----------
@@ -1280,7 +1280,7 @@
 	<text4 n="48"></text4>
 	
 	<!-- page 49 -->	
-	<title n="49">EMERGENCIA 707</title>
+	<title n="49">EMERGENCIA RC-137R</title>
 	<subtitle1 n="49">AVISO DE PRESSURIZACAO</subtitle1>
 	<text1 n="49">
 		--------- Painel Superior ----------
@@ -1482,7 +1482,7 @@
 	
 	<!-- ####################### italiano ##################### -->
 	<!-- page 57 -->	
-	<title n="57">MANUALE 707</title>
+	<title n="57">MANUALE RC-137R</title>
 	<subtitle1 n="57">Italiano</subtitle1>
 	<text1 n="57">
 		     PROCEDURE D'EMERGENZA
@@ -1507,7 +1507,7 @@
 	<text4 n="57"></text4>
 	
 	<!-- page 58 -->
-	<title n="58">EMERGENZA 707</title>
+	<title n="58">EMERGENZA RC-137R</title>
 	<subtitle1 n="58">INCENDIO MOTORE</subtitle1>
 	<text1 n="58">
 		Leva propulsione - CHIUSA (indietro)
@@ -1534,7 +1534,7 @@
 	</text4>
 	
 	<!-- page 59 -->	
-	<title n="59">EMERGENZA 707</title>
+	<title n="59">EMERGENZA RC-137R</title>
 	<subtitle1 n="59">ALLARME GHIACCIO</subtitle1>
 	<text1 n="59">
 		--------- Pannello soffitto cabina ----------
@@ -1557,7 +1557,7 @@
 	<text4 n="59"></text4>
 	
 	<!-- page 60 -->	
-	<title n="60">EMERGENZA 707</title>
+	<title n="60">EMERGENZA RC-137R</title>
 	<subtitle1 n="60">ALLARME PRESSURIZZAZIONE</subtitle1>
 	<text1 n="60">
 		--------- Pannello soffitto cabina ----------
