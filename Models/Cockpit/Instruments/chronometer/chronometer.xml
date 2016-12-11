@@ -284,7 +284,6 @@
 
 <!--  Hotspots -->
 
-
     <animation>
         <type>pick</type>
         <object-name>ET.switch</object-name>
