@@ -289,6 +289,17 @@ no. D6-3071-00
 	<CR type="bool">false</CR>
   </model-type>
  </sim>
+
+ <tanker type="bool">false</tanker>
+
+	<systems>
+		<refuel>
+		 <type>boom</type>
+		 <serviceable type="bool">false</serviceable>
+		 <max-fuel-transfer-lbs-min>50000</max-fuel-transfer-lbs-min>
+		 <!-- no realistic behavior. I tried from 6000 to 50000 lbs-min but is nearly the same)-->
+		</refuel>
+	</systems>
  
  <instrumentation>
 	<cdu>

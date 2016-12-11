@@ -15,7 +15,7 @@ This repo contains 6 military aircrafts derived from the Boeing 707 and it's var
 - C-137R Stratolifter/Stratoliner: Advanced military transport aircraft and VIP clipper (IAE V2528-D5).
 
 AUTHORS:
-* Phil Efstathiou (themadgreek): Original KC-137R project idea with CFM LEAP X engines.
+* MD-GRK (themadgreek): Original KC-137R project idea with CFM LEAP X engines.
 * J Maverick 16: Initial contribution and update of original model and current maintainer and developer.
 * Joshua Davidson (it0uchpods): Further contribution, introduction of the other variants and reconfiguration of cockpit, systems, FDM and many more; current maintainer.
 * peter305305: Minor sound update.
