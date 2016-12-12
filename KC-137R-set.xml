@@ -397,6 +397,10 @@ no. D6-3071-00
 		<damage>
 		  <file>Aircraft/KC-137R/Nasal/damage.nas</file>
 		</damage>
+
+		<efb>
+            <file>Aircraft/KC-137R/Nasal/efb.nas</file>
+		</efb>
 		
 		<cdu>
 			<file>Aircraft/Instruments-3d/cdu/boeing.nas</file>

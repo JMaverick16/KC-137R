@@ -606,6 +606,66 @@
 		</volume>
 	</reverser>	
 
+		<start>
+		<name>Start</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.24</factor>
+		</volume>
+	</start>
+
+	<start1>
+		<name>Start1</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[1]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.24</factor>
+		</volume>
+	</start1>
+
+	<start2>
+		<name>Start2</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[2]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.24</factor>
+		</volume>
+	</start2>
+
+	<start3>
+		<name>Start3</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[3]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.24</factor>
+		</volume>
+	</start3>
+
 	<wind>
 		<name>wind</name>
 		<mode>looped</mode>
@@ -1535,7 +1595,7 @@
             <property>systems/electrical/outputs/efis</property>
             <volume>
             	<property>/sim/current-view/internal</property>
-                <factor>0.066</factor>
+                <factor>0.067</factor>
             </volume>
         </avionics>
 
