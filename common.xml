@@ -271,7 +271,7 @@
 		<path>/instrumentation/operating-time/total</path>
 	</aircraft-data>
  </sim>
- 
+
 <it-autoflight>
 	<settings>
 		<no-generics>1</no-generics>
@@ -306,6 +306,43 @@
 		</gs>
 	</settings>
 </it-autoflight>
+<!--it-autoflight>
+	<settings>
+		<no-generics>1</no-generics>
+		<roll>
+			<umin>-0.7</umin>
+			<umax>0.7</umax>
+			<kp>0.09</kp>
+			<ti>10.0</ti>
+			<td>0.000001</td>
+		</roll>
+		<vorloc>
+			<kp>0.08</kp>
+			<ti>10.0</ti>
+			<td>0.000001</td>
+		</vorloc>
+		<pitch>
+			<umin>-0.30</umin>
+			<umax>0.30</umax>
+			<kp>-0.08</kp>
+			<ti>10.0</ti>
+			<td>0.0001</td>
+		</pitch>
+		<flch>
+			<umin>-0.30</umin>
+			<umax>0.30</umax>
+			<kp>-0.09</kp>
+			<ti>10.0</ti>
+			<td>0.00001</td>
+		</flch>
+		<gs>
+			<kp>0.15</kp>
+		</gs>
+		<autoland>
+			<kp-pitch>0.07</kp-pitch>
+		</autoland>
+	</settings>
+</it-autoflight-->
 
 	<engines>
 		<APU>
