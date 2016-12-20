@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- Airport Info World Map -->
+
+<animation>
+  <type>texmultiple</type>
+  <object-name>worldmap</object-name>
+  <transform>
+    <property>/position/latitude-deg</property>
+    <subtype>textranslate</subtype>
+    <factor>0.0065</factor>
+    <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+  </transform>
+  <transform>
+    <property>/position/longitude-deg</property>
+    <subtype>textranslate</subtype>
+    <factor>0.00277</factor>
+    <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+  </transform>
+ </animation>
+
+</PropertyList> 

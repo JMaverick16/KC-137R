@@ -290,6 +290,34 @@ no. D6-3071-00
 	<CR type="bool">false</CR>
   </model-type>
  </sim>
+
+ <tanker type="bool">true</tanker>
+
+	<systems>
+		<refuel>
+		 <type>boom</type>
+		 <serviceable type="bool">true</serviceable>
+		 <max-fuel-transfer-lbs-min>6000</max-fuel-transfer-lbs-min>
+		</refuel>
+	</systems>
+
+  <b707 n="0">
+		<refuelling>
+			<arial-master type="int">0</arial-master>
+			<contact type="int">0</contact>
+			<ready type="int">0</ready>
+			<wing-light-left type="double">0.0</wing-light-left>
+			<wing-light-right type="double">0.0</wing-light-right>
+			<wing-light-center type="double">0.0</wing-light-center>
+			<boom-telescope-lever type="double">0.0</boom-telescope-lever> <!-- only for the Lever, boom is a door animation -->
+			<boom-azimuth-lever type="double">0.0</boom-azimuth-lever>
+			<boom-azimuth type="double">0.0</boom-azimuth>
+			<probe-left type="int">0</probe-left>
+			<probe-right type="int">0</probe-right>
+			<probe-left-lever type="double">0.0</probe-left-lever>
+			<probe-right-lever type="double">0.0</probe-right-lever>
+		</refuelling>
+  </b707>
  
  <instrumentation>
 	<cdu>
@@ -369,6 +397,10 @@ no. D6-3071-00
 		<damage>
 		  <file>Aircraft/KC-137R/Nasal/damage.nas</file>
 		</damage>
+
+		<efb>
+            <file>Aircraft/KC-137R/Nasal/efb.nas</file>
+		</efb>
 		
 		<cdu>
 			<file>Aircraft/Instruments-3d/cdu/boeing.nas</file>

@@ -31,6 +31,34 @@
     <factor>10.0</factor>
    </volume>
   </apoff>
+
+  <apon>
+   <name>apon</name>
+   <path>/Aircraft/KC-137R/Sounds/apon.wav</path>
+   <condition>
+	<greater-than>
+      <property>/it-autoflight/ap_master</property>
+        <value>0</value>
+     </greater-than>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
+   </volume>
+  </apon>
+  
+  <apon>
+   <name>apon2</name>
+   <path>/Aircraft/KC-137R/Sounds/apon.wav</path>
+   <condition>
+   	<greater-than>
+      <property>/it-autoflight/ap_master2</property>
+        <value>0</value>
+      </greater-than>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
+   </volume>
+  </apon>
   
   <tchdwn0>
    <name>tchdwn0</name>
@@ -578,6 +606,66 @@
 		</volume>
 	</reverser>	
 
+		<start>
+		<name>Start</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.23</factor>
+		</volume>
+	</start>
+
+	<start1>
+		<name>Start1</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[1]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.23</factor>
+		</volume>
+	</start1>
+
+	<start2>
+		<name>Start2</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[2]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.23</factor>
+		</volume>
+	</start2>
+
+	<start3>
+		<name>Start3</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[3]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.23</factor>
+		</volume>
+	</start3>
+
 	<wind>
 		<name>wind</name>
 		<mode>looped</mode>
@@ -860,7 +948,7 @@
 	<pneumatic>
 		<name>pneumatic break close</name>
 		<mode>once</mode>
-		<path>Aircraft/KC-137R/Sounds/pneumaticlose.wav</path>
+		<path>Aircraft/KC-137R/Sounds/slide.wav</path>
       <condition>
 				 <property>/controls/gear/brake-parking</property>
       </condition>
@@ -872,7 +960,7 @@
 	<pneumatic>
 		<name>pneumatic break open</name>
 		<mode>once</mode>
-		<path>Aircraft/KC-137R/Sounds/pneumatic.wav</path>
+		<path>Aircraft/KC-137R/Sounds/slide.wav</path>
       <condition>
 				 <not><property>/controls/gear/brake-parking</property></not>
       </condition>
@@ -1507,7 +1595,7 @@
             <property>systems/electrical/outputs/efis</property>
             <volume>
             	<property>/sim/current-view/internal</property>
-                <factor>0.064</factor>
+                <factor>0.067</factor>
             </volume>
         </avionics>
 

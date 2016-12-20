@@ -1,0 +1,210 @@
+<!--
+I-NEMO
+777-Seattle, EFB Display
+MAY 2014
+-->
+
+<PropertyList>
+
+<animation>
+  <name>Cnv_Keyboard</name>
+  <object-name>K0</object-name>
+  <object-name>K1</object-name>
+  <object-name>K2</object-name>
+  <object-name>K3</object-name>
+  <object-name>K4</object-name>
+  <object-name>K5</object-name>
+  <object-name>K6</object-name>
+  <object-name>K7</object-name>
+  <object-name>K8</object-name>
+  <object-name>K9</object-name>
+  <object-name>KDOT</object-name>
+  <object-name>KSIGN</object-name>
+  <object-name>KCLRF</object-name>
+  <object-name>KBKSP</object-name>
+ </animation>
+
+<!-- CONVERSION - "VIRTUAL" KEYBOARD Keys -->
+	
+    <animation>
+        <type>pick</type>
+        <object-name>K1</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>1</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>K2</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>2</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>K3</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>3</value>
+            </binding>
+        </action>
+    </animation>	
+
+    <animation>
+        <type>pick</type>
+        <object-name>K4</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>4</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>K5</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>5</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>K6</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>6</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>K7</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>7</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>K8</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>8</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>K9</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>9</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>K0</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>0</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>KDOT</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>.</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>KSIGN</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>CHNGS</value>
+            </binding>
+        </action>
+    </animation>
+	    <animation>
+        <type>pick</type>
+        <object-name>KCLRF</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>CLEAR</value>
+            </binding>
+        </action>
+    </animation>
+	
+	    <animation>
+        <type>pick</type>
+        <object-name>KBKSP</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VK_keypress</property>
+				<value>BKSP</value>
+            </binding>
+        </action>
+    </animation>
+	
+</PropertyList>

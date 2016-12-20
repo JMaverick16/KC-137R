@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<PropertyList> 
+ 
+ <!-- Chart Zoom (IN-Out) & Pan (Right-Left // Up-Down -->
+
+ 
+ <animation>
+  <type>texmultiple</type>
+  <object-name>Chart_2</object-name>
+  <transform>
+    <property>/instrumentation/efb/chart/panH</property>
+    <subtype>textranslate</subtype>
+		<bias>0.0001</bias>
+		<factor>0.001</factor>
+		<step>100</step>
+    <axis>
+     <x>1</x>
+     <y>0</y>
+   </axis>
+  </transform>
+  <transform>
+    <property>/instrumentation/efb/chart/panV</property>
+    <subtype>textranslate</subtype>
+		<bias>0.0001</bias>
+		<factor>0.001</factor>
+		<step>100</step>
+    <axis>
+     <x>0</x>
+     <y>1</y>
+   </axis>
+  </transform>
+ </animation>
+ 
+  <animation>
+  <type>texmultiple</type>
+  <object-name>Chart_4</object-name>
+  <transform>
+    <property>/instrumentation/efb/chart/panH</property>
+    <subtype>textranslate</subtype>
+		<bias>0.0001</bias>
+		<factor>0.001</factor>
+		<step>100</step>
+    <axis>
+     <x>1</x>
+     <y>0</y>
+   </axis>
+  </transform>
+  <transform>
+    <property>/instrumentation/efb/chart/panV</property>
+    <subtype>textranslate</subtype>
+		<bias>0.0001</bias>
+		<factor>0.001</factor>
+		<step>100</step>
+    <axis>
+     <x>0</x>
+     <y>1</y>
+   </axis>
+  </transform>
+ </animation>
+ 
+ </PropertyList>

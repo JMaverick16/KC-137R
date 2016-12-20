@@ -1,0 +1,670 @@
+<!--
+I-NEMO
+777 - Project Seattle, EFB Display , CHART Section: Virtual Keyboard keys
+MAY 2014
+-->
+
+<PropertyList>
+
+ <animation>
+  <name>Full_Keyboard</name>
+  <object-name>VK_A</object-name>
+  <object-name>VK_B</object-name>
+  <object-name>VK_C</object-name>
+  <object-name>VK_D</object-name>
+  <object-name>VK_E</object-name>
+  <object-name>VK_F</object-name>
+  <object-name>VK_G</object-name>
+  <object-name>VK_H</object-name>
+  <object-name>VK_I</object-name>
+  <object-name>VK_J</object-name>
+  <object-name>VK_K</object-name>
+  <object-name>VK_L</object-name>
+  <object-name>VK_M</object-name>
+  <object-name>VK_N</object-name>
+  <object-name>VK_O</object-name>
+  <object-name>VK_P</object-name>
+  <object-name>VK_Q</object-name>
+  <object-name>VK_R</object-name>
+  <object-name>VK_S</object-name>
+  <object-name>VK_T</object-name>
+  <object-name>VK_U</object-name>
+  <object-name>VK_V</object-name>
+  <object-name>VK_W</object-name>
+  <object-name>VK_X</object-name>
+  <object-name>VK_Y</object-name>
+  <object-name>VK_Z</object-name>
+  <object-name>VK_SYMB</object-name>
+  <object-name>VK_SHIFT</object-name>
+  <object-name>VK_SPACE</object-name>  
+  <object-name>VK_CLEAR</object-name> 
+  <object-name>VK_SLASH</object-name>  
+  <object-name>VK_BKSP</object-name>  
+  <object-name>VK_DOT</object-name>  
+  <object-name>VK_DASH</object-name>  
+  <object-name>VK_0</object-name>  
+  <object-name>VK_1</object-name>  
+  <object-name>VK_2</object-name>  
+  <object-name>VK_3</object-name>  
+  <object-name>VK_4</object-name>  
+  <object-name>VK_5</object-name>  
+  <object-name>VK_6</object-name>  
+  <object-name>VK_7</object-name>  
+  <object-name>VK_8</object-name>  
+  <object-name>VK_9</object-name>  
+ </animation>
+
+<!-- CHART KEYBOARD - "VIRTUAL" KEYBOARD Buttons -->
+	
+    <animation>
+        <type>pick</type>
+        <object-name>VK_A</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>A</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_B</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>B</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_C</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>C</value>
+            </binding>
+        </action>
+    </animation>
+
+	<animation>
+        <type>pick</type>
+        <object-name>VK_D</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>D</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_E</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>E</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_F</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>F</value>
+            </binding>
+        </action>
+    </animation>	
+
+	<animation>
+        <type>pick</type>
+        <object-name>VK_G</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>G</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_H</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>H</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_I</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>I</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_J</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>J</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_K</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>K</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_L</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>L</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_M</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>M</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_M</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>M</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_N</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>N</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_O</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>O</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_O</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>O</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_P</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>P</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_Q</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>Q</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_Q</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>Q</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_R</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>R</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_S</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>S</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_T</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>T</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_U</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>U</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_V</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>V</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_W</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>W</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_X</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>X</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_Y</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>Y</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_Z</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>Z</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_0</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>0</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_1</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>1</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_2</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>2</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_3</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>3</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_4</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>4</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_5</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>5</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_6</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>6</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_7</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>7</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_8</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>8</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_9</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>9</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_SPACE</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value> </value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_SYMB</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>@</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_SLASH</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>/</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_SHIFT</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>SHIFT</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_BKSP</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>BKSP</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_CLEAR</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>CLEAR</value>
+            </binding>
+        </action>
+    </animation>
+	
+	<animation>
+        <type>pick</type>
+        <object-name>VK_DASH</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>-</value>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>VK_DOT</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-cycle</command>
+                <property type="string">/instrumentation/efb/VKDRC_keypress</property>
+				<value>.</value>
+            </binding>
+        </action>
+    </animation>
+
+</PropertyList>

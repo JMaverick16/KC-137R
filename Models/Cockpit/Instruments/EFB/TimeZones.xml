@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<TimeZonesDB>
+
+<TMZ_DB_Size type="int">37</TMZ_DB_Size>
+
+<IDX>
+		<ID type="string">GMT</ID>
+		<Name type="string">Greenwich Mean Time</Name>
+		<OffSet type="string">0</OffSet>
+</IDX>
+
+<IDX>
+		<ID type="string">WET</ID>
+		<Name type="string">Western European Time</Name>	
+		<OffSet type="string">0</OffSet>
+</IDX>
+
+<IDX>
+		<ID type="string">CET</ID>
+		<Name type="string">Central European Time</Name>	
+		<OffSet type="string">+1</OffSet>
+</IDX>
+
+<IDX>
+		<ID type="string">FWT</ID>
+		<Name type="string">French Winter Time</Name>	
+		<OffSet type="string">+1</OffSet>
+</IDX>
+
+<IDX>
+		<ID type="string">MET</ID>
+		<Name  type="string">Middle European Time</Name>	
+		<OffSet type="string">+1</OffSet>
+</IDX>
+
+<IDX>
+		<ID type="string">MEWT</ID>
+		<Name  type="string">Middle European Winter Time</Name>	
+		<OffSet type="string">+1</OffSet>
+</IDX>
+
+<IDX>
+		<ID type="string">SWT</ID>
+		<Name  type="string">Swedish Winter Time</Name>	
+		<OffSet type="string">+1</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">EET</ID>
+		<Name  type="string">Eastern European, USSR Zone 1 Time</Name>	
+		<OffSet type="string">+2</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">ZP4</ID>
+		<Name  type="string">USSR Zone 3 Time</Name>	
+		<OffSet type="string">+4</OffSet>
+</IDX>
+
+<IDX>
+		<ID type="string">ZP5</ID>
+		<Name  type="string">USSR Zone 4 Time</Name>	
+		<OffSet type="string">+5</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">ZP6</ID>
+		<Name  type="string">USSR Zone 5 Time</Name>	
+		<OffSet type="string">+6</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">CXT</ID>
+		<Name  type="string">Christian Island (Australia) Time</Name>	
+		<OffSet type="string">+7</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">CCT</ID>
+		<Name  type="string">China Coast, USSR Zone 7 Time</Name>	
+		<OffSet type="string">+8</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">AWST</ID>
+		<Name  type="string">Australian Western Standard Time</Name>	
+		<OffSet type="string">+8</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">WST</ID>
+		<Name  type="string">Western Standard (Australia) Time</Name>	
+		<OffSet type="string">+8</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">JST</ID>
+		<Name  type="string">Japan Standard, USSR Zone 8 Time</Name>	
+		<OffSet type="string">+9</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">EAST</ID>
+		<Name  type="string">East Australian Standard Time</Name>	
+		<OffSet type="string">+10</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">EST</ID>
+		<Name  type="string">Eastern Standard (Australia) Time</Name>	
+		<OffSet type="string">+10</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">GST</ID>
+		<Name  type="string">Guam Standard, USSR Zone 9 Time</Name>	
+		<OffSet type="string">+10</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">IDLE</ID>
+		<Name  type="string">International Date Line East Time</Name>	
+		<OffSet type="string">+12</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">NZST</ID>
+		<Name  type="string">New Zealand Standard Time</Name>	
+		<OffSet type="string">+12</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">NZT</ID>
+		<Name  type="string">New Zealand Time</Name>	
+		<OffSet type="string">+12</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">WAT</ID>
+		<Name  type="string">West Africa Time</Name>	
+		<OffSet type="string">-1</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">AT</ID>
+		<Name  type="string">Azores Time</Name>	
+		<OffSet type="string">-2</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">AST</ID>
+		<Name  type="string">Atlantic Standard (Canada) Time</Name>	
+		<OffSet type="string">-4</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">EST</ID>
+		<Name  type="string">Eastern Standard (USA - Canada) Time</Name>	
+		<OffSet type="string">-5</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">CST</ID>
+		<Name  type="string">Central Standard (USA - Canada) Time</Name>	
+		<OffSet type="string">-6</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">MST</ID>
+		<Name  type="string">Mountain Standard (USA - Canada) Time</Name>	
+		<OffSet type="string">-7</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">PST</ID>
+		<Name  type="string">Pacific Standard (USA - Canada) Time</Name>	
+		<OffSet type="string">-8</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">AKST</ID>
+		<Name  type="string">Alaska Standard (USA) Time</Name>	
+		<OffSet type="string">-9</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">YST</ID>
+		<Name  type="string">Yukon Standard (Canada) Time</Name>	
+		<OffSet type="string">-9</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">HST</ID>
+		<Name  type="string">Hawaii Standard Time</Name>	
+		<OffSet type="string">-10</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">HAST</ID>
+		<Name  type="string">Hawaii-Aleutian Standard (USA) Time</Name>	
+		<OffSet type="string">-10</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">AHST</ID>
+		<Name  type="string">Alaska-Hawaii Standard Time</Name>	
+		<OffSet type="string">-10</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">CAT</ID>
+		<Name  type="string">Central Alaska Time</Name>	
+		<OffSet type="string">-10</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">NT</ID>
+		<Name  type="string">Nome Time</Name>	
+		<OffSet type="string">-11</OffSet>
+</IDX>
+	
+<IDX>
+		<ID type="string">IDLW</ID>
+		<Name  type="string">International Date Line West Time</Name>	
+		<OffSet type="string">-12</OffSet>
+</IDX>	
+
+</TimeZonesDB>
+
+</PropertyList>
