@@ -254,15 +254,15 @@ no. D6-3071-00
 	<view n="106">
 			<name>Radar View</name>
 			<type>lookfrom</type>
-			<internal archive="y">false</internal>
+			<internal>false</internal>
 			<config>
 				<from-model type="bool">true</from-model>
 				<from-model-idx type="int">0</from-model-idx>
 				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
 				<pitch-offset-deg>-35</pitch-offset-deg>
-				<x-offset-m archive="y">0</x-offset-m>
-				<y-offset-m archive="y">-2.64</y-offset-m>
-				<z-offset-m archive="y">-9.5</z-offset-m>
+				<x-offset-m>0</x-offset-m>
+				<y-offset-m>-2.64</y-offset-m>
+				<z-offset-m>-9.5</z-offset-m>
 				<default-field-of-view-deg> 80 </default-field-of-view-deg>
 			</config>
 	</view>
@@ -276,9 +276,9 @@ no. D6-3071-00
 			<from-model type="bool">true</from-model>
 			<from-model-idx type="int">0</from-model-idx>
 			<!-- x/y/z == right/up/back -->
-			<x-offset-m archive="y"> 0.63</x-offset-m>
-			<y-offset-m archive="y">1.26</y-offset-m>
-			<z-offset-m archive="y">-10.57</z-offset-m>
+			<x-offset-m> 0.63</x-offset-m>
+			<y-offset-m>1.26</y-offset-m>
+			<z-offset-m>-10.57</z-offset-m>
 			<pitch-offset-deg type="double">-9.0</pitch-offset-deg>
 			<default-pitch-deg type="double">-9.0</default-pitch-deg>
 			<from-model-idx type="int">0</from-model-idx>
