@@ -96,23 +96,23 @@
 	</checklists>
 
   <view>
-   <internal>true</internal>
+   <internal archive="y">true</internal>
    <config>
      <limits>
-        <enabled type="bool">false</enabled>
+        <enabled archive="y" type="bool">false</enabled>
      </limits>
      <!-- x/y/z == right/up/back -->
-		 <x-offset-m>-0.45</x-offset-m>
-		 <y-offset-m>1.155</y-offset-m>
-		 <z-offset-m>-18.2</z-offset-m>
-		 <pitch-offset-deg>-15.0</pitch-offset-deg>
+		 <x-offset-m archive="y">-0.45</x-offset-m>
+		 <y-offset-m archive="y">1.155</y-offset-m>
+		 <z-offset-m archive="y">-18.2</z-offset-m>
+		 <pitch-offset-deg archive="y">-15.0</pitch-offset-deg>
 		 <default-field-of-view-deg type="double">76.2</default-field-of-view-deg>
    </config>
   </view>
   <view n="1">
    <config>
      <!-- big plane, so extend chase view offset a bit -->
-     <z-offset-m type="double">-50.0</z-offset-m>
+     <z-offset-m type="double"  archive="y">-50.0</z-offset-m>
    </config>
   </view>
   <view n="101">
@@ -124,10 +124,10 @@
      <from-model type="bool">true</from-model>
 		 <from-model-idx type="int">true</from-model-idx>
      <!-- x/y/z == right/up/back -->
-		 <x-offset-m> 0.45</x-offset-m>
-		 <y-offset-m>1.11</y-offset-m>
-		 <z-offset-m>-18.2</z-offset-m>
-		 <pitch-offset-deg>-16.0</pitch-offset-deg>
+		 <x-offset-m archive="y"> 0.45</x-offset-m>
+		 <y-offset-m archive="y">1.11</y-offset-m>
+		 <z-offset-m archive="y">-18.2</z-offset-m>
+		 <pitch-offset-deg archive="y">-16.0</pitch-offset-deg>
 		 <default-pitch-deg type="double">-16.0</default-pitch-deg>
 		 <default-field-of-view-deg type="double">76.2</default-field-of-view-deg>
     </config>
@@ -141,9 +141,9 @@
 			<from-model type="bool">true</from-model>
 			<from-model-idx type="int">true</from-model-idx>
 			<!-- x/y/z == right/up/back -->
-			<x-offset-m> 0.17</x-offset-m>
-			<y-offset-m> 1.21</y-offset-m>
-			<z-offset-m>-17.5</z-offset-m>
+			<x-offset-m archive="y"> 0.17</x-offset-m>
+			<y-offset-m archive="y"> 1.21</y-offset-m>
+			<z-offset-m archive="y">-17.5</z-offset-m>
 			<heading-offset-deg type="double">-90.0</heading-offset-deg>
 			<pitch-offset-deg type="double">-2.0</pitch-offset-deg>
 			<from-model-idx type="int">0</from-model-idx>
@@ -171,9 +171,9 @@
 			<from-model type="bool">true</from-model>
 			<from-model-idx type="int">true</from-model-idx>
 			<!-- x/y/z == right/up/back -->
-			<x-offset-m> 0.0</x-offset-m>
-			<y-offset-m> 1.27</y-offset-m>
-			<z-offset-m>-17.6</z-offset-m>
+			<x-offset-m archive="y"> 0.0</x-offset-m>
+			<y-offset-m archive="y"> 1.27</y-offset-m>
+			<z-offset-m archive="y">-17.6</z-offset-m>
 			<heading-offset-deg type="double"> 0.0</heading-offset-deg>
 			<pitch-offset-deg type="double">-5.0</pitch-offset-deg>
 			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
@@ -193,9 +193,9 @@
 			<from-model type="bool">true</from-model>
 			<from-model-idx type="int">true</from-model-idx>
 			<!-- x/y/z == right/up/back -->
-			<x-offset-m> 0.0</x-offset-m>
-			<y-offset-m> 0.9</y-offset-m>
-			<z-offset-m>-18.45</z-offset-m>
+			<x-offset-m archive="y"> 0.0</x-offset-m>
+			<y-offset-m archive="y"> 0.9</y-offset-m>
+			<z-offset-m archive="y">-18.45</z-offset-m>
 			<heading-offset-deg type="double"> 0.0</heading-offset-deg>
 			<pitch-offset-deg type="double">75.0</pitch-offset-deg>
 			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>

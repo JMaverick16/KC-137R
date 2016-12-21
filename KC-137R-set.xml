@@ -260,9 +260,9 @@ no. D6-3071-00
 			<from-model type="bool">true</from-model>
 			<from-model-idx type="int">0</from-model-idx>
 			<!-- x/y/z == right/up/back -->
-			<x-offset-m> 0.0</x-offset-m>
-			<y-offset-m>-1.05</y-offset-m>
-			<z-offset-m>12.65</z-offset-m>
+			<x-offset-m archive="y"> 0.0</x-offset-m>
+			<y-offset-m archive="y">-1.05</y-offset-m>
+			<z-offset-m archive="y">12.65</z-offset-m>
 			<heading-offset-deg type="double">-180.0</heading-offset-deg>
 			<pitch-offset-deg type="double">-20.0</pitch-offset-deg>
 			<from-model-idx type="int">0</from-model-idx>

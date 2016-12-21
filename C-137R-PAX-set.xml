@@ -9,13 +9,13 @@
 
   <sim n="0">
     <description>Boeing C-137R Passenger</description>
-    <author>J Maverick 16, Joshua Davidson (it0uchpods), Martien Van Der Plas and others. Based on the Lake of Constance Hangar version [Original from Innis Cunningham]</author>
+    <author>J Maverick 16 (Textures/FDM/Systems/Sounds), Joshua Davidson (it0uchpods/411)(Cockpit/FDM/Systems) Original: Lake of Constance Hangar [Original from Innis Cunningham]</author>
 	<status>Beta</status>
     <flight-model>null</flight-model>
     <variant-of>C-137R</variant-of>
     
     <model>
-      <path>Aircraft/KC-137R/Models/C-137R-PAX.xml</path>
+      <path archive="y">Aircraft/KC-137R/Models/C-137R-PAX.xml</path>
     </model>
 
     <remote>
@@ -60,17 +60,17 @@
     </menubar>
 
     <view>
-     <internal>true</internal>
+     <internal archive="y">true</internal>
       <enabled type="bool">false</enabled>
      <config>
        <limits>
-          <enabled type="bool">false</enabled>
+          <enabled archive="y" type="bool">false</enabled>
        </limits>
        <!-- x/y/z == right/up/back -->
-  		 <x-offset-m>-0.46</x-offset-m>
-  		 <y-offset-m>1.19</y-offset-m>
-  		 <z-offset-m>-18.2</z-offset-m>
-  		 <pitch-offset-deg>-16.0</pitch-offset-deg>
+  		 <x-offset-m archive="y">-0.46</x-offset-m>
+  		 <y-offset-m archive="y">1.19</y-offset-m>
+  		 <z-offset-m archive="y">-18.2</z-offset-m>
+  		 <pitch-offset-deg archive="y">-16.0</pitch-offset-deg>
   		 <default-field-of-view-deg type="double">72</default-field-of-view-deg>
      </config>
     </view>
@@ -78,7 +78,7 @@
       <enabled type="bool">true</enabled>
      <config>
        <!-- big plane, so extend chase view offset a bit -->
-       <z-offset-m type="double" >-50.0</z-offset-m>
+       <z-offset-m type="double"  archive="y">-50.0</z-offset-m>
      </config>
     </view>
     <view n="2">
@@ -107,9 +107,9 @@
   			<from-model type="bool">true</from-model>
   			<from-model-idx type="int">0</from-model-idx>
   			<!-- x/y/z == right/up/back -->
-  			<x-offset-m>-1.36</x-offset-m>
-  			<y-offset-m> 1.06</y-offset-m>
-  			<z-offset-m> 8.85</z-offset-m>
+  			<x-offset-m archive="y">-1.36</x-offset-m>
+  			<y-offset-m archive="y"> 1.06</y-offset-m>
+  			<z-offset-m archive="y"> 8.85</z-offset-m>
   			<heading-offset-deg type="double">70.0</heading-offset-deg>
   			<pitch-offset-deg type="double">-2.0</pitch-offset-deg>
   			<from-model-idx type="int">0</from-model-idx>
