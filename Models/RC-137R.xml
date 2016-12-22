@@ -511,6 +511,45 @@
           <z>-1</z>
       </axis>
 </animation>  
+
+	<animation>
+      <type>translate</type>
+      <object-name>SlideDoor</object-name>
+      <property>sim/multiplay/generic/float[7]</property>
+	   <interpolation>
+       <entry>
+          <ind>0.0</ind>
+          <dep>0.0</dep>
+       </entry>
+       <entry>
+          <ind>0</ind>
+          <dep>0</dep>
+       </entry>
+       <entry>
+          <ind>1.0</ind>
+          <dep>0.70</dep>
+       </entry>
+      </interpolation>
+      <axis>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+		<type>pick</type>
+		<object-name>SlideDoor</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>
+		  <binding>
+		   <command>nasal</command>
+		   <script>b707.doorsystem.pasrearexport();</script>
+		  </binding>
+		</action>
+  </animation>
   
 <animation>
       <type>rotate</type>
