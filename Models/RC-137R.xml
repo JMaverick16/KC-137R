@@ -75,6 +75,9 @@
 	<object-name>RadarNose</object-name>
 	<object-name>NewDoor</object-name>
 	<object-name>doorCargo.001</object-name>
+	<object-name>SlideDoor</object-name>
+	<object-name>Wall</object-name>
+	<object-name>bulgeantenna</object-name>
 	<condition>
 		<or>
 	    	<not><property>sim/current-view/internal</property></not>				
