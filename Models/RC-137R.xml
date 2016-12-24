@@ -305,7 +305,7 @@
 		<name>frontStair</name>
 		<path>Aircraft/KC-137R/Models/stairs.xml</path>
 		<offsets>
-			<x-m>-10.5686</x-m>
+			<x-m>-11.155</x-m>
 			<y-m>-5.799</y-m>
       <z-m>-2.90</z-m>
 			<heading-deg>0</heading-deg>
