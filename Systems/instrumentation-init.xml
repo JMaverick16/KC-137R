@@ -7,7 +7,7 @@
 -->
 
 <PropertyList>
-
+<efb include="Models/Cockpit/Instruments/EFB/TimeZones.xml"/>
 <!-- specific ADF -->
 <adf n="0">
   <mode>adf</mode>

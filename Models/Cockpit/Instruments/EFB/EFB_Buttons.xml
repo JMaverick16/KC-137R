@@ -20,10 +20,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>MENU</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -37,10 +34,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>PGUP</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -54,10 +48,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>PGDN</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -73,10 +64,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>l1</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -90,10 +78,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>l2</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -107,10 +92,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>l3</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -124,10 +106,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>l4</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -141,10 +120,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>l5</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -158,10 +134,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>l6</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>	
 
@@ -175,10 +148,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>l7</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -192,10 +162,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>l8</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -211,10 +178,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>r1</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -228,10 +192,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>r2</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -245,10 +206,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>r3</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -262,10 +220,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>r4</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -279,10 +234,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>r5</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -296,10 +248,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>r6</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>	
 
@@ -313,10 +262,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>r7</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -330,10 +276,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>r8</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -349,10 +292,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>Zin</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -366,10 +306,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>Zout</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -383,10 +320,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>ScrollDN</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -400,10 +334,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>ScrollUP</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 
@@ -417,10 +348,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>Move_R</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	
@@ -434,10 +362,7 @@ APR 2014
                 <property>/instrumentation/efb/keypress</property>
 				<value>Move_L</value>
             </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(9);</script>
-            </binding>			
+		
         </action>
     </animation>
 	

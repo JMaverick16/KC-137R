@@ -2366,5 +2366,5 @@ else setprop(property, 1);
 setlistener("sim/signals/fdm-initialized", func
  {
  efb.init();
- print("EFB Computer ........ Initialized");
+ print("EFB COMPUTER ... FINE!");
  });
