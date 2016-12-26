@@ -10,8 +10,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Robins E-8R #7</name>
-            <texture>LiveriesJS/USAF_GA7.png</texture>
+            <name type="string">Robins E-8R #17</name>
+            <texture>LiveriesJS/USAF_GA17.png</texture>
             <texture-container>LiveriesJS/FAE-container.png</texture-container>
         </livery>
     </model>
