@@ -35,7 +35,6 @@
 		<type>material</type>
 		<object-name>face</object-name>
 		<object-name>needle</object-name>
-		<object-name>needle.001</object-name>
 		<condition>
 			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
@@ -51,7 +50,6 @@
 		<type>material</type>
 		<object-name>face</object-name>
 		<object-name>needle</object-name>
-		<object-name>needle.001</object-name>
 		<object-name>shadow</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
@@ -84,18 +82,6 @@
 		  <y>1</y>
 		  <z>0</z>
 		</axis>
-	</animation>
-
-  <!-- do not show needle.001 -->
-	<animation>
-		<type>select</type>
-		<object-name>needle.001</object-name>
-		<condition>		
-			<greater-than>
-				<property>/consumables/fuel/tank[6]/level-kg</property>
-				<value>9999</value>
-			</greater-than>
-		</condition>
 	</animation>
 
 </PropertyList>
