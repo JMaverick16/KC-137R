@@ -4,6 +4,13 @@
 
 	<path>rwr.ac</path>
 
+	<animation>
+    <type>scale</type>
+    <x-offset>0.78</x-offset>
+    <y-offset>0.78</y-offset>
+    <z-offset>0.78</z-offset>
+    </animation>
+
 	<power-supply>systems/electrical/outputs/rwr</power-supply>
 	<mininal-volts>20</mininal-volts>
 	<display-lighting-intens>instrumentation/rwr/display-lighting-intens</display-lighting-intens>

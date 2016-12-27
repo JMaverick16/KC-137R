@@ -406,6 +406,15 @@ no. D6-3071-00
 		<radar>
 			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/RDR-160/RDR160.nas</file>
 		</radar>
+		<rwr>
+			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/rwr/rwr.nas</file>
+		</rwr>
+		<radardist>
+			<file>Aircraft/KC-137R/Nasal/radardist.nas</file>
+		</radardist>
+		<radar-logic>
+			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/rwr/radar-logic.nas</file>
+		</radar-logic>
 	</nasal>
 
     <dual-control>
