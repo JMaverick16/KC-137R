@@ -1,6 +1,7 @@
 <!--
 Syd Adams
 777-200 PFD
+Modified by it0uchpods for KC-137R
 -->
 
 <PropertyList>
@@ -183,7 +184,7 @@ Syd Adams
         <condition>
 			<and>
 				<property>sim/rendering/rembrandt/enabled</property>
-				<property>/it-autoflight/fd_master2</property>
+				<property>/it-autoflight/output/fd2</property>
 			</and>
         </condition>
     </animation>
@@ -195,7 +196,7 @@ Syd Adams
         <condition>
 			<and>
 				<not><property>sim/rendering/rembrandt/enabled</property></not>
-				<property>/it-autoflight/fd_master2</property>
+				<property>/it-autoflight/output/fd2</property>
 			</and>
         </condition>
     </animation>
@@ -725,11 +726,11 @@ Syd Adams
 		<condition>
 			<and>
 				<equals>
-					<property>/it-autoflight/apthrmode2</property>
+					<property>/it-autoflight/output/thr-mode</property>
 					<value>0</value>
 				</equals>
 				<equals>
-					<property>/it-autoflight/retard</property>
+					<property>/it-autoflight/output/retard</property>
 					<value>0</value>
 				</equals>
 			</and>
@@ -742,11 +743,11 @@ Syd Adams
 		<condition>
 			<and>
 				<equals>
-					<property>/it-autoflight/apthrmode2</property>
+					<property>/it-autoflight/output/thr-mode</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/it-autoflight/retard</property>
+					<property>/it-autoflight/output/retard</property>
 					<value>0</value>
 				</equals>
 			</and>
@@ -759,11 +760,11 @@ Syd Adams
 		<condition>
 			<and>
 				<equals>
-					<property>/it-autoflight/apthrmode2</property>
+					<property>/it-autoflight/output/thr-mode</property>
 					<value>2</value>
 				</equals>
 				<equals>
-					<property>/it-autoflight/retard</property>
+					<property>/it-autoflight/output/retard</property>
 					<value>0</value>
 				</equals>
 			</and>
@@ -775,7 +776,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/retard</property>
+				<property>/it-autoflight/output/retard</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -847,7 +848,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/aplatmode</property>
+				<property>/it-autoflight/output/lat</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -858,7 +859,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/aplatmode</property>
+				<property>/it-autoflight/output/lat</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -869,7 +870,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/aplatmode</property>
+				<property>/it-autoflight/output/lat</property>
 				<value>2</value>
 			</equals>
 		</condition>
@@ -1003,7 +1004,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/apvertmode</property>
+				<property>/it-autoflight/output/vert</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -1014,7 +1015,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/apvertmode</property>
+				<property>/it-autoflight/output/vert</property>
 				<value>4</value>
 			</equals>
 		</condition>
@@ -1025,7 +1026,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/apvertmode</property>
+				<property>/it-autoflight/output/vert</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1036,7 +1037,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/apvertmode</property>
+				<property>/it-autoflight/output/vert</property>
 				<value>2</value>
 			</equals>
 		</condition>
@@ -1047,7 +1048,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/txtvertmode</property>
+				<property>/it-autoflight/mode/vert</property>
 				<value>DUAL LND</value>
 			</equals>
 		</condition>
@@ -1058,7 +1059,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/txtvertmode</property>
+				<property>/it-autoflight/mode/vert</property>
 				<value>FLARE</value>
 			</equals>
 		</condition>
@@ -1174,11 +1175,11 @@ Syd Adams
 		<condition>
 			<or>
 			<equals>
-				<property>/it-autoflight/apvertmode</property>
+				<property>/it-autoflight/output/vert</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/apvertmode</property>
+				<property>/it-autoflight/output/vert</property>
 				<value>4</value>
 			</equals>
 			</or>
@@ -1190,7 +1191,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/loc-armed</property>
+				<property>/it-autoflight/output/loc-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1201,7 +1202,7 @@ Syd Adams
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/appr-armed</property>
+				<property>/it-autoflight/output/appr-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1213,16 +1214,16 @@ Syd Adams
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/appr-armed</property>
+				<property>/it-autoflight/output/appr-armed</property>
 				<value>0</value>
 			</equals>
 			<or>
 			<equals>
-				<property>/it-autoflight/apvertmode</property>
+				<property>/it-autoflight/output/vert</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/apvertmode</property>
+				<property>/it-autoflight/output/vert</property>
 				<value>4</value>
 			</equals>
 			</or>
@@ -1236,7 +1237,7 @@ Syd Adams
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/txtvertmode</property>
+				<property>/it-autoflight/mode/vert</property>
 				<value>DUAL LND</value>
 			</equals>
 			</and>
@@ -1310,15 +1311,15 @@ Syd Adams
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/at_master</property>
+				<property>/it-autoflight/output/athr</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/ap_master</property>
+				<property>/it-autoflight/output/ap1</property>
 				<value>0</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/ap_master2</property>
+				<property>/it-autoflight/output/ap2</property>
 				<value>0</value>
 			</equals>
 			</and>
@@ -1332,16 +1333,16 @@ Syd Adams
 			<and>
 			<or>
 			<equals>
-				<property>/it-autoflight/ap_master</property>
+				<property>/it-autoflight/output/ap1</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/ap_master2</property>
+				<property>/it-autoflight/output/ap2</property>
 				<value>1</value>
 			</equals>
 			</or>
 			<equals>
-				<property>/it-autoflight/at_master</property>
+				<property>/it-autoflight/output/athr</property>
 				<value>0</value>
 			</equals>
 			</and>
@@ -1354,16 +1355,16 @@ Syd Adams
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/at_master</property>
+				<property>/it-autoflight/output/athr</property>
 				<value>1</value>
 			</equals>
 			<or>
 			<equals>
-				<property>/it-autoflight/ap_master</property>
+				<property>/it-autoflight/output/ap1</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/ap_master2</property>
+				<property>/it-autoflight/output/ap2</property>
 				<value>1</value>
 			</equals>
 			</or>
@@ -1695,7 +1696,7 @@ Syd Adams
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%2.0f</format>
-        <property>/it-autoflight/settings/target-altitude-ft-actual</property>
+        <property>/it-autoflight/internal/alt</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.010</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1716,7 +1717,7 @@ Syd Adams
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%3.0f</format>
-        <property>/it-autoflight/settings/target-speed-kt</property>
+        <property>/it-autoflight/input/spd-kts</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.010</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1758,7 +1759,7 @@ Syd Adams
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%0.3f</format>
-        <property>/it-autoflight/settings/target-mach</property>
+        <property>/it-autoflight/input/spd-mach</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.010</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1779,7 +1780,7 @@ Syd Adams
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%3.0fH</format>
-        <property>/it-autoflight/settings/heading-bug-deg</property>
+        <property>/it-autoflight/input/hdg</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -2042,7 +2043,7 @@ Syd Adams
         <object-name>IAS-annun</object-name>
         <condition>
 			<equals>
-                <property>/it-autoflight/apthrmode</property>
+                <property>/it-autoflight/input/kts-mach</property>
 				<value>0</value>
 			</equals>
         </condition>
@@ -2053,7 +2054,7 @@ Syd Adams
         <object-name>MACH-annun</object-name>
         <condition>
 			<equals>
-                <property>/it-autoflight/apthrmode</property>
+                <property>/it-autoflight/input/kts-mach</property>
 				<value>1</value>
 			</equals>
         </condition>

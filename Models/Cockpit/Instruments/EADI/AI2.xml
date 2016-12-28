@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Boeing 757-200 for FlightGear -->
-<!-- Electronic Attitude Indicator -->
+<!-- KC-137R EADI -->
 
 <PropertyList>
 
@@ -102,15 +101,15 @@
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/at_master</property>
+				<property>/it-autoflight/output/athr</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/ap_master</property>
+				<property>/it-autoflight/output/ap1</property>
 				<value>0</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/ap_master2</property>
+				<property>/it-autoflight/output/ap2</property>
 				<value>0</value>
 			</equals>
 			</and>
@@ -124,16 +123,16 @@
 			<and>
 			<or>
 			<equals>
-				<property>/it-autoflight/ap_master</property>
+				<property>/it-autoflight/output/ap1</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/ap_master2</property>
+				<property>/it-autoflight/output/ap2</property>
 				<value>1</value>
 			</equals>
 			</or>
 			<equals>
-				<property>/it-autoflight/at_master</property>
+				<property>/it-autoflight/output/athr</property>
 				<value>0</value>
 			</equals>
 			</and>
@@ -146,16 +145,16 @@
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/at_master</property>
+				<property>/it-autoflight/output/athr</property>
 				<value>1</value>
 			</equals>
 			<or>
 			<equals>
-				<property>/it-autoflight/ap_master</property>
+				<property>/it-autoflight/output/ap1</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/ap_master2</property>
+				<property>/it-autoflight/output/ap2</property>
 				<value>1</value>
 			</equals>
 			</or>
@@ -171,7 +170,7 @@
         <condition>
 			<and>
 				<property>sim/rendering/rembrandt/enabled</property>
-				<property>/it-autoflight/fd_master2</property>
+				<property>/it-autoflight/output/fd2</property>
 			</and>
         </condition>
     </animation>
@@ -183,7 +182,7 @@
         <condition>
 			<and>
 				<not><property>sim/rendering/rembrandt/enabled</property></not>
-				<property>/it-autoflight/fd_master2</property>
+				<property>/it-autoflight/output/fd2</property>
 			</and>
         </condition>
     </animation>
@@ -273,140 +272,6 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
-	<!-- AP/AT Annunciators -->
-       	<text>
-		<name>A/T ON</name>
-		<offsets>
-			<x-m>0.0002</x-m>
-			<y-m>-0.032</y-m>
-			<z-m>-0.03</z-m>
-		</offsets>
-		<alignment>right-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">A/T</format>
-		<property>autopilot/serviceable</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.005</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-	<animation>
-		<type>select</type>
-		<object-name>A/T ON</object-name>
-		<condition>
-			<property>instrumentation/afds/inputs/at-armed</property>
-		</condition>
-	</animation>
-	
-       	<text>
-		<name>A/T Mode</name>
-		<offsets>
-			<x-m>0.0002</x-m>
-			<y-m>-0.05</y-m>
-			<z-m>-0.036</z-m>
-		</offsets>
-		<alignment>left-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">%s</format>
-		<property>instrumentation/afds/ap-modes/speed-mode</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.005</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-
-       	<text>
-		<name>V Mode Arm</name>
-		<offsets>
-			<x-m>0.0002</x-m>
-			<y-m>-0.05</y-m>
-			<z-m>-0.042</z-m>
-		</offsets>
-		<alignment>left-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">%s</format>
-		<property>instrumentation/afds/ap-modes/pitch-mode-arm</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.005</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-
-       	<text>
-		<name>V Mode</name>
-		<offsets>
-			<x-m>0.0002</x-m>
-			<y-m>-0.05</y-m>
-			<z-m>-0.048</z-m>
-		</offsets>
-		<alignment>left-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">%s</format>
-		<property>instrumentation/afds/ap-modes/pitch-mode</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.005</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-
-       	<text>
-		<name>AP Active</name>
-		<offsets>
-			<x-m>0.0002</x-m>
-			<y-m> 0.03</y-m>
-			<z-m>-0.036</z-m>
-		</offsets>
-		<alignment>left-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">CMD</format>
-		<property>autopilot/serviceable</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.005</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-	<animation>
-		<type>select</type>
-		<object-name>AP Active</object-name>
-		<condition>
-			<property>instrumentation/afds/inputs/AP</property>
-		</condition>
-	</animation>
-
-       	<text>
-		<name>L Mode Arm</name>
-		<offsets>
-			<x-m>0.0002</x-m>
-			<y-m> 0.05</y-m>
-			<z-m>-0.042</z-m>
-		</offsets>
-		<alignment>right-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">%s</format>
-		<property>instrumentation/afds/ap-modes/roll-mode-arm</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.005</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
-
-       	<text>
-		<name>L Mode</name>
-		<offsets>
-			<x-m>0.0002</x-m>
-			<y-m> 0.05</y-m>
-			<z-m>-0.048</z-m>
-		</offsets>
-		<alignment>right-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">%s</format>
-		<property>instrumentation/afds/ap-modes/roll-mode</property>
-		<font>helvetica_bold.txf</font>
-		<character-size>0.005</character-size>
-		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
-	</text>
 
 	<!-- Altitudes -->
 	<text>

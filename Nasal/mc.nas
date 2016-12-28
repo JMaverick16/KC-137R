@@ -78,16 +78,16 @@ setlistener("/sim/signals/fdm-initialized", func {
 	print("Master Caution System ... FINE!");
 });
 
-setlistener("/it-autoflight/ap_master", func {
-	if (getprop("/it-autoflight/ap_master") == 1) {
+setlistener("/it-autoflight/output/ap1", func {
+	if (getprop("/it-autoflight/output/ap1") == 1) {
 		return 0;
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 });
 
-setlistener("/it-autoflight/ap_master2", func {
-	if (getprop("/it-autoflight/ap_master2") == 1) {
+setlistener("/it-autoflight/output/ap2", func {
+	if (getprop("/it-autoflight/output/ap2") == 1) {
 		return 0;
 	} else {
 		setprop("/warnings/mc", 1);
