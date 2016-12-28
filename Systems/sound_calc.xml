@@ -487,4 +487,20 @@
   </output>
 </filter>
 
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+	  <dif>
+	    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+	    <property>/it-autoflight/internal/alt</property>
+	  </dif>
+    </expression>
+  </input>
+  <output>
+    <prop>sim/sound/altalert</prop>
+  </output>
+</filter>
+
 </PropertyList>
