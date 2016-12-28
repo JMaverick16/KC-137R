@@ -663,12 +663,12 @@ keypress = "";
 
     page.clearpage();
 
-        IDENTl3 = getprop("/sim/description");
-        IDENTl4 = substr(getprop("/sim/aircraft-operator"),0,3) ~ " / " ~ substr(getprop("/sim/multiplay/callsign"), 0,6); # this is to ensure that too long 'operator' and 'callsign' data can fit into the EFB display
-        IDENTr4 = "VMEFB001"; # this is the EFb Seattle version's ID
+        IDENTl3 = getprop("/sim/aircraft");
+        IDENTl4 = substr(getprop("/sim/aircraft-operator"),0,4) ~ " / " ~ substr(getprop("/sim/multiplay/callsign"), 0,6); # this is to ensure that too long 'operator' and 'callsign' data can fit into the EFB display
+        IDENTr4 = " ";
         IDENTl5 = substr(getprop("environment/metar/data"),0,10);
         IDENTr5 = getprop("/instrumentation/clock/indicated-short-string") ~ "z";
-        IDENTl8 = "AIRPORT MAP DATABASE    Seattle Data    APR1214-JUN3014"; # this is the DB version, which we will periodically update with better and new Charts
+        IDENTl8 = "AIRPORT MAP DATABASE    Nav Data    APR1214-JUN3014"; # this is the DB version, which we will periodically update with better and new Charts
 
         setprop("/instrumentation/efb/display/IDENTline3-l", IDENTl3);
         setprop("/instrumentation/efb/display/IDENTline4-l", IDENTl4);
@@ -2131,9 +2131,9 @@ TDT = "Unknown";
 }
 
 
-l2 = "Aircraft: " ~ getprop("/sim/description") ~ " Seattle";
+l2 = "Aircraft: " ~ getprop("/sim/description") ~ " Octal";
 l3 = "Operator: " ~ substr(getprop("/sim/aircraft-operator"),0,3);
-r3 = "CallSign: " ~ substr(getprop("/sim/multiplay/callsign"), 0,6);
+r3 = "Callsign: " ~ substr(getprop("/sim/multiplay/callsign"), 0,6);
 l4 = "Flight No: " ~ "NOT Set"; # This will be set through CDU (To be done)
 r4 = "Flight Status: " ~ FStatus;
 l5 = "Origin APT: " ~ OAPT;
@@ -2366,5 +2366,6 @@ else setprop(property, 1);
 setlistener("sim/signals/fdm-initialized", func
  {
  efb.init();
+ setprop("/sim/aircraft-operator", "FGFS");
  print("EFB COMPUTER ... FINE!");
  });

@@ -14,7 +14,6 @@
   <flight-model>jsb</flight-model>
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
-  
   <rating>
       <FDM type="int">4</FDM>
       <systems type="int">5</systems>

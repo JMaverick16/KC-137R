@@ -4,7 +4,7 @@ MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 OBJECT world
 kids 7
 OBJECT poly
-name "digit.1"
+name "digit.01"
 loc 0.00583157 -0.00782119 0.00045169
 data 5
 Hr.10
@@ -25,7 +25,7 @@ refs 4
 1 0.482079 0.004271
 kids 0
 OBJECT poly
-name "digit10"
+name "digit1"
 loc -0.00562453 -0.00782119 0.00045169
 data 5
 Hr.10
@@ -46,8 +46,8 @@ refs 4
 2 0.482079 0.004271
 kids 0
 OBJECT poly
-name "digit1"
-loc 5.60602e-006 -0.00782119 0.00045169
+name "digit.1"
+loc 0.000122269 -0.00782119 0.00045169
 data 5
 Hr.10
 texture "digit.png"
@@ -68,7 +68,7 @@ refs 4
 kids 0
 OBJECT poly
 name "digit."
-loc 0.00409223 -0.00948649 0.00045169
+loc -0.00152427 -0.00948649 0.00045169
 data 5
 Hr.10
 texture "digit.png"

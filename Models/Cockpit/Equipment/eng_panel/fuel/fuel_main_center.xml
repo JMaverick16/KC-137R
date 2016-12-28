@@ -82,5 +82,56 @@
 		  <z>0</z>
 		</axis>
 	</animation>
+	
+<animation>
+	<type>select</type>
+	<object-name>digit10</object-name>
+	<object-name>digit1</object-name>
+	<object-name>digit.1</object-name>
+	<object-name>digit.</object-name>
+	<condition>		
+		<greater-than>
+			<property>/b707/ess-bus</property>
+			<value>20</value>
+		</greater-than>
+	</condition>
+</animation>
+	
+<animation>
+  <type>textranslate</type>
+  <object-name>digit10</object-name>
+  <property>/consumables/fuel/tank[3]/level-kg</property>
+  <factor>0.00001</factor>
+  <step>10000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>digit1</object-name>
+  <property>/consumables/fuel/tank[3]/level-kg</property>
+  <factor>0.0001</factor>
+  <step>1000</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>textranslate</type>
+  <object-name>digit.1</object-name>
+  <property>/consumables/fuel/tank[3]/level-kg</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </axis>
+</animation>
 
 </PropertyList>

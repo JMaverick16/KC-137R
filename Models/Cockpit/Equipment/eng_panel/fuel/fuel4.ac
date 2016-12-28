@@ -2,10 +2,31 @@ AC3Db
 MATERIAL "instr" rgb 0.8 0.8 0.8  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 50  trans 0
 MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 OBJECT world
-kids 7
+kids 8
+OBJECT poly
+name "digit100"
+loc -0.00849943 -0.00782119 0.00045169
+data 5
+Hr.10
+texture "digit.png"
+crease 30.000002
+numvert 4
+0.00248624 0.00319826 -9.31323e-010
+0.00146088 -0.00319826 -2.32831e-010
+-0.00248624 -0.00319826 9.31323e-010
+-0.00146088 0.00319826 2.32831e-010
+numsurf 1
+SURF 0x0
+mat 1
+refs 4
+0 0.482096 0.096007
+3 0.456352 0.096007
+2 0.456336 0.004271
+1 0.482079 0.004271
+kids 0
 OBJECT poly
 name "digit.1"
-loc 0.00583157 -0.00782119 0.00045169
+loc 0.00858826 -0.00782119 0.00045169
 data 5
 Hr.10
 texture "digit.png"
@@ -26,7 +47,7 @@ refs 4
 kids 0
 OBJECT poly
 name "digit10"
-loc -0.00562453 -0.00782119 0.00045169
+loc -0.00286784 -0.00782119 0.00045169
 data 5
 Hr.10
 texture "digit.png"
@@ -47,7 +68,7 @@ refs 4
 kids 0
 OBJECT poly
 name "digit1"
-loc 5.60602e-006 -0.00782119 0.00045169
+loc 0.00287896 -0.00782119 0.00045169
 data 5
 Hr.10
 texture "digit.png"
@@ -68,7 +89,7 @@ refs 4
 kids 0
 OBJECT poly
 name "digit."
-loc 0.00409223 -0.00948649 0.00045169
+loc 0.00700462 -0.00948649 0.00045169
 data 5
 Hr.10
 texture "digit.png"
