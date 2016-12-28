@@ -95,6 +95,17 @@
 	<model>
 		<name>cabinPress</name>
 		<path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/cabinPress/cabinPress.xml</path>
+		<offsets>
+		  <x-m> 0.0</x-m>
+		  <y-m> 0.067</y-m>
+		  <z-m>-0.195</z-m>
+		  <heading-deg>90</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>RWR</name>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/rwr/rwr.xml</path>
 		<condition>
 		<or>
     	<equals>
@@ -111,17 +122,6 @@
     	</equals>
 		</or>
   		</condition>
-		<offsets>
-		  <x-m> 0.0</x-m>
-		  <y-m> 0.067</y-m>
-		  <z-m>-0.195</z-m>
-		  <heading-deg>90</heading-deg>
-		</offsets>
-	</model>
-
-	<model>
-		<name>RWR</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/rwr/rwr.xml</path>
 		<offsets>
 		  <x-m> 0.0079</x-m>
 		  <y-m>-0.073</y-m>
