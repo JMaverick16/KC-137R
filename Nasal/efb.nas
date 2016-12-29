@@ -2131,7 +2131,7 @@ TDT = "Unknown";
 }
 
 
-l2 = "Aircraft: " ~ getprop("/sim/description") ~ " Octal";
+l2 = "Aircraft: " ~ getprop("/sim/description") ~ "USAF";
 l3 = "Operator: " ~ substr(getprop("/sim/aircraft-operator"),0,3);
 r3 = "Callsign: " ~ substr(getprop("/sim/multiplay/callsign"), 0,6);
 l4 = "Flight No: " ~ "NOT Set"; # This will be set through CDU (To be done)

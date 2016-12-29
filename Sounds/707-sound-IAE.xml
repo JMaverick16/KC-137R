@@ -59,6 +59,110 @@
     <factor>10.0</factor>
    </volume>
   </apon>
+
+  <altAlert>
+			<name>altAlert</name>
+			<mode>once</mode>
+			<path>Aircraft/KC-137R/Sounds/altAlert.wav</path>
+			<condition>
+				<or>
+					<and>
+						<greater-than>
+							<property>sim/sound/altalert</property>
+							<value>-1000</value>
+						</greater-than>
+						<less-than>
+							<property>sim/sound/altalert</property>
+							<value>-200</value>
+						</less-than>
+					</and>
+					<and>
+						<less-than>
+							<property>sim/sound/altalert</property>
+							<value>1000</value>
+						</less-than>
+						<greater-than>
+							<property>sim/sound/altalert</property>
+							<value>200</value>
+						</greater-than>
+					</and>
+				</or>
+			</condition>
+			<volume>
+				<factor>2.0</factor>
+			</volume>
+		</altAlert>
+  
+	    <gpws>
+			<name>min</name>
+			<path>Aircraft/KC-137R/Sounds/mk-viii/min.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<less-than>
+						<property>/position/gear-agl-ft</property>
+						<value>250</value>
+					</less-than>
+					<greater-than>
+						<property>/position/gear-agl-ft</property>
+						<value>220</value>
+					</greater-than>
+					<greater-than>
+						<property>/controls/flight/flaps</property>
+						<value>0.59</value>
+					</greater-than>
+					<less-than>
+						<property>/it-autoflight/internal/vert-speed-fpm</property>
+						<value>1</value>
+					</less-than>
+				</and>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</gpws>
+	    <gpws>
+			<name>amin</name>
+			<path>Aircraft/KC-137R/Sounds/mk-viii/appmin.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<less-than>
+						<property>/position/gear-agl-ft</property>
+						<value>350</value>
+					</less-than>
+					<greater-than>
+						<property>/position/gear-agl-ft</property>
+						<value>320</value>
+					</greater-than>
+					<greater-than>
+						<property>/controls/flight/flaps</property>
+						<value>0.59</value>
+					</greater-than>
+					<less-than>
+						<property>/it-autoflight/internal/vert-speed-fpm</property>
+						<value>1</value>
+					</less-than>
+				</and>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</gpws>
   
   <tchdwn0>
    <name>tchdwn0</name>
@@ -67,7 +171,7 @@
      <property>/gear/gear[0]wow</property>
    </condition>
    <volume>
-    <factor>33.0</factor>
+    <factor>35.0</factor>
    </volume>
   </tchdwn0>
   
@@ -78,7 +182,7 @@
      <property>/gear/gear[1]wow</property>
    </condition>
    <volume>
-    <factor>38.0</factor>
+    <factor>40.0</factor>
    </volume>
   </tchdwn1>
   
@@ -89,7 +193,7 @@
      <property>/gear/gear[2]/wow</property>
    </condition>
    <volume>
-    <factor>38.0</factor>
+    <factor>40.0</factor>
    </volume>
   </tchdwn2>
 
@@ -101,7 +205,7 @@
    </condition>
    <volume>
    	<property>sim/current-view/internal</property>
-    <factor>19.0</factor>
+    <factor>18.0</factor>
    </volume>
   </tchdwn3>
   
@@ -691,27 +795,6 @@
 		</pitch>
 	</wind>
 	
-	<!--stall>
-		<name>stall</name>
-		<path>Aircraft/KC-137R/Sounds/stall.wav</path> 
-		<condition>
-			<and>
-				<greater-than>
-					<property>/b707/ess-bus</property>
-					<value>0</value>
-				</greater-than>
-				<property>/controls/test/warn-knob</property>
-				<less-than>
-					<property>/velocities/airspeed-kt</property>
-					<value>100.0</value>
-				</less-than>
-			</and>
-		</condition>
-		<volume>
-			<factor>1</factor>
-		</volume>
-	</stall-->
-
 	<stall>
         <name>stall</name>
         <mode>looped</mode>
@@ -749,6 +832,7 @@
             </greater-than>
         </condition>
         <volume>
+        	<property>sim/current-view/internal</property>
             <factor>1.0</factor>
         </volume>
     </overspeed>
@@ -1584,7 +1668,7 @@
 			<property>/b707/trim/elevator-trim-turn</property>
 			<volume>
 				<property>/sim/current-view/internal</property>
-				<value>0.55</value>
+				<value>0.50</value>
 			</volume>
 		</trim-wheels>
 
@@ -1595,7 +1679,7 @@
             <property>systems/electrical/outputs/efis</property>
             <volume>
             	<property>/sim/current-view/internal</property>
-                <factor>0.067</factor>
+                <factor>0.069</factor>
             </volume>
         </avionics>
 
@@ -1629,7 +1713,7 @@
             </condition>
             <volume>
             	<property>sim/current-view/internal</property>
-                <value>0.30</value>
+                <value>0.26</value>
             </volume>
         </welcome>
 
