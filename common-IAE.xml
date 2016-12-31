@@ -270,6 +270,12 @@
 		<path>/instrumentation/operating-time/total</path>
 	</aircraft-data>
  </sim>
+ 
+<modes>
+	<altimeter>
+		<inhg>1</inhg>
+	</altimeter>
+</modes>
 
 <it-autoflight>
 	<config>

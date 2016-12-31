@@ -489,6 +489,26 @@
     </model>
 	
   	<model>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/radial1.xml</path>
+      <offsets>
+		  <x-m>-18.350</x-m>
+		  <y-m> -0.097</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
+      </offsets>
+    </model>
+	
+  	<model>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/radial2.xml</path>
+      <offsets>
+		  <x-m>-18.350</x-m>
+		  <y-m>  0.097</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
+      </offsets>
+    </model>
+	
+  	<model>
       <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tacan/tacan_octal.xml</path>
       <offsets>
 		  <x-m>-20.210</x-m>

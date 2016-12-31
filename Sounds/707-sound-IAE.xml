@@ -14,7 +14,7 @@
    <name>apoff</name>
    <path>/Aircraft/KC-137R/Sounds/apoff.wav</path>
    <condition>
-	 <property>/it-autoflight/apoffsound</property>
+	 <property>/it-autoflight/sound/apoffsound</property>
    </condition>
    <volume>
     <factor>10.0</factor>
@@ -25,19 +25,19 @@
    <name>apoff2</name>
    <path>/Aircraft/KC-137R/Sounds/apoff.wav</path>
    <condition>
-	 <property>/it-autoflight/apoffsound2</property>
+	 <property>/it-autoflight/sound/apoffsound2</property>
    </condition>
    <volume>
     <factor>10.0</factor>
    </volume>
   </apoff>
 
-  <apon>
+   <apon>
    <name>apon</name>
    <path>/Aircraft/KC-137R/Sounds/apon.wav</path>
    <condition>
 	<greater-than>
-      <property>/it-autoflight/ap_master</property>
+      <property>/it-autoflight/output/ap1</property>
         <value>0</value>
      </greater-than>
    </condition>
@@ -51,7 +51,7 @@
    <path>/Aircraft/KC-137R/Sounds/apon.wav</path>
    <condition>
    	<greater-than>
-      <property>/it-autoflight/ap_master2</property>
+      <property>/it-autoflight/output/ap2</property>
         <value>0</value>
       </greater-than>
    </condition>
@@ -60,7 +60,7 @@
    </volume>
   </apon>
 
-  <altAlert>
+		<altAlert>
 			<name>altAlert</name>
 			<mode>once</mode>
 			<path>Aircraft/KC-137R/Sounds/altAlert.wav</path>

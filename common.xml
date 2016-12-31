@@ -271,6 +271,12 @@
 	</aircraft-data>
  </sim>
 
+<modes>
+	<altimeter>
+		<inhg>1</inhg>
+	</altimeter>
+</modes>
+ 
 <it-autoflight>
 	<config>
 		<no-generics>1</no-generics>

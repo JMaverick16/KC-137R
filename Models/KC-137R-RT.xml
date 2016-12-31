@@ -1363,7 +1363,7 @@
  
 	<model>
 		<name>RightGearBase</name>
-		<path>Aircraft/KC-137R/Models/wheels.xml</path>
+		<path>Aircraft/KC-137R/Models/wheels-big.xml</path>
 		<offsets>
 		  <x-m> 1.82</x-m>
 		  <y-m> 2.76</y-m>
@@ -1373,7 +1373,7 @@
 
 	<model>
 		<name>LeftGearBase</name>
-		<path>Aircraft/KC-137R/Models/wheels.xml</path>
+		<path>Aircraft/KC-137R/Models/wheels-big.xml</path>
 		<offsets>
 		  <x-m> 1.82</x-m>
 		  <y-m>-2.76</y-m>
@@ -1873,7 +1873,7 @@
 		    <entry><ind>1.00</ind><dep>0</dep></entry>
 		    <entry><ind>1.05</ind><dep>-3</dep></entry>
 		    <entry><ind>1.45</ind><dep>-7</dep></entry>
-		    <entry><ind>2.83</ind><dep>20</dep></entry>
+		    <entry><ind>2.43</ind><dep>10</dep></entry>
 		</interpolation>
 		<center>
 		    <x-m>1.82</x-m>
@@ -1895,7 +1895,7 @@
 		    <entry><ind>1.00</ind><dep>0</dep></entry>
 		    <entry><ind>1.05</ind><dep>-3</dep></entry>
 		    <entry><ind>1.45</ind><dep>-7</dep></entry>
-		    <entry><ind>2.83</ind><dep>20</dep></entry>
+		    <entry><ind>2.43</ind><dep>10</dep></entry>
 		</interpolation>
 		<center>
 		    <x-m>1.82</x-m>
@@ -2297,7 +2297,7 @@
   <type>rotate</type>
   <object-name>lhfiletflap</object-name>
   <property>surface-positions/flap-pos-norm</property>
-  <factor>-45</factor>
+  <factor>-38</factor>
   <offset-deg>0</offset-deg>    
   <axis>
 		<x1-m>  2.84</x1-m>
@@ -2399,7 +2399,7 @@
   <type>rotate</type>
   <object-name>rhfiletflap</object-name>
   <property>surface-positions/flap-pos-norm</property>
-  <factor>45</factor>
+  <factor>38</factor>
   <offset-deg>0</offset-deg>    
   <axis>
 		<x1-m>  2.84</x1-m>

@@ -1468,7 +1468,7 @@ Modified by it0uchpods for KC-137R
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
-        <format type="string">%2.2f IN</format>
+        <format type="string">%2.2f INHG</format>
         <property>instrumentation/altimeter/setting-inhg</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.008</character-size>
@@ -1484,7 +1484,7 @@ Modified by it0uchpods for KC-137R
         <offsets>
             <x-m>0.004</x-m>
             <y-m>0.058</y-m>
-            <z-m>-0.071</z-m>
+            <z-m>-0.061</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1499,6 +1499,23 @@ Modified by it0uchpods for KC-137R
             <height type="int">32</height>
         </font-resolution>
     </text>
+	
+    <animation>
+        <type>select</type>
+        <object-name>INHG</object-name>
+        <condition>
+            <property>/modes/altimeter/inhg</property>
+        </condition>
+    </animation>
+	
+    <animation>
+        <type>select</type>
+        <object-name>HPA</object-name>
+        <condition>
+            <not><property>/modes/altimeter/inhg</property></not>
+        </condition>
+    </animation>
+
 
     <animation>
         <type>select</type>

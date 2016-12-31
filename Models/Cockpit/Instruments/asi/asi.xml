@@ -54,7 +54,7 @@
 	<animation>
 		<name>ASI needle</name>
 		<type>rotate</type>
-		<object-name>Needle1</object-name>
+		<object-name>needle</object-name>
 		<property alias="../../params/indicated-speed-kt" />
 		<interpolation>
 			<entry><ind>0</ind><dep>9.5</dep></entry>
@@ -62,127 +62,6 @@
 			<entry><ind>250</ind><dep>-244</dep></entry>
 			<entry><ind>300</ind><dep>-265.5</dep></entry>
 			<entry><ind>450</ind><dep>-331</dep></entry>
-		</interpolation>
-		<center>
-			<x-m>0.004</x-m>
-			<y-m>0.002</y-m>
-			<z-m>-0.001</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<name>Vmo needle</name>
-		<type>rotate</type>
-		<object-name>Vmo.needle</object-name>
-		<object-name>Vmo.marker</object-name>
-		<property>/indicators/asi/vmo</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>297.166667</dep></entry>
-			<entry><ind>60</ind><dep>287.66667</dep></entry>
-			<entry><ind>250</ind><dep>43.66667</dep></entry>
-			<entry><ind>350</ind><dep>0</dep></entry>
-			<entry><ind>450</ind><dep>-43.66667</dep></entry>
-		</interpolation>
-		<center>
-			<x-m>0.004</x-m>
-			<y-m>0.002</y-m>
-			<z-m>-0.001</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<name>V1 marker</name>
-		<type>rotate</type>
-		<object-name>V1.marker</object-name>
-		<property>instrumentation/fmc/vspeeds/V1</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>297.166667</dep></entry>
-			<entry><ind>60</ind><dep>287.66667</dep></entry>
-			<entry><ind>250</ind><dep>43.66667</dep></entry>
-			<entry><ind>350</ind><dep>0</dep></entry>
-			<entry><ind>450</ind><dep>-43.66667</dep></entry>
-		</interpolation>
-		<center>
-			<x-m>0.004</x-m>
-			<y-m>0.002</y-m>
-			<z-m>-0.001</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<name>VR marker</name>
-		<type>rotate</type>
-		<object-name>VR.marker</object-name>
-		<property>instrumentation/fmc/vspeeds/VR</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>297.166667</dep></entry>
-			<entry><ind>60</ind><dep>287.66667</dep></entry>
-			<entry><ind>250</ind><dep>43.66667</dep></entry>
-			<entry><ind>350</ind><dep>0</dep></entry>
-			<entry><ind>450</ind><dep>-43.66667</dep></entry>
-		</interpolation>
-		<center>
-			<x-m>0.004</x-m>
-			<y-m>0.002</y-m>
-			<z-m>-0.001</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<name>V2 needle</name>
-		<type>rotate</type>
-		<object-name>V2.marker</object-name>
-		<property>instrumentation/fmc/vspeeds/V2</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>297.166667</dep></entry>
-			<entry><ind>60</ind><dep>287.66667</dep></entry>
-			<entry><ind>250</ind><dep>43.66667</dep></entry>
-			<entry><ind>350</ind><dep>0</dep></entry>
-			<entry><ind>450</ind><dep>-43.66667</dep></entry>
-		</interpolation>
-		<center>
-			<x-m>0.004</x-m>
-			<y-m>0.002</y-m>
-			<z-m>-0.001</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<name>Vstall marker</name>
-		<type>rotate</type>
-		<object-name>Vstall.marker</object-name>
-		<property>instrumentation/fmc/vspeeds/stall-speed</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>297.166667</dep></entry>
-			<entry><ind>60</ind><dep>287.66667</dep></entry>
-			<entry><ind>250</ind><dep>43.66667</dep></entry>
-			<entry><ind>350</ind><dep>0</dep></entry>
-			<entry><ind>450</ind><dep>-43.66667</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0.004</x-m>

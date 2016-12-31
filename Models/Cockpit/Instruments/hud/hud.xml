@@ -34,8 +34,6 @@
 	<type>rotate</type>
 	<object-name>Pedestal.001</object-name>
 	<object-name>Glass.001</object-name>
-   <object-name>roll</object-name>
-   <object-name>roll.ptr</object-name>
    <object-name>line</object-name>
    <object-name>AS_ALT</object-name>
    <object-name>ASribbon</object-name>
@@ -113,6 +111,7 @@
    <object-name>vs10</object-name>
    <object-name>vs-10</object-name>
    <object-name>vs1</object-name>
+   <object-name>vs-1</object-name>
    <object-name>vstext</object-name>
    <object-name>vs-a</object-name>
    <object-name>vs-b</object-name>
@@ -133,8 +132,6 @@
 <animation>
    <type>select</type>
    <object-name>headingribbon</object-name>
-   <object-name>roll</object-name>
-   <object-name>roll.ptr</object-name>
    <object-name>line</object-name>
    <object-name>AS_ALT</object-name>
    <object-name>ASribbon</object-name>
@@ -211,6 +208,7 @@
    <object-name>vs10</object-name>
    <object-name>vs-10</object-name>
    <object-name>vs1</object-name>
+   <object-name>vs-1</object-name>
    <object-name>vstext</object-name>
    <object-name>vs-a</object-name>
    <object-name>vs-b</object-name>
@@ -492,6 +490,7 @@
    <type>select</type>
    <object-name>vs-100</object-name>
    <object-name>vs-10</object-name>
+   <object-name>vs-1</object-name>
    <condition>
    <less-than>
     <property>it-autoflight/internal/vert-speed-fpm</property>
@@ -504,6 +503,7 @@
    <type>select</type>
    <object-name>vs100</object-name>
    <object-name>vs10</object-name>
+   <object-name>vs1</object-name>
    <condition>
    <greater-than-equals>
     <property>it-autoflight/internal/vert-speed-fpm</property>
@@ -2378,6 +2378,7 @@
    <object-name>vs-1000</object-name>
    <property>it-autoflight/internal/vert-speed-fpm</property>
    <factor>-0.0001</factor>
+   <bias>999</bias>
    <step>1000.0</step>
    <axis>
      <x>0</x>
@@ -2390,7 +2391,7 @@
    <type>textranslate</type>
    <object-name>vs100</object-name>
    <property>it-autoflight/internal/vert-speed-fpm</property>
-   <factor>0.001</factor>
+   <factor>-0.001</factor>
    <step>100.0</step>
    <axis>
      <x>0</x>
@@ -2404,6 +2405,7 @@
    <object-name>vs-100</object-name>
    <property>it-autoflight/internal/vert-speed-fpm</property>
    <factor>-0.001</factor>
+   <bias>99</bias>
    <step>100.0</step>
    <axis>
      <x>0</x>
@@ -2430,6 +2432,7 @@
    <object-name>vs-10</object-name>
    <property>it-autoflight/internal/vert-speed-fpm</property>
    <factor>-0.01</factor>
+   <bias>9</bias>
    <step>10.0</step>
    <axis>
      <x>0</x>
@@ -2438,5 +2441,31 @@
    </axis>
  </animation>
 
+  <animation>
+   <type>textranslate</type>
+   <object-name>vs1</object-name>
+   <property>it-autoflight/internal/vert-speed-fpm</property>
+   <factor>0.01</factor>
+   <step>10.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>vs-1</object-name>
+   <property>it-autoflight/internal/vert-speed-fpm</property>
+   <factor>-0.1</factor>
+   <bias>.9</bias>
+   <step>1.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
  
 </PropertyList>

@@ -104,6 +104,16 @@
 </model>
 
 <model>
+  <name>qnh</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/qnh/qnh1.xml</path>
+  <offsets>
+    <x-m>-18.92</x-m>
+    <y-m>-0.310</y-m>
+    <z-m>0.707</z-m>
+  </offsets>
+</model>
+
+<model>
     <name>tancan_dme</name>
     <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tacan/dme/dme.xml</path>
 	<offsets>
@@ -339,6 +349,16 @@
 </model>
 
 <model>
+  <name>qnh_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/qnh/qnh1.xml</path>
+  <offsets>
+    <x-m>-18.92</x-m>
+    <y-m>0.220</y-m>
+    <z-m>0.707</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>speed-limit-lamps_cp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
@@ -438,6 +458,26 @@
       <offsets>
 		  <x-m>-18.410</x-m>
 		  <y-m>  0.063</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
+      </offsets>
+    </model>
+	
+  	<model>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/radial1.xml</path>
+      <offsets>
+		  <x-m>-18.350</x-m>
+		  <y-m> -0.097</y-m>
+		  <z-m>  0.626</z-m>
+          <pitch-deg>0</pitch-deg>
+      </offsets>
+    </model>
+	
+  	<model>
+      <path>Aircraft/KC-137R/Models/Cockpit/Instruments/Radio/radial2.xml</path>
+      <offsets>
+		  <x-m>-18.350</x-m>
+		  <y-m>  0.097</y-m>
 		  <z-m>  0.626</z-m>
           <pitch-deg>0</pitch-deg>
       </offsets>
