@@ -63,7 +63,7 @@
 		  <step>10</step>
 		  <min>1</min>
 		  <max>361</max>
-		  <wrap>false</wrap>
+		  <wrap>true</wrap>
 		</binding>
 	  </action>
 	  <action>
@@ -75,7 +75,7 @@
 		  <step>-10</step>
 		  <min>1</min>
 		  <max>361</max>
-		  <wrap>false</wrap>
+		  <wrap>true</wrap>
 		</binding>
 	  </action>
 	  <action>
@@ -87,7 +87,7 @@
 		  <step>1</step>
 		  <min>1</min>
 		  <max>361</max>
-		  <wrap>false</wrap>
+		  <wrap>true</wrap>
 		</binding>
 	  </action>
 	  <action>
@@ -99,7 +99,7 @@
 		  <step>-1</step>
 		  <min>1</min>
 		  <max>361</max>
-		  <wrap>false</wrap>
+		  <wrap>true</wrap>
 		</binding>
 	  </action>
 	</animation>
