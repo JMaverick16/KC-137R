@@ -11,7 +11,7 @@
 	injected?       no
 -->
 
-<turbine_engine name="CFM-LEAP1B">
+<turbine_engine name="CFM-LEAP">
 	<milthrust> 28000.0 </milthrust> <!-- I'm using the CFM LEAP-1B version. 28000 Pounds Thrust. -->
 	<bypassratio>     1 </bypassratio>
 	<tsfc>            0.54 </tsfc>

@@ -61,7 +61,7 @@
 -->
 
 	<model>
-		<path>Aircraft/KC-137R/Models/Engines/res/cfmleap1B.ac</path>
+		<path>Aircraft/KC-137R/Models/Engines/res/cfmleap.ac</path>
 		<!--texture-path>../Textures/Livery/House</texture-path-->
 
 		<!-- Reflection Shader -->

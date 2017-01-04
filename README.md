@@ -23,7 +23,7 @@ AUTHORS:
 * onox: Importation of some of his former 707 project with advanced MP refueling system.
 * Martien Van Der Plas: Major 3D upgrades and texturing to all variants.
 * Nikolai V. Christensen (Leto): Damage model, advanced radar and related help.
-* Justin Nicholson (Pinto): Damage code and related suggestions.
+* Justin Nicholson (Pinto): Damage code and related suggestions, flight test and evaluation.
 * SHM: Minor instrument addition.
 * Gabriel Hernandez: Sound fixes and updates.
 * D-ECHO: First RC-137R 3D version.
