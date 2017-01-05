@@ -1,4 +1,4 @@
-io.include("Aircraft/KC-137R/Nasal/init.nas");
+io.include("Aircraft/KC-137R/Nasal/MP Refueling/init.nas");
 
 with("refueling_drogues");
 
