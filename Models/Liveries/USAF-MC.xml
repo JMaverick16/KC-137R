@@ -11,7 +11,7 @@
     <model>
         <livery>
             <name type="string">USAF 22 ARW</name>
-            <texture>Liveries/USAFold.png</texture>
+            <texture>Liveries/USAF-MC.png</texture>
             <texture-container>Liveries/FAE-container.png</texture-container>
         </livery>
     </model>
