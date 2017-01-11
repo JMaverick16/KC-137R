@@ -256,8 +256,8 @@
             <command>property-adjust</command>
 			<property>instrumentation/nav[1]/frequencies/standby-mhz</property>
 			<step>-0.025</step>
-			<min>000</min>
-			<max>975</max>
+			<min>108</min>
+			<max>118</max>
 			<wrap>true</wrap>
             </binding>
         </action>
@@ -273,8 +273,8 @@
             <command>property-adjust</command>
 			<property>instrumentation/nav[1]/frequencies/standby-mhz</property>
 			<step>0.025</step>
-			<min>000</min>
-			<max>975</max>
+			<min>108</min>
+			<max>118</max>
 			<wrap>true</wrap>
             </binding>
         </action>

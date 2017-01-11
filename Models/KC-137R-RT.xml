@@ -1363,7 +1363,7 @@
  
 	<model>
 		<name>RightGearBase</name>
-		<path>Aircraft/KC-137R/Models/wheels-big.xml</path>
+		<path>Aircraft/KC-137R/Models/wheels.xml</path>
 		<offsets>
 		  <x-m> 1.82</x-m>
 		  <y-m> 2.76</y-m>
@@ -1373,7 +1373,7 @@
 
 	<model>
 		<name>LeftGearBase</name>
-		<path>Aircraft/KC-137R/Models/wheels-big.xml</path>
+		<path>Aircraft/KC-137R/Models/wheels.xml</path>
 		<offsets>
 		  <x-m> 1.82</x-m>
 		  <y-m>-2.76</y-m>
@@ -2297,7 +2297,7 @@
   <type>rotate</type>
   <object-name>lhfiletflap</object-name>
   <property>surface-positions/flap-pos-norm</property>
-  <factor>-38</factor>
+  <factor>-45</factor>
   <offset-deg>0</offset-deg>    
   <axis>
 		<x1-m>  2.84</x1-m>
@@ -2399,7 +2399,7 @@
   <type>rotate</type>
   <object-name>rhfiletflap</object-name>
   <property>surface-positions/flap-pos-norm</property>
-  <factor>38</factor>
+  <factor>45</factor>
   <offset-deg>0</offset-deg>    
   <axis>
 		<x1-m>  2.84</x1-m>

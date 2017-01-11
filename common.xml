@@ -276,43 +276,48 @@
 		<inhg>1</inhg>
 	</altimeter>
 </modes>
- 
+
 <it-autoflight>
 	<config>
-		<no-generics>1</no-generics>
 		<roll>
-			<umin>-0.7</umin>
-			<umax>0.7</umax>
+			<umin>-0.50</umin>
+			<umax>0.50</umax>
 			<kp>0.06</kp>
+			<kp-vloc>0.09</kp-vloc>
 			<ti>10.0</ti>
-			<td>0.000001</td>
+			<td>0.00001</td>
+			<kp-cws>0.09</kp-cws>
 		</roll>
-		<vorloc>
-			<kp>0.08</kp>
-			<ti>10.0</ti>
-			<td>0.000001</td>
-		</vorloc>
 		<pitch>
-			<umin>-0.30</umin>
-			<umax>0.30</umax>
+			<umin>-0.35</umin>
+			<umax>0.35</umax>
 			<kp>-0.08</kp>
 			<ti>10.0</ti>
 			<td>0.0001</td>
+			<kp-cws>-0.07</kp-cws>
 		</pitch>
-		<flch>
-			<umin>-0.30</umin>
-			<umax>0.30</umax>
-			<kp>-0.09</kp>
-			<ti>10.0</ti>
-			<td>0.00001</td>
-		</flch>
-		<gs>
-			<kp>0.15</kp>
-		</gs>
+		<cmd>
+			<roll-scale>5</roll-scale>
+			<vorloc>-4.0</vorloc>
+			<alt>0.025</alt>
+			<vs>0.08</vs>
+			<flch>-0.30</flch>
+			<gs>0.14</gs>
+		</cmd>
 		<autoland>
-			<kp-pitch>0.07</kp-pitch>
+			<kp-roll>0.10</kp-roll>
+			<kp-pitch>0.03</kp-pitch>
+			<kp-rudder>-0.3</kp-rudder>
 		</autoland>
 	</config>
+	<settings>
+		<flare-altitude>20</flare-altitude>
+		<land-enable>1</land-enable>
+		<land-flap>0.6</land-flap>
+		<retard-ft>20</retard-ft>
+		<retard-enable>1</retard-enable>
+		<toga-pitch>20</toga-pitch>
+	</settings>
 </it-autoflight>
 
 	<engines>
@@ -563,7 +568,7 @@
 			<standby-mhz type="double">109.6</standby-mhz>
 		  </frequencies>
 		  <serviceable type="bool">true</serviceable>
-		  <radials><selected-deg>0</selected-deg></radials>
+		  <radials><selected-deg>360</selected-deg></radials>
 		</nav>
 		<nav n="1">
 		  <frequencies>
@@ -577,7 +582,7 @@
 			<standby-mhz type="double">116.10</standby-mhz>
 		  </frequencies>
 		  <serviceable type="bool">true</serviceable>
-		  <radials><selected-deg>0</selected-deg></radials>
+		  <radials><selected-deg>360</selected-deg></radials>
 		</nav>
 
 		<dme n="0">

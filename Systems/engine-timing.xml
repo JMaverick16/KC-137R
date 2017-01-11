@@ -12,9 +12,9 @@
                 <table>
                     <property>/engines/engine[0]/n1</property> 
                     <entry><ind>   18</ind><dep>0.988</dep></entry>
-                    <entry><ind>   26</ind><dep>1.000</dep></entry>
+                    <entry><ind>   23</ind><dep>1.000</dep></entry>
                     <entry><ind>   35</ind><dep>1.060</dep></entry>
-                    <entry><ind>105.0</ind><dep>1.380</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.322</dep></entry>
                 </table>
             </expression>
         </input>
@@ -31,9 +31,9 @@
                 <table>
                     <property>/engines/engine[1]/n1</property> 
                     <entry><ind>   18</ind><dep>0.988</dep></entry>
-                    <entry><ind>   26</ind><dep>1.000</dep></entry>
+                    <entry><ind>   23</ind><dep>1.000</dep></entry>
                     <entry><ind>   35</ind><dep>1.060</dep></entry>
-                    <entry><ind>105.0</ind><dep>1.380</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.322</dep></entry>
                 </table>
             </expression>
         </input>
@@ -50,9 +50,9 @@
                 <table>
                     <property>/engines/engine[2]/n1</property> 
                     <entry><ind>   18</ind><dep>0.988</dep></entry>
-                    <entry><ind>   26</ind><dep>1.000</dep></entry>
+                    <entry><ind>   23</ind><dep>1.000</dep></entry>
                     <entry><ind>   35</ind><dep>1.060</dep></entry>
-                    <entry><ind>105.0</ind><dep>1.380</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.322</dep></entry>
                 </table>
             </expression>
         </input>
@@ -69,9 +69,9 @@
                 <table>
                     <property>/engines/engine[3]/n1</property> 
                     <entry><ind>   18</ind><dep>0.988</dep></entry>
-                    <entry><ind>   26</ind><dep>1.000</dep></entry>
+                    <entry><ind>   23</ind><dep>1.000</dep></entry>
                     <entry><ind>   35</ind><dep>1.060</dep></entry>
-                    <entry><ind>105.0</ind><dep>1.380</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.322</dep></entry>
                 </table>
             </expression>
         </input>
