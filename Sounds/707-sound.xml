@@ -1750,6 +1750,23 @@
                 <value>1.4</value>
             </volume>
         </refueling2>
+
+        <!--refuel>
+            <name>refuel</name>
+            <mode>once</mode>
+            <type>avionics</type>
+            <path>Aircraft/KC-137R/Sounds/Refuel_boom.wav</path>
+            <condition>
+                <greater-than>
+                    <property>b707/refuelling/contact</property>
+                    <value>0</value>
+                </greater-than>
+            </condition>
+            <volume>
+            	<property>sim/current-view/internal</property>
+                <value>1.4</value>
+            </volume>
+        </refuel-->
 </fx>
 
 </PropertyList>
