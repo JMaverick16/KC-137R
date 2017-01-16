@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Wing Leveller/Pitch Stabilization Augmentation System Control Dialog -->
+
+
+<PropertyList>
+
+	<name>stabilization</name>
+	<layout>vbox</layout>
+
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>left</halign>
+            <label>WL/PSAS Control</label>
+        </text>
+        <button>
+            <halign>right</halign>
+            <pref-width>20</pref-width>
+            <pref-height>20</pref-height>
+            <legend>X</legend>
+            <key>Esc</key>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+	
+    <hrule/>
+
+	<group>
+		<layout>hbox</layout>
+		<button>
+			<legend>WING LVL</legend>
+            <pref-width>80</pref-width>
+			<binding>
+			<command>nasal</command>
+			<script>fbw.roll();</script>
+			</binding>
+		</button>
+		<button>
+			<legend>PITCH STAB</legend>
+            <pref-width>80</pref-width>
+			<binding>
+			<command>nasal</command>
+			<script>fbw.pitch();</script>
+			</binding>
+		</button>
+	</group>
+	
+	<group>
+		<layout>hbox</layout>
+		<text>
+			<label>[WING LVL]</label>
+			<visible>
+				<equals>
+					<property>/it-fbw/roll-engage</property>
+					<value>1</value>
+				</equals>
+			</visible>
+		</text>
+		<text>
+			<label>[PITCH STAB]</label>
+			<visible>
+				<equals>
+					<property>/it-fbw/pitch-engage</property>
+					<value>1</value>
+				</equals>
+			</visible>
+		</text>
+	</group>
+	
+	<group>
+		<layout>vbox</layout>
+		
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>Pitch Attitude</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+		
+			<group>
+				<layout>vbox</layout>
+
+				<text>
+					<label>Fine</label>
+				</text>
+				<button>
+					<pref-width>50</pref-width>
+					<pref-height>50</pref-height>
+					<legend>+</legend>
+					<enable>
+						<equals>
+							<property>/it-fbw/pitch-engage</property>
+							<value>1</value>
+						</equals>
+					</enable>
+					<binding>
+						<command>property-adjust</command>
+						<property>/it-fbw/pitch-deg</property>
+						<min>-15</min>
+						<max>30</max>
+						<step>0.1</step>
+						<wrap>false</wrap>
+					</binding>
+				</button>
+				<button>
+					<pref-width>50</pref-width>
+					<pref-height>50</pref-height>
+					<legend>-</legend>
+					<enable>
+						<equals>
+							<property>/it-fbw/pitch-engage</property>
+							<value>1</value>
+						</equals>
+					</enable>
+					<binding>
+						<command>property-adjust</command>
+						<property>/it-fbw/pitch-deg</property>
+						<min>-15</min>
+						<max>30</max>
+						<step>-0.1</step>
+						<wrap>false</wrap>
+					</binding>
+				</button>
+			</group>
+			<group>
+				<layout>vbox</layout>
+
+				<text>
+					<label>Coarse</label>
+				</text>
+				<button>
+					<pref-width>50</pref-width>
+					<pref-height>50</pref-height>
+					<legend>+</legend>
+					<enable>
+						<equals>
+							<property>/it-fbw/pitch-engage</property>
+							<value>1</value>
+						</equals>
+					</enable>
+					<binding>
+						<command>property-adjust</command>
+						<property>/it-fbw/pitch-deg</property>
+						<min>-15</min>
+						<max>30</max>
+						<step>0.5</step>
+						<wrap>false</wrap>
+					</binding>
+				</button>
+				<button>
+					<pref-width>50</pref-width>
+					<pref-height>50</pref-height>
+					<legend>-</legend>
+					<enable>
+						<equals>
+							<property>/it-fbw/pitch-engage</property>
+							<value>1</value>
+						</equals>
+					</enable>
+					<binding>
+						<command>property-adjust</command>
+						<property>/it-fbw/pitch-deg</property>
+						<min>-15</min>
+						<max>30</max>
+						<step>-0.5</step>
+						<wrap>false</wrap>
+					</binding>
+				</button>
+			</group>
+		</group>
+	</group>
+	
+</PropertyList>

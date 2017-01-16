@@ -240,8 +240,8 @@
 		<float n="8" alias="/position/altitude-agl-ft"/>    <!-- for the kind of fire or lights -->
 		<float n="9" alias="/controls/special/wiper-deg"/>
 		<float n="10" alias="/position/gear-agl-ft"/>											<!-- multiplayer see the hanging wheels -->
-		<!--float n="11" alias="/gear/gear[2]/compression-norm"/-->								<!-- not used yet, reserve-->
-		<float n="12" alias="/controls/flight/aileron"/>										<!-- Spoilerons -->
+		<float n="11" alias="/controls/flight/elevator-fbw"/>									<!-- Elevator FBW-->
+		<float n="12" alias="/controls/flight/aileron"/>									<!-- Aileron/Spoileron FBW -->
 		<float n="13" alias="/b707/ground-service/fuel-truck/state"/>							<!-- fuel-truck -->
 		<float n="14" alias="/engines/engine/reverser-pos-norm"/>								<!-- multiplayer see the cowl flaps -->
 		<float n="15" alias="/instrumentation/doors/cargo/position-norm"/>						<!-- Cargo door -->
@@ -319,6 +319,11 @@
 		<toga-pitch>20</toga-pitch>
 	</settings>
 </it-autoflight>
+
+<it-fbw>
+	<roll-deg>0</roll-deg>
+	<pitch-deg>0</pitch-deg>
+</it-fbw>
 
 	<engines>
 		<APU>

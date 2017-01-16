@@ -145,6 +145,17 @@
 		           </script>
 		          </binding>
 		         </item>
+				<item>
+				<name>fail</name>
+				<label>Leveller/Pitch Stab Control</label>
+					<binding>
+					<command>nasal</command>
+						<script>
+						var stab = gui.Dialog.new("sim/gui/dialogs/stab/dialog", "Aircraft/KC-137R/Systems/stabilization-dlg.xml");
+						stab.open();
+						</script>
+					</binding>
+				</item>
 			</menu>
 		</default>
 	</menubar>
@@ -399,6 +410,9 @@ no. D6-3071-00
 		<radar-logic>
 			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/rwr/radar-logic.nas</file>
 		</radar-logic>
+		<fbw>
+			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
+		</fbw>
 	</nasal>
 
     <dual-control>

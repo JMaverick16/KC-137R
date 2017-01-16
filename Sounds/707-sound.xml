@@ -31,6 +31,28 @@
     <factor>10.0</factor>
    </volume>
   </apoff>
+  
+  <wlpsasoff>
+   <name>wlpsasoff</name>
+   <path>/Aircraft/KC-137R/Sounds/wlpsasoff.wav</path>
+   <condition>
+	 <property>/it-fbw/roll-engage</property>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
+   </volume>
+  </wlpsasoff>
+  
+  <wlpsasoff>
+   <name>wlpsasoff2</name>
+   <path>/Aircraft/KC-137R/Sounds/wlpsasoff.wav</path>
+   <condition>
+	 <property>/it-fbw/pitch-engage</property>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
+   </volume>
+  </wlpsasoff>
 
    <apon>
    <name>apon</name>

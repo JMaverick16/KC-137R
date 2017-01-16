@@ -1445,7 +1445,7 @@
   <type>translate</type>
   <object-name>lhibail</object-name>
   <object-name>lhobail</object-name>
-  <property>controls/flight/aileron</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <interpolation>    
   	<entry>
       <ind>-1.0</ind>
@@ -1478,7 +1478,7 @@
  <animation>
   <type>rotate</type>
   <object-name>lhibail</object-name>
-  <property>controls/flight/aileron</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <factor>-20</factor>
   <offset-deg>0</offset-deg>   
   <axis>
@@ -1494,7 +1494,7 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobail</object-name>
-  <property>controls/flight/aileron</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <factor>-20</factor>
   <offset-deg>0</offset-deg>   
   <axis>
@@ -1551,7 +1551,7 @@
   <type>translate</type>
   <object-name>rhibail</object-name>
   <object-name>rhobail</object-name>
-  <property>controls/flight/aileron</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <interpolation>    
   	<entry>
       <ind>-1.0</ind>
@@ -1584,7 +1584,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhibail</object-name>
-  <property>controls/flight/aileron</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <factor>-20</factor>
   <offset-deg>0</offset-deg>   
   <axis>
@@ -1600,7 +1600,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhobail</object-name>
-  <property>controls/flight/aileron</property>
+  <property>sim/multiplay/generic/float[12]</property>
   <factor>-20</factor>
   <offset-deg>0</offset-deg>   
   <axis>
@@ -1656,7 +1656,7 @@
  <animation>
   <type>rotate</type>
   <object-name>lhelevator</object-name>
-  <property>controls/flight/elevator</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <factor>15</factor>
   <offset-deg>0</offset-deg>   
   <center>
@@ -1674,7 +1674,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhelevator</object-name>
-  <property>controls/flight/elevator</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <factor>15</factor>
   <offset-deg>0</offset-deg>   
   <center>

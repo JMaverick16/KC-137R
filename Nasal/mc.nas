@@ -4,68 +4,58 @@
 
 setlistener("/sim/signals/fdm-initialized", func {
 	setprop("/warnings/mc", 0);
-	if (getprop("/it-autoflight/ap_master") == 1) {
-		return 0;
-	} else {
-		setprop("/warnings/mc", 1);
-	}
-	if (getprop("/it-autoflight/ap_master2") == 1) {
-		return 0;
-	} else {
-		setprop("/warnings/mc", 1);
-	}
 	if (getprop("/b707/anti-ice/engine-inlet[0]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/anti-ice/engine-inlet[1]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/anti-ice/engine-inlet[2]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/anti-ice/engine-inlet[3]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/anti-ice/valve-selector") == 2) {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/anti-ice/switch") == 2) {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/fuel/heater[0]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/fuel/heater[1]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/fuel/heater[2]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/fuel/heater[3]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
 	if (getprop("/b707/emergency/exit-lights") == 1) {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -78,25 +68,9 @@ setlistener("/sim/signals/fdm-initialized", func {
 	print("Master Caution System ... FINE!");
 });
 
-setlistener("/it-autoflight/output/ap1", func {
-	if (getprop("/it-autoflight/output/ap1") == 1) {
-		return 0;
-	} else {
-		setprop("/warnings/mc", 1);
-	}
-});
-
-setlistener("/it-autoflight/output/ap2", func {
-	if (getprop("/it-autoflight/output/ap2") == 1) {
-		return 0;
-	} else {
-		setprop("/warnings/mc", 1);
-	}
-});
-
 setlistener("/b707/anti-ice/engine-inlet[0]", func {
 	if (getprop("/b707/anti-ice/engine-inlet[0]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -104,7 +78,7 @@ setlistener("/b707/anti-ice/engine-inlet[0]", func {
 
 setlistener("/b707/anti-ice/engine-inlet[1]", func {
 	if (getprop("/b707/anti-ice/engine-inlet[1]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -112,7 +86,7 @@ setlistener("/b707/anti-ice/engine-inlet[1]", func {
 
 setlistener("/b707/anti-ice/engine-inlet[2]", func {
 	if (getprop("/b707/anti-ice/engine-inlet[2]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -120,7 +94,7 @@ setlistener("/b707/anti-ice/engine-inlet[2]", func {
 
 setlistener("/b707/anti-ice/engine-inlet[3]", func {
 	if (getprop("/b707/anti-ice/engine-inlet[3]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -128,7 +102,7 @@ setlistener("/b707/anti-ice/engine-inlet[3]", func {
 
 setlistener("/b707/anti-ice/valve-selector", func {
 	if (getprop("/b707/anti-ice/valve-selector") == 2) {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -136,7 +110,7 @@ setlistener("/b707/anti-ice/valve-selector", func {
 
 setlistener("/b707/anti-ice/switch", func {
 	if (getprop("/b707/anti-ice/switch") == 2) {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -144,7 +118,7 @@ setlistener("/b707/anti-ice/switch", func {
 
 setlistener("/b707/fuel/heater[0]", func {
 	if (getprop("/b707/fuel/heater[0]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -152,7 +126,7 @@ setlistener("/b707/fuel/heater[0]", func {
 
 setlistener("/b707/fuel/heater[1]", func {
 	if (getprop("/b707/fuel/heater[1]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -160,7 +134,7 @@ setlistener("/b707/fuel/heater[1]", func {
 
 setlistener("/b707/fuel/heater[2]", func {
 	if (getprop("/b707/fuel/heater[2]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -168,7 +142,7 @@ setlistener("/b707/fuel/heater[2]", func {
 
 setlistener("/b707/fuel/heater[3]", func {
 	if (getprop("/b707/fuel/heater[3]") == "true") {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}
@@ -176,7 +150,7 @@ setlistener("/b707/fuel/heater[3]", func {
 
 setlistener("/b707/emergency/exit-lights", func {
 	if (getprop("/b707/emergency/exit-lights") == 1) {
-		return 0;
+		# Do nothing
 	} else {
 		setprop("/warnings/mc", 1);
 	}

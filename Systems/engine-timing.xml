@@ -77,5 +77,81 @@
         </input>
 		<output>/engines/engine[3]/epr-actual</output>
     </filter>
-
+	
+    <filter>
+        <name>EGT 1</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/n1</property> 
+                    <entry><ind>  0</ind><dep>037</dep></entry>
+                    <entry><ind>  8</ind><dep>037</dep></entry>
+                    <entry><ind> 23</ind><dep>415</dep></entry>
+                    <entry><ind>110</ind><dep>642</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[0]/egt-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EGT 2</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[1]/n1</property> 
+                    <entry><ind>  0</ind><dep>037</dep></entry>
+                    <entry><ind>  8</ind><dep>037</dep></entry>
+                    <entry><ind> 23</ind><dep>415</dep></entry>
+                    <entry><ind>110</ind><dep>642</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[1]/egt-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EGT 3</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[2]/n1</property> 
+                    <entry><ind>  0</ind><dep>037</dep></entry>
+                    <entry><ind>  8</ind><dep>037</dep></entry>
+                    <entry><ind> 23</ind><dep>415</dep></entry>
+                    <entry><ind>110</ind><dep>642</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[2]/egt-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EGT 4</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[3]/n1</property> 
+                    <entry><ind>  0</ind><dep>037</dep></entry>
+                    <entry><ind>  8</ind><dep>037</dep></entry>
+                    <entry><ind> 23</ind><dep>415</dep></entry>
+                    <entry><ind>110</ind><dep>642</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[3]/egt-actual</output>
+    </filter>
+	
 </PropertyList>
