@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Build 110
+# V3.0.0 Build 111
 # This program is 100% GPL!
 
 print("IT-AUTOFLIGHT: Please Wait!");
@@ -30,7 +30,7 @@ var ap_init = func {
 	setprop("/it-autoflight/output/fd2", 0);
 	setprop("/it-autoflight/output/loc-armed", 0);
 	setprop("/it-autoflight/output/appr-armed", 0);
-	setprop("/it-autoflight/output/thr-mode", 0);
+	setprop("/it-autoflight/output/thr-mode", 2);
 	setprop("/it-autoflight/output/retard", 0);
 	setprop("/it-autoflight/settings/min-pitch", -8);
 	setprop("/it-autoflight/settings/max-pitch", 8);
@@ -42,6 +42,7 @@ var ap_init = func {
     setprop("/it-autoflight/autoland/target-vs", "-650");
     setprop("/it-autoflight/mode/lat", "T/O");
     setprop("/it-autoflight/mode/vert", "T/O CLB");
+	thrustmode();
 	update_arms();
 	print("IT-AUTOFLIGHT: Done!");
 }
@@ -233,19 +234,19 @@ var vertical = func {
   } else if (vertset == 3) {
 	alandt.stop();
 	alandt1.stop();
-	var pitchdeg = getprop("/orientation/pitch-deg");
 	var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
 	var alt = getprop("/it-autoflight/internal/alt");
 	var dif = calt - alt;
+	var pitchdeg = getprop("/orientation/pitch-deg");
     if (calt < alt) {
       setprop("/it-autoflight/internal/max-pitch", pitchdeg);
     } else if (calt > alt) {
       setprop("/it-autoflight/internal/min-pitch", pitchdeg);
     }
 	minmaxtimer.start();
+	thrustmode();
 	setprop("/it-autoflight/output/vert", 0);
 	setprop("/it-autoflight/mode/vert", "ALT CAP");
-	thrustmode();
   } else if (vertset == 4) {
 	alandt.stop();
 	alandt1.stop();
