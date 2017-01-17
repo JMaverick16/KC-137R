@@ -8,6 +8,7 @@ setlistener("/sim/signals/fdm-initialized", func {
   setprop("/b707/anti-ice/window-heat-cap-switch", "0");
   setprop("/b707/anti-ice/window-heat-fo-switch", "0");
   setprop("/indicators/asi/vmo", "380");
+  setprop("/instrumentation/efis[2]/mfd/rangearc", 1);
   b707.compass_swing();
   b707.gmeter_init();
   print("OCTAL ... FINE!");

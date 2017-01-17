@@ -2,6 +2,7 @@
 # storage container for all ND instances
 var placement_left = "ND.screenL";
 var placement_right = "ND.screenR";
+var placement_center = "ND.screenC";
 var nd_display = {};
 
 ##
@@ -86,6 +87,20 @@ var _list = setlistener("systems/electrical/outputs/efis", func() {
     var group = nd_display.fo.createGroup();
     NDFo.newMFD(group, nd_display.fo);
     NDFo.update();
+	
+    var NDCe = ND.new("instrumentation/efis[2]", myCockpit_switches);
+
+    nd_display.ce = canvas.new({
+        "name": "ND",
+        "size": [1024, 1024],
+        "view": [1024, 1024],
+        "mipmapping": 1
+    });
+
+    nd_display.ce.addPlacement({"node": placement_center});
+    var group = nd_display.ce.createGroup();
+    NDCe.newMFD(group, nd_display.ce);
+    NDCe.update();
 
     removelistener(_list); # run ONCE
 }); # fdm-initialized listener callback

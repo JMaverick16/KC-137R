@@ -3,8 +3,30 @@ MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  sh
 MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 1 1 1  shi 128  trans 0
 MATERIAL "black" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
+MATERIAL "buttonlights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0.33 0.33 0.33  shi 32  trans 0
 OBJECT world
-kids 75
+kids 76
+OBJECT poly
+name "ND.screenC"
+loc 0.000164129 0.0111064 -0.0642732
+data 10
+ND.screenC
+texture "screen.png"
+crease 30.000002
+numvert 4
+0 0.0670141 0.0640105
+0 -0.062259 0.0640105
+0 -0.062259 -0.0642021
+0 0.0670141 -0.0642021
+numsurf 1
+SURF 0x0
+mat 4
+refs 4
+3 1.00067 0.999407
+0 4.45843e-005 0.999407
+1 4.45843e-005 0.000756443
+2 1.00067 0.000756443
+kids 0
 OBJECT poly
 name "Power.off"
 loc 0.000186426 -0.00971974 -0.00640827

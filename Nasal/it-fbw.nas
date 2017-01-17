@@ -8,8 +8,14 @@ var roll = func {
 	if (getprop("/it-fbw/roll-engage") == 0) {
 	setprop("/it-autoflight/input/ap1", 0);
 	setprop("/it-autoflight/input/ap2", 0);
+	setprop("/it-fbw/sound/enableapoffsound", 1);
+	setprop("/it-fbw/sound/apoffsound", 0);
 	setprop("/it-fbw/roll-engage", 1);
 	} else {
+	if (getprop("/it-fbw/sound/enableapoffsound") == 1) {
+		setprop("/it-fbw/sound/apoffsound", 1);	
+		setprop("/it-fbw/sound/enableapoffsound", 0);	  
+	}
 	setprop("/it-fbw/roll-engage", 0);
 	}
 }
@@ -19,8 +25,14 @@ var pitch = func {
 	setprop("/it-autoflight/input/ap1", 0);
 	setprop("/it-autoflight/input/ap2", 0);
 	setprop("/it-fbw/pitch-deg", getprop("/orientation/pitch-deg"));
+	setprop("/it-fbw/sound/enableapoffsound2", 1);
+	setprop("/it-fbw/sound/apoffsound2", 0);
 	setprop("/it-fbw/pitch-engage", 1);
 	} else {
+	if (getprop("/it-fbw/sound/enableapoffsound2") == 1) {
+		setprop("/it-fbw/sound/apoffsound2", 1);	
+		setprop("/it-fbw/sound/enableapoffsound2", 0);	  
+	}
 	setprop("/it-fbw/pitch-engage", 0);
 	}
 }
