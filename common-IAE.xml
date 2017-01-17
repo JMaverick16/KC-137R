@@ -25,8 +25,9 @@
     <autopilot>
         <path>Aircraft/KC-137R/Systems/it-autoflight.xml</path>
     </autopilot>
+	<!-- Uses a custom EPR based autothrottle -->
     <autopilot>
-        <path>Aircraft/KC-137R/Systems/it-autothrust.xml</path>
+        <path>Aircraft/KC-137R/Systems/custom-autothrust-iae.xml</path>
     </autopilot>
 	<property-rule n="101">	
 		<path>Systems/sound_calc.xml</path>
@@ -37,6 +38,10 @@
     <autopilot>
          <path>Aircraft/KC-137R/Systems/engine-timing.xml</path>
     </autopilot>
+	<autopilot>
+		<name>WL/PSAS</name>
+		<path>Aircraft/KC-137R/Systems/it-fbw.xml</path>
+	</autopilot>
 	</systems>
 
 	<instrumentation>
@@ -208,7 +213,7 @@
 		
   <chase-distance-m>-66</chase-distance-m>
 	
-	<multiplay>  
+  <multiplay>  
     <generic>
 		<int n="0" alias="/controls/lighting/landing-light"/> 									<!-- landing light nose wheel -->
 		<int n="1" alias="/controls/lighting/landing-light[1]"/> 								<!-- landing light left and right -->
@@ -239,14 +244,14 @@
 		<float n="7" alias="/instrumentation/doors/pasrear/position-norm"/>						<!-- Passenger - back -->
 		<float n="8" alias="/position/altitude-agl-ft"/>    <!-- for the kind of fire or lights -->
 		<float n="9" alias="/controls/special/wiper-deg"/>
-		<float n="10" alias="/position/gear-agl-ft"/>											<!-- multiplayer see the hanging wheels -->
+		<float n="10" alias="/gear/gear[1]/angle-deg"/>											<!-- Left Hanging Gear -->
 		<float n="11" alias="/controls/flight/elevator-fbw"/>									<!-- Elevator FBW-->
-		<float n="12" alias="/controls/flight/aileron"/>									<!-- Aileron/Spoileron FBW -->
+		<float n="12" alias="/controls/flight/aileron"/>										<!-- Aileron/Spoileron FBW -->
 		<float n="13" alias="/b707/ground-service/fuel-truck/state"/>							<!-- fuel-truck -->
 		<float n="14" alias="/engines/engine/reverser-pos-norm"/>								<!-- multiplayer see the cowl flaps -->
 		<float n="15" alias="/instrumentation/doors/cargo/position-norm"/>						<!-- Cargo door -->
 		<float n="16" alias="/instrumentation/doors/belly/position-norm"/>						<!-- Belly door -->
-		<float n="17" alias="/orientation/pitch-deg"/>       									<!-- for the shadow without rembrandt -->
+		<float n="17" alias="/gear/gear[2]/angle-deg"/>       									<!-- Right Hanging Gear -->
 		<float n="18" alias="/instrumentation/doors/refuel-boom/position-norm"/>      			<!-- in the TT the refuel boom -->
 		<!-- <string n="0" alias="/sim/multiplay/callsign"/>									will be init in the registration.nas DO NOT USE string[0] for other properties -->
     </generic>
@@ -380,6 +385,9 @@
 			<off-start-run type="double">2</off-start-run>
 		</APU>
 		<engines>
+			<epr type="bool">true</epr>
+			<kp>0.02</kp>
+			<kp-spd>0.14</kp-spd>
 			<engine-start-switch type="int">1</engine-start-switch>
 			<engine n="0">
 				<cutoff type="bool">true</cutoff>

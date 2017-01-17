@@ -216,7 +216,7 @@
   </offsets>
 </model-->
 
-<model>
+<!--model>
   <name>EICAS-CFM</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS/EICAS-CFM.xml</path>
   <offsets>
@@ -232,7 +232,7 @@
   <condition>
 	<not><property>/sim/engine-type/IAE</property></not>
   </condition>
-</animation>
+</animation-->
 
 <model>
   <name>EAD-IAE</name>
@@ -244,13 +244,13 @@
   </offsets>
 </model>
 
-<animation>
+<!--animation>
   <type>select</type>
   <object-name>EAD-IAE</object-name>
   <condition>
 	<property>/sim/engine-type/IAE</property>
   </condition>
-</animation>
+</animation-->
 
 <!--model>
   <name>EICAS-Lower</name>

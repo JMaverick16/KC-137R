@@ -842,6 +842,26 @@ Modified by it0uchpods for KC-137R
             <height type="int">64</height>
         </font-resolution>
 	</text>
+    <text>
+        <name>T/OH</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>-0.009</y-m>
+            <z-m>0.088</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">T/O</format>
+		<property>autopilot/serviceable</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.007</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+	</text>
 	
 	<animation>
 		<object-name>HDG</object-name>
@@ -872,6 +892,17 @@ Modified by it0uchpods for KC-137R
 			<equals>
 				<property>/it-autoflight/output/lat</property>
 				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<object-name>T/OH</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/it-autoflight/mode/lat</property>
+				<value>T/O</value>
 			</equals>
 		</condition>
 	</animation>
@@ -999,6 +1030,48 @@ Modified by it0uchpods for KC-137R
         </font-resolution>
 	</text>
 	
+    <text>
+        <name>T/O</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>0.024</y-m>
+            <z-m>0.088</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">T/O</format>
+		<property>autopilot/serviceable</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.007</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+	</text>
+	
+    <text>
+        <name>G/A</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>0.024</y-m>
+            <z-m>0.088</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">G/A</format>
+		<property>autopilot/serviceable</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.007</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+	</text>
+	
 	<animation>
 		<object-name>ALT</object-name>
 		<type>select</type>
@@ -1061,6 +1134,28 @@ Modified by it0uchpods for KC-137R
 			<equals>
 				<property>/it-autoflight/mode/vert</property>
 				<value>FLARE</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<object-name>T/O</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/it-autoflight/mode/vert</property>
+				<value>T/O CLB</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<object-name>G/A</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/it-autoflight/mode/vert</property>
+				<value>G/A CLB</value>
 			</equals>
 		</condition>
 	</animation>
@@ -1516,7 +1611,6 @@ Modified by it0uchpods for KC-137R
         </condition>
     </animation>
 
-
     <animation>
         <type>select</type>
         <object-name>ET</object-name>
@@ -1883,6 +1977,9 @@ Modified by it0uchpods for KC-137R
         <object-name>G/S</object-name>
         <object-name>LAND</object-name>
         <object-name>FLARE</object-name>
+        <object-name>T/O</object-name>
+        <object-name>G/A</object-name>
+        <object-name>T/OH</object-name>
         <object-name>AT</object-name>
         <object-name>AP</object-name>
         <object-name>ATAP</object-name>

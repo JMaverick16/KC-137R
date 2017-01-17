@@ -159,7 +159,7 @@
 
 <!-- Center Panel -->
 
-<model>
+<!--model>
   <name>marker_beacon</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/marker_beacon.xml</path>
   <offsets>
@@ -176,17 +176,17 @@
   <offsets>
       <x-m>-18.92</x-m>
       <y-m>-0.141</y-m>
-      <z-m> 0.857</z-m>
+      <z-m> 0.931</z-m>
   </offsets>
 </model>
 
 <model>
   <name>stby-ai</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/stby-ai.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AI_new/stby-ai.xml</path>
   <offsets>
-      <x-m>-18.92</x-m>
-      <y-m>-0.141</y-m>
-      <z-m> 0.932</z-m>
+      <x-m>-18.919</x-m>
+      <y-m>-0.140</y-m>
+      <z-m> 0.858</z-m>
   </offsets>
 </model>
 
@@ -198,9 +198,9 @@
       <y-m>-0.141</y-m>
       <z-m> 0.788</z-m>
   </offsets>
-</model>
+</model-->
 
-<model>
+<!--model>
   <name>EICAS-CFM</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS/EICAS-CFM.xml</path>
   <offsets>
@@ -216,27 +216,27 @@
   <condition>
 	<not><property>/sim/engine-type/IAE</property></not>
   </condition>
-</animation>
+</animation-->
 
 <model>
-  <name>EICAS-IAE</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS/EICAS-IAE.xml</path>
+  <name>EAD-IAE</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EAD/EAD-IAE.xml</path>
   <offsets>
-      <x-m>-18.919</x-m>
+      <x-m>-18.918</x-m>
       <y-m>-0.015</y-m>
-      <z-m> 0.91</z-m>
+      <z-m> 0.885</z-m>
   </offsets>
 </model>
 
-<animation>
+<!--animation>
   <type>select</type>
-  <object-name>EICAS-IAE</object-name>
+  <object-name>EAD-IAE</object-name>
   <condition>
 	<property>/sim/engine-type/IAE</property>
   </condition>
-</animation>
+</animation-->
 
-<model>
+<!--model>
   <name>EICAS-Lower</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS-Lower/EICAS-Lower.xml</path>
   <offsets>
@@ -244,19 +244,19 @@
       <y-m>-0.015</y-m>
       <z-m> 0.795</z-m>
   </offsets>
-</model>
+</model-->
 
-<model>
+<!--model>
   <name>gears_and_flaps</name>
-  <path>Aircraft/KC-137R/Models/Cockpit-AWACS/Instruments/flapstack/flapstack.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/flapstack/flapstack.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
     <y-m>  0.0</y-m>
     <z-m>  0.89</z-m>
   </offsets>
-</model>
+</model-->
 
-<model>
+<!--model>
   <name>spoiler_and_flaps_warning</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/spoiler_and_flaps.xml</path>
   <offsets>
@@ -264,7 +264,7 @@
     <y-m>  0.093</y-m>
     <z-m>  0.80</z-m>
   </offsets>
-</model>
+</model-->
 
 <!-- Copilot Panel -->
 

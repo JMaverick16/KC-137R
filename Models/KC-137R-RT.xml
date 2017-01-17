@@ -755,23 +755,6 @@
 		</condition>	
 	</animation>
 	
-  <!-- shadow without rembrandt -->
-	<model>
-		<name>NewShadow</name>
-		<path>Aircraft/KC-137R/Models/shadow.xml</path>
-	</model>
-
-	<animation>
-		<type>select</type>
-		<object-name>NewShadow</object-name>
-		<condition>
-			<and>
-				<not><property>sim/multiplay/generic/int[19]</property></not>
-				<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			</and>
-		</condition>
-	</animation>
-	
   <!-- Air-to-Air Refuelsystem -->
 	<animation>
 		<type>select</type>
@@ -1868,13 +1851,8 @@
 	 <animation>
 		<type>rotate</type>
 		<object-name>LeftGearBase</object-name>		
-		<property>sim/multiplay/generic/float[10]</property>
-		<interpolation>
-		    <entry><ind>1.00</ind><dep>0</dep></entry>
-		    <entry><ind>1.05</ind><dep>-3</dep></entry>
-		    <entry><ind>1.45</ind><dep>-7</dep></entry>
-		    <entry><ind>2.43</ind><dep>10</dep></entry>
-		</interpolation>
+		<property>/sim/multiplay/generic/float[10]</property>
+		<factor>-1</factor>
 		<center>
 		    <x-m>1.82</x-m>
 		    <y-m>0</y-m>
@@ -1890,13 +1868,8 @@
 	 <animation>
 		<type>rotate</type>	
 		<object-name>RightGearBase</object-name>
-		<property>sim/multiplay/generic/float[10]</property>
-		<interpolation>
-		    <entry><ind>1.00</ind><dep>0</dep></entry>
-		    <entry><ind>1.05</ind><dep>-3</dep></entry>
-		    <entry><ind>1.45</ind><dep>-7</dep></entry>
-		    <entry><ind>2.43</ind><dep>10</dep></entry>
-		</interpolation>
+		<property>sim/multiplay/generic/float[17]</property>
+		<factor>-1</factor>
 		<center>
 		    <x-m>1.82</x-m>
 		    <y-m>0</y-m>

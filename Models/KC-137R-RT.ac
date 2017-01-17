@@ -1111,7 +1111,7 @@ kids 0
 OBJECT poly
 name "antenaasa"
 loc 1.31281 -0.489049 -0.482505
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 51
 6.06291 1.45032 -20.2056
@@ -1494,7 +1494,7 @@ kids 0
 OBJECT poly
 name "doorBelly"
 loc 0 1.5e-05 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 88
 -11.1142 -0.010242 -1.72505
@@ -1914,7 +1914,7 @@ kids 0
 OBJECT poly
 name "doorCargo"
 loc 0 1.5e-05 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 116
 -11.9215 2.07961 1.13669
@@ -2502,7 +2502,7 @@ kids 0
 OBJECT poly
 name "doorFL"
 loc 0 1.5e-05 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 124
 -15.3816 0.72352 1.62316
@@ -3184,7 +3184,7 @@ kids 0
 OBJECT poly
 name "doorRL"
 loc 0 1.5e-05 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 144
 15.6734 1.92329 1.15303
@@ -4000,7 +4000,7 @@ kids 0
 OBJECT poly
 name "elevwing"
 loc 0 0 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 252
 24.2488 2.15801 7.06729
@@ -5072,7 +5072,7 @@ name "engineSupport"
 loc -1.93232 -0.394344 -0.019461
 data 13
 engineSupport
-texture "KC-137R.png"
+texture "KC-137R-3.png"
 crease 30.000002
 numvert 1282
 0.770679 -0.228668 9.98458
@@ -15055,7 +15055,7 @@ kids 0
 OBJECT poly
 name "fuselage"
 loc 0 1.5e-05 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 2104
 -19.9169 -0.290118 -0.298671
@@ -29125,7 +29125,7 @@ kids 0
 OBJECT poly
 name "fuselage.belly"
 loc 0 1.5e-05 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 92
 -9.94632 -1.32948 -0.9512
@@ -29576,7 +29576,7 @@ kids 0
 OBJECT poly
 name "fuselage.inner"
 loc 0 1.5e-05 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 204
 -15.6058 0.039908 1.42977
@@ -30892,7 +30892,7 @@ kids 0
 OBJECT poly
 name "lampFrame"
 loc -5.51337 -0.842583 -3.81323
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 20
 0.07583 0.113598 7.49907
@@ -30976,7 +30976,7 @@ kids 0
 OBJECT poly
 name "LeftGear"
 loc 5.10629 -0.27505 -7.48841
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 324
 -3.19893 -0.413201 10.134
@@ -32988,7 +32988,7 @@ kids 0
 OBJECT poly
 name "LeftGear.001"
 loc 5.10629 -0.039237 -7.48634
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 57
 -3.2415 -0.214868 7.62197
@@ -33437,7 +33437,7 @@ kids 0
 OBJECT poly
 name "LeftGearCompressor"
 loc 5.10629 0.439938 -6.29359
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 134
 -3.39461 -2.73817 8.9091
@@ -34275,7 +34275,7 @@ kids 0
 OBJECT poly
 name "LeftGearCompressor1"
 loc 5.10629 0.684418 -6.29359
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 385
 -3.57542 -2.32008 9.21462
@@ -36310,7 +36310,7 @@ kids 0
 OBJECT poly
 name "lhdoorinner"
 loc 0 0 0.021165
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 32
 3.59492 -1.71287 0.135564
@@ -36420,7 +36420,7 @@ kids 0
 OBJECT poly
 name "lhdoorouter"
 loc 0 0.013971 0.021165
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 20
 -0.05497 -1.28527 1.76016
@@ -36504,7 +36504,7 @@ kids 0
 OBJECT poly
 name "lhelevator"
 loc 0 0 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 20
 24.1629 2.23897 6.94761
@@ -36572,7 +36572,7 @@ kids 0
 OBJECT poly
 name "lhfiletflap"
 loc -0.068811 -0.671044 2.17031
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 86
 2.90975 -0.438686 -0.417399
@@ -37261,7 +37261,7 @@ kids 0
 OBJECT poly
 name "lhibail"
 loc 0 -5.70613 -0.023386
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 19
 5.19698 5.50148 8.60274
@@ -37372,7 +37372,7 @@ kids 0
 OBJECT poly
 name "lhibflap"
 loc 4.01488 -0.671044 5.79242
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 86
 -1.48919 -0.133456 -1.99118
@@ -38061,7 +38061,7 @@ kids 0
 OBJECT poly
 name "lhngdoor"
 loc 0 -0.004791 0.076661
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 31
 -16.2902 -1.39057 0.420116
@@ -38190,7 +38190,7 @@ kids 0
 OBJECT poly
 name "lhngdooraft"
 loc 0 0 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 24
 -16.0043 -1.56498 0.000877
@@ -38264,7 +38264,7 @@ kids 0
 OBJECT poly
 name "lhobail"
 loc 0 -5.70613 -0.023386
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 14
 8.02032 6.04578 14.1866
@@ -38356,7 +38356,7 @@ kids 0
 OBJECT poly
 name "lhobflap"
 loc 5.20901 -0.671367 12.9151
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 86
 0.062788 0.612663 -2.16885
@@ -39045,7 +39045,7 @@ kids 0
 OBJECT poly
 name "lhsp1"
 loc -0.003837 -5.71002 -0.028172
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 8
 6.29576 6.18254 14.1033
@@ -39103,7 +39103,7 @@ kids 0
 OBJECT poly
 name "lhsp3"
 loc -0.246786 -5.71002 -0.031444
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 8
 2.17585 5.37376 4.3573
@@ -39161,7 +39161,7 @@ kids 0
 OBJECT poly
 name "mgdoora"
 loc 0 -5.70611 -0.023386
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 12
 1.09682 4.5731 2.2389
@@ -39244,7 +39244,7 @@ kids 0
 OBJECT poly
 name "mgdoorb"
 loc 0 -5.70611 -0.023386
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 16
 1.09159 4.49683 1.97525
@@ -39366,7 +39366,7 @@ kids 0
 OBJECT poly
 name "mgdoorc"
 loc 0 -5.65001 0.432927
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 12
 1.09687 4.58874 2.23901
@@ -39449,7 +39449,7 @@ kids 0
 OBJECT poly
 name "NGear"
 loc -15.8003 -1.67798 -0.023383
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 1412
 0.524397 -0.364897 0.018825
@@ -46455,7 +46455,7 @@ kids 0
 OBJECT poly
 name "NGearStrut"
 loc -15.7819 -1.5902 -0.023383
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 616
 0.163925 -0.653362 0.094127
@@ -49683,7 +49683,7 @@ kids 0
 OBJECT poly
 name "nonones"
 loc -1.87795 -0.0004 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 24
 -11.835 2.23548 0.005655
@@ -49757,7 +49757,7 @@ kids 0
 OBJECT poly
 name "nose"
 loc 3.99043 1.4998e-05 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 686
 -24.2711 0.254052 0.439999
@@ -54663,7 +54663,7 @@ kids 0
 OBJECT poly
 name "NoseWheel"
 loc -19.5898 22.3625 -0.023389
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 690
 4.2748 -24.8659 -0.140635
@@ -61217,7 +61217,7 @@ kids 0
 OBJECT poly
 name "nosewheelwell"
 loc 0 0 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 40
 -15.1109 -1.63837 -0.008946
@@ -61420,7 +61420,7 @@ kids 0
 OBJECT poly
 name "operatorRoom"
 loc 11.8156 -0.465997 2.2878
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 185
 0.991682 -0.945503 -2.62224
@@ -62859,7 +62859,7 @@ kids 0
 OBJECT poly
 name "operatorRoomWin"
 loc 11.8156 -0.465997 2.2878
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 96
 1.03976 -0.617674 -2.57667
@@ -63467,7 +63467,7 @@ kids 0
 OBJECT poly
 name "probe"
 loc 0.443668 -0.450714 -0.004448
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 20
 21.7695 9.44089 0.063498
@@ -63591,7 +63591,7 @@ kids 0
 OBJECT poly
 name "refuelAPULeft"
 loc -9.55072 -1.40914 32.7009
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 480
 20.4374 2.24988 -12.8258
@@ -66818,7 +66818,7 @@ kids 0
 OBJECT poly
 name "refuelAPURight"
 loc -9.55072 -1.40914 32.7009
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 480
 20.4829 2.25084 -52.6646
@@ -70045,7 +70045,7 @@ kids 0
 OBJECT poly
 name "refuelBoom"
 loc 0.894982 -2.79234 0.002715
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 168
 22.3239 3.46419 0.015859
@@ -70883,7 +70883,7 @@ kids 0
 OBJECT poly
 name "refuelOperator"
 loc -0.75756 -3.67793 0
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 258
 11.5796 2.41371 -0.506502
@@ -72119,7 +72119,7 @@ kids 0
 OBJECT poly
 name "refuelPivot"
 loc -1.41594 -3.1612 0
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 227
 17.0681 2.60791 -0.238529
@@ -73238,7 +73238,7 @@ kids 0
 OBJECT poly
 name "refuelProbeLeft"
 loc -9.58494 0.380183 32.7161
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 748
 22.0538 -0.170129 -12.8636
@@ -78593,7 +78593,7 @@ kids 0
 OBJECT poly
 name "refuelProbeRight"
 loc -9.58494 0.380183 32.7161
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 748
 22.0538 -0.170129 -52.7176
@@ -83948,7 +83948,7 @@ kids 0
 OBJECT poly
 name "refuelTube"
 loc -2.99705 -3.38814 0
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 79
 27.1953 4.36681 0.081722
@@ -84431,7 +84431,7 @@ kids 0
 OBJECT poly
 name "rhdoorinner"
 loc 0 0 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 36
 -0.05583 -1.70939 -0.177272
@@ -84545,7 +84545,7 @@ kids 0
 OBJECT poly
 name "rhdoorouter"
 loc 0 0.018309 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 46
 -0.05497 -1.28524 -1.77122
@@ -84725,7 +84725,7 @@ kids 0
 OBJECT poly
 name "rhelevator"
 loc 0 0 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 20
 24.1815 2.08362 -6.92907
@@ -84793,7 +84793,7 @@ kids 0
 OBJECT poly
 name "rhfiletflap"
 loc -0.068811 -0.671044 -0.031103
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 86
 2.90975 -0.438686 -1.77495
@@ -85482,7 +85482,7 @@ kids 0
 OBJECT poly
 name "rhibail"
 loc 0 -5.70613 -0.023386
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 19
 5.17226 5.50148 -8.58626
@@ -85593,7 +85593,7 @@ kids 0
 OBJECT poly
 name "rhibflap"
 loc 4.01488 -0.671044 0.025121
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 86
 -1.48919 -0.133456 -3.87064
@@ -86282,7 +86282,7 @@ kids 0
 OBJECT poly
 name "rhmgdoora"
 loc 0 -5.70611 -0.015136
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 12
 1.08686 4.59496 -2.23902
@@ -86365,7 +86365,7 @@ kids 0
 OBJECT poly
 name "rhmgdoorb"
 loc 0 -5.70611 -0.023386
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 16
 1.0909 4.50297 -1.97525
@@ -86487,7 +86487,7 @@ kids 0
 OBJECT poly
 name "rhmgdoorc"
 loc 0 -5.66028 -0.479907
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 12
 1.08839 4.61094 -2.23942
@@ -86570,7 +86570,7 @@ kids 0
 OBJECT poly
 name "rhngdoor"
 loc 0 0 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 32
 -17.2922 -1.2436 -0.535518
@@ -86700,7 +86700,7 @@ kids 0
 OBJECT poly
 name "rhngdooraft"
 loc 0 0 -0.000101
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 25
 -16.0045 -1.56482 -0.000912
@@ -86775,7 +86775,7 @@ kids 0
 OBJECT poly
 name "rhobail"
 loc 0 -5.70613 -0.023386
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 14
 8.02032 6.04578 -14.1866
@@ -86867,7 +86867,7 @@ kids 0
 OBJECT poly
 name "rhobflap"
 loc 5.20901 -0.671367 12.9272
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 86
 0.0640879 0.610965 -23.7226
@@ -87556,7 +87556,7 @@ kids 0
 OBJECT poly
 name "rhsp1"
 loc -0.003837 -5.71002 -0.028172
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 8
 6.3285 6.18254 -14.0488
@@ -87614,7 +87614,7 @@ kids 0
 OBJECT poly
 name "rhsp3"
 loc -0.246786 -5.71002 -0.031444
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 8
 2.1888 5.37376 -4.32916
@@ -87672,7 +87672,7 @@ kids 0
 OBJECT poly
 name "RightGear"
 loc 5.10629 -0.275082 4.97312
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 324
 -3.19893 -0.41712 -7.64362
@@ -89684,7 +89684,7 @@ kids 0
 OBJECT poly
 name "RightGear.001"
 loc 5.10629 -0.049095 4.97312
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 57
 -3.2415 -0.24245 -5.08693
@@ -90133,7 +90133,7 @@ kids 0
 OBJECT poly
 name "RightGearCompressor"
 loc 5.10629 0.439906 6.16795
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 138
 -3.27936 -2.95671 -9.10543
@@ -90987,7 +90987,7 @@ kids 0
 OBJECT poly
 name "RightGearCompressor1"
 loc 5.10629 0.684386 6.16795
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 377
 -3.57542 -2.32008 -9.08844
@@ -92986,7 +92986,7 @@ kids 0
 OBJECT poly
 name "rudder"
 loc 0.199257 -0.151658 -0.000593
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 26
 22.3522 8.1291 0.056026
@@ -93076,7 +93076,7 @@ kids 0
 OBJECT poly
 name "slatsL"
 loc -0.00656 -5.15047 -0.051956
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 130
 8.99137 6.00331 20.2336
@@ -93802,7 +93802,7 @@ kids 0
 OBJECT poly
 name "slatsR"
 loc -5.6e-05 -5.69381 -0.036784
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 130
 9.03296 6.58966 -20.2336
@@ -94528,7 +94528,7 @@ kids 0
 OBJECT poly
 name "vertstab"
 loc 0.199257 -0.151658 -0.000593
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 89
 20.4142 2.11465 -0.130087
@@ -95029,7 +95029,7 @@ kids 0
 OBJECT poly
 name "wing"
 loc -0.026068 -5.69381 -0.021565
-texture "KC-137R.png"
+texture "KC-137R-2.png"
 crease 45.000000
 numvert 886
 4.20122 4.76031 1.76063

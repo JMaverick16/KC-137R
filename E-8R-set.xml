@@ -383,6 +383,7 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
+			<file>Aircraft/KC-137R/Nasal/gear-tilt.nas</file>
 		</b707>
 		
 		<itaf>
@@ -429,6 +430,9 @@ no. D6-3071-00
 		<fbw>
 			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
 		</fbw>
+		<thrust>
+			<file>Aircraft/KC-137R/Nasal/thrust-iae.nas</file>
+		</thrust>
 	</nasal>
 
     <dual-control>
