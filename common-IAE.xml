@@ -223,30 +223,23 @@
 		<int n="5" alias="/controls/lighting/strobe-state/state"/>								<!-- Strobe -->
 		<int n="6" alias="/controls/special/tyresmoke"/>										<!-- tyresmoke -->
 		<int n="7" alias="/controls/lighting/logo-lights"/> 									<!-- logo-light -->
-		<int n="8" type="int">0</int>															<!-- select engines type -->
-		<int n="9" type="int">0</int>															<!-- cargo aircraft -->
 		<int n="10" alias="/b707/refuelling/probe-right"/>										<!-- refuel probe -->
 		<int n="11" alias="/b707/refuelling/probe-left"/>										<!-- refuel probe -->
 		<int n="12"  type="int">0</int>															<!-- communication between tanker and receiving aircraft -->
 		<int n="13" alias="/instrumentation/mptcas/on"/>  										<!-- show AWACS radar turning -->
 		<int n="14" alias="/b707/external-power-connected"/>									<!-- External Power-VW Kombi -->
 		<int n="15" type="int">0</int> <!-- jettison fuel 1 = left, 2 = right, 3 = both -->
-		<int n="16" type="int">0</int> <!-- 0 no immat, 1 immat on the rudder, 2 on fuselage down, 3 fuselage upper back -->
-		<int n="17" type="int">0</int> <!-- fire 1 = eng 1, 2 = eng 2, 3 = both -->
-		<int n="18" type="int">0</int> <!-- fire 1 = eng 3, 2 = eng 4, 3 = both -->
 		<int n="19" alias="/b707/crashed"/>
 		<float n="0" alias="/systems/electrical/outputs/cabin-dim"/> 							<!-- cabin light dimmer -->
 		<float n="1" alias="/gear/gear[0]/compression-norm"/> 	
 		<float n="2" alias="/gear/gear[0]/rollspeed-ms"/> 										<!-- multiplayer see the wheels turning -->
-		<float n="4" alias="/instrumentation/doors/pilotwin/position-norm"/>					<!-- Cockpit - left -->
-		<float n="5" alias="/instrumentation/doors/copilotwin/position-norm"/>					<!-- Cockpit - right -->
 		<float n="6" alias="/instrumentation/doors/pasfront/position-norm"/>					<!-- Passenger - front -->
 		<float n="7" alias="/instrumentation/doors/pasrear/position-norm"/>						<!-- Passenger - back -->
-		<float n="8" alias="/position/altitude-agl-ft"/>    <!-- for the kind of fire or lights -->
+		<float n="8" alias="/position/altitude-agl-ft"/>    									<!-- for the kind of fire or lights -->
 		<float n="9" alias="/controls/special/wiper-deg"/>
 		<float n="10" alias="/gear/gear[1]/angle-deg"/>											<!-- Left Hanging Gear -->
-		<float n="11" alias="/controls/flight/elevator-fbw"/>									<!-- Elevator FBW-->
-		<float n="12" alias="/controls/flight/aileron"/>										<!-- Aileron/Spoileron FBW -->
+		<float n="11" alias="/controls/flight/elevator-fbw"/>									<!-- Elevator FBW for PSAS -->
+		<float n="12" alias="/controls/flight/aileron"/>										<!-- Aileron/Spoileron -->
 		<float n="13" alias="/b707/ground-service/fuel-truck/state"/>							<!-- fuel-truck -->
 		<float n="14" alias="/engines/engine/reverser-pos-norm"/>								<!-- multiplayer see the cowl flaps -->
 		<float n="15" alias="/instrumentation/doors/cargo/position-norm"/>						<!-- Cargo door -->
