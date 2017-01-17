@@ -14,6 +14,19 @@
             </less-than>
         </condition>
     </animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>ND.screenC</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.showNd("ce");</script>
+			</binding>
+		</action>
+	</animation>
 
 	<!-- EPR -->
 	<animation>
