@@ -232,7 +232,7 @@
       	<property>sim/multiplay/generic/float[6]</property>
       	<property>sim/multiplay/generic/float[7]</property>
       	<property>sim/multiplay/generic/float[15]</property>
-      	<property>sim/multiplay/generic/float[16]</property>
+
       	<property>sim/multiplay/generic/int[19]</property>
       	<equals>
       		<property>sim/current-view/view-number</property>
@@ -359,7 +359,7 @@
       	<property>sim/multiplay/generic/float[6]</property>
       	<property>sim/multiplay/generic/float[7]</property>
       	<property>sim/multiplay/generic/float[15]</property>
-      	<property>sim/multiplay/generic/float[16]</property>
+
       </or>
 		</condition>
 	</animation>
@@ -457,7 +457,7 @@
       	<property>sim/multiplay/generic/float[6]</property>
       	<property>sim/multiplay/generic/float[7]</property>
       	<property>sim/multiplay/generic/float[15]</property>
-      	<property>sim/multiplay/generic/float[16]</property>
+
       </or>
 		</condition>
 	</animation>
@@ -481,7 +481,7 @@
       	<property>sim/multiplay/generic/float[6]</property>
       	<property>sim/multiplay/generic/float[7]</property>
       	<property>sim/multiplay/generic/float[15]</property>
-      	<property>sim/multiplay/generic/float[16]</property>
+
       </or>
 		</condition>
 	</animation>
@@ -505,7 +505,7 @@
       	<property>sim/multiplay/generic/float[6]</property>
       	<property>sim/multiplay/generic/float[7]</property>
       	<property>sim/multiplay/generic/float[15]</property>
-      	<property>sim/multiplay/generic/float[16]</property>
+
       </or>
 		</condition>
 	</animation>
@@ -528,7 +528,6 @@
 		<condition>
 		  <and>
 		  	<not><property>sim/multiplay/generic/int[19]</property></not>
-		    <property>sim/multiplay/generic/int[9]</property>
 				<or>
 		    	<property>sim/multiplay/generic/float[6]</property>
 		    	<property>sim/multiplay/generic/float[7]</property>
@@ -2346,344 +2345,6 @@
 		</offsets>
 	</model> 
 
-<!-- Fire , #1 -->
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
-		<condition>
-			<and>
-				<greater-than>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</greater-than>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m>  2.42</x-m>
-		  <y-m>-14.835</y-m>
-		  <z-m> -0.647</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
-		<condition>
-			<and>
-				<greater-than>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</greater-than>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m>  2.42</x-m>
-		  <y-m>-14.835</y-m>
-		  <z-m> -0.647</z-m>
-    <pitch-deg>145</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire.xml</path>
-		<condition>
-			<and>
-				<less-than-equals>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</less-than-equals>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m>  2.42</x-m>
-		  <y-m>-14.835</y-m>
-		  <z-m> -0.647</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-
-
-<!-- Fire, #2 -->
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
-		<condition>
-			<and>
-				<greater-than>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</greater-than>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>2</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m> -1.25</x-m>
-		  <y-m>-10.077</y-m>
-		  <z-m> -1.10</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
-		<condition>
-			<and>
-				<greater-than>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</greater-than>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>2</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m> -1.25</x-m>
-		  <y-m>-10.077</y-m>
-		  <z-m> -1.10</z-m>
-    <pitch-deg>145</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire.xml</path>
-		<condition>
-			<and>
-				<less-than-equals>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</less-than-equals>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>2</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[17]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m> -1.25</x-m>
-		  <y-m>-10.077</y-m>
-		  <z-m> -1.10</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-
-
-<!-- Fire, #3 -->
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
-		<condition>
-			<and>
-				<greater-than>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</greater-than>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m> -1.25</x-m>
-		  <y-m> 10.077</y-m>
-		  <z-m> -1.10</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
-		<condition>
-			<and>
-				<greater-than>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</greater-than>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m> -1.25</x-m>
-		  <y-m> 10.077</y-m>
-		  <z-m> -1.10</z-m>
-    <pitch-deg>145</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire.xml</path>
-		<condition>
-			<and>
-				<less-than-equals>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</less-than-equals>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m> -1.25</x-m>
-		  <y-m> 10.077</y-m>
-		  <z-m> -1.10</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-
-<!-- Fire, #4 -->
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
-		<condition>
-			<and>
-				<greater-than>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</greater-than>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>2</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m>  2.42</x-m>
-		  <y-m> 14.835</y-m>
-		  <z-m> -0.647</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
-		<condition>
-			<and>
-				<greater-than>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</greater-than>
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>2</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m>  2.42</x-m>
-		  <y-m> 14.835</y-m>
-		  <z-m> -0.647</z-m>
-    <pitch-deg>145</pitch-deg>
-  </offsets>
-</model>
-
-<model>
-  <path>Aircraft/KC-137R/Models/Effects/fire.xml</path>
-		<condition>
-			<and>
-				<less-than-equals>
-					<property>sim/multiplay/generic/float[8]</property>
-					<value>11</value>
-				</less-than-equals>					
-				<or>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>2</value>
-					</equals>
-					<equals>
-						<property>sim/multiplay/generic/int[18]</property>
-						<value>3</value>
-					</equals>
-				</or>
-			</and>
-		</condition>
-  <offsets>
-		  <x-m>  2.42</x-m>
-		  <y-m> 14.835</y-m>
-		  <z-m> -0.647</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-
 <!-- Jettison / Fuel dump, left -->
 <model>
   <path>Aircraft/KC-137R/Models/Effects/fuel_dump.xml</path>
@@ -2881,26 +2542,12 @@
 
 <animation>
 	<type>select</type>
-	<object-name>registrationRudderRight</object-name>
-	<object-name>registrationRudderLeft</object-name>
-	<object-name>registrationWingTop</object-name>
-	<object-name>registrationWingBottom</object-name>
-	<condition>
-		<equals>
-			<property>sim/multiplay/generic/int[16]</property>
-			<value>3</value>
-		</equals>
-	</condition>	
-</animation>
-
-<animation>
-	<type>select</type>
 	<object-name>registrationFuselageRightBack</object-name>
 	<object-name>registrationFuselageLeftBack</object-name>
 	<condition>
 		<equals>
-			<property>sim/multiplay/generic/int[16]</property>
-			<value>2</value>
+			<property>/unused/unused/unused</property>
+			<value>999</value>
 		</equals>
 	</condition>
 </animation>
@@ -2911,8 +2558,8 @@
 	<object-name>registrationFuselageLeft</object-name>
 	<condition>
 		<equals>
-			<property>sim/multiplay/generic/int[16]</property>
-			<value>1</value>
+			<property>/unused/unused/unused</property>
+			<value>999</value>
 		</equals>
 	</condition>
 </animation>

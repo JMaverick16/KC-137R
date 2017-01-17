@@ -843,49 +843,6 @@ var engines_alive = func {
 		  	}	  	
 		  } 
 		  
-		  ## FIRE ## action
-		  var isL = props.globals.getNode("sim/multiplay/generic/int[17]");
-		  var isR = props.globals.getNode("sim/multiplay/generic/int[18]");
-		  
-		  if(f.getBoolValue()){
-		  	c.setBoolValue(1);
-		  	w.setValue(1);
-		  	# fill the property for multiplay fire
-		  	if(e.getIndex() == 0){
-					if(isL.getValue() == 0) isL.setValue(1); 
-					if(isL.getValue() == 2) isL.setValue(3);
-				}
-		  	if(e.getIndex() == 1){
-					if(isL.getValue() == 0) isL.setValue(2); 
-					if(isL.getValue() == 1) isL.setValue(3);
-				}
-		  	if(e.getIndex() == 2){
-					if(isR.getValue() == 0) isR.setValue(1); 
-					if(isR.getValue() == 2) isR.setValue(3);
-				}
-		  	if(e.getIndex() == 3){
-					if(isR.getValue() == 0) isR.setValue(2); 
-					if(isR.getValue() == 1) isR.setValue(3);
-				}
-		  }else{
-		  	if(e.getIndex() == 0){
-					if(isL.getValue() == 1) isL.setValue(0); 
-					if(isL.getValue() == 3) isL.setValue(2);
-				}
-		  	if(e.getIndex() == 1){
-					if(isL.getValue() == 2) isL.setValue(0); 
-					if(isL.getValue() == 3) isL.setValue(1);
-				}
-		  	if(e.getIndex() == 2){
-					if(isR.getValue() == 1) isR.setValue(0); 
-					if(isR.getValue() == 3) isR.setValue(2);
-				}
-		  	if(e.getIndex() == 3){
-					if(isR.getValue() == 2) isR.setValue(0); 
-					if(isR.getValue() == 3) isR.setValue(1);
-				}	  
-		  } 
-		  
 		if(n2 > 15){
 			if(e.getIndex() == 1 or e.getIndex() == 2){
 				var oilNeu = (oil > 2600 ) ? oil - 950 : 2600;

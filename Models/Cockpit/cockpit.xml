@@ -732,7 +732,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>window.piop</object-name>
-		<property>sim/multiplay/generic/float[4]</property>
+		<property>/instrumentation/doors/pilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep>-45</dep></entry>
@@ -751,7 +751,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>windowPiComplete</object-name>
-		<property>sim/multiplay/generic/float[4]</property>
+		<property>/instrumentation/doors/pilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
@@ -771,7 +771,7 @@
 	<animation>
 	<type>translate</type>
 		<object-name>windowPiComplete</object-name>
-		<property>sim/multiplay/generic/float[4]</property>
+		<property>/instrumentation/doors/pilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.2</ind><dep> 0.0</dep></entry>
@@ -790,7 +790,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>windowPiComplete</object-name>
-		<property>sim/multiplay/generic/float[4]</property>
+		<property>/instrumentation/doors/pilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
@@ -831,7 +831,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>window.coop</object-name>
-		<property>sim/multiplay/generic/float[5]</property>
+		<property>/instrumentation/doors/copilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 45</dep></entry>
@@ -850,7 +850,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>windowCoComplete</object-name>
-		<property>sim/multiplay/generic/float[5]</property>
+		<property>/instrumentation/doors/copilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
@@ -870,7 +870,7 @@
 	<animation>
 	<type>translate</type>
 		<object-name>windowCoComplete</object-name>
-		<property>sim/multiplay/generic/float[5]</property>
+		<property>/instrumentation/doors/copilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.2</ind><dep> 0.0</dep></entry>
@@ -889,7 +889,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>windowCoComplete</object-name>
-		<property>sim/multiplay/generic/float[5]</property>
+		<property>/instrumentation/doors/copilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
