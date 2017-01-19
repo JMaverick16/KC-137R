@@ -222,7 +222,8 @@
 		<int n="4" alias="/controls/lighting/beacon-state/state"/>								<!-- beacon -->
 		<int n="5" alias="/controls/lighting/strobe-state/state"/>								<!-- Strobe -->
 		<int n="6" alias="/controls/special/tyresmoke"/>										<!-- tyresmoke -->
-		<int n="7" alias="/controls/lighting/logo-lights"/> 									<!-- logo-light -->
+		<int n="7" alias="/controls/lighting/logo-lights"/> 									<!-- logo-light -->	
+		<int n="8" type="int">0</int>	
 		<int n="10" alias="/b707/refuelling/probe-right"/>										<!-- refuel probe -->
 		<int n="11" alias="/b707/refuelling/probe-left"/>										<!-- refuel probe -->
 		<int n="12"  type="int">0</int>															<!-- communication between tanker and receiving aircraft -->
