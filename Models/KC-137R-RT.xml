@@ -924,6 +924,39 @@
 				<z2-m> -0.06</z2-m>
 			</axis>
   </animation>
+  
+   	<animation>
+      <type>rotate</type>
+      <object-name>RefuelopsDoor</object-name>
+	  <object-name>RefuelopsDoorGlass</object-name>
+      <property>sim/multiplay/generic/float[18]</property>
+      <factor>36</factor>
+      <center>
+          <x-m>13.74591</x-m>
+          <y-m>0.0001</y-m>
+          <z-m>-1.04032</z-m>
+      </center>
+      <axis>
+          <x>0</x>
+          <y>1</y>
+          <z>0</z>
+      </axis>
+  </animation>
+
+  <animation>
+		<type>pick</type>
+		<object-name>RefuelopsDoor</object-name>
+        <object-name>RefuelopsDoorGlass</object-name>
+		<action>
+		  <button>0</button>
+		  <repeatable>true</repeatable>
+		  <interval-sec>0.2</interval-sec>	
+		  <binding>
+		   <command>nasal</command>
+		   <script>b707.doorsystem.refuelexport();</script>
+		  </binding>
+		</action>
+  </animation>
 
   <animation>
 		<type>pick</type>
