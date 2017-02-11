@@ -313,7 +313,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<value>-30</value>
+			<value>-20</value>
 		</u_min>
 		<u_max>
 			<condition>
@@ -331,7 +331,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<value>30</value>
+			<value>20</value>
 		</u_max>
 	</filter>
 	
@@ -369,6 +369,19 @@
 		</config>
 	</pid-controller>
 	
+	<filter>
+		<name>IT-CONTROLLER: TARGET ROLL CMD</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/it-autoflight/internal/target-roll-deg</property>
+		</input>
+		<output>/it-autoflight/internal/roll-deg-cmd</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>10</max-rate-of-change>
+	</filter>
+	
 	<pid-controller>
 		<name>IT-CONTROLLER: ROLL</name>
 		<debug>false</debug>
@@ -390,7 +403,7 @@
 			<property>/orientation/roll-deg</property>
 		</input>
 		<reference>
-			<property>/it-autoflight/internal/target-roll-deg</property>
+			<property>/it-autoflight/internal/roll-deg-cmd</property>
 		</reference>
 		<output>
 			<property>/it-autoflight/internal/aileron-cmd</property>
@@ -465,7 +478,7 @@
 		</input>
 		<output>/controls/flight/aileron</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.9</max-rate-of-change>
+		<max-rate-of-change>0.8</max-rate-of-change>
 	</filter>
 
  <!-- =============================================================== -->
@@ -732,7 +745,7 @@
                         <property>/instrumentation/altimeter/indicated-altitude-ft</property>
                     </greater-than>
                 </condition>
-                <value>1.5</value>
+                <value>2</value>
             </u_min>
             <u_min>
                 <condition>
@@ -811,13 +824,26 @@
 			<Ti>10.0</Ti>        
 			<Td>0.00001</Td>    
             <u_min>
-                <value>1.5</value>
+                <value>2</value>
             </u_min>
             <u_max>
                 <value>25.0</value>
             </u_max>
 		</config>
 	</pid-controller>
+	
+	<filter>
+		<name>IT-CONTROLLER: TARGET PITCH CMD</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
+		</input>
+		<output>/it-autoflight/internal/pitch-deg-cmd</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>10</max-rate-of-change>
+	</filter>
 
 	<pid-controller>
 		<name>IT-CONTROLLER: PITCH</name>
@@ -840,7 +866,7 @@
 			<property>/orientation/pitch-deg</property>
 		</input>
 		<reference>
-			<property>/it-autoflight/internal/target-pitch-deg</property>
+			<property>/it-autoflight/internal/pitch-deg-cmd</property>
 		</reference>
 		<output>
 			<property>/it-autoflight/internal/elevator-cmd</property>
@@ -1260,7 +1286,7 @@
 		<input>
 			<expression>
 				<dif>
-					<property>/it-autoflight/internal/target-roll-deg</property>
+					<property>/it-autoflight/internal/roll-deg-cmd</property>
 					<property>/orientation/roll-deg</property>
 				</dif>
 			</expression>
@@ -1277,7 +1303,7 @@
 		<input>
 			<expression>
 				<dif>
-					<property>/it-autoflight/internal/target-pitch-deg</property>
+					<property>/it-autoflight/internal/pitch-deg-cmd</property>
 					<property>/orientation/pitch-deg</property>
 				</dif>
 			</expression>

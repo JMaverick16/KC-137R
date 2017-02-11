@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller by Joshua Davidson (it0uchpods/411).
-# V3.0.0 Build 127
+# V3.0.0 Build 130
 # This program is 100% GPL!
 
 print("IT-AUTOFLIGHT: Please Wait!");
@@ -161,19 +161,23 @@ var lateral = func {
 	if (latset == 0) {
 		alandt.stop();
 		alandt1.stop();
+		lnavwptt.stop();
 		setprop("/it-autoflight/output/loc-armed", 0);
 		setprop("/it-autoflight/output/appr-armed", 0);
 		setprop("/it-autoflight/output/lat", 0);
 		setprop("/it-autoflight/mode/lat", "HDG");
 		setprop("/it-autoflight/mode/arm", " ");
 	} else if (latset == 1) {
-		alandt.stop();
-		alandt1.stop();
-		setprop("/it-autoflight/output/loc-armed", 0);
-		setprop("/it-autoflight/output/appr-armed", 0);
-		setprop("/it-autoflight/output/lat", 1);
-		setprop("/it-autoflight/mode/lat", "LNAV");
-		setprop("/it-autoflight/mode/arm", " ");
+		if (getprop("/autopilot/route-manager/route/num") > 0) {
+			alandt.stop();
+			alandt1.stop();
+			lnavwptt.start();
+			setprop("/it-autoflight/output/loc-armed", 0);
+			setprop("/it-autoflight/output/appr-armed", 0);
+			setprop("/it-autoflight/output/lat", 1);
+			setprop("/it-autoflight/mode/lat", "LNAV");
+			setprop("/it-autoflight/mode/arm", " ");
+		}
 	} else if (latset == 2) {
 		setprop("/instrumentation/nav/signal-quality-norm", 0);
 		setprop("/it-autoflight/output/loc-armed", 1);
@@ -182,6 +186,7 @@ var lateral = func {
 	} else if (latset == 3) {
 		alandt.stop();
 		alandt1.stop();
+		lnavwptt.stop();
 		setprop("/it-autoflight/output/loc-armed", 0);
 		setprop("/it-autoflight/output/appr-armed", 0);
 		var hdgnow = int(getprop("/orientation/heading-magnetic-deg")+0.5);
@@ -190,9 +195,11 @@ var lateral = func {
 		setprop("/it-autoflight/mode/lat", "HDG");
 		setprop("/it-autoflight/mode/arm", " ");
 	} else if (latset == 4) {
+		lnavwptt.stop();
 		setprop("/it-autoflight/output/lat", 4);
 		setprop("/it-autoflight/mode/lat", "ALGN");
 	} else if (latset == 5) {
+		lnavwptt.stop();
 		setprop("/it-autoflight/output/lat", 5);
 	}
 }
@@ -340,6 +347,18 @@ var vertical = func {
 	}
 }
 
+# Helpers
+var lnavwpt = func {
+	if (getprop("/autopilot/route-manager/route/num") > 0) {
+		if (getprop("/autopilot/route-manager/wp/dist") <= 1.0) {
+			var wptnum = getprop("/autopilot/route-manager/current-wp");
+			if ((wptnum + 1) < getprop("/autopilot/route-manager/route/num")) {
+				setprop("/autopilot/route-manager/current-wp", wptnum + 1);
+			}
+		}
+	}
+}
+
 var flch_on = func {
 	setprop("/it-autoflight/output/appr-armed", 0);
 	setprop("/it-autoflight/output/vert", 4);
@@ -375,6 +394,14 @@ setlistener("/it-autoflight/input/kts-mach", func {
 		setprop("/it-autoflight/input/spd-mach", machnow);
 	}
 });
+
+# Takeoff Modes
+# Lat Active
+var latarms = func {
+	if (getprop("/position/gear-agl-ft") >= getprop("/it-autoflight/settings/lat-agl-ft")) {
+		setprop("/it-autoflight/input/lat", getprop("/it-autoflight/input/lat-arm"));
+	}
+}
 
 # TOGA
 setlistener("/it-autoflight/input/toga", func {
@@ -414,12 +441,6 @@ setlistener("/it-autoflight/mode/vert", func {
 var toga_reduc = func {
 	if (getprop("/position/gear-agl-ft") >= getprop("/it-autoflight/settings/reduc-agl-ft")) {
 		setprop("/it-autoflight/input/vert", 4);
-	}
-}
-
-var latarms = func {
-	if (getprop("/position/gear-agl-ft") >= getprop("/it-autoflight/settings/lat-agl-ft")) {
-		setprop("/it-autoflight/input/lat", getprop("/it-autoflight/input/lat-arm"));
 	}
 }
 
@@ -482,6 +503,24 @@ var altcapt = func {
 	setprop("/it-autoflight/internal/alt", altinput);
 }
 
+# Min and Max Pitch Reset
+var minmax = func {
+	var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
+	var alt = getprop("/it-autoflight/internal/alt");
+	var dif = calt - alt;
+	if (dif < 100 and dif > -100) {
+		setprop("/it-autoflight/internal/max-pitch", 8);
+		setprop("/it-autoflight/internal/min-pitch", -5);
+		var vertmode = getprop("/it-autoflight/output/vert");
+		if (vertmode == 1 or vertmode == 2 or vertmode == 4 or vertmode == 5 or vertmode == 6 or vertmode == 7) {
+			# Do not change the vertical mode because we are not trying to capture altitude.
+		} else {
+			setprop("/it-autoflight/mode/vert", "ALT HLD");
+		}
+		minmaxtimer.stop();
+	}
+}
+
 # Thrust Mode Selector
 var thrustmode = func {
 	var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
@@ -511,24 +550,7 @@ var thrustmode = func {
 	}
 }
 
-# Min and Max Pitch Reset
-var minmax = func {
-	var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
-	var alt = getprop("/it-autoflight/internal/alt");
-	var dif = calt - alt;
-	if (dif < 100 and dif > -100) {
-		setprop("/it-autoflight/internal/max-pitch", 8);
-		setprop("/it-autoflight/internal/min-pitch", -5);
-		var vertmode = getprop("/it-autoflight/output/vert");
-		if (vertmode == 1 or vertmode == 2 or vertmode == 4 or vertmode == 5 or vertmode == 6 or vertmode == 7) {
-			# Do not change the vertical mode because we are not trying to capture altitude.
-		} else {
-			setprop("/it-autoflight/mode/vert", "ALT HLD");
-		}
-		minmaxtimer.stop();
-	}
-}
-
+# ILS and Autoland
 # Retard
 setlistener("/controls/flight/flaps", func {
 	var flapc = getprop("/controls/flight/flaps");
@@ -574,11 +596,6 @@ var atoffchk = func{
 		atofft.stop();
 	}
 }
-
-# For Canvas Nav Display.
-setlistener("/it-autoflight/input/hdg", func {
-	setprop("/autopilot/settings/heading-bug-deg", getprop("/it-autoflight/input/hdg"));
-});
 
 # LOC and G/S arming
 var update_arms = func {
@@ -706,6 +723,11 @@ var cwspitch = func {
 	}
 }
 
+# For Canvas Nav Display.
+setlistener("/it-autoflight/input/hdg", func {
+	setprop("/autopilot/settings/heading-bug-deg", getprop("/it-autoflight/input/hdg"));
+});
+
 # Timers
 var altcaptt = maketimer(0.5, altcapt);
 var thrustmodet = maketimer(0.5, thrustmode);
@@ -719,3 +741,4 @@ var cwspitcht = maketimer(0.1, cwspitch);
 var reduct = maketimer(0.5, toga_reduc);
 var latarmt = maketimer(0.5, latarms);
 var fpa_calct = maketimer(0.1, fpa_calc);
+var lnavwptt = maketimer(1, lnavwpt);
