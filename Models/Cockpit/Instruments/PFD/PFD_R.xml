@@ -968,6 +968,26 @@ Modified by it0uchpods for KC-137R
         </font-resolution>
 	</text>
     <text>
+        <name>FPA</name>
+        <offsets>
+            <x-m>0.004</x-m>
+            <y-m>0.024</y-m>
+            <z-m>0.088</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">FPA</format>
+		<property>autopilot/serviceable</property>
+        <font>helvetica_bold.txf</font>
+        <character-size>0.007</character-size>
+        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
+        <font-resolution>
+            <width type="int">64</width>
+            <height type="int">64</height>
+        </font-resolution>
+	</text>
+    <text>
         <name>G/S</name>
         <offsets>
             <x-m>0.004</x-m>
@@ -1101,6 +1121,17 @@ Modified by it0uchpods for KC-137R
 			<equals>
 				<property>/it-autoflight/output/vert</property>
 				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<object-name>FPA</object-name>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>/it-autoflight/output/vert</property>
+				<value>5</value>
 			</equals>
 		</condition>
 	</animation>
@@ -1974,6 +2005,7 @@ Modified by it0uchpods for KC-137R
         <object-name>ALT</object-name>
         <object-name>FLCH</object-name>
         <object-name>V/S</object-name>
+        <object-name>FPA</object-name>
         <object-name>G/S</object-name>
         <object-name>LAND</object-name>
         <object-name>FLARE</object-name>

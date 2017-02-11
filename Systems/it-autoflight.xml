@@ -77,7 +77,6 @@
     </period>
     <gain>1.0</gain>
   </filter>
-  
 
   <filter>
     <name>LNAV HDG ERROR DEG</name>
@@ -550,6 +549,44 @@
 		</config>
 	</pid-controller>
 	
+	<pid-controller>
+		<name>FPA HOLD</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<equals>
+					<property>/it-autoflight/output/vert</property>
+					<value>5</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<property>/it-autoflight/internal/fpa</property>
+		</input>
+		<reference>
+			<property>/it-autoflight/input/fpa</property>
+		</reference>
+		<output>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
+		</output>
+		<config>
+			<Kp>
+				<property>/it-autoflight/config/cmd/fpa</property>
+			</Kp>
+			<beta>1.0</beta>
+			<alpha>0.1</alpha>
+			<gamma>0.0</gamma>
+			<Ti>1.0</Ti>
+			<Td>0.00001</Td>
+			<u_min>
+				<value>-10</value>
+			</u_min>
+			<u_max>
+				<value>30</value>
+			</u_max>
+		</config>
+	</pid-controller>
+	
 	<pi-simple-controller>
 		<name>AUTOLAND VS HOLD</name>
 		<debug>false</debug>
@@ -726,6 +763,61 @@
             </u_max>
 		</config>
 	</pid-controller>
+	
+	<pid-controller>
+		<name>TOGA SPEED BY PITCH</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/vert</property>
+						<value>7</value>
+					</equals>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<property>/it-autoflight/internal/lookahead-10-sec-airspeed-kt</property>
+		</input>
+		<reference>
+			<condition>
+				<equals>
+					<property>/it-autoflight/mode/vert</property>
+					<value>T/O CLB</value>
+				</equals>
+			</condition>
+			<property>/it-autoflight/settings/togaspd</property>
+		</reference>
+		<reference>
+			<condition>
+				<equals>
+					<property>/it-autoflight/mode/vert</property>
+					<value>G/A CLB</value>
+				</equals>
+			</condition>
+			<property>/it-autoflight/input/spd-kts</property>
+		</reference>
+		<output>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
+		</output>
+		<config>
+			<Kp>
+				<property>/it-autoflight/config/cmd/flch</property>
+			</Kp>
+			<beta>1.0</beta>    
+			<alpha>0.1</alpha>  
+			<gamma>0.0</gamma>  
+			<Ti>10.0</Ti>        
+			<Td>0.00001</Td>    
+            <u_min>
+                <value>1.5</value>
+            </u_min>
+            <u_max>
+                <value>25.0</value>
+            </u_max>
+		</config>
+	</pid-controller>
 
 	<pid-controller>
 		<name>IT-CONTROLLER: PITCH</name>
@@ -748,22 +840,7 @@
 			<property>/orientation/pitch-deg</property>
 		</input>
 		<reference>
-			<condition>
-				<not-equals>
-					<property>/it-autoflight/output/vert</property>
-					<value>7</value>
-				</not-equals>
-			</condition>
 			<property>/it-autoflight/internal/target-pitch-deg</property>
-		</reference>
-		<reference>
-			<condition>
-				<equals>
-					<property>/it-autoflight/output/vert</property>
-					<value>7</value>
-				</equals>
-			</condition>
-			<property>/it-autoflight/settings/toga-pitch</property>
 		</reference>
 		<output>
 			<property>/it-autoflight/internal/elevator-cmd</property>
@@ -1198,29 +1275,9 @@
 		<type>gain</type>
 		<gain>1.0</gain>
 		<input>
-			<condition>
-				<not-equals>
-					<property>/it-autoflight/output/vert</property>
-					<value>7</value>
-				</not-equals>
-			</condition>
 			<expression>
 				<dif>
 					<property>/it-autoflight/internal/target-pitch-deg</property>
-					<property>/orientation/pitch-deg</property>
-				</dif>
-			</expression>
-		</input>
-		<input>
-			<condition>
-				<equals>
-					<property>/it-autoflight/output/vert</property>
-					<value>7</value>
-				</equals>
-			</condition>
-			<expression>
-				<dif>
-					<property>/it-autoflight/settings/toga-pitch</property>
 					<property>/orientation/pitch-deg</property>
 				</dif>
 			</expression>
