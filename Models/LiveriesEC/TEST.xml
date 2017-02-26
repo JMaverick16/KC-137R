@@ -10,8 +10,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">USAF Sentry AWACS</name>
-            <texture>LiveriesEC/USAF-EC.png</texture>
+            <name type="string">Boeing EC-137R AWACS</name>
+            <texture>LiveriesEC/TEST.png</texture>
             <texture-container>LiveriesEC/FAE-container.png</texture-container>
         </livery>
     </model>
