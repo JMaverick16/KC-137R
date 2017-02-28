@@ -10,7 +10,7 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Luxembourg (NATO AWACS)</name>
+            <name type="string">NATO E-3A Component</name>
             <texture>LiveriesEC/NATO-EC.png</texture>
             <texture-container>LiveriesEC/FAE-container.png</texture-container>
         </livery>
