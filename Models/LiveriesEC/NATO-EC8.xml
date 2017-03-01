@@ -10,7 +10,7 @@
 <sim>
     <model>
         <livery>
-            <name type="string">NATO E-3A Component #8</name>
+            <name type="string">NATO LX-N90444</name>
             <texture>LiveriesEC/NATO-EC8.png</texture>
             <texture-container>LiveriesEC/FAE-container.png</texture-container>
         </livery>
