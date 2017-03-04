@@ -26,3 +26,55 @@ setlistener("engines/engine[2]/epr-actual", func {
 setlistener("engines/engine[3]/epr-actual", func {
   setprop("engines/engine[3]/epr-actualx100", (getprop("engines/engine[3]/epr-actual") * 100));
 });
+
+setprop("/controls/flight/flap-lever", 0);
+
+controls.flapsDown = func(step) {
+	if (step == 1) {
+		if (getprop("/controls/flight/flap-lever") == 0) {
+			setprop("/controls/special/slats-switch", 0.0);
+			setprop("/controls/flight/flaps", 0.2);
+			setprop("/controls/flight/flap-lever", 1);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 1) {
+			setprop("/controls/special/slats-switch", 1.0);
+			setprop("/controls/flight/flaps", 0.4);
+			setprop("/controls/flight/flap-lever", 2);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 2) {
+			setprop("/controls/special/slats-switch", 1.0);
+			setprop("/controls/flight/flaps", 0.6);
+			setprop("/controls/flight/flap-lever", 3);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 3) {
+			setprop("/controls/special/slats-switch", 1.0);
+			setprop("/controls/flight/flaps", 1.0);
+			setprop("/controls/flight/flap-lever", 4);
+			return;
+		}
+	} else if (step == -1) {
+		if (getprop("/controls/flight/flap-lever") == 4) {
+			setprop("/controls/special/slats-switch", 1.0);
+			setprop("/controls/flight/flaps", 0.6);
+			setprop("/controls/flight/flap-lever", 3);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 3) {
+			setprop("/controls/special/slats-switch", 1.0);
+			setprop("/controls/flight/flaps", 0.4);
+			setprop("/controls/flight/flap-lever", 2);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 2) {
+			setprop("/controls/special/slats-switch", 0.0);
+			setprop("/controls/flight/flaps", 0.2);
+			setprop("/controls/flight/flap-lever", 1);
+			return;
+		} else if (getprop("/controls/flight/flap-lever") == 1) {
+			setprop("/controls/special/slats-switch", 0.0);
+			setprop("/controls/flight/flaps", 0.0);
+			setprop("/controls/flight/flap-lever", 0);
+			return;
+		}
+	} else {
+		return 0;
+	}
+}
