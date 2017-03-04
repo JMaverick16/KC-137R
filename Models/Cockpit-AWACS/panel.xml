@@ -246,7 +246,7 @@
   </offsets>
 </model-->
 
-<!--model>
+<model>
   <name>gears_and_flaps</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/flapstack/flapstack.xml</path>
   <offsets>
@@ -254,7 +254,7 @@
     <y-m>  0.0</y-m>
     <z-m>  0.89</z-m>
   </offsets>
-</model-->
+</model>
 
 <!--model>
   <name>spoiler_and_flaps_warning</name>

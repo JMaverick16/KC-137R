@@ -662,6 +662,7 @@
 		<object-name>epr1</object-name>
 		<object-name>egt1</object-name>
 		<object-name>n21</object-name>
+		<object-name>ff1</object-name>
 		<condition>
 			<or>
 				<property>controls/engines/engine[0]/starter</property>
@@ -683,6 +684,7 @@
 		<object-name>epr2</object-name>
 		<object-name>egt2</object-name>
 		<object-name>n22</object-name>
+		<object-name>ff2</object-name>
 		<condition>
 			<or>
 				<property>controls/engines/engine[1]/starter</property>
@@ -704,6 +706,7 @@
 		<object-name>epr3</object-name>
 		<object-name>egt3</object-name>
 		<object-name>n23</object-name>
+		<object-name>ff3</object-name>
 		<condition>
 			<or>
 				<property>controls/engines/engine[2]/starter</property>
@@ -725,6 +728,7 @@
 		<object-name>epr4</object-name>
 		<object-name>egt4</object-name>
 		<object-name>n24</object-name>
+		<object-name>ff4</object-name>
 		<condition>
 			<or>
 				<property>controls/engines/engine[3]/starter</property>
@@ -1655,6 +1659,252 @@
 		</font-resolution>
 	</text>
 	
+	<text>
+		<name>ff</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.1250</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">FF</format>
+		<property>autopilot/serviceable</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.0045</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>ff1</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.1050</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%5.0f</format>
+		<property>engines/engine[0]/fuel-flow_pph</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.0045</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>XX1</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.1050</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">XX </format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>ff2</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0733</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%5.0f</format>
+		<property>engines/engine[1]/fuel-flow_pph</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.0045</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>XX2</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0733</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">XX </format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>ff3</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0417</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%5.0f</format>
+		<property>engines/engine[2]/fuel-flow_pph</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.0045</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>XX3</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0417</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">XX </format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>ff4</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0102</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%5.0f</format>
+		<property>engines/engine[3]/fuel-flow_pph</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.0045</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>XX4</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0102</y-m>
+			<z-m>-0.0302</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">XX </format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+    <text>
+        <name>spdbrk</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0770</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">SPEEDBRAKE EXT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>spdbrk</object-name>
+		<condition>
+			<greater-than>
+				<property>/controls/flight/spoilers</property>
+				<value>0</value>
+			</greater-than>
+		</condition>
+	</animation>
+	
 	<animation>
 		<type>material</type> <!-- White -->
 		<object-name>osgtext-white</object-name>
@@ -1674,7 +1924,13 @@
 		<object-name>n22</object-name>
 		<object-name>n23</object-name>
 		<object-name>n24</object-name>
+		<object-name>ff</object-name>
+		<object-name>ff1</object-name>
+		<object-name>ff2</object-name>
+		<object-name>ff3</object-name>
+		<object-name>ff4</object-name>
 		<object-name>flap-pos</object-name>
+		<object-name>spdbrk</object-name>
 		<diffuse>
 			<red>1</red>
 			<green>1</green>
