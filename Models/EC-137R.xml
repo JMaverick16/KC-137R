@@ -146,6 +146,11 @@
 	<object-name>doorRefuel</object-name>
 	<object-name>Radome</object-name>
 	<object-name>RadomeSup</object-name>
+	<object-name>SideRadars</object-name>
+	<object-name>Tailend</object-name>
+	<object-name>Tailend.001</object-name>
+	<object-name>Noseradar</object-name>
+	<object-name>E-3antennas</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>EC-137.png</texture>
