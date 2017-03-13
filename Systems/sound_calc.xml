@@ -2,8 +2,6 @@
 
 <PropertyList>
 
-<!-- N1 whee -->
-
 <filter>
   <type>gain</type>
   <gain>1</gain>
@@ -13,14 +11,16 @@
         <table>
           <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.58</dep></entry>
+			<entry><ind>0.05</ind> <dep>0.90</dep></entry>
+			<entry><ind>0.15</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.00</dep></entry>
         </table>
-		
+      
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/a12</prop>
+    <prop>sim/sound/engines/a1strt</prop>
   </output>
 </filter>
 
@@ -32,55 +32,16 @@
       <product>
         <table>
           <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.78</dep></entry>
+			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.05</ind> <dep>0.70</dep></entry>
+			<entry><ind>0.22</ind> <dep>1.50</dep></entry>
         </table>
-		
+      
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/a12x</prop>
-  </output>
-</filter>
-
-<filter>
-  <type>gain</type>
-  <gain>1</gain>
-  <input>
-    <expression>
-      <product>
-        <table>
-          <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.00</ind> <dep>0.90</dep></entry>
-			<entry><ind>1.00</ind> <dep>2.00</dep></entry>
-        </table>
-		
-      </product>
-    </expression>
-  </input>
-  <output>
-    <prop>sim/sound/engines/a12p</prop>
-  </output>
-</filter>
-
-<filter>
-  <type>gain</type>
-  <gain>1</gain>
-  <input>
-    <expression>
-      <product>
-        <table>
-          <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.58</dep></entry>
-        </table>
-		
-      </product>
-    </expression>
-  </input>
-  <output>
-    <prop>sim/sound/engines/b12</prop>
+    <prop>sim/sound/engines/a1strtp</prop>
   </output>
 </filter>
 
@@ -93,14 +54,16 @@
         <table>
           <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.78</dep></entry>
+			<entry><ind>0.05</ind> <dep>0.90</dep></entry>
+			<entry><ind>0.15</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.00</dep></entry>
         </table>
-		
+      
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/b12x</prop>
+    <prop>sim/sound/engines/b1strt</prop>
   </output>
 </filter>
 
@@ -112,15 +75,16 @@
       <product>
         <table>
           <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.00</ind> <dep>0.90</dep></entry>
-			<entry><ind>1.00</ind> <dep>2.00</dep></entry>
+			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.05</ind> <dep>0.70</dep></entry>
+			<entry><ind>0.22</ind> <dep>1.50</dep></entry>
         </table>
-		
+      
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/b12p</prop>
+    <prop>sim/sound/engines/b1strtp</prop>
   </output>
 </filter>
 
@@ -133,14 +97,16 @@
         <table>
           <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.58</dep></entry>
+			<entry><ind>0.05</ind> <dep>0.90</dep></entry>
+			<entry><ind>0.15</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.00</dep></entry>
         </table>
-		
+      
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/c12</prop>
+    <prop>sim/sound/engines/c1strt</prop>
   </output>
 </filter>
 
@@ -152,35 +118,16 @@
       <product>
         <table>
           <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.78</dep></entry>
+			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.05</ind> <dep>0.70</dep></entry>
+			<entry><ind>0.22</ind> <dep>1.50</dep></entry>
         </table>
-		
+      
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/c12x</prop>
-  </output>
-</filter>
-
-<filter>
-  <type>gain</type>
-  <gain>1</gain>
-  <input>
-    <expression>
-      <product>
-        <table>
-          <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.00</ind> <dep>0.90</dep></entry>
-			<entry><ind>1.00</ind> <dep>2.00</dep></entry>
-        </table>
-		
-      </product>
-    </expression>
-  </input>
-  <output>
-    <prop>sim/sound/engines/c12p</prop>
+    <prop>sim/sound/engines/c1strtp</prop>
   </output>
 </filter>
 
@@ -193,14 +140,16 @@
         <table>
           <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.58</dep></entry>
+			<entry><ind>0.05</ind> <dep>0.90</dep></entry>
+			<entry><ind>0.15</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.00</dep></entry>
         </table>
-		
+      
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/d12</prop>
+    <prop>sim/sound/engines/d1strt</prop>
   </output>
 </filter>
 
@@ -212,41 +161,43 @@
       <product>
         <table>
           <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.78</dep></entry>
+			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.05</ind> <dep>0.70</dep></entry>
+			<entry><ind>0.22</ind> <dep>1.50</dep></entry>
         </table>
-		
+      
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/d12x</prop>
-  </output>
-</filter>
-
-<filter>
-  <type>gain</type>
-  <gain>1</gain>
-  <input>
-    <expression>
-      <product>
-        <table>
-          <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.00</ind> <dep>0.90</dep></entry>
-			<entry><ind>1.00</ind> <dep>2.00</dep></entry>
-        </table>
-		
-      </product>
-    </expression>
-  </input>
-  <output>
-    <prop>sim/sound/engines/d12p</prop>
+    <prop>sim/sound/engines/d1strtp</prop>
   </output>
 </filter>
 
 
-<!-- N1 rrrr -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+	ENGINE VOLUME
+-->
 <filter>
   <type>gain</type>
   <gain>1</gain>
@@ -255,15 +206,16 @@
       <product>
         <table>
           <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.77</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.55</dep></entry>
+			<entry><ind>0.06</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.40</dep></entry>
+			<entry><ind>0.40</ind> <dep>0.15</dep></entry>
+			<entry><ind>0.50</ind> <dep>0.00</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/a13</prop>
+    <prop>FL2070/sound/a11</prop>
   </output>
 </filter>
 
@@ -274,16 +226,17 @@
     <expression>
       <product>
         <table>
-          <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.77</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.25</dep></entry>
+          <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.06</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.40</dep></entry>
+			<entry><ind>0.40</ind> <dep>0.15</dep></entry>
+			<entry><ind>0.50</ind> <dep>0.00</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/a13x</prop>
+    <prop>FL2070/sound/b11</prop>
   </output>
 </filter>
 
@@ -295,15 +248,16 @@
       <product>
         <table>
           <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.70</ind> <dep>0.735</dep></entry>
-			<entry><ind>1.00</ind> <dep>1.05</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.50</ind> <dep>0.30</dep></entry>
+			<entry><ind>0.90</ind> <dep>0.25</dep></entry>
+			<entry><ind>0.99</ind> <dep>0.08</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/a13p</prop>
+    <prop>FL2070/sound/a12</prop>
   </output>
 </filter>
 
@@ -315,15 +269,35 @@
       <product>
         <table>
           <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.77</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.55</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.50</ind> <dep>0.30</dep></entry>
+			<entry><ind>0.90</ind> <dep>0.25</dep></entry>
+			<entry><ind>0.99</ind> <dep>0.08</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/b13</prop>
+    <prop>FL2070/sound/b12</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.85</ind> <dep>0.00</dep></entry>
+			<entry><ind>1.08</ind> <dep>0.70</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/a13</prop>
   </output>
 </filter>
 
@@ -335,15 +309,182 @@
       <product>
         <table>
           <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.77</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.25</dep></entry>
+			<entry><ind>0.85</ind> <dep>0.00</dep></entry>
+			<entry><ind>1.08</ind> <dep>0.70</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/b13x</prop>
+    <prop>FL2070/sound/b13</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.06</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.40</dep></entry>
+			<entry><ind>0.40</ind> <dep>0.15</dep></entry>
+			<entry><ind>0.50</ind> <dep>0.00</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/c11</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.06</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.40</dep></entry>
+			<entry><ind>0.40</ind> <dep>0.15</dep></entry>
+			<entry><ind>0.50</ind> <dep>0.00</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/d11</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.22</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.50</ind> <dep>0.30</dep></entry>
+			<entry><ind>0.90</ind> <dep>0.25</dep></entry>
+			<entry><ind>0.99</ind> <dep>0.08</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/c12</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.22</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.50</ind> <dep>0.30</dep></entry>
+			<entry><ind>0.90</ind> <dep>0.25</dep></entry>
+			<entry><ind>0.99</ind> <dep>0.08</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/d12</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.85</ind> <dep>0.00</dep></entry>
+			<entry><ind>1.08</ind> <dep>0.70</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/c13</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.85</ind> <dep>0.00</dep></entry>
+			<entry><ind>1.08</ind> <dep>0.70</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/d13</prop>
+  </output>
+</filter>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+	ENGINE PITCH
+-->
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.15</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.22</ind> <dep>1.00</dep></entry>
+			<entry><ind>0.50</ind> <dep>1.30</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/a11p</prop>
   </output>
 </filter>
 
@@ -355,15 +496,93 @@
       <product>
         <table>
           <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.70</ind> <dep>0.735</dep></entry>
-			<entry><ind>1.00</ind> <dep>1.05</dep></entry>
+			<entry><ind>0.15</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.22</ind> <dep>1.00</dep></entry>
+			<entry><ind>0.50</ind> <dep>1.30</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/b13p</prop>
+    <prop>FL2070/sound/b11p</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.22</ind> <dep>0.70</dep></entry>
+			<entry><ind>0.95</ind> <dep>2.20</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/a12p</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.22</ind> <dep>0.70</dep></entry>
+			<entry><ind>0.95</ind> <dep>2.20</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/b12p</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.90</ind> <dep>0.80</dep></entry>
+			<entry><ind>1.01</ind> <dep>0.90</dep></entry>
+			<entry><ind>1.08</ind> <dep>0.96</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/a13p</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.90</ind> <dep>0.80</dep></entry>
+			<entry><ind>1.01</ind> <dep>0.90</dep></entry>
+			<entry><ind>1.08</ind> <dep>0.96</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/b13p</prop>
   </output>
 </filter>
 
@@ -375,15 +594,35 @@
       <product>
         <table>
           <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.77</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.55</dep></entry>
+			<entry><ind>0.15</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.22</ind> <dep>1.00</dep></entry>
+			<entry><ind>0.50</ind> <dep>1.30</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/c13</prop>
+    <prop>FL2070/sound/c11p</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.15</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.22</ind> <dep>1.00</dep></entry>
+			<entry><ind>0.50</ind> <dep>1.30</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/d11p</prop>
   </output>
 </filter>
 
@@ -395,15 +634,33 @@
       <product>
         <table>
           <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.77</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.25</dep></entry>
+			<entry><ind>0.22</ind> <dep>0.70</dep></entry>
+			<entry><ind>0.95</ind> <dep>2.20</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/c13x</prop>
+    <prop>FL2070/sound/c12p</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
+			<entry><ind>0.22</ind> <dep>0.70</dep></entry>
+			<entry><ind>0.95</ind> <dep>2.20</dep></entry>
+        </table>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>FL2070/sound/d12p</prop>
   </output>
 </filter>
 
@@ -415,15 +672,15 @@
       <product>
         <table>
           <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.70</ind> <dep>0.735</dep></entry>
-			<entry><ind>1.00</ind> <dep>1.05</dep></entry>
+			<entry><ind>0.90</ind> <dep>0.80</dep></entry>
+			<entry><ind>1.01</ind> <dep>0.90</dep></entry>
+			<entry><ind>1.08</ind> <dep>0.96</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/c13p</prop>
+    <prop>FL2070/sound/c13p</prop>
   </output>
 </filter>
 
@@ -435,15 +692,92 @@
       <product>
         <table>
           <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.77</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.55</dep></entry>
+			<entry><ind>0.90</ind> <dep>0.80</dep></entry>
+			<entry><ind>1.01</ind> <dep>0.90</dep></entry>
+			<entry><ind>1.08</ind> <dep>0.96</dep></entry>
         </table>
-		
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/d13</prop>
+    <prop>FL2070/sound/d13p</prop>
+  </output>
+</filter>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/sim/current-view/z-offset-m</property><value>1</value>  </product>
+            <entry><ind>-5.0</ind> <dep>0.11</dep></entry>
+			<entry><ind>0.00</ind> <dep>1.00</dep></entry>
+			<entry><ind>15.0</ind> <dep>0.11</dep></entry>
+        </table>
+		<property>sim/current-view/internal</property>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>sim/sound/other/flaps</prop>
   </output>
 </filter>
 
@@ -454,16 +788,17 @@
     <expression>
       <product>
         <table>
-          <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.77</ind> <dep>0.00</dep></entry>
-			<entry><ind>1.00</ind> <dep>0.25</dep></entry>
+          <product><property>/sim/current-view/z-offset-m</property><value>1</value>  </product>
+            <entry><ind>-8.0</ind> <dep>0.10</dep></entry>
+			<entry><ind>0.00</ind> <dep>1.00</dep></entry>
+			<entry><ind>22.0</ind> <dep>0.10</dep></entry>
         </table>
-		
+		<property>sim/current-view/internal</property>
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/d13x</prop>
+    <prop>sim/sound/other/gear</prop>
   </output>
 </filter>
 
@@ -474,16 +809,16 @@
     <expression>
       <product>
         <table>
-          <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.70</ind> <dep>0.735</dep></entry>
-			<entry><ind>1.00</ind> <dep>1.05</dep></entry>
+          <product><property>/position/altitude-agl-ft</property><value>1</value>  </product>
+			<entry><ind>300</ind>  <dep>1.00</dep></entry>
+			<entry><ind>301</ind>  <dep>0.00</dep></entry>
         </table>
-		
+		<property>sim/current-view/internal</property>
       </product>
-    </expression>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/engines/d13p</prop>
+    <prop>sim/sound/other/callout</prop>
   </output>
 </filter>
 
@@ -492,14 +827,58 @@
   <gain>1</gain>
   <input>
     <expression>
-	  <dif>
-	    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
-	    <property>/it-autoflight/internal/alt</property>
-	  </dif>
-    </expression>
+      <product>
+        <table>
+          <product><property>/sim/current-view/z-offset-m</property><value>1</value>  </product>
+            <entry><ind>-11</ind>  <dep>0.00</dep></entry>
+			<entry><ind>-12</ind>  <dep>1.00</dep></entry>
+        </table>
+		<property>sim/current-view/internal</property>
+      </product>
+    </expression> 
   </input>
   <output>
-    <prop>sim/sound/altalert</prop>
+    <prop>sim/sound/other/callout2</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/velocities/groundspeed-kt</property><value>1</value>  </product>
+            <entry><ind>0.00</ind> <dep>0.07</dep></entry>
+			<entry><ind>450</ind>  <dep>1.00</dep></entry>
+        </table>
+		<property>sim/current-view/internal</property>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>sim/sound/other/wind</prop>
+  </output>
+</filter>
+
+<filter>
+  <type>gain</type>
+  <gain>1</gain>
+  <input>
+    <expression>
+      <product>
+        <table>
+          <product><property>/velocities/groundspeed-kt</property><value>1</value>  </product>
+            <entry><ind>0.00</ind> <dep>1.00</dep></entry>
+			<entry><ind>450</ind>  <dep>2.00</dep></entry>
+        </table>
+		<property>sim/current-view/internal</property>
+      </product>
+    </expression> 
+  </input>
+  <output>
+    <prop>sim/sound/other/windp</prop>
   </output>
 </filter>
 

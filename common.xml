@@ -74,7 +74,7 @@
 	</airport>
 
   <sound>
-      <path>Aircraft/KC-137R/Sounds/707-sound.xml</path>
+      <path>Aircraft/KC-137R/Sounds/cfm56-sound.xml</path>
       <switch type = "bool">0</switch>
       <stall-horn type="bool">0</stall-horn>
   </sound> 
@@ -301,7 +301,7 @@
 			<alt>0.025</alt>
 			<vs>0.08</vs>
 			<fpa>0.30</fpa>
-			<flch>-0.35</flch>
+			<flch>-4.0</flch>
 			<gs>0.14</gs>
 		</cmd>
 		<autoland>
@@ -317,7 +317,7 @@
 		<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
 		<retard-ft>20</retard-ft> <!-- Enable Thrust Retard -->
 		<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
-		<togaspd>158</togaspd> <!-- V2 + 10kts -->
+		<togaspd>164</togaspd> <!-- V2 + 10kts -->
 		<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
 		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
 	</settings>
@@ -386,6 +386,9 @@
 			<epr type="bool">false</epr>
 			<kp>0.01</kp>
 			<kp-spd>0.30</kp-spd>
+			<n1-roc-thr>20</n1-roc-thr>
+			<n1-roc-pitch>5</n1-roc-pitch>
+			<n1-roc-retard>20</n1-roc-retard>
 			<engine-start-switch type="int">1</engine-start-switch>
 			<engine n="0">
 				<cutoff type="bool">true</cutoff>
