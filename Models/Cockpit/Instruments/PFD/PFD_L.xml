@@ -712,7 +712,7 @@ Modified by it0uchpods for KC-137R
 	</animation>
 	<animation>
 		<type>select</type>
-		<object-name>PITCH</object-name>
+		<object-name>TPITCH</object-name>
 		<condition>
 			<equals>
 				<property>/it-autoflight/mode/thr</property>
