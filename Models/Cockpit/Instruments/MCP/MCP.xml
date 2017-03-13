@@ -13,6 +13,18 @@
     <y-offset>0.7</y-offset>
     <z-offset>0.7</z-offset>
     </animation>
+	
+	<animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation>
 
 	<!-- ANIMATIONS -->
 	<!-- Lighting -->

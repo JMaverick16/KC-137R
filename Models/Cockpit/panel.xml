@@ -80,6 +80,16 @@
 </model>
 
 <model>
+  <name>AoA</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AOA/aoa.xml</path>
+  <offsets>
+    <x-m>-18.917</x-m>
+    <y-m>-0.225</y-m>
+    <z-m>0.897</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>pneumatic_brake</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/pneubrake/pneubrake.xml</path>
   <offsets>
@@ -351,6 +361,16 @@
     <x-m>-18.922</x-m>
     <y-m>0.536</y-m>
     <z-m>0.893</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>AoA</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AOA/aoa.xml</path>
+  <offsets>
+    <x-m>-18.917</x-m>
+    <y-m>0.611</y-m>
+    <z-m>0.897</z-m>
   </offsets>
 </model>
 

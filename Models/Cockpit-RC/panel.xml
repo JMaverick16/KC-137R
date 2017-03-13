@@ -58,6 +58,16 @@
 </model>
 
 <model>
+  <name>AoA</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AOA/aoa.xml</path>
+  <offsets>
+    <x-m>-18.915</x-m>
+    <y-m>-0.292</y-m>
+    <z-m>0.965</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>pneumatic_brake</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/pneubrake/pneubrake.xml</path>
   <offsets>
@@ -132,8 +142,8 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/speed-limit.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.32</y-m>
-    <z-m>0.966</z-m>
+    <y-m>-0.47</y-m>
+    <z-m>0.948</z-m>
   </offsets>
 </model>
 
@@ -263,11 +273,21 @@
 <!-- Copilot Panel -->
 
 <model>
+  <name>AoA</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AOA/aoa.xml</path>
+  <offsets>
+    <x-m>-18.92</x-m>
+    <y-m>0.22</y-m>
+    <z-m>0.963</z-m>
+  </offsets>
+</model>
+
+<model>
   <name>operating_time_indicator</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/operating_time/opt.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.219</y-m>
+    <y-m>0.28</y-m>
     <z-m>0.963</z-m>
   </offsets>
 </model>
@@ -277,7 +297,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/tat/tat.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>0.27</y-m>
+    <y-m>0.333</y-m>
     <z-m>0.963</z-m>
   </offsets>
 </model>
