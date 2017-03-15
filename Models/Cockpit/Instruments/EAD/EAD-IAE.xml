@@ -813,6 +813,30 @@
 	
 	<!-- EPR -->
 	<text>
+		<name>eprl</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0679</y-m>
+			<z-m> 0.0928</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">EPR</format>
+		<property>autopilot/serviceable</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
 		<name>epr1</name>
 		<offsets>
 			<x-m> 0.00018</x-m>
@@ -1094,6 +1118,30 @@
 	
 	<!-- N1 -->
 	<text>
+		<name>n1l</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0679</y-m>
+			<z-m> 0.0636</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">N1</format>
+		<property>autopilot/serviceable</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
 		<name>n11</name>
 		<offsets>
 			<x-m> 0.00018</x-m>
@@ -1282,6 +1330,30 @@
 	</text>
 	
 	<!-- EGT -->
+	<text>
+		<name>egtl</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0679</y-m>
+			<z-m> 0.0348</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">EGT</format>
+		<property>autopilot/serviceable</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
 	<text>
 		<name>egt1</name>
 		<offsets>
@@ -1472,6 +1544,30 @@
 	
 	<!-- N2 -->
 	<text>
+		<name>n2l</name>
+		<offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.0679</y-m>
+			<z-m> 0.0058</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">N2</format>
+		<property>autopilot/serviceable</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
 		<name>n21</name>
 		<offsets>
 			<x-m> 0.00018</x-m>
@@ -1660,7 +1756,7 @@
 	</text>
 	
 	<text>
-		<name>ff</name>
+		<name>ffl</name>
 		<offsets>
 			<x-m> 0.00018</x-m>
 			<y-m>-0.1250</y-m>
@@ -1871,8 +1967,33 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>spdbrk</name>
+	<!-- Status -->
+	
+	<text>
+        <name>spdbrka</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0770</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">SPEEDBRAKE ARM</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+        <name>spdbrke</name>
         <offsets>
 			<x-m> 0.00018</x-m>
 			<y-m>-0.1300</y-m>
@@ -1896,7 +2017,24 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>spdbrk</object-name>
+		<object-name>spdbrka</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>/controls/flight/speedbrake-arm</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/controls/flight/spoilers</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>spdbrke</object-name>
 		<condition>
 			<greater-than>
 				<property>/controls/flight/spoilers</property>
@@ -1905,32 +2043,190 @@
 		</condition>
 	</animation>
 	
+	<!-- Warnings -->
+	
+	<text>
+        <name>ensh</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m> 0.0010</y-m>
+			<z-m>-0.0770</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">ENG SHUTDOWN!</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
 	<animation>
-		<type>material</type> <!-- White -->
+		<type>select</type>
+		<object-name>ensh</object-name>
+		<condition>
+			<or>
+				<less-than>
+					<property>engines/engine[0]/n2</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[1]/n2</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[2]/n2</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[3]/n2</property>
+					<value>45</value>
+				</less-than>
+			</or>
+		</condition>
+	</animation>
+	
+	<text>
+        <name>overeprlim</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m> 0.0010</y-m>
+			<z-m>-0.0830</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">EPR OVER LIMIT!</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>overeprlim</object-name>
+		<condition>
+			<and>
+				<or>
+					<greater-than>
+						<property>engines/engine[0]/epr-actual</property>
+						<property>controls/engines/eprlim</property>
+					</greater-than>
+					<greater-than>
+						<property>engines/engine[1]/epr-actual</property>
+						<property>controls/engines/eprlim</property>
+					</greater-than>
+					<greater-than>
+						<property>engines/engine[2]/epr-actual</property>
+						<property>controls/engines/eprlim</property>
+					</greater-than>
+					<greater-than>
+						<property>engines/engine[3]/epr-actual</property>
+						<property>controls/engines/eprlim</property>
+					</greater-than>
+				</or>
+				<property>/controls/engines/epr</property>
+			</and>
+		</condition>
+	</animation>
+	
+	<text>
+        <name>overn1lim</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m> 0.0010</y-m>
+			<z-m>-0.0830</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">N1 OVER LIMIT!</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>overn1lim</object-name>
+		<condition>
+			<and>
+				<or>
+					<greater-than>
+						<property>engines/engine[0]/n1</property>
+						<property>controls/engines/n1limx100</property>
+					</greater-than>
+					<greater-than>
+						<property>engines/engine[1]/n1</property>
+						<property>controls/engines/n1limx100</property>
+					</greater-than>
+					<greater-than>
+						<property>engines/engine[2]/n1</property>
+						<property>controls/engines/n1limx100</property>
+					</greater-than>
+					<greater-than>
+						<property>engines/engine[3]/epr-actual</property>
+						<property>controls/engines/n1limx100</property>
+					</greater-than>
+				</or>
+				<not><property>/controls/engines/epr</property></not>
+			</and>
+		</condition>
+	</animation>
+	
+	<!-- White -->
+	<animation>
+		<type>material</type>
 		<object-name>osgtext-white</object-name>
+		<object-name>eprl</object-name>
 		<object-name>epr1</object-name>
 		<object-name>epr2</object-name>
 		<object-name>epr3</object-name>
 		<object-name>epr4</object-name>
+		<object-name>n1l</object-name>
 		<object-name>n11</object-name>
 		<object-name>n12</object-name>
 		<object-name>n13</object-name>
 		<object-name>n14</object-name>
+		<object-name>egtl</object-name>
 		<object-name>egt1</object-name>
 		<object-name>egt2</object-name>
 		<object-name>egt3</object-name>
 		<object-name>egt4</object-name>
+		<object-name>n2l</object-name>
+		<object-name>n2l</object-name>
 		<object-name>n21</object-name>
 		<object-name>n22</object-name>
 		<object-name>n23</object-name>
 		<object-name>n24</object-name>
-		<object-name>ff</object-name>
+		<object-name>ffl</object-name>
 		<object-name>ff1</object-name>
 		<object-name>ff2</object-name>
 		<object-name>ff3</object-name>
 		<object-name>ff4</object-name>
 		<object-name>flap-pos</object-name>
-		<object-name>spdbrk</object-name>
+		<object-name>spdbrke</object-name>
 		<diffuse>
 			<red>1</red>
 			<green>1</green>
@@ -1953,8 +2249,35 @@
 		</emission>
 	</animation>
 	
+	<!-- Light Blue -->
 	<animation>
-		<type>material</type> <!-- Orange -->
+		<type>material</type> 
+		<object-name>spdbrka</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>0.75</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>0.75</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
+	
+	<!-- Orange -->
+	<animation>
+		<type>material</type>
 		<object-name>XX1</object-name>
 		<object-name>XX2</object-name>
 		<object-name>XX3</object-name>
@@ -1985,6 +2308,34 @@
 		<emission>
 			<red>1</red>
 			<green>0.45</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+	
+	<!-- Yellow -->
+	<animation>
+		<type>material</type>
+		<object-name>ensh</object-name>
+		<object-name>overeprlim</object-name>
+		<object-name>overn1lim</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>1</green>
 			<blue>0</blue>
 		</emission>
 	</animation>

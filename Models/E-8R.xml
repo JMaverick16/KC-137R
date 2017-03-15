@@ -1882,7 +1882,7 @@
  <animation>
   <type>rotate</type>
   <object-name>lhelevator</object-name>
-  <property>controls/flight/elevator</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <factor>15</factor>
   <offset-deg>0</offset-deg>   
   <center>
@@ -1900,7 +1900,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhelevator</object-name>
-  <property>controls/flight/elevator</property>
+  <property>sim/multiplay/generic/float[11]</property>
   <factor>15</factor>
   <offset-deg>0</offset-deg>   
   <center>
