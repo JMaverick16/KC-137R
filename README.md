@@ -12,11 +12,11 @@ This repo contains 6 military aircrafts derived from the Boeing 707 and it's var
 
 - E-8R Joint STARS: Advanced ground surveillance, battle management, command and control aircraft (IAE V2528-D5).
 
-- C-137R Stratolifter/Stratoliner: Advanced military transport aircraft and VIP clipper (IAE V2528-D5).
+- C-137R Stratoliner: Advanced military transport aircraft and VIP clipper, featuring glass cockpit (IAE V2528-D5).
 
 AUTHORS:
 * MD-GRK (themadgreek): Original KC-137R project idea with CFM LEAP X engines.
-* J Maverick 16: Initial contribution and update of original model and current maintainer and developer.
+* J Maverick 16: Initial contribution and update of original model; current maintainer and developer.
 * Joshua Davidson (it0uchpods): Further contribution, introduction of the other variants and reconfiguration of cockpit, systems, FDM, Autopilot, Sounds, and many more; current maintainer.
 * peter305305: Minor sound update.
 * FL2070: Custom sound pack for engines and other.
@@ -29,7 +29,7 @@ AUTHORS:
 * D-ECHO: First RC-137R 3D version.
 * chad3006: Instrument textures for Block 45 update.
 * Jabberwocky (JWOCKY): Technical help and suggestions.
-* Garry Brown (N-SCOT): C-137R livery artwork.
+* Garry Brown (N-SCOT): C-137R HD livery package.
 * Some other people helped in the project with minor contributions.
 
 The original 707 work was done by Innis Cunningham and then Mark Kraus from the Lake of Constance Hangar.
