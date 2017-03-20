@@ -2,6 +2,20 @@
     <path>radial.ac</path>
 	
     <animation>
+        <name>comm1</name>
+		<object-name>digit100</object-name>
+		<object-name>digit10</object-name>
+		<object-name>digit1</object-name>
+        <type>select</type>
+        <condition>
+            <greater-than>
+                <property>systems/electrical/outputs/efis</property>
+                <value>5</value>
+            </greater-than>
+        </condition>
+    </animation>
+	
+    <animation>
 		<name>Panel lighting</name>
 		<type>material</type>
 		<object-name>face</object-name>
