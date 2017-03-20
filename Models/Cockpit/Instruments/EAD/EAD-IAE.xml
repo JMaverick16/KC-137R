@@ -2124,19 +2124,19 @@
 				<or>
 					<greater-than>
 						<property>engines/engine[0]/epr-actual</property>
-						<property>controls/engines/eprlim</property>
+						<property>controls/engines/eproverlim</property>
 					</greater-than>
 					<greater-than>
 						<property>engines/engine[1]/epr-actual</property>
-						<property>controls/engines/eprlim</property>
+						<property>controls/engines/eproverlim</property>
 					</greater-than>
 					<greater-than>
 						<property>engines/engine[2]/epr-actual</property>
-						<property>controls/engines/eprlim</property>
+						<property>controls/engines/eproverlim</property>
 					</greater-than>
 					<greater-than>
 						<property>engines/engine[3]/epr-actual</property>
-						<property>controls/engines/eprlim</property>
+						<property>controls/engines/eproverlim</property>
 					</greater-than>
 				</or>
 				<property>/controls/engines/epr</property>
@@ -2175,19 +2175,19 @@
 				<or>
 					<greater-than>
 						<property>engines/engine[0]/n1</property>
-						<property>controls/engines/n1limx100</property>
+						<property>controls/engines/n1overlim</property>
 					</greater-than>
 					<greater-than>
 						<property>engines/engine[1]/n1</property>
-						<property>controls/engines/n1limx100</property>
+						<property>controls/engines/n1overlim</property>
 					</greater-than>
 					<greater-than>
 						<property>engines/engine[2]/n1</property>
-						<property>controls/engines/n1limx100</property>
+						<property>controls/engines/n1overlim</property>
 					</greater-than>
 					<greater-than>
 						<property>engines/engine[3]/epr-actual</property>
-						<property>controls/engines/n1limx100</property>
+						<property>controls/engines/n1overlim</property>
 					</greater-than>
 				</or>
 				<not><property>/controls/engines/epr</property></not>

@@ -3,5 +3,6 @@
 setlistener("/sim/signals/fdm-initialized", func {
 	setprop("/controls/engines/n1lim", 0.971);
 	setprop("/controls/engines/n1limx100", 97.1);
+	setprop("/controls/engines/n1overlim", 97.5);
 	print("Thrust System ... OK!");
 });
