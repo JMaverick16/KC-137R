@@ -141,6 +141,10 @@
 	<object-name>rhobail</object-name>
 	<object-name>lhobail</object-name>
 	<object-name>Winglets</object-name>
+	<object-name>C32antennas.002</object-name>
+	<object-name>C32antennas</object-name>
+	<object-name>C32antennas.001</object-name>
+	<object-name>C32antennas.003</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>C-137R.png</texture>
