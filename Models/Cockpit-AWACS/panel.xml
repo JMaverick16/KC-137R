@@ -64,12 +64,12 @@
 </model>
 
 <model>
-  <name>AoA_cp</name>
+  <name>AoA</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AOA/aoa.xml</path>
   <offsets>
     <x-m>-18.915</x-m>
-    <y-m>-0.292</y-m>
-    <z-m>0.965</z-m>
+    <y-m>-0.29</y-m>
+    <z-m>0.963</z-m>
   </offsets>
 </model>
 
@@ -88,7 +88,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/chronometer/chronometer.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.546</y-m>
+    <y-m>-0.549</y-m>
     <z-m>0.709</z-m>
   </offsets>
 </model>
@@ -98,7 +98,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
   <offsets>
     <x-m>-18.922</x-m>
-    <y-m>-0.466</y-m>
+    <y-m>-0.47</y-m>
     <z-m>0.71</z-m>
   </offsets>
 </model>
@@ -108,7 +108,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-asi/stby-asi.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>-0.385</y-m>
+    <y-m>-0.39</y-m>
     <z-m>0.707</z-m>
   </offsets>
 </model>
@@ -139,7 +139,7 @@
   <offsets>
     <x-m>-18.916</x-m>
       <y-m>-0.62</y-m>
-    <z-m>0.843</z-m>
+    <z-m>0.844</z-m>
   </offsets>
 </model>
 
@@ -149,7 +149,7 @@
   <offsets>
     <x-m>-18.916</x-m>
     <y-m>-0.47</y-m>
-    <z-m>0.948</z-m>
+    <z-m>0.949</z-m>
   </offsets>
 </model>
 
@@ -158,8 +158,8 @@
     <path>Aircraft/KC-137R/Models/Cockpit/Equipment/eng_panel/hydraulic/hydSystem.xml</path>
   <offsets>
       <x-m>-18.916</x-m>
-      <y-m>-0.618</y-m>
-      <z-m>0.705</z-m>
+      <y-m>-0.619</y-m>
+      <z-m>0.708</z-m>
       <heading-deg>90</heading-deg>
   </offsets>
 </model>
@@ -181,16 +181,6 @@
 </model>
 
 <model>
-  <name>altm</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/altm/altm.xml</path>
-  <offsets>
-      <x-m>-18.92</x-m>
-      <y-m>-0.141</y-m>
-      <z-m> 0.931</z-m>
-  </offsets>
-</model>
-
-<model>
   <name>stby-ai</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AI_new/stby-ai.xml</path>
   <offsets>
@@ -201,16 +191,6 @@
 </model>
 
 <model>
-  <name>trim</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/trim/trim-smaller.xml</path>
-  <offsets>
-      <x-m>-18.919</x-m>
-      <y-m>-0.141</y-m>
-      <z-m> 0.788</z-m>
-  </offsets>
-</model-->
-
-<!--model>
   <name>EICAS-CFM</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EICAS/EICAS-CFM.xml</path>
   <offsets>
@@ -279,7 +259,7 @@
 <!-- Copilot Panel -->
 
 <model>
-  <name>AoA</name>
+  <name>AoA_cp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AOA/aoa.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
