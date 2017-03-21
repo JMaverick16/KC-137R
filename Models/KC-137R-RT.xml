@@ -145,6 +145,7 @@
 	<object-name>lhibail</object-name>
 	<object-name>rhobail</object-name>
 	<object-name>lhobail</object-name>
+	<object-name>doorRefuel</object-name>
 	<object-name>refuelAPURight</object-name>
 	<object-name>refuelAPULeft</object-name>
 	<object-name>refuelProbeRight</object-name>
@@ -159,8 +160,6 @@
     <texture-prop>texture</texture-prop>
     <texture>KC-137R.png</texture>
   </animation>
-
-    
     
 	<animation>
 		<type>noshadow</type>
@@ -169,7 +168,18 @@
     <object-name>cockpit</object-name>
     <object-name>operatorRoom</object-name>     
 	</animation>
-	
+
+	<animation>
+      <type>translate</type>
+      <object-name>doorRefuel</object-name>
+      <property>sim/multiplay/generic/float[18]</property>
+			<factor>1</factor>
+      <axis>
+          <x> 1.0</x>
+          <y> 0.0</y>
+          <z> 0.0</z>
+      </axis>
+  	</animation>
 		
 	<!-- inside fuselage -->
 	<animation>

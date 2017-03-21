@@ -26,7 +26,7 @@
 		<object-name>blah.013</object-name>
 		<object-name>rubber</object-name>
 		<object-name>stair</object-name>
-		<object-name>stairsPaint</object-name>
+		<!--object-name>stairsPaint</object-name-->
 		<object-name>stairsTop</object-name>
 		<object-name>stairsblock</object-name>
     <property-base>sim/model/livery</property-base>
