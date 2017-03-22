@@ -2973,6 +2973,36 @@
 		</action>
   </animation>
   
+<animation>
+<type>material</type>
+<object-name>PDL-icons</object-name>
+<emission>
+<red> 1 </red>
+<green> 0 </green>
+<blue> 0 </blue>
+</emission>
+</animation>
+
+<animation>
+<type>material</type>
+<object-name>PDL-icons.001</object-name>
+<emission>
+<red> 0 </red>
+<green> 1 </green>
+<blue> 0 </blue>
+</emission>
+</animation>
+
+<animation>
+<type>material</type>
+<object-name>PDL-icons.002</object-name>
+<emission>
+<red> 1 </red>
+<green> 1 </green>
+<blue> 1 </blue>
+</emission>
+</animation>
+  
 </PropertyList>
 
 
