@@ -21,6 +21,8 @@ var cannon_types = {
     " GAU-8/A hit":           0.10, # 30mm
     " BK27 cannon hit":       0.07, # 27mm
     " GSh-30 hit":            0.10, # 30mm
+    " 7.62 hit":              0.005,# 7.62mm
+    " 50 BMG hit":            0.015,# 12.7mm
 };
     
     
@@ -44,13 +46,17 @@ var warhead_lbs = {
     "Meteor":               55.00,
     "AIM-54":              135.00,
     "Matra R550 Magic 2":   27.00,
+    "MatraR550Magic2":      27.00,
     "Matra MICA":           30.00,
+    "MatraMica":            30.00,
+    "MatraMicaIR":          30.00,
     "RB-15F":              440.92,
     "SCALP":               992.00,
     "KN-06":               315.00,
     "GBU12":               190.00,
     "GBU16":               450.00,
     "Sea Eagle":           505.00,
+    "SeaEagle":            505.00,
     "AGM65":               200.00,
     "RB-04E":              661.00,
     "RB-05A":              353.00,
@@ -68,6 +74,8 @@ var warhead_lbs = {
     "R-60":                  6.60,
     "R-27R1":               85.98,
     "R-27T1":               85.98,
+    "FAB-500":             564.00,
+    "Exocet":              364.00,
 };
 
 var incoming_listener = func {
