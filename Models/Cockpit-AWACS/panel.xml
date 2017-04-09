@@ -182,7 +182,7 @@
 
 <model>
   <name>stby-ai</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AI_new/stby-ai.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/Digital/stby-ai.xml</path>
   <offsets>
       <x-m>-18.919</x-m>
       <y-m>-0.140</y-m>
@@ -245,16 +245,6 @@
     <z-m>  0.89</z-m>
   </offsets>
 </model>
-
-<!--model>
-  <name>spoiler_and_flaps_warning</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/spoiler_and_flaps.xml</path>
-  <offsets>
-    <x-m>-18.924</x-m>
-    <y-m>  0.093</y-m>
-    <z-m>  0.80</z-m>
-  </offsets>
-</model-->
 
 <!-- Copilot Panel -->
 
