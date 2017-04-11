@@ -176,7 +176,7 @@
 
 <model>
   <name>stby-ai</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AI_new/stby-ai.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/Digital/stby-ai.xml</path>
   <offsets>
       <x-m>-18.919</x-m>
       <y-m>-0.140</y-m>
