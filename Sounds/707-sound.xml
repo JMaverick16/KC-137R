@@ -336,6 +336,66 @@
 			<factor>0.4</factor>
 		</pitch>
 	</speedbrake>
+
+	<start>
+		<name>Start</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.245</factor>
+		</volume>
+	</start>
+
+	<start1>
+		<name>Start1</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[1]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.245</factor>
+		</volume>
+	</start1>
+
+	<start2>
+		<name>Start2</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[2]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.245</factor>
+		</volume>
+	</start2>
+
+	<start3>
+		<name>Start3</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_start.wav</path>
+		<condition>			
+			<greater-than>
+                    <property>engines/engine[3]/starter</property>
+                    <value>0</value>
+                </greater-than>
+		</condition>
+		<volume>
+			<factor>0.245</factor>
+		</volume>
+	</start3>
 	
 	<reverser>
 		<name>Reverse</name>	
@@ -354,7 +414,28 @@
 			<property>/controls/engines/engine[0]/throttle</property>
 			<factor>1</factor>
 		</volume>
-	</reverser>	
+	</reverser>
+
+	<!--shutdown>
+		<name>Shutdown</name>	
+		<mode>once</mode>
+		<path>Aircraft/KC-137R/Sounds/turbine_shutdown.wav</path>
+		<condition>
+			<and>		
+			<less-than>
+                    <property>engines/engine/cutoff</property>
+                    <value>1</value>
+                </less-than>
+                <greater-than>
+                    <property>engines/engine/running</property>
+                    <value>0</value>
+                </greater-than>
+            </and>
+		</condition>
+		<volume>
+			<factor>0.26</factor>
+		</volume>
+	</shutdown-->
 
 	<wind>
 		<name>wind</name>
