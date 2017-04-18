@@ -7,6 +7,7 @@
 
 setprop("/it-fbw/roll-engage", 0);
 setprop("/it-fbw/pitch-disable", 0);
+setprop("/it-fbw/man-pitch-btn", 0);
 
 var roll = func {
 	if (getprop("/it-fbw/roll-engage") == 0 and getprop("/gear/gear[0]/wow") == 0) {
@@ -29,12 +30,21 @@ var pitch = func {
 	setprop("/it-autoflight/input/ap2", 0);
 	if (getprop("/it-fbw/pitch-disable") == 0) {
 		setprop("/it-fbw/pitch-disable", 1);
+		setprop("/it-fbw/man-pitch-btn", 1);
 	} else {
 		setprop("/it-fbw/pitch-disable", 0);
+		setprop("/it-fbw/man-pitch-btn", 0);
 	}
 }
 
-var gear_chk = func {
+var update_fbw = func {
+	if (getprop("/orientation/roll-deg") <= 55 and getprop("/orientation/roll-deg") >= -50) {
+		if (getprop("/it-fbw/man-pitch-btn") == 0) {
+			setprop("/it-fbw/pitch-disable", 0);
+		}
+	} else {
+		setprop("/it-fbw/pitch-disable", 1);
+	}
 	if (getprop("/gear/gear[1]/wow") == 1 or getprop("/gear/gear[2]/wow") == 1) {
 		setprop("/it-fbw/roll-engage", 0);
 	}
@@ -58,11 +68,11 @@ setlistener("/it-autoflight/output/ap2", func {
 ####################
 
 setlistener("/sim/signals/fdm-initialized", func {
-	update_gear.start();
+	update.start();
 	print("Pitch Stabilization System ... OK!")
 });
 
 ##########
 # Timers #
 ##########
-var update_gear = maketimer(0.01, gear_chk);
+var update = maketimer(0.01, update_fbw);

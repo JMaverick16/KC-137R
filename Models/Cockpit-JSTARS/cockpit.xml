@@ -10,7 +10,7 @@
  
 	<!-- needed for tutorials -->
 	<model>
-		<path>Models/Aircraft/marker.xml</path>
+		<path>Aircraft/marker.xml</path>
 	</model>
 
 	<animation>
