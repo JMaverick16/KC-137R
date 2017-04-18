@@ -43,17 +43,6 @@
    </volume>
   </wlpsasoff>
   
-  <wlpsasoff>
-   <name>wlpsasoff2</name>
-   <path>/Aircraft/KC-137R/Sounds/wlpsasoff.wav</path>
-   <condition>
-	 <property>/it-fbw/sound/apoffsound2</property>
-   </condition>
-   <volume>
-    <factor>10.0</factor>
-   </volume>
-  </wlpsasoff>
-
    <apon>
    <name>apon</name>
    <path>/Aircraft/KC-137R/Sounds/apon.wav</path>
@@ -415,27 +404,6 @@
 			<factor>1</factor>
 		</volume>
 	</reverser>
-
-	<!--shutdown>
-		<name>Shutdown</name>	
-		<mode>once</mode>
-		<path>Aircraft/KC-137R/Sounds/turbine_shutdown.wav</path>
-		<condition>
-			<and>		
-			<less-than>
-                    <property>engines/engine/cutoff</property>
-                    <value>1</value>
-                </less-than>
-                <greater-than>
-                    <property>engines/engine/running</property>
-                    <value>0</value>
-                </greater-than>
-            </and>
-		</condition>
-		<volume>
-			<factor>0.26</factor>
-		</volume>
-	</shutdown-->
 
 	<wind>
 		<name>wind</name>

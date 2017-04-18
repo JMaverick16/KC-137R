@@ -1,295 +1,59 @@
-<?xml version="1.0"?>
+<!-- Wing Leveller/Pitch Stabilization Augmentation System by Joshua Davidson (it0uchpods) and Richard Harrison (richard) -->
 
-<!-- Wing Leveller/Pitch Stabilization Augmentation System -->
-
-<PropertyList>
+<system name="it-fbw">
+	<property value="0">/it-fbw/roll-deg</property>
+	<property value="0">/it-fbw/pitch-deg</property>
 	
- <!-- =============================================================== -->
- <!-- Lateral                                                         -->
- <!-- =============================================================== -->
-	
-	<!-- Copy of ITAF's Roll Controller without MROC for Wing Leveller -->
-	<pid-controller>
-		<name>IT-CONTROLLER: ROLL</name>
-		<debug>false</debug>
-		<enable>
-			<condition>
-				<and>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-fbw/roll-engage</property>
-						<value>1</value>
-					</equals>
-				</and>
-			</condition>
-		</enable>
-		<input>
-			<property>/orientation/roll-deg</property>
-		</input>
-		<reference>
-			<value>0</value>
-		</reference>
-		<output>
-			<property>/controls/flight/aileron</property>
-		</output>
-		<config>
-			<Kp>
-				<property>/it-autoflight/config/roll/kp</property>
-			</Kp>
-			<beta>1.0</beta>	
-			<alpha>0.1</alpha>	
-			<gamma>0.0</gamma>	
-			<Ti>
-				<property>/it-autoflight/config/roll/ti</property>
-			</Ti>    
-			<Td>
-				<property>/it-autoflight/config/roll/td</property>
-			</Td>    	
-			<u_min>
-				<property>/it-autoflight/config/roll/umin</property>
-			</u_min>
-			<u_max>
-				<property>/it-autoflight/config/roll/umax</property>
-			</u_max>
-		</config>
-	</pid-controller>
-	
- <!-- =============================================================== -->
- <!-- Vertical                                                        -->
- <!-- =============================================================== -->
-	
-	<pi-simple-controller>
-		<name>IT-FBW: PITCH</name>
-		<debug>false</debug>
-		<enable>
-			<condition>
-				<and>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-fbw/pitch-engage</property>
-						<value>1</value>
-					</equals>
-				</and>
-			</condition>
-		</enable>
-		<input>
-			<property>/orientation/pitch-deg</property>
-		</input>
-		<reference>
-			<property>/it-fbw/pitch-deg</property>
-		</reference>
-		<output>
-			<property>/controls/flight/elevator-fbw-cmd</property>
-		</output>
-		<config>
-			<Kp>-0.12</Kp>
-			<Ki>0.001</Ki>
-			<min>-1</min>
-			<max>1</max>
-		</config>
-	</pi-simple-controller>
-	
-	<filter>
-		<name>IT-FBW: PITCH OPTION</name>
-		<debug>false</debug>
-		<feedback-if-disabled>true</feedback-if-disabled>
-		<initialize-to>output</initialize-to>
-		<input>
-			<condition>
-				<and>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-fbw/pitch-engage</property>
-						<value>1</value>
-					</equals>
-					<greater-than>
-						<property>/position/gear-agl-ft</property>
-						<value>5</value>
-					</greater-than>
-				</and>
-			</condition>
-			<property>/controls/flight/elevator-fbw-cmd</property>
-		</input>
-		<input>
-			<condition>
-				<equals>
-					<property>/it-fbw/pitch-engage</property>
-					<value>0</value>
-				</equals>
-			</condition>
-			<property>/controls/flight/elevator</property>
-		</input>
-		<output>/controls/flight/elevator-fbw</output>
-		<type>noise-spike</type>
-		<max-rate-of-change>10</max-rate-of-change>
-	</filter>
-	
-	<pid-controller>
-		<name>AP PITCH HELPER PLUS</name>
-		<debug>false</debug>
-		<enable>
-			<condition>
-				<and>
-					<greater-than>
-						<property>/controls/flight/elevator-fbw</property>
-						<value>0.1</value>
-					</greater-than>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-fbw/pitch-engage</property>
-						<value>1</value>
-					</equals>
-					<greater-than-equals>
-						<property>/position/gear-agl-ft</property>
-						<value>50</value>
-					</greater-than-equals>
-				</and>
-			</condition>
-		</enable>
-		<input>
-			<value>0</value>
-		</input>
-		<reference>
-			<value>1</value>
-		</reference>
-		<output>
-			<property>/controls/flight/elevator-trim-cmd</property>
-		</output>
-		<config>
-			<Kp>0.08</Kp>
-			<beta>1.0</beta>
-			<alpha>0.1</alpha>
-			<gamma>0.0</gamma>
-			<Ti>10</Ti>
-			<Td>0.00001</Td>
-			<u_min>-1.00</u_min>
-			<u_max>1.00</u_max>
-		</config>
-	</pid-controller>
-	
-	<pid-controller>
-		<name>FBW PITCH HELPER MINUS</name>
-		<debug>false</debug>
-		<enable>
-			<condition>
-				<and>
-					<less-than>
-						<property>/controls/flight/elevator-fbw</property>
-						<value>-0.1</value>
-					</less-than>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-fbw/pitch-engage</property>
-						<value>1</value>
-					</equals>
-					<greater-than-equals>
-						<property>/position/gear-agl-ft</property>
-						<value>50</value>
-					</greater-than-equals>
-				</and>
-			</condition>
-		</enable>
-		<input>
-			<value>0</value>
-		</input>
-		<reference>
-			<value>1</value>
-		</reference>
-		<output>
-			<property>/controls/flight/elevator-trim-cmd</property>
-		</output>
-		<config>
-			<Kp>-0.08</Kp>
-			<beta>1.0</beta>
-			<alpha>0.1</alpha>
-			<gamma>0.0</gamma>
-			<Ti>10</Ti>
-			<Td>0.00001</Td>
-			<u_min>-1.00</u_min>
-			<u_max>1.00</u_max>
-		</config>
-	</pid-controller>
-		
-	<filter>
-		<name>IT-FBW: PITCH TRIM FILTER</name>
-		<debug>false</debug>
-		<feedback-if-disabled>true</feedback-if-disabled>
-		<initialize-to>output</initialize-to>
-		<enable>
-			<condition>
-				<and>
+	<channel name="FBW Elevator">
+		<fcs_function name="/it-fbw/pitch-deg">
+			<function>
+				<ifthen>
 					<and>
-						<equals>
+						<eq>
 							<property>/it-autoflight/output/ap1</property>
 							<value>0</value>
-						</equals>
-						<equals>
+						</eq>
+						<eq>
 							<property>/it-autoflight/output/ap2</property>
 							<value>0</value>
-						</equals>
-						<equals>
-							<property>/it-fbw/pitch-engage</property>
-							<value>1</value>
-						</equals>
-						<greater-than-equals>
-							<property>/position/gear-agl-ft</property>
-							<value>50</value>
-						</greater-than-equals>
+						</eq>
+						<eq>
+							<property>/gear/gear[0]/wow</property>
+							<value>0</value>
+						</eq>
+						<eq>
+							<property>/it-fbw/pitch-disable</property>
+							<value>0</value>
+						</eq>
 					</and>
-					<or>
-						<greater-than>
-							<property>/controls/flight/elevator-fbw</property>
-							<value>0.05</value>
-						</greater-than>
-						<less-than>
-							<property>/controls/flight/elevator-fbw</property>
-							<value>-0.05</value>
-						</less-than>
-					</or>
-				</and>
-			</condition>
-		</enable>
-		<input>
-			<property>/controls/flight/elevator-trim-cmd</property>
-		</input>
-		<output>/controls/flight/elevator-trim</output>
-		<type>noise-spike</type>
-		<max-rate-of-change>0.01</max-rate-of-change>
-	</filter>
-
-</PropertyList>
+					<sum>
+						<property>/it-fbw/pitch-deg</property>
+						<table>
+							<independentVar lookup="row">/controls/flight/elevator</independentVar>
+							<tableData>
+							-1.0      0.075
+							-0.7      0.05
+							-0.5      0.025
+							-0.3      0.01
+							-0.15     0.005
+							-0.05     0.001
+							 0.00     0.00
+							 0.05    -0.001
+							 0.15    -0.005
+							 0.3     -0.01
+							 0.5     -0.025
+							 0.7     -0.05
+							 1.0     -0.075
+							</tableData>
+						</table>
+					</sum>
+					<property>/orientation/pitch-deg</property>
+				</ifthen>
+			</function>
+			<clipto>
+				<min>-15</min>
+				<max>30</max>
+			</clipto>
+		</fcs_function>
+	</channel>
+</system>

@@ -65,6 +65,9 @@ setlistener("/sim/signals/fdm-initialized", func {
 	if (getprop("/b707/anti-ice/window-heat-fo-switch") == 0) {
 		setprop("/warnings/mc", 1);
 	}
+	if (getprop("/it-fbw/pitch-disable") == 1) {
+		setprop("/warnings/mc", 1);
+	}
 	print("Master Caution System ... FINE!");
 });
 
@@ -164,6 +167,12 @@ setlistener("/b707/anti-ice/window-heat-cap-switch", func {
 
 setlistener("/b707/anti-ice/window-heat-fo-switch", func {
 	if (getprop("/b707/anti-ice/window-heat-fo-switch") == 0) {
+		setprop("/warnings/mc", 1);
+	}
+});
+
+setlistener("/it-fbw/pitch-disable", func {
+	if (getprop("/it-fbw/pitch-disable") == 1) {
 		setprop("/warnings/mc", 1);
 	}
 });

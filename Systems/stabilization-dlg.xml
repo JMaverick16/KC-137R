@@ -39,7 +39,7 @@
 			</binding>
 		</button>
 		<button>
-			<legend>PITCH STAB</legend>
+			<legend>MAN PITCH</legend>
             <pref-width>80</pref-width>
 			<binding>
 			<command>nasal</command>
@@ -60,10 +60,10 @@
 			</visible>
 		</text>
 		<text>
-			<label>[PITCH STAB]</label>
+			<label>[MAN PITCH]</label>
 			<visible>
 				<equals>
-					<property>/it-fbw/pitch-engage</property>
+					<property>/it-fbw/pitch-disable</property>
 					<value>1</value>
 				</equals>
 			</visible>
@@ -80,7 +80,7 @@
 				<stretch type="bool">true</stretch>
 			</hrule>
 			<text>
-				<label>Pitch Attitude</label>
+				<label>Pitch Augmentation</label>
 			</text>
 			<hrule>
 				<stretch type="bool">true</stretch>
@@ -89,96 +89,43 @@
 		
 		<group>
 			<layout>hbox</layout>
-		
+			
 			<group>
 				<layout>vbox</layout>
-
+				
 				<text>
-					<label>Fine</label>
+					<label>Pitch CMD: </label>
 				</text>
-				<button>
-					<pref-width>50</pref-width>
-					<pref-height>50</pref-height>
-					<legend>+</legend>
-					<enable>
-						<equals>
-							<property>/it-fbw/pitch-engage</property>
-							<value>1</value>
-						</equals>
-					</enable>
-					<binding>
-						<command>property-adjust</command>
-						<property>/it-fbw/pitch-deg</property>
-						<min>-15</min>
-						<max>30</max>
-						<step>0.1</step>
-						<wrap>false</wrap>
-					</binding>
-				</button>
-				<button>
-					<pref-width>50</pref-width>
-					<pref-height>50</pref-height>
-					<legend>-</legend>
-					<enable>
-						<equals>
-							<property>/it-fbw/pitch-engage</property>
-							<value>1</value>
-						</equals>
-					</enable>
-					<binding>
-						<command>property-adjust</command>
-						<property>/it-fbw/pitch-deg</property>
-						<min>-15</min>
-						<max>30</max>
-						<step>-0.1</step>
-						<wrap>false</wrap>
-					</binding>
-				</button>
+				<slider>
+					<row>2</row>
+					<col>0</col>
+					<pref-height>100</pref-height>
+					<vertical>true</vertical>
+					<property>/controls/flight/elevator-fbw</property>
+					<min>-1</min>
+					<max>1</max>
+					<step>0.0001</step>
+					<live>true</live>
+				</slider>
 			</group>
+				
 			<group>
 				<layout>vbox</layout>
-
+		
 				<text>
-					<label>Coarse</label>
+					<label>Pitch Trim: </label>
 				</text>
-				<button>
-					<pref-width>50</pref-width>
-					<pref-height>50</pref-height>
-					<legend>+</legend>
-					<enable>
-						<equals>
-							<property>/it-fbw/pitch-engage</property>
-							<value>1</value>
-						</equals>
-					</enable>
-					<binding>
-						<command>property-adjust</command>
-						<property>/it-fbw/pitch-deg</property>
-						<min>-15</min>
-						<max>30</max>
-						<step>0.5</step>
-						<wrap>false</wrap>
-					</binding>
-				</button>
-				<button>
-					<pref-width>50</pref-width>
-					<pref-height>50</pref-height>
-					<legend>-</legend>
-					<enable>
-						<equals>
-							<property>/it-fbw/pitch-engage</property>
-							<value>1</value>
-						</equals>
-					</enable>
-					<binding>
-						<command>property-adjust</command>
-						<property>/it-fbw/pitch-deg</property>
-						<min>-15</min>
-						<max>30</max>
-						<step>-0.5</step>
-						<wrap>false</wrap>
-					</binding>
-				</button>
+				<slider>
+					<row>2</row>
+					<col>0</col>
+					<pref-height>100</pref-height>
+					<vertical>true</vertical>
+					<property>/controls/flight/elevator-trim</property>
+					<min>-1</min>
+					<max>1</max>
+					<step>0.0001</step>
+					<live>true</live>
+				</slider>
 			</group>
 		</group>
 	</group>

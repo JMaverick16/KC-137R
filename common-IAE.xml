@@ -40,7 +40,7 @@
     </autopilot>
 	<autopilot>
 		<name>WL/PSAS</name>
-		<path>Aircraft/KC-137R/Systems/it-fbw.xml</path>
+		<path>Aircraft/KC-137R/Systems/it-fbw-b.xml</path>
 	</autopilot>
 	</systems>
 
@@ -298,7 +298,7 @@
 		<cmd>
 			<roll-kp>-1.9</roll-kp>
 			<roll-scale>1.5</roll-scale>
-			<vorloc>-4.0</vorloc>
+			<vorloc>-4.7</vorloc>
 			<alt>0.025</alt>
 			<vs>0.11</vs>
 			<fpa>0.30</fpa>
@@ -324,11 +324,6 @@
 		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
 	</settings>
 </it-autoflight>
-
-<it-fbw>
-	<roll-deg>0</roll-deg>
-	<pitch-deg>0</pitch-deg>
-</it-fbw>
 
 	<engines>
 		<APU>
@@ -417,6 +412,9 @@
 				<out-of-fuel type="bool">false</out-of-fuel>
 			</engine>
 		</engines>
+		<flight>
+			<elevator-fbw>0</elevator-fbw>
+		</flight>
 		<lighting>
 			<beacon type="bool">false</beacon>
 			<strobe type="bool">false</strobe>

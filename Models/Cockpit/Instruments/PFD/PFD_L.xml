@@ -955,6 +955,11 @@ Modified by it0uchpods for KC-137R
 		<object-name>ALT arm</object-name>
 		<type>select</type>
 		<condition>
+			<and>
+			<equals>
+				<property>/it-autoflight/output/appr-armed</property>
+				<value>0</value>
+			</equals>
 			<or>
 			<equals>
 				<property>/it-autoflight/output/vert</property>
@@ -973,6 +978,7 @@ Modified by it0uchpods for KC-137R
 				<value>7</value>
 			</equals>
 			</or>
+			</and>
 		</condition>
 	</animation>
 	
