@@ -4,9 +4,24 @@
 I-NEMO
 777-Seattle, EFB Display
 APR 2014
+
+Modified by Joshua Davidson and JMaverick16 for KC-137R Project :)
 -->
 
 <PropertyList>
+
+<!-- Power on/off -->
+<animation>
+	<name>Power on/off</name>
+	<type>select</type>
+	<object-name>Off</object-name>
+	<condition>
+		<less-than>
+			<property>systems/electrical/outputs/efis</property>
+			<value>15</value>
+		</less-than>
+	</condition>
+</animation>
 
 <path>EFB.ac</path>
 
