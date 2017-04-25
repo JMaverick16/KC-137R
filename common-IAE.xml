@@ -548,8 +548,6 @@
 		  </frequencies>
 		</adf>
 
-
-
 		<rmi>	
 			<face-offset type="double">0.0</face-offset>
 			<rmi-needle n="0">
@@ -668,22 +666,6 @@
 		  </frequencies>
 		</comm>
 
-		<!-- Flightgear Rallye Watch  -->
-		<frw>
-		  <running type="bool">0</running>
-		  <btn-mode type="bool">0</btn-mode>
-		  <btn-reset type="bool">0</btn-reset>
-		  <btn-start-stop type="bool">0</btn-start-stop>
-		  <flight-time>
-			<start-time type="double">0</start-time>
-			<accu type="double">0</accu>
-			<total type="double">0</total>
-			<hours type="int">0</hours>
-			<minutes type="int">0</minutes>
-			<seconds type="int">0</seconds>
-		  </flight-time>
-		</frw>
-
 		<!-- B707 Stopwatch  -->
 		<stopwatch>
 		  <running type="bool">0</running>
@@ -712,19 +694,6 @@
 		  <lat-knob type="bool">0</lat-knob>
 		  <lat-turn type="double">0</lat-turn>
 		</compass-control>
-
-		<operating-time>
-		  <start-time>0.0</start-time>
-			<total type="double">0.0</total>
-			<total-h type="double">0.0</total-h>
-			<total-m type="double">0.0</total-m>
-		</operating-time>
-
-		<!-- agl-radar -->
-		<aglradar>
-		  <power-btn type="bool">0</power-btn>
-		  <mda-lamp type="bool">0</mda-lamp>
-		</aglradar>
 
 		<!-- standby ai -->
 		<adi>
