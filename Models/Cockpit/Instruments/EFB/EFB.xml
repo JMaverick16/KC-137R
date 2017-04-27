@@ -34,7 +34,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 <animation>
 	<name>Power on/off</name>
 	<type>select</type>
-	<object-name>POff</object-name>
+	<object-name>Off</object-name>
 	<condition>
 		<less-than>
 			<property>systems/electrical/outputs/efis</property>

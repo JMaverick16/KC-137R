@@ -3,7 +3,7 @@ MATERIAL "black" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 OBJECT world
 kids 1
 OBJECT poly
-name "POff"
+name "Off"
 loc 0.00433222 -0.0107629 -0.00423776
 data 9
 Power.off
