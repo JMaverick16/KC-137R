@@ -10,19 +10,6 @@ Modified by Joshua Davidson and JMaverick16 for KC-137R Project :)
 
 <PropertyList>
 
-<!-- Power on/off -->
-<animation>
-	<name>Power on/off</name>
-	<type>select</type>
-	<object-name>Off</object-name>
-	<condition>
-		<less-than>
-			<property>systems/electrical/outputs/efis</property>
-			<value>15</value>
-		</less-than>
-	</condition>
-</animation>
-
 <path>EFB.ac</path>
 
  <animation>
@@ -84,6 +71,19 @@ Modified by Joshua Davidson and JMaverick16 for KC-137R Project :)
         <object-name>worldmap</object-name>
         <object-name>worldmap2</object-name>
 </effect>
+
+<!-- Power on/off -->
+<animation>
+  <name>Power on/off</name>
+  <type>select</type>
+  <object-name>Off</object-name>
+  <condition>
+    <less-than>
+      <property>systems/electrical/outputs/efis</property>
+      <value>15</value>
+    </less-than>
+  </condition>
+</animation>
 
 <!-- Screen Display switches On when there's atleast 9 volts of power -->
 
