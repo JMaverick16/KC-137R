@@ -145,16 +145,15 @@
 	<object-name>lhibail</object-name>
 	<object-name>rhobail</object-name>
 	<object-name>lhobail</object-name>
-	<object-name>refuelAPURight</object-name>
-	<object-name>refuelAPULeft</object-name>
-	<object-name>refuelProbeRight</object-name>
-	<object-name>refuelProbeLeft</object-name>
 	<object-name>refuelPivot</object-name>
-	<object-name>refuelTube</object-name>
 	<object-name>refuelOperator</object-name>
 	<object-name>operatorRoom</object-name>
 	<object-name>operatorRoomWin</object-name>
 	<object-name>operatorPlace</object-name>
+    <object-name>NewDoor</object-name>
+	<object-name>doorRefuel</object-name>
+	<object-name>lhelevator</object-name>
+	<object-name>rhelevator</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>KC-137R.png</texture>
@@ -2717,7 +2716,7 @@
  <animation>
       <type>rotate</type>
       <object-name>NewDoor</object-name>
-      <property>sim/multiplay/generic/float[6]</property>
+      <property>sim/multiplay/generic/float[16]</property>
       <factor>90</factor>
       <axis>
           <x1-m>-17.6088</x1-m>
@@ -2738,7 +2737,7 @@
 		  <interval-sec>0.2</interval-sec>	
 		  <binding>
 		   <command>nasal</command>
-		   <script>sim/multiplay/generic/float[6]</script>
+		   <script>sim/multiplay/generic/float[16]</script>
 		  </binding>
 		</action>
   </animation>
@@ -2746,7 +2745,7 @@
 <animation>
       <type>translate</type>
 	  <object-name>Ladder</object-name>
-      <property>sim/multiplay/generic/float[6]</property>
+      <property>sim/multiplay/generic/float[16]</property>
       <interpolation>
        <entry>
           <ind>0.0</ind>
@@ -2777,7 +2776,7 @@
 		  <interval-sec>0.2</interval-sec>
 		  <binding>
 		   <command>nasal</command>
-		   <script>b707.doorsystem.pasfrontexport();</script>
+		   <script>b707.doorsystem.bellyexport();</script>
 		  </binding>
 		</action>
   </animation>
