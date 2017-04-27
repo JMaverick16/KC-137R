@@ -300,9 +300,9 @@
 			<roll-scale>1.5</roll-scale>
 			<vorloc>-4.7</vorloc>
 			<alt>0.025</alt>
-			<vs>0.11</vs>
+			<vs>0.015</vs>
 			<fpa>0.30</fpa>
-			<flch>-4.0</flch>
+			<flch>-4.8</flch>
 			<gs>0.14</gs>
 		</cmd>
 		<autoland>
