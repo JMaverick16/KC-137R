@@ -2467,5 +2467,60 @@
      <z>0</z>
    </axis>
  </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>fd.annun</object-name>
+   <condition>
+     <and>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+      <equals>
+       <property>it-autoflight/output/fd1</property>
+       <value>1</value>
+      </equals>
+     </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>ap.annun</object-name>
+   <condition>
+       <equals>
+         <property>it-autoflight/output/ap1</property>
+         <value>1</value>
+       </equals>
+   </condition>
+ </animation>
+
+<!--animation>
+   <type>select</type>
+   <object-name>vnav.annun</object-name>
+   <condition>
+       <greater-than>
+         <property>it-autoflight/output/vert</property>
+         <value>8</value>
+       </greater-than>
+   </condition>
+ </animation>
+
+<animation>
+   <type>select</type>
+   <object-name>lnav.annun</object-name>
+   <condition>
+   <and>
+      <not>
+      <property>sim/crashed</property>
+      </not>
+       <greater-than>
+         <property>it-autoflight/output/lat</property>
+         <value>1</value>
+       </greater-than>
+   </and>
+   </condition>
+ </animation-->
+
  
 </PropertyList>
