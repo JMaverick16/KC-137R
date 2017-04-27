@@ -5,25 +5,16 @@ I-NEMO
 777-Seattle, EFB Display
 APR 2014
 
-Modified by Joshua Davidson and JMaverick16 for KC-137R Project :)
+Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 -->
 
 <PropertyList>
 
-<!-- Power on/off -->
-<animation>
-	<name>Power on/off</name>
-	<type>select</type>
-	<object-name>Off</object-name>
-	<condition>
-		<less-than>
-			<property>systems/electrical/outputs/efis</property>
-			<value>15</value>
-		</less-than>
-	</condition>
-</animation>
-
 <path>EFB.ac</path>
+
+<model>
+	<path>EFB_off.ac</path>
+</model>
 
  <animation>
     <type>scale</type>
@@ -38,6 +29,19 @@ Modified by Joshua Davidson and JMaverick16 for KC-137R Project :)
 <Donald_Duck include="EFB_Chart_ZoomPan.xml" omit-node="y"/>
 <Uncle_Scrooge include="EFB_WorldMap.xml" omit-node="y"/>
 <Beagle_Boys include="EFB_Display_Lines.xml" omit-node="y"/>
+
+<!-- Power on/off -->
+<animation>
+	<name>Power on/off</name>
+	<type>select</type>
+	<object-name>POff</object-name>
+	<condition>
+		<less-than>
+			<property>systems/electrical/outputs/efis</property>
+			<value>15</value>
+		</less-than>
+	</condition>
+</animation>
 
 
 <effect>
