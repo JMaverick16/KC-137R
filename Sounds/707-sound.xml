@@ -960,7 +960,10 @@
         </less-than>
       </condition>
       <volume>
-        <property>/environment/metar/rain-norm</property>
+      	<and>
+      		<property>sim/current-view/internal</property>
+        	<property>/environment/metar/rain-norm</property>
+        </and>
         <factor>1.00</factor>
         <offset>0.00</offset>
         <min>0.3</min>
@@ -984,7 +987,10 @@
         </greater-than>
       </condition>
       <volume>
-        <property>/environment/metar/rain-norm</property>
+      	<and>
+      		<property>sim/current-view/internal</property>
+        	<property>/environment/metar/rain-norm</property>	
+        </and>
         <factor>1.00</factor>
         <offset>0.00</offset>
         <min>0.3</min>
@@ -1386,7 +1392,7 @@
             </volume>
         </refueling2>
 
-        <!--refuel>
+        <refuel>
             <name>refuel</name>
             <mode>once</mode>
             <type>avionics</type>
@@ -1399,9 +1405,9 @@
             </condition>
             <volume>
             	<property>sim/current-view/internal</property>
-                <value>1.4</value>
+                <value>1.0</value>
             </volume>
-        </refuel-->
+        </refuel>
 </fx>
 
 </PropertyList>
