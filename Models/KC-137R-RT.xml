@@ -155,6 +155,7 @@
 	<object-name>doorRefuel</object-name>
 	<object-name>lhelevator</object-name>
 	<object-name>rhelevator</object-name>
+	<!--object-name>refuelBoom</object-name-->
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>KC-137R.png</texture>
