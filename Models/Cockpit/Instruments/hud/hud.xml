@@ -212,8 +212,8 @@
    <object-name>vstext</object-name>
    <object-name>vs-a</object-name>
    <object-name>vs-b</object-name>
-   <object-name>lnav.annun</object-name>
-   <object-name>vnav.annun</object-name>
+   <object-name>ap.annun</object-name>
+   <object-name>fd.annun</object-name>
    <condition>
      <and>
       <property>/controls/switches/hud[1]</property>
