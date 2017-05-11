@@ -513,6 +513,11 @@
      </channel>
      
      <channel name="Yaw">
+		<pure_gain name="fcs/rudder-cmd">
+			<input>/controls/flight/rudder-fbw</input>
+			<gain>-1</gain>
+			<output>fcs/rudder-cmd-norm</output>
+		</pure_gain>
         <summer name="Rudder Command Sum">
             <input>fcs/rudder-cmd-norm</input>
             <input>fcs/yaw-trim-cmd-norm</input>

@@ -1,7 +1,6 @@
 <!-- Wing Leveller/Pitch Stabilization Augmentation System by Joshua Davidson (it0uchpods) and Richard Harrison (richard) -->
 
 <system name="it-fbw">
-	<property value="0">/it-fbw/roll-deg</property>
 	<property value="0">/it-fbw/pitch-deg</property>
 	
 	<channel name="FBW Elevator">

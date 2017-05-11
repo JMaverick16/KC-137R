@@ -282,7 +282,7 @@
 			<umin>-0.45</umin>
 			<umax>0.45</umax>
 			<kp>0.06</kp>
-			<kp-vloc>0.09</kp-vloc>
+			<kp-vloc>0.08</kp-vloc>
 			<ti>10.0</ti>
 			<td>0.00001</td>
 			<kp-cws>0.09</kp-cws>
@@ -296,9 +296,9 @@
 			<kp-cws>-0.07</kp-cws>
 		</pitch>
 		<cmd>
-			<roll-kp>-1.9</roll-kp>
-			<roll-scale>1.5</roll-scale>
-			<vorloc>-4.7</vorloc>
+			<roll-kp>-1.4</roll-kp>
+			<roll-scale>1.0</roll-scale>
+			<vorloc>-4.0</vorloc>
 			<alt>0.025</alt>
 			<vs>0.05</vs>
 			<flch-vs>0.07</flch-vs>
@@ -414,6 +414,7 @@
 		</engines>
 		<flight>
 			<elevator-fbw>0</elevator-fbw>
+			<rudder-fbw>0</rudder-fbw>
 		</flight>
 		<lighting>
 			<beacon type="bool">false</beacon>
