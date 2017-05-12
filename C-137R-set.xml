@@ -125,8 +125,8 @@
 		          </binding>
 		         </item>
 				<item>
-				<name>wlps</name>
-				<label>Leveller/Pitch Stab Control</label>
+				<name>rps</name>
+				<label>Roll/Pitch Stab Control</label>
 					<binding>
 					<command>nasal</command>
 						<script>

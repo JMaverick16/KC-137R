@@ -240,7 +240,7 @@
 		<float n="9" alias="/controls/special/wiper-deg"/>
 		<float n="10" alias="/gear/gear[1]/angle-deg"/>											<!-- Left Hanging Gear -->
 		<float n="11" alias="/controls/flight/elevator-fbw"/>									<!-- Elevator FBW for PSAS -->
-		<float n="12" alias="/controls/flight/aileron"/>										<!-- Aileron/Spoileron -->
+		<float n="12" alias="/controls/flight/aileron-fbw"/>									<!-- Aileron/Spoileron -->
 		<float n="13" alias="/b707/ground-service/fuel-truck/state"/>							<!-- fuel-truck -->
 		<float n="14" alias="/engines/engine/reverser-pos-norm"/>								<!-- multiplayer see the cowl flaps -->
 		<float n="15" alias="/instrumentation/doors/cargo/position-norm"/>						<!-- Cargo door -->
@@ -288,20 +288,18 @@
 			<kp-cws>0.09</kp-cws>
 		</roll>
 		<pitch>
-			<umin>-0.35</umin>
-			<umax>0.35</umax>
-			<kp>-0.08</kp>
+			<umin>-0.45</umin>
+			<umax>0.45</umax>
+			<kp>-0.11</kp>
 			<ti>10.0</ti>
 			<td>0.0001</td>
-			<kp-cws>-0.07</kp-cws>
+			<kp-cws>-0.11</kp-cws>
 		</pitch>
 		<cmd>
 			<roll-kp>-1.4</roll-kp>
 			<roll-scale>1.0</roll-scale>
 			<vorloc>-4.0</vorloc>
-			<alt>0.025</alt>
-			<vs>0.05</vs>
-			<flch-vs>0.07</flch-vs>
+			<vs>0.01</vs>
 			<fpa>0.30</fpa>
 			<gs>0.14</gs>
 		</cmd>
@@ -413,6 +411,7 @@
 			</engine>
 		</engines>
 		<flight>
+			<aileron-fbw>0</aileron-fbw>
 			<elevator-fbw>0</elevator-fbw>
 			<rudder-fbw>0</rudder-fbw>
 		</flight>

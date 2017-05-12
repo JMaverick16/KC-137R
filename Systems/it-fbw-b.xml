@@ -8,7 +8,6 @@
  <!-- Lateral                                                         -->
  <!-- =============================================================== -->
 	
-	<!-- Copy of ITAF's Roll Controller without MROC for Wing Leveller -->
 	<pid-controller>
 		<name>IT-CONTROLLER: ROLL</name>
 		<debug>false</debug>
@@ -32,8 +31,8 @@
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-fbw/roll-engage</property>
-						<value>1</value>
+						<property>/it-fbw/roll-disable</property>
+						<value>0</value>
 					</equals>
 				</and>
 			</condition>
@@ -42,32 +41,86 @@
 			<property>/orientation/roll-deg</property>
 		</input>
 		<reference>
-			<value>0</value>
+			<property>/it-fbw/roll-deg</property>
 		</reference>
 		<output>
-			<property>/controls/flight/aileron</property>
+			<property>/controls/flight/aileron-fbw-cmd</property>
 		</output>
 		<config>
-			<Kp>
-				<property>/it-autoflight/config/roll/kp</property>
-			</Kp>
-			<beta>1.0</beta>	
-			<alpha>0.1</alpha>	
-			<gamma>0.0</gamma>	
-			<Ti>
-				<property>/it-autoflight/config/roll/ti</property>
-			</Ti>    
-			<Td>
-				<property>/it-autoflight/config/roll/td</property>
-			</Td>    	
-			<u_min>
-				<property>/it-autoflight/config/roll/umin</property>
-			</u_min>
-			<u_max>
-				<property>/it-autoflight/config/roll/umax</property>
-			</u_max>
+			<Kp>0.09</Kp>
+			<beta>1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>-1</u_min>
+			<u_max>1</u_max>
 		</config>
 	</pid-controller>
+	
+	<filter>
+		<name>IT-FBW: ROLL OPTION</name>
+		<debug>false</debug>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>
+			<condition>
+				<and>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/gear/gear[1]/wow</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/gear/gear[2]/wow</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-fbw/roll-disable</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+			<property>/controls/flight/aileron-fbw-cmd</property>
+		</input>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/gear/gear[1]/wow</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/gear/gear[2]/wow</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-fbw/roll-disable</property>
+						<value>1</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/controls/flight/aileron</property>
+		</input>
+		<output>/controls/flight/aileron-fbw</output>
+		<type>noise-spike</type>
+		<max-rate-of-change>10</max-rate-of-change>
+	</filter>
 	
  <!-- =============================================================== -->
  <!-- Vertical                                                        -->
@@ -112,12 +165,12 @@
 			<property>/controls/flight/elevator-fbw-cmd</property>
 		</output>
 		<config>
-			<Kp>-0.10</Kp>
+			<Kp>-0.11</Kp>
 			<beta>1</beta>
 			<alpha>0.1</alpha>
 			<gamma>0</gamma>
 			<Ti>10</Ti>
-			<Td>0.000001</Td>
+			<Td>0.00001</Td>
 			<u_min>-1</u_min>
 			<u_max>1</u_max>
 		</config>
@@ -345,14 +398,6 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value> 
-					</equals>
-					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>0</value>
 					</equals>
@@ -401,14 +446,6 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>0</value>
 					</equals>
@@ -439,14 +476,6 @@
 		<input>
 			<condition>
 				<or>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>1</value>
-					</equals>
 					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>1</value>

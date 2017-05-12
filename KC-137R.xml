@@ -466,7 +466,7 @@
      <channel name="Roll">
 
         <summer name="Roll Trim Sum">
-            <input>/controls/flight/aileron</input>
+            <input>/controls/flight/aileron-fbw</input>
             <input>/controls/flight/aileron-trim</input>
             <clipto>
                 <min>-1</min>
@@ -476,7 +476,7 @@
 
         <aerosurface_scale name="Left Aileron Control">
             <input>fcs/roll-trim-sum</input>
-            <gain>0.006</gain>
+            <gain>0.015</gain>
             <range>
                 <min>-40</min>
                 <max>40</max>
@@ -494,7 +494,7 @@
 
         <aerosurface_scale name="Right Aileron Control">
             <input>fcs/roll-trim-sum</input>
-            <gain>0.006</gain>
+            <gain>0.015</gain>
             <range>
                 <min>-40</min>
                 <max>40</max>
@@ -957,7 +957,7 @@
            <property>metrics/bw-ft</property>
            <property>aero/bi2vel</property>
            <property>velocities/p-aero-rad_sec</property>
-           <value>-0.4</value>
+           <value>-0.8</value>
        </product>
     </function>
 
@@ -1041,7 +1041,7 @@
            <property>metrics/cbarw-ft</property>
            <property>aero/ci2vel</property>
            <property>velocities/q-aero-rad_sec</property>
-           <value>-21</value>
+           <value>-33</value>
        </product>
     </function>
 

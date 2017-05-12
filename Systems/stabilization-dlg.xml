@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Wing Leveller/Pitch Stabilization Augmentation System Control Dialog -->
+<!-- Stabilization Augmentation System Control Dialog -->
 
 
 <PropertyList>
@@ -12,7 +12,7 @@
         <layout>hbox</layout>
         <text>
             <halign>left</halign>
-            <label>WL/PSAS Control</label>
+            <label>RSAS/PSAS Control</label>
         </text>
         <button>
             <halign>right</halign>
@@ -31,8 +31,11 @@
 	<group>
 		<layout>hbox</layout>
 		<button>
-			<legend>WING LVL</legend>
+			<legend>MAN ROLL</legend>
             <pref-width>80</pref-width>
+			<enable>
+				<property>/it-fbw/rsas-test</property>
+			</enable>
 			<binding>
 			<command>nasal</command>
 			<script>fbw.roll();</script>
@@ -51,10 +54,10 @@
 	<group>
 		<layout>hbox</layout>
 		<text>
-			<label>[WING LVL]</label>
+			<label>[MAN ROLL]</label>
 			<visible>
 				<equals>
-					<property>/it-fbw/roll-engage</property>
+					<property>/it-fbw/roll-disable</property>
 					<value>1</value>
 				</equals>
 			</visible>
@@ -80,7 +83,38 @@
 				<stretch type="bool">true</stretch>
 			</hrule>
 			<text>
-				<label>Pitch Augmentation</label>
+				<label>Roll</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+			
+			<group>
+				<layout>vbox</layout>
+
+				<slider>
+					<pref-width>150</pref-width>
+					<property>/controls/flight/aileron-fbw</property>
+					<min>-1</min>
+					<max>1</max>
+					<step>0.0001</step>
+					<live>true</live>
+				</slider>
+			</group>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>Pitch</label>
 			</text>
 			<hrule>
 				<stretch type="bool">true</stretch>
@@ -99,7 +133,7 @@
 				<slider>
 					<row>2</row>
 					<col>0</col>
-					<pref-height>100</pref-height>
+					<pref-height>150</pref-height>
 					<vertical>true</vertical>
 					<property>/controls/flight/elevator-fbw</property>
 					<min>-1</min>
@@ -118,9 +152,40 @@
 				<slider>
 					<row>2</row>
 					<col>0</col>
-					<pref-height>100</pref-height>
+					<pref-height>150</pref-height>
 					<vertical>true</vertical>
 					<property>/controls/flight/elevator-trim</property>
+					<min>-1</min>
+					<max>1</max>
+					<step>0.0001</step>
+					<live>true</live>
+				</slider>
+			</group>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+			<text>
+				<label>Yaw</label>
+			</text>
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+		</group>
+		
+		<group>
+			<layout>hbox</layout>
+			
+			<group>
+				<layout>vbox</layout>
+				
+				<slider>
+					<pref-width>150</pref-width>
+					<property>/controls/flight/rudder-fbw</property>
 					<min>-1</min>
 					<max>1</max>
 					<step>0.0001</step>
