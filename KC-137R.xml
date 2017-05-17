@@ -765,9 +765,9 @@
             <table>
                 <independentVar>position/h-agl-ft</independentVar>
                 <tableData>
-                  0             0.105        
-                  10            0.149        
-                  20            0.203        
+                  0             0.050        
+                  10            0.075        
+                  20            0.100        
                   27            0       
                 </tableData>
             </table>
