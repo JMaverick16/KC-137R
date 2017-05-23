@@ -303,7 +303,6 @@
 			<fpa>0.30</fpa>
 		</cmd>
 		<autoland>
-			<kp-roll>0.10</kp-roll>
 			<kp-pitch>0.03</kp-pitch>
 			<kp-rudder>-0.3</kp-rudder>
 		</autoland>
@@ -311,7 +310,6 @@
 	<settings>
 		<default-bank-limit>30</default-bank-limit> <!-- Set the Default Bank Limit -->
 		<enable-cws>0</enable-cws> <!-- Enable/Disable CWS -->
-		<flare-altitude>20</flare-altitude> <!-- Autoland Flare AGL -->
 		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 		<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
 		<retard-ft>20</retard-ft> <!-- Enable Thrust Retard -->
@@ -319,6 +317,7 @@
 		<togaspd>171</togaspd> <!-- V2 + 10kts -->
 		<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
 		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
+		<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
 	</settings>
 </it-autoflight>
 
