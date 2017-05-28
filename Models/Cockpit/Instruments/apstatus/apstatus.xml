@@ -121,8 +121,8 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">AP</format>
-		<property>autopilot/serviceable</property>
+		<format type="string">%s</format>
+		<property>/fma/apstatus/autoflight-mode</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -161,22 +161,6 @@
 				<property>/it-autoflight/output/athr</property>
 				<value>1</value>
 			</equals>
-		</condition>
-	</animation>
-	<animation>
-		<type>select</type>
-		<object-name>AP</object-name>
-		<condition>
-			<or>
-				<equals>
-					<property>/it-autoflight/output/ap1</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>/it-autoflight/output/ap2</property>
-					<value>1</value>
-				</equals>
-			</or>
 		</condition>
 	</animation>
 	

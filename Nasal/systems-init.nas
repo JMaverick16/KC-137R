@@ -27,6 +27,51 @@ setlistener("engines/engine[3]/epr-actual", func {
   setprop("engines/engine[3]/epr-actualx100", (getprop("engines/engine[3]/epr-actual") * 100));
 });
 
+# AT or AP or FD
+var apfd = func {
+	var ap1 = getprop("/it-autoflight/output/ap1");
+	var ap2 = getprop("/it-autoflight/output/ap2");
+	var athr = getprop("/it-autoflight/output/athr");
+	var fd1 = getprop("/it-autoflight/output/fd1");
+	var fd2 = getprop("/it-autoflight/output/fd2");
+	if ((ap1 == 1 or ap2 == 1) and athr == 1) {
+		setprop("/fma/pfd/autoflight-mode", "AT+AP");
+		setprop("/fma/apstatus/autoflight-mode", "AP");
+	} else if ((ap1 == 1 or ap2 == 1) and athr == 0) {
+		setprop("/fma/pfd/autoflight-mode", "AP");
+		setprop("/fma/apstatus/autoflight-mode", "AP");
+	} else if ((fd1 == 1 or fd2 == 1) and athr == 1) {
+		setprop("/fma/pfd/autoflight-mode", "AT+FD");
+		setprop("/fma/apstatus/autoflight-mode", "FD");
+	} else if ((fd1 == 1 or fd2 == 1) and athr == 0) {
+		setprop("/fma/pfd/autoflight-mode", "FD");
+		setprop("/fma/apstatus/autoflight-mode", "FD");
+	} else if (athr == 1) {
+		setprop("/fma/pfd/autoflight-mode", "AT");
+		setprop("/fma/apstatus/autoflight-mode", " ");
+	} else {
+		setprop("/fma/pfd/autoflight-mode", " ");
+		setprop("/fma/apstatus/autoflight-mode", " ");
+	}
+}
+
+# Update AT or AP or FD
+setlistener("/it-autoflight/output/ap1", func {
+	apfd();
+});
+setlistener("/it-autoflight/output/ap2", func {
+	apfd();
+});
+setlistener("/it-autoflight/output/athr", func {
+	apfd();
+});
+setlistener("/it-autoflight/output/fd1", func {
+	apfd();
+});
+setlistener("/it-autoflight/output/fd2", func {
+	apfd();
+});
+
 setprop("/controls/flight/flap-lever", 0);
 
 controls.flapsDown = func(step) {

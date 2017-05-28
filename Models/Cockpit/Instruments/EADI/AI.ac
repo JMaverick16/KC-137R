@@ -4,11 +4,31 @@ MATERIAL "GlassCockpit" rgb 0.8 0.8 0.8  amb 0.49 0.49 0.49  emis 1 1 1  spec 0.
 MATERIAL "DefaultWhite.000" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.02 0.02 0.02  shi 50  trans 0
 MATERIAL "GlassCockpit" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 50  trans 0
 MATERIAL "Lights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0.658824 0.670588 0.67451  spec 0 0 0  shi 128  trans 0
 OBJECT world
-kids 15
+kids 16
+OBJECT poly
+name "yoke-pos"
+loc 0.000112843 -0.000294573 -0.00191592
+texture "C:/Users/it0uchpods/Desktop/Aircraft/KC-137R/Models/Cockpit/Instruments/PFD/pos.png"
+crease 45.000000
+numvert 4
+0 0.00734533 -0.00480185
+0 -0.00734533 -0.00480185
+0 -0.00734533 0.00882629
+0 0.00734533 0.00882629
+numsurf 1
+SURF 0x30
+mat 5
+refs 4
+3 0.791565 0.449709
+2 0.68209 0.449709
+1 0.68209 0.0104858
+0 0.791565 0.0104858
+kids 0
 OBJECT poly
 name "FDpitch_rembrandt"
-loc 9.41452e-005 -0.028446 -0.0108482
+loc 0.000144527 -0.028446 -0.0108482
 data 9
 Plane.020
 crease 30.000000
@@ -28,7 +48,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FDroll_rembrandt"
-loc 9.41452e-005 -0.00851062 -0.0412417
+loc 0.000144527 -0.00851062 -0.0412417
 data 9
 Plane.019
 crease 30.000000
@@ -1706,6 +1726,7 @@ name "Off"
 loc 0.000781541 0.0061514 0
 texture "ati.png"
 crease 45.000000
+hidden
 numvert 4
 0 0.0540197 -0.0661535
 0 -0.0540197 -0.0661535

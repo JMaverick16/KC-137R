@@ -21,6 +21,29 @@
 		</emission>
 	</animation>-->
 	
+    <animation>
+        <type>translate</type>
+        <object-name>yoke-pos</object-name>
+        <property>controls/flight/elevator</property>
+        <factor>0.0258</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+    </animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>yoke-pos</object-name>
+		<condition>
+			<or>
+				<property>/gear/gear[1]/wow</property>
+				<property>/gear/gear[2]/wow</property>
+			</or>
+		</condition>
+	</animation>
+	
 	<!-- Power on/off -->
 	<animation>
 		<name>Power on/off</name>
@@ -42,7 +65,20 @@
         <condition>
 			<and>
 				<property>sim/rendering/rembrandt/enabled</property>
-				<property>/it-autoflight/output/fd2</property>
+				<equals>
+					<property>/it-autoflight/output/fd2</property>
+					<value>1</value>
+				</equals>
+				<not><property>/gear/gear[1]/wow</property></not>
+				<not><property>/gear/gear[2]/wow</property></not>
+				<less-than>
+					<property>orientation/roll-deg</property>
+					<value>45</value>
+				</less-than>
+				<greater-than>
+					<property>orientation/roll-deg</property>
+					<value>-45</value>
+				</greater-than>
 			</and>
         </condition>
     </animation>
@@ -54,7 +90,20 @@
         <condition>
 			<and>
 				<not><property>sim/rendering/rembrandt/enabled</property></not>
-				<property>/it-autoflight/output/fd2</property>
+				<equals>
+					<property>/it-autoflight/output/fd2</property>
+					<value>1</value>
+				</equals>
+				<not><property>/gear/gear[1]/wow</property></not>
+				<not><property>/gear/gear[2]/wow</property></not>
+				<less-than>
+					<property>orientation/roll-deg</property>
+					<value>45</value>
+				</less-than>
+				<greater-than>
+					<property>orientation/roll-deg</property>
+					<value>-45</value>
+				</greater-than>
 			</and>
         </condition>
     </animation>

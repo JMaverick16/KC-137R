@@ -39,8 +39,8 @@
          <path>Aircraft/KC-137R/Systems/engine-timing.xml</path>
     </autopilot>
 	<autopilot>
-		<name>WL/PSAS</name>
-		<path>Aircraft/KC-137R/Systems/it-fbw-b.xml</path>
+		<name>RSAS/PSAS</name>
+		<path>Aircraft/KC-137R/Systems/it-stab.xml</path>
 	</autopilot>
 	</systems>
 

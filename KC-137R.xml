@@ -430,7 +430,6 @@
  </propulsion> 
  
  <system file="pushback"/>
- <system file="it-fbw" />
 
  <flight_control name="707-MK">
      <channel name="Pitch">
