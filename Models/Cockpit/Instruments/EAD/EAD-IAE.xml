@@ -2378,16 +2378,22 @@
 		<type>select</type>
 		<object-name>spdbrka</object-name>
 		<condition>
-			<and>
-				<equals>
-					<property>/controls/flight/speedbrake-arm</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>/controls/flight/spoilers</property>
-					<value>0</value>
-				</equals>
-			</and>
+			<or>
+				<and>
+					<equals>
+						<property>/controls/flight/speedbrake-arm</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/controls/flight/spoilers</property>
+						<value>0</value>
+					</equals>
+					<not-equals>
+						<property>/controls/test/warn-knob</property>
+						<value>1.0</value>
+					</not-equals>
+				</and>
+			</or>
 		</condition>
 	</animation>
 	
@@ -2395,10 +2401,140 @@
 		<type>select</type>
 		<object-name>spdbrke</object-name>
 		<condition>
-			<greater-than>
-				<property>/controls/flight/spoilers</property>
-				<value>0</value>
-			</greater-than>
+			<or>
+				<greater-than>
+					<property>/controls/flight/spoilers</property>
+					<value>0</value>
+				</greater-than>
+				<equals>
+					<property>/controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<text>
+        <name>manroll</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0830</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">ROLL/YAW SYS MAN</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	
+	<animation>
+		<type>select</type>
+		<object-name>manroll</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>/it-fbw/roll-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<text>
+        <name>manpitch</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0890</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">PITCH SYS MAN</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	
+	<animation>
+		<type>select</type>
+		<object-name>manpitch</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>/it-fbw/pitch-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	
+	<text>
+        <name>boomdn</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0950</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">BOOM EXT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	
+	<animation>
+		<type>select</type>
+		<object-name>boomdn</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>/instrumentation/doors/refuel-boom/position-norm</property>
+					<value>0.05</value>
+				</greater-than>
+				<equals>
+					<property>/controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
 		</condition>
 	</animation>
 	
@@ -2448,6 +2584,10 @@
 					<property>engines/engine[3]/n2</property>
 					<value>45</value>
 				</less-than>
+				<equals>
+					<property>/controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
 			</or>
 		</condition>
 	</animation>
@@ -2497,6 +2637,10 @@
 						<property>engines/engine[3]/epr-actual</property>
 						<property>controls/engines/eproverlim</property>
 					</greater-than>
+					<equals>
+						<property>/controls/test/warn-knob</property>
+						<value>1.0</value>
+					</equals>
 				</or>
 				<property>/controls/engines/epr</property>
 			</and>
@@ -2548,11 +2692,88 @@
 						<property>engines/engine[3]/epr-actual</property>
 						<property>controls/engines/n1overlim</property>
 					</greater-than>
+					<equals>
+						<property>/controls/test/warn-knob</property>
+						<value>1.0</value>
+					</equals>
 				</or>
 				<not><property>/controls/engines/epr</property></not>
 			</and>
 		</condition>
 	</animation>
+	
+	<text>
+        <name>overn1lim</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m> 0.0010</y-m>
+			<z-m>-0.0830</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">N1 OVER LIMIT!</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bankoverlin</object-name>
+		<condition>
+			<or>
+				<and>
+					<not><property>/gear/gear[1]/wow</property></not>
+					<not><property>/gear/gear[2]/wow</property></not>
+					<or>
+						<less-than>
+							<property>orientation/roll-deg</property>
+							<value>-45</value>
+						</less-than>
+						<greater-than>
+							<property>orientation/roll-deg</property>
+							<value>45</value>
+						</greater-than>
+					</or>
+				</and>
+				<equals>
+					<property>/controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<text>
+        <name>bankoverlin</name>
+        <offsets>
+			<x-m> 0.00018</x-m>
+			<y-m> 0.0010</y-m>
+			<z-m>-0.0890</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">BANK OVER LIMIT!</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
 	
 	<!-- White -->
 	<animation>
@@ -2612,6 +2833,9 @@
 	<animation>
 		<type>material</type> 
 		<object-name>spdbrka</object-name>
+		<object-name>boomdn</object-name>
+		<object-name>manpitch</object-name>
+		<object-name>manroll</object-name>
 		<diffuse>
 			<red>0</red>
 			<green>0.75</green>
@@ -2634,7 +2858,7 @@
 		</emission>
 	</animation>
 	
-	<!-- Orange -->
+	<!-- Amber -->
 	<animation>
 		<type>material</type>
 		<object-name>XX1</object-name>
@@ -2677,6 +2901,7 @@
 		<object-name>ensh</object-name>
 		<object-name>overeprlim</object-name>
 		<object-name>overn1lim</object-name>
+		<object-name>bankoverlin</object-name>
 		<diffuse>
 			<red>1</red>
 			<green>1</green>
