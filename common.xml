@@ -274,6 +274,10 @@
 	<altimeter>
 		<inhg>1</inhg>
 	</altimeter>
+	<stby>
+		<powah>1</powah>
+		<inhg>1</inhg>
+	</stby>
 </modes>
 
 <it-autoflight>

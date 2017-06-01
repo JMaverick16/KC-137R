@@ -15,6 +15,114 @@ Modified by it0uchpods for KC-137R
     <z-offset>0.8</z-offset>
     </animation>
 	
+	<animation>
+		<type>pick</type>
+		<object-name>knob1</object-name>
+		<action>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") + 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") + 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") - 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") - 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>knob2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>/modes/altimeter/inhg</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<action>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") + 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") + 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") - 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") - 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+	
     <animation>
         <type>translate</type>
         <object-name>yoke-pos</object-name>
@@ -377,7 +485,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>rotate</type>
         <object-name>hdg-bug</object-name>
-        <property>/it-autoflight/internal/heading-bug-error-deg</property>
+        <property>/it-autoflight/internal/heading-error-deg</property>
         <interpolation>
             <entry><ind>-54</ind><dep>-54</dep></entry>
             <entry><ind>0</ind><dep>0</dep></entry>

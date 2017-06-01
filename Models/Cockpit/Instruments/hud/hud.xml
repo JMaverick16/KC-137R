@@ -8,6 +8,12 @@
   <action>
    <button>1</button>
     <binding>
+	 <condition>
+	  <greater-than-equals>
+		<property>systems/electrical/outputs/efis</property>
+		<value>15</value>
+	  </greater-than-equals>
+	 </condition>
      <command>property-toggle</command>
      <property>/controls/switches/hud-flip[1]</property>
 	<value>0</value>
@@ -22,6 +28,12 @@
   <action>
    <button>0</button>
     <binding>
+	 <condition>
+	  <greater-than-equals>
+		<property>systems/electrical/outputs/efis</property>
+		<value>15</value>
+	  </greater-than-equals>
+	 </condition>
      <command>property-toggle</command>
      <property>/controls/switches/hud[1]</property>
 	<value>0</value>
@@ -115,6 +127,8 @@
    <object-name>vstext</object-name>
    <object-name>vs-a</object-name>
    <object-name>vs-b</object-name>
+   <object-name>ap.annun</object-name>
+   <object-name>fd.annun</object-name>
 	<property>/controls/switches/hud-flip[1]</property>
 	<factor>-120</factor>
 	<center>
@@ -217,6 +231,10 @@
    <condition>
      <and>
       <property>/controls/switches/hud[1]</property>
+	  <greater-than-equals>
+		<property>systems/electrical/outputs/efis</property>
+		<value>15</value>
+	  </greater-than-equals>
       <not>
       <property>sim/crashed</property>
       </not>

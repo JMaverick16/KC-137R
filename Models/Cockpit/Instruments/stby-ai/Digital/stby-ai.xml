@@ -1,5 +1,5 @@
 ﻿<!--
-777-200LR Standby Altimeter 
+KC-137R Stby Octal
 -->
 
 <PropertyList>
@@ -18,12 +18,60 @@
 		<type>select</type>
 		<object-name>Off</object-name>
 		<condition>
-			<less-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-			</less-than>
+			<or>
+				<less-than>
+					<property>systems/electrical/outputs/efis</property>
+					<value>15</value>
+				</less-than>
+				<equals>
+					<property>/modes/stby/powah</property>
+					<value>0</value>
+				</equals>
+			</or>
 		</condition>
-	</animation>  
+	</animation>
+	
+    <animation>
+    	<type>textranslate</type>
+    	<object-name>spd-tape</object-name>
+    	<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>    0</dep></entry>
+			<entry><ind> 20</ind><dep>0.040</dep></entry>
+			<entry><ind> 40</ind><dep>0.080</dep></entry>
+			<entry><ind> 60</ind><dep>0.118</dep></entry>
+			<entry><ind> 80</ind><dep>0.158</dep></entry>
+			<entry><ind>100</ind><dep>0.198</dep></entry>
+			<entry><ind>120</ind><dep>0.236</dep></entry>
+			<entry><ind>140</ind><dep>0.276</dep></entry>
+			<entry><ind>160</ind><dep>0.316</dep></entry>
+			<entry><ind>180</ind><dep>0.356</dep></entry>
+			<entry><ind>200</ind><dep>0.395</dep></entry>
+			<entry><ind>220</ind><dep>0.435</dep></entry>
+			<entry><ind>240</ind><dep>0.474</dep></entry>
+			<entry><ind>260</ind><dep>0.514</dep></entry>
+			<entry><ind>280</ind><dep>0.554</dep></entry>
+			<entry><ind>300</ind><dep>0.593</dep></entry>
+			<entry><ind>320</ind><dep>0.633</dep></entry>
+			<entry><ind>340</ind><dep>0.672</dep></entry>
+			<entry><ind>360</ind><dep>0.712</dep></entry>
+			<entry><ind>380</ind><dep>0.751</dep></entry>
+			<entry><ind>400</ind><dep>0.791</dep></entry>
+		</interpolation>
+    	<axis>
+    		<y>1</y>
+    	</axis>
+    </animation>
+	
+	<animation>
+    	<type>textranslate</type>
+    	<object-name>alt-tape-1</object-name>
+    	<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    	<factor>0.000019141</factor>
+    	<axis>
+    		<y>1</y>
+    	</axis>
+    </animation>
 
  <animation>
         <type>rotate</type>
@@ -31,9 +79,9 @@
         <object-name>Slip.needle</object-name>
         <property>orientation/roll-deg</property>
         <center>
-            <x-m>0.002</x-m>
-            <y-m>-0.011</y-m>
-            <z-m>0.009</z-m>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0004</z-m>
         </center>
         <axis>
             <x>1</x>
@@ -82,16 +130,268 @@
    </transform>
 
  </animation>
-
-    <!--animation>
+ 
+     <text>
+        <name>hdg-octal</name>
+        <offsets>
+            <x-m>0.0009</x-m>
+            <y-m>-0.018</y-m>
+            <z-m>-0.027</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">text-value</type>
+        <format type="string">HDG:     MAG</format>
+		<property>autopilot/serviceable</property>
+        <truncate type="bool">false</truncate>
+        <font type="string">helvetica_bold.txf</font>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.005</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+ 
+     <text>
+        <name>hdg-octal</name>
+        <offsets>
+            <x-m>0.0009</x-m>
+            <y-m>-0.004</y-m>
+            <z-m>-0.027</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%3.0f</format>
+		<property>/orientation/heading-magnetic-deg</property>
+        <truncate type="bool">false</truncate>
+        <font type="string">helvetica_bold.txf</font>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.005</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+     <text>
+        <name>zeqnh</name>
+        <offsets>
+            <x-m>0.0009</x-m>
+            <y-m>-0.021</y-m>
+            <z-m>0.0272</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%4.0f</format>
+		<property>/instrumentation/altimeter/setting-hpa</property>
+        <truncate type="bool">false</truncate>
+        <font type="string">helvetica_bold.txf</font>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.005</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+     <text>
+        <name>zeinhg</name>
+        <offsets>
+            <x-m>0.0009</x-m>
+            <y-m>0.009</y-m>
+            <z-m>0.0272</z-m>
+        </offsets>
+        <alignment>left-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">number-value</type>
+        <format type="string">%2.2f</format>
+		<property>/instrumentation/altimeter/setting-inhg</property>
+        <truncate type="bool">false</truncate>
+        <font type="string">helvetica_bold.txf</font>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.005</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+    <animation>
         <type>select</type>
-        <object-name>StbyAI.screenoff</object-name>
+        <object-name>zeinhg</object-name>
         <condition>
-            <less-than>
-                <property>systems/electrical/outputs/efis</property>
-                <value>15</value>
-            </less-than>
+            <property>/modes/altimeter/inhg</property>
         </condition>
-    </animation-->
+    </animation>
+	
+    <animation>
+        <type>select</type>
+        <object-name>zeqnh</object-name>
+        <condition>
+            <not><property>/modes/altimeter/inhg</property></not>
+        </condition>
+    </animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>knob1</object-name>
+		<action>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") + 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") + 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") - 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") - 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>knob2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>/modes/altimeter/inhg</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+		<action>
+			<button>3</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") + 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") + 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
+			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") - 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") - 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>btn-octal</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-cycle</command>
+				<property>/modes/stby/powah</property>
+				<value>0</value>
+				<value>1</value>
+			</binding>
+		</action>
+	</animation>
+
+	<!-- Colors -->
+    <animation>
+        <type>material</type>
+        <object-name>hdg-octal</object-name>
+		<object-name>zeqnh</object-name>
+		<object-name>zeinhg</object-name>
+        <diffuse>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+        </diffuse>
+        <ambient>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </ambient>
+        <specular>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </specular>
+        <emission>
+            <red>1</red>
+            <green>1</green>
+            <blue>1</blue>
+        </emission>
+    </animation>
 
 </PropertyList>

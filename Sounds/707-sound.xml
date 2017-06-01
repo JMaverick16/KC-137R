@@ -1382,7 +1382,7 @@
         </refueling2>
 
         <refuel>
-            <name>refuel</name>
+            <name>refuel1</name>
             <mode>once</mode>
             <type>avionics</type>
             <path>Aircraft/KC-137R/Sounds/Refuel_boom.wav</path>
@@ -1394,7 +1394,7 @@
             </condition>
             <volume>
             	<property>sim/current-view/internal</property>
-                <value>1.0</value>
+                <value>1.4</value>
             </volume>
         </refuel>
 </fx>
