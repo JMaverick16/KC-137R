@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- KC-137R EADI VSI -->
+
+<PropertyList>
+
+	<animation>
+		<type>scale</type>
+		<x-offset>0.6</x-offset>
+		<y-offset>0.6</y-offset>
+		<z-offset>0.6</z-offset>
+	</animation>
+
+	<path>VSI.ac</path>
+
+    <animation>
+        <type>translate</type>
+        <object-name>VSI.needle</object-name>
+        <property>velocities/vertical-speed-fps</property>
+        <interpolation>
+            <entry><ind>-100</ind><dep>-0.0385</dep></entry>
+            <entry><ind>-33.3333</ind><dep>-0.0265</dep></entry>
+            <entry><ind>-16.6666</ind><dep>-0.0147</dep></entry>
+            <entry><ind>16.6666</ind><dep>0.0147</dep></entry>
+            <entry><ind>33.3333</ind><dep>0.0265</dep></entry>
+            <entry><ind>100</ind><dep>0.0385</dep></entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>VSI.needle</object-name>
+        <property>velocities/vertical-speed-fps</property>
+        <interpolation>
+            <entry><ind>-100</ind><dep>-60.0</dep></entry>
+            <entry><ind>-33.3333</ind><dep>-50.0</dep></entry>
+            <entry><ind>-16.6666</ind><dep>-34.0</dep></entry>
+            <entry><ind>16.6666</ind><dep>34.0</dep></entry>
+            <entry><ind>33.3333</ind><dep>50.0</dep></entry>
+            <entry><ind>100</ind><dep>60.0</dep></entry>
+        </interpolation>
+        <center>
+            <x-m>0.002</x-m>
+            <y-m>0.082</y-m>
+            <z-m>0.007</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

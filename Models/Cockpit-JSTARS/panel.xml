@@ -150,8 +150,8 @@
 </model>
 
 <model>
-  <name>VSI</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/VSI/vsi.xml</path>
+  <name>stby_ai</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/Digital/stby-ai.xml</path> <!-- Will be Analog once fucking hole is cut -->
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>-0.303</y-m>
@@ -394,8 +394,8 @@
 </model>
 
 <model>
-  <name>VSI_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/VSI/vsi.xml</path>
+  <name>stby_ai_cp</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/Digital/stby-ai.xml</path> <!-- Will be Analog once fucking hole is cut -->
   <offsets>
     <x-m>-18.918</x-m>
     <y-m>0.542</y-m>

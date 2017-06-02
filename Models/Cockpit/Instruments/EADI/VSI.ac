@@ -1,0 +1,45 @@
+AC3Db
+MATERIAL "white" rgb 1 1 1  amb 1 1 1  emis 0.798 0.798 0.798  spec 0 0 0  shi 0  trans 0
+OBJECT world
+kids 2
+OBJECT poly
+name "VS_ind"
+loc 0.000428948 0.0035665 -9.2499e-005
+data 6
+Circle
+texture "VSI.png"
+crease 30.000000
+numvert 4
+-0.0004155 0.0516285 -0.0917365
+-0.0004155 0.0516285 -0.0736525
+-0.0004155 -0.0351165 -0.0736525
+-0.0004155 -0.0351165 -0.0917365
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0.991354 0.481587
+1 0.894781 0.481587
+2 0.894781 0.0183617
+3 0.991354 0.0183617
+kids 0
+OBJECT poly
+name "VSI.needle"
+loc -0.00191455 0 0
+data 9
+Plane.006
+crease 30.000000
+numvert 4
+0.002412 0.010484 -0.102713
+0.002412 0.009259 -0.102713
+0.002412 0.009259 -0.081873
+0.002412 0.010484 -0.081873
+numsurf 1
+SURF 0x0
+mat 0
+refs 4
+0 0 0
+3 0 0
+2 0 0
+1 0 0
+kids 0

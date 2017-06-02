@@ -5,6 +5,13 @@
 <PropertyList>
 
 	<path>AI.ac</path>
+	
+	<model>
+		<path>VSI.xml</path>
+		<offsets>
+			<z-m>-0.025</z-m>
+		</offsets>
+	</model>
 
 	<!-- ANIMATIONS -->
 	<!-- Lighting -->
