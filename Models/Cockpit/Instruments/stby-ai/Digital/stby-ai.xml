@@ -5,12 +5,12 @@ KC-137R Stby Octal
 <PropertyList>
  <path>stby-ai.ac</path>
  
-        <animation>
+        <!--animation>
   <type>scale</type>
-  <x-offset>0.91</x-offset>
-  <y-offset>0.91</y-offset>
-  <z-offset>0.91</z-offset>
- </animation>
+  <x-offset>0.97</x-offset>
+  <y-offset>0.97</y-offset>
+  <z-offset>0.97</z-offset>
+ </animation-->
 
 	<!-- Power on/off -->
 	<animation>

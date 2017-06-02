@@ -102,7 +102,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/Digital/stby-ai.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
-    <y-m>-0.385</y-m>
+    <y-m>-0.389</y-m>
     <z-m>0.707</z-m>
   </offsets>
 </model>
