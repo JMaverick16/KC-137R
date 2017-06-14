@@ -4,15 +4,15 @@
   Author:   Aero-Matic v 0.81
 
   Inputs:
-    name:           CFM56-5B7
+    name:           CFM56-7B26
     type:           turbine
-    thrust:         27000 lb
+    thrust:         26300 lb
     augmented?      no
     injected?       no
 -->
 
 <turbine_engine name="CFM-56">
-  <milthrust>     27000 </milthrust> <!-- I'm using the CFM56-5B7 version. 27000 Pounds Thrust. -->
+  <milthrust>     26300 </milthrust> <!-- I'm using the CFM56-7B26 version. 263000 Pounds Thrust. -->
   <bypassratio>     5.1 </bypassratio>
   <tsfc>            0.8 </tsfc>
   <bleed>          0.03 </bleed>

@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Boeing C-137R (IAE V2528-D5)</description>
+  <description>Boeing C-137R (IAE V2527-A5)</description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/splashC.png</splash-texture>
 	</startup>
@@ -286,7 +286,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>C-137R</model>
-			<engines>IAE V2528-D5</engines>
+			<engines>IAE V2527-A5</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
