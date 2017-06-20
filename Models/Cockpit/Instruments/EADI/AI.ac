@@ -10,7 +10,7 @@ kids 16
 OBJECT poly
 name "yoke-pos"
 loc 0.000112843 -0.000294573 -0.00191592
-texture "C:/Users/it0uchpods/Desktop/Aircraft/KC-137R/Models/Cockpit/Instruments/PFD/pos.png"
+texture "pos.png"
 crease 45.000000
 numvert 4
 0 0.00734533 -0.00480185
