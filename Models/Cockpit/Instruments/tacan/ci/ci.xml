@@ -112,6 +112,18 @@
     <object-name>sym</object-name>
     <property>/instrumentation/tacan/display/correction</property>
     <factor>-1</factor>
+	<condition>
+		<and>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</greater-than-equals>
+			<equals>
+				<property>/instrumentation/tacan/powered</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
     <axis>
       <x>-1</x>
       <y>0</y>
@@ -134,6 +146,18 @@
         <entry><ind>2.99</ind><dep> 20 </dep></entry>
         <entry><ind>0.5</ind><dep>  0 </dep></entry>
       </interpolation>
+	<condition>
+		<and>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</greater-than-equals>
+			<equals>
+				<property>/instrumentation/tacan/powered</property>
+				<value>1</value>
+			</equals>
+		</and>
+	</condition>
       <axis>
           <x>1.0</x>
           <y>0</y>
