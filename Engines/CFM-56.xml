@@ -14,10 +14,10 @@
 <turbine_engine name="CFM-56">
   <milthrust>     26300 </milthrust> <!-- I'm using the CFM56-7B26 version. 263000 Pounds Thrust. -->
   <bypassratio>     5.1 </bypassratio>
-  <tsfc>            0.8 </tsfc>
+  <tsfc>            0.6 </tsfc>
   <bleed>          0.03 </bleed>
-  <idlen1>         23.4 </idlen1>
-  <idlen2>         63.7 </idlen2>
+  <idlen1>         22.4 </idlen1>
+  <idlen2>         60.9 </idlen2>
   <n1spinup>        0.2 </n1spinup>
   <n2spinup>        2.0 </n2spinup>
   <maxn1>         105.8 </maxn1>
@@ -46,7 +46,7 @@
     <independentVar lookup="row">velocities/mach</independentVar>
     <independentVar lookup="column">atmosphere/density-altitude</independentVar>
     <tableData>
-          -10000       0   10000   20000   30000   40000   50000
+          -10000       0   10000   20000   30000   40000   52000
      0.0   1.2600  1.0000  0.7400  0.5340  0.3720  0.2410  0.1490
      0.2   1.1710  0.9340  0.6970  0.5060  0.3550  0.2310  0.1430
      0.4   1.1500  0.9210  0.6920  0.5060  0.3570  0.2330  0.1450

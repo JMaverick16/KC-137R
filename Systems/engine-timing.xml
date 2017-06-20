@@ -2,20 +2,72 @@
 
 <PropertyList>
 
-    <filter>
-        <name>EPR 1</name>
+   <filter>
+        <name>EPR Scale</name>
         <type>gain</type>
         <gain>1</gain>
         <update-interval-secs type="double">0.05</update-interval-secs>
         <input> 
             <expression>
                 <table>
-                    <property>/engines/engine[0]/n1</property> 
-                    <entry><ind>   18</ind><dep>0.988</dep></entry>
-                    <entry><ind>   23</ind><dep>1.000</dep></entry>
-                    <entry><ind>   35</ind><dep>1.060</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.322</dep></entry>
+                    <property>/position/altitude-ft</property> 
+                    <entry><ind>    0</ind><dep>0.444</dep></entry>
+                    <entry><ind>46000</ind><dep>0.703</dep></entry>
                 </table>
+            </expression>
+        </input>
+		<output>/engines/epr-scale</output>
+    </filter>
+	
+    <filter>
+        <name>EPR Scale 2</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/position/altitude-ft</property> 
+                    <entry><ind>    0</ind><dep>0.992</dep></entry>
+                    <entry><ind>13000</ind><dep>0.977</dep></entry>
+                    <entry><ind>42000</ind><dep>0.969</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/epr-scale-b</output>
+    </filter>
+
+    <filter>
+        <name>EPR 1</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/n1</property>
+                    <entry><ind> 18.0</ind><dep>0.00</dep></entry>
+                    <entry><ind> 22.4</ind><dep>0.03</dep></entry>
+                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                </table>
+            </expression>
+			<scale>/engines/epr-scale</scale>
+        </input>
+		<output>/engines/engine[0]/epr-actual-cmd</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 1</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+				<sum>
+					<property>/engines/engine[0]/epr-actual-cmd</property>
+					<property>/engines/epr-scale-b</property>
+				</sum>
             </expression>
         </input>
 		<output>/engines/engine[0]/epr-actual</output>
@@ -26,15 +78,32 @@
         <type>gain</type>
         <gain>1</gain>
         <update-interval-secs type="double">0.05</update-interval-secs>
-        <input> 
+        <input>
             <expression>
                 <table>
-                    <property>/engines/engine[1]/n1</property> 
-                    <entry><ind>   18</ind><dep>0.988</dep></entry>
-                    <entry><ind>   23</ind><dep>1.000</dep></entry>
-                    <entry><ind>   35</ind><dep>1.060</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.322</dep></entry>
+                    <property>/engines/engine[1]/n1</property>
+                    <entry><ind> 18.0</ind><dep>0.00</dep></entry>
+                    <entry><ind> 22.4</ind><dep>0.03</dep></entry>
+                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
+            </expression>
+			<scale>/engines/epr-scale</scale>
+        </input>
+		<output>/engines/engine[1]/epr-actual-cmd</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 2</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+				<sum>
+					<property>/engines/engine[1]/epr-actual-cmd</property>
+					<property>/engines/epr-scale-b</property>
+				</sum>
             </expression>
         </input>
 		<output>/engines/engine[1]/epr-actual</output>
@@ -45,15 +114,32 @@
         <type>gain</type>
         <gain>1</gain>
         <update-interval-secs type="double">0.05</update-interval-secs>
-        <input> 
+        <input>
             <expression>
                 <table>
-                    <property>/engines/engine[2]/n1</property> 
-                    <entry><ind>   18</ind><dep>0.988</dep></entry>
-                    <entry><ind>   23</ind><dep>1.000</dep></entry>
-                    <entry><ind>   35</ind><dep>1.060</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.322</dep></entry>
+                    <property>/engines/engine[2]/n1</property>
+                    <entry><ind> 18.0</ind><dep>0.00</dep></entry>
+                    <entry><ind> 22.4</ind><dep>0.03</dep></entry>
+                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
+            </expression>
+			<scale>/engines/epr-scale</scale>
+        </input>
+		<output>/engines/engine[2]/epr-actual-cmd</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 3</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+				<sum>
+					<property>/engines/engine[2]/epr-actual-cmd</property>
+					<property>/engines/epr-scale-b</property>
+				</sum>
             </expression>
         </input>
 		<output>/engines/engine[2]/epr-actual</output>
@@ -64,18 +150,107 @@
         <type>gain</type>
         <gain>1</gain>
         <update-interval-secs type="double">0.05</update-interval-secs>
-        <input> 
+        <input>
             <expression>
                 <table>
-                    <property>/engines/engine[3]/n1</property> 
-                    <entry><ind>   18</ind><dep>0.988</dep></entry>
-                    <entry><ind>   23</ind><dep>1.000</dep></entry>
-                    <entry><ind>   35</ind><dep>1.060</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.322</dep></entry>
+                    <property>/engines/engine[3]/n1</property>
+                    <entry><ind> 18.0</ind><dep>0.00</dep></entry>
+                    <entry><ind> 22.4</ind><dep>0.03</dep></entry>
+                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
+            </expression>
+			<scale>/engines/epr-scale</scale>
+        </input>
+		<output>/engines/engine[3]/epr-actual-cmd</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 4</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+				<sum>
+					<property>/engines/engine[3]/epr-actual-cmd</property>
+					<property>/engines/epr-scale-b</property>
+				</sum>
             </expression>
         </input>
 		<output>/engines/engine[3]/epr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EPR LIMIT</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+                <table>
+                    <property>/controls/engines/n1limx100</property>
+                    <entry><ind> 18.0</ind><dep>0.00</dep></entry>
+                    <entry><ind> 22.4</ind><dep>0.03</dep></entry>
+                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                </table>
+            </expression>
+			<scale>/engines/epr-scale</scale>
+        </input>
+		<output>/controls/engines/eprlim-cmd</output>
+    </filter>
+	
+    <filter>
+        <name>EPR LIMIT</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+				<sum>
+					<property>/controls/engines/eprlim-cmd</property>
+					<property>/engines/epr-scale-b</property>
+				</sum>
+            </expression>
+        </input>
+		<output>/controls/engines/eprlim</output>
+    </filter>
+	
+    <filter>
+        <name>EPR OVER LIMIT</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+                <table>
+                    <property>/controls/engines/n1overlim</property>
+                    <entry><ind> 18.0</ind><dep>0.00</dep></entry>
+                    <entry><ind> 22.4</ind><dep>0.03</dep></entry>
+                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
+                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                </table>
+            </expression>
+			<scale>/engines/epr-scale</scale>
+        </input>
+		<output>/controls/engines/eproverlim-cmd</output>
+    </filter>
+	
+    <filter>
+        <name>EPR OVER LIMIT</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input>
+            <expression>
+				<sum>
+					<property>/controls/engines/eproverlim-cmd</property>
+					<property>/engines/epr-scale-b</property>
+				</sum>
+            </expression>
+        </input>
+		<output>/controls/engines/eproverlim</output>
     </filter>
 	
     <filter>
@@ -89,7 +264,7 @@
                     <property>/engines/engine[0]/n1</property> 
                     <entry><ind>  0</ind><dep>037</dep></entry>
                     <entry><ind>  8</ind><dep>037</dep></entry>
-                    <entry><ind> 23</ind><dep>415</dep></entry>
+                    <entry><ind> 22</ind><dep>415</dep></entry>
                     <entry><ind>110</ind><dep>642</dep></entry>
                 </table>
             </expression>
@@ -108,7 +283,7 @@
                     <property>/engines/engine[1]/n1</property> 
                     <entry><ind>  0</ind><dep>037</dep></entry>
                     <entry><ind>  8</ind><dep>037</dep></entry>
-                    <entry><ind> 23</ind><dep>415</dep></entry>
+                    <entry><ind> 22</ind><dep>415</dep></entry>
                     <entry><ind>110</ind><dep>642</dep></entry>
                 </table>
             </expression>
@@ -127,7 +302,7 @@
                     <property>/engines/engine[2]/n1</property> 
                     <entry><ind>  0</ind><dep>037</dep></entry>
                     <entry><ind>  8</ind><dep>037</dep></entry>
-                    <entry><ind> 23</ind><dep>415</dep></entry>
+                    <entry><ind> 22</ind><dep>415</dep></entry>
                     <entry><ind>110</ind><dep>642</dep></entry>
                 </table>
             </expression>
@@ -146,7 +321,7 @@
                     <property>/engines/engine[3]/n1</property> 
                     <entry><ind>  0</ind><dep>037</dep></entry>
                     <entry><ind>  8</ind><dep>037</dep></entry>
-                    <entry><ind> 23</ind><dep>415</dep></entry>
+                    <entry><ind> 22</ind><dep>415</dep></entry>
                     <entry><ind>110</ind><dep>642</dep></entry>
                 </table>
             </expression>

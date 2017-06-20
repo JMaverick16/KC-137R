@@ -27,7 +27,7 @@
     </autopilot>
 	<!-- Uses a custom EPR based autothrottle -->
     <autopilot>
-        <path>Aircraft/KC-137R/Systems/custom-autothrust-iae.xml</path>
+        <path>Aircraft/KC-137R/Systems/custom-autothrust.xml</path>
     </autopilot>
 	<property-rule n="101">	
 		<path>Systems/sound_calc.xml</path>
@@ -381,11 +381,11 @@
 		</APU>
 		<engines>
 			<epr type="bool">true</epr>
-			<kp>0.02</kp>
-			<kp-spd>0.14</kp-spd>
-			<epr-roc-thr>10</epr-roc-thr>
-			<epr-roc-pitch>3</epr-roc-pitch>
-			<epr-roc-retard>10</epr-roc-retard>
+			<kp>0.01</kp>
+			<kp-spd>0.30</kp-spd>
+			<n1-roc-thr>20</n1-roc-thr>
+			<n1-roc-pitch>5</n1-roc-pitch>
+			<n1-roc-retard>20</n1-roc-retard>
 			<engine-start-switch type="int">1</engine-start-switch>
 			<engine n="0">
 				<cutoff type="bool">true</cutoff>

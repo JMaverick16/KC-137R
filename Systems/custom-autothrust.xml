@@ -52,10 +52,10 @@
 			<gamma>0.0</gamma>  
 			<Ti>01.0</Ti>       
 			<Td>0.0001</Td>    
-			<u_min>104</u_min>   
+			<u_min>23</u_min>   
 			<u_max>
-				<property>/controls/engines/eprlimx100</property>
-			</u_max>  
+				<property>/controls/engines/n1limx100</property>
+			</u_max>   
 		</config>
 	</pid-controller>
 
@@ -106,14 +106,14 @@
 			<gamma>0.0</gamma>  
 			<Ti>01.0</Ti>       
 			<Td>0.0001</Td>    
-			<u_min>104</u_min>   
+			<u_min>23</u_min>   
 			<u_max>
-				<property>/controls/engines/eprlimx100</property>
-			</u_max>  
+				<property>/controls/engines/n1limx100</property>
+			</u_max>    
 		</config>
 	</pid-controller>
 
-	<!-- IDLE EPR -->
+	<!-- IDLE N1 -->
 	<pid-controller>
 		<name>IDLE</name>
 		<debug>false</debug>
@@ -160,7 +160,7 @@
 						<value>0</value>
 					</equals>
 				</condition>
-				<value>104</value>
+				<value>23</value>
 			</u_min>  
 			<u_min>
 				<condition>
@@ -169,15 +169,15 @@
 						<value>1</value>
 					</equals>
 				</condition>
-				<value>80</value>
+				<value>0</value>
 			</u_min>
 			<u_max>
-				<property>/controls/engines/eprlimx100</property>
-			</u_max>  
+				<property>/controls/engines/n1limx100</property>
+			</u_max>   
 		</config>
 	</pid-controller>
 
-	<!-- CLB EPR -->
+	<!-- CLB N1 -->
 	<pid-controller>
 		<name>CLB</name>
 		<debug>false</debug>
@@ -215,10 +215,10 @@
 			<gamma>0.0</gamma>  
 			<Ti>10.0</Ti>       
 			<Td>0.00001</Td>    
-			<u_min>100</u_min>   
+			<u_min>23</u_min>   
 			<u_max>
-				<property>/controls/engines/eprlimx100</property>
-			</u_max>  
+				<property>/controls/engines/n1limx100</property>
+			</u_max>   
 		</config>
 	</pid-controller>
 	
@@ -234,7 +234,7 @@
 					<value>0</value>
 				</equals>
 			</condition>
-			<property>/engines/engine[0]/epr-actualx100</property>
+			<property>/engines/engine[0]/n1</property>
 		</input>
 		<input>
 			<condition>
@@ -275,7 +275,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-thr</property>
+			<property>/controls/engines/n1-roc-thr</property>
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
@@ -294,7 +294,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-pitch</property>
+			<property>/controls/engines/n1-roc-pitch</property>
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
@@ -309,7 +309,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-retard</property>
+			<property>/controls/engines/n1-roc-retard</property>
 		</max-rate-of-change>
 	</filter>
 	<filter>
@@ -324,7 +324,7 @@
 					<value>0</value>
 				</equals>
 			</condition>
-			<property>/engines/engine[1]/epr-actualx100</property>
+			<property>/engines/engine[1]/n1</property>
 		</input>
 		<input>
 			<condition>
@@ -365,7 +365,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-thr</property>
+			<property>/controls/engines/n1-roc-thr</property>
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
@@ -384,7 +384,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-pitch</property>
+			<property>/controls/engines/n1-roc-pitch</property>
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
@@ -399,7 +399,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-retard</property>
+			<property>/controls/engines/n1-roc-retard</property>
 		</max-rate-of-change>
 	</filter>
 	<filter>
@@ -414,7 +414,7 @@
 					<value>0</value>
 				</equals>
 			</condition>
-			<property>/engines/engine[2]/epr-actualx100</property>
+			<property>/engines/engine[2]/n1</property>
 		</input>
 		<input>
 			<condition>
@@ -455,7 +455,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-thr</property>
+			<property>/controls/engines/n1-roc-thr</property>
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
@@ -474,7 +474,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-pitch</property>
+			<property>/controls/engines/n1-roc-pitch</property>
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
@@ -489,7 +489,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-retard</property>
+			<property>/controls/engines/n1-roc-retard</property>
 		</max-rate-of-change>
 	</filter>
 	<filter>
@@ -504,7 +504,7 @@
 					<value>0</value>
 				</equals>
 			</condition>
-			<property>/engines/engine[3]/epr-actualx100</property>
+			<property>/engines/engine[3]/n1</property>
 		</input>
 		<input>
 			<condition>
@@ -545,7 +545,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-thr</property>
+			<property>/controls/engines/n1-roc-thr</property>
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
@@ -564,7 +564,7 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-pitch</property>
+			<property>/controls/engines/n1-roc-pitch</property>
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
@@ -579,13 +579,13 @@
 					</equals>
 				</and>
 			</condition>
-			<property>/controls/engines/epr-roc-retard</property>
+			<property>/controls/engines/n1-roc-retard</property>
 		</max-rate-of-change>
 	</filter>
 
-	<!-- EPR LIM -->
+	<!-- N1 LIM -->
 	<pid-controller>
-		<name>EPR1</name>
+		<name>N11</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -596,7 +596,7 @@
 			</condition>
 		</enable>
 		<input>
-			<property>/engines/engine[0]/epr-actualx100</property>
+			<property>/engines/engine[0]/n1</property>
 		</input>
 		<reference>
 			<property>/controls/engines/target-thrust-one</property>
@@ -619,7 +619,7 @@
 	</pid-controller>
 
 	<pid-controller>
-		<name>EPR2</name>
+		<name>N12</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -630,7 +630,7 @@
 			</condition>
 		</enable>
 		<input>
-			<property>/engines/engine[1]/epr-actualx100</property>
+			<property>/engines/engine[1]/n1</property>
 		</input>
 		<reference>
 			<property>/controls/engines/target-thrust-two</property>
@@ -653,7 +653,7 @@
 	</pid-controller>
 	
 	<pid-controller>
-		<name>EPR3</name>
+		<name>N13</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -664,7 +664,7 @@
 			</condition>
 		</enable>
 		<input>
-			<property>/engines/engine[2]/epr-actualx100</property>
+			<property>/engines/engine[2]/n1</property>
 		</input>
 		<reference>
 			<property>/controls/engines/target-thrust-three</property>
@@ -687,7 +687,7 @@
 	</pid-controller>
 
 	<pid-controller>
-		<name>EPR4</name>
+		<name>N14</name>
 		<debug>false</debug>
 		<enable>
 			<condition>
@@ -698,7 +698,7 @@
 			</condition>
 		</enable>
 		<input>
-			<property>/engines/engine[3]/epr-actualx100</property>
+			<property>/engines/engine[3]/n1</property>
 		</input>
 		<reference>
 			<property>/controls/engines/target-thrust-four</property>
@@ -721,7 +721,7 @@
 	</pid-controller>
 	
 	<filter>
-		<name>IT-CONTROLLER: EPR ENGINE 1</name>
+		<name>IT-CONTROLLER: N1 ENGINE 1</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
@@ -746,7 +746,7 @@
 	</filter>
 	
 	<filter>
-		<name>IT-CONTROLLER: EPR ENGINE 2</name>
+		<name>IT-CONTROLLER: N1 ENGINE 2</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
@@ -771,7 +771,7 @@
 	</filter>
 	
 	<filter>
-		<name>IT-CONTROLLER: EPR ENGINE 3</name>
+		<name>IT-CONTROLLER: N1 ENGINE 3</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
@@ -796,7 +796,7 @@
 	</filter>
 	
 	<filter>
-		<name>IT-CONTROLLER: EPR ENGINE 4</name>
+		<name>IT-CONTROLLER: N1 ENGINE 4</name>
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>

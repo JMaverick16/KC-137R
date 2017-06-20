@@ -394,7 +394,7 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
 		</fbw>
 		<thrust>
-			<file>Aircraft/KC-137R/Nasal/thrust-cfm.nas</file>
+			<file>Aircraft/KC-137R/Nasal/thrust.nas</file>
 		</thrust>
 	</nasal>
 
