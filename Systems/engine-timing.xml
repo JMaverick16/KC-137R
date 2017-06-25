@@ -254,6 +254,120 @@
     </filter>
 	
     <filter>
+        <name>THR 1</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/n1</property> 
+                    <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
+                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[0]/thr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>THR 2</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[1]/n1</property> 
+                    <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
+                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[1]/thr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>THR 3</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[2]/n1</property> 
+                    <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
+                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[2]/thr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>THR 4</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[3]/n1</property> 
+                    <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
+                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[3]/thr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>THR LIM</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/controls/engines/n1limx100</property> 
+                    <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
+                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/controls/engines/thrlim</output>
+    </filter>
+	
+    <filter>
+        <name>THR OVER LIM</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/controls/engines/n1overlim</property> 
+                    <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
+                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/controls/engines/throverlim</output>
+    </filter>
+	
+    <filter>
         <name>EGT 1</name>
         <type>gain</type>
         <gain>1</gain>

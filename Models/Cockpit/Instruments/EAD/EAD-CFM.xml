@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>resIAE/EAD.ac</path>
+	<path>resCFM/EAD.ac</path>
 	
     <animation>
         <type>select</type>
@@ -28,20 +28,24 @@
 		</action>
 	</animation>
 
-	<!-- EPR -->
+	<!-- THR --> <!-- 3D objects still called EPR to make updates simpler -->
 	<animation>
     	<type>rotate</type>
     	<object-name>epr.1</object-name>
-    	<property>/engines/engine[0]/epr-actual</property>
+    	<property>/engines/engine[0]/thr-actual</property>
     	<interpolation>
-			<entry><ind>0.99</ind><dep>  0</dep></entry>
-			<entry><ind>1.00</ind><dep>  5</dep></entry>
-			<entry><ind>1.10</ind><dep> 48</dep></entry>
-			<entry><ind>1.20</ind><dep> 92</dep></entry>
-			<entry><ind>1.30</ind><dep>136</dep></entry>
-			<entry><ind>1.40</ind><dep>179</dep></entry>
-			<entry><ind>1.50</ind><dep>222</dep></entry>
-			<entry><ind>1.60</ind><dep>266</dep></entry>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 10</ind><dep> 24</dep></entry>
+			<entry><ind> 20</ind><dep> 49</dep></entry>
+			<entry><ind> 30</ind><dep> 72</dep></entry>
+			<entry><ind> 40</ind><dep> 96</dep></entry>
+			<entry><ind> 50</ind><dep>120</dep></entry>
+			<entry><ind> 60</ind><dep>144</dep></entry>
+			<entry><ind> 70</ind><dep>168</dep></entry>
+			<entry><ind> 80</ind><dep>192</dep></entry>
+			<entry><ind> 90</ind><dep>216</dep></entry>
+			<entry><ind>100</ind><dep>241</dep></entry>
+			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
     	<center>
     		<x-m> 0</x-m>
@@ -57,16 +61,20 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>epr.2</object-name>
-    	<property>/engines/engine[1]/epr-actual</property>
+    	<property>/engines/engine[1]/thr-actual</property>
     	<interpolation>
-			<entry><ind>0.99</ind><dep>  0</dep></entry>
-			<entry><ind>1.00</ind><dep>  5</dep></entry>
-			<entry><ind>1.10</ind><dep> 48</dep></entry>
-			<entry><ind>1.20</ind><dep> 92</dep></entry>
-			<entry><ind>1.30</ind><dep>136</dep></entry>
-			<entry><ind>1.40</ind><dep>179</dep></entry>
-			<entry><ind>1.50</ind><dep>222</dep></entry>
-			<entry><ind>1.60</ind><dep>266</dep></entry>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 10</ind><dep> 24</dep></entry>
+			<entry><ind> 20</ind><dep> 49</dep></entry>
+			<entry><ind> 30</ind><dep> 72</dep></entry>
+			<entry><ind> 40</ind><dep> 96</dep></entry>
+			<entry><ind> 50</ind><dep>120</dep></entry>
+			<entry><ind> 60</ind><dep>144</dep></entry>
+			<entry><ind> 70</ind><dep>168</dep></entry>
+			<entry><ind> 80</ind><dep>192</dep></entry>
+			<entry><ind> 90</ind><dep>216</dep></entry>
+			<entry><ind>100</ind><dep>241</dep></entry>
+			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
     	<center>
     		<x-m> 0</x-m>
@@ -82,16 +90,20 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>epr.3</object-name>
-    	<property>/engines/engine[2]/epr-actual</property>
+    	<property>/engines/engine[2]/thr-actual</property>
     	<interpolation>
-			<entry><ind>0.99</ind><dep>  0</dep></entry>
-			<entry><ind>1.00</ind><dep>  5</dep></entry>
-			<entry><ind>1.10</ind><dep> 48</dep></entry>
-			<entry><ind>1.20</ind><dep> 92</dep></entry>
-			<entry><ind>1.30</ind><dep>136</dep></entry>
-			<entry><ind>1.40</ind><dep>179</dep></entry>
-			<entry><ind>1.50</ind><dep>222</dep></entry>
-			<entry><ind>1.60</ind><dep>266</dep></entry>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 10</ind><dep> 24</dep></entry>
+			<entry><ind> 20</ind><dep> 49</dep></entry>
+			<entry><ind> 30</ind><dep> 72</dep></entry>
+			<entry><ind> 40</ind><dep> 96</dep></entry>
+			<entry><ind> 50</ind><dep>120</dep></entry>
+			<entry><ind> 60</ind><dep>144</dep></entry>
+			<entry><ind> 70</ind><dep>168</dep></entry>
+			<entry><ind> 80</ind><dep>192</dep></entry>
+			<entry><ind> 90</ind><dep>216</dep></entry>
+			<entry><ind>100</ind><dep>241</dep></entry>
+			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
     	<center>
     		<x-m> 0</x-m>
@@ -107,16 +119,20 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>epr.4</object-name>
-    	<property>/engines/engine[3]/epr-actual</property>
+    	<property>/engines/engine[3]/thr-actual</property>
     	<interpolation>
-			<entry><ind>0.99</ind><dep>  0</dep></entry>
-			<entry><ind>1.00</ind><dep>  5</dep></entry>
-			<entry><ind>1.10</ind><dep> 48</dep></entry>
-			<entry><ind>1.20</ind><dep> 92</dep></entry>
-			<entry><ind>1.30</ind><dep>136</dep></entry>
-			<entry><ind>1.40</ind><dep>179</dep></entry>
-			<entry><ind>1.50</ind><dep>222</dep></entry>
-			<entry><ind>1.60</ind><dep>266</dep></entry>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 10</ind><dep> 24</dep></entry>
+			<entry><ind> 20</ind><dep> 49</dep></entry>
+			<entry><ind> 30</ind><dep> 72</dep></entry>
+			<entry><ind> 40</ind><dep> 96</dep></entry>
+			<entry><ind> 50</ind><dep>120</dep></entry>
+			<entry><ind> 60</ind><dep>144</dep></entry>
+			<entry><ind> 70</ind><dep>168</dep></entry>
+			<entry><ind> 80</ind><dep>192</dep></entry>
+			<entry><ind> 90</ind><dep>216</dep></entry>
+			<entry><ind>100</ind><dep>241</dep></entry>
+			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
     	<center>
     		<x-m> 0</x-m>
@@ -1139,7 +1155,7 @@
 		</condition>
 	</animation>
 	
-	<!-- EPR -->
+	<!-- THR --> <!-- 3D objects still called EPR to make updates simpler -->
 	<text>
 		<name>eprl</name>
 		<offsets>
@@ -1150,7 +1166,7 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">EPR</format>
+		<format type="string">THR</format>
 		<property>autopilot/serviceable</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
@@ -1174,8 +1190,8 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%1.3f</format>
-		<property>engines/engine[0]/epr-actual</property>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[0]/thr-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1244,8 +1260,8 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%1.3f</format>
-		<property>engines/engine[1]/epr-actual</property>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[1]/thr-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1314,8 +1330,8 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%1.3f</format>
-		<property>engines/engine[2]/epr-actual</property>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[2]/thr-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1384,8 +1400,8 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%1.3f</format>
-		<property>engines/engine[3]/epr-actual</property>
+		<format type="string">%3.1f</format>
+		<property>engines/engine[3]/thr-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2562,7 +2578,7 @@
 	</animation>
 	
 	<text>
-        <name>overeprlim</name>
+        <name>overthrlim</name>
         <offsets>
 			<x-m> 0.00018</x-m>
 			<y-m> 0.0010</y-m>
@@ -2571,7 +2587,7 @@
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">EPR OVER LIMIT!</format>
+		<format type="string">THR OVER LIMIT!</format>
 		<property>autopilot/serviceable</property>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2586,24 +2602,24 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>overeprlim</object-name>
+		<object-name>overthrlim</object-name>
 		<condition>
 			<or>
 				<greater-than>
-					<property>engines/engine[0]/epr-actual</property>
-					<property>controls/engines/eproverlim</property>
+					<property>engines/engine[0]/thr-actual</property>
+					<property>controls/engines/throverlim</property>
 				</greater-than>
 				<greater-than>
-					<property>engines/engine[1]/epr-actual</property>
-					<property>controls/engines/eproverlim</property>
+					<property>engines/engine[1]/thr-actual</property>
+					<property>controls/engines/throverlim</property>
 				</greater-than>
 				<greater-than>
-					<property>engines/engine[2]/epr-actual</property>
-					<property>controls/engines/eproverlim</property>
+					<property>engines/engine[2]/thr-actual</property>
+					<property>controls/engines/throverlim</property>
 				</greater-than>
 				<greater-than>
-					<property>engines/engine[3]/epr-actual</property>
-					<property>controls/engines/eproverlim</property>
+					<property>engines/engine[3]/thr-actual</property>
+					<property>controls/engines/throverlim</property>
 				</greater-than>
 				<equals>
 					<property>/controls/test/warn-knob</property>
@@ -2788,6 +2804,7 @@
 		<type>material</type>
 		<object-name>ensh</object-name>
 		<object-name>overeprlim</object-name>
+		<object-name>overthrlim</object-name>
 		<object-name>bankoverlin</object-name>
 		<diffuse>
 			<red>1</red>
