@@ -32,10 +32,10 @@
 					<property>systems/electrical/outputs/efis</property>
 					<value>15</value>
 				</greater-than-equals>
-				<equals>
+				<not-equals>
 					<property>/instrumentation/tacan/powered</property>
-					<value>0</value>
-				</equals>
+					<value>1</value>
+				</not-equals>
 			</and>
 		</condition>
 	</animation>
