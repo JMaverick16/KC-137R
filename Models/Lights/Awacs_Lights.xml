@@ -164,7 +164,7 @@
 		<condition>
 			<and>
 				<not>
-					<property>/sim/rendering/rembrandt/enabled</property>
+					<property>sim/rendering/rembrandt/enabled</property>
 				</not>
 				<property>sim/multiplay/generic/int[0]</property>
 				<property>gear/gear[0]/position-norm</property>						  
@@ -187,7 +187,7 @@
 		<condition>
 			<and>
 				<not>
-					<property>/sim/rendering/rembrandt/enabled</property>
+					<property>sim/rendering/rembrandt/enabled</property>
 				</not>
 				<property>sim/multiplay/generic/int[1]</property>				
 				<property>gear/gear[0]/position-norm</property>					 
@@ -213,7 +213,7 @@
 	<object-name>CabinWindows</object-name>
 	<condition>
 		<equals>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>-99</value>
 		</equals>
 	</condition>
@@ -227,7 +227,7 @@
 	<object-name>BeaconVolume_2</object-name>
 	<condition>
 		<and>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
 	    <property>sim/multiplay/generic/int[3]</property>
 	    <property>sim/multiplay/generic/int[4]</property>
 		</and>
@@ -240,7 +240,7 @@
   <object-name>LightBeaconGlow</object-name>
   <condition>
     <and>
-    	<not><property>/sim/rendering/rembrandt/enabled</property></not>
+    	<not><property>sim/rendering/rembrandt/enabled</property></not>
 	    <property>sim/multiplay/generic/int[3]</property>
 	    <property>sim/multiplay/generic/int[4]</property>
     </and>
@@ -306,7 +306,7 @@
 	<object-name>NavLightVolume_left</object-name>
 	<condition>
 		<and>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
 			<property>sim/multiplay/generic/int[3]</property>
 		</and>
 	</condition>
@@ -464,7 +464,7 @@
 	<object-name>LightVolume.001</object-name>
 	<condition>
 		<and>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
 		  <property>sim/multiplay/generic/int[1]</property>
 		</and>
 	</condition>
@@ -475,7 +475,7 @@
 	<object-name>LightVolume.002</object-name>
 	<condition>
 		<and>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
 		  <property>sim/multiplay/generic/int[1]</property>
 		</and>
 	</condition>
@@ -486,7 +486,7 @@
   <object-name>lightconeRudderL</object-name>
 	<condition>
 		<and>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
 		  <property>sim/multiplay/generic/int[7]</property>
 		</and>
 	</condition>
@@ -497,7 +497,7 @@
   <object-name>lightconeRudderR</object-name>
 	<condition>
 		<and>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
 		  <property>sim/multiplay/generic/int[7]</property>
 		</and>
 	</condition>

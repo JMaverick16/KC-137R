@@ -85,7 +85,7 @@
 		<type>material</type>
 		<object-name>pilots</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 			<property>sim/multiplay/generic/float[0]</property>
 		</condition>
 		<emission>

@@ -32,7 +32,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>epr.1</object-name>
-    	<property>/engines/engine[0]/thr-actual</property>
+    	<property>engines/engine[0]/thr-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -61,7 +61,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>epr.2</object-name>
-    	<property>/engines/engine[1]/thr-actual</property>
+    	<property>engines/engine[1]/thr-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -90,7 +90,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>epr.3</object-name>
-    	<property>/engines/engine[2]/thr-actual</property>
+    	<property>engines/engine[2]/thr-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -119,7 +119,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>epr.4</object-name>
-    	<property>/engines/engine[3]/thr-actual</property>
+    	<property>engines/engine[3]/thr-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -150,7 +150,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n1.1</object-name>
-    	<property>/engines/engine[0]/n1</property>
+    	<property>engines/engine[0]/n1</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -179,7 +179,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n1.2</object-name>
-    	<property>/engines/engine[1]/n1</property>
+    	<property>engines/engine[1]/n1</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -208,7 +208,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n1.3</object-name>
-    	<property>/engines/engine[2]/n1</property>
+    	<property>engines/engine[2]/n1</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -237,7 +237,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n1.4</object-name>
-    	<property>/engines/engine[3]/n1</property>
+    	<property>engines/engine[3]/n1</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -268,7 +268,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>egt.1</object-name>
-    	<property>/engines/engine[0]/egt-actual</property>
+    	<property>engines/engine[0]/egt-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind>100</ind><dep> 35</dep></entry>
@@ -294,7 +294,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>egt.2</object-name>
-    	<property>/engines/engine[1]/egt-actual</property>
+    	<property>engines/engine[1]/egt-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind>100</ind><dep> 35</dep></entry>
@@ -320,7 +320,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>egt.3</object-name>
-    	<property>/engines/engine[2]/egt-actual</property>
+    	<property>engines/engine[2]/egt-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind>100</ind><dep> 35</dep></entry>
@@ -346,7 +346,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>egt.4</object-name>
-    	<property>/engines/engine[3]/egt-actual</property>
+    	<property>engines/engine[3]/egt-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind>100</ind><dep> 35</dep></entry>
@@ -374,7 +374,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n2.1</object-name>
-    	<property>/engines/engine[0]/n2</property>
+    	<property>engines/engine[0]/n2</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -403,7 +403,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n2.2</object-name>
-    	<property>/engines/engine[1]/n2</property>
+    	<property>engines/engine[1]/n2</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -432,7 +432,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n2.3</object-name>
-    	<property>/engines/engine[2]/n2</property>
+    	<property>engines/engine[2]/n2</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -461,7 +461,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n2.4</object-name>
-    	<property>/engines/engine[3]/n2</property>
+    	<property>engines/engine[3]/n2</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -2366,15 +2366,15 @@
 			<or>
 				<and>
 					<equals>
-						<property>/controls/flight/speedbrake-arm</property>
+						<property>controls/flight/speedbrake-arm</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/controls/flight/spoilers</property>
+						<property>controls/flight/spoilers</property>
 						<value>0</value>
 					</equals>
 					<not-equals>
-						<property>/controls/test/warn-knob</property>
+						<property>controls/test/warn-knob</property>
 						<value>1.0</value>
 					</not-equals>
 				</and>
@@ -2388,11 +2388,11 @@
 		<condition>
 			<or>
 				<greater-than>
-					<property>/controls/flight/spoilers</property>
+					<property>controls/flight/spoilers</property>
 					<value>0</value>
 				</greater-than>
 				<equals>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
 				</equals>
 			</or>
@@ -2429,11 +2429,11 @@
 		<condition>
 			<or>
 				<equals>
-					<property>/it-fbw/roll-disable</property>
+					<property>it-fbw/roll-disable</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
 				</equals>
 			</or>
@@ -2470,11 +2470,11 @@
 		<condition>
 			<or>
 				<equals>
-					<property>/it-fbw/pitch-disable</property>
+					<property>it-fbw/pitch-disable</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
 				</equals>
 			</or>
@@ -2512,11 +2512,11 @@
 		<condition>
 			<or>
 				<greater-than>
-					<property>/instrumentation/doors/refuel-boom/position-norm</property>
+					<property>instrumentation/doors/refuel-boom/position-norm</property>
 					<value>0.05</value>
 				</greater-than>
 				<equals>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
 				</equals>
 			</or>
@@ -2570,7 +2570,7 @@
 					<value>45</value>
 				</less-than>
 				<equals>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
 				</equals>
 			</or>
@@ -2622,7 +2622,7 @@
 					<property>controls/engines/throverlim</property>
 				</greater-than>
 				<equals>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
 				</equals>
 			</or>
@@ -2635,8 +2635,8 @@
 		<condition>
 			<or>
 				<and>
-					<not><property>/gear/gear[1]/wow</property></not>
-					<not><property>/gear/gear[2]/wow</property></not>
+					<not><property>gear/gear[1]/wow</property></not>
+					<not><property>gear/gear[2]/wow</property></not>
 					<or>
 						<less-than>
 							<property>orientation/roll-deg</property>
@@ -2649,7 +2649,7 @@
 					</or>
 				</and>
 				<equals>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
 				</equals>
 			</or>
@@ -2923,7 +2923,7 @@
 		<object-name>Flap1</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.06666</value>
 			</greater-than>
 		</condition>
@@ -2933,7 +2933,7 @@
 		<object-name>Flap2</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.13332</value>
 			</greater-than>
 		</condition>
@@ -2943,7 +2943,7 @@
 		<object-name>Flap3</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.19998</value>
 			</greater-than>
 		</condition>
@@ -2954,7 +2954,7 @@
 		<object-name>Flap4</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.26666</value>
 			</greater-than>
 		</condition>
@@ -2964,7 +2964,7 @@
 		<object-name>Flap5</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.33332</value>
 			</greater-than>
 		</condition>
@@ -2974,7 +2974,7 @@
 		<object-name>Flap6</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.39998</value>
 			</greater-than>
 		</condition>
@@ -2985,7 +2985,7 @@
 		<object-name>Flap7</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.46666</value>
 			</greater-than>
 		</condition>
@@ -2995,7 +2995,7 @@
 		<object-name>Flap8</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.53332</value>
 			</greater-than>
 		</condition>
@@ -3005,7 +3005,7 @@
 		<object-name>Flap9</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.59998</value>
 			</greater-than>
 		</condition>
@@ -3016,7 +3016,7 @@
 		<object-name>Flap10</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.73333</value>
 			</greater-than>
 		</condition>
@@ -3026,7 +3026,7 @@
 		<object-name>Flap11</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.86666</value>
 			</greater-than>
 		</condition>
@@ -3036,7 +3036,7 @@
 		<object-name>Flap12</object-name>
 		<condition>
 			<greater-than>
-				<property>/surface-positions/flap-pos-norm</property>
+				<property>surface-positions/flap-pos-norm</property>
 				<value>0.99999</value>
 			</greater-than>
 		</condition>

@@ -849,7 +849,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>/engines/engine[0]/oil-pressure-psi</property>
+		<property>engines/engine[0]/oil-pressure-psi</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -886,7 +886,7 @@
     <animation>
     	<type>rotate</type>
     	<object-name>op.1</object-name>
-    	<property>/engines/engine[0]/oil-pressure-psi</property>
+    	<property>engines/engine[0]/oil-pressure-psi</property>
     	<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>20</ind><dep>16.5</dep></entry>
@@ -918,7 +918,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>/engines/engine[1]/oil-pressure-psi</property>
+		<property>engines/engine[1]/oil-pressure-psi</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -955,7 +955,7 @@
     <animation>
     	<type>rotate</type>
     	<object-name>op.2</object-name>
-    	<property>/engines/engine[1]/oil-pressure-psi</property>
+    	<property>engines/engine[1]/oil-pressure-psi</property>
     	<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>20</ind><dep>16.5</dep></entry>
@@ -988,7 +988,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>/engines/engine[2]/oil-pressure-psi</property>
+		<property>engines/engine[2]/oil-pressure-psi</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1025,7 +1025,7 @@
  <animation>
     	<type>rotate</type>
     	<object-name>op.3</object-name>
-    	<property>/engines/engine[2]/oil-pressure-psi</property>
+    	<property>engines/engine[2]/oil-pressure-psi</property>
     	<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>20</ind><dep>16.5</dep></entry>
@@ -1059,7 +1059,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>/engines/engine[3]/oil-pressure-psi</property>
+		<property>engines/engine[3]/oil-pressure-psi</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1096,7 +1096,7 @@
      <animation>
     	<type>rotate</type>
     	<object-name>op.4</object-name>
-    	<property>/engines/engine[3]/oil-pressure-psi</property>
+    	<property>engines/engine[3]/oil-pressure-psi</property>
     	<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>20</ind><dep>16.5</dep></entry>

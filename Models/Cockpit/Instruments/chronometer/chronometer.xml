@@ -53,7 +53,7 @@
 				<value>24.0</value>
 			 </greater-than>
 			 <greater-than>   
-				<property>/sim/time/sun-angle-rad</property>
+				<property>sim/time/sun-angle-rad</property>
 				<value>1.70</value>
 			 </greater-than>
 		</condition-->

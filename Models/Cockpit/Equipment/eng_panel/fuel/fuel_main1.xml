@@ -21,7 +21,7 @@
 		<object-name>face</object-name>
 		<object-name>needle</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -37,8 +37,8 @@
 		<object-name>needle</object-name>
 		<object-name>shadow</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/engineer-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/engineer-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -52,8 +52,8 @@
 		<type>noshadow</type>
 		<object-name>shadow</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 	</animation>
 
@@ -67,11 +67,11 @@
 		<object-name>needle</object-name>		
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
-		<property>/consumables/fuel/tank[5]/level-kg</property>
+		<property>consumables/fuel/tank[5]/level-kg</property>
 		<interpolation>
 		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind> 8000.0</ind><dep> 320.0</dep></entry>
@@ -91,7 +91,7 @@
 	<object-name>digit.</object-name>
 	<condition>		
 		<greater-than>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>20</value>
 		</greater-than>
 	</condition>
@@ -100,7 +100,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>digit10</object-name>
-  <property>/consumables/fuel/tank[5]/level-kg</property>
+  <property>consumables/fuel/tank[5]/level-kg</property>
   <factor>0.00001</factor>
   <step>10000</step>
   <axis>
@@ -112,7 +112,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>digit1</object-name>
-  <property>/consumables/fuel/tank[5]/level-kg</property>
+  <property>consumables/fuel/tank[5]/level-kg</property>
   <factor>0.0001</factor>
   <step>1000</step>
   <axis>
@@ -124,7 +124,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>digit.1</object-name>
-  <property>/consumables/fuel/tank[5]/level-kg</property>
+  <property>consumables/fuel/tank[5]/level-kg</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>

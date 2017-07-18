@@ -23,7 +23,7 @@
             <button>0</button>
 			<binding>
 				<command>property-assign</command>
-				<property>/warnings/mc</property>
+				<property>warnings/mc</property>
 				<value>0</value>
 			</binding>
         </action>

@@ -33,7 +33,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>1</value>
             </binding>
         </action>
@@ -46,7 +46,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>2</value>
             </binding>
         </action>
@@ -59,7 +59,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>3</value>
             </binding>
         </action>
@@ -72,7 +72,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>4</value>
             </binding>
         </action>
@@ -85,7 +85,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>5</value>
             </binding>
         </action>
@@ -98,7 +98,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>6</value>
             </binding>
         </action>
@@ -111,7 +111,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>7</value>
             </binding>
         </action>
@@ -124,7 +124,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>8</value>
             </binding>
         </action>
@@ -137,7 +137,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>9</value>
             </binding>
         </action>
@@ -150,7 +150,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>0</value>
             </binding>
         </action>
@@ -163,7 +163,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>.</value>
             </binding>
         </action>
@@ -176,7 +176,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>CHNGS</value>
             </binding>
         </action>
@@ -188,7 +188,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>CLEAR</value>
             </binding>
         </action>
@@ -201,7 +201,7 @@ MAY 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property type="string">/instrumentation/efb/VK_keypress</property>
+                <property type="string">instrumentation/efb/VK_keypress</property>
 				<value>BKSP</value>
             </binding>
         </action>

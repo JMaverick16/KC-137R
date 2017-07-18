@@ -115,7 +115,7 @@
 		<object-name>thunderstorm</object-name>
 		<condition>
 				<equals>
-					<property>/environment/thunderstorm-flag</property>
+					<property>environment/thunderstorm-flag</property>
 					<value>1</value>
 				</equals>
 		</condition>
@@ -2051,7 +2051,7 @@
 		<object-name>metar.available</object-name>
 		<condition>
 				<equals>
-					<property>/environment/available-flag</property>
+					<property>environment/available-flag</property>
 					<value>1</value>
 				</equals>
 		</condition>
@@ -2062,7 +2062,7 @@
 		<object-name>metar.unavailable</object-name>
 		<condition>
 				<equals>
-					<property>/environment/available-flag</property>
+					<property>environment/available-flag</property>
 					<value>0</value>
 				</equals>
 		</condition>
@@ -2076,7 +2076,7 @@
 		<object-name>Temp1</object-name>
 		<condition>
 			<greater-than-equals>
-				<property>/environment/temperature-degc</property>
+				<property>environment/temperature-degc</property>
 				<value>0</value>
 			</greater-than-equals>
 		</condition>
@@ -2088,7 +2088,7 @@
 		<object-name>Temp-1</object-name>
 		<condition>
 			<less-than>
-				<property>/environment/temperature-degc</property>
+				<property>environment/temperature-degc</property>
 				<value>0</value>
 			</less-than>
 		</condition>
@@ -2097,7 +2097,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Temp10</object-name>
-		<property>/environment/temperature-degc</property>
+		<property>environment/temperature-degc</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -2108,7 +2108,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Temp1</object-name>
-		<property>/environment/temperature-degc</property>
+		<property>environment/temperature-degc</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -2119,7 +2119,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Temp-10</object-name>
-		<property>/environment/temperature-degc</property>
+		<property>environment/temperature-degc</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -2130,7 +2130,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Temp-1</object-name>
-		<property>/environment/temperature-degc</property>
+		<property>environment/temperature-degc</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -2144,7 +2144,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>wind-dir100</object-name>
-		<property>/environment/wind-from-heading-deg</property>
+		<property>environment/wind-from-heading-deg</property>
 		<factor>0.001</factor>
 		<step>100</step>
 		<axis>
@@ -2155,7 +2155,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>wind-dir10</object-name>
-		<property>/environment/wind-from-heading-deg</property>
+		<property>environment/wind-from-heading-deg</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -2166,7 +2166,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>wind-dir1</object-name>
-		<property>/environment/wind-from-heading-deg</property>
+		<property>environment/wind-from-heading-deg</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -2180,7 +2180,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>wind10</object-name>
-		<property>/environment/wind-speed-kt</property>
+		<property>environment/wind-speed-kt</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -2191,7 +2191,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>wind1</object-name>
-		<property>/environment/wind-speed-kt</property>
+		<property>environment/wind-speed-kt</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -2205,7 +2205,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>rain100</object-name>
-		<property>/environment/rain-norm</property>
+		<property>environment/rain-norm</property>
 		<factor>0.1</factor>
 		<step>100</step>
 		<axis>
@@ -2216,7 +2216,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>rain10</object-name>
-		<property>/environment/rain-norm</property>
+		<property>environment/rain-norm</property>
 		<factor>1.0</factor>
 		<step>10</step>
 		<axis>
@@ -2227,7 +2227,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>rain1</object-name>
-		<property>/environment/rain-norm</property>
+		<property>environment/rain-norm</property>
 		<factor>10</factor>
 		<step>1</step>
 		<axis>
@@ -2241,7 +2241,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>snow100</object-name>
-		<property>/environment/snow-norm</property>
+		<property>environment/snow-norm</property>
 		<factor>0.1</factor>
 		<step>100</step>
 		<axis>
@@ -2252,7 +2252,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>snow10</object-name>
-		<property>/environment/snow-norm</property>
+		<property>environment/snow-norm</property>
 		<factor>1</factor>
 		<step>10</step>
 		<axis>
@@ -2263,7 +2263,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>snow1</object-name>
-		<property>/environment/snow-norm</property>
+		<property>environment/snow-norm</property>
 		<factor>10</factor>
 		<step>1</step>
 		<axis>
@@ -2280,7 +2280,7 @@
 		<object-name>Dew1</object-name>
 		<condition>
 			<greater-than-equals>
-				<property>/environment/dewpoint-degc</property>
+				<property>environment/dewpoint-degc</property>
 				<value>0</value>
 			</greater-than-equals>
 		</condition>
@@ -2292,7 +2292,7 @@
 		<object-name>Dew-1</object-name>
 		<condition>
 			<less-than>
-				<property>/environment/dewpoint-degc</property>
+				<property>environment/dewpoint-degc</property>
 				<value>0</value>
 			</less-than>
 		</condition>
@@ -2301,7 +2301,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dew10</object-name>
-		<property>/environment/dewpoint-degc</property>
+		<property>environment/dewpoint-degc</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -2312,7 +2312,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dew1</object-name>
-		<property>/environment/dewpoint-degc</property>
+		<property>environment/dewpoint-degc</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -2323,7 +2323,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dew-10</object-name>
-		<property>/environment/dewpoint-degc</property>
+		<property>environment/dewpoint-degc</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -2334,7 +2334,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Dew-1</object-name>
-		<property>/environment/dewpoint-degc</property>
+		<property>environment/dewpoint-degc</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -2348,7 +2348,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Vis10000</object-name>
-		<property>/environment/visibility-m</property>
+		<property>environment/visibility-m</property>
 		<factor>0.00001</factor>
 		<step>10000</step>
 		<axis>
@@ -2359,7 +2359,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Vis1000</object-name>
-		<property>/environment/visibility-m</property>
+		<property>environment/visibility-m</property>
 		<factor>0.0001</factor>
 		<step>1000</step>
 		<axis>
@@ -2370,7 +2370,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Vis100</object-name>
-		<property>/environment/visibility-m</property>
+		<property>environment/visibility-m</property>
 		<factor>0.001</factor>
 		<step>100</step>
 		<axis>
@@ -2381,7 +2381,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Vis10</object-name>
-		<property>/environment/visibility-m</property>
+		<property>environment/visibility-m</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -2392,7 +2392,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Vis1</object-name>
-		<property>/environment/visibility-m</property>
+		<property>environment/visibility-m</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -2406,7 +2406,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Pres10</object-name>
-		<property>/environment/pressure-inhg</property>
+		<property>environment/pressure-inhg</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -2417,7 +2417,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Pres1</object-name>
-		<property>/environment/pressure-inhg</property>
+		<property>environment/pressure-inhg</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -2428,7 +2428,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Pres.1</object-name>
-		<property>/environment/pressure-inhg</property>
+		<property>environment/pressure-inhg</property>
 		<factor>1</factor>
 		<step>10</step>
 		<axis>
@@ -2439,7 +2439,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Pres.01</object-name>
-		<property>/environment/pressure-inhg</property>
+		<property>environment/pressure-inhg</property>
 		<factor>10</factor>
 		<step>1</step>
 		<axis>
@@ -2454,7 +2454,7 @@
   <type>texmultiple</type>
   <object-name>map-disk</object-name>
   <transform>
-    <property>/position/latitude-deg</property>
+    <property>position/latitude-deg</property>
     <subtype>textranslate</subtype>
     <factor>0.005555556</factor>
     <axis>
@@ -2464,7 +2464,7 @@
    </axis>
   </transform>
   <transform>
-    <property>/position/longitude-deg</property>
+    <property>position/longitude-deg</property>
     <subtype>textranslate</subtype>
     <factor>0.002777778</factor>
     <axis>

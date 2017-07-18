@@ -20,7 +20,7 @@
 		<object-name>leverL</object-name>
 		<object-name>leverR</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.3</red>
@@ -37,7 +37,7 @@
 		<object-name>turn.002</object-name>
 		<object-name>turn.003</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.15</red>
@@ -58,7 +58,7 @@
 		<object-name>TELE.Face</object-name>
 		<object-name>TELE.Needle</object-name>
 		<condition>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.7</red>
@@ -105,16 +105,16 @@
 		<object-name>LampAmberON</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<and>
-		  		<property>/tanker</property>
-		  		<not><property>/b707/refuelling/contact</property></not>
-		  		<not><property>/b707/refuelling/ready</property></not>
+		  		<property>tanker</property>
+		  		<not><property>b707/refuelling/contact</property></not>
+		  		<not><property>b707/refuelling/ready</property></not>
 		  	</and>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -124,15 +124,15 @@
 		<object-name>LampGreenON.001</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<and>
-		  		<property>/tanker</property>
-		  		<property>/b707/refuelling/contact</property>
+		  		<property>tanker</property>
+		  		<property>b707/refuelling/contact</property>
 		  	</and>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -142,15 +142,15 @@
 		<object-name>LampGreenON</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<and>
-		  		<property>/tanker</property>
-		  		<property>/b707/refuelling/ready</property>
+		  		<property>tanker</property>
+		  		<property>b707/refuelling/ready</property>
 		  	</and>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -160,7 +160,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>/tanker</property>
+		<property>tanker</property>
 		<factor>-60</factor>
 		<center>
 		  <x-m>0.0</x-m>
@@ -207,7 +207,7 @@
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/sound/switch2</property>
+          <property>sim/sound/switch2</property>
         </binding>
 		  </action>
 	</animation>
@@ -216,7 +216,7 @@
     <animation>
         <type>translate</type>
         <object-name>knob</object-name>
-        <property>/controls/test/warn-knob</property>
+        <property>controls/test/warn-knob</property>
         <factor>0.003</factor>
         <axis>
             <x>-1.0</x>
@@ -234,13 +234,13 @@
         <repeatable>false</repeatable>
           <binding>
             <command>property-assign</command>
-            <property>/controls/test/warn-knob</property>  
+            <property>controls/test/warn-knob</property>  
             <value>1.0</value>
           </binding>
         <mod-up>
           <binding>
             <command>property-assign</command>
-            <property>/controls/test/warn-knob</property>  
+            <property>controls/test/warn-knob</property>  
             <value>0.0</value>
           </binding>
         </mod-up>
@@ -251,7 +251,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn</object-name>
-		<property>/controls/lighting/cabin-dim</property>
+		<property>controls/lighting/cabin-dim</property>
 		<factor>225</factor>
 		<axis>
 		 <x>-1</x>
@@ -273,7 +273,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/cabin-dim</property>
+		    <property>controls/lighting/cabin-dim</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -281,7 +281,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -289,7 +289,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/cabin-dim</property>
+		    <property>controls/lighting/cabin-dim</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -297,7 +297,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -305,7 +305,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/cabin-dim</property>
+		    <property>controls/lighting/cabin-dim</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -313,7 +313,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -321,7 +321,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/cabin-dim</property>
+		    <property>controls/lighting/cabin-dim</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -329,7 +329,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -338,7 +338,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn.001</object-name>
-		<property>/b707/refuelling/wing-light-right</property>
+		<property>b707/refuelling/wing-light-right</property>
 		<factor>225</factor>
 		<axis>
 		 <x>-1</x>
@@ -360,7 +360,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-right</property>
+		    <property>b707/refuelling/wing-light-right</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -368,7 +368,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -376,7 +376,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-right</property>
+		    <property>b707/refuelling/wing-light-right</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -384,7 +384,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -392,7 +392,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-right</property>
+		    <property>b707/refuelling/wing-light-right</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -400,7 +400,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -408,7 +408,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-right</property>
+		    <property>b707/refuelling/wing-light-right</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -416,7 +416,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -425,7 +425,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn.002</object-name>
-		<property>/b707/refuelling/wing-light-center</property>
+		<property>b707/refuelling/wing-light-center</property>
 		<factor>225</factor>
 		<axis>
 		 <x>-1</x>
@@ -447,7 +447,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-center</property>
+		    <property>b707/refuelling/wing-light-center</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -455,7 +455,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -463,7 +463,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-center</property>
+		    <property>b707/refuelling/wing-light-center</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -471,7 +471,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -479,7 +479,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-center</property>
+		    <property>b707/refuelling/wing-light-center</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -487,7 +487,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -495,7 +495,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-center</property>
+		    <property>b707/refuelling/wing-light-center</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -503,7 +503,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -512,7 +512,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn.003</object-name>
-		<property>/b707/refuelling/wing-light-left</property>
+		<property>b707/refuelling/wing-light-left</property>
 		<factor>225</factor>
 		<axis>
 		 <x>-1</x>
@@ -534,7 +534,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-left</property>
+		    <property>b707/refuelling/wing-light-left</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -542,7 +542,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -550,7 +550,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-left</property>
+		    <property>b707/refuelling/wing-light-left</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -558,7 +558,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -566,7 +566,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-left</property>
+		    <property>b707/refuelling/wing-light-left</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -574,7 +574,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -582,7 +582,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-left</property>
+		    <property>b707/refuelling/wing-light-left</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -590,7 +590,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -600,7 +600,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leverDR</object-name>
-		<property>/b707/refuelling/probe-right-lever</property>
+		<property>b707/refuelling/probe-right-lever</property>
 		<factor>22</factor>
 		<center>
 		  <x-m>-0.07</x-m>
@@ -627,7 +627,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch1</property>
+		    <property>sim/sound/switch1</property>
 		  </binding>
 		</action>
   </animation>
@@ -636,7 +636,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leverDL</object-name>
-		<property>/b707/refuelling/probe-left-lever</property>
+		<property>b707/refuelling/probe-left-lever</property>
 		<factor>22</factor>
 		<center>
 		  <x-m>-0.07</x-m>
@@ -663,7 +663,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch1</property>
+		    <property>sim/sound/switch1</property>
 		  </binding>
 		</action>
   </animation>
@@ -672,7 +672,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leverL</object-name>
-		<property>/b707/refuelling/boom-telescope-lever</property>
+		<property>b707/refuelling/boom-telescope-lever</property>
 		<factor>1</factor>
 		<center>
 		  <x-m>-0.0052</x-m>
@@ -705,7 +705,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leverR</object-name>
-		<property>/b707/refuelling/boom-azimuth</property>
+		<property>b707/refuelling/boom-azimuth</property>
 		<factor>1</factor>
 		<center>
 		  <x-m> 0.0</x-m>
@@ -729,7 +729,7 @@
 		    <repeatable>true</repeatable>
         <binding>
             <command>property-assign</command>
-            <property>/b707/refuelling/boom-azimuth</property>
+            <property>b707/refuelling/boom-azimuth</property>
             <value>0.0</value>
         </binding>
 		  </action>
@@ -739,7 +739,7 @@
 		    <repeatable>true</repeatable>
         <binding>
             <command>property-adjust</command>
-            <property>/b707/refuelling/boom-azimuth</property>
+            <property>b707/refuelling/boom-azimuth</property>
             <step>-1.5</step>
             <min>-30</min>
             <max>30</max>
@@ -752,7 +752,7 @@
 		    <repeatable>true</repeatable>
         <binding>
             <command>property-adjust</command>
-            <property>/b707/refuelling/boom-azimuth</property>
+            <property>b707/refuelling/boom-azimuth</property>
             <step>1.5</step>
             <min>-30</min>
             <max>30</max>
@@ -765,7 +765,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AZI.Needle</object-name>
-		<property>/b707/refuelling/boom-azimuth</property>
+		<property>b707/refuelling/boom-azimuth</property>
 		<min>-30.0</min>
 		<max>30.0</max>
 		<scale>1.0</scale>
@@ -789,7 +789,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>TELE.Needle</object-name>
-		<property>/instrumentation/doors/refuel-boom/position-norm</property>
+		<property>instrumentation/doors/refuel-boom/position-norm</property>
 		<interpolation>
 		  <entry><ind>  0</ind><dep>-90</dep></entry>
 		  <entry><ind>0.7</ind><dep>-90</dep></entry>
@@ -810,7 +810,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>ELEV.Needle</object-name>
-		<property>/instrumentation/doors/refuel-boom/position-norm</property>
+		<property>instrumentation/doors/refuel-boom/position-norm</property>
 		<interpolation>
 		  <entry><ind>  0</ind><dep>  0</dep></entry>
 		  <entry><ind>0.7</ind><dep>125</dep></entry>

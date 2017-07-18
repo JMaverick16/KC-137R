@@ -23,7 +23,7 @@
 		<object-name>knob.001</object-name>
 		<object-name>knobsup</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -41,7 +41,7 @@
 		<object-name>needle.002</object-name>
 		<object-name>needle.003</object-name>
 		<condition>			
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -59,8 +59,8 @@
 		<object-name>needle.002</object-name>
 		<object-name>needle.003</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/engineer-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/engineer-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -91,14 +91,14 @@
 		<object-name>LampAmberON</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		    <property>/b707/apu/apu-fire-switch</property>
-		  	<property>/b707/apu/apu-fire-test</property>
-		  	<property>/b707/apu/on-fire</property>
-		    <property>/controls/test/warn-knob</property>
+		    <property>b707/apu/apu-fire-switch</property>
+		  	<property>b707/apu/apu-fire-test</property>
+		  	<property>b707/apu/on-fire</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -107,7 +107,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/generator/gen-drive[4]</property>
+		  <property>b707/generator/gen-drive[4]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -134,7 +134,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -143,7 +143,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/apu/apu-bleed-valve</property>
+		  <property>b707/apu/apu-bleed-valve</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -166,11 +166,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/apu/apu-bleed-valve</property>
+		        <property>b707/apu/apu-bleed-valve</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -179,7 +179,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.002</object-name>
-		  <property>/b707/apu/apu-fire-test</property>
+		  <property>b707/apu/apu-fire-test</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -202,11 +202,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		  			<property>/b707/apu/apu-fire-test</property>
+		  			<property>b707/apu/apu-fire-test</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -241,11 +241,11 @@
 		    <repeatable>false</repeatable>
         <binding>
 		      <command>property-toggle</command>
-		      <property>/b707/apu/starter</property>
+		      <property>b707/apu/starter</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -254,7 +254,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob</object-name>
-      <property>/b707/apu/apu-fire-ext</property>
+      <property>b707/apu/apu-fire-ext</property>
       <factor>0.0030</factor>
       <axis>
           <x> 0.0</x>
@@ -278,13 +278,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-ext</property>  
+          <property>b707/apu/apu-fire-ext</property>  
           <value>1.0</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-ext</property>  
+          <property>b707/apu/apu-fire-ext</property>  
           <value>0.0</value>
         </binding>
       </mod-up>
@@ -296,7 +296,7 @@
       <type>translate</type>
       <object-name>knob.001</object-name>
 			<object-name>LampAmberON</object-name>
-      <property>/b707/apu/apu-fire-switch</property>
+      <property>b707/apu/apu-fire-switch</property>
       <factor>0.01</factor>
       <axis>
           <x> 0.0</x>
@@ -320,13 +320,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-switch</property>  
+          <property>b707/apu/apu-fire-switch</property>  
           <value>1.0</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-switch</property>  
+          <property>b707/apu/apu-fire-switch</property>  
           <value>0.0</value>
         </binding>
       </mod-up>
@@ -336,7 +336,7 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-switch</property>  
+          <property>b707/apu/apu-fire-switch</property>  
           <value>-1.0</value>
         </binding>
     </action>
@@ -346,7 +346,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>/engines/APU/amp-needle</property>
+		<property>engines/APU/amp-needle</property>
 		<interpolation>
 		  <entry><ind>   0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>  60.0</ind><dep> 100.0</dep></entry>
@@ -368,7 +368,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle.003</object-name>
-		<property>/engines/APU/temp</property>
+		<property>engines/APU/temp</property>
 		<interpolation>
 		  <entry><ind>   0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind> 920.0</ind><dep> 255.0</dep></entry>
@@ -389,7 +389,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle.002</object-name>
-		<property>/engines/APU/rpm</property>
+		<property>engines/APU/rpm</property>
 		<interpolation>
 		  <entry><ind>   0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind> 100.0</ind><dep> 270.0</dep></entry>
@@ -411,7 +411,7 @@
 	<animation> 
 		<type>rotate</type>
 		<object-name>needle.001</object-name>
-		<property>/engines/APU/rpm</property>
+		<property>engines/APU/rpm</property>
     <factor>36.0</factor>
 		<center>   
 		  <x-m> 0.4246 </x-m> 

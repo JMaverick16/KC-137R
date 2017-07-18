@@ -229,7 +229,7 @@
   <type>select</type>
   <object-name>EICAS-CFM</object-name>
   <condition>
-	<not><property>/sim/engine-type/IAE</property></not>
+	<not><property>sim/engine-type/IAE</property></not>
   </condition>
 </animation-->
 
@@ -237,7 +237,7 @@
   <name>EAD-CFM</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EAD/EAD-CFM.xml</path>
   <condition>
-	<not><property>/sim/engine-type/IAE</property></not>
+	<not><property>sim/engine-type/IAE</property></not>
   </condition>
   <offsets>
       <x-m>-18.918</x-m>
@@ -250,7 +250,7 @@
   <name>EAD-IAE</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EAD/EAD-IAE.xml</path>
   <condition>
-	<property>/sim/engine-type/IAE</property>
+	<property>sim/engine-type/IAE</property>
   </condition>
   <offsets>
       <x-m>-18.918</x-m>

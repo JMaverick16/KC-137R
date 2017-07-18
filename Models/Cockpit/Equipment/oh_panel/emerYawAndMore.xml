@@ -37,7 +37,7 @@
 		<object-name>bracket</object-name>
 		<object-name>bracket.001</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -65,7 +65,7 @@
 		<object-name>switch.009</object-name>
 		<object-name>switch.010</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -103,12 +103,12 @@
 		<condition>		
 		  <and>
 				<greater-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>20</value>
 				</greater-than>
 				<or>
-					<property>/autopilot/internal/yaw-damper</property>
-		    	<property>/controls/test/warn-knob</property>
+					<property>autopilot/internal/yaw-damper</property>
+		    	<property>controls/test/warn-knob</property>
 		    </or>
 		  </and>
 		</condition>
@@ -119,13 +119,13 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-				<property>/b707/emergency/oxygen-valve[0]</property>
-				<not><property>/b707/emergency/oxygen-switch</property></not>
-		    <property>/controls/test/warn-knob</property>
+				<property>b707/emergency/oxygen-valve[0]</property>
+				<not><property>b707/emergency/oxygen-switch</property></not>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -135,13 +135,13 @@
 		<object-name>LampAmberON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-				<property>/b707/emergency/oxygen-valve[1]</property>
-				<not><property>/b707/emergency/oxygen-switch</property></not>
-		    <property>/controls/test/warn-knob</property>
+				<property>b707/emergency/oxygen-valve[1]</property>
+				<not><property>b707/emergency/oxygen-switch</property></not>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -151,12 +151,12 @@
 		<object-name>LampAmberON.002</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-				<property>/b707/call/cabin-attend</property>
-		    <property>/controls/test/warn-knob</property>
+				<property>b707/call/cabin-attend</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -165,7 +165,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/emergency/oxygen-switch</property>
+		  <property>b707/emergency/oxygen-switch</property>
 		 	<interpolation>
 				<entry><ind>  2.0</ind><dep> -50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
@@ -205,7 +205,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -232,7 +232,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -241,7 +241,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.001</object-name>
-      <property>/b707/call/no-smoking</property>
+      <property>b707/call/no-smoking</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -264,11 +264,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-            <property>/b707/call/no-smoking</property>
+            <property>b707/call/no-smoking</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch2</property>
+            <property>sim/sound/switch2</property>
           </binding>		
       </action>
   </animation>	
@@ -276,7 +276,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.002</object-name>
-      <property>/b707/call/seat-belts</property>
+      <property>b707/call/seat-belts</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -299,11 +299,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-            <property>/b707/call/seat-belts</property>
+            <property>b707/call/seat-belts</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch2</property>
+            <property>sim/sound/switch2</property>
           </binding>		
       </action>
   </animation>		
@@ -312,7 +312,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob</object-name>
-      <property>/b707/call/crew-call</property>
+      <property>b707/call/crew-call</property>
       <factor>-0.0030</factor>
       <axis>
           <x> 1.0</x>
@@ -331,13 +331,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/call/crew-call</property>  
+          <property>b707/call/crew-call</property>  
           <value type="double">1</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/call/crew-call</property>  
+          <property>b707/call/crew-call</property>  
           <value type="double">0</value>
         </binding>
       </mod-up>
@@ -347,7 +347,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob.001</object-name>
-      <property>/b707/call/pers-accom</property>
+      <property>b707/call/pers-accom</property>
       <factor>-0.0030</factor>
       <axis>
           <x> 1.0</x>
@@ -366,13 +366,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/call/pers-accom</property>  
+          <property>b707/call/pers-accom</property>  
           <value type="double">1</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/call/pers-accom</property>  
+          <property>b707/call/pers-accom</property>  
           <value type="double">0</value>
         </binding>
       </mod-up>
@@ -382,7 +382,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob.002</object-name>
-      <property>/b707/call/cabin-attend</property>
+      <property>b707/call/cabin-attend</property>
       <factor>-0.0030</factor>
       <axis>
           <x> 1.0</x>
@@ -401,13 +401,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/call/cabin-attend</property>  
+          <property>b707/call/cabin-attend</property>  
           <value type="double">1</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/call/cabin-attend</property>  
+          <property>b707/call/cabin-attend</property>  
           <value type="double">0</value>
         </binding>
       </mod-up>
@@ -418,7 +418,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover</object-name>
-    <property>/b707/emergency/exit-lights-cover</property>
+    <property>b707/emergency/exit-lights-cover</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -449,11 +449,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/emergency/exit-lights-cover</property>
+		        <property>b707/emergency/exit-lights-cover</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch3</property>
+		      <property>sim/sound/switch3</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -462,7 +462,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.003</object-name>
-		  <property>/b707/emergency/exit-lights</property>
+		  <property>b707/emergency/exit-lights</property>
 		 	<interpolation>
 				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
 				<entry><ind>  1.0</ind><dep> 50.0</dep></entry>
@@ -489,7 +489,7 @@
 		    <repeatable>false</repeatable>
         <binding>
 		      <command>property-adjust</command>
-		      <property>/b707/emergency/exit-lights</property>
+		      <property>b707/emergency/exit-lights</property>
 		      <step>1</step>
 		      <min>0</min>
 		      <max>3</max>
@@ -497,7 +497,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -506,7 +506,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.004</object-name>
-		  <property>/autopilot/internal/yaw-damper</property>
+		  <property>autopilot/internal/yaw-damper</property>
 		 	<interpolation>
 				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
 				<entry><ind>  1.0</ind><dep> 90.0</dep></entry>
@@ -532,11 +532,11 @@
 		    <repeatable>false</repeatable>
         <binding>
 		      <command>property-toggle</command>
-		      <property>/autopilot/internal/yaw-damper</property>
+		      <property>autopilot/internal/yaw-damper</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -545,7 +545,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover.001</object-name>
-    <property>/b707/emergency/emer-flap-cover</property>
+    <property>b707/emergency/emer-flap-cover</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -576,11 +576,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/emergency/emer-flap-cover</property>
+		        <property>b707/emergency/emer-flap-cover</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch3</property>
+		      <property>sim/sound/switch3</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -588,7 +588,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.005</object-name>
-		  <property>/b707/emergency/emer-flap-switch</property>
+		  <property>b707/emergency/emer-flap-switch</property>
 		 	<interpolation>
 				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
 				<entry><ind>  1.0</ind><dep> 80.0</dep></entry>
@@ -614,11 +614,11 @@
 		    <repeatable>false</repeatable>
         <binding>
 		      <command>property-toggle</command>
-		      <property>/b707/emergency/emer-flap-switch</property>
+		      <property>b707/emergency/emer-flap-switch</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>	
@@ -627,7 +627,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.006</object-name>
-		  <property>/b707/emergency/emer-flap-inbd</property>
+		  <property>b707/emergency/emer-flap-inbd</property>
 		 	<interpolation>
 				<entry><ind>  2.0</ind><dep>-50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
@@ -665,7 +665,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -690,7 +690,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -700,7 +700,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.007</object-name>
-		  <property>/b707/emergency/emer-flap-outbd</property>
+		  <property>b707/emergency/emer-flap-outbd</property>
 		 	<interpolation>
 				<entry><ind>  2.0</ind><dep>-50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
@@ -738,7 +738,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -763,7 +763,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -772,7 +772,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover.004</object-name>
-    <property>/b707/hydraulic/rudder-cover</property>
+    <property>b707/hydraulic/rudder-cover</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -803,11 +803,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/rudder-cover</property>
+		        <property>b707/hydraulic/rudder-cover</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch3</property>
+		      <property>sim/sound/switch3</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -815,7 +815,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.010</object-name>
-		  <property>/b707/hydraulic/rudder-switch</property>
+		  <property>b707/hydraulic/rudder-switch</property>
 		 	<interpolation>
 				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
 				<entry><ind>  1.0</ind><dep>-80.0</dep></entry>
@@ -841,11 +841,11 @@
 		    <repeatable>false</repeatable>
         <binding>
 		      <command>property-toggle</command>
-		      <property>/b707/hydraulic/rudder-switch</property>
+		      <property>b707/hydraulic/rudder-switch</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -854,7 +854,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover.003</object-name>
-    <property>/b707/hydraulic/spoiler-cover[0]</property>
+    <property>b707/hydraulic/spoiler-cover[0]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -885,11 +885,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/spoiler-cover[0]</property>
+		        <property>b707/hydraulic/spoiler-cover[0]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch3</property>
+		      <property>sim/sound/switch3</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -897,7 +897,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.009</object-name>
-		  <property>/b707/hydraulic/spoiler-switch[0]</property>
+		  <property>b707/hydraulic/spoiler-switch[0]</property>
 		 	<interpolation>
 				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
 				<entry><ind>  1.0</ind><dep> 80.0</dep></entry>
@@ -923,11 +923,11 @@
 		    <repeatable>false</repeatable>
         <binding>
 		      <command>property-toggle</command>
-		      <property>/b707/hydraulic/spoiler-switch[0]</property>
+		      <property>b707/hydraulic/spoiler-switch[0]</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -936,7 +936,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover.002</object-name>
-    <property>/b707/hydraulic/spoiler-cover[1]</property>
+    <property>b707/hydraulic/spoiler-cover[1]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -967,11 +967,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/spoiler-cover[1]</property>
+		        <property>b707/hydraulic/spoiler-cover[1]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch3</property>
+		      <property>sim/sound/switch3</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -979,7 +979,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.008</object-name>
-		  <property>/b707/hydraulic/spoiler-switch[1]</property>
+		  <property>b707/hydraulic/spoiler-switch[1]</property>
 		 	<interpolation>
 				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
 				<entry><ind>  1.0</ind><dep> 80.0</dep></entry>
@@ -1005,11 +1005,11 @@
 		    <repeatable>false</repeatable>
         <binding>
 		      <command>property-toggle</command>
-		      <property>/b707/hydraulic/spoiler-switch[1]</property>
+		      <property>b707/hydraulic/spoiler-switch[1]</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>

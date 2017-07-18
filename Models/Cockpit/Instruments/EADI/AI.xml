@@ -45,8 +45,8 @@
         <object-name>yoke-pos</object-name>
 		<condition>
 			<or>
-				<property>/gear/gear[1]/wow</property>
-				<property>/gear/gear[2]/wow</property>
+				<property>gear/gear[1]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</or>
 		</condition>
 	</animation>
@@ -73,11 +73,11 @@
 			<and>
 				<property>sim/rendering/rembrandt/enabled</property>
 				<equals>
-					<property>/it-autoflight/output/fd1</property>
+					<property>it-autoflight/output/fd1</property>
 					<value>1</value>
 				</equals>
-				<not><property>/gear/gear[1]/wow</property></not>
-				<not><property>/gear/gear[2]/wow</property></not>
+				<not><property>gear/gear[1]/wow</property></not>
+				<not><property>gear/gear[2]/wow</property></not>
 				<less-than>
 					<property>orientation/roll-deg</property>
 					<value>45</value>
@@ -98,11 +98,11 @@
 			<and>
 				<not><property>sim/rendering/rembrandt/enabled</property></not>
 				<equals>
-					<property>/it-autoflight/output/fd1</property>
+					<property>it-autoflight/output/fd1</property>
 					<value>1</value>
 				</equals>
-				<not><property>/gear/gear[1]/wow</property></not>
-				<not><property>/gear/gear[2]/wow</property></not>
+				<not><property>gear/gear[1]/wow</property></not>
+				<not><property>gear/gear[2]/wow</property></not>
 				<less-than>
 					<property>orientation/roll-deg</property>
 					<value>45</value>
@@ -119,7 +119,7 @@
         <type>translate</type>
         <object-name>FDpitch</object-name>
         <object-name>FDpitch_rembrandt</object-name>
-        <property>/it-autoflight/fd/pitch-bar</property>
+        <property>it-autoflight/fd/pitch-bar</property>
         <factor>0.0005</factor>
         <axis>
             <x>0</x>
@@ -132,7 +132,7 @@
         <type>translate</type>
         <object-name>FDroll</object-name>
         <object-name>FDroll_rembrandt</object-name>
-        <property>/it-autoflight/fd/roll-bar</property>
+        <property>it-autoflight/fd/roll-bar</property>
         <factor>0.0002</factor>
         <axis>
             <x>0</x>

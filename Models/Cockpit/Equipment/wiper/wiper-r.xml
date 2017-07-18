@@ -29,7 +29,7 @@
       <object-name>wiperSup.001</object-name>
       <object-name>wiper</object-name>
       <condition>
-				<not><property>/sim/rendering/rembrandt/enabled</property></not>
+				<not><property>sim/rendering/rembrandt/enabled</property></not>
 			</condition>
 			<emission>
 				<red>0.2</red>
@@ -58,17 +58,17 @@
 		  <condition>
 		    <or>
 					<and>
-				   <property>/controls/special/wiper-switch</property>
+				   <property>controls/special/wiper-switch</property>
 					 	<greater-than>
-					 		<property>/controls/special/wiper-deg</property>
+					 		<property>controls/special/wiper-deg</property>
 					 		<value>2</value>
 					  </greater-than>
 					 	<less-than>
-					 		<property>/controls/special/wiper-deg</property>
+					 		<property>controls/special/wiper-deg</property>
 					 		<value>108</value>
 					  </less-than>
 				  </and>
-				  <property>/b707/rain/rain-repellent-fo</property>
+				  <property>b707/rain/rain-repellent-fo</property>
 				</or>
 		  </condition>
 		</animation>

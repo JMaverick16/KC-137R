@@ -22,7 +22,7 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>/modes/altimeter/inhg</property>
+				<property>modes/altimeter/inhg</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>

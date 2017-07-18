@@ -11,7 +11,7 @@
 		<type>material</type>
 		<object-name>containerInside</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.3</red>

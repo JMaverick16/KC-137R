@@ -17,7 +17,7 @@
 		<object-name>turn</object-name>
 		<object-name>bezel</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -33,7 +33,7 @@
 		<object-name>needle</object-name>
 		<object-name>needle.001</object-name>
 		<condition>			
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -49,8 +49,8 @@
 		<object-name>needle</object-name>
 		<object-name>needle.001</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/engineer-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/engineer-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -64,7 +64,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/galley</property>
+		  <property>b707/galley</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -86,7 +86,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		  			<property>/b707/galley</property>
+		  			<property>b707/galley</property>
 		    </binding>
         <binding>
             <command>nasal</command>
@@ -99,7 +99,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -110,11 +110,11 @@
 		<object-name>needle</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>		
-		<property>/b707/volt-dc</property>
+		<property>b707/volt-dc</property>
 		<interpolation>
 		  <entry><ind>  0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind> 20.0</ind><dep>  60.0</dep></entry>
@@ -137,11 +137,11 @@
 		<object-name>needle.001</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
-		<property>/b707/volt-load</property>
+		<property>b707/volt-load</property>
 		<interpolation>
 		  <entry><ind>   80</ind><dep> -48.0</dep></entry>
 		  <entry><ind>  100</ind><dep>   0.0</dep></entry>
@@ -163,7 +163,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover</object-name>
-    <property>/b707/batt-cover</property>
+    <property>b707/batt-cover</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -194,11 +194,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/batt-cover</property>
+		        <property>b707/batt-cover</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch3</property>
+		      <property>sim/sound/switch3</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -206,7 +206,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/battery-switch</property>
+		  <property>b707/battery-switch</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -229,22 +229,22 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/battery-switch</property>
+		        <property>b707/battery-switch</property>
 		    </binding>
 		    <!-- if battery switch set when apu is operating, apu shutdown -->
 		    <binding>
 		        <command>property-assign</command>
-		        <property>/b707/apu/off-start-run</property>
+		        <property>b707/apu/off-start-run</property>
 		        <value>0</value>
 		    </binding>		  
 		    <binding>
 		        <command>property-assign</command>
-		        <property>/b707/generator/gen-drive[4]</property>
+		        <property>b707/generator/gen-drive[4]</property>
 		        <value>0</value>
 		    </binding>			    
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -253,7 +253,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn</object-name>
-		<property>/b707/load-volt-selector</property>
+		<property>b707/load-volt-selector</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep>   0</dep></entry>
 		  <entry><ind> 1</ind><dep>  45</dep></entry>
@@ -282,7 +282,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/load-volt-selector</property>
+				<property>b707/load-volt-selector</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>6</max>
@@ -290,7 +290,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -298,7 +298,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/load-volt-selector</property>
+				<property>b707/load-volt-selector</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>6</max>
@@ -306,7 +306,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>

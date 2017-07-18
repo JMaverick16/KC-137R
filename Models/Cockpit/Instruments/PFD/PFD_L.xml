@@ -72,7 +72,7 @@ Modified by it0uchpods for KC-137R
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>/modes/altimeter/inhg</property>
+				<property>modes/altimeter/inhg</property>
 				<value>0</value>
 				<value>1</value>
 			</binding>
@@ -140,8 +140,8 @@ Modified by it0uchpods for KC-137R
         <object-name>yoke-pos</object-name>
 		<condition>
 			<or>
-				<property>/gear/gear[1]/wow</property>
-				<property>/gear/gear[2]/wow</property>
+				<property>gear/gear[1]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</or>
 		</condition>
 	</animation>
@@ -316,11 +316,11 @@ Modified by it0uchpods for KC-137R
 			<and>
 				<property>sim/rendering/rembrandt/enabled</property>
 				<equals>
-					<property>/it-autoflight/output/fd1</property>
+					<property>it-autoflight/output/fd1</property>
 					<value>1</value>
 				</equals>
-				<not><property>/gear/gear[1]/wow</property></not>
-				<not><property>/gear/gear[2]/wow</property></not>
+				<not><property>gear/gear[1]/wow</property></not>
+				<not><property>gear/gear[2]/wow</property></not>
 				<less-than>
 					<property>orientation/roll-deg</property>
 					<value>45</value>
@@ -341,11 +341,11 @@ Modified by it0uchpods for KC-137R
 			<and>
 				<not><property>sim/rendering/rembrandt/enabled</property></not>
 				<equals>
-					<property>/it-autoflight/output/fd1</property>
+					<property>it-autoflight/output/fd1</property>
 					<value>1</value>
 				</equals>
-				<not><property>/gear/gear[1]/wow</property></not>
-				<not><property>/gear/gear[2]/wow</property></not>
+				<not><property>gear/gear[1]/wow</property></not>
+				<not><property>gear/gear[2]/wow</property></not>
 				<less-than>
 					<property>orientation/roll-deg</property>
 					<value>45</value>
@@ -362,7 +362,7 @@ Modified by it0uchpods for KC-137R
         <type>translate</type>
         <object-name>FDpitch</object-name>
         <object-name>FDpitch_rembrandt</object-name>
-        <property>/it-autoflight/fd/pitch-bar</property>
+        <property>it-autoflight/fd/pitch-bar</property>
         <factor>0.0005</factor>
         <axis>
             <x>0</x>
@@ -375,7 +375,7 @@ Modified by it0uchpods for KC-137R
         <type>translate</type>
         <object-name>FDroll</object-name>
         <object-name>FDroll_rembrandt</object-name>
-        <property>/it-autoflight/fd/roll-bar</property>
+        <property>it-autoflight/fd/roll-bar</property>
         <factor>0.0002</factor>
         <axis>
             <x>0</x>
@@ -401,7 +401,7 @@ Modified by it0uchpods for KC-137R
         <object-name>SpeedTarget</object-name>
         <type>select</type>
 		<condition>
-			<property>/rubbish/no</property>
+			<property>rubbish/no</property>
 		</condition>
     </animation>
 
@@ -485,7 +485,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>rotate</type>
         <object-name>hdg-bug</object-name>
-        <property>/it-autoflight/internal/heading-error-deg</property>
+        <property>it-autoflight/internal/heading-error-deg</property>
         <interpolation>
             <entry><ind>-54</ind><dep>-54</dep></entry>
             <entry><ind>0</ind><dep>0</dep></entry>
@@ -598,7 +598,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>ASI</object-name>
-		<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
         <interpolation>
             <entry><ind>0</ind><dep>0</dep></entry>
             <entry><ind>560</ind><dep>0.7520</dep></entry>
@@ -616,7 +616,7 @@ Modified by it0uchpods for KC-137R
         <object-name>Alt1</object-name>
         <condition>
             <less-than>
-                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                        <property>instrumentation/altimeter/indicated-altitude-ft</property>
                 <value>9600</value>
             </less-than>
         </condition>
@@ -628,11 +628,11 @@ Modified by it0uchpods for KC-137R
         <condition>
             <and>
                 <greater-than>
-                            <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                            <property>instrumentation/altimeter/indicated-altitude-ft</property>
                     <value>9599.999</value>
                 </greater-than>
                 <less-than>
-                            <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                            <property>instrumentation/altimeter/indicated-altitude-ft</property>
                     <value>19200</value>
                 </less-than>
             </and>
@@ -645,11 +645,11 @@ Modified by it0uchpods for KC-137R
         <condition>
             <and>
                 <greater-than>
-                            <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                            <property>instrumentation/altimeter/indicated-altitude-ft</property>
                     <value>19199.999</value>
                 </greater-than>
                 <less-than>
-                            <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                            <property>instrumentation/altimeter/indicated-altitude-ft</property>
                     <value>28800</value>
                 </less-than>
             </and>
@@ -662,11 +662,11 @@ Modified by it0uchpods for KC-137R
         <condition>
             <and>
                 <greater-than>
-                            <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                            <property>instrumentation/altimeter/indicated-altitude-ft</property>
                     <value>28799.999</value>
                 </greater-than>
                 <less-than>
-                            <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                            <property>instrumentation/altimeter/indicated-altitude-ft</property>
                     <value>38400</value>
                 </less-than>
             </and>
@@ -679,11 +679,11 @@ Modified by it0uchpods for KC-137R
         <condition>
             <and>
                 <greater-than>
-                            <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                            <property>instrumentation/altimeter/indicated-altitude-ft</property>
                     <value>38399.999</value>
                 </greater-than>
                 <less-than>
-                            <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                            <property>instrumentation/altimeter/indicated-altitude-ft</property>
                     <value>48000</value>
                 </less-than>
             </and>
@@ -695,7 +695,7 @@ Modified by it0uchpods for KC-137R
         <object-name>Alt6</object-name>
         <condition>
             <greater-than>
-                        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                        <property>instrumentation/altimeter/indicated-altitude-ft</property>
                 <value>47999.999</value>
             </greater-than>
         </condition>
@@ -704,7 +704,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alt1</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <interpolation>
             <entry><ind>-200</ind><dep>-0.0187</dep></entry>
             <entry><ind>0</ind><dep>0</dep></entry>
@@ -719,7 +719,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alt2</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <interpolation>
             <entry><ind>9600</ind><dep>0</dep></entry>
             <entry><ind>19200</ind><dep>0.9035</dep></entry>
@@ -733,7 +733,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alt3</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <interpolation>
             <entry><ind>19200</ind><dep>0</dep></entry>
             <entry><ind>28800</ind><dep>0.9035</dep></entry>
@@ -747,7 +747,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alt4</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <interpolation>
             <entry><ind>28800</ind><dep>0</dep></entry>
             <entry><ind>38400</ind><dep>0.9035</dep></entry>
@@ -761,7 +761,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alt5</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <interpolation>
             <entry><ind>38400</ind><dep>0</dep></entry>
             <entry><ind>48000</ind><dep>0.9035</dep></entry>
@@ -775,7 +775,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alt6</object-name>
-                <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+                <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <interpolation>
             <entry><ind>48000</ind><dep>0</dep></entry>
             <entry><ind>57600</ind><dep>0.9035</dep></entry>
@@ -790,7 +790,7 @@ Modified by it0uchpods for KC-137R
         <object-name>AltitudeCursor</object-name>
         <type>select</type>
 		<condition>
-			<property>/rubbish/no</property>
+			<property>rubbish/no</property>
 		</condition>
     </animation>
 
@@ -862,7 +862,7 @@ Modified by it0uchpods for KC-137R
 		<object-name>THRUST</object-name>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/thr</property>
+				<property>it-autoflight/mode/thr</property>
 				<value>THRUST</value>
 			</equals>
 		</condition>
@@ -872,7 +872,7 @@ Modified by it0uchpods for KC-137R
 		<object-name>TPITCH</object-name>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/thr</property>
+				<property>it-autoflight/mode/thr</property>
 				<value> PITCH</value>
 			</equals>
 		</condition>
@@ -882,7 +882,7 @@ Modified by it0uchpods for KC-137R
 		<object-name>RETARD</object-name>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/thr</property>
+				<property>it-autoflight/mode/thr</property>
 				<value>RETARD</value>
 			</equals>
 		</condition>
@@ -899,7 +899,7 @@ Modified by it0uchpods for KC-137R
 		<axis-alignment>yz-plane</axis-alignment>
         <type type="string">text-value</type>
         <format type="string">%s</format>
-		<property>/it-autoflight/mode/lat</property>
+		<property>it-autoflight/mode/lat</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -920,7 +920,7 @@ Modified by it0uchpods for KC-137R
 		<axis-alignment>yz-plane</axis-alignment>
         <type type="string">text-value</type>
         <format type="string">%s</format>
-		<property>/it-autoflight/mode/vert</property>
+		<property>it-autoflight/mode/vert</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -1080,7 +1080,7 @@ Modified by it0uchpods for KC-137R
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/thr</property>
+				<property>it-autoflight/mode/thr</property>
 				<value> PITCH</value>
 			</equals>
 		</condition>
@@ -1091,7 +1091,7 @@ Modified by it0uchpods for KC-137R
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/output/loc-armed</property>
+				<property>it-autoflight/output/loc-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1102,7 +1102,7 @@ Modified by it0uchpods for KC-137R
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/output/appr-armed</property>
+				<property>it-autoflight/output/appr-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1114,24 +1114,24 @@ Modified by it0uchpods for KC-137R
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/output/appr-armed</property>
+				<property>it-autoflight/output/appr-armed</property>
 				<value>0</value>
 			</equals>
 			<or>
 			<equals>
-				<property>/it-autoflight/output/vert</property>
+				<property>it-autoflight/output/vert</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/output/vert</property>
+				<property>it-autoflight/output/vert</property>
 				<value>4</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/output/vert</property>
+				<property>it-autoflight/output/vert</property>
 				<value>5</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/output/vert</property>
+				<property>it-autoflight/output/vert</property>
 				<value>7</value>
 			</equals>
 			</or>
@@ -1144,11 +1144,11 @@ Modified by it0uchpods for KC-137R
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/lat</property>
+				<property>it-autoflight/mode/lat</property>
 				<value>T/O</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/input/lat-arm</property>
+				<property>it-autoflight/input/lat-arm</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -1158,11 +1158,11 @@ Modified by it0uchpods for KC-137R
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/lat</property>
+				<property>it-autoflight/mode/lat</property>
 				<value>T/O</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/input/lat-arm</property>
+				<property>it-autoflight/input/lat-arm</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1173,7 +1173,7 @@ Modified by it0uchpods for KC-137R
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/vert</property>
+				<property>it-autoflight/mode/vert</property>
 				<value>LAND 3</value>
 			</equals>
 		</condition>
@@ -1190,7 +1190,7 @@ Modified by it0uchpods for KC-137R
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/fma/pfd/autoflight-mode</property>
+		<property>fma/pfd/autoflight-mode</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.01</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1211,7 +1211,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%4.0f</format>
-        <property>/it-autoflight/internal/vert-speed-fpm</property>
+        <property>it-autoflight/internal/vert-speed-fpm</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.008</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1232,7 +1232,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%4.0f</format>
-        <property>/it-autoflight/internal/vert-speed-fpm</property>
+        <property>it-autoflight/internal/vert-speed-fpm</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.008</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1255,7 +1255,7 @@ Modified by it0uchpods for KC-137R
         <format type="string">%0.0f</format>
         <offset>0.1</offset> <!--avoid some quirky "-0" indications-->
         <truncate type="bool">true</truncate>
-        <property>/position/altitude-agl-ft</property>
+        <property>position/altitude-agl-ft</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.009</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -1276,7 +1276,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%0.3f</format>
-        <property>/velocities/mach</property>
+        <property>velocities/mach</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.010</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1332,7 +1332,7 @@ Modified by it0uchpods for KC-137R
         <type>select</type>
         <object-name>INHG</object-name>
         <condition>
-            <property>/modes/altimeter/inhg</property>
+            <property>modes/altimeter/inhg</property>
         </condition>
     </animation>
 	
@@ -1340,7 +1340,7 @@ Modified by it0uchpods for KC-137R
         <type>select</type>
         <object-name>HPA</object-name>
         <condition>
-            <not><property>/modes/altimeter/inhg</property></not>
+            <not><property>modes/altimeter/inhg</property></not>
         </condition>
     </animation>
 
@@ -1351,7 +1351,7 @@ Modified by it0uchpods for KC-137R
         <object-name>UTC</object-name>
         <object-name>UTC-TEXT</object-name>
         <condition>
-            <property>/rubbish/more_stuff_i_did_not_do</property>
+            <property>rubbish/more_stuff_i_did_not_do</property>
         </condition>
     </animation>
 
@@ -1438,7 +1438,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Asitext.100</object-name>
-		<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
         <factor>0.001</factor>
         <step>100</step>
         <scroll>1</scroll>
@@ -1452,7 +1452,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Asitext.010</object-name>
-		<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
         <factor>0.01</factor>
         <step>10</step>
         <scroll>1</scroll>
@@ -1466,7 +1466,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Asitext.001</object-name>
-		<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
         <factor>0.1</factor>
         <axis>
             <x>0</x>
@@ -1478,7 +1478,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alttext10</object-name>
-        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <factor>0.01</factor>
         <axis>
             <x>0</x>
@@ -1490,7 +1490,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alttext100</object-name>
-        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <factor>0.001</factor>
         <step>100</step>
         <scroll>20</scroll>
@@ -1504,7 +1504,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alttext1000</object-name>
-        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <factor>0.0001</factor>
         <step>1000</step>
         <scroll>20</scroll>
@@ -1518,7 +1518,7 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>textranslate</type>
         <object-name>Alttext10000</object-name>
-        <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
         <factor>0.00001</factor>
         <step>10000</step>
         <scroll>20</scroll>
@@ -1540,7 +1540,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%2.0f</format>
-        <property>/it-autoflight/internal/alt</property>
+        <property>it-autoflight/internal/alt</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.010</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1561,7 +1561,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%3.0f</format>
-        <property>/it-autoflight/input/spd-kts</property>
+        <property>it-autoflight/input/spd-kts</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.010</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1603,7 +1603,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%0.3f</format>
-        <property>/it-autoflight/input/spd-mach</property>
+        <property>it-autoflight/input/spd-mach</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.010</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1624,7 +1624,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%3.0fH</format>
-        <property>/it-autoflight/input/hdg</property>
+        <property>it-autoflight/input/hdg</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1879,7 +1879,7 @@ Modified by it0uchpods for KC-137R
         <object-name>IAS-annun</object-name>
         <condition>
 			<equals>
-                <property>/it-autoflight/input/kts-mach</property>
+                <property>it-autoflight/input/kts-mach</property>
 				<value>0</value>
 			</equals>
         </condition>
@@ -1890,7 +1890,7 @@ Modified by it0uchpods for KC-137R
         <object-name>MACH-annun</object-name>
         <condition>
 			<equals>
-                <property>/it-autoflight/input/kts-mach</property>
+                <property>it-autoflight/input/kts-mach</property>
 				<value>1</value>
 			</equals>
         </condition>
@@ -1900,7 +1900,7 @@ Modified by it0uchpods for KC-137R
         <type>select</type>
         <object-name>TRU-annun</object-name>
         <condition>
-            <property>/rubbish/stuff_i_did_not_make</property>
+            <property>rubbish/stuff_i_did_not_make</property>
         </condition>
     </animation-->
 
@@ -1908,7 +1908,7 @@ Modified by it0uchpods for KC-137R
         <type>select</type>
         <object-name>TRK-annun</object-name>
         <condition>
-            <property>/rubbish/stuff_i_did_not_make</property>
+            <property>rubbish/stuff_i_did_not_make</property>
         </condition>
     </animation-->
 

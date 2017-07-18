@@ -26,7 +26,7 @@
 		<object-name>lightTurn.003</object-name>
 		<object-name>wiperTurn</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -48,7 +48,7 @@
 		<object-name>switch.007</object-name>		
 		<object-name>switch.008</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -63,7 +63,7 @@
       <type>rotate</type>
       <object-name>switch</object-name>
       <object-name>switch.001</object-name>
-      <property>/controls/lighting/switches/landing-light</property>
+      <property>controls/lighting/switches/landing-light</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -88,11 +88,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-            <property>/controls/lighting/switches/landing-light</property>
+            <property>controls/lighting/switches/landing-light</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch1</property>
+            <property>sim/sound/switch1</property>
           </binding>		
       </action>
   </animation>
@@ -102,7 +102,7 @@
       <type>rotate</type>
       <object-name>switch.002</object-name>
       <object-name>switch.003</object-name>
-      <property>/controls/lighting/switches/landing-light[1]</property>
+      <property>controls/lighting/switches/landing-light[1]</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -127,11 +127,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-      		<property>/controls/lighting/switches/landing-light[1]</property>
+      		<property>controls/lighting/switches/landing-light[1]</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch1</property>
+            <property>sim/sound/switch1</property>
           </binding>		
       </action>
   </animation>
@@ -140,7 +140,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.004</object-name>
-      <property>/controls/lighting/switches/nav-lights</property>
+      <property>controls/lighting/switches/nav-lights</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -163,11 +163,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-      		<property>/controls/lighting/switches/nav-lights</property>
+      		<property>controls/lighting/switches/nav-lights</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch1</property>
+            <property>sim/sound/switch1</property>
           </binding>		
       </action>
   </animation>
@@ -176,7 +176,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.005</object-name>
-      <property>/controls/lighting/switches/beacon</property>
+      <property>controls/lighting/switches/beacon</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -199,11 +199,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-      		<property>/controls/lighting/switches/beacon</property>
+      		<property>controls/lighting/switches/beacon</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch1</property>
+            <property>sim/sound/switch1</property>
           </binding>		
       </action>
   </animation>
@@ -212,7 +212,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.006</object-name>
-      <property>/controls/lighting/switches/strobe</property>
+      <property>controls/lighting/switches/strobe</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -235,11 +235,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-      		<property>/controls/lighting/switches/strobe</property>
+      		<property>controls/lighting/switches/strobe</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch1</property>
+            <property>sim/sound/switch1</property>
           </binding>		
       </action>
   </animation>
@@ -248,7 +248,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.007</object-name>
-      <property>/controls/lighting/switches/landing-light[2]</property>
+      <property>controls/lighting/switches/landing-light[2]</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -271,11 +271,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-      		<property>/controls/lighting/switches/landing-light[2]</property>
+      		<property>controls/lighting/switches/landing-light[2]</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch1</property>
+            <property>sim/sound/switch1</property>
           </binding>		
       </action>
   </animation>
@@ -296,7 +296,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.008</object-name>
-      <property>/controls/lighting/switches/logo-lights</property>
+      <property>controls/lighting/switches/logo-lights</property>
       <factor>50</factor>
       <axis>
        <x>0</x>
@@ -319,11 +319,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-      			<property>/controls/lighting/switches/logo-lights</property>
+      			<property>controls/lighting/switches/logo-lights</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch1</property>
+            <property>sim/sound/switch1</property>
           </binding>		
       </action>
   </animation>
@@ -332,7 +332,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lightTurn</object-name>
-		<property>/controls/lighting/cabin-dim</property>
+		<property>controls/lighting/cabin-dim</property>
 		<factor>-225</factor>
 		<axis>
 		 <x>1</x>
@@ -354,7 +354,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/cabin-dim</property>
+		    <property>controls/lighting/cabin-dim</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -362,7 +362,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -370,7 +370,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/cabin-dim</property>
+		    <property>controls/lighting/cabin-dim</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -378,7 +378,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -386,7 +386,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/cabin-dim</property>
+		    <property>controls/lighting/cabin-dim</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -394,7 +394,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -402,7 +402,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/cabin-dim</property>
+		    <property>controls/lighting/cabin-dim</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -410,7 +410,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -419,7 +419,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lightTurn.001</object-name>
-		<property>/controls/lighting/panel-norm</property>
+		<property>controls/lighting/panel-norm</property>
 		<factor>-225</factor>
 		<axis>
 		 <x>1</x>
@@ -441,7 +441,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/panel-norm</property>
+		    <property>controls/lighting/panel-norm</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -449,7 +449,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -457,7 +457,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/panel-norm</property>
+		    <property>controls/lighting/panel-norm</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -465,7 +465,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -473,7 +473,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/panel-norm</property>
+		    <property>controls/lighting/panel-norm</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -481,7 +481,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -489,7 +489,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/panel-norm</property>
+		    <property>controls/lighting/panel-norm</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -497,7 +497,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -506,7 +506,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lightTurn.002</object-name>
-		<property>/controls/lighting/engineer-dim</property>
+		<property>controls/lighting/engineer-dim</property>
 		<factor>-225</factor>
 		<axis>
 		 <x>1</x>
@@ -528,7 +528,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/engineer-dim</property>
+		    <property>controls/lighting/engineer-dim</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -536,7 +536,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -544,7 +544,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/engineer-dim</property>
+		    <property>controls/lighting/engineer-dim</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -552,7 +552,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -560,7 +560,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/engineer-dim</property>
+		    <property>controls/lighting/engineer-dim</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -568,7 +568,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -576,7 +576,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/engineer-dim</property>
+		    <property>controls/lighting/engineer-dim</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -584,7 +584,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -593,7 +593,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>lightTurn.003</object-name>
-		<property>/controls/lighting/overhead-dim</property>
+		<property>controls/lighting/overhead-dim</property>
 		<factor>-225</factor>
 		<axis>
 		 <x>1</x>
@@ -615,7 +615,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/overhead-dim</property>
+		    <property>controls/lighting/overhead-dim</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -623,7 +623,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -631,7 +631,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/overhead-dim</property>
+		    <property>controls/lighting/overhead-dim</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -639,7 +639,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -647,7 +647,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/overhead-dim</property>
+		    <property>controls/lighting/overhead-dim</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -655,7 +655,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -663,7 +663,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/lighting/overhead-dim</property>
+		    <property>controls/lighting/overhead-dim</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -671,7 +671,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -680,7 +680,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>wiperTurn</object-name>
-		<property>/controls/special/wiper-switch</property>
+		<property>controls/special/wiper-switch</property>
 		<interpolation>
 		  <entry><ind>0</ind><dep>   0</dep></entry>
 		  <entry><ind>1</ind><dep>  45</dep></entry>
@@ -707,7 +707,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/special/wiper-switch</property>
+		    <property>controls/special/wiper-switch</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>5</max>
@@ -715,7 +715,7 @@
 		  </binding>		  
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch2</property>
+		    <property>sim/sound/switch2</property>
 		  </binding>
 		</action>
 		<action>
@@ -723,7 +723,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/special/wiper-switch</property>
+		    <property>controls/special/wiper-switch</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>5</max>
@@ -731,7 +731,7 @@
 		  </binding>		  
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch2</property>
+		    <property>sim/sound/switch2</property>
 		  </binding>
 		</action>
 		<action>
@@ -739,7 +739,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/special/wiper-switch</property>
+		    <property>controls/special/wiper-switch</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>5</max>
@@ -747,7 +747,7 @@
 		  </binding>		  
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch2</property>
+		    <property>sim/sound/switch2</property>
 		  </binding>
 		</action>
 		<action>
@@ -755,7 +755,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/controls/special/wiper-switch</property>
+		    <property>controls/special/wiper-switch</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>5</max>
@@ -763,7 +763,7 @@
 		  </binding>		  
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch2</property>
+		    <property>sim/sound/switch2</property>
 		  </binding>
 		</action>
 	</animation>

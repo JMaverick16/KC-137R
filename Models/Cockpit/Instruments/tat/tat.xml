@@ -19,7 +19,7 @@
       <object-name>minus</object-name>
       <object-name>off</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -39,8 +39,8 @@
       <object-name>off</object-name>
 			<object-name>shadow</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -54,7 +54,7 @@
 		<type>material</type>
 		<object-name>face</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.2</red>
@@ -68,8 +68,8 @@
 		<type>material</type>
 		<object-name>face</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -95,7 +95,7 @@
 		<object-name>dec-10</object-name>
 		<condition>		
 			<less-than-equals>
-				<property>/b707/anti-ice/total-air-temperature</property>
+				<property>b707/anti-ice/total-air-temperature</property>
 				<value>0</value>
 			</less-than-equals>
 		</condition>
@@ -106,7 +106,7 @@
 		<object-name>dec10</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/anti-ice/total-air-temperature</property>
+				<property>b707/anti-ice/total-air-temperature</property>
 				<value>0</value>
 			</greater-than>
 		</condition>
@@ -118,11 +118,11 @@
 		<condition>	
 		  <or>	
 				<less-than>
-					<property>/b707/anti-ice/total-air-temperature</property>
+					<property>b707/anti-ice/total-air-temperature</property>
 					<value>-99.9</value>
 				</less-than>
 				<greater-than>
-					<property>/b707/anti-ice/total-air-temperature</property>
+					<property>b707/anti-ice/total-air-temperature</property>
 					<value>99.9</value>
 				</greater-than>
 			</or>
@@ -134,7 +134,7 @@
 		<object-name>off</object-name>
 		<condition>		
 			<less-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>22</value>
 			</less-than>
 		</condition>
@@ -143,7 +143,7 @@
   <animation>
       <type>textranslate</type>
       <object-name>t100</object-name>
-         <property>/b707/anti-ice/total-air-temperature-digit</property>
+         <property>b707/anti-ice/total-air-temperature-digit</property>
       <step>100</step>
       <factor>0.001</factor>
       <axis>
@@ -156,7 +156,7 @@
   <animation>
       <type>textranslate</type>
       <object-name>t10</object-name>
-              <property>/b707/anti-ice/total-air-temperature-digit</property>
+              <property>b707/anti-ice/total-air-temperature-digit</property>
       <step>10</step>
       <factor>0.01</factor>
       <axis>
@@ -169,7 +169,7 @@
   <animation>
       <type>textranslate</type>
       <object-name>t1</object-name>
-              <property>/b707/anti-ice/total-air-temperature-digit</property>
+              <property>b707/anti-ice/total-air-temperature-digit</property>
       <step>1</step>
       <factor>0.1</factor>
       <axis>
@@ -182,7 +182,7 @@
   <animation>
       <type>textranslate</type>
       <object-name>dec10</object-name>
-              <property>/b707/anti-ice/total-air-temperature</property>
+              <property>b707/anti-ice/total-air-temperature</property>
       <step>0.1</step>
       <factor>1</factor>
       <axis>
@@ -195,7 +195,7 @@
   <animation>
       <type>textranslate</type>
       <object-name>dec-10</object-name>
-              <property>/b707/anti-ice/total-air-temperature</property>
+              <property>b707/anti-ice/total-air-temperature</property>
       <step>0.1</step>
       <factor>1</factor>
       <axis>

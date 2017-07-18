@@ -23,7 +23,7 @@
 		<object-name>flagPOR</object-name>
 		<object-name>flagITA</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.3</red>
@@ -39,11 +39,11 @@
 		<condition>	
 			<and>	
 				<greater-than>
-					<property>/b707/manual/page</property>
+					<property>b707/manual/page</property>
 					<value>0</value>
 				</greater-than>
 				<greater-than>
-		  		<property>/b707/manual/board</property>
+		  		<property>b707/manual/board</property>
 					<value>0.94</value>
 				</greater-than>
 			</and>
@@ -55,7 +55,7 @@
 		  <type>rotate</type>
 		  <object-name>board</object-name>
 		  <object-name>saddle</object-name>
-		  <property>/b707/manual/board</property>
+		  <property>b707/manual/board</property>
 			<interpolation>
 				<entry><ind>0.0</ind><dep>  0.0</dep></entry>
 				<entry><ind>0.6</ind><dep>-100.0</dep></entry>
@@ -75,7 +75,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>board</object-name>
-		  <property>/b707/manual/board</property>
+		  <property>b707/manual/board</property>
 			<interpolation>
 				<entry><ind>0.6</ind><dep>   0.0</dep></entry>
 				<entry><ind>1.0</ind><dep> -85.0</dep></entry>
@@ -120,7 +120,7 @@
 		    <repeatable>false</repeatable>
         <binding>
 				  <command>property-assign</command>
-				  <property>/b707/manual/page</property>
+				  <property>b707/manual/page</property>
 				  <value>2</value>
         </binding> 
 				<binding>
@@ -138,7 +138,7 @@
 		    <repeatable>false</repeatable>
         <binding>
 				  <command>property-assign</command>
-				  <property>/b707/manual/page</property>
+				  <property>b707/manual/page</property>
 				  <value>13</value>
         </binding>
 				<binding>
@@ -156,7 +156,7 @@
 		    <repeatable>false</repeatable>
         <binding>
 				  <command>property-assign</command>
-				  <property>/b707/manual/page</property>
+				  <property>b707/manual/page</property>
 				  <value>24</value>
         </binding> 
 				<binding>
@@ -174,7 +174,7 @@
 		    <repeatable>false</repeatable>
         <binding>
 				  <command>property-assign</command>
-				  <property>/b707/manual/page</property>
+				  <property>b707/manual/page</property>
 				  <value>35</value>
         </binding> 
 				<binding>
@@ -192,7 +192,7 @@
 		    <repeatable>false</repeatable>
         <binding>
 				  <command>property-assign</command>
-				  <property>/b707/manual/page</property>
+				  <property>b707/manual/page</property>
 				  <value>46</value>
         </binding> 
 				<binding>
@@ -210,7 +210,7 @@
 		    <repeatable>false</repeatable>
         <binding>
 				  <command>property-assign</command>
-				  <property>/b707/manual/page</property>
+				  <property>b707/manual/page</property>
 				  <value>57</value>
         </binding> 
 				<binding>
@@ -228,7 +228,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/manual/page</property>
+		    <property>b707/manual/page</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>100</max>
@@ -244,7 +244,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/manual/page</property>
+		    <property>b707/manual/page</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>100</max>
@@ -260,7 +260,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/manual/page</property>
+		    <property>b707/manual/page</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>100</max>
@@ -281,7 +281,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/manual/page</property>
+		    <property>b707/manual/page</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>100</max>
@@ -297,7 +297,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/manual/page</property>
+		    <property>b707/manual/page</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>100</max>
@@ -313,7 +313,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/manual/page</property>
+		    <property>b707/manual/page</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>100</max>
@@ -337,7 +337,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/page</property>
+				<property type="string">b707/manual/page</property>
 				<character-size type="double">0.007</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -354,7 +354,7 @@
 		<object-name>pageNumber</object-name>
 		<condition>	
 			<greater-than>
-				<property>/b707/manual/page</property>
+				<property>b707/manual/page</property>
 				<value>0</value>
 			</greater-than>
 		</condition>
@@ -371,7 +371,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/title</property>
+				<property type="string">b707/manual/title</property>
 				<character-size type="double">0.012</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -388,7 +388,7 @@
 		<object-name>pageTitle</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/title</property>
+				<property>b707/manual/title</property>
 				<value type="string"></value>
 			</not>
 		</condition>
@@ -405,7 +405,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/subtitle1</property>
+				<property type="string">b707/manual/subtitle1</property>
 				<character-size type="double">0.009</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -422,7 +422,7 @@
 		<object-name>pageSubTitle1</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/subtitle1</property>
+				<property>b707/manual/subtitle1</property>
 				<value type="string"></value>
 			</not>
 		</condition>
@@ -439,7 +439,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/text1</property>
+				<property type="string">b707/manual/text1</property>
 				<character-size type="double">0.007</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -456,7 +456,7 @@
 		<object-name>pageText1</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/text1</property>
+				<property>b707/manual/text1</property>
 				<value type="string"></value>
 			</not>
 		</condition>
@@ -473,7 +473,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/subtitle2</property>
+				<property type="string">b707/manual/subtitle2</property>
 				<character-size type="double">0.009</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -490,7 +490,7 @@
 		<object-name>pageSubTitle2</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/subtitle2</property>
+				<property>b707/manual/subtitle2</property>
 				<value type="string"></value>
 			</not>
 		</condition>
@@ -507,7 +507,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/text2</property>
+				<property type="string">b707/manual/text2</property>
 				<character-size type="double">0.007</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -524,7 +524,7 @@
 		<object-name>pageText2</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/text2</property>
+				<property>b707/manual/text2</property>
 				<value type="string"></value>
 			</not>
 		</condition>
@@ -541,7 +541,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/subtitle3</property>
+				<property type="string">b707/manual/subtitle3</property>
 				<character-size type="double">0.009</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -558,7 +558,7 @@
 		<object-name>pageSubTitle3</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/subtitle3</property>
+				<property>b707/manual/subtitle3</property>
 				<value type="string"></value>
 			</not>
 		</condition>
@@ -575,7 +575,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/text3</property>
+				<property type="string">b707/manual/text3</property>
 				<character-size type="double">0.007</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -592,7 +592,7 @@
 		<object-name>pageText3</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/text3</property>
+				<property>b707/manual/text3</property>
 				<value type="string"></value>
 			</not>
 		</condition>
@@ -609,7 +609,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/subtitle4</property>
+				<property type="string">b707/manual/subtitle4</property>
 				<character-size type="double">0.009</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -626,7 +626,7 @@
 		<object-name>pageSubTitle4</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/subtitle4</property>
+				<property>b707/manual/subtitle4</property>
 				<value type="string"></value>
 			</not>
 		</condition>
@@ -643,7 +643,7 @@
 		</offsets>
 		<overlay>
 			<params>
-				<property type="string">/b707/manual/text4</property>
+				<property type="string">b707/manual/text4</property>
 				<character-size type="double">0.007</character-size>
 				<color>
 					<red   type="double">0.0</red>
@@ -660,7 +660,7 @@
 		<object-name>pageText4</object-name>
 		<condition>
 			<not>	
-				<property>/b707/manual/text4</property>
+				<property>b707/manual/text4</property>
 				<value type="string"></value>
 			</not>
 		</condition>

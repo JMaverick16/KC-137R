@@ -22,7 +22,7 @@
 		<object-name>windowIceCapt.FO</object-name>
 		<condition>		
 			<less-than>
-				<property>/b707/anti-ice/window-alpha-fo</property>
+				<property>b707/anti-ice/window-alpha-fo</property>
 				<value>0.9</value>
 			</less-than>
 		</condition>
@@ -34,7 +34,7 @@
 		<object-name>windowIceFO.Capt</object-name>
 		<condition>		
 			<less-than>
-				<property>/b707/anti-ice/window-alpha-capt</property>
+				<property>b707/anti-ice/window-alpha-capt</property>
 				<value>0.9</value>
 			</less-than>
 		</condition>

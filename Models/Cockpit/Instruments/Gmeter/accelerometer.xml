@@ -17,7 +17,7 @@
 			<object-name>accelerometer.needle</object-name>
 			<object-name>accelerometer</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -34,8 +34,8 @@
 			<object-name>accelerometer.needle</object-name>
 			<object-name>accelerometer</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -48,7 +48,7 @@
  <animation>
   <type>rotate</type>
   <object-name>accelerometer.needle</object-name>
-  <property>/accelerations/pilot-gdamped</property>
+  <property>accelerations/pilot-gdamped</property>
   <factor>45</factor>
   <center>
    <x-m>0</x-m>
@@ -65,7 +65,7 @@
  <animation>
   <type>rotate</type>
   <object-name>min.needle</object-name>
-  <property>/gmeter/min</property>
+  <property>gmeter/min</property>
   <factor>45</factor>
   <center>
    <x-m>0</x-m>
@@ -82,7 +82,7 @@
  <animation>
   <type>rotate</type>
   <object-name>max.needle</object-name>
-  <property>/gmeter/max</property>
+  <property>gmeter/max</property>
   <factor>45</factor>
   <center>
    <x-m>0</x-m>

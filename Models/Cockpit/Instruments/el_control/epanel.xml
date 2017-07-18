@@ -22,7 +22,7 @@
 		  <object-name>switch.003</object-name>
       <object-name>nightHelp</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -46,8 +46,8 @@
 		  <object-name>switch.003</object-name>
       <object-name>nightHelp</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -79,7 +79,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch</object-name>
-      <property>/controls/lighting/nav-lights</property>
+      <property>controls/lighting/nav-lights</property>
       <interpolation> 
               <entry>
                   <ind>0</ind>
@@ -111,11 +111,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-            <property>/controls/lighting/nav-lights</property>
+            <property>controls/lighting/nav-lights</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch</property>
+            <property>sim/sound/switch</property>
           </binding>		
       </action>
   </animation>
@@ -124,7 +124,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.001</object-name>
-      <property>/controls/lighting/beacon</property>
+      <property>controls/lighting/beacon</property>
       <interpolation> 
               <entry>
                   <ind>0</ind>
@@ -156,11 +156,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-            <property>/controls/lighting/beacon</property>
+            <property>controls/lighting/beacon</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch</property>
+            <property>sim/sound/switch</property>
           </binding>		
       </action>
   </animation>
@@ -169,7 +169,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.002</object-name>
-      <property>/controls/lighting/strobe</property>
+      <property>controls/lighting/strobe</property>
       <interpolation> 
               <entry>
                   <ind>0</ind>
@@ -201,11 +201,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-            <property>/controls/lighting/strobe</property>
+            <property>controls/lighting/strobe</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch</property>
+            <property>sim/sound/switch</property>
           </binding>		
       </action>
   </animation>
@@ -214,7 +214,7 @@
   <animation>
       <type>rotate</type>
       <object-name>switch.003</object-name>
-      <!-- <property>/controls/lighting/landing-lights</property> -->
+      <!-- <property>controls/lighting/landing-lights</property> -->
       <property>sim/multiplay/generic/int[0]</property>  
       <interpolation> 
               <entry>
@@ -247,11 +247,11 @@
           <repeatable>false</repeatable>
           <binding>
             <command>property-toggle</command>
-            <property>/controls/lighting/landing-lights</property>
+            <property>controls/lighting/landing-lights</property>
           </binding>		
           <binding>
             <command>property-toggle</command>
-            <property>/sim/sound/switch</property>
+            <property>sim/sound/switch</property>
           </binding>		
       </action>
   </animation>
@@ -261,7 +261,7 @@
       <type>rotate</type>
       <object-name>KnobPanelLight</object-name>
       <object-name>nightHelp</object-name>
-      <!-- <property>/systems/electrical/outputs/panel-dim</property> -->
+      <!-- <property>systems/electrical/outputs/panel-dim</property> -->
       <property>sim/multiplay/generic/float[3]</property>
       <interpolation>
         <entry><ind>0</ind><dep> 25</dep></entry>
@@ -292,12 +292,12 @@
           <binding>
               <condition>
                 <greater-than>
-                  <property>/systems/electrical/outputs/panel-dim</property>
+                  <property>systems/electrical/outputs/panel-dim</property>
                   <value>0.0</value>
                 </greater-than>
               </condition>
               <command>property-adjust</command>
-              <property>/systems/electrical/outputs/panel-dim</property>
+              <property>systems/electrical/outputs/panel-dim</property>
               <step>0.1</step>
               <min>0.01</min>
               <max>1</max>
@@ -305,12 +305,12 @@
           <binding>
             <condition>
               <greater-than>
-                <property>/systems/electrical/outputs/panel-dim</property>
+                <property>systems/electrical/outputs/panel-dim</property>
                 <value>0.0</value>
               </greater-than>
             </condition>
             <command>property-toggle</command>
-            <property>/sim/sound/switch</property>
+            <property>sim/sound/switch</property>
           </binding>
       </action>
 
@@ -321,12 +321,12 @@
           <binding>
               <condition>
                 <greater-than>
-                  <property>/systems/electrical/outputs/panel-dim</property>
+                  <property>systems/electrical/outputs/panel-dim</property>
                   <value>0.0</value>
                 </greater-than>
               </condition>
               <command>property-adjust</command>
-              <property>/systems/electrical/outputs/panel-dim</property>
+              <property>systems/electrical/outputs/panel-dim</property>
               <step>-0.1</step>
               <min>0.01</min>
               <max>1</max>
@@ -334,12 +334,12 @@
           <binding>
             <condition>
               <greater-than>
-                <property>/systems/electrical/outputs/panel-dim</property>
+                <property>systems/electrical/outputs/panel-dim</property>
                 <value>0.0</value>
               </greater-than>
             </condition>
             <command>property-toggle</command>
-            <property>/sim/sound/switch</property>
+            <property>sim/sound/switch</property>
           </binding>
       </action>
 
@@ -348,7 +348,7 @@
               <binding>
                   <condition>
                     <greater-than>
-                      <property>/systems/electrical/outputs/panel-dim</property>
+                      <property>systems/electrical/outputs/panel-dim</property>
                       <value>0.0</value>
                     </greater-than>
                   </condition>
@@ -357,7 +357,7 @@
                 <not><property>devices/status/keyboard/super</property></not>
                   </condition>
                   <command>property-adjust</command>
-                  <property>/systems/electrical/outputs/panel-dim</property>
+                  <property>systems/electrical/outputs/panel-dim</property>
                   <step>0.01</step>
                   <min>0.01</min>
                   <max>1</max>
@@ -365,7 +365,7 @@
               <binding>
                   <condition>
                     <greater-than>
-                      <property>/systems/electrical/outputs/panel-dim</property>
+                      <property>systems/electrical/outputs/panel-dim</property>
                       <value>0.0</value>
                     </greater-than>
                   </condition>
@@ -376,7 +376,7 @@
                </or>
                   </condition>
                   <command>property-adjust</command>
-                  <property>/systems/electrical/outputs/panel-dim</property>
+                  <property>systems/electrical/outputs/panel-dim</property>
                   <step>0.1</step>
                   <min>0.01</min>
                   <max>1</max>
@@ -384,12 +384,12 @@
           <binding>
             <condition>
               <greater-than>
-                <property>/systems/electrical/outputs/panel-dim</property>
+                <property>systems/electrical/outputs/panel-dim</property>
                 <value>0.0</value>
               </greater-than>
             </condition>
             <command>property-toggle</command>
-            <property>/sim/sound/switch</property>
+            <property>sim/sound/switch</property>
           </binding>
       </action>
 
@@ -398,7 +398,7 @@
               <binding>
                   <condition>
                     <greater-than>
-                      <property>/systems/electrical/outputs/panel-dim</property>
+                      <property>systems/electrical/outputs/panel-dim</property>
                       <value>0.0</value>
                     </greater-than>
                   </condition>
@@ -407,7 +407,7 @@
                 <not><property>devices/status/keyboard/super</property></not>
                   </condition>
                   <command>property-adjust</command>
-                  <property>/systems/electrical/outputs/panel-dim</property>
+                  <property>systems/electrical/outputs/panel-dim</property>
                   <step>-0.01</step>
                   <min>0.01</min>
                   <max>1</max>
@@ -415,7 +415,7 @@
               <binding>
                   <condition>
                     <greater-than>
-                      <property>/systems/electrical/outputs/panel-dim</property>
+                      <property>systems/electrical/outputs/panel-dim</property>
                       <value>0.0</value>
                     </greater-than>
                   </condition>
@@ -426,7 +426,7 @@
                </or>
                   </condition>
                   <command>property-adjust</command>
-                  <property>/systems/electrical/outputs/panel-dim</property>
+                  <property>systems/electrical/outputs/panel-dim</property>
                   <step>-0.1</step>
                   <min>0.01</min>
                   <max>1</max>
@@ -434,12 +434,12 @@
           <binding>
             <condition>
               <greater-than>
-                <property>/systems/electrical/outputs/panel-dim</property>
+                <property>systems/electrical/outputs/panel-dim</property>
                 <value>0.09</value>
               </greater-than>
             </condition>
             <command>property-toggle</command>
-            <property>/sim/sound/switch</property>
+            <property>sim/sound/switch</property>
           </binding>
       </action>
   </animation>

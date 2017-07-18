@@ -14,7 +14,7 @@
 		<object-name>brake</object-name>
 		<object-name>sup</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.2</red>
@@ -30,8 +30,8 @@
 		<object-name>sup</object-name>
 		<object-name>shadow</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 			<red>0.4</red>
@@ -50,7 +50,7 @@
     <animation>
         <type>rotate</type>
         <object-name>brake</object-name>
-        <property>/controls/gear/brake-parking</property>
+        <property>controls/gear/brake-parking</property>
         <factor>-90</factor>
         <axis>
             <x> 1.0</x>
@@ -73,7 +73,7 @@
         <repeatable>false</repeatable>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/gear/brake-parking</property>  
+          <property>controls/gear/brake-parking</property>  
         </binding>
       </action>
     </animation>

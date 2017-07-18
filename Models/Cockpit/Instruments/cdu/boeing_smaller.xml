@@ -195,7 +195,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/title</property>
+			<property type="string">instrumentation/cdu/output/title</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -216,7 +216,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/page</property>
+			<property type="string">instrumentation/cdu/output/page</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -237,7 +237,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line1/left-title</property>
+			<property type="string">instrumentation/cdu/output/line1/left-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -258,7 +258,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line1/left</property>
+			<property type="string">instrumentation/cdu/output/line1/left</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -279,7 +279,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line1/center-title</property>
+			<property type="string">instrumentation/cdu/output/line1/center-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -300,7 +300,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line1/center</property>
+			<property type="string">instrumentation/cdu/output/line1/center</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -321,7 +321,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line1/right-title</property>
+			<property type="string">instrumentation/cdu/output/line1/right-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -342,7 +342,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line1/right</property>
+			<property type="string">instrumentation/cdu/output/line1/right</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -363,7 +363,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line2/left-title</property>
+			<property type="string">instrumentation/cdu/output/line2/left-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -384,7 +384,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line2/left</property>
+			<property type="string">instrumentation/cdu/output/line2/left</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -405,7 +405,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line2/center-title</property>
+			<property type="string">instrumentation/cdu/output/line2/center-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -426,7 +426,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line2/center</property>
+			<property type="string">instrumentation/cdu/output/line2/center</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -447,7 +447,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line2/right-title</property>
+			<property type="string">instrumentation/cdu/output/line2/right-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -468,7 +468,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line2/right</property>
+			<property type="string">instrumentation/cdu/output/line2/right</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -489,7 +489,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line3/left-title</property>
+			<property type="string">instrumentation/cdu/output/line3/left-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -510,7 +510,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line3/left</property>
+			<property type="string">instrumentation/cdu/output/line3/left</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -531,7 +531,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line3/center-title</property>
+			<property type="string">instrumentation/cdu/output/line3/center-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -552,7 +552,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line3/center</property>
+			<property type="string">instrumentation/cdu/output/line3/center</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -573,7 +573,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line3/right-title</property>
+			<property type="string">instrumentation/cdu/output/line3/right-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -594,7 +594,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line3/right</property>
+			<property type="string">instrumentation/cdu/output/line3/right</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -615,7 +615,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line4/left-title</property>
+			<property type="string">instrumentation/cdu/output/line4/left-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -636,7 +636,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line4/left</property>
+			<property type="string">instrumentation/cdu/output/line4/left</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -657,7 +657,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line4/center-title</property>
+			<property type="string">instrumentation/cdu/output/line4/center-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -678,7 +678,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line4/center</property>
+			<property type="string">instrumentation/cdu/output/line4/center</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -699,7 +699,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line4/right-title</property>
+			<property type="string">instrumentation/cdu/output/line4/right-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -720,7 +720,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line4/right</property>
+			<property type="string">instrumentation/cdu/output/line4/right</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -741,7 +741,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line5/left-title</property>
+			<property type="string">instrumentation/cdu/output/line5/left-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -762,7 +762,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line5/left</property>
+			<property type="string">instrumentation/cdu/output/line5/left</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -783,7 +783,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line5/center-title</property>
+			<property type="string">instrumentation/cdu/output/line5/center-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -804,7 +804,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line5/center</property>
+			<property type="string">instrumentation/cdu/output/line5/center</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -825,7 +825,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line5/right-title</property>
+			<property type="string">instrumentation/cdu/output/line5/right-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -846,7 +846,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line5/right</property>
+			<property type="string">instrumentation/cdu/output/line5/right</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -867,7 +867,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line6/left-title</property>
+			<property type="string">instrumentation/cdu/output/line6/left-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -888,7 +888,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line6/left</property>
+			<property type="string">instrumentation/cdu/output/line6/left</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -909,7 +909,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line6/center-title</property>
+			<property type="string">instrumentation/cdu/output/line6/center-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -930,7 +930,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line6/center</property>
+			<property type="string">instrumentation/cdu/output/line6/center</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -951,7 +951,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line6/right-title</property>
+			<property type="string">instrumentation/cdu/output/line6/right-title</property>
 			<character-size type="double">0.004</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -972,7 +972,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/output/line6/right</property>
+			<property type="string">instrumentation/cdu/output/line6/right</property>
 			<character-size type="double">0.007</character-size>
 			<color>
 				<red   type="double">1.0</red>
@@ -993,7 +993,7 @@
 	</offsets>
 	<overlay>
 		<params>
-			<property type="string">/instrumentation/cdu/input</property>
+			<property type="string">instrumentation/cdu/input</property>
 			<format type="string">%03.1f</format>
 			<factor>1</factor>
 			<character-size type="double">0.007</character-size>
@@ -1132,7 +1132,7 @@
 		<repeatable>false</repeatable>  
 		<binding>
 			<command>property-assign</command>
-			<property>/instrumentation/cdu/display</property>
+			<property>instrumentation/cdu/display</property>
 			<value type="string">INIT_REF</value>
 		</binding>
 	</action>
@@ -1146,7 +1146,7 @@
 		<repeatable>false</repeatable>  
 		<binding>
 			<command>property-assign</command>
-			<property>/instrumentation/cdu/display</property>
+			<property>instrumentation/cdu/display</property>
 			<value type="string">RTE1_1</value>
 		</binding>
 	</action>
@@ -1160,7 +1160,7 @@
 		<repeatable>false</repeatable>  
 		<binding>
 			<command>property-assign</command>
-			<property>/instrumentation/cdu/display</property>
+			<property>instrumentation/cdu/display</property>
 			<value type="string">NAV_RAD</value>
 		</binding>
 	</action>
@@ -1174,7 +1174,7 @@
 		<repeatable>false</repeatable>  
 		<binding>
 			<command>property-assign</command>
-			<property>/instrumentation/cdu/display</property>
+			<property>instrumentation/cdu/display</property>
 			<value type="string">DEP_ARR_INDEX</value>
 		</binding>
 	</action>
@@ -1188,7 +1188,7 @@
 		<repeatable>false</repeatable>  
 		<binding>
 			<command>property-assign</command>
-			<property>/instrumentation/cdu/display</property>
+			<property>instrumentation/cdu/display</property>
 			<value type="string">RTE1_LEGS</value>
 		</binding>
 	</action>
@@ -1202,7 +1202,7 @@
 		<repeatable>false</repeatable>  
 		<binding>
 			<command>property-assign</command>
-			<property>/instrumentation/cdu/display</property>
+			<property>instrumentation/cdu/display</property>
 			<value type="string">MENU</value>
 		</binding>
 	</action>
@@ -1217,12 +1217,12 @@
 		<binding>
 			<condition>
 				<equals>
-					<property>/instrumentation/cdu/display</property>
+					<property>instrumentation/cdu/display</property>
 					<value>RTE1_2</value>
 				</equals>
 			</condition>
 			<command>property-assign</command>
-			<property>/instrumentation/cdu/display</property>
+			<property>instrumentation/cdu/display</property>
 			<value>RTE1_1</value>
 		</binding>
 	</action>
@@ -1237,12 +1237,12 @@
 		<binding>
 			<condition>
 				<equals>
-					<property>/instrumentation/cdu/display</property>
+					<property>instrumentation/cdu/display</property>
 					<value>RTE1_1</value>
 				</equals>
 			</condition>
 			<command>property-assign</command>
-			<property>/instrumentation/cdu/display</property>
+			<property>instrumentation/cdu/display</property>
 			<value>RTE1_2</value>
 		</binding>
 	</action>
@@ -1781,7 +1781,7 @@
 		<binding>
 			<condition>
 				<equals>
-					<property>/instrumentation/cdu/display</property>
+					<property>instrumentation/cdu/display</property>
 					<value>RTE1_LEGS</value>
 				</equals>
 			</condition>

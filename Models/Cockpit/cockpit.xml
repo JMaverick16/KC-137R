@@ -26,7 +26,7 @@
 		<object-name>panel</object-name> 
 		<object-name>immat.text</object-name> 
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -53,7 +53,7 @@
 		<object-name>PedalL</object-name>
 		<object-name>PedalR</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.25</red>
@@ -68,7 +68,7 @@
 		<object-name>handle</object-name> 
 		<object-name>winslide</object-name> 
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.15</red>
@@ -92,7 +92,7 @@
 		<type>select</type>
 		<object-name>exitON</object-name>
 		<condition>
-			<property>/b707/emergency/exit-lights</property>
+			<property>b707/emergency/exit-lights</property>
 		</condition>
 	</animation>	
 		  
@@ -101,7 +101,7 @@
 		<type>material</type>
 		<object-name>panelE</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -115,7 +115,7 @@
 		<type>material</type>
 		<object-name>window.front</object-name>  
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -130,7 +130,7 @@
 		<type>select</type>
 		<object-name>LightVolume1</object-name>
 		<condition>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
 		</condition>
 	</animation>
 	
@@ -139,38 +139,38 @@
 		<object-name>LightVolume2</object-name>
 		<condition>
 				<greater-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>20</value>
 				</greater-than>
-				<property>/sim/rendering/rembrandt/enabled</property>
+				<property>sim/rendering/rembrandt/enabled</property>
 				<or>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<and>
-						<property>/b707/warning/state</property>
-						<property>/controls/engines/engine[0]/fire</property>
+						<property>b707/warning/state</property>
+						<property>controls/engines/engine[0]/fire</property>
 					</and>
 					<and>
-						<property>/b707/warning/state</property>
-						<property>/controls/engines/engine[1]/fire</property>
+						<property>b707/warning/state</property>
+						<property>controls/engines/engine[1]/fire</property>
 					</and>
 					<and>
-						<property>/b707/warning/state</property>
-						<property>/controls/engines/engine[2]/fire</property>
+						<property>b707/warning/state</property>
+						<property>controls/engines/engine[2]/fire</property>
 					</and>
 					<and>
-						<property>/b707/warning/state</property>
-						<property>/controls/engines/engine[3]/fire</property>
+						<property>b707/warning/state</property>
+						<property>controls/engines/engine[3]/fire</property>
 					</and>
 					<greater-than>
-						<property>/b707/pressurization/cabin-altitude</property>
+						<property>b707/pressurization/cabin-altitude</property>
 						<value>8500</value>
 					</greater-than>
 					<and>
 						<greater-than>
-							<property>/b707/pressurization/cabin-altitude</property>
+							<property>b707/pressurization/cabin-altitude</property>
 							<value>4000</value>
 						</greater-than>
-						<not><property>/b707/pressurization/safety-valve</property></not>
+						<not><property>b707/pressurization/safety-valve</property></not>
 					</and>
 				</or>
 		</condition>
@@ -417,7 +417,7 @@
 		<object-name>eng_light_7</object-name>
 		<object-name>eng_light_8</object-name>
 		<condition>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
       <property>sim/current-view/internal</property>
 		</condition>
 	</animation>	 
@@ -568,8 +568,8 @@
 		<object-name>yokes</object-name>	
 		<condition>
 			<or>
-				<property>/sim/model-type/KCR</property>
-				<property>/sim/model-type/KCRT</property>
+				<property>sim/model-type/KCR</property>
+				<property>sim/model-type/KCRT</property>
 			</or>
 		</condition>
 	</animation>
@@ -588,7 +588,7 @@
 		<type>select</type>
 		<object-name>yokesJS</object-name>	
 		<condition>
-			<property>/sim/model-type/E8R</property>
+			<property>sim/model-type/E8R</property>
 		</condition>
 	</animation>
 	
@@ -650,8 +650,8 @@
 		<object-name>bookKC</object-name>	
 		<condition>
 			<or>
-				<property>/sim/model-type/KCR</property>
-				<property>/sim/model-type/KCRT</property>
+				<property>sim/model-type/KCR</property>
+				<property>sim/model-type/KCRT</property>
 			</or>
 		</condition>
 	</animation>
@@ -671,7 +671,7 @@
 		<type>select</type>
 		<object-name>bookJS</object-name>	
 		<condition>
-			<property>/sim/model-type/E8R</property>
+			<property>sim/model-type/E8R</property>
 		</condition>
 	</animation>
 	
@@ -732,7 +732,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>window.piop</object-name>
-		<property>/instrumentation/doors/pilotwin/position-norm</property>
+		<property>instrumentation/doors/pilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep>-45</dep></entry>
@@ -751,7 +751,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>windowPiComplete</object-name>
-		<property>/instrumentation/doors/pilotwin/position-norm</property>
+		<property>instrumentation/doors/pilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
@@ -771,7 +771,7 @@
 	<animation>
 	<type>translate</type>
 		<object-name>windowPiComplete</object-name>
-		<property>/instrumentation/doors/pilotwin/position-norm</property>
+		<property>instrumentation/doors/pilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.2</ind><dep> 0.0</dep></entry>
@@ -790,7 +790,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>windowPiComplete</object-name>
-		<property>/instrumentation/doors/pilotwin/position-norm</property>
+		<property>instrumentation/doors/pilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
@@ -831,7 +831,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>window.coop</object-name>
-		<property>/instrumentation/doors/copilotwin/position-norm</property>
+		<property>instrumentation/doors/copilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 45</dep></entry>
@@ -850,7 +850,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>windowCoComplete</object-name>
-		<property>/instrumentation/doors/copilotwin/position-norm</property>
+		<property>instrumentation/doors/copilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
@@ -870,7 +870,7 @@
 	<animation>
 	<type>translate</type>
 		<object-name>windowCoComplete</object-name>
-		<property>/instrumentation/doors/copilotwin/position-norm</property>
+		<property>instrumentation/doors/copilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.2</ind><dep> 0.0</dep></entry>
@@ -889,7 +889,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>windowCoComplete</object-name>
-		<property>/instrumentation/doors/copilotwin/position-norm</property>
+		<property>instrumentation/doors/copilotwin/position-norm</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep> 0.0</dep></entry>
 			<entry><ind>0.1</ind><dep> 0.0</dep></entry>
@@ -937,7 +937,7 @@
 			<z>0.33</z>
 		</direction>
     <dim-factor>
-      <property>/systems/electrical/outputs/cabin-dim</property>
+      <property>systems/electrical/outputs/cabin-dim</property>
       <factor>1.0</factor>
       <offset>0</offset>
       <min>0</min>

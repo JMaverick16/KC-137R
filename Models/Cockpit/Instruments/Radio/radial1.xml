@@ -31,7 +31,7 @@
 	<animation>
 	  <type>textranslate</type>
 	  <object-name>digit100</object-name>
-	  <property>/instrumentation/nav[0]/radials/selected-deg</property>
+	  <property>instrumentation/nav[0]/radials/selected-deg</property>
 	  <factor>0.001</factor>
 	  <step>100</step>
 	  <axis>
@@ -43,7 +43,7 @@
 	<animation>
 	  <type>textranslate</type>
 	  <object-name>digit10</object-name>
-	  <property>/instrumentation/nav[0]/radials/selected-deg</property>
+	  <property>instrumentation/nav[0]/radials/selected-deg</property>
 	  <factor>0.01</factor>
 	  <step>10</step>
 	  <axis>
@@ -55,7 +55,7 @@
 	<animation>
 	  <type>textranslate</type>
 	  <object-name>digit1</object-name>
-	  <property>/instrumentation/nav[0]/radials/selected-deg</property>
+	  <property>instrumentation/nav[0]/radials/selected-deg</property>
 	  <factor>0.1</factor>
 	  <step>1</step>
 	  <axis>
@@ -73,7 +73,7 @@
 		<repeatable>true</repeatable>
 		<binding>
 		  <command>property-adjust</command>
-		  <property>/instrumentation/nav[0]/radials/selected-deg</property>
+		  <property>instrumentation/nav[0]/radials/selected-deg</property>
 		  <step>10</step>
 		  <min>1</min>
 		  <max>361</max>
@@ -85,7 +85,7 @@
 		<repeatable>true</repeatable>
 		<binding>
 		  <command>property-adjust</command>
-		  <property>/instrumentation/nav[0]/radials/selected-deg</property>
+		  <property>instrumentation/nav[0]/radials/selected-deg</property>
 		  <step>-10</step>
 		  <min>1</min>
 		  <max>361</max>
@@ -97,7 +97,7 @@
 		<repeatable>true</repeatable>
 		<binding>
 		  <command>property-adjust</command>
-		  <property>/instrumentation/nav[0]/radials/selected-deg</property>
+		  <property>instrumentation/nav[0]/radials/selected-deg</property>
 		  <step>1</step>
 		  <min>1</min>
 		  <max>361</max>
@@ -109,7 +109,7 @@
 		<repeatable>true</repeatable>
 		<binding>
 		  <command>property-adjust</command>
-		  <property>/instrumentation/nav[0]/radials/selected-deg</property>
+		  <property>instrumentation/nav[0]/radials/selected-deg</property>
 		  <step>-1</step>
 		  <min>1</min>
 		  <max>361</max>

@@ -265,7 +265,7 @@
 		<type>material</type>
 		<object-name>operatorRoom</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -279,7 +279,7 @@
 		<type>material</type>
 		<object-name>operatorRoomWin</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.1</red>
@@ -803,7 +803,7 @@
 		<type>rotate</type>
 		<object-name>refuelBoom</object-name>
 		<object-name>refuelTube</object-name>
-		<property>/b707/refuelling/boom-azimuth</property>
+		<property>b707/refuelling/boom-azimuth</property>
 		<factor>1.5</factor>
 		<axis>
 			<x> 0</x>
@@ -878,7 +878,7 @@
 	<animation>
       <type>rotate</type>
       <object-name>nose</object-name>
-      <property>/instrumentation/doors/nose/position-norm</property>
+      <property>instrumentation/doors/nose/position-norm</property>
       <factor>120</factor>
       <center>
           <x-m>-19.962</x-m>
@@ -1094,7 +1094,7 @@
 			<and>
 				<property>sim/multiplay/generic/int[19]</property>
 				<less-than>
-						<property>/velocities/vertical-speed-fps</property>
+						<property>velocities/vertical-speed-fps</property>
 						<value>0.1</value>
 				</less-than>
 			</and>
@@ -1883,7 +1883,7 @@
 	 <animation>
 		<type>rotate</type>
 		<object-name>LeftGearBase</object-name>		
-		<property>/sim/multiplay/generic/float[10]</property>
+		<property>sim/multiplay/generic/float[10]</property>
 		<factor>-1</factor>
 		<center>
 		    <x-m>1.82</x-m>
@@ -2477,7 +2477,7 @@
  <animation>
   <type>rotate</type>
   <object-name>lhsp1</object-name>
-  <property>/sim/multiplay/generic/float[12]</property>
+  <property>sim/multiplay/generic/float[12]</property>
 	        <interpolation>
 	            <entry>
 	                <ind>0</ind>
@@ -2534,7 +2534,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhsp1</object-name>
-  <property>/sim/multiplay/generic/float[12]</property>
+  <property>sim/multiplay/generic/float[12]</property>
 	        <interpolation>
 	            <entry>
 	                <ind>0</ind>
@@ -2572,7 +2572,7 @@
      <object-name>cockpit</object-name>
 	 <object-name>operatorRoom</object-name>
 	 <object-name>operationPanel</object-name>
-     <property>/b707/shake-effect/shaking</property>
+     <property>b707/shake-effect/shaking</property>
      <axis>
    		<x1-m>  0</x1-m>
    		<y1-m>  0</y1-m>

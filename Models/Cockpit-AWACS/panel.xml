@@ -194,7 +194,7 @@
   <type>select</type>
   <object-name>EICAS-CFM</object-name>
   <condition>
-	<not><property>/sim/engine-type/IAE</property></not>
+	<not><property>sim/engine-type/IAE</property></not>
   </condition>
 </animation-->
 
@@ -212,7 +212,7 @@
   <type>select</type>
   <object-name>EAD-IAE</object-name>
   <condition>
-	<property>/sim/engine-type/IAE</property>
+	<property>sim/engine-type/IAE</property>
   </condition>
 </animation-->
 

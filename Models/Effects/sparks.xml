@@ -38,7 +38,7 @@
 		</shooter>
 		<counter>
 			<particles-per-sec>
-				<property>/velocities/groundspeed-kt</property>
+				<property>velocities/groundspeed-kt</property>
 				<!--factor>0.80</factor-->
 				<spread>25</spread>
 			</particles-per-sec>

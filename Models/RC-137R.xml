@@ -447,7 +447,7 @@
 	<animation>
       <type>rotate</type>
       <object-name>NewDoor</object-name>
-      <property>/instrumentation/doors/nose/position-norm</property>
+      <property>instrumentation/doors/nose/position-norm</property>
       <factor>90</factor>
       <axis>
           <x1-m>-16.0995</x1-m>
@@ -476,7 +476,7 @@
 <animation>
       <type>translate</type>
 	  <object-name>Ladder</object-name>
-      <property>/instrumentation/doors/nose/position-norm</property>
+      <property>instrumentation/doors/nose/position-norm</property>
       <interpolation>
        <entry>
           <ind>0.0</ind>
@@ -592,7 +592,7 @@
 			<and>
 				<property>sim/multiplay/generic/int[19]</property>
 				<less-than>
-						<property>/velocities/vertical-speed-fps</property>
+						<property>velocities/vertical-speed-fps</property>
 						<value>0.1</value>
 				</less-than>
 			</and>
@@ -1381,7 +1381,7 @@
 	 <animation>
 		<type>rotate</type>
 		<object-name>LeftGearBase</object-name>		
-		<property>/sim/multiplay/generic/float[10]</property>
+		<property>sim/multiplay/generic/float[10]</property>
 		<factor>-1</factor>
 		<center>
 		    <x-m>1.82</x-m>
@@ -1975,7 +1975,7 @@
  <animation>
   <type>rotate</type>
   <object-name>lhsp1</object-name>
-  <property>/sim/multiplay/generic/float[12]</property>
+  <property>sim/multiplay/generic/float[12]</property>
 	        <interpolation>
 	            <entry>
 	                <ind>0</ind>
@@ -2032,7 +2032,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhsp1</object-name>
-  <property>/sim/multiplay/generic/float[12]</property>
+  <property>sim/multiplay/generic/float[12]</property>
 	        <interpolation>
 	            <entry>
 	                <ind>0</ind>
@@ -2069,7 +2069,7 @@
      <type>translate</type>
      <object-name>cockpit</object-name>
 	 <object-name>radioRoom</object-name>
-     <property>/b707/shake-effect/shaking</property>
+     <property>b707/shake-effect/shaking</property>
      <axis>
    		<x1-m>  0</x1-m>
    		<y1-m>  0</y1-m>

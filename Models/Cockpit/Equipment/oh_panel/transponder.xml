@@ -17,7 +17,7 @@
 		<object-name>knob4</object-name>
 		<object-name>turn</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -34,7 +34,7 @@
 			<object-name>digit3</object-name>
 			<object-name>digit4</object-name>
 		<condition>			
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -51,8 +51,8 @@
 			<object-name>digit3</object-name>
 			<object-name>digit4</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/overhead-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/overhead-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -67,7 +67,7 @@
 <animation>
     <type>textranslate</type>
 		<object-name>digit1</object-name>
-		<property>/instrumentation/transponder/inputs/digit[0]</property>
+		<property>instrumentation/transponder/inputs/digit[0]</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -79,7 +79,7 @@
 <animation>
     <type>textranslate</type>
 		<object-name>digit2</object-name>
-		<property>/instrumentation/transponder/inputs/digit[1]</property>
+		<property>instrumentation/transponder/inputs/digit[1]</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -91,7 +91,7 @@
 <animation>
     <type>textranslate</type>
 		<object-name>digit3</object-name>
-		<property>/instrumentation/transponder/inputs/digit[2]</property>
+		<property>instrumentation/transponder/inputs/digit[2]</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -103,7 +103,7 @@
 <animation>
     <type>textranslate</type>
 		<object-name>digit4</object-name>
-		<property>/instrumentation/transponder/inputs/digit[3]</property>
+		<property>instrumentation/transponder/inputs/digit[3]</property>
     <factor>0.1</factor>
     <step>1</step>
     <axis>
@@ -118,7 +118,7 @@
 <animation>
   <type>rotate</type>
   <object-name>knob1</object-name>
-  <property>/instrumentation/transponder/inputs/digit[0]</property>
+  <property>instrumentation/transponder/inputs/digit[0]</property>
 	<factor>280</factor>
   <center>
     <x-m> 0</x-m>
@@ -139,7 +139,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[0]</property>
+      <property>instrumentation/transponder/inputs/digit[0]</property>
       <step>1</step>
       <min>0</min>
       <max>7</max>
@@ -147,7 +147,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -155,7 +155,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[0]</property>
+      <property>instrumentation/transponder/inputs/digit[0]</property>
       <step>-1</step>
       <min>0</min>
       <max>7</max>
@@ -163,7 +163,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -171,7 +171,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[0]</property>
+      <property>instrumentation/transponder/inputs/digit[0]</property>
       <step>1</step>
       <min>0</min>
       <max>7</max>
@@ -179,7 +179,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -187,7 +187,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[0]</property>
+      <property>instrumentation/transponder/inputs/digit[0]</property>
       <step>-1</step>
       <min>0</min>
       <max>7</max>
@@ -195,7 +195,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
 </animation>
@@ -203,7 +203,7 @@
 <animation>
   <type>rotate</type>
   <object-name>knob2</object-name>
-  <property>/instrumentation/transponder/inputs/digit[1]</property>
+  <property>instrumentation/transponder/inputs/digit[1]</property>
 	<factor>280</factor>
   <center>
     <x-m> 0</x-m>
@@ -224,7 +224,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[1]</property>
+      <property>instrumentation/transponder/inputs/digit[1]</property>
       <step>1</step>
       <min>0</min>
       <max>7</max>
@@ -232,7 +232,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -240,7 +240,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[1]</property>
+      <property>instrumentation/transponder/inputs/digit[1]</property>
       <step>-1</step>
       <min>0</min>
       <max>7</max>
@@ -248,7 +248,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -256,7 +256,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[1]</property>
+      <property>instrumentation/transponder/inputs/digit[1]</property>
       <step>1</step>
       <min>0</min>
       <max>7</max>
@@ -264,7 +264,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -272,7 +272,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[1]</property>
+      <property>instrumentation/transponder/inputs/digit[1]</property>
       <step>-1</step>
       <min>0</min>
       <max>7</max>
@@ -280,7 +280,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
 </animation>
@@ -288,7 +288,7 @@
 <animation>
   <type>rotate</type>
   <object-name>knob3</object-name>
-  <property>/instrumentation/transponder/inputs/digit[2]</property>
+  <property>instrumentation/transponder/inputs/digit[2]</property>
 	<factor>280</factor>
   <center>
     <x-m> 0</x-m>
@@ -309,7 +309,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[2]</property>
+      <property>instrumentation/transponder/inputs/digit[2]</property>
       <step>1</step>
       <min>0</min>
       <max>7</max>
@@ -317,7 +317,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -325,7 +325,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[2]</property>
+      <property>instrumentation/transponder/inputs/digit[2]</property>
       <step>-1</step>
       <min>0</min>
       <max>7</max>
@@ -333,7 +333,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -341,7 +341,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[2]</property>
+      <property>instrumentation/transponder/inputs/digit[2]</property>
       <step>1</step>
       <min>0</min>
       <max>7</max>
@@ -349,7 +349,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -357,7 +357,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[2]</property>
+      <property>instrumentation/transponder/inputs/digit[2]</property>
       <step>-1</step>
       <min>0</min>
       <max>7</max>
@@ -365,7 +365,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
 </animation>
@@ -373,7 +373,7 @@
 <animation>
   <type>rotate</type>
   <object-name>knob4</object-name>
-  <property>/instrumentation/transponder/inputs/digit[3]</property>
+  <property>instrumentation/transponder/inputs/digit[3]</property>
 	<factor>280</factor>
   <center>
     <x-m> 0</x-m>
@@ -394,7 +394,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[3]</property>
+      <property>instrumentation/transponder/inputs/digit[3]</property>
       <step>1</step>
       <min>0</min>
       <max>7</max>
@@ -402,7 +402,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -410,7 +410,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[3]</property>
+      <property>instrumentation/transponder/inputs/digit[3]</property>
       <step>-1</step>
       <min>0</min>
       <max>7</max>
@@ -418,7 +418,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -426,7 +426,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[3]</property>
+      <property>instrumentation/transponder/inputs/digit[3]</property>
       <step>1</step>
       <min>0</min>
       <max>7</max>
@@ -434,7 +434,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -442,7 +442,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/digit[3]</property>
+      <property>instrumentation/transponder/inputs/digit[3]</property>
       <step>-1</step>
       <min>0</min>
       <max>7</max>
@@ -450,7 +450,7 @@
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
 </animation>
@@ -459,7 +459,7 @@
 <animation>
   <type>rotate</type>
   <object-name>turn</object-name>
-  <property>/instrumentation/transponder/inputs/knob-mode</property>
+  <property>instrumentation/transponder/inputs/knob-mode</property>
 	<interpolation>
 	  <entry><ind> 0</ind><dep>   0</dep></entry>
 	  <entry><ind> 1</ind><dep> -45</dep></entry>
@@ -487,7 +487,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/knob-mode</property>
+      <property>instrumentation/transponder/inputs/knob-mode</property>
       <step>1</step>
       <min>0</min>
       <max>6</max>
@@ -495,12 +495,12 @@
     </binding>	
     <binding>
       <command>property-assign</command>
-      <property>/instrumentation/transponder/inputs/ident-btn</property>
+      <property>instrumentation/transponder/inputs/ident-btn</property>
       <value>1</value>
     </binding>					
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -508,7 +508,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/knob-mode</property>
+      <property>instrumentation/transponder/inputs/knob-mode</property>
       <step>-1</step>
       <min>0</min>
       <max>6</max>
@@ -516,12 +516,12 @@
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>/instrumentation/transponder/inputs/ident-btn</property>
+      <property>instrumentation/transponder/inputs/ident-btn</property>
       <value>1</value>
     </binding>				
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -529,7 +529,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/knob-mode</property>
+      <property>instrumentation/transponder/inputs/knob-mode</property>
       <step>1</step>
       <min>0</min>
       <max>6</max>
@@ -537,12 +537,12 @@
     </binding>	
     <binding>
       <command>property-assign</command>
-      <property>/instrumentation/transponder/inputs/ident-btn</property>
+      <property>instrumentation/transponder/inputs/ident-btn</property>
       <value>1</value>
     </binding>			
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
   <action>
@@ -550,7 +550,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/instrumentation/transponder/inputs/knob-mode</property>
+      <property>instrumentation/transponder/inputs/knob-mode</property>
       <step>-1</step>
       <min>0</min>
       <max>6</max>
@@ -558,12 +558,12 @@
     </binding>	
     <binding>
       <command>property-assign</command>
-      <property>/instrumentation/transponder/inputs/ident-btn</property>
+      <property>instrumentation/transponder/inputs/ident-btn</property>
       <value>1</value>
     </binding>			
     <binding>
 			<command>property-toggle</command>
-			<property>/sim/sound/switch3</property>
+			<property>sim/sound/switch3</property>
 		</binding>
   </action>
 </animation>

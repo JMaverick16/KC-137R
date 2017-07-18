@@ -19,7 +19,7 @@
 		<object-name>turn</object-name>
 		<object-name>turn.001</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -44,7 +44,7 @@
 		<object-name>bezel</object-name>
 		<object-name>bezel.001</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -65,7 +65,7 @@
 		<object-name>sup</object-name>
 		<object-name>sup.001</object-name>
 		<condition>			
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -86,8 +86,8 @@
 		<object-name>sup</object-name>
 		<object-name>sup.001</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/overhead-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/overhead-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -125,29 +125,29 @@
 		<object-name>LampGreenON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 				<and>
 					<equals>
-					<property>/b707/anti-ice/valve-selector</property>
+					<property>b707/anti-ice/valve-selector</property>
 					<value>1</value>
 					</equals>
-					<property>/b707/anti-ice/engine-inlet[0]</property>
+					<property>b707/anti-ice/engine-inlet[0]</property>
 				</and>
 				<and>
 					<equals>
-					<property>/b707/anti-ice/valve-selector</property>
+					<property>b707/anti-ice/valve-selector</property>
 					<value>2</value>
 					</equals>
-					<property>/b707/anti-ice/engine-inlet[0]</property>
+					<property>b707/anti-ice/engine-inlet[0]</property>
 				</and>				
 				<equals>
-					<property>/b707/anti-ice/switch</property>
+					<property>b707/anti-ice/switch</property>
 					<value>1</value>
 				</equals>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -157,29 +157,29 @@
 		<object-name>LampGreenON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 				<and>
 					<equals>
-					<property>/b707/anti-ice/valve-selector</property>
+					<property>b707/anti-ice/valve-selector</property>
 					<value>1</value>
 					</equals>
-					<property>/b707/anti-ice/engine-inlet[1]</property>
+					<property>b707/anti-ice/engine-inlet[1]</property>
 				</and>
 				<and>
 					<equals>
-					<property>/b707/anti-ice/valve-selector</property>
+					<property>b707/anti-ice/valve-selector</property>
 					<value>2</value>
 					</equals>
-					<property>/b707/anti-ice/engine-inlet[1]</property>
+					<property>b707/anti-ice/engine-inlet[1]</property>
 				</and>				
 				<equals>
-					<property>/b707/anti-ice/switch</property>
+					<property>b707/anti-ice/switch</property>
 					<value>1</value>
 				</equals>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -189,29 +189,29 @@
 		<object-name>LampGreenON.002</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 				<and>
 					<equals>
-					<property>/b707/anti-ice/valve-selector</property>
+					<property>b707/anti-ice/valve-selector</property>
 					<value>3</value>
 					</equals>
-					<property>/b707/anti-ice/engine-inlet[2]</property>
+					<property>b707/anti-ice/engine-inlet[2]</property>
 				</and>
 				<and>
 					<equals>
-					<property>/b707/anti-ice/valve-selector</property>
+					<property>b707/anti-ice/valve-selector</property>
 					<value>2</value>
 					</equals>
-					<property>/b707/anti-ice/engine-inlet[2]</property>
+					<property>b707/anti-ice/engine-inlet[2]</property>
 				</and>				
 				<equals>
-					<property>/b707/anti-ice/switch</property>
+					<property>b707/anti-ice/switch</property>
 					<value>1</value>
 				</equals>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -221,29 +221,29 @@
 		<object-name>LampGreenON.003</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 				<and>
 					<equals>
-					<property>/b707/anti-ice/valve-selector</property>
+					<property>b707/anti-ice/valve-selector</property>
 					<value>3</value>
 					</equals>
-					<property>/b707/anti-ice/engine-inlet[3]</property>
+					<property>b707/anti-ice/engine-inlet[3]</property>
 				</and>
 				<and>
 					<equals>
-					<property>/b707/anti-ice/valve-selector</property>
+					<property>b707/anti-ice/valve-selector</property>
 					<value>2</value>
 					</equals>
-					<property>/b707/anti-ice/engine-inlet[3]</property>
+					<property>b707/anti-ice/engine-inlet[3]</property>
 				</and>				
 				<equals>
-					<property>/b707/anti-ice/switch</property>
+					<property>b707/anti-ice/switch</property>
 					<value>1</value>
 				</equals>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -253,26 +253,26 @@
 		<object-name>LampAmberON.004</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-				<property>/controls/engines/engine[0]/fire</property>
-				<property>/controls/engines/engine[1]/fire</property>
-				<property>/controls/engines/engine[2]/fire</property>
-				<property>/controls/engines/engine[3]/fire</property>
+				<property>controls/engines/engine[0]/fire</property>
+				<property>controls/engines/engine[1]/fire</property>
+				<property>controls/engines/engine[2]/fire</property>
+				<property>controls/engines/engine[3]/fire</property>
 				<equals>
-					<property>/b707/anti-ice/switch</property>
+					<property>b707/anti-ice/switch</property>
 					<value>1</value>
 				</equals>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		    <and>
 					<equals>
-						<property>/b707/anti-ice/switch</property>
+						<property>b707/anti-ice/switch</property>
 						<value>2</value>
 					</equals>		    
 					<greater-than>
-						<property>/b707/anti-ice/total-air-temperature</property>
+						<property>b707/anti-ice/total-air-temperature</property>
 						<value>0</value>
 					</greater-than>		    
 		    </and>
@@ -286,7 +286,7 @@
 		<object-name>needle</object-name>
 		<object-name>needle.001</object-name>
 		<condition>		
-		  <not><property>/b707/anti-ice/duct-temp-select</property></not>
+		  <not><property>b707/anti-ice/duct-temp-select</property></not>
 		</condition>
 	</animation>
 	
@@ -295,7 +295,7 @@
 		<object-name>needleB</object-name>
 		<object-name>needleB.001</object-name>
 		<condition>		
-		  <property>/b707/anti-ice/duct-temp-select</property>
+		  <property>b707/anti-ice/duct-temp-select</property>
 		</condition>
 	</animation>
 	
@@ -304,11 +304,11 @@
 		<object-name>needle</object-name>		
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
-		<property>/b707/anti-ice/temp-out-l</property>
+		<property>b707/anti-ice/temp-out-l</property>
 		<interpolation>
 		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>  250.0</ind><dep> 225.0</dep></entry>
@@ -330,11 +330,11 @@
 		<object-name>needleB</object-name>		
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
-		<property>/b707/anti-ice/temp-in-l</property>
+		<property>b707/anti-ice/temp-in-l</property>
 		<interpolation>
 		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>  250.0</ind><dep> 225.0</dep></entry>
@@ -356,11 +356,11 @@
 		<object-name>needle.001</object-name>		
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
-		<property>/b707/anti-ice/temp-out-r</property>
+		<property>b707/anti-ice/temp-out-r</property>
 		<interpolation>
 		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>  250.0</ind><dep> 225.0</dep></entry>
@@ -382,11 +382,11 @@
 		<object-name>needleB.001</object-name>		
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
-		<property>/b707/anti-ice/temp-in-r</property>
+		<property>b707/anti-ice/temp-in-r</property>
 		<interpolation>
 		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>  250.0</ind><dep> 225.0</dep></entry>
@@ -407,7 +407,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/anti-ice/switch</property>
+		  <property>b707/anti-ice/switch</property>
 		 	<interpolation>
 				<entry><ind>  1.0</ind><dep> -50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
@@ -434,17 +434,17 @@
 		    <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/anti-ice/switch</property>  
+          <property>b707/anti-ice/switch</property>  
           <value type="double">1</value>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		    <mod-up>
 		      <binding>
 		        <command>property-assign</command>
-		        <property>/b707/anti-ice/switch</property>  
+		        <property>b707/anti-ice/switch</property>  
 		        <value type="double">0</value>
 		      </binding>
 		    </mod-up>
@@ -471,7 +471,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -480,7 +480,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn.001</object-name>
-		<property>/b707/anti-ice/duct-temp-select</property>
+		<property>b707/anti-ice/duct-temp-select</property>
 		<factor>-45</factor>
 		<axis>
 		 <x>1</x>
@@ -502,11 +502,11 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/b707/anti-ice/duct-temp-select</property>
+		    <property>b707/anti-ice/duct-temp-select</property>
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>
@@ -515,7 +515,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/anti-ice/engine-inlet[0]</property>
+		  <property>b707/anti-ice/engine-inlet[0]</property>
       <factor>50</factor>
 		  <axis>
 		   <x>0</x>
@@ -539,11 +539,11 @@
 		    <repeatable>false</repeatable>
         <binding>
             <command>property-toggle</command>
-		 				<property>/b707/anti-ice/engine-inlet[0]</property>
+		 				<property>b707/anti-ice/engine-inlet[0]</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -551,7 +551,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.002</object-name>
-		  <property>/b707/anti-ice/engine-inlet[1]</property>
+		  <property>b707/anti-ice/engine-inlet[1]</property>
       <factor>50</factor>
 		  <axis>
 		   <x>0</x>
@@ -575,11 +575,11 @@
 		    <repeatable>false</repeatable>
         <binding>
             <command>property-toggle</command>
-		 				<property>/b707/anti-ice/engine-inlet[1]</property>
+		 				<property>b707/anti-ice/engine-inlet[1]</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -587,7 +587,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.003</object-name>
-		  <property>/b707/anti-ice/engine-inlet[2]</property>
+		  <property>b707/anti-ice/engine-inlet[2]</property>
       <factor>50</factor>
 		  <axis>
 		   <x>0</x>
@@ -611,11 +611,11 @@
 		    <repeatable>false</repeatable>
         <binding>
             <command>property-toggle</command>
-		 				<property>/b707/anti-ice/engine-inlet[2]</property>
+		 				<property>b707/anti-ice/engine-inlet[2]</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -623,7 +623,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.004</object-name>
-		  <property>/b707/anti-ice/engine-inlet[3]</property>
+		  <property>b707/anti-ice/engine-inlet[3]</property>
       <factor>50</factor>
 		  <axis>
 		   <x>0</x>
@@ -647,11 +647,11 @@
 		    <repeatable>false</repeatable>
         <binding>
             <command>property-toggle</command>
-		 				<property>/b707/anti-ice/engine-inlet[3]</property>
+		 				<property>b707/anti-ice/engine-inlet[3]</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -660,7 +660,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn</object-name>
-		<property>/b707/anti-ice/valve-selector</property>
+		<property>b707/anti-ice/valve-selector</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep>   0</dep></entry>
 		  <entry><ind> 1</ind><dep> -45</dep></entry>
@@ -687,7 +687,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/anti-ice/valve-selector</property>
+				<property>b707/anti-ice/valve-selector</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>4</max>
@@ -699,7 +699,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 		<action>
@@ -707,7 +707,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/anti-ice/valve-selector</property>
+				<property>b707/anti-ice/valve-selector</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>4</max>
@@ -719,7 +719,7 @@
 		  </binding>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/sim/sound/switch3</property>
+		    <property>sim/sound/switch3</property>
 		  </binding>
 		</action>
 	</animation>

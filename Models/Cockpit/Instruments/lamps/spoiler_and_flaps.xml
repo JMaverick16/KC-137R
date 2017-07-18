@@ -14,7 +14,7 @@
 	<type>material</type>
   <object-name>LampGreen</object-name>
 	<condition>
-		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 	</condition>
 	<emission>
 		<red>0.2</red>
@@ -28,8 +28,8 @@
 	<type>material</type>
   <object-name>LampGreen</object-name>
 	<condition>
-		<not><property>/sim/rendering/rembrandt/enabled</property></not>
-		<property>/systems/electrical/outputs/cabin-dim</property>
+		<not><property>sim/rendering/rembrandt/enabled</property></not>
+		<property>systems/electrical/outputs/cabin-dim</property>
 	</condition>
 	<emission>
 	  <red>0.3</red>
@@ -65,7 +65,7 @@
   <object-name>LampGreenON</object-name>
   <condition>
 		<greater-than>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>20</value>
 		</greater-than>
     <or>
@@ -73,7 +73,7 @@
       	<property>surface-positions/flap-pos-norm</property>
       	<value>0.19</value>
       </greater-than>
-      <property>/controls/test/warn-knob</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>
@@ -82,7 +82,7 @@
 	<type>material</type>
   <object-name>LampGreen2</object-name>
 	<condition>
-		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 	</condition>
 	<emission>
 		<red>0.2</red>
@@ -96,8 +96,8 @@
 	<type>material</type>
   <object-name>LampGreen2</object-name>
 	<condition>
-		<not><property>/sim/rendering/rembrandt/enabled</property></not>
-		<property>/systems/electrical/outputs/cabin-dim</property>
+		<not><property>sim/rendering/rembrandt/enabled</property></not>
+		<property>systems/electrical/outputs/cabin-dim</property>
 	</condition>
 	<emission>
 	  <red>0.3</red>
@@ -133,7 +133,7 @@
   <object-name>LampGreenON2</object-name>
   <condition>
 		<greater-than>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>20</value>
 		</greater-than>
     <or>
@@ -141,7 +141,7 @@
       	<property>surface-positions/speedbrake-pos-norm</property>
       	<value>0.19</value>
       </greater-than>
-      <property>/controls/test/warn-knob</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>

@@ -16,7 +16,7 @@
 		<object-name>switch</object-name>
 		<object-name>cover</object-name>
 		<condition>		
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -47,18 +47,18 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 			<or>
 				<and>
-					<not><property>/b707/fuel/heater[1]</property></not>
+					<not><property>b707/fuel/heater[1]</property></not>
 					<less-than>
-				  	<property>/environment/temperature-degc</property>
+				  	<property>environment/temperature-degc</property>
 				  	<value>-8</value>
 				  </less-than>
 				</and>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -67,7 +67,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover</object-name>
-    <property>/b707/fuel/heater-cover[1]</property>
+    <property>b707/fuel/heater-cover[1]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -98,11 +98,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/heater-cover[1]</property>
+		        <property>b707/fuel/heater-cover[1]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch3</property>
+		      <property>sim/sound/switch3</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -110,7 +110,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/fuel/heater[1]</property>
+		  <property>b707/fuel/heater[1]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -133,11 +133,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/heater[1]</property>
+		        <property>b707/fuel/heater[1]</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>

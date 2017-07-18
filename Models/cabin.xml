@@ -19,7 +19,7 @@
 		<object-name>ablage</object-name>
 		<object-name>theSeats</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -69,7 +69,7 @@
 			<z>0.13</z>
 		</direction>
     <dim-factor>
-      <property>/systems/electrical/outputs/cabin-dim</property>
+      <property>systems/electrical/outputs/cabin-dim</property>
       <factor>1.0</factor>
       <offset>0</offset>
       <min>0</min>
@@ -104,7 +104,7 @@
 		<object-name>LightVolume3</object-name>
 		<object-name>light_cabin</object-name>
 		<condition>
-			<property>/sim/rendering/rembrandt/enabled</property>
+			<property>sim/rendering/rembrandt/enabled</property>
 		</condition>
 	</animation>
 	

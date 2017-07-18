@@ -20,7 +20,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/IDENTline3-l</property>
+		<property>instrumentation/efb/display/IDENTline3-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -43,7 +43,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/IDENTline4-l</property>
+		<property>instrumentation/efb/display/IDENTline4-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -66,7 +66,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/IDENTline4-r</property>
+		<property>instrumentation/efb/display/IDENTline4-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -89,7 +89,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/IDENTline5-l</property>
+		<property>instrumentation/efb/display/IDENTline5-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -112,7 +112,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/IDENTline5-r</property>
+		<property>instrumentation/efb/display/IDENTline5-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -135,7 +135,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/IDENTline8-l</property>
+		<property>instrumentation/efb/display/IDENTline8-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -160,7 +160,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/DRC_l3</property>
+		<property>instrumentation/efb/display/DRC_l3</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -183,7 +183,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/DRC_l5</property>
+		<property>instrumentation/efb/display/DRC_l5</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -206,7 +206,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/DRC_r3</property>
+		<property>instrumentation/efb/display/DRC_r3</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -229,7 +229,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/DRC_r5</property>
+		<property>instrumentation/efb/display/DRC_r5</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -252,7 +252,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/DRC_l7</property>
+		<property>instrumentation/efb/display/DRC_l7</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -275,7 +275,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/DRC_r8</property>
+		<property>instrumentation/efb/display/DRC_r8</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -298,7 +298,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/DRC_r9</property>
+		<property>instrumentation/efb/display/DRC_r9</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -321,7 +321,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/DRC_r10</property>
+		<property>instrumentation/efb/display/DRC_r10</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -346,7 +346,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Input_Line</property>
+		<property>instrumentation/efb/Keyboard/Input_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -369,7 +369,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Output_Line</property>
+		<property>instrumentation/efb/Keyboard/Output_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -394,7 +394,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Input_Line2</property>
+		<property>instrumentation/efb/Keyboard/Input_Line2</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -417,7 +417,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Output_Line2</property>
+		<property>instrumentation/efb/Keyboard/Output_Line2</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -442,7 +442,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Input_Line3</property>
+		<property>instrumentation/efb/Keyboard/Input_Line3</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -465,7 +465,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Output_Line3</property>
+		<property>instrumentation/efb/Keyboard/Output_Line3</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -490,7 +490,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Current_DT_Line</property>
+		<property>instrumentation/efb/Keyboard/Current_DT_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -513,7 +513,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Input_HH_Line</property>
+		<property>instrumentation/efb/Keyboard/Input_HH_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -536,7 +536,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Input_MM_Line</property>
+		<property>instrumentation/efb/Keyboard/Input_MM_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -559,7 +559,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Input_Zulu_Line</property>
+		<property>instrumentation/efb/Keyboard/Input_Zulu_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -582,7 +582,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Converted_ID_Line</property>
+		<property>instrumentation/efb/Keyboard/Converted_ID_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -605,7 +605,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Converted_Name_Line</property>
+		<property>instrumentation/efb/Keyboard/Converted_Name_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -628,7 +628,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/Output_TMZ_Line</property>
+		<property>instrumentation/efb/Keyboard/Output_TMZ_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -653,7 +653,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/CHART_Input_Line</property>
+		<property>instrumentation/efb/Keyboard/CHART_Input_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -676,7 +676,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/Keyboard/CHART_Output_Line</property>
+		<property>instrumentation/efb/Keyboard/CHART_Output_Line</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -699,7 +699,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineAPT_LOCATION</property>
+		<property>instrumentation/efb/display/lineAPT_LOCATION</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -722,7 +722,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineAPT_NAME</property>
+		<property>instrumentation/efb/display/lineAPT_NAME</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -745,7 +745,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineSTAR</property>
+		<property>instrumentation/efb/display/lineSTAR</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -768,7 +768,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineIAP</property>
+		<property>instrumentation/efb/display/lineIAP</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -791,7 +791,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineSID</property>
+		<property>instrumentation/efb/display/lineSID</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -814,7 +814,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineAPT</property>
+		<property>instrumentation/efb/display/lineAPT</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -837,7 +837,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineAPT_PAGESHOW</property>
+		<property>instrumentation/efb/display/lineAPT_PAGESHOW</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -860,7 +860,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineCHART1-r</property>
+		<property>instrumentation/efb/display/lineCHART1-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -883,7 +883,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineCHART2-r</property>
+		<property>instrumentation/efb/display/lineCHART2-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -906,7 +906,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/lineCHART3-r</property>
+		<property>instrumentation/efb/display/lineCHART3-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -931,7 +931,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/INITline4-l</property>
+		<property>instrumentation/efb/display/INITline4-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -954,7 +954,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/INITline5-l</property>
+		<property>instrumentation/efb/display/INITline5-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -979,7 +979,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line0-l</property>
+		<property>instrumentation/efb/display/line0-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1002,7 +1002,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line1-l</property>
+		<property>instrumentation/efb/display/line1-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1025,7 +1025,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line2-l</property>
+		<property>instrumentation/efb/display/line2-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1048,7 +1048,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line3-l</property>
+		<property>instrumentation/efb/display/line3-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1071,7 +1071,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line4-l</property>
+		<property>instrumentation/efb/display/line4-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1094,7 +1094,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line5-l</property>
+		<property>instrumentation/efb/display/line5-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1117,7 +1117,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line6-l</property>
+		<property>instrumentation/efb/display/line6-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1140,7 +1140,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line7-l</property>
+		<property>instrumentation/efb/display/line7-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1163,7 +1163,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line8-l</property>
+		<property>instrumentation/efb/display/line8-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1186,7 +1186,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line9-l</property>
+		<property>instrumentation/efb/display/line9-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1209,7 +1209,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line10-l</property>
+		<property>instrumentation/efb/display/line10-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1232,7 +1232,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line11-l</property>
+		<property>instrumentation/efb/display/line11-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1256,7 +1256,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line12-l</property>
+		<property>instrumentation/efb/display/line12-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1279,7 +1279,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line13-l</property>
+		<property>instrumentation/efb/display/line13-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1302,7 +1302,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line14-l</property>
+		<property>instrumentation/efb/display/line14-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1325,7 +1325,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line15-l</property>
+		<property>instrumentation/efb/display/line15-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1348,7 +1348,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line16-l</property>
+		<property>instrumentation/efb/display/line16-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1371,7 +1371,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line17-l</property>
+		<property>instrumentation/efb/display/line17-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1394,7 +1394,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line18-l</property>
+		<property>instrumentation/efb/display/line18-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1417,7 +1417,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line19-l</property>
+		<property>instrumentation/efb/display/line19-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1440,7 +1440,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line20-l</property>
+		<property>instrumentation/efb/display/line20-l</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1466,7 +1466,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line1-r</property>
+		<property>instrumentation/efb/display/line1-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1489,7 +1489,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line2-r</property>
+		<property>instrumentation/efb/display/line2-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1512,7 +1512,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line3-r</property>
+		<property>instrumentation/efb/display/line3-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1535,7 +1535,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line4-r</property>
+		<property>instrumentation/efb/display/line4-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1558,7 +1558,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line5-r</property>
+		<property>instrumentation/efb/display/line5-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1581,7 +1581,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line6-r</property>
+		<property>instrumentation/efb/display/line6-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1604,7 +1604,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line7-r</property>
+		<property>instrumentation/efb/display/line7-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1627,7 +1627,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line8-r</property>
+		<property>instrumentation/efb/display/line8-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1650,7 +1650,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line9-r</property>
+		<property>instrumentation/efb/display/line9-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1673,7 +1673,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line10-r</property>
+		<property>instrumentation/efb/display/line10-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1696,7 +1696,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line11-r</property>
+		<property>instrumentation/efb/display/line11-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1719,7 +1719,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line12-r</property>
+		<property>instrumentation/efb/display/line12-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1742,7 +1742,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line13-r</property>
+		<property>instrumentation/efb/display/line13-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1764,7 +1764,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line14-r</property>
+		<property>instrumentation/efb/display/line14-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1787,7 +1787,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line15-r</property>
+		<property>instrumentation/efb/display/line15-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1810,7 +1810,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line16-r</property>
+		<property>instrumentation/efb/display/line16-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1833,7 +1833,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line17-r</property>
+		<property>instrumentation/efb/display/line17-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1856,7 +1856,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line18-r</property>
+		<property>instrumentation/efb/display/line18-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1879,7 +1879,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line19-r</property>
+		<property>instrumentation/efb/display/line19-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -1902,7 +1902,7 @@ APR 2014
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/line20-r</property>
+		<property>instrumentation/efb/display/line20-r</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>

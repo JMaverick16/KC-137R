@@ -129,7 +129,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
                 <value>0</value>
              </greater-than>
              <greater-than>
-                <property>/sim/time/sun-angle-rad</property>
+                <property>sim/time/sun-angle-rad</property>
                 <value>1.70</value>
              </greater-than>
         </condition>
@@ -167,7 +167,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_Chart_Type</property>
+                <property>instrumentation/efb/VK_Chart_Type</property>
 				<value>STAR</value>
             </binding>
         </action>
@@ -180,7 +180,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_Chart_Type</property>
+                <property>instrumentation/efb/VK_Chart_Type</property>
 				<value>IAP</value>
             </binding>
         </action>
@@ -193,7 +193,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_Chart_Type</property>
+                <property>instrumentation/efb/VK_Chart_Type</property>
 				<value>SID</value>
             </binding>
         </action>
@@ -206,7 +206,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_Chart_Type</property>
+                <property>instrumentation/efb/VK_Chart_Type</property>
 				<value>APT</value>
             </binding>
         </action>
@@ -221,7 +221,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_IN_Marker</property>
+                <property>instrumentation/efb/VK_IN_Marker</property>
 				<value>1</value>
 		    </binding>
         </action>
@@ -234,7 +234,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_IN_Marker</property>
+                <property>instrumentation/efb/VK_IN_Marker</property>
 				<value>2</value>
             </binding>
         </action>
@@ -247,7 +247,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_IN_Marker</property>
+                <property>instrumentation/efb/VK_IN_Marker</property>
 				<value>3</value>
             </binding>
         </action>
@@ -260,7 +260,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_IN_Marker</property>
+                <property>instrumentation/efb/VK_IN_Marker</property>
 				<value>4</value>
             </binding>
         </action>
@@ -273,7 +273,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_IN_Marker</property>
+                <property>instrumentation/efb/VK_IN_Marker</property>
 				<value>5</value>
             </binding>
         </action>
@@ -286,7 +286,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_OUT_Marker</property>
+                <property>instrumentation/efb/VK_OUT_Marker</property>
 				<value>1</value>
             </binding>
         </action>
@@ -299,7 +299,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_OUT_Marker</property>
+                <property>instrumentation/efb/VK_OUT_Marker</property>
 				<value>2</value>
             </binding>
         </action>
@@ -312,7 +312,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_OUT_Marker</property>
+                <property>instrumentation/efb/VK_OUT_Marker</property>
 				<value>3</value>
             </binding>
         </action>
@@ -325,7 +325,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_OUT_Marker</property>
+                <property>instrumentation/efb/VK_OUT_Marker</property>
 				<value>4</value>				
             </binding>
         </action>
@@ -338,7 +338,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/VK_OUT_Marker</property>
+                <property>instrumentation/efb/VK_OUT_Marker</property>
 				<value>5</value>
             </binding>
         </action>
@@ -350,7 +350,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
           <name>Move-IN_Marker</name>
           <type>translate</type>
           <object-name>IN_Marker</object-name>
-          <property>/instrumentation/efb/VK_IN_Marker</property>
+          <property>instrumentation/efb/VK_IN_Marker</property>
           <interpolation>
              <entry><ind>1</ind><dep>0.0</dep></entry>
              <entry><ind>2</ind><dep>-0.0122</dep></entry>
@@ -369,7 +369,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
           <name>Move-OUT_Marker</name>
           <type>translate</type>
           <object-name>OUT_Marker</object-name>
-          <property>/instrumentation/efb/VK_OUT_Marker</property>
+          <property>instrumentation/efb/VK_OUT_Marker</property>
           <interpolation>
              <entry><ind>1</ind><dep>0.0</dep></entry>
              <entry><ind>2</ind><dep>-0.0122</dep></entry>
@@ -391,7 +391,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
           <name>Move_DRC_MarkerL</name>
           <type>translate</type>
           <object-name>DRC_MarkerL</object-name>
-          <property>/instrumentation/efb/VK_DRC_MarkerL</property>
+          <property>instrumentation/efb/VK_DRC_MarkerL</property>
           <interpolation>
              <entry><ind>1</ind><dep>0.0</dep></entry>
              <entry><ind>2</ind><dep>-0.0246</dep></entry>
@@ -408,7 +408,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
           <name>Move_DRC_MarkerR</name>
           <type>translate</type>
           <object-name>DRC_MarkerR</object-name>
-          <property>/instrumentation/efb/VK_DRC_MarkerR</property>
+          <property>instrumentation/efb/VK_DRC_MarkerR</property>
           <interpolation>
              <entry><ind>1</ind><dep>0.0</dep></entry>
              <entry><ind>2</ind><dep>-0.0246</dep></entry>
@@ -428,75 +428,75 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<condition>
 			<or>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>MENU</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>VIDEO</value>
 				</equals>	
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>DOCUMENTS</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>PERFORMANCE</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>IDENT</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>SYSTEMS</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>CHECKLISTS</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>INITIALIZE</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_SPD</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_LNG</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_WGT</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_TMP</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_VLM</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_TMZ</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_DESC_RATE</value>
 				</equals>				
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>APT INFO</value>
 				</equals>				
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>MONITOR</value>
 				</equals>				
 			</or>
@@ -508,7 +508,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Full_Keyboard</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>CHARTS_KEYBOARD</value>
 			</equals>
 		</condition>
@@ -520,31 +520,31 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<condition>
 			<or>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_SPD</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_LNG</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_WGT</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_TMP</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_VLM</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_CNV_TMZ</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/efb/page</property>
+					<property>instrumentation/efb/page</property>
 					<value>UTILITIES_DESC_RATE</value>
 				</equals>				
 			</or>
@@ -556,7 +556,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Display_Keyboard</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>CHARTS_KEYBOARD</value>
 			</equals>
 		</condition>
@@ -567,7 +567,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>K_MSG</object-name>		
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>UTILITIES_DESC_RATE</value>
 			</equals>
 		</condition>
@@ -578,7 +578,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>DRC_MarkerL</object-name>		
 		<condition>
 			<greater-than>
-				<property>/instrumentation/efb/VK_DRC_MarkerL</property>
+				<property>instrumentation/efb/VK_DRC_MarkerL</property>
 				<value>0</value>
 			</greater-than>
 		</condition>
@@ -589,7 +589,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>DRC_MarkerR</object-name>		
 		<condition>
 			<greater-than>
-				<property>/instrumentation/efb/VK_DRC_MarkerR</property>
+				<property>instrumentation/efb/VK_DRC_MarkerR</property>
 				<value>0</value>
 			</greater-than>
 		</condition>
@@ -602,7 +602,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Chart_SEL_3</object-name>		
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/chart/Status</property>
+				<property>instrumentation/efb/chart/Status</property>
 				<value>ON</value>
 			</equals>
 		</condition>
@@ -615,7 +615,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Display_Ovlay_1</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>CHARTS</value>
 			</equals>
 		</condition>
@@ -626,7 +626,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Chart_2</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/chart/zoom-in</property>
+				<property>instrumentation/efb/chart/zoom-in</property>
 				<value>2</value>
 			</equals>
 		</condition>
@@ -637,7 +637,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Chart_4</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/chart/zoom-in</property>
+				<property>instrumentation/efb/chart/zoom-in</property>
 				<value>4</value>
 			</equals>
 		</condition>
@@ -651,7 +651,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Charts_APT</object-name>		
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/chart/Status</property>
+				<property>instrumentation/efb/chart/Status</property>
 				<value>ON</value>
 			</equals>
 		</condition>
@@ -665,23 +665,23 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<condition>
 		<or>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>UTILITIES_CNV_SPD</value>
 			</equals>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>UTILITIES_CNV_LNG</value>
 			</equals>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>UTILITIES_CNV_WGT</value>
 			</equals>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>UTILITIES_CNV_TMP</value>
 			</equals>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>UTILITIES_CNV_VLM</value>
 			</equals>
 -->		</or>			
@@ -702,7 +702,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/page</property>
+		<property>instrumentation/efb/page</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -726,7 +726,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/efb/display/input-helper</property>
+		<property>instrumentation/efb/display/input-helper</property>
   <truncate type="bool">false</truncate>
   <font type="string">Helvetica.txf</font>
   <draw-text type="bool">true</draw-text>
@@ -746,7 +746,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Chart_1</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/chart/rotation</property>
+				<property>instrumentation/efb/chart/rotation</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -757,7 +757,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>Chart_1_Rot</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/chart/rotation</property>
+				<property>instrumentation/efb/chart/rotation</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -770,7 +770,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>ProcManual</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>NORM PROC MANUAL</value>
 			</equals>
 		</condition>
@@ -816,7 +816,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 	<animation>
 	  <type>textranslate</type>
 	  <object-name>ProcManual</object-name>
-		<property>/instrumentation/efb/manual-page</property>
+		<property>instrumentation/efb/manual-page</property>
 		<factor>1</factor>
 		<axis>
 		 <x>0</x>
@@ -833,7 +833,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>airportmarker</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>GPS POSITION</value>
 			</equals>
 		</condition>
@@ -845,7 +845,7 @@ Modified by Joshua Davidson and J Maverick 16 for KC-137R Project :)
 		<object-name>marker</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/efb/page</property>
+				<property>instrumentation/efb/page</property>
 				<value>FLIGHT POSITION</value>
 			</equals>
 		</condition>

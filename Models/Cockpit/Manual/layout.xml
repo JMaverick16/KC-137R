@@ -8,7 +8,7 @@
 <PropertyList>
 
  <params>
-  <property type="string">/b707/manual/page</property>
+  <property type="string">b707/manual/page</property>
   <factor type="double">1.0</factor>
   <offset type="double">0.0</offset>
   <format type="string">%2.1f</format>

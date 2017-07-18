@@ -35,7 +35,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>FuelT1</object-name>
-  <property>/consumables/fuel/total-fuel-lbs</property>
+  <property>consumables/fuel/total-fuel-lbs</property>
   <factor>0.00001</factor>
   <step>10000</step>
   <axis>
@@ -47,7 +47,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>FuelT2</object-name>
-  <property>/consumables/fuel/total-fuel-lbs</property>
+  <property>consumables/fuel/total-fuel-lbs</property>
   <factor>0.0001</factor>
   <step>1000</step>
   <axis>
@@ -59,7 +59,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>FuelT3</object-name>
-  <property>/consumables/fuel/total-fuel-lbs</property>
+  <property>consumables/fuel/total-fuel-lbs</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -71,7 +71,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>FuelT4</object-name>
-  <property>/consumables/fuel/total-fuel-lbs</property>
+  <property>consumables/fuel/total-fuel-lbs</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -83,7 +83,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>FuelT5</object-name>
-  <property>/consumables/fuel/total-fuel-lbs</property>
+  <property>consumables/fuel/total-fuel-lbs</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>

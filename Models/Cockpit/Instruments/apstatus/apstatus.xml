@@ -85,7 +85,7 @@
 		<object-name>THRUST</object-name>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/thr</property>
+				<property>it-autoflight/mode/thr</property>
 				<value>THRUST</value>
 			</equals>
 		</condition>
@@ -95,7 +95,7 @@
 		<object-name>TPITCH</object-name>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/thr</property>
+				<property>it-autoflight/mode/thr</property>
 				<value> PITCH</value>
 			</equals>
 		</condition>
@@ -105,7 +105,7 @@
 		<object-name>RETARD</object-name>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/thr</property>
+				<property>it-autoflight/mode/thr</property>
 				<value>RETARD</value>
 			</equals>
 		</condition>
@@ -122,7 +122,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/fma/apstatus/autoflight-mode</property>
+		<property>fma/apstatus/autoflight-mode</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -158,7 +158,7 @@
 		<object-name>AT</object-name>
 		<condition>
 			<equals>
-				<property>/it-autoflight/output/athr</property>
+				<property>it-autoflight/output/athr</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -175,7 +175,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
         <type type="string">text-value</type>
         <format type="string">%s</format>
-		<property>/it-autoflight/mode/lat</property>
+		<property>it-autoflight/mode/lat</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -196,7 +196,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
         <type type="string">text-value</type>
         <format type="string">%s</format>
-		<property>/it-autoflight/mode/vert</property>
+		<property>it-autoflight/mode/vert</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -356,7 +356,7 @@
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/thr</property>
+				<property>it-autoflight/mode/thr</property>
 				<value> PITCH</value>
 			</equals>
 		</condition>
@@ -367,7 +367,7 @@
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/output/loc-armed</property>
+				<property>it-autoflight/output/loc-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -378,7 +378,7 @@
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/output/appr-armed</property>
+				<property>it-autoflight/output/appr-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -390,24 +390,24 @@
 		<condition>
 			<and>
 			<equals>
-				<property>/it-autoflight/output/appr-armed</property>
+				<property>it-autoflight/output/appr-armed</property>
 				<value>0</value>
 			</equals>
 			<or>
 			<equals>
-				<property>/it-autoflight/output/vert</property>
+				<property>it-autoflight/output/vert</property>
 				<value>1</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/output/vert</property>
+				<property>it-autoflight/output/vert</property>
 				<value>4</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/output/vert</property>
+				<property>it-autoflight/output/vert</property>
 				<value>5</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/output/vert</property>
+				<property>it-autoflight/output/vert</property>
 				<value>7</value>
 			</equals>
 			</or>
@@ -420,11 +420,11 @@
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/lat</property>
+				<property>it-autoflight/mode/lat</property>
 				<value>T/O</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/input/lat-arm</property>
+				<property>it-autoflight/input/lat-arm</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -434,11 +434,11 @@
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/lat</property>
+				<property>it-autoflight/mode/lat</property>
 				<value>T/O</value>
 			</equals>
 			<equals>
-				<property>/it-autoflight/input/lat-arm</property>
+				<property>it-autoflight/input/lat-arm</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -449,7 +449,7 @@
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>/it-autoflight/mode/vert</property>
+				<property>it-autoflight/mode/vert</property>
 				<value>LAND 3</value>
 			</equals>
 		</condition>

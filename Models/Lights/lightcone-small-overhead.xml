@@ -35,7 +35,7 @@
 		   <a>1.0</a>
 		 </specular>
 		 <dim-factor>
-			 <property>/systems/electrical/outputs/overhead-dim</property>
+			 <property>systems/electrical/outputs/overhead-dim</property>
 			 <factor>1</factor>
 			 <offset>0</offset>
 			 <min>0</min>

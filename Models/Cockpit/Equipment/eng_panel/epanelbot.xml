@@ -13,7 +13,7 @@
 		<object-name>panelAuxbot</object-name>
 		<object-name>panelEbot</object-name>
 		<condition>			
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>

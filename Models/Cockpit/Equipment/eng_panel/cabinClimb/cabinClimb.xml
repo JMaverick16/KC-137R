@@ -14,7 +14,7 @@
 		<type>material</type>
 		<object-name>bezel</object-name>
 		<condition>		
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -31,7 +31,7 @@
 		<object-name>rateAngle</object-name>
 		<object-name>manualAngle</object-name>	
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -48,8 +48,8 @@
 		<object-name>rateAngle</object-name>
 		<object-name>manualAngle</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/engineer-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/engineer-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -62,7 +62,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>/b707/pressurization/climb-rate</property>
+		<property>b707/pressurization/climb-rate</property>
 		<min>-1880.0</min>
 		<max>1880.0</max>
 		<scale>1.0</scale>
@@ -83,7 +83,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>rateAngle</object-name>
-		<property>/b707/pressurization/incr-decr-rate</property>
+		<property>b707/pressurization/incr-decr-rate</property>
 		<min>-1900.0</min>
 		<max>1900.0</max>
 		<scale>1.0</scale>
@@ -104,7 +104,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>manualAngle</object-name>
-		<property>/b707/pressurization/manual-control-selector</property>
+		<property>b707/pressurization/manual-control-selector</property>
 		<min>-1900.0</min>
 		<max>1900.0</max>
 		<scale>1.0</scale>

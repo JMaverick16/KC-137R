@@ -33,7 +33,7 @@
 					<value>15</value>
 				</greater-than-equals>
 				<not-equals>
-					<property>/instrumentation/tacan/powered</property>
+					<property>instrumentation/tacan/powered</property>
 					<value>1</value>
 				</not-equals>
 			</and>
@@ -51,7 +51,7 @@
 					<value>15</value>
 				</greater-than-equals>
 				<equals>
-					<property>/instrumentation/tacan/powered</property>
+					<property>instrumentation/tacan/powered</property>
 					<value>1</value>
 				</equals>
 			</and>
@@ -69,11 +69,11 @@
 				</greater-than-equals>
 				<or>
 					<equals>
-						<property>/instrumentation/tacan/in-range</property>
+						<property>instrumentation/tacan/in-range</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/instrumentation/tacan/powered</property>
+						<property>instrumentation/tacan/powered</property>
 						<value>0</value>
 					</equals>
 				</or>
@@ -92,11 +92,11 @@
 					<value>15</value>
 				</greater-than-equals>
 				<equals>
-					<property>/instrumentation/tacan/in-range</property>
+					<property>instrumentation/tacan/in-range</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/instrumentation/tacan/powered</property>
+					<property>instrumentation/tacan/powered</property>
 					<value>1</value>
 				</equals>
 			</and>
@@ -162,7 +162,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/tacan/ident</property>
+		<property>instrumentation/tacan/ident</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -234,7 +234,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>/instrumentation/tacan/indicated-distance-nm</property>
+		<property>instrumentation/tacan/indicated-distance-nm</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -282,7 +282,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">FREQ:</format>
-		<property>/instrumentation/tacan/ident</property>
+		<property>instrumentation/tacan/ident</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -306,7 +306,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">%s</format>
-		<property>/instrumentation/tacan/display/channel</property>
+		<property>instrumentation/tacan/display/channel</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -354,7 +354,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>/instrumentation/tacan/frequencies/selected-mhz</property>
+		<property>instrumentation/tacan/frequencies/selected-mhz</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>

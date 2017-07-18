@@ -14,7 +14,7 @@
 		<object-name>support</object-name>
 		<object-name>ALT.Knob</object-name>
 		<condition>		
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -31,7 +31,7 @@
 		<object-name>ALT.Needle1</object-name>
 		<object-name>ALT.Needle2</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -48,8 +48,8 @@
 		<object-name>ALT.Needle1</object-name>
 		<object-name>ALT.Needle2</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/engineer-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/engineer-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -62,7 +62,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ALT.Needle1</object-name>
-  <property>/b707/pressurization/cabin-altitude</property>
+  <property>b707/pressurization/cabin-altitude</property>
   <factor>0.36</factor>
   <axis>
     <x> 0</x>
@@ -74,7 +74,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ALT.Needle2</object-name>
-  <property>/b707/pressurization/cabin-altitude</property>
+  <property>b707/pressurization/cabin-altitude</property>
   <factor>0.036</factor>
   <axis>
     <x> 0</x>
@@ -86,7 +86,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ALT.FacePressure</object-name>
-  <property>/instrumentation/altimeter/setting-inhg</property>
+  <property>instrumentation/altimeter/setting-inhg</property>
   <interpolation>
     <entry><ind>  28.0</ind><dep> 200</dep></entry>
     <entry><ind>  29.0</ind><dep> 99.87</dep></entry>
@@ -119,7 +119,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ALT.Knob</object-name>
-  <property>/instrumentation/altimeter/setting-inhg</property>
+  <property>instrumentation/altimeter/setting-inhg</property>
   <factor>500</factor>
   <center>
     <x-m> 0.0203</x-m>
@@ -150,7 +150,7 @@
         <button>3</button>
         <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/altimeter/setting-inhg</property>
+        <property>instrumentation/altimeter/setting-inhg</property>
         <step>0.01</step>
         <min>29.0</min>
         <max>31.0</max>
@@ -161,7 +161,7 @@
         <button>4</button>
         <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/altimeter/setting-inhg</property>
+        <property>instrumentation/altimeter/setting-inhg</property>
         <step>-0.01</step>
         <min>29.0</min>
         <max>31.0</max>

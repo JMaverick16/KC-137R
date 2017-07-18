@@ -32,7 +32,7 @@
 		<object-name>jourShear.003</object-name>
 		<object-name>jourCylinder</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.04</red>

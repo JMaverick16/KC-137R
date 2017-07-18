@@ -20,7 +20,7 @@
 		<object-name>knobsup</object-name>
 		<object-name>knobsup.001</object-name>
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.4</red>
@@ -34,7 +34,7 @@
 		<type>material</type>
 		<object-name>grdSwitch</object-name>	
 		<condition>	
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -48,7 +48,7 @@
   <animation>
     <type>rotate</type>
     <object-name>grdCover</object-name>
-    <property>/b707/start/ground-start-cover</property>
+    <property>b707/start/ground-start-cover</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -79,11 +79,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/start/ground-start-cover</property>
+		        <property>b707/start/ground-start-cover</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch3</property>
+		      <property>sim/sound/switch3</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -92,7 +92,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>grdSwitch</object-name>
-		  <property>/b707/start/ground-start</property>
+		  <property>b707/start/ground-start</property>
 		 	<interpolation>
 				<entry><ind>  1.0</ind><dep> -50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
@@ -151,7 +151,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -185,7 +185,7 @@
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -194,7 +194,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob</object-name>
-      <property>/b707/rain/rain-repellent-captain</property>
+      <property>b707/rain/rain-repellent-captain</property>
       <factor>-0.0030</factor>
       <axis>
           <x> 1.0</x>
@@ -213,13 +213,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/rain/rain-repellent-captain</property>  
+          <property>b707/rain/rain-repellent-captain</property>  
           <value type="double">1</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/rain/rain-repellent-captain</property>  
+          <property>b707/rain/rain-repellent-captain</property>  
           <value type="double">0</value>
         </binding>
       </mod-up>
@@ -229,7 +229,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob.001</object-name>
-      <property>/b707/rain/rain-repellent-fo</property>
+      <property>b707/rain/rain-repellent-fo</property>
       <factor>-0.0030</factor>
       <axis>
           <x> 1.0</x>
@@ -248,13 +248,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/rain/rain-repellent-fo</property>  
+          <property>b707/rain/rain-repellent-fo</property>  
           <value type="double">1</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/rain/rain-repellent-fo</property>  
+          <property>b707/rain/rain-repellent-fo</property>  
           <value type="double">0</value>
         </binding>
       </mod-up>

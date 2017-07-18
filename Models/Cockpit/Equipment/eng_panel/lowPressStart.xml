@@ -26,7 +26,7 @@
 		<object-name>switch.004</object-name>
 		<object-name>switch.005</object-name>
 		<condition>		
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
 		</condition>
 		<emission>
 		  <red>0.2</red>
@@ -61,12 +61,12 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/equipment/blower</property></not>
-		    <property>/controls/test/warn-knob</property>
+		  	<not><property>b707/equipment/blower</property></not>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -76,12 +76,12 @@
 		<object-name>LampAmberON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/equipment/ovbd-dump</property></not>
-		    <property>/controls/test/warn-knob</property>
+		  	<not><property>b707/equipment/ovbd-dump</property></not>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -90,7 +90,7 @@
   <animation>
       <type>translate</type>
       <object-name>switch.002</object-name>
-      <property>/b707/oil/oil-test</property>
+      <property>b707/oil/oil-test</property>
       <factor>0.0028</factor>
       <axis>
           <x> 0.0</x>
@@ -114,13 +114,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/oil/oil-test</property>  
+          <property>b707/oil/oil-test</property>  
           <value>1.0</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/oil/oil-test</property>  
+          <property>b707/oil/oil-test</property>  
           <value>0.0</value>
         </binding>
       </mod-up>
@@ -131,7 +131,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/start/low-start-right</property>
+		  <property>b707/start/low-start-right</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -154,11 +154,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		  			<property>/b707/start/low-start-right</property>
+		  			<property>b707/start/low-start-right</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -167,7 +167,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/start/low-start-left</property>
+		  <property>b707/start/low-start-left</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -190,11 +190,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		  			<property>/b707/start/low-start-left</property>
+		  			<property>b707/start/low-start-left</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -203,7 +203,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.003</object-name>
-		  <property>/b707/equipment/blower</property>
+		  <property>b707/equipment/blower</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -226,11 +226,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		  			<property>/b707/equipment/blower</property>
+		  			<property>b707/equipment/blower</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -239,7 +239,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.004</object-name>
-		  <property>/b707/equipment/ovbd-dump</property>
+		  <property>b707/equipment/ovbd-dump</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -262,11 +262,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		  			13<property>/b707/equipment/ovbd-dump</property>
+		  			13<property>b707/equipment/ovbd-dump</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -275,7 +275,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.005</object-name>
-		  <property>/b707/generator/hertz-converter</property>
+		  <property>b707/generator/hertz-converter</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -298,11 +298,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		 			  <property>/b707/generator/hertz-converter</property>
+		 			  <property>b707/generator/hertz-converter</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>

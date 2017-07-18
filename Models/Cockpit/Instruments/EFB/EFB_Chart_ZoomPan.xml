@@ -9,7 +9,7 @@
   <type>texmultiple</type>
   <object-name>Chart_2</object-name>
   <transform>
-    <property>/instrumentation/efb/chart/panH</property>
+    <property>instrumentation/efb/chart/panH</property>
     <subtype>textranslate</subtype>
 		<bias>0.0001</bias>
 		<factor>0.001</factor>
@@ -20,7 +20,7 @@
    </axis>
   </transform>
   <transform>
-    <property>/instrumentation/efb/chart/panV</property>
+    <property>instrumentation/efb/chart/panV</property>
     <subtype>textranslate</subtype>
 		<bias>0.0001</bias>
 		<factor>0.001</factor>
@@ -36,7 +36,7 @@
   <type>texmultiple</type>
   <object-name>Chart_4</object-name>
   <transform>
-    <property>/instrumentation/efb/chart/panH</property>
+    <property>instrumentation/efb/chart/panH</property>
     <subtype>textranslate</subtype>
 		<bias>0.0001</bias>
 		<factor>0.001</factor>
@@ -47,7 +47,7 @@
    </axis>
   </transform>
   <transform>
-    <property>/instrumentation/efb/chart/panV</property>
+    <property>instrumentation/efb/chart/panV</property>
     <subtype>textranslate</subtype>
 		<bias>0.0001</bias>
 		<factor>0.001</factor>

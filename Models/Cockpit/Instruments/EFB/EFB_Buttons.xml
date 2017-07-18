@@ -17,7 +17,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>MENU</value>
             </binding>
 		
@@ -31,7 +31,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>PGUP</value>
             </binding>
 		
@@ -45,7 +45,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>PGDN</value>
             </binding>
 		
@@ -61,7 +61,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>l1</value>
             </binding>
 		
@@ -75,7 +75,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>l2</value>
             </binding>
 		
@@ -89,7 +89,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>l3</value>
             </binding>
 		
@@ -103,7 +103,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>l4</value>
             </binding>
 		
@@ -117,7 +117,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>l5</value>
             </binding>
 		
@@ -131,7 +131,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>l6</value>
             </binding>
 		
@@ -145,7 +145,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>l7</value>
             </binding>
 		
@@ -159,7 +159,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>l8</value>
             </binding>
 		
@@ -175,7 +175,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>r1</value>
             </binding>
 		
@@ -189,7 +189,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>r2</value>
             </binding>
 		
@@ -203,7 +203,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>r3</value>
             </binding>
 		
@@ -217,7 +217,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>r4</value>
             </binding>
 		
@@ -231,7 +231,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>r5</value>
             </binding>
 		
@@ -245,7 +245,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>r6</value>
             </binding>
 		
@@ -259,7 +259,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>r7</value>
             </binding>
 		
@@ -273,7 +273,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>r8</value>
             </binding>
 		
@@ -289,7 +289,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>Zin</value>
             </binding>
 		
@@ -303,7 +303,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>Zout</value>
             </binding>
 		
@@ -317,7 +317,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>ScrollDN</value>
             </binding>
 		
@@ -331,7 +331,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>ScrollUP</value>
             </binding>
 		
@@ -345,7 +345,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>Move_R</value>
             </binding>
 		
@@ -359,7 +359,7 @@ APR 2014
             <button>0</button>
             <binding>
                 <command>property-cycle</command>
-                <property>/instrumentation/efb/keypress</property>
+                <property>instrumentation/efb/keypress</property>
 				<value>Move_L</value>
             </binding>
 		

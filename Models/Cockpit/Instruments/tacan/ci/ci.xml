@@ -21,7 +21,7 @@
         <object-name>hdg03</object-name>
         <object-name>courseRing</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
@@ -35,7 +35,7 @@
 		<type>material</type>
 		<object-name>innerMarkerOut</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.2</red>
@@ -58,8 +58,8 @@
         <object-name>courseRing</object-name>
 		<object-name>shadow</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
@@ -73,8 +73,8 @@
 		<type>material</type>
 		<object-name>innerMarkerOut</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.3</red>
@@ -98,9 +98,9 @@
     <type>select</type>
     <object-name>innerMarkerOn</object-name>
     <condition>
-        <property>/instrumentation/tacan/in-range</property>
+        <property>instrumentation/tacan/in-range</property>
         <less-than>
-          <property>/instrumentation/tacan/indicated-distance-nm</property>
+          <property>instrumentation/tacan/indicated-distance-nm</property>
           <value>3.0</value>
         </less-than>
     </condition>
@@ -110,7 +110,7 @@
     <type>rotate</type>
     <object-name>face</object-name>
     <object-name>sym</object-name>
-    <property>/instrumentation/tacan/display/correction</property>
+    <property>instrumentation/tacan/display/correction</property>
     <factor>-1</factor>
 	<condition>
 		<and>
@@ -119,7 +119,7 @@
 				<value>15</value>
 			</greater-than-equals>
 			<equals>
-				<property>/instrumentation/tacan/powered</property>
+				<property>instrumentation/tacan/powered</property>
 				<value>1</value>
 			</equals>
 		</and>
@@ -134,7 +134,7 @@
   <animation>
       <type>rotate</type>
       <object-name>needle</object-name>
-      <property>/instrumentation/tacan/indicated-distance-nm</property>
+      <property>instrumentation/tacan/indicated-distance-nm</property>
       <factor>1</factor>
       <min-deg>-20</min-deg>
       <max-deg>20</max-deg>
@@ -153,7 +153,7 @@
 				<value>15</value>
 			</greater-than-equals>
 			<equals>
-				<property>/instrumentation/tacan/powered</property>
+				<property>instrumentation/tacan/powered</property>
 				<value>1</value>
 			</equals>
 		</and>
@@ -187,7 +187,7 @@
     <type>select</type>
     <object-name>LabelCI</object-name>
     <condition>
-        <property>/sim/panel-hotspots</property>
+        <property>sim/panel-hotspots</property>
     </condition>
   </animation>
 

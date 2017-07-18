@@ -58,7 +58,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>freq.007</object-name>
-        <property>/controls/radio/number/zero</property>
+        <property>controls/radio/number/zero</property>
         <factor>0.03320</factor>
         <axis>
             <x>0</x>

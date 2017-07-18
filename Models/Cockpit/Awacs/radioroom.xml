@@ -14,7 +14,7 @@
 			<object-name>seats</object-name>
 			<object-name>keyboard</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
 		</condition>
 		<emission>
 			<red>0.05</red>
@@ -31,8 +31,8 @@
 			<object-name>seats</object-name>
 			<object-name>keyboard</object-name>
 		<condition>
-			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<not><property>sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.3</red>
