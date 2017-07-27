@@ -223,19 +223,14 @@
       <y-m>-0.015</y-m>
       <z-m> 0.91</z-m>
   </offsets>
-</model>
+</model-->
 
-<animation>
-  <type>select</type>
-  <object-name>EICAS-CFM</object-name>
+<model>
+  <name>EAD-CFM</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EAD/EAD-CFM.xml</path>
   <condition>
 	<not><property>sim/engine-type/IAE</property></not>
   </condition>
-</animation-->
-
-<model>
-  <name>EAD-IAE</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EAD/EAD-IAE.xml</path>
   <offsets>
       <x-m>-18.918</x-m>
       <y-m>-0.015</y-m>
@@ -243,13 +238,18 @@
   </offsets>
 </model>
 
-<!--animation>
-  <type>select</type>
-  <object-name>EAD-IAE</object-name>
+<model>
+  <name>EAD-IAE</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EAD/EAD-IAE.xml</path>
   <condition>
 	<property>sim/engine-type/IAE</property>
   </condition>
-</animation-->
+  <offsets>
+      <x-m>-18.918</x-m>
+      <y-m>-0.015</y-m>
+      <z-m> 0.885</z-m>
+  </offsets>
+</model>
 
 <!--model>
   <name>EICAS-Lower</name>
