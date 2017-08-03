@@ -7,7 +7,7 @@ name "script"
 loc 0.005345 0.001354 0
 data 6
 script
-texture "radarbknd.png"
+texture "radarbsod.png"
 crease 45.000000
 numvert 33
 -0.008278 -0.179849 0

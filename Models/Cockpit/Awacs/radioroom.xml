@@ -74,7 +74,7 @@
     
     <model>
         <name>RAD3</name>
-        <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/radarbknd.xml</path>
+        <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/radarbsod.xml</path>
         <offsets>
             <x-m>-11.20</x-m>
             <y-m>  1.117</y-m>
