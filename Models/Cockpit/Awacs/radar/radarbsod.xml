@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>radarbknd.ac</path>
+	<path>radarbsod.ac</path>
 	
 <!-- Power on/off -->
 	<animation>
@@ -10,10 +10,13 @@
 		<type>select</type>
 		<object-name>Off</object-name>
 		<condition>
-			<less-than>
-				<property>systems/electrical/outputs/efis</property>
-				<value>15</value>
-			</less-than>
+			<or>
+				<less-than>
+					<property>b707/ess-bus</property>
+					<value>20</value>
+				</less-than>
+				<not><property>instrumentation/mptcas/on</property></not>
+			</or>
 		</condition>
 	</animation>
 	
