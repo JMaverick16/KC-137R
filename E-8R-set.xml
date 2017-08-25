@@ -180,6 +180,10 @@
 		  <name>F9</name>
 		  <desc>open Fuel &amp; Weight Menu</desc>
 		</key>
+		<key>
+				<name>f</name>
+				<desc>release flare/chaff countermeasures</desc>
+			</key>
 		<text>
 _______________ Northrop Grumman E-8R Joint STARS ___________________
 
@@ -285,6 +289,11 @@ no. D6-3071-00
 	<E8R type="bool">true</E8R>
 	<CR type="bool">false</CR>
   </model-type>
+
+  <submodels>
+            <serviceable type="bool">1</serviceable>
+            <path>Aircraft/KC-137R/Systems/submodels.xml</path>
+        </submodels>
  </sim>
 
  <tanker type="bool">false</tanker>
