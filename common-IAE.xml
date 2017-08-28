@@ -285,14 +285,14 @@
 		<roll>
 			<umin>-0.45</umin>
 			<umax>0.45</umax>
-			<kp>0.06</kp>
+			<kp>0.07</kp>
 			<kp-vloc>0.08</kp-vloc>
 			<ti>10.0</ti>
 			<td>0.00001</td>
 		</roll>
 		<pitch>
-			<umin>-0.45</umin>
-			<umax>0.45</umax>
+			<umin>-0.40</umin>
+			<umax>0.40</umax>
 			<kp>-0.11</kp>
 			<ti>10.0</ti>
 			<td>0.0001</td>

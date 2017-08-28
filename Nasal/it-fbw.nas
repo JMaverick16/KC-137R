@@ -5,7 +5,7 @@
 # Engage/Disengage Functions #
 ##############################
 
-setprop("/it-fbw/roll-disable", 1);
+setprop("/it-fbw/roll-disable", 0);
 setprop("/it-fbw/man-roll-btn", 0);
 setprop("/it-fbw/pitch-disable", 0);
 setprop("/it-fbw/man-pitch-btn", 0);
@@ -36,21 +36,17 @@ var pitch = func {
 
 var update_fbw = func {
 	if (getprop("/orientation/roll-deg") < 45 and getprop("/orientation/roll-deg") > -45) {
+		if (getprop("/it-fbw/man-roll-btn") == 0) {
+			setprop("/it-fbw/roll-disable", 0);
+		}
 		if (getprop("/it-fbw/man-pitch-btn") == 0) {
 			setprop("/it-fbw/pitch-disable", 0);
 		}
 	} else {
+		setprop("/it-fbw/roll-disable", 1);
 		setprop("/it-fbw/pitch-disable", 1);
 	}
-	if (getprop("/instrumentation/airspeed-indicator/indicated-speed-kt") >= 210) {
-		if (getprop("/it-fbw/man-roll-btn") == 0) {
-			setprop("/it-fbw/roll-disable", 0);
-		}
-	} else {
-		setprop("/it-fbw/roll-disable", 1);
-	}
 }
-
 
 ####################
 # Init and Various #
