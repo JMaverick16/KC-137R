@@ -3,7 +3,7 @@ MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0
 MATERIAL "Lights.001" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 MATERIAL "Transparent" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 64  trans 0.95
 OBJECT world
-kids 86
+kids 85
 OBJECT poly
 name "ap.annun"
 data 9
@@ -1606,26 +1606,6 @@ refs 4
 2 0.677758 0.730677
 3 0.677758 0.697474
 1 0.742211 0.697474
-kids 0
-OBJECT poly
-name "headingribbon"
-data 8
-Mesh.009
-texture "ati2.png"
-crease 30.000000
-numvert 4
-7.4e-005 0.012051 -0.062312
-7.4e-005 0.012051 0.062083
-7.4e-005 -0.000714 -0.062376
-7.4e-005 -0.000714 0.062083
-numsurf 1
-SURF 0x0
-mat 1
-refs 4
-2 0.225977 0.958329
-0 0.225977 0.990383
-1 -0.00470387 0.990383
-3 -0.00470387 0.958329
 kids 0
 OBJECT poly
 name "ias1"
