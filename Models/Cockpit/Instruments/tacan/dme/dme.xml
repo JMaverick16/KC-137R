@@ -68,14 +68,14 @@
 					<value>15</value>
 				</greater-than-equals>
 				<or>
-					<equals>
+					<not-equals>
 						<property>instrumentation/tacan/in-range</property>
-						<value>0</value>
-					</equals>
-					<equals>
+						<value>1</value>
+					</not-equals>
+					<not-equals>
 						<property>instrumentation/tacan/powered</property>
-						<value>0</value>
-					</equals>
+						<value>1</value>
+					</not-equals>
 				</or>
 			</and>
 		</condition>
