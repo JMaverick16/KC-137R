@@ -248,16 +248,36 @@
 	<type>select</type>
 	<object-name>FDbars</object-name>
 	<condition>
-		<or>
-			<equals>
-				<property>it-autoflight/output/fd1</property>
-				<value>1</value>
-			</equals>
-			<equals>
-				<property>it-autoflight/output/fd2</property>
-				<value>1</value>
-			</equals>
-		</or>
+		<and>
+			<or>
+				<equals>
+					<property>it-autoflight/output/fd1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>it-autoflight/output/fd2</property>
+					<value>1</value>
+				</equals>
+			</or>
+			<not><property>gear/gear[1]/wow</property></not>
+			<not><property>gear/gear[2]/wow</property></not>
+			<less-than>
+				<property>orientation/roll-deg</property>
+				<value>45</value>
+			</less-than>
+			<greater-than>
+				<property>orientation/roll-deg</property>
+				<value>-45</value>
+			</greater-than>
+			<less-than>
+				<property>orientation/pitch-deg</property>
+				<value>45</value>
+			</less-than>
+			<greater-than>
+				<property>orientation/pitch-deg</property>
+				<value>-30</value>
+			</greater-than>
+		</and>
 	</condition>
 </animation>
 

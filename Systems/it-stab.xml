@@ -3,6 +3,101 @@
 <!-- Wing Leveller/Pitch Stabilization Augmentation System -->
 
 <PropertyList>
+
+ <!-- =============================================================== -->
+ <!-- Autopilot Feeders                                               -->
+ <!-- =============================================================== -->
+
+	<filter>
+		<name>AP Command: Roll Rate</name>
+		<debug>false</debug>
+		<type>gain</type>
+		<gain>-0.1</gain>
+		<enable>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>1</value>
+					</equals>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<property>/orientation/roll-deg</property>
+		</input>
+		<reference>
+			<condition>
+				<and>
+					<not-equals>
+						<property>/it-autoflight/output/lat</property>
+						<value>4</value>
+					</not-equals>
+					<not-equals>
+						<property>/it-autoflight/output/lat</property>
+						<value>5</value>
+					</not-equals>
+				</and>
+			</condition>
+			<property>/it-autoflight/internal/target-roll</property>
+		</reference>
+		<reference>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/lat</property>
+						<value>4</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/lat</property>
+						<value>5</value>
+					</equals>
+				</or>
+			</condition>
+			<value>0</value>
+		</reference>
+		<output>
+			<property>/controls/flight/aileron-ap</property> <!-- Inputs to the FBW Roll Rate -->
+		</output>   	
+		<min>-0.4</min>
+		<max>0.4</max>
+	</filter>
+	
+	<filter>
+		<name>AP Command: Pitch Rate</name>
+		<debug>false</debug>
+		<type>gain</type>
+		<gain>0.13</gain>
+		<enable>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>1</value>
+					</equals>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<property>/orientation/pitch-deg</property>
+		</input>
+		<reference>
+			<property>/it-autoflight/internal/target-pitch-deg</property>
+		</reference>
+		<output>
+			<property>/controls/flight/elevator-ap</property> <!-- Inputs to the FBW Pitch Rate -->
+		</output>   	
+		<min>-0.4</min>
+		<max>0.4</max>
+	</filter>
 	
  <!-- =============================================================== -->
  <!-- Lateral                                                         -->
@@ -11,6 +106,21 @@
 	<filter>
 		<debug>false</debug>
 		<type>noise-spike</type>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>1</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/controls/flight/aileron-ap</property>
+		</input>
 		<input>/controls/flight/aileron</input>
 		<output>/controls/flight/aileron-command</output>
 		<max-rate-of-change>2.5</max-rate-of-change>
@@ -59,14 +169,6 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>0</value>
 					</equals>
@@ -113,14 +215,6 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>0</value>
 					</equals>
@@ -139,14 +233,6 @@
 		<input>
 			<condition>
 				<or>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>1</value>
-					</equals>
 					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>1</value>
@@ -175,6 +261,21 @@
 	<filter>
 		<debug>false</debug>
 		<type>noise-spike</type>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>1</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/controls/flight/elevator-ap</property>
+		</input>
 		<input>/controls/flight/elevator</input>
 		<output>/controls/flight/elevator-command</output>
 		<max-rate-of-change>2.5</max-rate-of-change>
@@ -223,14 +324,6 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>0</value>
 					</equals>
@@ -277,14 +370,6 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>0</value>
-					</equals>
-					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>0</value>
 					</equals>
@@ -303,14 +388,6 @@
 		<input>
 			<condition>
 				<or>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>1</value>
-					</equals>
 					<equals>
 						<property>/gear/gear[1]/wow</property>
 						<value>1</value>

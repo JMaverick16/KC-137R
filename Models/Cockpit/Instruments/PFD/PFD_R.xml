@@ -126,6 +126,18 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>translate</type>
         <object-name>yoke-pos</object-name>
+        <property>controls/flight/aileron</property>
+        <factor>0.0258</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+	
+    <animation>
+        <type>translate</type>
+        <object-name>yoke-pos</object-name>
         <property>controls/flight/elevator</property>
         <factor>0.0258</factor>
         <axis>
@@ -329,6 +341,14 @@ Modified by it0uchpods for KC-137R
 					<property>orientation/roll-deg</property>
 					<value>-45</value>
 				</greater-than>
+				<less-than>
+					<property>orientation/pitch-deg</property>
+					<value>45</value>
+				</less-than>
+				<greater-than>
+					<property>orientation/pitch-deg</property>
+					<value>-30</value>
+				</greater-than>
 			</and>
         </condition>
     </animation>
@@ -353,6 +373,14 @@ Modified by it0uchpods for KC-137R
 				<greater-than>
 					<property>orientation/roll-deg</property>
 					<value>-45</value>
+				</greater-than>
+				<less-than>
+					<property>orientation/pitch-deg</property>
+					<value>45</value>
+				</less-than>
+				<greater-than>
+					<property>orientation/pitch-deg</property>
+					<value>-30</value>
 				</greater-than>
 			</and>
         </condition>

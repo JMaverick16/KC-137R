@@ -11,8 +11,8 @@
             <expression>
                 <table>
                     <property>/position/altitude-ft</property> 
-                    <entry><ind>    0</ind><dep>0.444</dep></entry>
-                    <entry><ind>46000</ind><dep>0.703</dep></entry>
+                    <entry><ind>    0</ind><dep>0.437</dep></entry>
+                    <entry><ind>42000</ind><dep>0.931</dep></entry>
                 </table>
             </expression>
         </input>
@@ -28,9 +28,8 @@
             <expression>
                 <table>
                     <property>/position/altitude-ft</property> 
-                    <entry><ind>    0</ind><dep>0.992</dep></entry>
-                    <entry><ind>13000</ind><dep>0.977</dep></entry>
-                    <entry><ind>42000</ind><dep>0.969</dep></entry>
+                    <entry><ind>    0</ind><dep>0.990</dep></entry>
+                    <entry><ind>42000</ind><dep>0.806</dep></entry>
                 </table>
             </expression>
         </input>
@@ -48,7 +47,6 @@
                     <property>/engines/engine[0]/n1</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
                     <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
@@ -84,7 +82,6 @@
                     <property>/engines/engine[1]/n1</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
                     <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
@@ -120,7 +117,6 @@
                     <property>/engines/engine[2]/n1</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
                     <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
@@ -156,7 +152,6 @@
                     <property>/engines/engine[3]/n1</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
                     <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
@@ -192,7 +187,6 @@
                     <property>/controls/engines/n1limx100</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
                     <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
@@ -228,7 +222,6 @@
                     <property>/controls/engines/n1overlim</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind> 35.0</ind><dep>0.20</dep></entry>
                     <entry><ind>105.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>

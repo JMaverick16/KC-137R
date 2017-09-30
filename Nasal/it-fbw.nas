@@ -35,7 +35,7 @@ var pitch = func {
 }
 
 var update_fbw = func {
-	if (getprop("/orientation/roll-deg") < 45 and getprop("/orientation/roll-deg") > -45) {
+	if (getprop("/orientation/roll-deg") < 45 and getprop("/orientation/roll-deg") > -45 and getprop("/orientation/pitch-deg") < 45 and getprop("/orientation/pitch-deg") > -30) {
 		if (getprop("/it-fbw/man-roll-btn") == 0) {
 			setprop("/it-fbw/roll-disable", 0);
 		}
@@ -43,6 +43,8 @@ var update_fbw = func {
 			setprop("/it-fbw/pitch-disable", 0);
 		}
 	} else {
+		setprop("/it-autoflight/input/ap1", 0);
+		setprop("/it-autoflight/input/ap2", 0);
 		setprop("/it-fbw/roll-disable", 1);
 		setprop("/it-fbw/pitch-disable", 1);
 	}
@@ -60,4 +62,4 @@ setlistener("/sim/signals/fdm-initialized", func {
 ##########
 # Timers #
 ##########
-var update = maketimer(0.01, update_fbw);
+var update = maketimer(0.05, update_fbw);

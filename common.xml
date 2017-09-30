@@ -280,22 +280,23 @@
 	</stby>
 </modes>
 
+<!-- Roll and Pitch are this way to force center yoke, and kill ITAF's Final PIDs -->
 <it-autoflight>
 	<config>
 		<roll>
-			<umin>-0.45</umin>
-			<umax>0.45</umax>
-			<kp>0.07</kp>
-			<kp-vloc>0.08</kp-vloc>
-			<ti>10.0</ti>
-			<td>0.00001</td>
+			<umin>0.0</umin>
+			<umax>0.0</umax>
+			<kp>0.0</kp>
+			<kp-vloc>0.0</kp-vloc>
+			<ti>100000000</ti>
+			<td>0.0</td>
 		</roll>
 		<pitch>
-			<umin>-0.40</umin>
-			<umax>0.40</umax>
-			<kp>-0.11</kp>
-			<ti>10.0</ti>
-			<td>0.0001</td>
+			<umin>0.0</umin>
+			<umax>0.0</umax>
+			<kp>0.0</kp>
+			<ti>100000000</ti>
+			<td>0.0</td>
 		</pitch>
 		<cmd>
 			<roll-kp>-1.4</roll-kp>
