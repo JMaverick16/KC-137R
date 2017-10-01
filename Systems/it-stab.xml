@@ -71,7 +71,7 @@
 		<name>AP Command: Pitch Rate</name>
 		<debug>false</debug>
 		<type>gain</type>
-		<gain>0.13</gain>
+		<gain>0.15</gain>
 		<enable>
 			<condition>
 				<or>

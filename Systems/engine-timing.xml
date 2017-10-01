@@ -47,7 +47,7 @@
                     <property>/engines/engine[0]/n1</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                    <entry><ind>103.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
 			<scale>/engines/epr-scale</scale>
@@ -82,7 +82,7 @@
                     <property>/engines/engine[1]/n1</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                    <entry><ind>103.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
 			<scale>/engines/epr-scale</scale>
@@ -117,7 +117,7 @@
                     <property>/engines/engine[2]/n1</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                    <entry><ind>103.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
 			<scale>/engines/epr-scale</scale>
@@ -152,7 +152,7 @@
                     <property>/engines/engine[3]/n1</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                    <entry><ind>103.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
 			<scale>/engines/epr-scale</scale>
@@ -187,7 +187,7 @@
                     <property>/controls/engines/n1limx100</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                    <entry><ind>103.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
 			<scale>/engines/epr-scale</scale>
@@ -222,7 +222,7 @@
                     <property>/controls/engines/n1overlim</property>
                     <entry><ind> 18.0</ind><dep>0.00</dep></entry>
                     <entry><ind> 22.4</ind><dep>0.03</dep></entry>
-                    <entry><ind>105.8</ind><dep>1.00</dep></entry>
+                    <entry><ind>103.8</ind><dep>1.00</dep></entry>
                 </table>
             </expression>
 			<scale>/engines/epr-scale</scale>
@@ -256,9 +256,9 @@
                 <table>
                     <property>/engines/engine[0]/n1</property> 
                     <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
-                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                    <entry><ind> 15.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 19.7</ind><dep>  2.2</dep></entry>
+                    <entry><ind>103.8</ind><dep>111.5</dep></entry>
                 </table>
             </expression>
         </input>
@@ -275,9 +275,9 @@
                 <table>
                     <property>/engines/engine[1]/n1</property> 
                     <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
-                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                    <entry><ind> 15.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 19.7</ind><dep>  2.2</dep></entry>
+                    <entry><ind>103.8</ind><dep>111.5</dep></entry>
                 </table>
             </expression>
         </input>
@@ -294,9 +294,9 @@
                 <table>
                     <property>/engines/engine[2]/n1</property> 
                     <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
-                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                    <entry><ind> 15.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 19.7</ind><dep>  2.2</dep></entry>
+                    <entry><ind>103.8</ind><dep>111.5</dep></entry>
                 </table>
             </expression>
         </input>
@@ -313,9 +313,9 @@
                 <table>
                     <property>/engines/engine[3]/n1</property> 
                     <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
-                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                    <entry><ind> 15.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 19.7</ind><dep>  2.2</dep></entry>
+                    <entry><ind>103.8</ind><dep>111.5</dep></entry>
                 </table>
             </expression>
         </input>
@@ -332,9 +332,9 @@
                 <table>
                     <property>/controls/engines/n1limx100</property> 
                     <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
-                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                    <entry><ind> 15.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 19.7</ind><dep>  2.2</dep></entry>
+                    <entry><ind>103.8</ind><dep>111.5</dep></entry>
                 </table>
             </expression>
         </input>
@@ -351,9 +351,9 @@
                 <table>
                     <property>/controls/engines/n1overlim</property> 
                     <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 18.0</ind><dep>  0.0</dep></entry>
-                    <entry><ind> 22.4</ind><dep>  2.2</dep></entry>
-                    <entry><ind>105.9</ind><dep>111.5</dep></entry>
+                    <entry><ind> 15.0</ind><dep>  0.0</dep></entry>
+                    <entry><ind> 19.7</ind><dep>  2.2</dep></entry>
+                    <entry><ind>103.8</ind><dep>111.5</dep></entry>
                 </table>
             </expression>
         </input>
@@ -371,8 +371,8 @@
                     <property>/engines/engine[0]/n1</property> 
                     <entry><ind>  0</ind><dep>037</dep></entry>
                     <entry><ind>  8</ind><dep>037</dep></entry>
-                    <entry><ind> 22</ind><dep>415</dep></entry>
-                    <entry><ind>110</ind><dep>642</dep></entry>
+                    <entry><ind> 22</ind><dep>434</dep></entry>
+                    <entry><ind>110</ind><dep>620</dep></entry>
                 </table>
             </expression>
         </input>
@@ -390,8 +390,8 @@
                     <property>/engines/engine[1]/n1</property> 
                     <entry><ind>  0</ind><dep>037</dep></entry>
                     <entry><ind>  8</ind><dep>037</dep></entry>
-                    <entry><ind> 22</ind><dep>415</dep></entry>
-                    <entry><ind>110</ind><dep>642</dep></entry>
+                    <entry><ind> 22</ind><dep>434</dep></entry>
+                    <entry><ind>110</ind><dep>620</dep></entry>
                 </table>
             </expression>
         </input>
@@ -409,8 +409,8 @@
                     <property>/engines/engine[2]/n1</property> 
                     <entry><ind>  0</ind><dep>037</dep></entry>
                     <entry><ind>  8</ind><dep>037</dep></entry>
-                    <entry><ind> 22</ind><dep>415</dep></entry>
-                    <entry><ind>110</ind><dep>642</dep></entry>
+                    <entry><ind> 22</ind><dep>434</dep></entry>
+                    <entry><ind>110</ind><dep>620</dep></entry>
                 </table>
             </expression>
         </input>
@@ -428,8 +428,8 @@
                     <property>/engines/engine[3]/n1</property> 
                     <entry><ind>  0</ind><dep>037</dep></entry>
                     <entry><ind>  8</ind><dep>037</dep></entry>
-                    <entry><ind> 22</ind><dep>415</dep></entry>
-                    <entry><ind>110</ind><dep>642</dep></entry>
+                    <entry><ind> 22</ind><dep>434</dep></entry>
+                    <entry><ind>110</ind><dep>620</dep></entry>
                 </table>
             </expression>
         </input>

@@ -43,10 +43,12 @@ var update_fbw = func {
 			setprop("/it-fbw/pitch-disable", 0);
 		}
 	} else {
-		setprop("/it-autoflight/input/ap1", 0);
-		setprop("/it-autoflight/input/ap2", 0);
 		setprop("/it-fbw/roll-disable", 1);
 		setprop("/it-fbw/pitch-disable", 1);
+	}
+	if (getprop("/it-fbw/pitch-disable") == 1 or getprop("/it-fbw/roll-disable") == 1) {
+		setprop("/it-autoflight/input/ap1", 0);
+		setprop("/it-autoflight/input/ap2", 0);
 	}
 }
 
