@@ -9,10 +9,10 @@
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.50</delay>
-        <count>150</count>        <!-- -1 to have 'em all -->
-        <x-offset>100</x-offset><!-- in feet -->
-        <y-offset>-5</y-offset>
-        <z-offset>5</z-offset>
+        <count>120</count>        <!-- -1 to have 'em all -->
+        <x-offset>29.55</x-offset><!-- in feet -->
+        <y-offset>0</y-offset>
+        <z-offset>-6.55</z-offset>
         <yaw-offset>90.0</yaw-offset>
         <pitch-offset>-10.0</pitch-offset>
         <life>5</life>
@@ -31,10 +31,10 @@
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.50</delay>
-        <count>150</count>        <!-- -1 to have 'em all -->
-        <x-offset>100.0</x-offset><!-- in feet -->
-        <y-offset>-5</y-offset>
-        <z-offset>5</z-offset>
+        <count>120</count>        <!-- -1 to have 'em all -->
+        <x-offset>29.55</x-offset><!-- in feet -->
+        <y-offset>0</y-offset>
+        <z-offset>-6.55</z-offset>
         <yaw-offset>80.0</yaw-offset>
         <pitch-offset>-10.0</pitch-offset>
         <life>5</life>
@@ -53,10 +53,10 @@
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.50</delay>
-        <count>150</count>        <!-- -1 to have 'em all -->
-        <x-offset>100.0</x-offset><!-- in feet -->
-        <y-offset>5</y-offset>
-        <z-offset>-5</z-offset>
+        <count>120</count>        <!-- -1 to have 'em all -->
+        <x-offset>29.55</x-offset><!-- in feet -->
+        <y-offset>0</y-offset>
+        <z-offset>-6.55</z-offset>
         <yaw-offset>-90.0</yaw-offset>
         <pitch-offset>-10.0</pitch-offset>
         <life>5</life>
@@ -75,10 +75,10 @@
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.50</delay>
-        <count>150</count>        <!-- -1 to have 'em all -->
-        <x-offset>100.0</x-offset><!-- in feet -->
-        <y-offset>5</y-offset>
-        <z-offset>-5</z-offset>
+        <count>120</count>        <!-- -1 to have 'em all -->
+        <x-offset>29.55</x-offset><!-- in feet -->
+        <y-offset>0</y-offset>
+        <z-offset>-6.55</z-offset>
         <yaw-offset>-80.0</yaw-offset>
         <pitch-offset>-10.0</pitch-offset>
         <life>5</life>
@@ -97,10 +97,10 @@
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.50</delay>
-        <count>150</count>        <!-- -1 to have 'em all -->
-        <x-offset>100</x-offset><!-- in feet -->
-        <y-offset>-5</y-offset>
-        <z-offset>5</z-offset>
+        <count>120</count>        <!-- -1 to have 'em all -->
+        <x-offset>29.55</x-offset><!-- in feet -->
+        <y-offset>0</y-offset>
+        <z-offset>-6.55</z-offset>
         <yaw-offset>170.0</yaw-offset>
         <pitch-offset>-10.0</pitch-offset>
         <life>5</life>
@@ -112,17 +112,17 @@
         <wind>true</wind>
     </submodel>
 
-    <submodel>
+    <!--submodel>
         <name>flares3_1</name>
         <model>Aircraft/KC-137R/Models/Effects/flare.xml</model>
-        <trigger>ai/submodels/submodel[0]/flare-release</trigger>        <!-- ai/submodels/submodel[0]/flare-release -->
-        <speed>700.0</speed>        <!-- ft/sec -->
+        <trigger>ai/submodels/submodel[0]/flare-release</trigger>        <!-- ai/submodels/submodel[0]/flare-release ->
+        <speed>700.0</speed>        <!-- ft/sec ->
         <repeat>true</repeat>
         <delay>0.50</delay>
-        <count>150</count>        <!-- -1 to have 'em all -->
-        <x-offset>100.0</x-offset><!-- in feet -->
-        <y-offset>-5</y-offset>
-        <z-offset>5</z-offset>
+        <count>120</count>        <!-- -1 to have 'em all ->
+        <x-offset>29.55</x-offset><!-- in feet ->
+        <y-offset>0</y-offset>
+        <z-offset>-6.55</z-offset>
         <yaw-offset>175.0</yaw-offset>
         <pitch-offset>-10.0</pitch-offset>
         <life>5</life>
@@ -132,7 +132,7 @@
         <cd>1.0</cd>
         <no-roll>true</no-roll>
         <wind>true</wind>
-    </submodel>
+    </submodel-->
 
      <submodel>
         <name>flares4</name>
@@ -141,10 +141,10 @@
         <speed>700.0</speed>        <!-- ft/sec -->
         <repeat>true</repeat>
         <delay>0.50</delay>
-        <count>150</count>        <!-- -1 to have 'em all -->
-        <x-offset>100</x-offset><!-- in feet -->
-        <y-offset>5</y-offset>
-        <z-offset>-5</z-offset>
+        <count>120</count>        <!-- -1 to have 'em all -->
+        <x-offset>29.55</x-offset><!-- in feet -->
+        <y-offset>0</y-offset>
+        <z-offset>-6.55</z-offset>
         <yaw-offset>-170.0</yaw-offset>
         <pitch-offset>-10.0</pitch-offset>
         <life>5</life>
@@ -156,17 +156,17 @@
         <wind>true</wind>
     </submodel>
 
-    <submodel>
+    <!--submodel>
         <name>flares4_1</name>
         <model>Aircraft/KC-137R/Models/Effects/flare.xml</model>
-        <trigger>ai/submodels/submodel[0]/flare-release</trigger>        <!-- ai/submodels/submodel[0]/flare-release -->
-        <speed>700.0</speed>        <!-- ft/sec -->
+        <trigger>ai/submodels/submodel[0]/flare-release</trigger>        <!-- ai/submodels/submodel[0]/flare-release ->
+        <speed>700.0</speed>        <!-- ft/sec ->
         <repeat>true</repeat>
         <delay>0.50</delay>
-        <count>150</count>        <!-- -1 to have 'em all -->
-        <x-offset>100.0</x-offset><!-- in feet -->
-        <y-offset>5</y-offset>
-        <z-offset>-5</z-offset>
+        <count>120</count>        <!-- -1 to have 'em all ->
+        <x-offset>29.55</x-offset><!-- in feet ->
+        <y-offset>0</y-offset>
+        <z-offset>-6.55</z-offset>
         <yaw-offset>-175.0</yaw-offset>
         <pitch-offset>-10.0</pitch-offset>
         <life>5</life>
@@ -176,5 +176,5 @@
         <cd>1.0</cd>
         <no-roll>true</no-roll>
         <wind>true</wind>
-    </submodel>
+    </submodel-->
 </PropertyList>
