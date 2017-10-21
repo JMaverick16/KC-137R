@@ -72,6 +72,8 @@
 			<start-offset-m>30</start-offset-m>
 		</runways>
 	</airport>
+	
+	<chase-distance-m type="double" archive="y">-85.0</chase-distance-m>
 
   <sound>
       <path>Aircraft/KC-137R/Sounds/cfm56-sound.xml</path>

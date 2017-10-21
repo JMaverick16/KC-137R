@@ -128,8 +128,7 @@
   			<dynamic-view type="bool">true</dynamic-view>
       </config>
   	</view>
-
-
+	
     <chase-distance-m>-45</chase-distance-m>
 
   </sim>
