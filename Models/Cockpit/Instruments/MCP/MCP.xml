@@ -668,10 +668,16 @@
 		<object-name>APvs10</object-name>
 		<object-name>APvs1</object-name>
 		<condition>
-			<greater-than-equals>
-				<property>it-autoflight/input/vs</property>
-				<value>0</value>
-			</greater-than-equals>
+			<and>
+				<equals>
+					<property>it-autoflight/output/vert</property>
+					<value>1</value>
+				</equals>
+				<greater-than-equals>
+					<property>it-autoflight/input/vs</property>
+					<value>0</value>
+				</greater-than-equals>
+			</and>
 		</condition>
 	</animation>
 	<animation>
@@ -731,10 +737,16 @@
 		<object-name>APvs-1</object-name>
 		<object-name>APvs-</object-name>
 		<condition>
-			<less-than>
-				<property>it-autoflight/input/vs</property>
-				<value>0</value>
-			</less-than>
+			<and>
+				<equals>
+					<property>it-autoflight/output/vert</property>
+					<value>1</value>
+				</equals>
+				<less-than>
+					<property>it-autoflight/input/vs</property>
+					<value>0</value>
+				</less-than>
+			</and>
 		</condition>
 	</animation>
 	<animation>
