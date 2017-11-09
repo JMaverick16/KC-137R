@@ -559,6 +559,46 @@
  <!-- =============================================================== -->
  <!-- Yaw Damper                                                      -->
  <!-- =============================================================== -->
+
+	<filter>
+		<name>IT-FBW: YAW DAMPER/TURN COORDINATOR FEEDBACK IF DISABLED</name>
+		<enable>
+			<condition>
+				<or>
+					<equals>
+						<property>/gear/gear[1]/wow</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/gear/gear[2]/wow</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-fbw/roll-disable</property>
+						<value>1</value>
+					</equals>
+					<greater-than-equals>
+						<property>/controls/flight/rudder</property>
+						<value>0.1</value>
+					</greater-than-equals>
+					<less-than-equals>
+						<property>/controls/flight/rudder</property>
+						<value>-0.1</value>
+					</less-than-equals>
+					<less-than>
+						<property>/position/gear-agl-ft</property>
+						<value>50</value>
+					</less-than>
+				</or>
+			</condition>
+		</enable>
+		<type>gain</type>
+		<gain>1</gain>
+		<input>0</input>
+		<output>/controls/flight/rudder-fbw-cmd</output>
+		<min>-0.2</min>
+		<max>0.2</max>
+	</filter>
 	
 	<pid-controller>
 		<name>IT-FBW: YAW</name>
@@ -578,6 +618,14 @@
 						<property>/it-fbw/roll-disable</property>
 						<value>0</value>
 					</equals>
+					<less-than>
+						<property>/controls/flight/rudder</property>
+						<value>0.1</value>
+					</less-than>
+					<greater-than>
+						<property>/controls/flight/rudder</property>
+						<value>-0.1</value>
+					</greater-than>
 					<greater-than-equals>
 						<property>/position/gear-agl-ft</property>
 						<value>50</value>
@@ -595,12 +643,12 @@
 			<property>/controls/flight/rudder-fbw-cmd</property>
 		</output>
 		<config>
-			<Kp>0.05</Kp>
+			<Kp>0.025</Kp>
 			<beta>1</beta>
 			<alpha>0.1</alpha>
 			<gamma>0</gamma>
 			<Ti>5.0</Ti>
-			<Td>0.00000001</Td>
+			<Td>0.00001</Td>
 			<u_min>-0.2</u_min>
 			<u_max>0.2</u_max>
 		</config>
