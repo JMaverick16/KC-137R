@@ -26,7 +26,7 @@
 			<expression>
 				<table>
 					<property>/position/altitude-ft</property> 
-					<entry><ind>    0</ind><dep>0.989</dep></entry>
+					<entry><ind>    0</ind><dep>0.986</dep></entry>
 					<entry><ind>42000</ind><dep>0.708</dep></entry>
 				</table>
 			</expression>
