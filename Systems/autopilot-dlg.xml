@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!-- IT-AUTOFLIGHT Autopilot Control Dialog -->
-
+<!-- Copyright (c) 2017 Joshua Davidson (it0uchpods) -->
 
 <PropertyList>
 
@@ -13,7 +13,7 @@
         <layout>hbox</layout>
         <text>
             <halign>left</halign>
-            <label>IT-AUTOFLIGHT System</label>
+            <label>IT-AUTOFLIGHT System (V3.1.X)</label>
         </text>
         <button>
             <halign>right</halign>
@@ -246,8 +246,8 @@
 				<binding>
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-kts</property>
-					<min>0</min>
-					<max>380</max>
+					<min>100</min>
+					<max>360</max>
 					<step>-10</step>
 					<wrap>false</wrap>
 				</binding>
@@ -267,8 +267,8 @@
 				<binding>
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-kts</property>
-					<min>0</min>
-					<max>380</max>
+					<min>100</min>
+					<max>360</max>
 					<step>-1</step>
 					<wrap>false</wrap>
 				</binding>
@@ -306,8 +306,8 @@
 				<binding>
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-kts</property>
-					<min>0</min>
-					<max>380</max>
+					<min>100</min>
+					<max>360</max>
 					<step>1</step>
 					<wrap>false</wrap>
 				</binding>
@@ -328,8 +328,8 @@
 				<binding>
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-kts</property>
-					<min>0</min>
-					<max>380</max>
+					<min>100</min>
+					<max>360</max>
 					<step>10</step>
 					<wrap>false</wrap>
 				</binding>
@@ -361,8 +361,8 @@
 				<binding>
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-mach</property>
-					<min>0</min>
-					<max>0.99</max>
+					<min>0.50</min>
+					<max>0.95</max>
 					<step>-0.01</step>
 					<wrap>false</wrap>
 				</binding>
@@ -382,8 +382,8 @@
 				<binding>
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-mach</property>
-					<min>0</min>
-					<max>0.99</max>
+					<min>0.50</min>
+					<max>0.95</max>
 					<step>-0.001</step>
 					<wrap>false</wrap>
 				</binding>
@@ -421,8 +421,8 @@
 				<binding>
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-mach</property>
-					<min>0</min>
-					<max>0.99</max>
+					<min>0.50</min>
+					<max>0.95</max>
 					<step>0.001</step>
 					<wrap>false</wrap>
 				</binding>
@@ -443,8 +443,8 @@
 				<binding>
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-mach</property>
-					<min>0</min>
-					<max>0.99</max>
+					<min>0.50</min>
+					<max>0.95</max>
 					<step>0.01</step>
 					<wrap>false</wrap>
 				</binding>
@@ -598,8 +598,16 @@
 			<layout>hbox</layout>
 
 			<checkbox>
-				<label>True HDG</label>
+				<label>Track</label>
 				<property>/it-autoflight/input/trk</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live>true</live>
+			</checkbox>
+			<checkbox>
+				<label>True</label>
+				<property>/it-autoflight/input/true-course</property>
 				<binding>
 					<command>dialog-apply</command>
 				</binding>

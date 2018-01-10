@@ -40,7 +40,7 @@
     </autopilot>
 	<autopilot>
 		<name>RSAS/PSAS</name>
-		<path>Aircraft/KC-137R/Systems/it-stab.xml</path>
+		<path>Aircraft/KC-137R/Systems/it-fbw.xml</path>
 	</autopilot>
 	</systems>
 
@@ -272,57 +272,45 @@
 	</aircraft-data>
  </sim>
 
-<modes>
-	<altimeter>
-		<inhg>1</inhg>
-	</altimeter>
-	<stby>
-		<powah>1</powah>
-		<inhg>1</inhg>
-	</stby>
-</modes>
+	<modes>
+		<altimeter>
+			<inhg>1</inhg>
+		</altimeter>
+		<stby>
+			<powah>1</powah>
+			<inhg>1</inhg>
+		</stby>
+	</modes>
 
-<!-- Roll and Pitch are this way to force center yoke, and kill ITAF's Final PIDs -->
-<it-autoflight>
-	<config>
-		<roll>
-			<umin>0.0</umin>
-			<umax>0.0</umax>
-			<kp>0.0</kp>
-			<kp-vloc>0.0</kp-vloc>
-			<ti>100000000</ti>
-			<td>0.0</td>
-		</roll>
-		<pitch>
-			<umin>0.0</umin>
-			<umax>0.0</umax>
-			<kp>0.0</kp>
-			<ti>100000000</ti>
-			<td>0.0</td>
-		</pitch>
-		<cmd>
-			<roll-kp>-1.4</roll-kp>
-			<roll-scale>1.0</roll-scale>
-			<vorloc>-2.8</vorloc>
-			<vs>0.01</vs>
-		</cmd>
-		<autoland>
-			<kp-pitch>0.03</kp-pitch>
-			<kp-rudder>-0.1</kp-rudder>
-		</autoland>
-	</config>
-	<settings>
-		<auto-bank-max-deg>30</auto-bank-max-deg> <!-- Maximum Auto Bank Limit -->
-		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
-		<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
-		<retard-ft>20</retard-ft> <!-- Enable Thrust Retard -->
-		<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
-		<togaspd>171</togaspd> <!-- V2 + 10kts -->
-		<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
-		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
-		<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
-	</settings>
-</it-autoflight>
+	<it-autoflight>
+		<config>
+			<cmd>
+				<roll-kp>-1.3</roll-kp>
+				<vorloc>-2.8</vorloc>
+				<vs>0.0017</vs>
+			</cmd>
+			<autoland> 
+				<kp-pitch>0.0051</kp-pitch>
+				<kp-rudder>-0.05</kp-rudder>
+			</autoland>
+			<rollout>
+				<defl-pitch>0.15</defl-pitch>
+				<kp-rudder>-0.02</kp-rudder>
+			</rollout>
+		</config>
+		<settings>
+			<auto-bank-max-deg>30</auto-bank-max-deg> <!-- Maximum Auto Bank Limit -->
+			<disable-final>1</disable-final> <!-- Disable the Final Controllers -->
+			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
+			<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
+			<retard-ft>20</retard-ft> <!-- Enable Thrust Retard -->
+			<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
+			<togaspd>161</togaspd> <!-- V2 + 10kts -->
+			<lat-agl-ft>50</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to LNAV (if armed) -->
+			<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
+			<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
+		</settings>
+	</it-autoflight>
 
 	<engines>
 		<APU>

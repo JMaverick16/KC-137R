@@ -5,122 +5,12 @@
 <PropertyList>
 
  <!-- =============================================================== -->
- <!-- Autopilot Feeders                                               -->
- <!-- =============================================================== -->
-
-	<filter>
-		<name>AP Command: Roll Rate</name>
-		<debug>false</debug>
-		<type>gain</type>
-		<gain>-0.1</gain>
-		<enable>
-			<condition>
-				<or>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>1</value>
-					</equals>
-				</or>
-			</condition>
-		</enable>
-		<input>
-			<property>/orientation/roll-deg</property>
-		</input>
-		<reference>
-			<condition>
-				<and>
-					<not-equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>4</value>
-					</not-equals>
-					<not-equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>5</value>
-					</not-equals>
-				</and>
-			</condition>
-			<property>/it-autoflight/internal/target-roll</property>
-		</reference>
-		<reference>
-			<condition>
-				<or>
-					<equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>4</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>5</value>
-					</equals>
-				</or>
-			</condition>
-			<value>0</value>
-		</reference>
-		<output>
-			<property>/controls/flight/aileron-ap</property> <!-- Inputs to the FBW Roll Rate -->
-		</output>   	
-		<min>-0.4</min>
-		<max>0.4</max>
-	</filter>
-	
-	<filter>
-		<name>AP Command: Pitch Rate</name>
-		<debug>false</debug>
-		<type>gain</type>
-		<gain>0.15</gain>
-		<enable>
-			<condition>
-				<or>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>1</value>
-					</equals>
-				</or>
-			</condition>
-		</enable>
-		<input>
-			<property>/orientation/pitch-deg</property>
-		</input>
-		<reference>
-			<property>/it-autoflight/internal/target-pitch-deg</property>
-		</reference>
-		<output>
-			<property>/controls/flight/elevator-ap</property> <!-- Inputs to the FBW Pitch Rate -->
-		</output>   	
-		<min>-0.4</min>
-		<max>0.4</max>
-	</filter>
-	
- <!-- =============================================================== -->
  <!-- Lateral                                                         -->
  <!-- =============================================================== -->
  
 	<filter>
 		<debug>false</debug>
 		<type>noise-spike</type>
-		<input>
-			<condition>
-				<or>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>1</value>
-					</equals>
-				</or>
-			</condition>
-			<property>/controls/flight/aileron-ap</property>
-		</input>
 		<input>/controls/flight/aileron</input>
 		<output>/controls/flight/aileron-command</output>
 		<max-rate-of-change>2.5</max-rate-of-change>
@@ -186,6 +76,21 @@
 		<input>
 			<property>/orientation/roll-rate-degps</property>
 		</input>
+		<reference>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>1</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/it-autoflight/internal/roll-rate</property>
+		</reference>
 		<reference>
 			<property>/it-fbw/roll-rate</property>
 		</reference>
@@ -261,26 +166,129 @@
 	<filter>
 		<debug>false</debug>
 		<type>noise-spike</type>
-		<input>
-			<condition>
-				<or>
-					<equals>
-						<property>/it-autoflight/output/ap1</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/output/ap2</property>
-						<value>1</value>
-					</equals>
-				</or>
-			</condition>
-			<property>/controls/flight/elevator-ap</property>
-		</input>
 		<input>/controls/flight/elevator</input>
 		<output>/controls/flight/elevator-command</output>
 		<max-rate-of-change>2.5</max-rate-of-change>
 	</filter>
- 
+	
+	<filter>
+		<name>IT-CONTROLLER: LOAD FACTOR CMD</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<expression>
+				<sum>
+					<table>
+						<property>/controls/flight/elevator-command</property> 
+						<entry><ind> 1</ind><dep>0.0</dep></entry>
+						<entry><ind> 0</ind><dep>1.0</dep></entry>
+						<entry><ind>-1</ind><dep>2.0</dep></entry>
+					</table>
+				</sum>
+			</expression>
+		</input>
+		<output>/it-fbw/g-target</output>
+		<min>0.0</min>
+		<max>2.0</max>
+	</filter>
+	
+	<filter>
+		<name>IT-CONTROLLER: COMPUTED G</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<expression>
+				<sum>
+					<property>/accelerations/pilot-gdamped</property>
+					<div>
+						<value>-1</value>
+						<cos>
+							<deg2rad>
+								<product>
+									<property>/orientation/roll-deg</property>
+									<value>0.965</value>
+								</product>
+							</deg2rad>
+						</cos>
+					</div>
+					<value>1</value>
+				</sum>
+			</expression>
+		</input>
+		<output>/it-fbw/g-computed</output>
+	</filter>
+	
+	<filter>
+		<name>IT-CONTROLLER: G ERROR</name>
+		<type>gain</type>
+		<gain>-1.0</gain>
+		<input>
+			<expression>
+				<dif>
+					<property>/it-fbw/g-target</property>
+					<property>/it-fbw/g-computed</property>
+				</dif>
+			</expression>
+		</input>
+		<output>/it-fbw/g-error</output>
+	</filter>
+	
+	<pi-simple-controller>
+		<name>IT-CONTROLLER: G ELEVATOR</name>
+		<debug>false</debug>
+		<enable>
+			<condition>
+				<and>
+					<equals>
+						<property>/gear/gear[1]/wow</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/gear/gear[2]/wow</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-fbw/pitch-disable</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+		</enable>
+		<input>
+			<property>/it-fbw/g-error</property>
+		</input>
+		<reference>
+			<value>0</value>
+		</reference>
+		<output>
+			<property>/it-fbw/g-elevator</property>
+		</output>
+		<config>
+			<Kp>-1.5</Kp>
+			<Ki>-1.5</Ki>
+			<min>
+				<condition>
+					<less-than>
+						<property>/controls/flight/elevator-command</property>
+						<value>0</value>
+					</less-than>
+				</condition>
+				<property>/controls/flight/elevator-command</property>
+			</min>
+			<min>0.0</min>
+			<max>
+				<condition>
+					<greater-than>
+						<property>/controls/flight/elevator-command</property>
+						<value>0</value>
+					</greater-than>
+				</condition>
+				<property>/controls/flight/elevator-command</property>
+			</max>
+			<max>0.0</max>
+		</config>
+	</pi-simple-controller>
+	
     <filter>
        <name>IT-CONTROLLER: PITCH</name>
         <type>gain</type>
@@ -289,7 +297,7 @@
         <input> 
             <expression>
                 <table>
-                    <property>/controls/flight/elevator-command</property> 
+                    <property>/it-fbw/g-elevator</property> 
                     <entry><ind> 1.00</ind><dep>-6.0</dep></entry>
                     <entry><ind> 0.04</ind><dep> 0.0</dep></entry>
                     <entry><ind> 0.00</ind><dep> 0.0</dep></entry>
@@ -341,6 +349,21 @@
 		<input>
 			<property>/orientation/pitch-rate-degps</property>
 		</input>
+		<reference>
+			<condition>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>1</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/it-autoflight/internal/pitch-rate</property>
+		</reference>
 		<reference>
 			<property>/it-fbw/pitch-rate</property>
 		</reference>

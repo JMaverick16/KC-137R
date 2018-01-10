@@ -1,5 +1,4 @@
 # KC-137R Roll/Pitch Stabilization Augmentation System by Joshua Davidson (it0uchpods)
-# V0.9.1
 
 ##############################
 # Engage/Disengage Functions #
@@ -59,6 +58,13 @@ var update_fbw = func {
 			setprop("/it-autoflight/input/ap1", 0);
 		}
 		if (getprop("/it-autoflight/output/ap2") == 1) {
+			setprop("/it-autoflight/input/ap2", 0);
+		}
+	}
+	
+	if (getprop("/it-autoflight/output/ap1") == 1 or getprop("/it-autoflight/output/ap2") == 1) {
+		if (getprop("/controls/flight/aileron") > 0.2 or getprop("/controls/flight/aileron") < -0.2 or getprop("/controls/flight/elevator") > 0.2 or getprop("/controls/flight/elevator") < -0.2) {
+			setprop("/it-autoflight/input/ap1", 0);
 			setprop("/it-autoflight/input/ap2", 0);
 		}
 	}
