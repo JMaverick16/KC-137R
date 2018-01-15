@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT System Controller V3.1.0
-# Copyright (c) 2017 Joshua Davidson (it0uchpods)
+# Copyright (c) 2017-2018 Joshua Davidson (it0uchpods)
 # This program is 100% GPL!
 
 setprop("/it-autoflight/internal/heading-deg", 0);
@@ -564,20 +564,20 @@ setlistener("/it-autoflight/input/kts-mach", func {
 	var ias = getprop("/instrumentation/airspeed-indicator/indicated-speed-kt");
 	var mach = getprop("/instrumentation/airspeed-indicator/indicated-mach");
 	if (getprop("/it-autoflight/input/kts-mach") == 0) {
-		if (ias >= 100 and ias <= 360) {
+		if (ias >= 100 and ias <= 350) {
 			setprop("/it-autoflight/input/spd-kts", math.round(ias, 1));
 		} else if (ias < 100) {
 			setprop("/it-autoflight/input/spd-kts", 100);
-		} else if (ias > 360) {
-			setprop("/it-autoflight/input/spd-kts", 360);
+		} else if (ias > 350) {
+			setprop("/it-autoflight/input/spd-kts", 350);
 		}
 	} else if (getprop("/it-autoflight/input/kts-mach") == 1) {
-		if (mach >= 0.50 and mach <= 0.95) {
+		if (mach >= 0.50 and mach <= 0.90) {
 			setprop("/it-autoflight/input/spd-mach", math.round(mach, 0.001));
 		} else if (mach < 0.50) {
 			setprop("/it-autoflight/input/spd-mach", 0.50);
-		} else if (mach > 0.95) {
-			setprop("/it-autoflight/input/spd-mach", 0.95);
+		} else if (mach > 0.90) {
+			setprop("/it-autoflight/input/spd-mach", 0.90);
 		}
 	}
 });

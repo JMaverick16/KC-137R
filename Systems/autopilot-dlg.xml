@@ -247,7 +247,7 @@
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-kts</property>
 					<min>100</min>
-					<max>360</max>
+					<max>350</max>
 					<step>-10</step>
 					<wrap>false</wrap>
 				</binding>
@@ -268,7 +268,7 @@
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-kts</property>
 					<min>100</min>
-					<max>360</max>
+					<max>350</max>
 					<step>-1</step>
 					<wrap>false</wrap>
 				</binding>
@@ -307,7 +307,7 @@
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-kts</property>
 					<min>100</min>
-					<max>360</max>
+					<max>350</max>
 					<step>1</step>
 					<wrap>false</wrap>
 				</binding>
@@ -329,7 +329,7 @@
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-kts</property>
 					<min>100</min>
-					<max>360</max>
+					<max>350</max>
 					<step>10</step>
 					<wrap>false</wrap>
 				</binding>
@@ -362,7 +362,7 @@
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-mach</property>
 					<min>0.50</min>
-					<max>0.95</max>
+					<max>0.90</max>
 					<step>-0.01</step>
 					<wrap>false</wrap>
 				</binding>
@@ -383,7 +383,7 @@
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-mach</property>
 					<min>0.50</min>
-					<max>0.95</max>
+					<max>0.90</max>
 					<step>-0.001</step>
 					<wrap>false</wrap>
 				</binding>
@@ -422,7 +422,7 @@
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-mach</property>
 					<min>0.50</min>
-					<max>0.95</max>
+					<max>0.90</max>
 					<step>0.001</step>
 					<wrap>false</wrap>
 				</binding>
@@ -444,7 +444,7 @@
 					<command>property-adjust</command>
 					<property>/it-autoflight/input/spd-mach</property>
 					<min>0.50</min>
-					<max>0.95</max>
+					<max>0.90</max>
 					<step>0.01</step>
 					<wrap>false</wrap>
 				</binding>
