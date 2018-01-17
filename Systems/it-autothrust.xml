@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- IT-AUTOFLIGHT: AUTOTHRUST -->
-<!-- Copyright (c) 2017 Joshua Davidson (it0uchpods) -->
+<!-- Copyright (c) 2017-2018 Joshua Davidson (it0uchpods) -->
 
 <PropertyList>
 
@@ -196,10 +196,10 @@
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</equals>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
+					</not-equals>
 				</and>
 			</condition>
 			<value>0.20</value>
@@ -211,10 +211,10 @@
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</not-equals>
-					<equals>
-						<property>/it-autoflight/output/retard</property>
-						<value>0</value>
-					</equals>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
+					</not-equals>
 				</and>
 			</condition>
 			<value>0.05</value>
@@ -222,8 +222,8 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/retard</property>
-					<value>1</value>
+					<property>/it-autoflight/mode/thr</property>
+					<value>RETARD</value>
 				</equals>
 			</condition>
 			<value>0.10</value>
