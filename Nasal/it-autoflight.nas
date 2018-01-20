@@ -561,8 +561,8 @@ var fpa_calc = func {
 }
 
 setlistener("/it-autoflight/input/kts-mach", func {
-	var ias = getprop("/it-autoflight/input/spd-kts");
-	var mach = getprop("/it-autoflight/input/spd-mach");
+	var ias = getprop("/it-autoflight/input/spd-kts") or 0;
+	var mach = getprop("/it-autoflight/input/spd-mach") or 0;
 	if (getprop("/it-autoflight/input/kts-mach") == 0) {
 		if (ias >= 100 and ias <= 350) {
 			setprop("/it-autoflight/input/spd-kts", math.round(ias, 1));
