@@ -519,8 +519,8 @@
 		<name>INTERNAL VERTICAL SPEED COMPUTER</name>
 		<debug>false</debug>
 		<type>gain</type>
-		<gain>60.0</gain>
-		<input>/velocities/vertical-speed-fps</input>
+		<gain>1.0</gain>
+		<input>/instrumentation/gps/indicated-vertical-speed</input>
 		<output>/it-autoflight/internal/vert-speed-fpm</output>
 	</filter>
 	
@@ -960,7 +960,7 @@
 		</input>
 		<output>/controls/flight/aileron</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.5</max-rate-of-change>
+		<max-rate-of-change>0.8</max-rate-of-change>
 	</filter>
 
  <!-- =============================================================== -->
@@ -972,7 +972,12 @@
 		<debug>false</debug>
 		<type>gain</type>
 		<input>
-			<property>/it-autoflight/internal/altitude-5-sec-ahead</property>
+			<expression>
+				<sum>
+					<property>/it-autoflight/internal/altitude-5-sec-ahead</property>
+					<value>-2</value>
+				</sum>
+			</expression>
 		</input>
 		<reference>
 			<property>/it-autoflight/internal/alt</property>
@@ -1737,7 +1742,7 @@
 		</input>
 		<output>/controls/flight/elevator</output>
 		<type>noise-spike</type>
-		<max-rate-of-change>0.4</max-rate-of-change>
+		<max-rate-of-change>0.7</max-rate-of-change>
 	</filter>
 	
 	<filter>
