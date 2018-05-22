@@ -624,9 +624,7 @@
 		<object-name>yokes</object-name>
 		<object-name>yokesRC</object-name>
 		<condition>
-      <not>
-       <property>sim/yokes-visible</property>
-      </not>
+			<property>sim/yokes-visible</property>
 		</condition>
 	</animation>	
 

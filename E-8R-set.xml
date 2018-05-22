@@ -63,17 +63,17 @@
 				</item>
 				<item>
 					<label>Show/hide yokes</label>
-					<binding>
-						<command>property-toggle</command>
-		    		<property>sim/yokes-visible</property>
-					</binding>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/yokes-visible</property>
+                    </binding>
 				</item>
 				<item>
                     <label>Toggle damage</label>
-                    <binding>
-                         <command>nasal</command>
-                            <script>damage.toggleDamage();</script>
-                    </binding>
+					<binding>
+						<command>nasal</command>
+                        <script>damage.toggleDamage();</script>
+					</binding>
                 </item>
 				<item>
 					<label>--- Equipment ---</label>
@@ -370,7 +370,7 @@ no. D6-3071-00
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
 		</m877>
--
+
 	    <dual_control_tools>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/dual-control-tools.nas</file>
 	    </dual_control_tools>

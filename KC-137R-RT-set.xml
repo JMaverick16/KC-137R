@@ -62,19 +62,19 @@
 					</binding>
 				</item>
 				<item>
-                    <label>Toggle damage</label>
-                    <binding>
-                         <command>nasal</command>
-                            <script>damage.toggleDamage();</script>
-                    </binding>
-                </item>
-				<item>
 					<label>Show/hide yokes</label>
-					<binding>
-						<command>property-toggle</command>
-		    		<property>sim/yokes-visible</property>
-					</binding>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>sim/yokes-visible</property>
+                    </binding>
 				</item>
+				<item>
+                    <label>Toggle damage</label>
+					<binding>
+						<command>nasal</command>
+                        <script>damage.toggleDamage();</script>
+					</binding>
+                </item>
 				<item>
 					<label>--- Equipment ---</label>
 					<enabled>false</enabled>
