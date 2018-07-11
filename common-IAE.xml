@@ -270,6 +270,8 @@
 	<aircraft-data>
 		<path>/instrumentation/operating-time/total</path>
 	</aircraft-data>
+	
+	<yokes-visible type="bool">1</yokes-visible>
  </sim>
  
 	<modes>
