@@ -1,7 +1,56 @@
 <?xml version="1.0"?>
 
-<PropertyList>
+<!-- Extra Property Rule Things -->
 
+<PropertyList>
+	
+	<!-- IT-AUTOFLIGHT to FBW Adapter -->
+	<pi-simple-controller>
+		<name>AP PITCH RATE TO G ADAPTER</name>
+		<enable>
+			<condition>
+				<equals>
+					<property>/fdm/jsbsim/fbw/ap/enabled</property>
+					<value>1</value>
+				</equals>
+			</condition>
+		</enable>
+		<input>
+			<property>/it-autoflight/internal/pitch-rate</property>
+		</input>
+		<reference>
+			<property>/orientation/pitch-rate-degps</property>
+		</reference>
+		<output>
+			<property>/fdm/jsbsim/fbw/pitch/g-ap-cmd</property>
+		</output>
+		<config>
+			<Kp>
+				<expression>
+					<table>
+						<property>/velocities/mach</property> 
+						<entry><ind>0.2</ind><dep>-0.3</dep></entry>
+						<entry><ind>0.5</ind><dep>-0.7</dep></entry>
+						<entry><ind>0.9</ind><dep>-0.8</dep></entry>
+					</table>
+				</expression>
+			</Kp>
+			<Ki>
+				<expression>
+					<table>
+						<property>/velocities/mach</property> 
+						<entry><ind>0.2</ind><dep>-0.2</dep></entry>
+						<entry><ind>0.5</ind><dep>-0.6</dep></entry>
+						<entry><ind>0.9</ind><dep>-0.7</dep></entry>
+					</table>
+				</expression>
+			</Ki>
+			<min>-1.0</min>
+			<max>1.0</max>
+		</config>
+	</pi-simple-controller>
+	
+	<!-- Autospeedbrake -->
     <flipflop>
         <name>Auto Speedbrake Engage logic</name>
         <debug>false</debug>
@@ -80,6 +129,5 @@
         </R>
         <output>/controls/flight/spoilers</output>	
     </flipflop>
-
 
 </PropertyList>

@@ -9,7 +9,7 @@ OBJECT world
 kids 16
 OBJECT poly
 name "yoke-pos"
-loc 0.000112843 -0.000294573 -0.00191592
+loc 0.000163261 -0.000294573 -0.00191592
 texture "pos.png"
 crease 45.000000
 numvert 4
@@ -28,7 +28,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FDpitch_rembrandt"
-loc 0.000144527 -0.028446 -0.0108482
+loc 0.000129791 -0.028446 -0.0108482
 data 9
 Plane.020
 crease 30.000000
@@ -48,7 +48,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FDroll_rembrandt"
-loc 0.000144527 -0.00851062 -0.0412417
+loc 0.000129791 -0.00851062 -0.0412417
 data 9
 Plane.019
 crease 30.000000
@@ -1431,7 +1431,7 @@ refs 4
 kids 0
 OBJECT poly
 name "AI"
-texture "ati.png"
+texture "ati2.jpg"
 crease 45.000000
 numvert 33
 6.54e-005 0 0

@@ -150,7 +150,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n1.1</object-name>
-    	<property>engines/engine[0]/n1</property>
+    	<property>engines/engine[0]/n1-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -179,7 +179,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n1.2</object-name>
-    	<property>engines/engine[1]/n1</property>
+    	<property>engines/engine[1]/n1-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -208,7 +208,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n1.3</object-name>
-    	<property>engines/engine[2]/n1</property>
+    	<property>engines/engine[2]/n1-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -237,7 +237,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n1.4</object-name>
-    	<property>engines/engine[3]/n1</property>
+    	<property>engines/engine[3]/n1-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -374,7 +374,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n2.1</object-name>
-    	<property>engines/engine[0]/n2</property>
+    	<property>engines/engine[0]/n2-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -403,7 +403,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n2.2</object-name>
-    	<property>engines/engine[1]/n2</property>
+    	<property>engines/engine[1]/n2-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -432,7 +432,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n2.3</object-name>
-    	<property>engines/engine[2]/n2</property>
+    	<property>engines/engine[2]/n2-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -461,7 +461,7 @@
 	<animation>
     	<type>rotate</type>
     	<object-name>n2.4</object-name>
-    	<property>engines/engine[3]/n2</property>
+    	<property>engines/engine[3]/n2-actual</property>
     	<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
@@ -855,7 +855,7 @@
 			<and>
 				<not><property>controls/engines/engine[0]/starter</property></not>
 				<less-than>
-					<property>engines/engine[0]/n2</property>
+					<property>engines/engine[0]/n2-actual</property>
 					<value>2</value>
 				</less-than>
 			</and>
@@ -870,7 +870,7 @@
 			<and>
 				<not><property>controls/engines/engine[1]/starter</property></not>
 				<less-than>
-					<property>engines/engine[1]/n2</property>
+					<property>engines/engine[1]/n2-actual</property>
 					<value>2</value>
 				</less-than>
 			</and>
@@ -885,7 +885,7 @@
 			<and>
 				<not><property>controls/engines/engine[2]/starter</property></not>
 				<less-than>
-					<property>engines/engine[2]/n2</property>
+					<property>engines/engine[2]/n2-actual</property>
 					<value>2</value>
 				</less-than>
 			</and>
@@ -900,7 +900,7 @@
 			<and>
 				<not><property>controls/engines/engine[3]/starter</property></not>
 				<less-than>
-					<property>engines/engine[3]/n2</property>
+					<property>engines/engine[3]/n2-actual</property>
 					<value>2</value>
 				</less-than>
 			</and>
@@ -915,7 +915,7 @@
 			<and>
 				<not><property>controls/engines/engine[0]/starter</property></not>
 				<less-than>
-					<property>engines/engine[0]/n2</property>
+					<property>engines/engine[0]/n2-actual</property>
 					<value>2</value>
 				</less-than>
 			</and>
@@ -930,7 +930,7 @@
 			<and>
 				<not><property>controls/engines/engine[1]/starter</property></not>
 				<less-than>
-					<property>engines/engine[1]/n2</property>
+					<property>engines/engine[1]/n2-actual</property>
 					<value>2</value>
 				</less-than>
 			</and>
@@ -945,7 +945,7 @@
 			<and>
 				<not><property>controls/engines/engine[2]/starter</property></not>
 				<less-than>
-					<property>engines/engine[2]/n2</property>
+					<property>engines/engine[2]/n2-actual</property>
 					<value>2</value>
 				</less-than>
 			</and>
@@ -960,7 +960,7 @@
 			<and>
 				<not><property>controls/engines/engine[3]/starter</property></not>
 				<less-than>
-					<property>engines/engine[3]/n2</property>
+					<property>engines/engine[3]/n2-actual</property>
 					<value>2</value>
 				</less-than>
 			</and>
@@ -973,7 +973,7 @@
 		<object-name>XX1n</object-name>
 		<condition>
 			<less-than>
-				<property>engines/engine[0]/n1</property>
+				<property>engines/engine[0]/n1-actual</property>
 				<value>15</value>
 			</less-than>
 		</condition>
@@ -985,7 +985,7 @@
 		<object-name>XX2n</object-name>
 		<condition>
 			<less-than>
-				<property>engines/engine[1]/n1</property>
+				<property>engines/engine[1]/n1-actual</property>
 				<value>15</value>
 			</less-than>
 		</condition>
@@ -997,7 +997,7 @@
 		<object-name>XX3n</object-name>
 		<condition>
 			<less-than>
-				<property>engines/engine[2]/n1</property>
+				<property>engines/engine[2]/n1-actual</property>
 				<value>15</value>
 			</less-than>
 		</condition>
@@ -1009,7 +1009,7 @@
 		<object-name>XX4n</object-name>
 		<condition>
 			<less-than>
-				<property>engines/engine[3]/n1</property>
+				<property>engines/engine[3]/n1-actual</property>
 				<value>15</value>
 			</less-than>
 		</condition>
@@ -1030,7 +1030,7 @@
 			<or>
 				<property>controls/engines/engine[0]/starter</property>
 				<greater-than>
-					<property>engines/engine[0]/n2</property>
+					<property>engines/engine[0]/n2-actual</property>
 					<value>2</value>
 				</greater-than>
 			</or>
@@ -1052,7 +1052,7 @@
 			<or>
 				<property>controls/engines/engine[1]/starter</property>
 				<greater-than>
-					<property>engines/engine[1]/n2</property>
+					<property>engines/engine[1]/n2-actual</property>
 					<value>2</value>
 				</greater-than>
 			</or>
@@ -1074,7 +1074,7 @@
 			<or>
 				<property>controls/engines/engine[2]/starter</property>
 				<greater-than>
-					<property>engines/engine[2]/n2</property>
+					<property>engines/engine[2]/n2-actual</property>
 					<value>2</value>
 				</greater-than>
 			</or>
@@ -1096,7 +1096,7 @@
 			<or>
 				<property>controls/engines/engine[3]/starter</property>
 				<greater-than>
-					<property>engines/engine[3]/n2</property>
+					<property>engines/engine[3]/n2-actual</property>
 					<value>2</value>
 				</greater-than>
 			</or>
@@ -1110,7 +1110,7 @@
 		<object-name>n11</object-name>
 		<condition>
 			<greater-than>
-				<property>engines/engine[0]/n1</property>
+				<property>engines/engine[0]/n1-actual</property>
 				<value>15</value>
 			</greater-than>
 		</condition>
@@ -1123,7 +1123,7 @@
 		<object-name>n12</object-name>
 		<condition>
 			<greater-than>
-				<property>engines/engine[1]/n1</property>
+				<property>engines/engine[1]/n1-actual</property>
 				<value>15</value>
 			</greater-than>
 		</condition>
@@ -1136,7 +1136,7 @@
 		<object-name>n13</object-name>
 		<condition>
 			<greater-than>
-				<property>engines/engine[2]/n1</property>
+				<property>engines/engine[2]/n1-actual</property>
 				<value>15</value>
 			</greater-than>
 		</condition>
@@ -1149,7 +1149,7 @@
 		<object-name>n14</object-name>
 		<condition>
 			<greater-than>
-				<property>engines/engine[3]/n1</property>
+				<property>engines/engine[3]/n1-actual</property>
 				<value>15</value>
 			</greater-than>
 		</condition>
@@ -1496,7 +1496,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>engines/engine[0]/n1</property>
+		<property>engines/engine[0]/n1-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1543,7 +1543,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>engines/engine[1]/n1</property>
+		<property>engines/engine[1]/n1-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1590,7 +1590,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>engines/engine[2]/n1</property>
+		<property>engines/engine[2]/n1-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1637,7 +1637,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>engines/engine[3]/n1</property>
+		<property>engines/engine[3]/n1-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1922,7 +1922,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>engines/engine[0]/n2</property>
+		<property>engines/engine[0]/n2-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -1969,7 +1969,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>engines/engine[1]/n2</property>
+		<property>engines/engine[1]/n2-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2016,7 +2016,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>engines/engine[2]/n2</property>
+		<property>engines/engine[2]/n2-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2063,7 +2063,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%3.1f</format>
-		<property>engines/engine[3]/n2</property>
+		<property>engines/engine[3]/n2-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2554,19 +2554,19 @@
 		<condition>
 			<or>
 				<less-than>
-					<property>engines/engine[0]/n2</property>
+					<property>engines/engine[0]/n2-actual</property>
 					<value>45</value>
 				</less-than>
 				<less-than>
-					<property>engines/engine[1]/n2</property>
+					<property>engines/engine[1]/n2-actual</property>
 					<value>45</value>
 				</less-than>
 				<less-than>
-					<property>engines/engine[2]/n2</property>
+					<property>engines/engine[2]/n2-actual</property>
 					<value>45</value>
 				</less-than>
 				<less-than>
-					<property>engines/engine[3]/n2</property>
+					<property>engines/engine[3]/n2-actual</property>
 					<value>45</value>
 				</less-than>
 				<equals>

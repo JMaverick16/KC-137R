@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Stabilization Augmentation System Control Dialog -->
+<!-- FBW Control Dialog -->
 
 
 <PropertyList>
 
-	<name>stabilization</name>
+	<name>fbw</name>
 	<layout>vbox</layout>
 
     <group>
         <layout>hbox</layout>
         <text>
             <halign>left</halign>
-            <label>RSAS/PSAS Control</label>
+            <label>FBW Control</label>
         </text>
         <button>
             <halign>right</halign>
@@ -99,7 +99,7 @@
 
 				<slider>
 					<pref-width>150</pref-width>
-					<property>/controls/flight/aileron-fbw</property>
+					<property>/fdm/jsbsim/fcs/roll-pos-norm</property>
 					<min>-1</min>
 					<max>1</max>
 					<step>0.0001</step>
@@ -136,7 +136,7 @@
 					<col>0</col>
 					<pref-height>150</pref-height>
 					<vertical>true</vertical>
-					<property>/controls/flight/elevator-fbw</property>
+					<property>/fdm/jsbsim/fcs/pitch-pos-norm</property>
 					<min>-1</min>
 					<max>1</max>
 					<step>0.0001</step>
@@ -155,7 +155,7 @@
 					<col>0</col>
 					<pref-height>150</pref-height>
 					<vertical>true</vertical>
-					<property>/controls/flight/elevator-trim</property>
+					<property>/fdm/jsbsim/fcs/pitch-trim-pos-norm</property>
 					<min>-1</min>
 					<max>1</max>
 					<step>0.0001</step>
@@ -186,7 +186,7 @@
 				
 				<slider>
 					<pref-width>150</pref-width>
-					<property>/controls/flight/rudder-fbw</property>
+					<property>/fdm/jsbsim/fcs/yaw-pos-norm</property>
 					<min>-1</min>
 					<max>1</max>
 					<step>0.0001</step>

@@ -449,14 +449,14 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>translate</type>
         <object-name>VSI.needle</object-name>
-        <property>velocities/vertical-speed-fps</property>
+        <property>instrumentation/gps/indicated-vertical-speed</property>
         <interpolation>
-            <entry><ind>-100</ind><dep>-0.0385</dep></entry>
-            <entry><ind>-33.3333</ind><dep>-0.0265</dep></entry>
-            <entry><ind>-16.6666</ind><dep>-0.0147</dep></entry>
-            <entry><ind>16.6666</ind><dep>0.0147</dep></entry>
-            <entry><ind>33.3333</ind><dep>0.0265</dep></entry>
-            <entry><ind>100</ind><dep>0.0385</dep></entry>
+            <entry><ind>-6000</ind><dep>-0.0385</dep></entry>
+            <entry><ind>-2000</ind><dep>-0.0265</dep></entry>
+            <entry><ind>-1000</ind><dep>-0.0147</dep></entry>
+            <entry><ind> 1000</ind><dep> 0.0147</dep></entry>
+            <entry><ind> 2000</ind><dep> 0.0265</dep></entry>
+            <entry><ind> 6000</ind><dep> 0.0385</dep></entry>
         </interpolation>
         <axis>
             <x>0</x>
@@ -468,14 +468,14 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>rotate</type>
         <object-name>VSI.needle</object-name>
-        <property>velocities/vertical-speed-fps</property>
+        <property>instrumentation/gps/indicated-vertical-speed</property>
         <interpolation>
-            <entry><ind>-100</ind><dep>-60.0</dep></entry>
-            <entry><ind>-33.3333</ind><dep>-50.0</dep></entry>
-            <entry><ind>-16.6666</ind><dep>-34.0</dep></entry>
-            <entry><ind>16.6666</ind><dep>34.0</dep></entry>
-            <entry><ind>33.3333</ind><dep>50.0</dep></entry>
-            <entry><ind>100</ind><dep>60.0</dep></entry>
+            <entry><ind>-6000</ind><dep>-60.0</dep></entry>
+            <entry><ind>-2000</ind><dep>-50.0</dep></entry>
+            <entry><ind>-1000</ind><dep>-34.0</dep></entry>
+            <entry><ind> 1000</ind><dep> 34.0</dep></entry>
+            <entry><ind> 2000</ind><dep> 50.0</dep></entry>
+            <entry><ind> 6000</ind><dep> 60.0</dep></entry>
         </interpolation>
         <center>
             <x-m>0.002</x-m>
@@ -1239,7 +1239,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%4.0f</format>
-        <property>it-autoflight/internal/vert-speed-fpm</property>
+        <property>instrumentation/gps/indicated-vertical-speed</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.008</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -1260,7 +1260,7 @@ Modified by it0uchpods for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%4.0f</format>
-        <property>it-autoflight/internal/vert-speed-fpm</property>
+        <property>instrumentation/gps/indicated-vertical-speed</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.008</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>

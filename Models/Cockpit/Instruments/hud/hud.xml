@@ -507,7 +507,7 @@
    <object-name>vs1000</object-name>
    <condition>
    <greater-than>
-    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
     <value>999.999</value>
    </greater-than>
   </condition>
@@ -518,8 +518,30 @@
    <object-name>vs-1000</object-name>
    <condition>
    <less-than>
-    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
     <value>-999.999</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>vs100</object-name>
+   <condition>
+   <greater-than>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <value>99.999</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>vs-100</object-name>
+   <condition>
+   <less-than>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <value>-99.999</value>
    </less-than>
   </condition>
  </animation>
@@ -531,7 +553,7 @@
    <object-name>vs-1</object-name>
    <condition>
    <less-than>
-    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
     <value>0</value>
    </less-than>
   </condition>
@@ -544,7 +566,7 @@
    <object-name>vs1</object-name>
    <condition>
    <greater-than-equals>
-    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
     <value>0</value>
    </greater-than-equals>
   </condition>
@@ -556,11 +578,11 @@
    <condition>
    <and>
    <less-than>
-    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
     <value>0</value>
    </less-than>
    <greater-than>
-    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
     <value>-1000</value>
    </greater-than>
    </and>
@@ -572,7 +594,7 @@
    <object-name>vs-b</object-name>
    <condition>
    <less-than>
-    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/gps/indicated-vertical-speed</property>
     <value>-999.999</value>
    </less-than>
   </condition>
@@ -2348,8 +2370,8 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs1000</object-name>
-   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
-   <factor>0.0001</factor>
+   <property>instrumentation/gps/indicated-vertical-speed</property>
+   <factor>-0.0001</factor>
    <step>1000.0</step>
    <axis>
      <x>0</x>
@@ -2361,8 +2383,8 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs-1000</object-name>
-   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
-   <factor>-0.0001</factor>
+   <property>instrumentation/gps/indicated-vertical-speed</property>
+   <factor>0.0001</factor>
    <bias>999</bias>
    <step>1000.0</step>
    <axis>
@@ -2375,8 +2397,8 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs100</object-name>
-   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
-   <factor>-0.001</factor>
+   <property>instrumentation/gps/indicated-vertical-speed</property>
+   <factor>0.001</factor>
    <step>100.0</step>
    <axis>
      <x>0</x>
@@ -2388,7 +2410,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs-100</object-name>
-   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+   <property>instrumentation/gps/indicated-vertical-speed</property>
    <factor>-0.001</factor>
    <bias>99</bias>
    <step>100.0</step>
@@ -2402,7 +2424,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs10</object-name>
-   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+   <property>instrumentation/gps/indicated-vertical-speed</property>
    <factor>0.01</factor>
    <step>10.0</step>
    <axis>
@@ -2415,37 +2437,10 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs-10</object-name>
-   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+   <property>instrumentation/gps/indicated-vertical-speed</property>
    <factor>-0.01</factor>
    <bias>9</bias>
    <step>10.0</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>vs1</object-name>
-   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
-   <factor>0.01</factor>
-   <step>10.0</step>
-   <axis>
-     <x>0</x>
-     <y>1</y>
-     <z>0</z>
-   </axis>
- </animation>
-
-  <animation>
-   <type>textranslate</type>
-   <object-name>vs-1</object-name>
-   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
-   <factor>-0.1</factor>
-   <bias>.9</bias>
-   <step>1.0</step>
    <axis>
      <x>0</x>
      <y>1</y>

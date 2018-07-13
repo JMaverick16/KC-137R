@@ -105,7 +105,7 @@
 		<object-name>cone</object-name>
 		<object-name>blades</object-name>
 		<factor>150</factor>
-		<property>engines/engine[2]/n1</property>
+		<property>engines/engine[6]/n1</property>
 		<axis>
 			<x>-1</x>
 			<y>0</y>

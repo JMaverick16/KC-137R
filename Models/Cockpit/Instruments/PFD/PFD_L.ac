@@ -3795,7 +3795,7 @@ OBJECT poly
 name "AI"
 data 9
 Plane.001
-texture "pfd3d.png"
+texture "pfd3d2.jpg"
 crease 30.000000
 numvert 4
 0.001756 0.056148 0.05788
@@ -6096,7 +6096,7 @@ name "AI"
 loc 0.001856 0.0488318 0
 data 9
 Plane.001
-texture "pfd3d_mask.png"
+texture "pfd3d_mask.jpg"
 crease 30.000000
 numvert 4
 0 0.00731616 -0.03607

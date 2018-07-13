@@ -45,7 +45,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>orientation/alpha-deg</property>
+		<property>fdm/jsbsim/fbw/instrumented-alpha</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-27</dep></entry>
 			<entry><ind>10.0</ind><dep>-207</dep></entry>

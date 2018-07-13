@@ -938,14 +938,14 @@
 	<animation>
       <type>rotate</type>
       <object-name>Frontgear</object-name>
-      <property>surface-positions/rudder-pos-norm</property>
+      <property>surface-positions/rudder-norm</property>
 			<condition>
 					<greater-than>
 				 	<property>gear/gear/position-norm</property>
 				 	<value>0.9</value>
 				</greater-than>
 			</condition>
-      <factor>25</factor>
+      <factor>70</factor>
       <center>
           <x-m>-15.58</x-m>
           <y-m>  0.0</y-m>
@@ -1679,7 +1679,7 @@
   <type>translate</type>
   <object-name>lhibail</object-name>
   <object-name>lhobail</object-name>
-  <property>sim/multiplay/generic/float[12]</property>
+  <property>surface-positions/aileron-left-norm</property>
   <interpolation>    
   	<entry>
       <ind>-1.0</ind>
@@ -1712,8 +1712,8 @@
  <animation>
   <type>rotate</type>
   <object-name>lhibail</object-name>
-  <property>sim/multiplay/generic/float[12]</property>
-  <factor>-20</factor>
+  <property>surface-positions/aileron-left-norm</property>
+  <factor>-25</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  4.32</x1-m>
@@ -1728,8 +1728,8 @@
  <animation>
   <type>rotate</type>
   <object-name>lhobail</object-name>
-  <property>sim/multiplay/generic/float[12]</property>
-  <factor>-20</factor>
+  <property>surface-positions/aileron-left-norm</property>
+  <factor>-25</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  7.35</x1-m>
@@ -1785,7 +1785,7 @@
   <type>translate</type>
   <object-name>rhibail</object-name>
   <object-name>rhobail</object-name>
-  <property>sim/multiplay/generic/float[12]</property>
+  <property>surface-positions/aileron-left-norm</property>
   <interpolation>    
   	<entry>
       <ind>-1.0</ind>
@@ -1818,8 +1818,8 @@
  <animation>
   <type>rotate</type>
   <object-name>rhibail</object-name>
-  <property>sim/multiplay/generic/float[12]</property>
-  <factor>-20</factor>
+  <property>surface-positions/aileron-left-norm</property>
+  <factor>-25</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  4.32</x1-m>
@@ -1834,8 +1834,8 @@
  <animation>
   <type>rotate</type>
   <object-name>rhobail</object-name>
-  <property>sim/multiplay/generic/float[12]</property>
-  <factor>-20</factor>
+  <property>surface-positions/aileron-left-norm</property>
+  <factor>-25</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m>  7.35</x1-m>
@@ -1889,9 +1889,29 @@
 
  <animation>
   <type>rotate</type>
+  <object-name>elevwing</object-name>
   <object-name>lhelevator</object-name>
-  <property>sim/multiplay/generic/float[11]</property>
-  <factor>15</factor>
+  <object-name>rhelevator</object-name>
+  <property>surface-positions/elevator-trim-norm</property>
+  <factor>16</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m>20.1</x-m>
+   <y-m>0.41</y-m>
+   <z-m>1.36</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.12</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lhelevator</object-name>
+  <property>surface-positions/elevator-norm</property>
+  <factor>25</factor>
   <offset-deg>0</offset-deg>   
   <center>
    <x-m>21.3</x-m>
@@ -1908,8 +1928,8 @@
  <animation>
   <type>rotate</type>
   <object-name>rhelevator</object-name>
-  <property>sim/multiplay/generic/float[11]</property>
-  <factor>15</factor>
+  <property>surface-positions/elevator-norm</property>
+  <factor>25</factor>
   <offset-deg>0</offset-deg>   
   <center>
    <x-m>21.3</x-m>
@@ -1927,8 +1947,8 @@
   <type>rotate</type>
   <object-name>rudder</object-name>
   <object-name>rudderWithLight</object-name>
-  <property>controls/flight/rudder</property>
-  <factor>-22.5</factor>
+  <property>surface-positions/rudder-norm</property>
+  <factor>-25</factor>
   <offset-deg>0</offset-deg>   
   <axis>
 		<x1-m> 22.57</x1-m>
@@ -2236,7 +2256,7 @@
  <animation>
   <type>rotate</type>
   <object-name>lhsp1</object-name>
-  <property>sim/multiplay/generic/float[12]</property>
+  <property>surface-positions/aileron-left-norm</property>
 	        <interpolation>
 	            <entry>
 	                <ind>0</ind>
@@ -2293,7 +2313,7 @@
  <animation>
   <type>rotate</type>
   <object-name>rhsp1</object-name>
-  <property>sim/multiplay/generic/float[12]</property>
+  <property>surface-positions/aileron-left-norm</property>
 	        <interpolation>
 	            <entry>
 	                <ind>0</ind>
