@@ -1308,6 +1308,11 @@ var startup = func
 			toggle_switch3();
 		}, t); t += 0.5;
 		
+		settimer( func{
+			setprop("b707/anti-ice/switch", 2);
+			toggle_switch2();
+		}, t); t += 0.5;
+		
 		 # lights on 
 		 if(getprop("sim/time/sun-angle-rad") > 1.55){
 		 	settimer( func{
@@ -1759,6 +1764,22 @@ var short_startup = func
 			setprop("/b707/air-conditioning/cabin-temp-selector[0]",4);
 			setprop("/b707/air-conditioning/cabin-temp-selector[1]",4);
 			setprop("/b707/emergency/oxygen-switch",2);
+			setprop("b707/anti-ice/window-heat-cap-switch", 2);
+			setprop("b707/anti-ice/window-cap-control", 1);
+			settimer(func{setprop("b707/anti-ice/window-cap-control", 0)}, 0.5);
+			setprop("b707/anti-ice/window-heat-fo-switch", 2);
+			setprop("b707/anti-ice/window-fo-control", 1);
+			settimer(func{setprop("b707/anti-ice/window-fo-control", 0)}, 0.5);
+			setprop("b707/anti-ice/engine-inlet[0]", 1);
+			setprop("b707/anti-ice/engine-inlet[1]", 1);
+			setprop("b707/anti-ice/engine-inlet[2]", 1);
+			setprop("b707/anti-ice/engine-inlet[3]", 1);
+			setprop("b707/anti-ice/valve-selector", 2);
+			setprop("b707/fuel/heater[0]", 1);
+			setprop("b707/fuel/heater[1]", 1);
+			setprop("b707/fuel/heater[2]", 1);
+			setprop("b707/fuel/heater[3]", 1);
+			setprop("b707/anti-ice/switch", 2);
     }, 34);
 
 		
