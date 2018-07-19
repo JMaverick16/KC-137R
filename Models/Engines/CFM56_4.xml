@@ -18,7 +18,7 @@
 	</effect-->
 
 	<!-- Reverse thrust animation -->
-	<animation>
+	<!--animation>
 		<type>translate</type>
 		<object-name>Reverser</object-name>
 		<property>sim/multiplay/generic/float[14]</property>
@@ -28,7 +28,7 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
-	</animation>
+	</animation-->
 
 	<!-- Chrome shader -->
 	<animation>
