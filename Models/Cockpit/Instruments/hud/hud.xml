@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <PropertyList>
- <path>Aircraft/KC-137R/Models/Cockpit/Instruments/hud/hud.ac</path>
+ <path>hud.ac</path>
 
  <animation>
   <type>pick</type>
@@ -84,6 +84,7 @@
    <object-name>inhg01.002</object-name>
    <object-name>inhg01.003</object-name>
    <object-name>inhg</object-name>
+   <object-name>headingribbon</object-name>
    <object-name>FDbars</object-name>
    <object-name>ptc20</object-name>
    <object-name>ptc15</object-name>
@@ -144,6 +145,7 @@
 
 <animation>
    <type>select</type>
+   <object-name>headingribbon</object-name>
    <object-name>line</object-name>
    <object-name>AS_ALT</object-name>
    <object-name>ASribbon</object-name>
@@ -248,36 +250,16 @@
 	<type>select</type>
 	<object-name>FDbars</object-name>
 	<condition>
-		<and>
-			<or>
-				<equals>
-					<property>it-autoflight/output/fd1</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>it-autoflight/output/fd2</property>
-					<value>1</value>
-				</equals>
-			</or>
-			<not><property>gear/gear[1]/wow</property></not>
-			<not><property>gear/gear[2]/wow</property></not>
-			<less-than>
-				<property>orientation/roll-deg</property>
-				<value>45</value>
-			</less-than>
-			<greater-than>
-				<property>orientation/roll-deg</property>
-				<value>-45</value>
-			</greater-than>
-			<less-than>
-				<property>orientation/pitch-deg</property>
-				<value>45</value>
-			</less-than>
-			<greater-than>
-				<property>orientation/pitch-deg</property>
-				<value>-30</value>
-			</greater-than>
-		</and>
+		<or>
+			<equals>
+				<property>it-autoflight/output/fd1</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>it-autoflight/output/fd2</property>
+				<value>1</value>
+			</equals>
+		</or>
 	</condition>
 </animation>
 
@@ -507,7 +489,7 @@
    <object-name>vs1000</object-name>
    <condition>
    <greater-than>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <value>999.999</value>
    </greater-than>
   </condition>
@@ -518,30 +500,8 @@
    <object-name>vs-1000</object-name>
    <condition>
    <less-than>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <value>-999.999</value>
-   </less-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>vs100</object-name>
-   <condition>
-   <greater-than>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
-    <value>99.999</value>
-   </greater-than>
-  </condition>
- </animation>
-
- <animation>
-   <type>select</type>
-   <object-name>vs-100</object-name>
-   <condition>
-   <less-than>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
-    <value>-99.999</value>
    </less-than>
   </condition>
  </animation>
@@ -553,7 +513,7 @@
    <object-name>vs-1</object-name>
    <condition>
    <less-than>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <value>0</value>
    </less-than>
   </condition>
@@ -566,7 +526,7 @@
    <object-name>vs1</object-name>
    <condition>
    <greater-than-equals>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <value>0</value>
    </greater-than-equals>
   </condition>
@@ -578,11 +538,11 @@
    <condition>
    <and>
    <less-than>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <value>0</value>
    </less-than>
    <greater-than>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <value>-1000</value>
    </greater-than>
    </and>
@@ -594,10 +554,63 @@
    <object-name>vs-b</object-name>
    <condition>
    <less-than>
-    <property>instrumentation/gps/indicated-vertical-speed</property>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <value>-999.999</value>
    </less-than>
   </condition>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>headingribbon</object-name>
+   <property>orientation/roll-deg[0]</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0</x-m>
+     <y-m>0</y-m>
+     <z-m>0</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>texmultiple</type>
+   <object-name>headingribbon</object-name>
+   <transform>
+     <property>orientation/heading-magnetic-deg</property>
+     <subtype>textranslate</subtype>
+   <factor>0.019532</factor>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+   </transform>
+   <transform>
+     <property>orientation/heading-magnetic-deg</property>
+     <subtype>textranslate</subtype>
+   <factor>-0.019532</factor>
+   <step>40</step>
+   <axis>
+     <x>1</x>
+     <y>0</y>
+     <z>0</z>
+   </axis>
+   </transform>
+   <transform>
+     <property>orientation/heading-magnetic-deg</property>
+     <subtype>textranslate</subtype>
+   <factor>-0.0009766</factor>
+   <step>40</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+   </transform>
  </animation>
 
  <animation>
@@ -2370,8 +2383,8 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs1000</object-name>
-   <property>instrumentation/gps/indicated-vertical-speed</property>
-   <factor>-0.0001</factor>
+   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+   <factor>0.0001</factor>
    <step>1000.0</step>
    <axis>
      <x>0</x>
@@ -2383,8 +2396,8 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs-1000</object-name>
-   <property>instrumentation/gps/indicated-vertical-speed</property>
-   <factor>0.0001</factor>
+   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+   <factor>-0.0001</factor>
    <bias>999</bias>
    <step>1000.0</step>
    <axis>
@@ -2397,8 +2410,8 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs100</object-name>
-   <property>instrumentation/gps/indicated-vertical-speed</property>
-   <factor>0.001</factor>
+   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+   <factor>-0.001</factor>
    <step>100.0</step>
    <axis>
      <x>0</x>
@@ -2410,7 +2423,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs-100</object-name>
-   <property>instrumentation/gps/indicated-vertical-speed</property>
+   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
    <factor>-0.001</factor>
    <bias>99</bias>
    <step>100.0</step>
@@ -2424,7 +2437,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs10</object-name>
-   <property>instrumentation/gps/indicated-vertical-speed</property>
+   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
    <factor>0.01</factor>
    <step>10.0</step>
    <axis>
@@ -2437,10 +2450,37 @@
   <animation>
    <type>textranslate</type>
    <object-name>vs-10</object-name>
-   <property>instrumentation/gps/indicated-vertical-speed</property>
+   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
    <factor>-0.01</factor>
    <bias>9</bias>
    <step>10.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>vs1</object-name>
+   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+   <factor>0.01</factor>
+   <step>10.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>vs-1</object-name>
+   <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+   <factor>-0.1</factor>
+   <bias>.9</bias>
+   <step>1.0</step>
    <axis>
      <x>0</x>
      <y>1</y>
