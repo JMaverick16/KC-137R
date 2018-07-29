@@ -644,8 +644,8 @@ setlistener("/it-autoflight/output/vert", func {
 # Altitude Capture
 var altcapt = func {
 	vsnow = getprop("/it-autoflight/internal/vert-speed-fpm");
-	setprop("/it-autoflight/internal/captvs", math.round(abs(vsnow) / 5, 100));
-	setprop("/it-autoflight/internal/captvsneg", -1 * math.round(abs(vsnow) / 5, 100));
+	setprop("/it-autoflight/internal/captvs", math.round(abs(vsnow) / (-1 * getprop("/it-autoflight/config/cmd/alt-gain")), 100));
+	setprop("/it-autoflight/internal/captvsneg", -1 * math.round(abs(vsnow) / (-1 * getprop("/it-autoflight/config/cmd/alt-gain")), 100));
 	var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
 	var alt = getprop("/it-autoflight/internal/alt");
 	var dif = calt - alt;
