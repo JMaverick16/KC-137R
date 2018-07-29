@@ -493,7 +493,7 @@
 			<x-m>-18.742</x-m>
 			<y-m>0.45</y-m>
 			<z-m>1.155</z-m>
-                <pitch-deg>0</pitch-deg>
+			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
 	
@@ -502,8 +502,8 @@
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/MCP/MCP.xml</path>
 		<offsets>
 			<x-m>-18.812</x-m>
-			<y-m> -0.04</y-m>
-			<z-m>  1.0465</z-m>
+			<y-m> -0.035</y-m>
+			<z-m>  1.048</z-m>
 		</offsets>
 	</model>
 
@@ -512,8 +512,18 @@
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/asb.xml</path>
 		<offsets>
 			<x-m>-18.812</x-m>
-			<y-m>  0.11 </y-m>
-			<z-m>  1.047</z-m>
+			<y-m>  0.120</y-m>
+			<z-m>  1.050</z-m>
+		</offsets>
+	</model>
+	
+	<!-- FBW -->
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/fbw.xml</path>
+		<offsets>
+			<x-m>-18.812</x-m>
+			<y-m>  0.000</y-m>
+			<z-m>  1.021</z-m>
 		</offsets>
 	</model>
 	

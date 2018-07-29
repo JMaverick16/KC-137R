@@ -101,7 +101,6 @@
 		<object-name>sockle</object-name>
 		<visible>true</visible>
 		  <action>
-		    <name>on_off_slats</name>
 		    <button>0</button>
 		    <repeatable>true</repeatable>
 				<binding>

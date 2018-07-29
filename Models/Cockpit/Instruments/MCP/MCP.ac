@@ -3,7 +3,7 @@ MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 
 MATERIAL "GlassCockpit" rgb 0.8 0.8 0.8  amb 0.5 0.5 0.5  emis 1 1 1  spec 1 1 1  shi 32  trans 0
 MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 128  trans 0
 OBJECT world
-kids 53
+kids 52
 OBJECT poly
 name "Off"
 loc 0.000321545 0.0120015 -0.139509
@@ -78,7 +78,7 @@ refs 4
 kids 0
 OBJECT poly
 name "FDbtn"
-loc 0 -0.0158933 -0.00439983
+loc 0 -0.0103115 -0.00439983
 data 4
 Cube
 texture "MCP3.png"
@@ -449,7 +449,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APbtn"
-loc 0 -0.000745878 -0.00439983
+loc 0 0.00483591 -0.00439983
 data 4
 Cube
 texture "MCP2.png"
@@ -1155,7 +1155,7 @@ refs 4
 kids 0
 OBJECT poly
 name "ATbtn"
-loc 0 0.0150701 -0.00441488
+loc 0 0.0206519 -0.00441488
 data 4
 Cube
 texture "MCP.png"
@@ -1208,7 +1208,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APdis"
-loc 0 0 -0.00370152
+loc 0 0.00558178 -0.00370152
 data 9
 Plane.007
 texture "MCP.png"
@@ -1304,7 +1304,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APdisplane"
-loc 0 0 -0.00375757
+loc 0 0.00558178 -0.00375757
 data 9
 Plane.006
 texture "MCP.png"
@@ -2723,59 +2723,6 @@ refs 4
 0 0.174414 0.250391
 3 0.174414 0.250391
 7 0.174414 0.300391
-kids 0
-OBJECT poly
-name "FMSbtn"
-loc -0.00023205 0.0102102 -0.0707064
-data 8
-Cube.138
-texture "MCP.png"
-crease 30.000000
-numvert 8
-0.00124449 -0.0383594 0.187531
-0.00124449 -0.0383594 0.20192
-0.000219615 -0.0383594 0.20192
-0.000219615 -0.0383594 0.187531
-0.00124449 -0.026061 0.187531
-0.00124449 -0.026061 0.20192
-0.000219615 -0.026061 0.20192
-0.000219615 -0.026061 0.187531
-numsurf 5
-SURF 0x0
-mat 0
-refs 4
-0 0.177344 0.308984
-1 0.117578 0.308984
-2 0.117578 0.308984
-3 0.177344 0.308984
-SURF 0x0
-mat 0
-refs 4
-4 0.177344 0.358984
-7 0.177344 0.358984
-6 0.117578 0.358984
-5 0.117578 0.358984
-SURF 0x0
-mat 0
-refs 4
-0 0.177344 0.308984
-4 0.177344 0.358984
-5 0.117578 0.358984
-1 0.117578 0.308984
-SURF 0x0
-mat 0
-refs 4
-1 0.117578 0.308984
-5 0.117578 0.358984
-6 0.117578 0.358984
-2 0.117578 0.308984
-SURF 0x0
-mat 0
-refs 4
-4 0.177344 0.358984
-0 0.177344 0.308984
-3 0.177344 0.308984
-7 0.177344 0.358984
 kids 0
 OBJECT poly
 name "SPDknb"
