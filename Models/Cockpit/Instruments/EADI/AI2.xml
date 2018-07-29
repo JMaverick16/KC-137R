@@ -258,7 +258,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>position/altitude-agl-ft</property>
+		<property>position/gear-agl-ft</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.2</character-aspect-ratio>
@@ -268,7 +268,7 @@
 		<object-name>Radar Altitude</object-name>
 		<condition>
 		    <less-than>
-			<property>position/altitude-agl-ft</property>
+			<property>position/gear-agl-ft</property>
 			<value>2500</value>
 		    </less-than>
 		</condition>

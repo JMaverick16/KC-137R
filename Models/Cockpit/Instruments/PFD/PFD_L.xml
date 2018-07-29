@@ -1283,7 +1283,7 @@ Modified by it0uchpods for KC-137R
         <format type="string">%0.0f</format>
         <offset>0.1</offset> <!--avoid some quirky "-0" indications-->
         <truncate type="bool">true</truncate>
-        <property>position/altitude-agl-ft</property>
+        <property>position/gear-agl-ft</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.009</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -1896,7 +1896,7 @@ Modified by it0uchpods for KC-137R
         <object-name>RALT</object-name>
         <condition>
             <less-than>
-        		<property>position/altitude-agl-ft</property>
+        		<property>position/gear-agl-ft</property>
                 <value>2500</value>
             </less-than>
         </condition>

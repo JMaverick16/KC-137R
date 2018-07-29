@@ -42,6 +42,20 @@ var pitch = func {
 }
 
 var update_fbw = func {
+	if ((getprop("/fdm/jsbsim/attitude/pitch-rad") < -1.0472 or getprop("/fdm/jsbsim/attitude/pitch-rad") > 1.0472 or getprop("/fdm/jsbsim/aero/alpha-deg") < -7 or getprop("/fdm/jsbsim/aero/alpha-deg") > 14) and getprop("/gear/gear[0]/wow") == 0) {
+		if (getprop("/it-fbw/roll-disable") != 1) {
+			setprop("/it-fbw/roll-disable", 1);
+		}
+		if (getprop("/it-fbw/man-roll-btn") != 1) {
+			setprop("/it-fbw/man-roll-btn", 1);
+		}
+		if (getprop("/it-fbw/pitch-disable") != 1) {
+			setprop("/it-fbw/pitch-disable", 1);
+		}
+		if (getprop("/it-fbw/man-pitch-btn") != 1) {
+			setprop("/it-fbw/man-pitch-btn", 1);
+		}
+	}
 	if (getprop("/it-fbw/pitch-disable") == 1 or getprop("/it-fbw/roll-disable") == 1) {
 		if (getprop("/it-autoflight/output/ap1") == 1) {
 			setprop("/it-autoflight/input/ap1", 0);
