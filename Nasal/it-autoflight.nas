@@ -2,39 +2,36 @@
 # Copyright (c) 2017-2018 Joshua Davidson (it0uchpods)
 # This program is 100% GPL!
 
+var trueSpeedKts = 0;
+var locdefl = 0;
+var locdefl_b = 0;
+var signal = 0;
+var signal_b = 0;
+var bank_limit_sw = 0;
+var gnds_mps = 0;
+var current_course = 0;
+var wp_fly_from = 0;
+var wp_fly_to = 0;
+var next_course = 0;
+var max_bank_limit = 0;
+var delta_angle = 0;
+var max_bank = 0;
+var radius = 0;
+var time = 0;
+var delta_angle_rad = 0;
+var R = 0;
+var dist_coeff = 0;
+var turn_dist = 0;
+var vsnow = 0;
+var rollKp = 0;
+var pitchKp = 0;
+var vsKp = 0;
 setprop("/it-autoflight/internal/heading-deg", 0);
 setprop("/it-autoflight/internal/track-deg", 0);
 setprop("/it-autoflight/internal/vert-speed-fpm", 0);
 setprop("/it-autoflight/internal/heading-predicted", 0);
 setprop("/it-autoflight/internal/altitude-predicted", 0);
 setprop("/it-autoflight/config/tuning-mode", 0);
-
-setlistener("/sim/signals/fdm-initialized", func {
-	var trueSpeedKts = getprop("/instrumentation/airspeed-indicator/true-speed-kt");
-	var locdefl = getprop("/instrumentation/nav[0]/heading-needle-deflection-norm");
-	var locdefl_b = getprop("/instrumentation/nav[1]/heading-needle-deflection-norm");
-	var signal = getprop("/instrumentation/nav[0]/gs-needle-deflection-norm");
-	var signal_b = getprop("/instrumentation/nav[1]/gs-needle-deflection-norm");
-	var bank_limit_sw = 0;
-	var gnds_mps = 0;
-	var current_course = 0;
-	var wp_fly_from = 0;
-	var wp_fly_to = 0;
-	var next_course = 0;
-	var max_bank_limit = 0;
-	var delta_angle = 0;
-	var max_bank = 0;
-	var radius = 0;
-	var time = 0;
-	var delta_angle_rad = 0;
-	var R = 0;
-	var dist_coeff = 0;
-	var turn_dist = 0;
-	var vsnow = 0;
-	var rollKp = 0;
-	var pitchKp = 0;
-	var vsKp = 0;
-});
 
 var ap_init = func {
 	setprop("/it-autoflight/input/kts-mach", 0);
