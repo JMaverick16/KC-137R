@@ -5,6 +5,29 @@
 <PropertyList>
 	
 	<!-- IT-AUTOFLIGHT to FBW Adapter -->
+	<filter>
+		<name>IT-CONTROLLER: AILERON ROLLOUT</name>
+		<type>gain</type>
+		<gain>/it-autoflight/config/rollout/roll-kp</gain>
+		<input>
+			<condition>
+				<and>
+				<equals>
+					<property>/fdm/jsbsim/fbw/ap/enabled</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/fdm/jsbsim/position/wow</property>
+					<value>1</value>
+				</equals>
+				</and>
+			</condition>
+			<property>/orientation/roll-deg</property>
+		</input>
+		<reference>0</reference>
+		<output>/fdm/jsbsim/fbw/roll/aileron-rollout</output>
+	</filter>
+	
 	<pi-simple-controller>
 		<name>AP PITCH RATE TO G ADAPTER</name>
 		<enable>
@@ -49,6 +72,30 @@
 			<max>1.0</max>
 		</config>
 	</pi-simple-controller>
+	
+	<filter>
+		<name>IT-CONTROLLER: RUDDER CMD</name>
+		<debug>false</debug>
+		<type>noise-spike</type>
+		<input>
+			<condition>
+				<and>
+					<equals>
+						<property>/fdm/jsbsim/fbw/ap/enabled</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/lat</property>
+						<value>4</value>
+					</equals>
+				</and>
+			</condition>
+			<property>/it-autoflight/internal/rudder-cmd</property>
+		</input>
+		<input>0</input>
+		<output>/fdm/jsbsim/fbw/yaw/rudder-cmd</output> <!-- Inputs to the FBW Yaw -->
+		<max-rate-of-change>0.6</max-rate-of-change>
+	</filter>
 	
 	<!-- Autospeedbrake -->
     <flipflop>

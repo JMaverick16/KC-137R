@@ -282,12 +282,13 @@
 				<vs-high>0.0010</vs-high> <!-- Kp at high speed -->
 			</cmd>
 			<autoland> 
-				<kp-pitch>0.0051</kp-pitch>
-				<kp-rudder>-0.05</kp-rudder>
+				<pitch-kp>0.0051</pitch-kp>
+				<yaw-kp>-0.05</yaw-kp>
 			</autoland>
 			<rollout>
-				<defl-pitch>0.15</defl-pitch>
-				<kp-rudder>-0.02</kp-rudder>
+				<roll-kp>-0.1</roll-kp>
+				<pitch-defl>0.15</pitch-defl>
+				<yaw-kp>-0.02</yaw-kp>
 			</rollout>
 		</config>
 		<settings>
@@ -302,6 +303,9 @@
 			<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
 			<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
 		</settings>
+		<internal>
+			<aileron-rollout>0</aileron-rollout>
+		</internal>
 		<output>
 			<ap1>0</ap1>
 			<ap2>0</ap2>

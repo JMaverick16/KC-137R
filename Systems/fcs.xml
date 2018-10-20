@@ -9,7 +9,9 @@
 	<property value="0">/it-fbw/pitch-disable</property>
 	<property value="0">/it-autoflight/internal/roll-rate</property>
 	<property value="0">/it-autoflight/internal/pitch-rate</property>
+	<property value="0">fbw/roll/aileron-rollout</property>
 	<property value="0">fbw/pitch/g-ap-cmd</property>
+	<property value="0">fbw/yaw/rudder-cmd</property>
 	
 	<property value="0">fbw/roll/pid</property>
 	<property value="0">fbw/roll/rate-feedback</property>
@@ -359,6 +361,11 @@
 		
 		<switch name="fbw/roll-output">
 			<default value="fbw/roll/pid"/>
+			<test logic="AND" value="fbw/roll/aileron-rollout">
+				/it-fbw/roll-disable eq 0
+				fbw/ap/enabled eq 1
+				position/wow eq 1
+			</test>
 			<test value="fbw/roll/aileron-nul">
 				fbw/roll/gain-switch gt 0
 			</test>
@@ -572,9 +579,29 @@
 			</clipto>
 		</pure_gain>
 		
+		<switch name="fbw/pitch/gear-or-switch">
+			<default value="0"/>
+			<test logic="OR" value="1">
+				gear/unit[1]/WOW eq 1
+				gear/unit[2]/WOW eq 1
+			</test>
+		</switch>
+		
 		<switch name="fbw/pitch-output">
 			<default value="fbw/pitch/q-final"/>
-			<test value="fbw/pitch/q-passive">
+			<test logic="AND" value="0.1">
+				/it-fbw/pitch-disable eq 0
+				fbw/ap/enabled eq 1
+				gear/unit[0]/WOW eq 0
+				fbw/pitch/gear-or-switch eq 1
+			</test>
+			<test logic="AND" value="0.05">
+				/it-fbw/pitch-disable eq 0
+				fbw/ap/enabled eq 1
+				gear/unit[0]/WOW eq 1
+				fbw/pitch/gear-or-switch eq 1
+			</test>
+			<test logic="AND" value="fbw/pitch/q-passive">
 				position/wow eq 1
 				/it-fbw/pitch-disable eq 0
 			</test>
@@ -776,9 +803,12 @@
 		
 		<switch name="fbw/yaw-output">
 			<default value="fbw/yaw/sum"/>
-			<test logic="OR" value="fbw/yaw/rudder-nul">
-				fbw/yaw/gain-switch gt 0
+			<test logic="AND" value="fbw/yaw/rudder-cmd">
+				/it-fbw/roll-disable eq 0
 				fbw/yaw/autoland-switch eq 1
+			</test>
+			<test value="fbw/yaw/rudder-nul">
+				fbw/yaw/gain-switch gt 0
 			</test>
 			<clipto>
 				<min>-1.0</min>

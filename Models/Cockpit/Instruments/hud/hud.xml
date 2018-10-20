@@ -2,45 +2,37 @@
 <PropertyList>
  <path>hud.ac</path>
 
- <animation>
-  <type>pick</type>
-	<object-name>Glass.001</object-name>
-  <action>
-   <button>1</button>
-    <binding>
-	 <condition>
-	  <greater-than-equals>
-		<property>systems/electrical/outputs/efis</property>
-		<value>15</value>
-	  </greater-than-equals>
-	 </condition>
-     <command>property-toggle</command>
-     <property>controls/switches/hud-flip[1]</property>
-	<value>0</value>
-	<value>1</value>
-    </binding>
-   </action>
-  </animation>
-
- <animation>
-  <type>pick</type>
-	<object-name>Glass.001</object-name>
-  <action>
-   <button>0</button>
-    <binding>
-	 <condition>
-	  <greater-than-equals>
-		<property>systems/electrical/outputs/efis</property>
-		<value>15</value>
-	  </greater-than-equals>
-	 </condition>
-     <command>property-toggle</command>
-     <property>controls/switches/hud[1]</property>
-	<value>0</value>
-	<value>1</value>
-    </binding>
-   </action>
-  </animation>
+	<animation>
+		<type>pick</type>
+		<object-name>Glass.001</object-name>
+		<visible>false</visible>
+		<action>
+			<button>0</button>
+			<binding>
+				<condition>
+					<greater-than-equals>
+						<property>systems/electrical/outputs/efis</property>
+						<value>15</value>
+					</greater-than-equals>
+				</condition>
+				<command>property-toggle</command>
+				<property>controls/switches/hud</property>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<binding>
+				<condition>
+					<greater-than-equals>
+						<property>systems/electrical/outputs/efis</property>
+						<value>15</value>
+					</greater-than-equals>
+				</condition>
+				<command>property-toggle</command>
+				<property>controls/switches/hud-flip</property>
+			</binding>
+		</action>
+	</animation>
 
 <animation>
 	<type>rotate</type>
@@ -129,7 +121,7 @@
    <object-name>vs-b</object-name>
    <object-name>ap.annun</object-name>
    <object-name>fd.annun</object-name>
-	<property>controls/switches/hud-flip[1]</property>
+	<property>controls/switches/hud-flip</property>
 	<factor>-120</factor>
 	<center>
 		<x-m>-0.01</x-m>
@@ -230,7 +222,7 @@
    <object-name>fd.annun</object-name>
    <condition>
      <and>
-      <property>controls/switches/hud[1]</property>
+      <property>controls/switches/hud</property>
 	  <greater-than-equals>
 		<property>systems/electrical/outputs/efis</property>
 		<value>15</value>
@@ -239,7 +231,7 @@
       <property>sim/crashed</property>
       </not>
 	<less-than>
-		<property>controls/switches/hud-flip[1]</property>
+		<property>controls/switches/hud-flip</property>
 		<value>0.35</value>
 	</less-than>		
      </and>
@@ -421,7 +413,7 @@
    <object-name>ils</object-name>
    <condition>
      <and>
-      <property>controls/switches/hud1</property>
+      <property>controls/switches/hud</property>
        <property>instrumentation/nav/has-gs</property>
      </and>
   </condition>
