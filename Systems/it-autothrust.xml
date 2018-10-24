@@ -104,8 +104,8 @@
 				</and>
 			</condition>
 		</enable>
-		<input>/it-autoflight/internal/kts</input>
-		<reference>/it-autoflight/input/spd-kts</reference>
+		<input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
+		<reference>/it-autoflight/internal/kts</reference>
 		<output>/controls/engines/throttle-cmd-pid</output>
 		<config>
 			<Kp>0.06</Kp>
@@ -142,7 +142,7 @@
 			<scale>1000.0</scale>
 		</input>
 		<reference>
-			<property>/it-autoflight/input/spd-mach</property>
+			<property>/it-autoflight/internal/mach</property>
 			<scale>1000.0</scale>
 		</reference>
 		<output>/controls/engines/throttle-cmd-pid</output>
