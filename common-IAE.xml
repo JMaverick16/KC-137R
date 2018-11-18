@@ -239,7 +239,7 @@
 		<float n="18" alias="/instrumentation/doors/refuel-boom/position-norm"/>      			<!-- in the TT the refuel boom -->
 		<!-- <string n="0" alias="/sim/multiplay/callsign"/>									will be init in the registration.nas DO NOT USE string[0] for other properties -->
     </generic>
-    <visibility-range-nm type="int">250</visibility-range-nm>
+    <visibility-range-nm type="int">300</visibility-range-nm>
   </multiplay>
  
   <flight-recorder include="Systems/flightrecorder.xml"/>
