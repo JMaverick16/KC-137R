@@ -1270,13 +1270,13 @@ var loop_flare = func {
         setprop("ai/submodels/submodel[0]/flare-release-snd", FALSE);
         setprop("ai/submodels/submodel[0]/flare-release-out-snd", FALSE);
     }
-    var flareOn = getprop("ai/submodels/submodel[0]/flare-release-cmd");
+    var flareOn = getprop("ai/submodels/submodel[0]/flare-release");
     if (flareOn == TRUE and getprop("ai/submodels/submodel[0]/flare-release") == FALSE
             and getprop("ai/submodels/submodel[0]/flare-release-out-snd") == FALSE
             and getprop("ai/submodels/submodel[0]/flare-release-snd") == FALSE) {
         flareCount = getprop("ai/submodels/submodel[0]/count");
         flareStart = getprop("sim/time/elapsed-sec");
-        setprop("ai/submodels/submodel[0]/flare-release-cmd", FALSE);
+        setprop("ai/submodels/submodel[0]/flare-release", FALSE);
         if (flareCount > 0) {
             # release a flare
             setprop("ai/submodels/submodel[0]/flare-release-snd", TRUE);
@@ -1300,6 +1300,7 @@ var loop_flare = func {
         # A flare was released in last loop, we stop releasing flares, so user have to press button again to release new.
         setprop("ai/submodels/submodel[0]/flare-release", FALSE);
         flareCount = -1;
+    }
     }
 
 # only for Tanker but don't worry if its no Tanker aircraft
