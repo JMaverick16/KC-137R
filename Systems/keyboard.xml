@@ -121,28 +121,12 @@
 		<name>f</name>
 		<desc>Release Flare / Chaff</desc>
 		<binding>
-			<condition>
-				<or>
-					<property>/sim/model-type/E8R</property>
-					<property>/sim/model-type/ECR</property>
-					<property>/sim/model-type/KCRT</property>
-					<property>/sim/model-type/RCR</property>
-				</or>
-			</condition>
 			<command>property-assign</command>
 			<property>ai/submodels/submodel[0]/flare-release</property>
 			<value>true</value>
 		</binding>
 		<mod-up>
 			<binding>
-				<condition>
-					<or>
-						<property>/sim/model-type/E8R</property>
-						<property>/sim/model-type/ECR</property>
-						<property>/sim/model-type/KCRT</property>
-						<property>/sim/model-type/RCR</property>
-					</or>
-				</condition>
 				<command>property-assign</command>
 				<property>ai/submodels/submodel[0]/flare-release</property>
 				<value>false</value>
