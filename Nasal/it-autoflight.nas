@@ -1,4 +1,4 @@
-# IT AUTOFLIGHT System Controller V3.2.1
+# IT AUTOFLIGHT System Controller V3.2.2
 # Copyright (c) 2017-2018 Joshua Davidson (it0uchpods)
 # This program is 100% GPL!
 
@@ -25,7 +25,7 @@ var turn_dist = 0;
 var vsnow = 0;
 var rollKp = 0;
 var pitchKp = 0;
-var vsKp = 0;
+var hdgKp = 0;
 setprop("/it-autoflight/internal/heading-deg", 0);
 setprop("/it-autoflight/internal/track-deg", 0);
 setprop("/it-autoflight/internal/vert-speed-fpm", 0);
@@ -418,8 +418,8 @@ setlistener("/autopilot/route-manager/current-wp", func {
 var ap_various = func {
 	# Calculate Roll and Pitch Kp
 	if (getprop("/it-autoflight/settings/disable-final") != 1) {
-		rollKp = getprop("/it-autoflight/config/roll/kp-low") + (getprop("/velocities/mach") - 0.2) * ((getprop("/it-autoflight/config/roll/kp-high") - getprop("/it-autoflight/config/roll/kp-low")) / (0.9 - 0.2));
-		pitchKp = getprop("/it-autoflight/config/pitch/kp-low") + (getprop("/velocities/mach") - 0.2) * ((getprop("/it-autoflight/config/pitch/kp-high") - getprop("/it-autoflight/config/pitch/kp-low")) / (0.9 - 0.2));
+		rollKp = getprop("/it-autoflight/config/roll/kp-low") + (getprop("/velocities/airspeed-kt") - 140) * ((getprop("/it-autoflight/config/roll/kp-high") - getprop("/it-autoflight/config/roll/kp-low")) / (360 - 140));
+		pitchKp = getprop("/it-autoflight/config/pitch/kp-low") + (getprop("/velocities/airspeed-kt") - 140) * ((getprop("/it-autoflight/config/pitch/kp-high") - getprop("/it-autoflight/config/pitch/kp-low")) / (360 - 140));
 		
 		if (getprop("/it-autoflight/config/roll/kp-low") > getprop("/it-autoflight/config/roll/kp-high")) {
 			rollKp = math.clamp(rollKp, getprop("/it-autoflight/config/roll/kp-high"), getprop("/it-autoflight/config/roll/kp-low"));
@@ -439,16 +439,12 @@ var ap_various = func {
 		setprop("/it-autoflight/config/pitch/kp", 0);
 	}
 	
-	# Calculate VS Kp
-	vsKp = getprop("/it-autoflight/config/cmd/vs-low") + (getprop("/velocities/mach") - 0.2) * ((getprop("/it-autoflight/config/cmd/vs-high") - getprop("/it-autoflight/config/cmd/vs-low")) / (0.9 - 0.2));
+	# Calculate HDG Kp
+	hdgKp = getprop("/it-autoflight/config/cmd/hdg") + (getprop("/velocities/airspeed-kt") - 140) * ((getprop("/it-autoflight/config/cmd/hdg") - 1.0 - getprop("/it-autoflight/config/cmd/hdg")) / (360 - 140));
 	
-	if (getprop("/it-autoflight/config/cmd/vs-low") > getprop("/it-autoflight/config/cmd/vs-high")) {
-		vsKp = math.clamp(vsKp, getprop("/it-autoflight/config/cmd/vs-high"), getprop("/it-autoflight/config/cmd/vs-low"));
-	} else if (getprop("/it-autoflight/config/cmd/vs-low") < getprop("/it-autoflight/config/cmd/vs-high")) {
-		vsKp = math.clamp(vsKp, getprop("/it-autoflight/config/cmd/vs-low"), getprop("/it-autoflight/config/cmd/vs-high"));
-	}
+	hdgKp = math.clamp(hdgKp, getprop("/it-autoflight/config/cmd/hdg") - 1.0, getprop("/it-autoflight/config/cmd/hdg"));
 	
-	setprop("/it-autoflight/config/cmd/vs-kp", vsKp);
+	setprop("/it-autoflight/config/cmd/hdg-kp", hdgKp);
 	
 	trueSpeedKts = getprop("/instrumentation/airspeed-indicator/true-speed-kt");
 	if (trueSpeedKts > 420) {

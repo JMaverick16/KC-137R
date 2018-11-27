@@ -570,7 +570,7 @@
 				<sum>
 					<div>
 						<property>/orientation/roll-deg</property>
-						<property>/it-autoflight/config/cmd/roll-kp</property>
+						<property>/it-autoflight/config/cmd/hdg-kp</property>
 					</div>
 					<property>/it-autoflight/internal/heading-deg</property>
 				</sum>
@@ -587,7 +587,7 @@
 				<sum>
 					<div>
 						<property>/orientation/roll-deg</property>
-						<property>/it-autoflight/config/cmd/roll-kp</property>
+						<property>/it-autoflight/config/cmd/hdg-kp</property>
 					</div>
 					<property>/it-autoflight/internal/track-deg</property>
 				</sum>
@@ -714,9 +714,7 @@
 		<reference>0</reference>
 		<output>/it-autoflight/internal/target-roll-deg</output>
 		<config>
-			<Kp>
-				<property>/it-autoflight/config/cmd/roll-kp</property>
-			</Kp>
+			<Kp>/it-autoflight/config/cmd/hdg-kp</Kp>
 			<Ki>-0.000001</Ki>
 			<min>
 				<property>/it-autoflight/internal/bank-limit</property>
@@ -761,9 +759,7 @@
 		<reference>0</reference>
 		<output>/it-autoflight/internal/target-roll-deg</output>
 		<config>
-			<Kp>
-				<property>/it-autoflight/config/cmd/vorloc</property>
-			</Kp>
+			<Kp>/it-autoflight/config/cmd/vorloc</Kp>
 			<Ki>-0.0001</Ki>
 			<min>
 				<property>/it-autoflight/internal/bank-limit</property>
@@ -949,7 +945,7 @@
 	<filter>
 		<name>IT-CONTROLLER: AILERON ROLLOUT</name>
 		<type>gain</type>
-		<gain>/it-autoflight/config/rollout/roll-kp</gain>
+		<gain>/it-autoflight/config/rollout/hdg-kp</gain>
 		<enable>
 			<condition>
 				<or>
@@ -1072,7 +1068,13 @@
 		<output>/it-autoflight/internal/target-fpm-d</output>
 		<config>
 			<Kp>
-				<property>/it-autoflight/config/cmd/vs-kp</property>
+				<expression>
+					<table>
+						<property>/velocities/airspeed-kt</property>
+						<entry><ind>140</ind><dep>120</dep></entry>
+						<entry><ind>360</ind><dep>340</dep></entry>
+					</table>
+				</expression>
 			</Kp>
 			<Ti>2.0</Ti>
 			<Td>0.002</Td>
@@ -1149,7 +1151,7 @@
 				</equals>
 			</condition>
 			<property>/it-autoflight/internal/lookahead-15-sec-mach</property>
-			<scale>1000.0</scale>
+			<scale>750.0</scale>
 		</input>
 		<reference>
 			<condition>
@@ -1168,11 +1170,9 @@
 				</equals>
 			</condition>
 			<property>/it-autoflight/internal/flch-mach</property>
-			<scale>1000.0</scale>
+			<scale>750.0</scale>
 		</reference>
-		<output>
-			<property>/it-autoflight/internal/target-fpm-b</property>
-		</output>
+		<output>/it-autoflight/internal/target-fpm-b</output>
 		<config>
 			<Kp>
 				<condition>
@@ -1554,7 +1554,13 @@
 						<value>6</value>
 					</not-equals>
 				</condition>
-				<property>/it-autoflight/config/cmd/vs-kp</property>
+				<expression>
+					<table>
+						<property>/velocities/airspeed-kt</property>
+						<entry><ind>140</ind><dep>0.0029</dep></entry>
+						<entry><ind>360</ind><dep>0.0009</dep></entry>
+					</table>
+				</expression>
 			</Kp>
 			<Kp>
 				<condition>

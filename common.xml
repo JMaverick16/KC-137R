@@ -276,11 +276,9 @@
 	<it-autoflight>
 		<config>
 			<cmd>
-				<roll-kp>-1.6</roll-kp>
+				<hdg>-1.6</hdg>
 				<vorloc>-2.4</vorloc>
 				<alt-gain>-5</alt-gain>
-				<vs-low>0.0029</vs-low> <!-- Kp at low speed -->
-				<vs-high>0.0010</vs-high> <!-- Kp at high speed -->
 			</cmd>
 			<autoland> 
 				<pitch-kp>0.0051</pitch-kp>
