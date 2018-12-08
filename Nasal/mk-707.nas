@@ -1115,33 +1115,12 @@ setlistener("/b707/pressurization/cabin-air-temp-selector", func(state){
 
 setlistener("/controls/flight/elevator-trim", func(et){
 	var et = et.getValue();
-	var ap = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;
-	if (!ap) {
+	var FBWg = getprop("/fdm/jsbsim/fbw/pitch/gain-switch");
+	if (FBWg > 0) { # Play sound only if trim is in manual mode
 		setprop("/b707/trim/elevator-trim-turn", et);
 		lastTrimValue.setValue(et);
 	}
 },0,0);
-
-var trim_loop = func{
-	var et = getprop("/controls/flight/elevator-trim") or 0;
-	var ap = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;
-	var diff = abs(lastTrimValue.getValue() - et);
-	#print("Differenz: "~diff);
-	if(ap and diff > 0.002){
-			if(diff < 0.05 ){
-				interpolate("/b707/trim/elevator-trim-turn", et, 2); 
-			}elsif(diff >= 0.05 and diff < 0.3){
-				interpolate("/b707/trim/elevator-trim-turn", et, 4); 			
-			}else{
-				interpolate("/b707/trim/elevator-trim-turn", et, 6); 			
-			}
-			lastTrimValue.setValue(et); # but we need the correct value
-	}
-	
-	settimer(trim_loop, 8.2);
-}
-
-trim_loop();  # fire it up
 
 ##################### rudder and spoiler hydraulic switches in overhead panel ###################
 

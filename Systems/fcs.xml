@@ -16,7 +16,6 @@
 	<property value="0">fbw/roll/pid</property>
 	<property value="0">fbw/roll/rate-feedback</property>
 	<property value="0">fbw/pitch/q-demand</property>
-	<property value="0">fbw/pitch/trim-feedback</property>
 	<property value="0">fbw/yaw/beta-pid</property>
 	
 	<!-- Default gains for tuning -->
@@ -449,10 +448,6 @@
 							 1.0 -0.1
 						</tableData>
 					</table>
-					<product>
-						<property>fbw/pitch/elevator-trim-nul</property>
-						<value>-0.5</value> <!-- Equals +/-0.5G -->
-					</product>
 					<property>fbw/pitch/thetadot-feed</property>
 				</sum>
 			</function>
@@ -620,14 +615,14 @@
 				fbw/pitch/gain-switch eq 0
 				/position/gear-agl-ft ge 50
 				fbw/pitch/q-final ge 0.01
-				fbw/pitch/trim-feedback le 0.5
+				/controls/flight/elevator-trim le 0.5
 				position/wow eq 0
 			</test>
 			<test logic="AND" value="2">
 				fbw/pitch/gain-switch eq 0
 				/position/gear-agl-ft ge 50
 				fbw/pitch/q-final le -0.01
-				fbw/pitch/trim-feedback ge -1.0
+				/controls/flight/elevator-trim ge -1.0
 				position/wow eq 0
 			</test>
 		</switch>
@@ -670,7 +665,7 @@
 		<fcs_function name="fbw/pitch/trim-cmd">
 			<function>
 				<sum>
-					<property>fbw/pitch/trim-feedback</property>
+					<property>/controls/flight/elevator-trim</property>
 					<property>fbw/pitch/trim-offset</property>
 				</sum>
 			</function>
@@ -678,7 +673,7 @@
 				<min>-1.0</min>
 				<max>0.5</max>
 			</clipto>
-			<output>fbw/pitch/trim-feedback</output>
+			<output>/controls/flight/elevator-trim</output>
 		</fcs_function>
 		
 		<switch name="fbw/pitch-trim-output">
