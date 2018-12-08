@@ -78,13 +78,12 @@
 		<fcs_function name="fbw/roll/p-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
 						     0    1  
-						0.2 -5.0  0.0
-						0.5 -3.0  0.0
-						0.9 -2.5  0.0
+						140 -5.0  0.0
+						400 -3.5  0.0
 					</tableData>
 				</table>
 			</function>
@@ -93,13 +92,12 @@
 		<fcs_function name="fbw/roll/i-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
 						     0    1
-						0.2 -8.0  0.0
-						0.5 -5.0  0.0
-						0.9 -3.5  0.0
+						140 -8.0  0.0
+						400 -4.5  0.0
 					</tableData>
 				</table>
 			</function>
@@ -108,13 +106,12 @@
 		<fcs_function name="fbw/roll/d-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
 						     0     1
-						0.2 -0.60  0.00
-						0.5 -0.10  0.00
-						0.9 -0.05  0.00
+						140 -0.60  0.00
+						400 -0.03  0.00
 					</tableData>
 				</table>
 			</function>
@@ -323,7 +320,7 @@
 		
 		<lag_filter name="fbw/roll/rate-demand">
 			<input>fbw/roll/rate-switch</input>
-			<c1>9.2</c1>
+			<c1>11.2</c1>
 			<output>fbw/roll/rate-feedback</output>
 		</lag_filter>
 		
@@ -810,6 +807,101 @@
 				<max>1.0</max>
 			</clipto>
 		</switch>
+	
+	</channel>
+	
+	<channel name="FBW: Yoke">
+		
+		<fcs_function name="fbw/yoke-roll-ap-cmd">
+			<function>
+				<ifthen>
+					<eq>
+						<property>fbw/ap/enabled</property>
+						<value>1</value>
+					</eq>
+					<table>
+						<independentVar lookup="row">/it-autoflight/internal/roll-rate</independentVar>
+						<tableData>
+							-20 -1.0
+							  0  0.0
+							 20  1.0
+						</tableData>
+					</table>
+					<value>0</value>
+				</ifthen>
+			</function>
+		</fcs_function>
+		
+		<lag_filter name="fbw/yoke-roll-ap"> <!-- Smooth the yoke feedback -->
+			<input>fbw/yoke-roll-ap-cmd</input>
+			<c1>6.0</c1>
+		</lag_filter>
+		
+		<switch name="fbw/yoke-roll-cmd">
+			<default value="fbw/roll/aileron-nul"/>
+			<test logic="AND" value="fbw/roll/aileron-rollout">
+				/it-fbw/roll-disable eq 0
+				fbw/ap/enabled eq 1
+				position/wow eq 1
+			</test>
+			<test value="fbw/yoke-roll-ap">
+				fbw/ap/enabled eq 1
+			</test>
+		</switch>
+		
+		<lag_filter name="fbw/yoke-roll">
+			<input>fbw/yoke-roll-cmd</input>
+			<c1>20</c1>
+		</lag_filter>
+		
+		<fcs_function name="fbw/yoke-pitch-ap-cmd">
+			<function>
+				<ifthen>
+					<eq>
+						<property>fbw/ap/enabled</property>
+						<value>1</value>
+					</eq>
+					<table>
+						<independentVar lookup="row">fbw/pitch/g-ap-cmd</independentVar>
+						<tableData>
+							-1.1  1.0
+							 0.0  0.0
+							 1.5 -1.0
+						</tableData>
+					</table>
+					<value>0</value>
+				</ifthen>
+			</function>
+		</fcs_function>
+		
+		<lag_filter name="fbw/yoke-pitch-ap"> <!-- Smooth the yoke feedback -->
+			<input>fbw/yoke-pitch-ap-cmd</input>
+			<c1>2.2</c1>
+		</lag_filter>
+		
+		<switch name="fbw/yoke-pitch-cmd">
+			<default value="fbw/pitch/elevator-nul"/>
+			<test logic="AND" value="0.1">
+				/it-fbw/pitch-disable eq 0
+				fbw/ap/enabled eq 1
+				gear/unit[0]/WOW eq 0
+				fbw/pitch/gear-or-switch eq 1
+			</test>
+			<test logic="AND" value="0.05">
+				/it-fbw/pitch-disable eq 0
+				fbw/ap/enabled eq 1
+				gear/unit[0]/WOW eq 1
+				fbw/pitch/gear-or-switch eq 1
+			</test>
+			<test value="fbw/yoke-pitch-ap">
+				fbw/ap/enabled eq 1
+			</test>
+		</switch>
+		
+		<lag_filter name="fbw/yoke-pitch">
+			<input>fbw/yoke-pitch-cmd</input>
+			<c1>20</c1>
+		</lag_filter>
 	
 	</channel>
 	

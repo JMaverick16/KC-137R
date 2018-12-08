@@ -281,7 +281,7 @@
 				<alt-gain>-5</alt-gain>
 			</cmd>
 			<autoland> 
-				<pitch-kp>0.0051</pitch-kp>
+				<pitch-kp>0.0052</pitch-kp>
 				<yaw-kp>-0.05</yaw-kp>
 			</autoland>
 			<rollout>
@@ -295,7 +295,7 @@
 			<disable-final>1</disable-final> <!-- Disable the Final Controllers -->
 			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 			<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
-			<retard-ft>50</retard-ft> <!-- Enable Thrust Retard -->
+			<retard-ft>30</retard-ft> <!-- Enable Thrust Retard -->
 			<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
 			<togaspd>161</togaspd> <!-- V2 + 10kts -->
 			<lat-agl-ft>50</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to LNAV (if armed) -->

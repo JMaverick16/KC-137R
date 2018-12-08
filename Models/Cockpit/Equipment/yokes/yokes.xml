@@ -77,7 +77,7 @@
 		<object-name>plane.up.001</object-name>
 		<object-name>plane.down.001</object-name>
 		<object-name>plane.out.001</object-name>
-    <property>controls/flight/elevator</property>
+    <property>fdm/jsbsim/fbw/yoke-pitch</property>
     <factor> -15 </factor>
     <center>
       <x-m>-18.718 </x-m>
@@ -101,7 +101,7 @@
 		<object-name>plane.up</object-name>
 		<object-name>plane.down</object-name>
 		<object-name>plane.out</object-name>
-    <property>controls/flight/aileron</property>
+    <property>fdm/jsbsim/fbw/yoke-roll</property>
     <factor> -90 </factor>
     <center>
       <x-m> 0.000 </x-m>
@@ -125,7 +125,7 @@
 		<object-name>plane.up.001</object-name>
 		<object-name>plane.down.001</object-name>
 		<object-name>plane.out.001</object-name>
-    <property>controls/flight/aileron</property>
+    <property>fdm/jsbsim/fbw/yoke-roll</property>
     <factor> -90 </factor>
     <center>
       <x-m> 0.000 </x-m>

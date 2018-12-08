@@ -31,7 +31,7 @@
     <animation>
         <type>translate</type>
         <object-name>yoke-pos</object-name>
-        <property>controls/flight/aileron</property>
+        <property>fdm/jsbsim/fbw/yoke-roll</property>
         <factor>0.0258</factor>
         <axis>
             <x>0</x>
@@ -43,7 +43,7 @@
     <animation>
         <type>translate</type>
         <object-name>yoke-pos</object-name>
-        <property>controls/flight/elevator</property>
+        <property>fdm/jsbsim/fbw/yoke-pitch</property>
         <factor>0.0258</factor>
         <axis>
             <x>0</x>

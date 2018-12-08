@@ -32,10 +32,16 @@
 		<name>AP PITCH RATE TO G ADAPTER</name>
 		<enable>
 			<condition>
-				<equals>
-					<property>/fdm/jsbsim/fbw/ap/enabled</property>
-					<value>1</value>
-				</equals>
+				<and>
+					<equals>
+						<property>/fdm/jsbsim/fbw/ap/enabled</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/fdm/jsbsim/position/wow</property>
+						<value>0</value>
+					</equals>
+				</and>
 			</condition>
 		</enable>
 		<input>
@@ -129,50 +135,50 @@
             </condition>
         </enable>
         <S>
-				<and>
-                    <less-than>
-                        <property>/controls/engines/engine/throttle</property>
-                        <value>0.15</value>
-                    </less-than>
-                    <less-than>
-                        <property>/controls/engines/engine[1]/throttle</property>
-                        <value>0.15</value>
-                    </less-than>
-                    <less-than>
-                        <property>/controls/engines/engine[2]/throttle</property>
-                        <value>0.15</value>
-                    </less-than>
-                    <less-than>
-                        <property>/controls/engines/engine[3]/throttle</property>
-                        <value>0.15</value>
-                    </less-than>
-                    <property>/gear/gear[1]/wow</property>
-                    <property>/gear/gear[2]/wow</property>
-                    <greater-than>
-                        <property>/velocities/groundspeed-kt</property>
-                        <value>60</value>
-                    </greater-than>
-				</and>
+			<and>
+				<less-than>
+					<property>/controls/engines/engine/throttle</property>
+					<value>0.15</value>
+				</less-than>
+				<less-than>
+					<property>/controls/engines/engine[1]/throttle</property>
+					<value>0.15</value>
+				</less-than>
+				<less-than>
+					<property>/controls/engines/engine[2]/throttle</property>
+					<value>0.15</value>
+				</less-than>
+				<less-than>
+					<property>/controls/engines/engine[3]/throttle</property>
+					<value>0.15</value>
+				</less-than>
+				<property>/gear/gear[1]/wow</property>
+				<property>/gear/gear[2]/wow</property>
+				<greater-than>
+					<property>/velocities/groundspeed-kt</property>
+					<value>60</value>
+				</greater-than>
+			</and>
         </S>
         <R>
-				<or>
-                    <greater-than>
-                        <property>/controls/engines/engine/throttle</property>
-                        <value>0.16</value>
-                    </greater-than>
-                    <greater-than>
-                        <property>/controls/engines/engine[1]/throttle</property>
-                        <value>0.16</value>
-                    </greater-than>
-                    <greater-than>
-                        <property>/controls/engines/engine[2]/throttle</property>
-                        <value>0.16</value>
-                    </greater-than>
-                    <greater-than>
-                        <property>/controls/engines/engine[3]/throttle</property>
-                        <value>0.16</value>
-                    </greater-than>
-				</or>
+			<or>
+				<greater-than>
+					<property>/controls/engines/engine/throttle</property>
+					<value>0.16</value>
+				</greater-than>
+				<greater-than>
+					<property>/controls/engines/engine[1]/throttle</property>
+					<value>0.16</value>
+				</greater-than>
+				<greater-than>
+					<property>/controls/engines/engine[2]/throttle</property>
+					<value>0.16</value>
+				</greater-than>
+				<greater-than>
+					<property>/controls/engines/engine[3]/throttle</property>
+					<value>0.16</value>
+				</greater-than>
+			</or>
         </R>
         <output>/controls/flight/spoilers</output>	
     </flipflop>
