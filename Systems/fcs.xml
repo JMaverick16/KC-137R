@@ -120,11 +120,10 @@
 		<fcs_function name="fbw/pitch/q-p-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<tableData>
-						0.2 14.0
-						0.5  6.2
-						0.9  5.5
+						140 14.0
+						400  3.5
 					</tableData>
 				</table>
 			</function>
@@ -133,11 +132,10 @@
 		<fcs_function name="fbw/pitch/g-p-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<tableData>
-						0.2 -0.41
-						0.5 -0.21
-						0.9 -0.15
+						140 -0.41
+						400 -0.19
 					</tableData>
 				</table>
 			</function>
@@ -146,13 +144,12 @@
 		<fcs_function name="fbw/pitch/g-i-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/pitch/gain-switch</independentVar>
 					<tableData>
 						     0     1
-						0.2 -0.65  0.00
-						0.5 -0.45  0.00
-						0.9 -0.31  0.00
+						140 -0.65  0.00
+						400 -0.41  0.00
 					</tableData>
 				</table>
 			</function>
@@ -161,13 +158,12 @@
 		<fcs_function name="fbw/yaw/yd-p-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
 						     0    1
-						0.2 -8.5  0.0
-						0.5 -3.2  0.0
-						0.9 -2.3  0.0
+						140 -8.5  0.0
+						400 -2.3  0.0
 					</tableData>
 				</table>
 			</function>
@@ -176,13 +172,12 @@
 		<fcs_function name="fbw/yaw/beta-p-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
 						     0     1
-						0.2 16.0  0.0
-						0.5  4.0  0.0
-						0.9  3.0  0.0
+						140 16.0  0.0
+						400  3.0  0.0
 					</tableData>
 				</table>
 			</function>
@@ -191,13 +186,12 @@
 		<fcs_function name="fbw/yaw/beta-i-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
 						     0    1
-						0.2  7.0  0.0
-						0.5  3.0  0.0
-						0.9  2.4  0.0
+						140  7.0  0.0
+						400  2.4  0.0
 					</tableData>
 				</table>
 			</function>
@@ -206,13 +200,12 @@
 		<fcs_function name="fbw/yaw/beta-d-gain">
 			<function>
 				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
 						     0    1
-						0.2 12.0  0.0
-						0.5  5.0  0.0
-						0.9  4.0  0.0
+						140 12.0  0.0
+						400  4.0  0.0
 					</tableData>
 				</table>
 			</function>
@@ -335,8 +328,10 @@
 		
 		<switch name="fbw/roll/trigger">
 			<default value="0"/>
-			<test logic="OR" value="1">
+			<test value="-1">
 				fbw/roll/gain-switch gt 0
+			</test>
+			<test logic="OR" value="1">
 				fbw/roll/pid le -0.999
 				fbw/roll/pid ge 0.999
 			</test>
@@ -442,7 +437,7 @@
 						<tableData>
 							-1.0  2.5
 							 0.0  1.0
-							 1.0 -0.1
+							 1.0  0.0
 						</tableData>
 					</table>
 					<property>fbw/pitch/thetadot-feed</property>
@@ -506,8 +501,10 @@
 		
 		<switch name="fbw/pitch/g-trigger">
 			<default value="0"/>
-			<test logic="OR" value="1">
+			<test value="-1">
 				fbw/pitch/gain-switch gt 0
+			</test>
+			<test logic="OR" value="1">
 				fbw/pitch/q-demand le -0.999
 				fbw/pitch/q-demand ge 0.999
 			</test>
@@ -759,9 +756,11 @@
 		
 		<switch name="fbw/yaw/beta-trigger">
 			<default value="0"/>
-			<test logic="OR" value="1">
+			<test logic="OR" value="-1">
 				fbw/yaw/rudder-nul ne 0
 				fbw/yaw/gain-switch gt 0
+			</test>
+			<test logic="OR" value="1">
 				fbw/yaw/beta-pid lt -0.299
 				fbw/yaw/beta-pid gt 0.299
 			</test>
@@ -864,7 +863,7 @@
 					<table>
 						<independentVar lookup="row">fbw/pitch/g-ap-cmd</independentVar>
 						<tableData>
-							-1.1  1.0
+							-1.0  1.0
 							 0.0  0.0
 							 1.5 -1.0
 						</tableData>
