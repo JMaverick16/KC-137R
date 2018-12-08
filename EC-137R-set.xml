@@ -181,9 +181,9 @@
 		  <desc>open Fuel &amp; Weight Menu</desc>
 		</key>
 		<key>
-				<name>f</name>
-				<desc>release flare/chaff countermeasures</desc>
-			</key>
+			<name>f</name>
+			<desc>release flare/chaff countermeasures</desc>
+		</key>
 		<text>
 _______________ Boeing EC-137R Sentry ___________________
 
@@ -277,7 +277,7 @@ no. D6-3071-00
   <submodels>
             <serviceable type="bool">1</serviceable>
             <path>Aircraft/KC-137R/Systems/submodels.xml</path>
-        </submodels>
+  </submodels>
  </sim>
 
  <tanker type="bool">false</tanker>
