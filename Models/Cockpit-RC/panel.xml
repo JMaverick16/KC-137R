@@ -82,7 +82,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/chronometer/chronometer.xml</path>
   <offsets>
     <x-m>-18.916</x-m>
-    <y-m>-0.546</y-m>
+    <y-m>-0.549</y-m>
     <z-m>0.709</z-m>
   </offsets>
 </model>
@@ -92,7 +92,7 @@
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar-alt/radar-altimeter.xml</path>
   <offsets>
     <x-m>-18.922</x-m>
-    <y-m>-0.465</y-m>
+    <y-m>-0.47</y-m>
     <z-m>0.71</z-m>
   </offsets>
 </model>
@@ -101,8 +101,8 @@
   <name>stby-ai</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/stby-ai/Digital/stby-ai.xml</path>
   <offsets>
-    <x-m>-18.91</x-m>
-    <y-m>-0.32</y-m>
+    <x-m>-18.92</x-m>
+    <y-m>-0.389</y-m>
     <z-m>0.707</z-m>
   </offsets>
 </model>
