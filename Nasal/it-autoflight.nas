@@ -79,6 +79,10 @@ var ap_init = func {
 	thrustmode();
 }
 
+setlistener("/sim/signals/fdm-initialized", func {
+    ap_init();
+});
+
 # AP 1 Master System
 setlistener("/it-autoflight/input/ap1", func {
 	var apmas = getprop("/it-autoflight/input/ap1");

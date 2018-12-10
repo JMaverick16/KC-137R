@@ -1,7 +1,6 @@
 # KC-137R System Init File
 
 setlistener("/sim/signals/fdm-initialized", func {
-  itaf.ap_init();
   setprop("/controls/internal/value1", "1");
   setprop("/controls/flight/speedbrake-arm", "0");
   setprop("/b707/anti-ice/window-heat-cap-switch", "0");

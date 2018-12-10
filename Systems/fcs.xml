@@ -320,7 +320,7 @@
 		<fcs_function name="fbw/roll/rate-error">
 			<function>
 				<difference>
-					<property>velocities/p-rad_sec</property>
+					<toradians><property>/orientation/roll-rate-degps</property></toradians>
 					<property>fbw/roll/rate-demand</property>
 				</difference>
 			</function>
@@ -444,7 +444,7 @@
 				</sum>
 			</function>
 			<clipto>
-				<min>-0.5</min>
+				<min>0.0</min>
 				<max>2.5</max>
 			</clipto>
 		</fcs_function>
