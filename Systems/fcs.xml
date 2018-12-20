@@ -266,14 +266,10 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fbw/roll/rad-error">
-			<function>
-				<difference>
-					<property>attitude/roll-rad</property>
-					<property>fbw/roll/rad</property>
-				</difference>
-			</function>
-		</fcs_function>
+		<summer name="fbw/roll/rad-error">
+			<input>attitude/roll-rad</input>
+			<input>-fbw/roll/rad</input>
+		</summer>
 		
 		<pure_gain name="fbw/roll/rad-rate">
 			<input>fbw/roll/rad-error</input>
@@ -475,14 +471,10 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fbw/pitch/g-error">
-			<function>
-				<difference>
-					<property>fbw/pitch/computed-g</property>
-					<property>fbw/pitch/g-demand</property>
-				</difference>
-			</function>
-		</fcs_function>
+		<summer name="fbw/pitch/g-error">
+			<input>fbw/pitch/computed-g</input>
+			<input>-fbw/pitch/g-demand</input>
+		</summer>
 		
 		<switch name="fbw/pitch/g-trigger">
 			<default value="0"/>
@@ -727,17 +719,13 @@
 		
 		<pure_gain name="fbw/yaw/beta-cmd">
 			<input>fbw/yaw/rudder-lag</input>
-			<gain>-0.0523599</gain>
+			<gain>-0.174533</gain>
 		</pure_gain>
 		
-		<fcs_function name="fbw/yaw/beta-error">
-			<function>
-				<difference>
-					<property>aero/beta-rad</property>
-					<property>fbw/yaw/beta-cmd</property>
-				</difference>
-			</function>
-		</fcs_function>
+		<summer name="fbw/yaw/beta-error">
+			<input>aero/beta-rad</input>
+			<input>-fbw/yaw/beta-cmd</input>
+		</summer>
 		
 		<pure_gain name="fbw/yaw/beta-p">
 			<input>fbw/yaw/beta-error</input>
