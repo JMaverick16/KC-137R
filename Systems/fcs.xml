@@ -16,7 +16,7 @@
 	<property value="0">fbw/roll/pid</property>
 	<property value="0">fbw/roll/rate-feedback</property>
 	<property value="0">fbw/pitch/q-demand</property>
-	<property value="0">fbw/yaw/beta-pid</property>
+	<property value="0">fbw/yaw/beta-d</property>
 	
 	<!-- Default gains for tuning -->
 	<property value="0">fbw/roll/p-gain</property>
@@ -27,7 +27,6 @@
 	<property value="0">fbw/pitch/g-i-gain</property>
 	<property value="0">fbw/yaw/yd-p-gain</property>
 	<property value="0">fbw/yaw/beta-p-gain</property>
-	<property value="0">fbw/yaw/beta-i-gain</property>
 	<property value="0">fbw/yaw/beta-d-gain</property>
 	
 	<channel name="Libraries">
@@ -183,20 +182,6 @@
 			</function>
 		</fcs_function>
 
-		<fcs_function name="fbw/yaw/beta-i-gain">
-			<function>
-				<table>
-					<independentVar lookup="row">velocities/vc-kts</independentVar>
-					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
-					<tableData>
-						     0    1
-						140  7.0  0.0
-						400  2.4  0.0
-					</tableData>
-				</table>
-			</function>
-		</fcs_function>
-		
 		<fcs_function name="fbw/yaw/beta-d-gain">
 			<function>
 				<table>
@@ -754,34 +739,39 @@
 			</function>
 		</fcs_function>
 		
-		<switch name="fbw/yaw/beta-trigger">
-			<default value="0"/>
-			<test logic="OR" value="-1">
-				fbw/yaw/rudder-nul ne 0
-				fbw/yaw/gain-switch gt 0
-			</test>
-			<test logic="OR" value="1">
-				fbw/yaw/beta-pid lt -0.299
-				fbw/yaw/beta-pid gt 0.299
-			</test>
-		</switch>
-		
-		<pid name="fbw/yaw/beta-pid-v">
+		<pure_gain name="fbw/yaw/beta-p">
 			<input>fbw/yaw/beta-error</input>
-			<kp>fbw/yaw/beta-p-gain</kp>
-			<ki>fbw/yaw/beta-i-gain</ki>
-			<kd>fbw/yaw/beta-d-gain</kd>
-			<trigger>fbw/yaw/beta-trigger</trigger>
+			<gain>fbw/yaw/beta-p-gain</gain>
 			<clipto>
 				<min>-0.5</min>
 				<max>0.5</max>
 			</clipto>
-			<output>fbw/yaw/beta-pid</output>
+		</pure_gain>
+		
+		<pid name="fbw/yaw/beta-d-v">
+			<input>fbw/yaw/beta-error</input>
+			<kp>0.0</kp>
+			<ki>0.0</ki>
+			<kd>fbw/yaw/beta-d-gain</kd>
+			<clipto>
+				<min>-0.5</min>
+				<max>0.5</max>
+			</clipto>
+			<output>fbw/yaw/beta-d</output>
 		</pid>
+		
+		<summer name="fbw/yaw/beta-pd">
+			<input>fbw/yaw/beta-p</input>
+			<input>fbw/yaw/beta-d</input>
+			<clipto>
+				<min>-0.5</min>
+				<max>0.5</max>
+			</clipto>
+		</summer>
 		
 		<summer name="fbw/yaw/sum">
 			<input>fbw/yaw/yd-f</input>
-			<input>fbw/yaw/beta-pid</input>
+			<input>fbw/yaw/beta-pd</input>
 		</summer>
 		
 		<switch name="fbw/yaw/autoland-switch">

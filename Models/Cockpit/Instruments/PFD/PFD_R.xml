@@ -468,7 +468,6 @@ Modified by it0uchpods for KC-137R
     <animation>
         <type>rotate</type>
         <object-name>VSI.needle</object-name>
-        <property>velocities/vertical-speed-fps</property>
         <property>instrumentation/gps/indicated-vertical-speed</property>
         <interpolation>
             <entry><ind>-6000</ind><dep>-60.0</dep></entry>
