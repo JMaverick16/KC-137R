@@ -62,8 +62,8 @@
 			<expression>
 				<table>
 					<property>/fdm/jsbsim/atmosphere/density-altitude</property> 
-					<entry><ind>    0</ind><dep>0.576</dep></entry>
-					<entry><ind>42000</ind><dep>0.876</dep></entry>
+					<entry><ind>    0</ind><dep>0.681</dep></entry>
+					<entry><ind>42000</ind><dep>0.757</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -96,8 +96,8 @@
 				<difference>
 					<table>
 						<property>/fdm/jsbsim/atmosphere/density-altitude</property> 
-						<entry><ind>    0</ind><dep>0.988</dep></entry>
-						<entry><ind>43000</ind><dep>0.858</dep></entry>
+						<entry><ind>    0</ind><dep>0.9824</dep></entry>
+						<entry><ind>43000</ind><dep>0.8581</dep></entry>
 					</table>
 					<table>
 						<property>/fdm/jsbsim/velocities/mach</property>
@@ -109,9 +109,9 @@
 					</table>
 					<table>
 						<property>/fdm/jsbsim/aero/alpha-deg-norm</property>
-						<entry><ind>  0.0</ind><dep> 0.00</dep></entry>
-						<entry><ind>  7.5</ind><dep> 0.01</dep></entry>
-						<entry><ind> 17.0</ind><dep> 0.03</dep></entry>
+						<entry><ind> 0.0</ind><dep>0.00</dep></entry>
+						<entry><ind> 7.5</ind><dep>0.01</dep></entry>
+						<entry><ind>17.0</ind><dep>0.03</dep></entry>
 					</table>
 				</difference>
 			</expression>
@@ -128,120 +128,8 @@
 		<filter-time>0.32</filter-time>
 	</filter>
 	
-	<filter>
-		<name>EPR N1 Input Engine 1</name>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input> 
-			<expression>
-				<product>
-					<property>/engines/engine[0]/n1-actual</property> 
-					<table>
-						<property>/engines/engine[0]/n1-actual</property> 
-						<entry><ind> 22.4</ind><dep> 1</dep></entry>
-						<entry><ind>103.8</ind><dep>50</dep></entry>
-					</table>
-				</product>
-			</expression>
-		</input>
-		<output>/engines/engine[0]/epr-n1-input</output>
-	</filter>
+	<!-- -->
 	
-	<filter>
-		<name>EPR N1 Input Engine 2</name>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input> 
-			<expression>
-				<product>
-					<property>/engines/engine[1]/n1-actual</property> 
-					<table>
-						<property>/engines/engine[1]/n1-actual</property> 
-						<entry><ind> 22.4</ind><dep> 1</dep></entry>
-						<entry><ind>103.8</ind><dep>50</dep></entry>
-					</table>
-				</product>
-			</expression>
-		</input>
-		<output>/engines/engine[1]/epr-n1-input</output>
-	</filter>
-	
-	<filter>
-		<name>EPR N1 Input Engine 3</name>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input> 
-			<expression>
-				<product>
-					<property>/engines/engine[2]/n1-actual</property> 
-					<table>
-						<property>/engines/engine[2]/n1-actual</property> 
-						<entry><ind> 22.4</ind><dep> 1</dep></entry>
-						<entry><ind>103.8</ind><dep>50</dep></entry>
-					</table>
-				</product>
-			</expression>
-		</input>
-		<output>/engines/engine[2]/epr-n1-input</output>
-	</filter>
-	
-	<filter>
-		<name>EPR N1 Input Engine 4</name>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input> 
-			<expression>
-				<product>
-					<property>/engines/engine[3]/n1-actual</property> 
-					<table>
-						<property>/engines/engine[3]/n1-actual</property> 
-						<entry><ind> 22.4</ind><dep> 1</dep></entry>
-						<entry><ind>103.8</ind><dep>50</dep></entry>
-					</table>
-				</product>
-			</expression>
-		</input>
-		<output>/engines/engine[3]/epr-n1-input</output>
-	</filter>
-	
-	<filter>
-		<name>EPR N1 Input Limit</name>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input> 
-			<expression>
-				<product>
-					<property>/controls/engines/n1limx100</property> 
-					<table>
-						<property>/controls/engines/n1limx100</property> 
-						<entry><ind> 22.4</ind><dep> 1</dep></entry>
-						<entry><ind>103.8</ind><dep>50</dep></entry>
-					</table>
-				</product>
-			</expression>
-		</input>
-		<output>/controls/engines/n1limx100-input</output>
-	</filter>
-	
-	<filter>
-		<name>EPR N1 Input Limit</name>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input> 
-			<expression>
-				<product>
-					<property>/controls/engines/n1overlim</property> 
-					<table>
-						<property>/controls/engines/n1overlim</property> 
-						<entry><ind> 22.4</ind><dep> 1</dep></entry>
-						<entry><ind>103.8</ind><dep>50</dep></entry>
-					</table>
-				</product>
-			</expression>
-		</input>
-		<output>/controls/engines/n1overlim-input</output>
-	</filter>
-
 	<filter>
 		<name>EPR 1</name>
 		<type>gain</type>
@@ -249,10 +137,13 @@
 		<input>
 			<expression>
 				<table>
-					<property>/engines/engine[0]/epr-n1-input</property>
-					<entry><ind>  18.0</ind><dep>0.00</dep></entry>
-					<entry><ind>  22.4</ind><dep>0.03</dep></entry>
-					<entry><ind>5190.0</ind><dep>1.00</dep></entry>
+					<pow>
+						<property>/engines/engine[0]/n1-actual</property> 
+						<value>3.5</value>
+					</pow>
+					<entry><ind>      18.0</ind><dep>0.00</dep></entry>
+					<entry><ind>      22.4</ind><dep>0.03</dep></entry>
+					<entry><ind>11394381.0</ind><dep>1.00</dep></entry>
 				</table>
 			</expression>
 			<scale>/engines/epr-scale</scale>
@@ -261,7 +152,7 @@
 	</filter>
 	
 	<filter>
-		<name>EPR 1</name>
+		<name>EPR 1 B</name>
 		<type>gain</type>
 		<gain>1.0</gain>
 		<input>
@@ -282,10 +173,13 @@
 		<input>
 			<expression>
 				<table>
-					<property>/engines/engine[1]/epr-n1-input</property>
-					<entry><ind>  18.0</ind><dep>0.00</dep></entry>
-					<entry><ind>  22.4</ind><dep>0.03</dep></entry>
-					<entry><ind>5190.0</ind><dep>1.00</dep></entry>
+					<pow>
+						<property>/engines/engine[1]/n1-actual</property> 
+						<value>3.5</value>
+					</pow>
+					<entry><ind>      18.0</ind><dep>0.00</dep></entry>
+					<entry><ind>      22.4</ind><dep>0.03</dep></entry>
+					<entry><ind>11394381.0</ind><dep>1.00</dep></entry>
 				</table>
 			</expression>
 			<scale>/engines/epr-scale</scale>
@@ -294,7 +188,7 @@
 	</filter>
 	
 	<filter>
-		<name>EPR 2</name>
+		<name>EPR 2 B</name>
 		<type>gain</type>
 		<gain>1.0</gain>
 		<input>
@@ -315,10 +209,13 @@
 		<input>
 			<expression>
 				<table>
-					<property>/engines/engine[2]/epr-n1-input</property>
-					<entry><ind>  18.0</ind><dep>0.00</dep></entry>
-					<entry><ind>  22.4</ind><dep>0.03</dep></entry>
-					<entry><ind>5190.0</ind><dep>1.00</dep></entry>
+					<pow>
+						<property>/engines/engine[2]/n1-actual</property> 
+						<value>3.5</value>
+					</pow>
+					<entry><ind>      18.0</ind><dep>0.00</dep></entry>
+					<entry><ind>      22.4</ind><dep>0.03</dep></entry>
+					<entry><ind>11394381.0</ind><dep>1.00</dep></entry>
 				</table>
 			</expression>
 			<scale>/engines/epr-scale</scale>
@@ -327,7 +224,7 @@
 	</filter>
 	
 	<filter>
-		<name>EPR 3</name>
+		<name>EPR 3 B</name>
 		<type>gain</type>
 		<gain>1.0</gain>
 		<input>
@@ -348,10 +245,13 @@
 		<input>
 			<expression>
 				<table>
-					<property>/engines/engine[3]/epr-n1-input</property>
-					<entry><ind>  18.0</ind><dep>0.00</dep></entry>
-					<entry><ind>  22.4</ind><dep>0.03</dep></entry>
-					<entry><ind>5190.0</ind><dep>1.00</dep></entry>
+					<pow>
+						<property>/engines/engine[3]/n1-actual</property> 
+						<value>3.5</value>
+					</pow>
+					<entry><ind>      18.0</ind><dep>0.00</dep></entry>
+					<entry><ind>      22.4</ind><dep>0.03</dep></entry>
+					<entry><ind>11394381.0</ind><dep>1.00</dep></entry>
 				</table>
 			</expression>
 			<scale>/engines/epr-scale</scale>
@@ -360,7 +260,7 @@
 	</filter>
 	
 	<filter>
-		<name>EPR 4</name>
+		<name>EPR 4 B</name>
 		<type>gain</type>
 		<gain>1.0</gain>
 		<input>
@@ -382,9 +282,13 @@
 		<input>
 			<expression>
 				<table>
-					<property>/controls/engines/n1limx100-input</property>
-					<entry><ind>  22.4</ind><dep>0.03</dep></entry>
-					<entry><ind>5190.0</ind><dep>1.00</dep></entry>
+					<pow>
+						<property>/controls/engines/n1limx100</property> 
+						<value>3.5</value>
+					</pow>
+					<entry><ind>      18.0</ind><dep>0.00</dep></entry>
+					<entry><ind>      22.4</ind><dep>0.03</dep></entry>
+					<entry><ind>11394381.0</ind><dep>1.00</dep></entry>
 				</table>
 			</expression>
 			<scale>/engines/epr-scale</scale>
@@ -416,9 +320,13 @@
 		<input>
 			<expression>
 				<table>
-					<property>/controls/engines/n1overlim-input</property>
-					<entry><ind>  22.4</ind><dep>0.03</dep></entry>
-					<entry><ind>5190.0</ind><dep>1.00</dep></entry>
+					<pow>
+						<property>/controls/engines/n1overlim</property> 
+						<value>3.5</value>
+					</pow>
+					<entry><ind>      18.0</ind><dep>0.00</dep></entry>
+					<entry><ind>      22.4</ind><dep>0.03</dep></entry>
+					<entry><ind>11394381.0</ind><dep>1.00</dep></entry>
 				</table>
 			</expression>
 			<scale>/engines/epr-scale</scale>
