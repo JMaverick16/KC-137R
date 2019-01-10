@@ -353,7 +353,7 @@ var vertical = func {
 		} else {
 			setprop("/it-autoflight/mode/arm", " ");
 		}
-		var altpredic = math.round(getprop("/it-autoflight/internal/altitude-predicted"), 500);
+		var altpredic = math.round(getprop("/it-autoflight/internal/altitude-predicted"), 100);
 		setprop("/it-autoflight/input/alt", altpredic);
 		setprop("/it-autoflight/internal/alt", altpredic);
 		thrustmode();
