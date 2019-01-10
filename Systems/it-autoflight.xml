@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- IT-AUTOFLIGHT -->
-<!-- Copyright (c) 2017-2018 Joshua Davidson (it0uchpods) -->
+<!-- Copyright (c) 2019 Joshua Davidson (it0uchpods) -->
 
 <PropertyList>
 	
@@ -673,9 +673,11 @@
 	
 	<!-- Roll Axis -->
 	
-	<pi-simple-controller>
-		<name>ROLL CONTROLLER: HDG/LNAV</name>
+	<filter>
+		<name>IT-CONTROLLER: HDG/LNAV ROLL</name>
 		<debug>false</debug>
+		<type>gain</type>
+		<gain>/it-autoflight/config/cmd/hdg-kp</gain>
 		<enable>
 			<condition>
 				<and>
@@ -713,20 +715,18 @@
 		<input>/it-autoflight/internal/heading-error-deg</input>
 		<reference>0</reference>
 		<output>/it-autoflight/internal/target-roll-deg</output>
-		<config>
-			<Kp>/it-autoflight/config/cmd/hdg-kp</Kp>
-			<Ki>-0.000001</Ki>
-			<min>
-				<property>/it-autoflight/internal/bank-limit</property>
-				<scale>-1.0</scale>
-			</min>
-			<max>/it-autoflight/internal/bank-limit</max>
-		</config>
-	</pi-simple-controller>
+		<min>
+			<property>/it-autoflight/internal/bank-limit</property>
+			<scale>-1.0</scale>
+		</min>
+		<max>/it-autoflight/internal/bank-limit</max>
+	</filter>
 	
-	<pi-simple-controller>
-		<name>VORLOC TRK</name>
+	<filter>
+		<name>IT-CONTROLLER: VORLOC ROLL</name>
 		<debug>false</debug>
+		<type>gain</type>
+		<gain>/it-autoflight/config/cmd/vorloc</gain>
 		<enable>
 			<condition>
 				<and>
@@ -758,16 +758,12 @@
 		<input>/it-autoflight/internal/nav-heading-error-deg</input>
 		<reference>0</reference>
 		<output>/it-autoflight/internal/target-roll-deg</output>
-		<config>
-			<Kp>/it-autoflight/config/cmd/vorloc</Kp>
-			<Ki>-0.0001</Ki>
-			<min>
-				<property>/it-autoflight/internal/bank-limit</property>
-				<scale>-1.0</scale>
-			</min>
-			<max>/it-autoflight/internal/bank-limit</max>
-		</config>
-	</pi-simple-controller>
+		<min>
+			<property>/it-autoflight/internal/bank-limit</property>
+			<scale>-1.0</scale>
+		</min>
+		<max>/it-autoflight/internal/bank-limit</max>
+	</filter>
 	
 	<filter>
 		<name>ROLL DEG SYNC</name>
@@ -1032,6 +1028,18 @@
 		<max>/it-autoflight/internal/max-vs</max>
 	</filter>
 	
+	<filter>
+		<name>FPA ERROR</name>
+		<debug>false</debug>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/it-autoflight/internal/fpa</input>
+		<reference>/it-autoflight/input/fpa</reference>
+		<output>/it-autoflight/internal/fpa-error</output>
+		<min>-1.5</min>
+		<max>1.5</max>
+	</filter>
+	
 	<pid-controller>
 		<name>FPA HOLD</name>
 		<debug>false</debug>
@@ -1063,8 +1071,8 @@
 				</and>
 			</condition>
 		</enable>
-		<input>/it-autoflight/internal/fpa</input>
-		<reference>/it-autoflight/input/fpa</reference>
+		<input>/it-autoflight/internal/fpa-error</input>
+		<reference>0</reference>
 		<output>/it-autoflight/internal/target-fpm-d</output>
 		<config>
 			<Kp>
@@ -1076,7 +1084,22 @@
 					</table>
 				</expression>
 			</Kp>
-			<Ti>2.0</Ti>
+			<Ti>
+				<condition>
+					<or>
+						<equals>
+							<property>/it-autoflight/output/ap1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/output/ap2</property>
+							<value>1</value>
+						</equals>
+					</or>
+				</condition>
+				<value>2.0</value>
+			</Ti>
+			<Ti>10.0</Ti>
 			<Td>0.002</Td>
 			<u_min>
 				<expression>

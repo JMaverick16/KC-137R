@@ -276,8 +276,8 @@
 	<it-autoflight>
 		<config>
 			<cmd>
-				<hdg>-1.6</hdg>
-				<vorloc>-2.4</vorloc>
+				<hdg>1.6</hdg>
+				<vorloc>2.4</vorloc>
 				<alt-gain>-5</alt-gain>
 			</cmd>
 			<autoland> 
