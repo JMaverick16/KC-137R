@@ -108,11 +108,14 @@ var AP1Master = func {
 			setprop("/it-autoflight/sound/enableapoffsound", 0);	  
 		}
 	} else if (apmas == 1) {
-		if ((getprop("/gear/gear[1]/wow") == 0) and (getprop("/gear/gear[2]/wow") == 0)) {
+		if (getprop("/it-autoflight/output/vert") != 6 and getprop("/gear/gear[1]/wow") == 0 and getprop("/gear/gear[2]/wow") == 0) {
 			setprop("/controls/flight/rudder", 0);
 			setprop("/it-autoflight/output/ap1", 1);
 			setprop("/it-autoflight/sound/enableapoffsound", 1);
 			setprop("/it-autoflight/sound/apoffsound", 0);
+			if (getprop("/it-autoflight/output/vert") == 2) {
+				alandt.start();
+			}
 		}
 	}
 	
@@ -146,11 +149,14 @@ var AP2Master = func {
 			setprop("/it-autoflight/sound/enableapoffsound2", 0);	  
 		}
 	} else if (apmas == 1) {
-		if ((getprop("/gear/gear[1]/wow") == 0) and (getprop("/gear/gear[2]/wow") == 0)) {
+		if (getprop("/it-autoflight/output/vert") != 6 and getprop("/gear/gear[1]/wow") == 0 and getprop("/gear/gear[2]/wow") == 0) {
 			setprop("/controls/flight/rudder", 0);
 			setprop("/it-autoflight/output/ap2", 1);
 			setprop("/it-autoflight/sound/enableapoffsound2", 1);
 			setprop("/it-autoflight/sound/apoffsound2", 0);
+			if (getprop("/it-autoflight/output/vert") == 2) {
+				alandt.start();
+			}
 		}
 	}
 	
