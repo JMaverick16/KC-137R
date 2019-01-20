@@ -941,7 +941,7 @@
 	<filter>
 		<name>IT-CONTROLLER: AILERON ROLLOUT</name>
 		<type>gain</type>
-		<gain>/it-autoflight/config/rollout/hdg-kp</gain>
+		<gain>/it-autoflight/config/rollout/roll-kp</gain>
 		<enable>
 			<condition>
 				<or>
