@@ -222,7 +222,7 @@
 		<gain>1.0</gain>
 		<input>
 			<condition>
-				<property>/instrumentation/efis/mfd/true-north</property>
+				<property>/it-autoflight/input/true-course</property>
 			</condition>
 			<property>/orientation/heading-deg</property>
 		</input>
