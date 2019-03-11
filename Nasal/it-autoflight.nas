@@ -106,8 +106,8 @@ var Internal = {
 	altDiff: 0,
 	altTemp: 0,
 	altPredicted: props.globals.initNode("/it-autoflight/internal/altitude-predicted", 0, "DOUBLE"),
-	bankLimit: props.globals.initNode("/it-autoflight/internal/bank-limit", 25, "INT"),
-	bankLimitAuto: 25,
+	bankLimit: props.globals.initNode("/it-autoflight/internal/bank-limit", 30, "INT"),
+	bankLimitAuto: 30,
 	captVS: 0,
 	flchActive: 0,
 	fpa: props.globals.initNode("/it-autoflight/internal/fpa", 0, "DOUBLE"),
@@ -219,8 +219,8 @@ var ITAF = {
 		Setting.useNAV2Radio.setBoolValue(0);
 		Internal.minVS.setValue(-500);
 		Internal.maxVS.setValue(500);
-		Internal.bankLimit.setValue(25);
-		Internal.bankLimitAuto = 25;
+		Internal.bankLimit.setValue(30);
+		Internal.bankLimitAuto = 30;
 		Internal.alt.setValue(10000);
 		Internal.altCaptureActive = 0;
 		Input.ias.setValue(250);
