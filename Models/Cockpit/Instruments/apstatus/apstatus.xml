@@ -424,7 +424,7 @@
 				<value>T/O</value>
 			</equals>
 			<equals>
-				<property>it-autoflight/input/lat-arm</property>
+				<property>it-autoflight/output/lnav-arm</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -438,7 +438,7 @@
 				<value>T/O</value>
 			</equals>
 			<equals>
-				<property>it-autoflight/input/lat-arm</property>
+				<property>it-autoflight/output/lnav-arm</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -448,10 +448,16 @@
 		<object-name>FLARE arm</object-name>
 		<type>select</type>
 		<condition>
-			<equals>
-				<property>it-autoflight/mode/vert</property>
-				<value>LAND 3</value>
-			</equals>
+			<and>
+				<equals>
+					<property>it-autoflight/output/vert</property>
+					<value>6</value>
+				</equals>
+				<equals>
+					<property>it-autoflight/mode/vert</property>
+					<value>G/S</value>
+				</equals>
+			</and>
 		</condition>
 	</animation>
 	

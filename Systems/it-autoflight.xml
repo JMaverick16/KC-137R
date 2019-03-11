@@ -386,6 +386,16 @@
 		<max-rate-of-change>
 			<condition>
 				<and>
+					<or>
+						<equals>
+							<property>/it-autoflight/output/ap1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/output/ap2</property>
+							<value>1</value>
+						</equals>
+					</or>
 					<equals>
 						<property>/it-autoflight/output/vert</property>
 						<value>1</value>
@@ -1346,7 +1356,7 @@
 			<expression>
 				<table>
 					<property>/position/gear-agl-ft</property> 
-					<entry><ind>100</ind><dep>-600</dep></entry>
+					<entry><ind>100</ind><dep>-650</dep></entry>
 					<entry><ind> 50</ind><dep>-500</dep></entry>
 					<entry><ind> 40</ind><dep>-400</dep></entry>
 					<entry><ind> 30</ind><dep>-300</dep></entry>
@@ -2017,7 +2027,7 @@
 		</input>
 		<input>0</input>
 		<output>/controls/flight/rudder</output>
-		<max-rate-of-change>0.6</max-rate-of-change>
+		<max-rate-of-change>1.2</max-rate-of-change>
 	</filter>
 	
 	<!-- Flight Director -->
