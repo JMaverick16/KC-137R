@@ -511,6 +511,7 @@ var ITAF = {
 			}
 			if (Sound.enableApOff) {
 				Sound.apOff.setBoolValue(1);
+				Sound.enableApOff = 0;
 			}
 		}
 	},
