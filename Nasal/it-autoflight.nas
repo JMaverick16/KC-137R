@@ -828,7 +828,7 @@ var ITAF = {
 		Input.ias.setValue(math.clamp(math.round(Velocity.indicatedAirspeedKt.getValue()), 100, 350));
 	},
 	syncMach: func() {
-		Input.mach.setValue(math.clamp(math.round(Velocity.indicatedMach.getValue(), 0.01), 0.5, 0.9));
+		Input.mach.setValue(math.clamp(math.round(Velocity.indicatedMach.getValue(), 0.001), 0.5, 0.9));
 	},
 	syncHDG: func() {
 		Input.hdg.setValue(math.round(Internal.hdgPredicted.getValue())); # Switches to track automatically
