@@ -801,6 +801,10 @@ var ITAF = {
 	takeoffGoAround: func() {
 		Output.vertTemp = Output.vert.getValue();
 		if ((Output.vertTemp == 2 or Output.vertTemp == 6) and Velocity.indicatedAirspeedKt.getValue() >= 80) {
+			if (Gear.wow1.getBoolValue() or Gear.wow2.getBoolValue()) {
+				me.ap1Master(0);
+				me.ap2Master(0);
+			}
 			me.setLatMode(3);
 			me.setVertMode(7);
 			Text.vert.setValue("G/A CLB");
