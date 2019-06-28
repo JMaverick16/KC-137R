@@ -1,4 +1,4 @@
-# KC-137R Radio Controller by Joshua Davidson (it0uchpods/411)
+# KC-137R Radio Controller by Joshua Davidson (Octal450/411)
 	
 setprop("/controls/radio/number/zero", "0");
 setprop("/controls/radio/number/one", "1");

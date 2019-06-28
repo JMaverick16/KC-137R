@@ -226,7 +226,7 @@ If you reached cruise altitude, you can trim the aircraft pitch independend
 the mechanical elevator trim system. Its also independed to the autopilot system.
 
 _______________________________________________________
-This particular version was edited by J Maverick 16 and it0uchpods Hanger,
+This particular version was edited by J Maverick 16 and Octal450 Hanger,
 with the help of others.
 The first 707 for Flightgear was created by Innis Cunningham.
 This version is a revamp of that original. Nearly
@@ -333,7 +333,7 @@ no. D6-3071-00
 			<subtitle3 type="string">MODEL KC-137R/KC-137R-RT</subtitle3>
 			<text3 type="string">FOR FLIGHTGEAR SIMULATION ONLY</text3>
 			<subtitle4 type="string"></subtitle4>
-			<text4 type="string">J Maverick 16, it0uchpods Hanger</text4>
+			<text4 type="string">J Maverick 16, Octal450 Hanger</text4>
 			<content include="Models/Cockpit/Manual/manual.xml"/>
 		</manual>
   </b707>		

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 
 <!-- KC-137R FCS -->
-<!-- Joshua Davidson (it0uchpods) -->
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
 
 <system name="KC-137R: FCS">
 	
@@ -12,6 +12,7 @@
 	<property value="0">fbw/roll/aileron-rollout</property>
 	<property value="0">fbw/pitch/g-ap-cmd</property>
 	<property value="0">fbw/yaw/rudder-cmd</property>
+	<property value="1">fbw/mixer/passive-gain-feedback</property>
 	
 	<property value="0">fbw/roll/pid</property>
 	<property value="0">fbw/roll/rate-feedback</property>
@@ -195,6 +196,40 @@
 				</table>
 			</function>
 		</fcs_function>
+		
+		<switch name="fbw/mixer/rate-limit">
+			<default value="fbw/mixer/rate-limit"/>
+			<test logic="AND" value="0.5"> <!-- 2 seconds -->
+				position/wow eq 1
+				fbw/mixer/passive-gain-feedback eq 1
+			</test>
+			<test logic="AND" value="100"> <!-- Unlimited -->
+				position/wow eq 1
+				fbw/mixer/passive-gain-feedback ne 1
+			</test>
+			<test logic="AND" value="100"> <!-- Unlimited -->
+				position/wow eq 0
+				fbw/mixer/passive-gain-feedback eq 0
+			</test>
+		</switch>
+		
+		<actuator name="fbw/mixer/passive-gain">
+			<input>position/wow</input>
+			<rate_limit>fbw/mixer/rate-limit</rate_limit>
+			<output>fbw/mixer/passive-gain-feedback</output>
+		</actuator>
+		
+		<fcs_function name="fbw/mixer/computer-gain">
+			<function>
+				<table>
+					<independentVar lookup="row">fbw/mixer/passive-gain</independentVar>
+					<tableData>
+						0  1
+						1  0
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
 	
 	</channel>
 	
@@ -331,8 +366,27 @@
 			<output>fbw/roll/pid</output>
 		</pid>
 		
+		<pure_gain name="fbw/mixer/roll/computer-demand">
+			<input>fbw/roll/pid</input>
+			<gain>fbw/mixer/computer-gain</gain>
+		</pure_gain>
+		
+		<pure_gain name="fbw/mixer/roll/passive-demand">
+			<input>fbw/roll/aileron-nul</input>
+			<gain>fbw/mixer/passive-gain</gain>
+		</pure_gain>
+		
+		<summer name="fbw/mixer/roll/output">
+			<input>fbw/mixer/roll/computer-demand</input>
+			<input>fbw/mixer/roll/passive-demand</input>
+			<clipto>
+				<min>-1.0</min>
+				<max>1.0</max>
+			</clipto>
+		</summer>
+		
 		<switch name="fbw/roll-output">
-			<default value="fbw/roll/pid"/>
+			<default value="fbw/mixer/roll/output"/> <!-- Mix passive and active control law for transition from ground -->
 			<test logic="AND" value="fbw/roll/aileron-rollout">
 				/it-fbw/roll-disable eq 0
 				fbw/ap/enabled eq 1
@@ -410,11 +464,62 @@
 			</clipto>
 		</scheduled_gain>
 		
+		<switch name="fbw/pitch/alpha-switched">
+			<default value="aero/alpha-deg"/>
+			<test value="0">
+				position/wow eq 1
+			</test>
+		</switch>
+		
+		<lag_filter name="fbw/pitch/alpha-lag">
+			<input>fbw/pitch/alpha-switched</input>
+			<c1>10</c1>
+		</lag_filter>
+		
+		<fcs_function name="fbw/pitch/alpha-pitch-feed">
+			<function>
+				<table>
+					<independentVar lookup="row">fbw/pitch/alpha-lag</independentVar>
+					<tableData>
+						12  0.0
+						16  1.0
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fbw/pitch/elevator-modified-min">
+			<function>
+				<table>
+					<independentVar lookup="row">fbw/pitch/alpha-lag</independentVar>
+					<tableData>
+						 8 -1.00
+						10 -0.85
+						16  0.00
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
+		<pure_gain name="fbw/pitch/elevator-pitch-feed">
+			<input>fbw/pitch/elevator-nul</input>
+			<gain>1.0</gain>
+			<clipto>
+				<min>fbw/pitch/elevator-modified-min</min>
+				<max>1.0</max>
+			</clipto>
+		</pure_gain>
+		
+		<summer name="fbw/pitch/input-sum">
+			<input>fbw/pitch/elevator-pitch-feed</input>
+			<input>fbw/pitch/alpha-pitch-feed</input>
+		</summer>
+		
 		<fcs_function name="fbw/pitch/g-command">
 			<function>
 				<sum>
 					<table>
-						<independentVar lookup="row">fbw/pitch/elevator-nul</independentVar>
+						<independentVar lookup="row">fbw/pitch/input-sum</independentVar>
 						<tableData>
 							-1.0  2.5
 							 0.0  1.0
@@ -527,7 +632,10 @@
 		<fcs_function name="fbw/pitch/q-passive-error">
 			<function>
 				<difference>
-					<property>velocities/q-rad_sec</property>
+					<product> <!-- Damp response with gear on ground -->
+						<property>velocities/q-rad_sec</property>
+						<value>0.25</value>
+					</product>
 					<product>
 						<property>fbw/pitch/elevator-nul</property>
 						<value>-0.174533</value>
@@ -553,8 +661,27 @@
 			</test>
 		</switch>
 		
+		<pure_gain name="fbw/mixer/pitch/computer-demand">
+			<input>fbw/pitch/q-final</input>
+			<gain>fbw/mixer/computer-gain</gain>
+		</pure_gain>
+		
+		<pure_gain name="fbw/mixer/pitch/passive-demand">
+			<input>fbw/pitch/q-passive</input>
+			<gain>fbw/mixer/passive-gain</gain>
+		</pure_gain>
+		
+		<summer name="fbw/mixer/pitch/output">
+			<input>fbw/mixer/pitch/computer-demand</input>
+			<input>fbw/mixer/pitch/passive-demand</input>
+			<clipto>
+				<min>-1.0</min>
+				<max>1.0</max>
+			</clipto>
+		</summer>
+		
 		<switch name="fbw/pitch-output">
-			<default value="fbw/pitch/q-final"/>
+			<default value="fbw/mixer/pitch/output"/> <!-- Mix passive and active control law for transition from ground -->
 			<test logic="AND" value="0.1">
 				/it-fbw/pitch-disable eq 0
 				fbw/ap/enabled eq 1
@@ -692,12 +819,17 @@
 			</function>
 		</fcs_function>
 		
-		<pure_gain name="fbw/yaw/yd-f">
+		<washout_filter name="fbw/yaw/r-washout">
 			<input>velocities/r-rad_sec</input>
+			<c1>0.5</c1>
+		</washout_filter>
+		
+		<pure_gain name="fbw/yaw/yd-f">
+			<input>fbw/yaw/r-washout</input>
 			<gain>fbw/yaw/yd-p-gain</gain>
 			<clipto>
-				<min>-0.1</min>
-				<max>0.1</max>
+				<min>-0.5</min>
+				<max>0.5</max>
 			</clipto>
 		</pure_gain>
 		

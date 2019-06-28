@@ -37,8 +37,6 @@
 			<command>nasal</command>
 			<script>fbw.roll();</script>
 			</binding>
-			<live>true</live>
-			<property>/it-fbw/man-roll-btn</property>
 		</button>
 		<button>
 			<legend>MAN PITCH</legend>
@@ -47,8 +45,6 @@
 			<command>nasal</command>
 			<script>fbw.pitch();</script>
 			</binding>
-			<live>true</live>
-			<property>/it-fbw/man-pitch-btn</property>
 		</button>
 	</group>
 	

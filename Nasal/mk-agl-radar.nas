@@ -1,7 +1,7 @@
 # Lake of Constance Hangar :: M.Kraus
 # Avril 2013
 # This file is licenced under the terms of the GNU General Public Licence V2 or later
-# Modified for KC-137R as needed by Joshua Davidson (it0uchpods)
+# Modified for KC-137R as needed by Joshua Davidson (Octal450)
 
 
 var agl_radar_control = func {

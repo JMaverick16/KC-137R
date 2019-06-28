@@ -1,4 +1,4 @@
-# KC-137R Master Caution System Wrapper Octal by Joshua Davidson (it0uchpods/411)
+# KC-137R Master Caution System Wrapper Octal by Joshua Davidson (Octal450/411)
 
 # Init always happens, but who cares? So I make it after the FDM is fine.
 

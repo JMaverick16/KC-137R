@@ -1,4 +1,4 @@
-# Gear tilting system by Joshua Davidson (it0uchpods)
+# Gear tilting system by Joshua Davidson (Octal450)
 
 var update_tilt = func {
 	var comp1 = getprop("/gear/gear[1]/compression-ft");

@@ -1,5 +1,5 @@
 # GMeter Min/Max Pulled Logic
-# Joshua Davidson (it0uchpods)
+# Joshua Davidson (Octal450)
 
 # Init
 var gmeter_init = func {
