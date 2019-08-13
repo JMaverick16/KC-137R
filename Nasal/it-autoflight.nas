@@ -1,4 +1,4 @@
-# IT-AUTOFLIGHT System Controller V4.0.0
+# IT-AUTOFLIGHT System Controller V4.0.1
 # Copyright (c) 2019 Joshua Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
@@ -339,13 +339,13 @@ var ITAF = {
 			if (Internal.altTemp >= Position.indicatedAltitudeFtTemp) {
 				Output.thrMode.setValue(2);
 				Text.thr.setValue(" PITCH");
-				if (Internal.flchActive) {
+				if (Internal.flchActive) { # Set before mode change to prevent it from overwriting by mistake
 					Text.vert.setValue("SPD CLB");
 				}
 			} else {
 				Output.thrMode.setValue(1);
 				Text.thr.setValue(" PITCH");
-				if (Internal.flchActive) {
+				if (Internal.flchActive) { # Set before mode change to prevent it from overwriting by mistake
 					Text.vert.setValue("SPD DES");
 				}
 			}
@@ -645,10 +645,12 @@ var ITAF = {
 			Text.vert.setValue("ALT CAP");
 		} else if (n == 4) { # FLCH
 			Output.apprArm.setBoolValue(0);
-			Output.vert.setValue(1);
-			Internal.alt.setValue(Input.alt.getValue());
-			Internal.altDiff = Internal.alt.getValue() - Position.indicatedAltitudeFt.getValue();
-			if (abs(Internal.altDiff) >= 250) { # SPD CLB or SPD DES
+			if (abs(Input.altDiff) >= 125) { # SPD CLB or SPD DES
+				if (Input.alt.getValue() >= Position.indicatedAltitudeFt.getValue()) { # Usually set Thrust Mode Selector, but we do it now due to timer lag
+					Text.vert.setValue("SPD CLB");
+				} else {
+					Text.vert.setValue("SPD DES");
+				}
 				Internal.altCaptureActive = 0;
 				Output.vert.setValue(4);
 				Internal.flchActive = 1;
