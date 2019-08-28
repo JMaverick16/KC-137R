@@ -14,6 +14,7 @@
   <flight-model>jsb</flight-model>
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+  <minimum-fg-version>2018.1</minimum-fg-version>
   <rating>
       <FDM type="int">4</FDM>
       <systems type="int">5</systems>
@@ -263,6 +264,14 @@
   
 	<aircraft-data>
 		<path>/instrumentation/operating-time/total</path>
+		<path>/instrumentation/transponder/inputs/digit[0]</path>
+        <path>/instrumentation/transponder/inputs/digit[1]</path>
+        <path>/instrumentation/transponder/inputs/digit[2]</path>
+        <path>/instrumentation/transponder/inputs/digit[3]</path>
+        <path>/instrumentation/tacan/frequencies/selected-channel[1]</path>
+        <path>/instrumentation/tacan/frequencies/selected-channel[2]</path>
+        <path>/instrumentation/tacan/frequencies/selected-channel[3]</path>
+        <path>/instrumentation/tacan/frequencies/selected-channel[4]</path>
 	</aircraft-data>
 	
 	<yokes-visible type="bool">1</yokes-visible>

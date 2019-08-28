@@ -120,7 +120,7 @@ var toggleLandingLights = func {
 		setprop("/controls/lighting/switches/landing-light[3]",0);  
   }
 }
-	setprop("sim/multiplay/visibility-range-nm", 400);
+
 ################## Little Help Window on bottom of screen #################
 var help_win = screen.window.new( 0, 0, 1, 5 );
 help_win.fg = [1,1,1,1];

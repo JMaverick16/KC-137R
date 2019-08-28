@@ -1,0 +1,1 @@
+setprop("sim/multiplay/visibility-range-nm", 110);

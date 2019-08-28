@@ -252,7 +252,7 @@ no. D6-3071-00
 			<default-pitch-deg type="double">-9.0</default-pitch-deg>
 			<from-model-idx type="int">0</from-model-idx>
 			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-			<default-field-of-view-deg type="double">90.0</default-field-of-view-deg>
+			<default-field-of-view-deg type="double">95.0</default-field-of-view-deg>
 			<default-heading-deg type="double">0</default-heading-deg>
 			<front-direction-deg type="double">0</front-direction-deg>
 			<front-left-direction-deg type="double">45</front-left-direction-deg>
@@ -340,6 +340,7 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/efis.nas</file>
 			<file>Aircraft/KC-137R/Nasal/systems-init.nas</file>
 			<file>Aircraft/KC-137R/Nasal/radio.nas</file>
+			<file>Aircraft/KC-137R/Nasal/rangeEC.nas</file>
 			<file>Aircraft/KC-137R/Nasal/radar2.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>

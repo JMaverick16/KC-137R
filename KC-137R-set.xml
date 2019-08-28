@@ -358,6 +358,7 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/efis.nas</file>
 			<file>Aircraft/KC-137R/Nasal/systems-init.nas</file>
 			<file>Aircraft/KC-137R/Nasal/radio.nas</file>
+			<file>Aircraft/KC-137R/Nasal/rangeKC.nas</file>
 			<file>Aircraft/KC-137R/Nasal/radar2.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
