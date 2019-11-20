@@ -12,7 +12,7 @@
 
     <engine>
         <name>left engine</name>
-        <path>Aircraft/KC-137R/Sounds/mpjet.wav</path>
+        <path>Aircraft/KC-137R/Sounds/whee.wav</path>
         <mode>looped</mode>
         <condition>
             <property>engines/engine[0]/n1</property>
@@ -30,12 +30,12 @@
             <z>-3</z>
         </position>
         <reference-dist>400.0</reference-dist>
-        <max-dist>5000.0</max-dist>
+        <max-dist>7000.0</max-dist>
     </engine>
 
     <engine>
         <name>right engine</name>
-        <path>Aircraft/KC-137R/Sounds/mpjet.wav</path>
+        <path>Aircraft/KC-137R/Sounds/whee.wav</path>
         <mode>looped</mode>
         <condition>
             <property>engines/engine[2]/n1</property>
@@ -53,12 +53,12 @@
             <z>-3</z>
         </position>
         <reference-dist>400.0</reference-dist>
-        <max-dist>5000.0</max-dist>
+        <max-dist>7000.0</max-dist>
     </engine>
 
     <engine>
         <name>left n1</name>
-        <path>Aircraft/KC-137R/Sounds/mpjet.wav</path>
+        <path>Aircraft/KC-137R/Sounds/whee.wav</path>
         <mode>looped</mode>
         <property>engines/engine[0]/n1</property>
         <pitch>
@@ -80,12 +80,12 @@
             <z>-3</z>
         </position>
         <reference-dist>400.0</reference-dist>
-        <max-dist>5000.0</max-dist>
+        <max-dist>7000.0</max-dist>
     </engine>
 
     <engine>
         <name>right n1</name>
-        <path>Aircraft/KC-137R/Sounds/mpjet.wav</path>
+        <path>Aircraft/KC-137R/Sounds/whee.wav</path>
         <mode>looped</mode>
         <property>engines/engine[2]/n1</property>
         <volume>
@@ -107,7 +107,7 @@
             <z>-3</z>
         </position>
         <reference-dist>400.0</reference-dist>
-        <max-dist>5000.0</max-dist>
+        <max-dist>7000.0</max-dist>
     </engine>
 
     <extpowerunit>

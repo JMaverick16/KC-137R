@@ -15,12 +15,12 @@
          <value>50</value>
        </greater-than>
        <greater-than>
-         <property>position/altitude-ft</property>
-         <value>28000</value>
+          <property>environment/relative-humidity</property>
+          <value>70</value>
        </greater-than>
        <less-than>
          <property>environment/temperature-degc</property>
-         <value>-40</value>
+         <value>-38</value>
        </less-than>
      </and>
    </condition>

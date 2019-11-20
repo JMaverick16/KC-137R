@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Northrop Grumman E-8R JSTARS (IAE V2527-A5)</description>
+  <description>Northrop Grumman E-8R Joint STARS (IAE V2527-A5)</description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/splashJS.png</splash-texture>
 	</startup>

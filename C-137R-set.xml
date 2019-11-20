@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Boeing C-137R (IAE V2527-A5)</description>
+  <description>Boeing C-137R Stratoliner (IAE V2527-A5)</description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/splashC.png</splash-texture>
 	</startup>
