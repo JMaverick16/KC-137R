@@ -817,7 +817,7 @@
     <property>/instrumentation/generic/click</property>
    </condition>
    <volume>
-    <max>0.2</max>
+    <max>0.45</max>
    </volume>
   </click>
 
@@ -830,7 +830,7 @@
     </not>
    </condition>
    <volume>
-    <max>0.2</max>
+    <max>0.45</max>
    </volume>
   </click>
   
@@ -894,7 +894,7 @@
       <property>/sim/sound/switch3</property>
     </condition>
     <volume>
-      <offset> 0.5 </offset>
+      <offset> 0.75 </offset>
     </volume>
   </switch>
 
@@ -908,7 +908,7 @@
       </not>
     </condition>
     <volume>
-      <offset> 0.5 </offset>
+      <offset> 0.75 </offset>
     </volume>
   </switch>
 

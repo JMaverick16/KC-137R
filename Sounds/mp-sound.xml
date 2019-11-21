@@ -12,7 +12,7 @@
 
     <engine>
         <name>left engine</name>
-        <path>Aircraft/KC-137R/Sounds/whee.wav</path>
+        <path>Aircraft/KC-137R/Sounds/FL2070/xabn11.wav</path>
         <mode>looped</mode>
         <condition>
             <property>engines/engine[0]/n1</property>
@@ -35,7 +35,7 @@
 
     <engine>
         <name>right engine</name>
-        <path>Aircraft/KC-137R/Sounds/whee.wav</path>
+        <path>Aircraft/KC-137R/Sounds/FL2070/xabn11.wav</path>
         <mode>looped</mode>
         <condition>
             <property>engines/engine[2]/n1</property>
@@ -58,7 +58,7 @@
 
     <engine>
         <name>left n1</name>
-        <path>Aircraft/KC-137R/Sounds/whee.wav</path>
+        <path>Aircraft/KC-137R/Sounds/thrust.wav</path>
         <mode>looped</mode>
         <property>engines/engine[0]/n1</property>
         <pitch>
@@ -85,7 +85,7 @@
 
     <engine>
         <name>right n1</name>
-        <path>Aircraft/KC-137R/Sounds/whee.wav</path>
+        <path>Aircraft/KC-137R/Sounds/thrust.wav</path>
         <mode>looped</mode>
         <property>engines/engine[2]/n1</property>
         <volume>
