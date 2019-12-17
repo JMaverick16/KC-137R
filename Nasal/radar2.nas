@@ -334,96 +334,46 @@ var Radar = {
         isVisible = 0;
         
         # As the script is relatively ressource consuming, then, we do a maximum of test before doing it
-        if(me.get_check(SelectedObject))
-        {
+#         if(me.get_check())
+#         {
             SelectCoord = SelectedObject.get_Coord();
+            
+            SelectCoord.set_alt(SelectCoord.alt()+1);
             # Because there is no terrain on earth that can be between these 2
             if(me.our_alt < 8900 and SelectCoord.alt() < 8900)
             {
-                # Temporary variable
-                # A (our plane) coord in meters
-                a = me.MyCoord.x();
-                b = me.MyCoord.y();
-                c = me.MyCoord.z();
-                # B (target) coord in meters
-                d = SelectCoord.x();
-                e = SelectCoord.y();
-                f = SelectCoord.z();
-                x = 0;
-                y = 0;
-                z = 0;
-                RecalculatedL = 0;
-                difa = d - a;
-                difb = e - b;
-                difc = f - c;
-                # direct Distance in meters
-                myDistance = SelectCoord.direct_distance_to(me.MyCoord);
-                Aprime = geo.Coord.new();
+                  var myPos = geo.aircraft_position();
+
+                  var xyz = {"x":myPos.x(),                  "y":myPos.y(),                 "z":myPos.z()};
+                  var dir = {"x":SelectCoord.x()-myPos.x(),  "y":SelectCoord.y()-myPos.y(), "z":SelectCoord.z()-myPos.z()};
+
+                  # Check for terrain between own aircraft and other:
+                  v = get_cart_ground_intersection(xyz, dir);
+                  if (v == nil) {
+                    return 1;
+                    #printf("No terrain, planes has clear view of each other");
+                  } else {
+                  var terrain = geo.Coord.new();
+                  terrain.set_latlon(v.lat, v.lon, v.elevation);
+                  var maxDist = myPos.direct_distance_to(SelectCoord);
+                  var terrainDist = myPos.direct_distance_to(terrain);
+                  if (terrainDist < maxDist-1) {
+                    #print("terrain found between the planes");
+                    return 0;
+                  } else {
+                      #print("The planes has clear view of each other");
+                      return 1;
+                  }
+                  }
+            
+            
                 
-                # Here is to limit FPS drop on very long distance
-                L = 500;
-                if(myDistance > 50000)
-                {
-                    L = myDistance / 15;
-                }
-                step = L;
-                maxLoops = int(myDistance / L);
-                
-                isVisible = 1;
-                # This loop will make travel a point between us and the target and check if there is terrain
-                for(var i = 0 ; i < maxLoops ; i += 1)
-                {
-                    L = i * step;
-                    K = (L * L) / (1 + (-1 / difa) * (-1 / difa) * (difb * difb + difc * difc));
-                    DELTA = (-2 * a) * (-2 * a) - 4 * (a * a - K);
-                    
-                    if(DELTA >= 0)
-                    {
-                        # So 2 solutions or 0 (1 if DELTA = 0 but that 's just 2 solution in 1)
-                        x1 = (-(-2 * a) + math.sqrt(DELTA)) / 2;
-                        x2 = (-(-2 * a) - math.sqrt(DELTA)) / 2;
-                        # So 2 y points here
-                        y1 = b + (x1 - a) * (difb) / (difa);
-                        y2 = b + (x2 - a) * (difb) / (difa);
-                        # So 2 z points here
-                        z1 = c + (x1 - a) * (difc) / (difa);
-                        z2 = c + (x2 - a) * (difc) / (difa);
-                        # Creation Of 2 points
-                        Aprime1  = geo.Coord.new();
-                        Aprime1.set_xyz(x1, y1, z1);
-                        
-                        Aprime2  = geo.Coord.new();
-                        Aprime2.set_xyz(x2, y2, z2);
-                        
-                        # Here is where we choose the good
-                        if(math.round((myDistance - L), 2) == math.round(Aprime1.direct_distance_to(SelectCoord), 2))
-                        {
-                            Aprime.set_xyz(x1, y1, z1);
-                        }
-                        else
-                        {
-                            Aprime.set_xyz(x2, y2, z2);
-                        }
-                        AprimeLat = Aprime.lat();
-                        Aprimelon = Aprime.lon();
-                        AprimeTerrainAlt = geo.elevation(AprimeLat, Aprimelon);
-                        if(AprimeTerrainAlt == nil)
-                        {
-                            AprimeTerrainAlt = 0;
-                        }
-                        
-                        if(AprimeTerrainAlt > Aprime.alt())
-                        {
-                            isVisible = 0;
-                        }
-                    }
-                }
             }
             else
             {
                 isVisible = 1;
             }
-        }
+#         }
         return isVisible;
     },
 
@@ -507,14 +457,7 @@ var Radar = {
     },
 
     InRange: func(SelectedObject){
-        # Check if it's in range
-        IsInRange = 0;
-        var myRange = me.targetRange(SelectedObject);
-        if(myRange != 0)
-        {
-            #print(SelectedObject.get_Callsign() ~": Range (NM) : " ~myRange);
-            IsInRange = ( myRange <= me.rangeTab[me.rangeIndex]);
-        }
+        IsInRange = rcs.isInRadarRange(SelectedObject, 30*10, 150);
         return IsInRange;
     },
 
@@ -870,6 +813,8 @@ var Target = {
         
         
         obj.pitch           = c.getNode("orientation/pitch-deg");
+        obj.roll           = c.getNode("orientation/roll-deg");
+        
         obj.Speed           = c.getNode("velocities/true-airspeed-kt");
         obj.VSpeed          = c.getNode("velocities/vertical-speed-fps");
         obj.Callsign        = c.getNode("callsign");
@@ -923,6 +868,33 @@ var Target = {
         obj.RadarStandby    = c.getNode("sim/multiplay/generic/int[2]");
         
         obj.deviation       = nil;
+        
+        obj.Model = c.getNode("model-short");
+        var model_short = c.getNode("sim/model/path");
+        if(model_short != nil)
+        {
+            var model_short_val = model_short.getValue();
+            if (model_short_val != nil and model_short_val != "")
+            {
+                var u = split("/", model_short_val); # give array
+                var s = size(u); # how many elements in array
+                var o = u[s-1];  # the last element
+                var m = size(o); # how long is this string in the last element
+                var e = m - 4;   # - 4 chars .xml
+                obj.ModelType = substr(o, 0, e); # the string without .xml
+            }
+            else
+                obj.ModelType = "";
+        } elsif (c.getNode("type") != nil) {
+            # not all have a path property
+            obj.ModelType = c.getNode("type").getValue();
+            if (obj.ModelType == nil) {
+                # not all have a type property
+                obj.ModelType = "";
+            }
+        } else {
+            obj.ModelType = "";
+        }
         
         return obj;
     },
@@ -1048,6 +1020,10 @@ var Target = {
         me.set_latlon(me.lat.getValue(), me.lon.getValue(), me.Alt.getValue() * FT2M);
         return TgTCoord;
     },
+    
+    get_model: func {
+        return me.ModelType;
+    },
 
     get_Callsign: func(){
         var n = me.Callsign.getValue();
@@ -1081,6 +1057,11 @@ var Target = {
 
     get_Pitch: func(){
         var n = me.pitch.getValue();
+        return n;
+    },
+    
+    get_Roll: func(){
+        var n = me.roll.getValue();
         return n;
     },
 

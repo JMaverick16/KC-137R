@@ -13,6 +13,7 @@
 	<status>Beta</status>
     <flight-model>null</flight-model>
     <variant-of>C-137R</variant-of>
+    <minimum-fg-version>2018.3</minimum-fg-version>
     
     <model>
       <path archive="y">Aircraft/KC-137R/Models/C-137R-PAX.xml</path>
@@ -132,6 +133,13 @@
     <chase-distance-m>-45</chase-distance-m>
 
   </sim>
+  
+  <instrumentation>
+  <mptcas>
+    <display-factor-awacs type="double">1</display-factor-awacs>
+    <display-factor type="double">1</display-factor>
+  </mptcas>
+ </instrumentation>
 
   <nasal>
 	<b707>

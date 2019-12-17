@@ -133,7 +133,7 @@
 		<type>rotate</type>
 		<object-name>KnobRange</object-name>
 		<property>instrumentation/mptcas/display-factor-awacs</property>
-		<factor>3000</factor>
+		<factor>180</factor>
 		<center>
 			<x-m> 0.02512</x-m>
 			<y-m>-0.08374</y-m>
@@ -161,9 +161,9 @@
 		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>-0.008</step>
-				<min>0.0</min>
-				<max>0.8</max>
+				<step>-0.01</step>
+				<min>0.1</min>
+				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
 			<binding>	          
@@ -175,9 +175,9 @@
 		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>-0.04</step>
-				<min>0.0</min>
-				<max>0.8</max>
+				<step>-0.1</step>
+				<min>0.1</min>
+				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
 		  <binding>
@@ -196,9 +196,9 @@
 		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>0.008</step>
-				<min>0.0</min>
-				<max>0.8</max>
+				<step>0.01</step>
+				<min>0.1</min>
+				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
 			<binding>	          
@@ -210,9 +210,9 @@
 		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>0.04</step>
-				<min>0.0</min>
-				<max>0.8</max>
+				<step>0.1</step>
+				<min>0.1</min>
+				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
 		  <binding>
@@ -231,9 +231,9 @@
 		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>-0.002</step>
-				<min>0.0</min>
-				<max>0.8</max>
+				<step>-0.01</step>
+				<min>0.1</min>
+				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
 			<binding>	          
@@ -245,9 +245,9 @@
 		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>-0.01</step>
-				<min>0.0</min>
-				<max>0.8</max>
+				<step>-0.1</step>
+				<min>0.1</min>
+				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
 		  <binding>
@@ -266,9 +266,9 @@
 		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>0.002</step>
-				<min>0.0</min>
-				<max>0.8</max>
+				<step>0.01</step>
+				<min>0.1</min>
+				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
 			<binding>	          
@@ -280,9 +280,9 @@
 		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>0.01</step>
-				<min>0.0</min>
-				<max>0.8</max>
+				<step>0.1</step>
+				<min>0.1</min>
+				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
 		  <binding>
@@ -306,7 +306,7 @@
   </offsets>
 </model>
 
-<animation>
+<!--<animation>
 	<type>rotate</type>
 	<object-name>multis</object-name>
 	<property>orientation/heading-deg</property>
@@ -316,7 +316,7 @@
 		<y>0</y>
 		<z>0</z>
 	</axis>
-</animation>
+</animation>-->
 
 <animation>
 	<type>select</type>
