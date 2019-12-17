@@ -11,6 +11,8 @@
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/splashJS.png</splash-texture>
 	</startup>
+	
+	<variant-of>C-137R</variant-of>
 
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/E-8R.xml</path>
