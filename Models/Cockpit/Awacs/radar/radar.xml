@@ -130,84 +130,23 @@
 	</animation>
 	
 	<animation>
-		<type>rotate</type>
+		<type>knob</type>
 		<object-name>KnobRange</object-name>
 		<property>instrumentation/mptcas/display-factor-awacs</property>
-		<factor>180</factor>
+		<factor>45</factor>
+		<offset-deg>-35</offset-deg>
 		<center>
 			<x-m> 0.02512</x-m>
 			<y-m>-0.08374</y-m>
 			<z-m>-0.2062</z-m>
 		</center>
 		<axis>
-			<x>1</x>
+			<x>-1</x>
 			<y>0</y>
 			<z>0</z>
 		</axis>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>KnobRange</object-name>
-		<visible>true</visible>
-		<action>
-			<name>calibrate fine dec</name>
-			<button>0</button>
-		<repeatable>true</repeatable>
-			<binding>	          
-				<condition>
-		            <not><property>devices/status/keyboard/shift</property></not>
-		            <not><property>devices/status/keyboard/super</property></not>
-		        </condition>
-				<command>property-adjust</command>
-				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>-0.01</step>
-				<min>0.1</min>
-				<max>1.0</max>
-				<wrap>false</wrap>
-			</binding>
-			<binding>	          
-				<condition>
-		            <or>
-						<property>devices/status/keyboard/shift</property>
-						<property>devices/status/keyboard/super</property>
-					</or>
-		        </condition>
-				<command>property-adjust</command>
-				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>-0.1</step>
-				<min>0.1</min>
-				<max>1.0</max>
-				<wrap>false</wrap>
-			</binding>
-		  <binding>
-				<command>property-toggle</command>
-				<property>sim/sound/switch3</property>
-			</binding>
-		</action>
-		<action>
-			<name>calibrate fine inc</name>
-			<button>1</button>
-		<repeatable>true</repeatable>
-			<binding>	          
-				<condition>
-		            <not><property>devices/status/keyboard/shift</property></not>
-		            <not><property>devices/status/keyboard/super</property></not>
-		        </condition>
-				<command>property-adjust</command>
-				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>0.01</step>
-				<min>0.1</min>
-				<max>1.0</max>
-				<wrap>false</wrap>
-			</binding>
-			<binding>	          
-				<condition>
-		            <or>
-						<property>devices/status/keyboard/shift</property>
-						<property>devices/status/keyboard/super</property>
-					</or>
-		        </condition>
+		<increase>
+			<binding>	   
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
 				<step>0.1</step>
@@ -215,34 +154,9 @@
 				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
-		  <binding>
-				<command>property-toggle</command>
-				<property>sim/sound/switch3</property>
-			</binding>
-		</action>
-		<action>
-			<name>calibrate fine dec</name>
-			<button>3</button>
-		<repeatable>true</repeatable>
+		</increase>
+		<decrease>
 			<binding>	          
-				<condition>
-		            <not><property>devices/status/keyboard/shift</property></not>
-		            <not><property>devices/status/keyboard/super</property></not>
-		        </condition>
-				<command>property-adjust</command>
-				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>-0.01</step>
-				<min>0.1</min>
-				<max>1.0</max>
-				<wrap>false</wrap>
-			</binding>
-			<binding>	          
-				<condition>
-		            <or>
-						<property>devices/status/keyboard/shift</property>
-						<property>devices/status/keyboard/super</property>
-					</or>
-		        </condition>
 				<command>property-adjust</command>
 				<property>instrumentation/mptcas/display-factor-awacs</property>
 				<step>-0.1</step>
@@ -250,46 +164,17 @@
 				<max>1.0</max>
 				<wrap>false</wrap>
 			</binding>
-		  <binding>
-				<command>property-toggle</command>
-				<property>sim/sound/switch3</property>
-			</binding>
-		</action>
-		<action>
-			<name>calibrate fine inc</name>
-			<button>4</button>
-		<repeatable>true</repeatable>
-			<binding>	          
-				<condition>
-		            <not><property>devices/status/keyboard/shift</property></not>
-		            <not><property>devices/status/keyboard/super</property></not>
-		        </condition>
-				<command>property-adjust</command>
-				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>0.01</step>
-				<min>0.1</min>
-				<max>1.0</max>
-				<wrap>false</wrap>
-			</binding>
-			<binding>	          
-				<condition>
-		            <or>
-						<property>devices/status/keyboard/shift</property>
-						<property>devices/status/keyboard/super</property>
-					</or>
-		        </condition>
-				<command>property-adjust</command>
-				<property>instrumentation/mptcas/display-factor-awacs</property>
-				<step>0.1</step>
-				<min>0.1</min>
-				<max>1.0</max>
-				<wrap>false</wrap>
-			</binding>
-		  <binding>
-				<command>property-toggle</command>
-				<property>sim/sound/switch3</property>
-			</binding>
-		</action>
+		</decrease>
+		<hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>radrang</tooltip-id>
+                <label>Radar range: %d NM</label>
+                <property>instrumentation/mptcas/display-factor-awacs</property>
+                <mapping>nasal</mapping>
+			    <script>return arg[0]*300;</script>
+            </binding>
+        </hovered>
 	</animation>
 
 <!-- TCAS ANIMATIONS -->

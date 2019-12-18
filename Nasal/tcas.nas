@@ -63,8 +63,8 @@ var tcas = func {
 				var distance = our_pos.distance_to(mp_pos) * M2NM; # to nautical miles
 				var course_to_mp = geo.normdeg(hdg_to_mp-my_hdg); 
 			  
-				var display = distance * display_factor; # for the range of the selected mp-aircrafts
-				var displayAwacs = distance * display_factor_awacs; # for the range of the selected mp-aircrafts
+				var display = distance / display_factor; # for the range of the selected mp-aircrafts
+				var displayAwacs = distance / display_factor_awacs; # for the range of the selected mp-aircrafts
 				
 				var x  = 0.0035+(0.1685 * display/300)* math.cos((90-course_to_mp)*D2R);
 				var y  = 0.0005+(0.1685 * display/300)* math.sin((90-course_to_mp)*D2R);
@@ -146,8 +146,8 @@ var tcas = func {
 				var distance = our_pos.distance_to(ai_pos) * M2NM; # to Nautical Miles
 				var course_to_mp = geo.normdeg(hdg_to_mp-my_hdg); 
 			  
-				var display = distance * display_factor; # for the range of the selected mp-aircrafts
-				var displayAwacs = distance * display_factor_awacs; # for the range of the selected mp-aircrafts
+				var display = distance / display_factor; # for the range of the selected mp-aircrafts
+				var displayAwacs = distance / display_factor_awacs; # for the range of the selected mp-aircrafts
 				# -0.165 0.172  -0.168 0.169
 				# 0.1685  0.1685
 				var x  = 0.0035+(0.1685 * display/300)* math.cos((90-course_to_mp)*D2R);
@@ -218,8 +218,8 @@ var tcas = func {
 				var distance = our_pos.distance_to(ai_pos) * M2NM; # to Nautical Miles
 				var course_to_mp = geo.normdeg(hdg_to_mp-my_hdg); 
 			  
-				var display = distance * display_factor; # for the range of the selected ai-tankers
-				var displayAwacs = distance * display_factor_awacs; # for the range of the selected ai-tankers
+				var display = distance / display_factor; # for the range of the selected ai-tankers
+				var displayAwacs = distance / display_factor_awacs; # for the range of the selected ai-tankers
 				
 				#var x  = getprop("ax");#(0.125 * display/300)* math.cos((90-course_to_mp)*D2R);
 				#var y  = getprop("ay");#(0.125 * display/300)* math.sin((90-course_to_mp)*D2R);
