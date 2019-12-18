@@ -549,7 +549,7 @@ var Radar = {
     },
 
     InRange: func(SelectedObject){
-        IsInRange = rcs.isInRadarRange(SelectedObject, 30*10, 150);
+        IsInRange = rcs.isInRadarRange(SelectedObject, 50*(getprop("sim/aircraft") == "EC-137R"?6:1), 150);
         return IsInRange;
     },
 

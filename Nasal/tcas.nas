@@ -36,10 +36,6 @@ var tcas = func {
 		var display_factor = getprop("/instrumentation/mptcas/display-factor");
 		var display_factor_awacs = getprop("/instrumentation/mptcas/display-factor-awacs");
 		
-		if(getprop("sim/aircraft") == "EC-137R") {
-			display_factor = display_factor_awacs;
-		}
-		
 		var aircraft_list = {};
 	
 		# Multiplayer TCAS
@@ -66,8 +62,8 @@ var tcas = func {
 				var display = distance / display_factor; # for the range of the selected mp-aircrafts
 				var displayAwacs = distance / display_factor_awacs; # for the range of the selected mp-aircrafts
 				
-				var x  = 0.0035+(0.1685 * display/300)* math.cos((90-course_to_mp)*D2R);
-				var y  = 0.0005+(0.1685 * display/300)* math.sin((90-course_to_mp)*D2R);
+				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
+				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
 				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
 				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
 				
@@ -108,7 +104,7 @@ var tcas = func {
 				}
 				
 				# select object if in range of radar / 3.24 found by trial and error depends on range select knob
-				if (distance < 300*display_factor){ 
+				if (distance < 100*display_factor){ 
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show", 1);
 				}else{
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show", 0);				
@@ -150,8 +146,8 @@ var tcas = func {
 				var displayAwacs = distance / display_factor_awacs; # for the range of the selected mp-aircrafts
 				# -0.165 0.172  -0.168 0.169
 				# 0.1685  0.1685
-				var x  = 0.0035+(0.1685 * display/300)* math.cos((90-course_to_mp)*D2R);
-				var y  = 0.0005+(0.1685 * display/300)* math.sin((90-course_to_mp)*D2R);
+				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
+				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
 				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
 				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
 				
@@ -176,7 +172,7 @@ var tcas = func {
 				}
 				
 				# select object if in range of radar / 3.24 found by trial and error depends on range select knob
-				if (distance < 300*display_factor){ 
+				if (distance < 100*display_factor){ 
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show", 1);
 				}else{
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show", 0);				
@@ -225,8 +221,8 @@ var tcas = func {
 				#var y  = getprop("ay");#(0.125 * display/300)* math.sin((90-course_to_mp)*D2R);
 				#var xa = getprop("aax");#(0.125 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
 				#var ya = getprop("aay");#(0.125 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
-				var x  = 0.0035+(0.1685 * display/300)* math.cos((90-course_to_mp)*D2R);
-				var y  = 0.0005+(0.1685 * display/300)* math.sin((90-course_to_mp)*D2R);
+				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
+				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
 				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
 				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
 				
@@ -251,7 +247,7 @@ var tcas = func {
 				}
 				
 				# select object if in range of radar / 3.24 found by trial and error depends on range select knob
-				if (distance < 300*display_factor){ 
+				if (distance < 100*display_factor){ 
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show", 1);
 				}else{
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show", 0);				
