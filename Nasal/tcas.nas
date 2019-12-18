@@ -21,7 +21,7 @@ var path ="instrumentation/radar2/targets/multiplayer";
 
 
 var tcas = func {
-    myRadar.update();
+    b707.arr = myRadar.update();
     
     
     

@@ -19,7 +19,7 @@ var tmp_nearest_u     = nil;
 var nearest_rng       = 0;
 var nearest_u         = nil;
 
-
+var arr = [];
 #radar : check : InRange, inAzimuth, inElevation, NotBeyondHorizon, doppler, isNotBehindTerrain
 #rwr   : check : InhisRange (radardist), inHisElevation, inHisAzimuth, NotBeyondHorizon, isNotBehindTerrain
 #heat  : check : InRange, inAzimuth, inElevation, NotBeyondHorizon, heat_sensor, isNotBehindTerrain
@@ -28,7 +28,99 @@ var nearest_u         = nil;
 #transponder : check :   radar, transponderOn (not yet implemented)
 
 
-        
+var cutoffA = func {
+    var from = getprop("awacs/from");
+    var to   = getprop("awacs/to");
+    var txt = "No intercept";
+    var toU = nil;
+    var fromU = nil;
+    
+    if (arr != nil) {
+        foreach (var tgt; arr) {
+            if (tgt.get_Callsign() == from) {
+                fromU = tgt;
+            } elsif (tgt.get_Callsign() == to) {
+                toU = tgt;
+            }
+        }
+        if (toU != nil and fromU != nil) {
+            var c1 = fromU.get_Coord();
+            var c2 = toU.get_Coord();
+            var dist_m = c1.distance_to(c2);
+            var mag_offset = getprop("/orientation/heading-magnetic-deg") - getprop("/orientation/heading-deg");
+            var bearing = c1.course_to(c2);
+            var runnerHeading = toU.get_heading();
+            var runnerSpeed = toU.get_Speed()*KT2MPS;
+            var chaserSpeed = fromU.get_Speed()*KT2MPS;
+            var in = get_intercept(bearing, dist_m, runnerHeading, runnerSpeed, chaserSpeed);
+            if (in != nil) {
+                txt = sprintf("Fly heading %d. Intercept in %.1f minutes", geo.normdeg(in[1]+mag_offset), in[0]/60);
+            } else {
+                txt = "No intercept for current speed";
+            }
+        } else {
+            txt = "Callsigns not in range or not present";
+        }
+    }
+    
+    setprop("awacs/a", txt);
+}
+
+var get_intercept = func(bearing, dist_m, runnerHeading, runnerSpeed, chaserSpeed) {
+    # implementation by pinto
+    # needs: bearing, dist_m, runnerHeading, runnerSpeed, chaserSpeed
+    #        dist_m > 0 and chaserSpeed > 0
+
+    #var bearing = 184;var dist_m=31000;var runnerHeading=186;var runnerSpeed= 200;var chaserSpeed=250;
+    #print();
+    if (dist_m == 0 or chaserSpeed == 0) {
+      return nil;
+    }
+    #printf("intercept - bearing=%d dist=%dNM itspeed=%d myspeed=%d",bearing, dist_m*M2NM, runnerSpeed*MPS2KT, chaserSpeed*MPS2KT);
+
+    var trigAngle = 90-bearing;
+    var RunnerPosition = [dist_m*math.cos(trigAngle*D2R), dist_m*math.sin(trigAngle*D2R),0];
+    var ChaserPosition = [0,0,0];
+
+    var VectorFromRunner = vector.Math.minus(ChaserPosition, RunnerPosition);
+    var runner_heading = 90-runnerHeading;
+    var RunnerVelocity = [runnerSpeed*math.cos(runner_heading*D2R), runnerSpeed*math.sin(runner_heading*D2R),0];
+
+    var a = chaserSpeed * chaserSpeed - runnerSpeed * runnerSpeed;
+    var b = 2 * vector.Math.dotProduct(VectorFromRunner, RunnerVelocity);
+    var c = -dist_m * dist_m;
+
+    if ((b*b-4*a*c)<0) {
+      # intercept not possible
+      return nil;
+    }
+    var t1 = (-b+math.sqrt(b*b-4*a*c))/(2*a);
+    var t2 = (-b-math.sqrt(b*b-4*a*c))/(2*a);
+
+    var timeToIntercept = 0;
+
+    if (t1 < 0 and t2 < 0) {
+      # intercept not possible
+      return nil;
+    }
+    if (t1 > 0 and t2 > 0) {
+          timeToIntercept = math.min(t1, t2);
+    } else {
+          timeToIntercept = math.max(t1, t2);
+    }
+    var InterceptPosition = vector.Math.plus(RunnerPosition, vector.Math.product(timeToIntercept, RunnerVelocity));
+
+    var ChaserVelocity = vector.Math.product(1/timeToIntercept, vector.Math.minus(InterceptPosition, ChaserPosition));
+
+    var interceptAngle = vector.Math.angleBetweenVectors([0,1,0], ChaserVelocity);
+    var interceptHeading = geo.normdeg(ChaserVelocity[0]<0?-interceptAngle:interceptAngle);
+    #print("output:");
+    #print("time: " ~ timeToIntercept);
+    #var InterceptVector = vector.Math.minus(InterceptPosition, ChaserPosition);
+    #printf("(%d,%d) %.1f min",InterceptVector[0]*M2NM,InterceptVector[1]*M2NM, timeToIntercept/60);
+    #print((ChaserVelocity[0]<0)~" intercept-heading: " ~ interceptHeading);
+    return [timeToIntercept, interceptHeading];
+}
         
         
 #var Mp = props.globals.getNode("ai/models");
@@ -166,7 +258,7 @@ var Radar = {
             radarWorking = (radarWorking == nil) ? 0 : radarWorking;
             if(radarWorking > 24 and me.AutoUpdate)
             {
-                me.update();
+                arr = me.update();
                 #These line bellow are error management.
                 var UpdateErr = [];
                 call(me.update,[],me,nil,UpdateErr);
@@ -1027,11 +1119,11 @@ var Target = {
 
     get_Callsign: func(){
         var n = me.Callsign.getValue();
-        if(size(n) < 1)
+        if(n == nil or n == "")
         {
             n = me.name.getValue();
         }
-        if(n == nil or size(n) < 1)
+        if(n == nil or n == "")
         {
             n = "UFO";
         }
