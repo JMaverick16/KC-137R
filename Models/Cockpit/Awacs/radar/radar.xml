@@ -172,7 +172,7 @@
                 <label>Radar range: %d NM</label>
                 <property>instrumentation/mptcas/display-factor-awacs</property>
                 <mapping>nasal</mapping>
-			    <script>return arg[0]*300;</script>
+			    <script>return arg[0]*400;</script>
             </binding>
         </hovered>
 	</animation>
