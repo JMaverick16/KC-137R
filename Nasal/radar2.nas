@@ -54,7 +54,7 @@ var cutoffA = func {
             var chaserSpeed = fromU.get_Speed()*KT2MPS;
             var in = get_intercept(bearing, dist_m, runnerHeading, runnerSpeed, chaserSpeed);
             if (in != nil) {
-                txt = sprintf("Fly heading %d. Intercept in %.1f minutes", geo.normdeg(in[1]+mag_offset), in[0]/60);
+                txt = sprintf("Fly heading %d magn. Intercept in %.1f minutes", geo.normdeg(in[1]+mag_offset), in[0]/60);
             } else {
                 txt = "No intercept for current speed";
             }
