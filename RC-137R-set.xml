@@ -12,7 +12,7 @@
 		<splash-texture>Aircraft/KC-137R/splashTT.png</splash-texture>
 	</startup>
 	
-	<variant-of>C-137R</variant-of>
+	<variant-of>KC-137R</variant-of>
 	<minimum-fg-version>2018.3</minimum-fg-version>
 
   <model n="0">

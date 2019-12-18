@@ -11,7 +11,16 @@
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/splashC.png</splash-texture>
 	</startup>
+	
+	<variant-of>KC-137R</variant-of>
 	<minimum-fg-version>2018.3</minimum-fg-version>
+	<previews>
+            <preview>
+                <type>exterior</type>
+                <splash type="bool">true</splash>
+                <path>Splash/splashC.png</path>
+            </preview>
+    </previews>
 
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/C-137R.xml</path>

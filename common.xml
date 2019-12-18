@@ -8,7 +8,7 @@
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
  <sim n="0">
   <description>Boeing KC-137R</description>
-  <author>J Maverick 16, Joshua Davidson (Octal450), Martien Van Der Plas, FL2070 and others. Based on the Lake of Constance Hangar version [Original from Innis Cunningham]</author>
+  <author>J Maverick 16, Joshua Davidson, Martien Van Der Plas, Nikolai V. Chr., FL2070 and others. Based on the Lake of Constance Hangar version [Original from Innis Cunningham]</author>
   <status>Early Production</status>
   <aero>KC-137R</aero>
   <flight-model>jsb</flight-model>
