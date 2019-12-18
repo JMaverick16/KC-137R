@@ -11,6 +11,9 @@
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/splashKC.png</splash-texture>
 	</startup>
+	
+	<variant-of>C-137R</variant-of>
+	<minimum-fg-version>2018.3</minimum-fg-version>
 
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/KC-137R.xml</path>
@@ -319,6 +322,10 @@ no. D6-3071-00
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
 	</cdu>
+	<mptcas>
+    <display-factor-awacs type="double">1</display-factor-awacs>
+    <display-factor type="double">1</display-factor>
+  </mptcas>
  </instrumentation>
  
   <b707>
@@ -339,6 +346,12 @@ no. D6-3071-00
   </b707>		
 	
 	<nasal>
+		<vector>
+            <file>Aircraft/KC-137R/Nasal/vector.nas</file>
+		</vector>
+		<rcs>
+            <file>Aircraft/KC-137R/Nasal/rcs.nas</file>
+		</rcs>
 		<b707>
 			<file>Aircraft/KC-137R/Nasal/shake.nas</file>
 			<file>Aircraft/KC-137R/Nasal/autostart.nas</file>

@@ -2,6 +2,10 @@
 # Avril 2013
 # This file is licenced under the terms of the GNU General Public Licence V2 or later
 ################################ Reverser ####################################
+#setprop("ax",0);#(0.125 * display/300)* math.cos((90-course_to_mp)*D2R);
+#setprop("ay",0);#(0.125 * display/300)* math.sin((90-course_to_mp)*D2R);
+#setprop("aax",0);#(0.125 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
+#setprop("aay",0);#(0.125 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
 setlistener("/instrumentation/mptcas/on", func(state) {
   var state = state.getBoolValue();  
   if(state) tcas();
@@ -17,7 +21,9 @@ var path ="instrumentation/radar2/targets/multiplayer";
 
 
 var tcas = func {
-    myRadar.update();
+    b707.arr = myRadar.update();
+    
+    
     
 		var run = getprop("/instrumentation/mptcas/on") or 0;
 
@@ -27,8 +33,8 @@ var tcas = func {
 		var our_pos = geo.aircraft_position();
 		var my_hdg = getprop("/orientation/heading-deg") or 0;
 		
-		var display_factor = getprop("/instrumentation/mptcas/display-factor") or 0;
-		var display_factor_awacs = getprop("/instrumentation/mptcas/display-factor-awacs") or 0;
+		var display_factor = getprop("/instrumentation/mptcas/display-factor");
+		var display_factor_awacs = getprop("/instrumentation/mptcas/display-factor-awacs");
 		
 		var aircraft_list = {};
 	
@@ -44,20 +50,22 @@ var tcas = func {
 				var mp_lon = getprop(path~"[" ~ n ~ "]/position/longitude-deg") or 0;
 				var bearing = getprop(path~"[" ~ n ~ "]/radar/bearing-deg") or 0;
 					
-				var x = (mp_lon - pos_lon) * display_factor;
-				var y = (mp_lat - pos_lat) * display_factor;
-				var xa = (mp_lon - pos_lon) * display_factor_awacs;
-				var ya = (mp_lat - pos_lat) * display_factor_awacs;			
+				
 				
 				# What is our position to the mp?		
 				var mp_pos 	= geo.Coord.new();
 						mp_pos.set_latlon( mp_lat, mp_lon);
 				var hdg_to_mp = our_pos.course_to(mp_pos);
-				var distance = our_pos.distance_to(mp_pos) * 0.0005399568034557236; # to nautical miles
-				var course_to_mp = 360 - geo.normdeg(my_hdg - hdg_to_mp); 
+				var distance = our_pos.distance_to(mp_pos) * M2NM; # to nautical miles
+				var course_to_mp = geo.normdeg(hdg_to_mp-my_hdg); 
 			  
-				var display = distance * display_factor; # for the range of the selected mp-aircrafts
-				var displayAwacs = distance * display_factor_awacs; # for the range of the selected mp-aircrafts
+				var display = distance / display_factor; # for the range of the selected mp-aircrafts
+				var displayAwacs = distance / display_factor_awacs; # for the range of the selected mp-aircrafts
+				
+				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
+				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
+				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
+				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
 				
 				var alt_ft = getprop(path~"[" ~ n ~ "]/position/altitude-ft") or 0;
 			  var tas_kt = getprop(path~"[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
@@ -96,12 +104,12 @@ var tcas = func {
 				}
 				
 				# select object if in range of radar / 3.24 found by trial and error depends on range select knob
-				if (display < 3.23){ 
+				if (distance < 100*display_factor){ 
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show", 1);
 				}else{
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show", 0);				
 				}
-				if (displayAwacs < 2.0){ 
+				if (distance < 300*display_factor_awacs){ 
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show-awacs", 1);
 				}else{
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show-awacs", 0);				
@@ -126,21 +134,22 @@ var tcas = func {
 				var ai_lat = getprop("ai/models/aircraft[" ~ n ~ "]/position/latitude-deg") or 0;
 				var ai_lon = getprop("ai/models/aircraft[" ~ n ~ "]/position/longitude-deg") or 0;
 				var bearing = getprop("ai/models/aircraft[" ~ n ~ "]/radar/bearing-deg") or 0;
-
-				var x = (ai_lon - pos_lon) * display_factor;
-				var y = (ai_lat - pos_lat) * display_factor;
-				var xa = (ai_lon - pos_lon) * display_factor_awacs;
-				var ya = (ai_lat - pos_lat) * display_factor_awacs;			
 				
 				# What is our position to the ai?		
 				var ai_pos 	= geo.Coord.new();
 						ai_pos.set_latlon( ai_lat, ai_lon);
 				var hdg_to_mp = our_pos.course_to(ai_pos);
-				var distance = our_pos.distance_to(ai_pos) * 0.0005399568034557236; # to Nautical Miles
-				var course_to_mp = 360 - geo.normdeg(my_hdg - hdg_to_mp); 
+				var distance = our_pos.distance_to(ai_pos) * M2NM; # to Nautical Miles
+				var course_to_mp = geo.normdeg(hdg_to_mp-my_hdg); 
 			  
-				var display = distance * display_factor; # for the range of the selected ai-aircrafts
-				var displayAwacs = distance * display_factor_awacs; # for the range of the selected ai-aircrafts
+				var display = distance / display_factor; # for the range of the selected mp-aircrafts
+				var displayAwacs = distance / display_factor_awacs; # for the range of the selected mp-aircrafts
+				# -0.165 0.172  -0.168 0.169
+				# 0.1685  0.1685
+				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
+				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
+				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
+				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
 				
 				var alt_ft = getprop("ai/models/aircraft[" ~ n ~ "]/position/altitude-ft") or 0;
 			  var tas_kt = getprop("ai/models/aircraft[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
@@ -163,12 +172,12 @@ var tcas = func {
 				}
 				
 				# select object if in range of radar / 3.24 found by trial and error depends on range select knob
-				if (display < 3.23){ 
+				if (distance < 100*display_factor){ 
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show", 1);
 				}else{
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show", 0);				
 				}
-				if (displayAwacs < 2.0){ 
+				if (distance < 300*display_factor_awacs){ 
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show-awacs", 1);
 				}else{
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show-awacs", 0);				
@@ -202,11 +211,20 @@ var tcas = func {
 				var ai_pos 	= geo.Coord.new();
 						ai_pos.set_latlon( ai_lat, ai_lon);
 				var hdg_to_mp = our_pos.course_to(ai_pos);
-				var distance = our_pos.distance_to(ai_pos) * 0.0005399568034557236; # to Nautical Miles
-				var course_to_mp = 360 - geo.normdeg(my_hdg - hdg_to_mp); 
+				var distance = our_pos.distance_to(ai_pos) * M2NM; # to Nautical Miles
+				var course_to_mp = geo.normdeg(hdg_to_mp-my_hdg); 
 			  
-				var display = distance * display_factor; # for the range of the selected ai-tankers
-				var displayAwacs = distance * display_factor_awacs; # for the range of the selected ai-tankers
+				var display = distance / display_factor; # for the range of the selected ai-tankers
+				var displayAwacs = distance / display_factor_awacs; # for the range of the selected ai-tankers
+				
+				#var x  = getprop("ax");#(0.125 * display/300)* math.cos((90-course_to_mp)*D2R);
+				#var y  = getprop("ay");#(0.125 * display/300)* math.sin((90-course_to_mp)*D2R);
+				#var xa = getprop("aax");#(0.125 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
+				#var ya = getprop("aay");#(0.125 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
+				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
+				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
+				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
+				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
 				
 				var alt_ft = getprop("ai/models/tanker[" ~ n ~ "]/position/altitude-ft") or 0;
 			  	var tas_kt = getprop("ai/models/tanker[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
@@ -229,12 +247,12 @@ var tcas = func {
 				}
 				
 				# select object if in range of radar / 3.24 found by trial and error depends on range select knob
-				if (display < 3.23){ 
+				if (distance < 100*display_factor){ 
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show", 1);
 				}else{
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show", 0);				
 				}
-				if (displayAwacs < 2.0){ 
+				if (distance < 300*display_factor_awacs){ 
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show-awacs", 1);
 				}else{
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show-awacs", 0);				
