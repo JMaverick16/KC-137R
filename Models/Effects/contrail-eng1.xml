@@ -52,7 +52,7 @@
 
    <counter>
      <particles-per-sec>
-       <value>35</value>
+       <value>60</value>
        <spread>0</spread>
      </particles-per-sec>
    </counter>
@@ -91,7 +91,7 @@
                     </alpha>
                 </color>
                 <size>
-                    <value>1.0</value>
+                    <value>0.9</value>
                 </size>
             </start>
 
@@ -126,12 +126,12 @@
                     </alpha>
                 </color>
                 <size>
-                    <value>15</value>
+                    <value>20</value>
                 </size>
             </end>
 
      <life-sec>
-       <value>15</value>
+       <value>25</value>
      </life-sec>
         
      <mass-kg>  0.5 </mass-kg>
