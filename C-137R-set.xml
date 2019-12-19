@@ -8,8 +8,11 @@
 <PropertyList include="common-IAE.xml">
  <sim n="0">
   <description>Boeing C-137R Stratoliner (IAE V2527-A5)</description>
+  	<long-description>
+   		The Boeing C-137R Stratoliner is a VIP transport aircraft derived from the Boeing 707 jet airliner used by the United States Air Force.
+  	</long-description>
 	<startup>
-		<splash-texture>Aircraft/KC-137R/Splash/splashC.png</splash-texture>
+		<splash-texture>Aircraft/KC-137R/Splash/Old/splashC.png</splash-texture>
 	</startup>
 	
 	<variant-of>KC-137R</variant-of>
@@ -18,7 +21,7 @@
             <preview>
                 <type>exterior</type>
                 <splash type="bool">true</splash>
-                <path>Splash/splashC.png</path>
+                <path>Splash/CR.png</path>
             </preview>
     </previews>
 

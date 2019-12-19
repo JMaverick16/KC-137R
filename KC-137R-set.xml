@@ -8,16 +8,19 @@
 <PropertyList include="common.xml">
  <sim n="0">
   <description>Boeing KC-137R Stratotanker (CFM56-7B26)</description>
+  	<long-description>
+   	The Boeing KC-137R Stratotanker is a military aerial refueling aircraft. The KC-137 was the US Air Force's first jet-powered refueling tanker and replaced the KC-97 Stratofreighter. The KC-137 was initially tasked with refueling strategic bombers, but was used extensively in the Vietnam War and later conflicts such as Operation Desert Storm to extend the range and endurance of US tactical fighters and bombers.
+  	</long-description>
 	<startup>
-		<splash-texture>Aircraft/KC-137R/Splash/splashKC.png</splash-texture>
+		<splash-texture>Aircraft/KC-137R/Splash/Old/splashKC.png</splash-texture>
 	</startup>
 	
 	<minimum-fg-version>2018.3</minimum-fg-version>
 	<previews>
             <preview>
-                <type>interior</type>
+                <type>exterior</type>
                 <splash type="bool">true</splash>
-                <path>Splash/splashKC.png</path>
+                <path>Splash/KC.png</path>
             </preview>
     </previews>
 
