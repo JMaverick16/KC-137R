@@ -31,13 +31,40 @@
 	</animation-->
 
 	<!-- Chrome shader -->
-	<animation>
+	<!--<animation>
 		<name>Chrome shader</name>
 		<type>shader</type>
 		<shader>chrome</shader>
 		<texture>res/chrome.png</texture>
 		<object-name>Nozzle</object-name>
-	</animation>
+	</animation>-->
+	
+	<effect>
+		<inherits-from>Effects/model-combined-deferred</inherits-from>
+		<parameters>
+			<texture n= "5" >
+		        <type>cubemap</type>
+		        <images>
+		            <positive-x>Aircraft/Generic/Effects/fgfs-sky2/1.png</positive-x>
+		            <negative-x>Aircraft/Generic/Effects/fgfs-sky2/4.png</negative-x>
+		            <positive-y>Aircraft/Generic/Effects/fgfs-sky2/2.png</positive-y>
+		            <negative-y>Aircraft/Generic/Effects/fgfs-sky2/3.png</negative-y>
+		            <positive-z>Aircraft/Generic/Effects/fgfs-sky2/6.png</positive-z>
+		            <negative-z>Aircraft/Generic/Effects/fgfs-sky2/5.png</negative-z>
+		        </images>
+		        <filter>linear</filter>
+		    </texture>
+			<reflection-enabled type="int">1</reflection-enabled>
+          	<reflection-correction type="float">0.5</reflection-correction>
+          	<reflection-fresnel type="float">0.0</reflection-fresnel>
+		    <reflection-rainbow type="float">0.1</reflection-rainbow>
+		    <reflection-noise type="float">0.25</reflection-noise>
+		    <reflection-dynamic type="int">1</reflection-dynamic>
+		    <reflection-type type="int">2</reflection-type>
+			<ambient_correction>0.0</ambient_correction>
+		</parameters>
+		<object-name>Nozzle</object-name>
+	</effect>
 
 	<!-- LIVERY SELECT -->
 	<!-- Animation 
