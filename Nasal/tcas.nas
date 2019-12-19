@@ -2,10 +2,10 @@
 # Avril 2013
 # This file is licenced under the terms of the GNU General Public Licence V2 or later
 ################################ Reverser ####################################
-#setprop("ax",0);#(0.125 * display/300)* math.cos((90-course_to_mp)*D2R);
-#setprop("ay",0);#(0.125 * display/300)* math.sin((90-course_to_mp)*D2R);
-#setprop("aax",0);#(0.125 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
-#setprop("aay",0);#(0.125 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
+#setprop("ax",0);#(0.125 * display/400)* math.cos((90-course_to_mp)*D2R);
+#setprop("ay",0);#(0.125 * display/400)* math.sin((90-course_to_mp)*D2R);
+#setprop("aax",0);#(0.125 * displayAwacs/400)* math.cos((90-course_to_mp)*D2R);
+#setprop("aay",0);#(0.125 * displayAwacs/400)* math.sin((90-course_to_mp)*D2R);
 setlistener("/instrumentation/mptcas/on", func(state) {
   var state = state.getBoolValue();  
   if(state) tcas();
@@ -64,8 +64,8 @@ var tcas = func {
 				
 				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
 				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
-				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
-				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
+				var xa = 0.0035+(0.1685 * displayAwacs/400)* math.cos((90-course_to_mp)*D2R);
+				var ya = 0.0005+(0.1685 * displayAwacs/400)* math.sin((90-course_to_mp)*D2R);
 				
 				var alt_ft = getprop(path~"[" ~ n ~ "]/position/altitude-ft") or 0;
 			  var tas_kt = getprop(path~"[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
@@ -109,7 +109,7 @@ var tcas = func {
 				}else{
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show", 0);				
 				}
-				if (distance < 300*display_factor_awacs){ 
+				if (distance < 400*display_factor_awacs){ 
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show-awacs", 1);
 				}else{
 					setprop("/instrumentation/mptcas/mp[" ~ n ~ "]/show-awacs", 0);				
@@ -148,8 +148,8 @@ var tcas = func {
 				# 0.1685  0.1685
 				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
 				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
-				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
-				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
+				var xa = 0.0035+(0.1685 * displayAwacs/400)* math.cos((90-course_to_mp)*D2R);
+				var ya = 0.0005+(0.1685 * displayAwacs/400)* math.sin((90-course_to_mp)*D2R);
 				
 				var alt_ft = getprop("ai/models/aircraft[" ~ n ~ "]/position/altitude-ft") or 0;
 			  var tas_kt = getprop("ai/models/aircraft[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
@@ -177,7 +177,7 @@ var tcas = func {
 				}else{
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show", 0);				
 				}
-				if (distance < 300*display_factor_awacs){ 
+				if (distance < 400*display_factor_awacs){ 
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show-awacs", 1);
 				}else{
 					setprop("/instrumentation/mptcas/ai[" ~ n ~ "]/show-awacs", 0);				
@@ -223,8 +223,8 @@ var tcas = func {
 				#var ya = getprop("aay");#(0.125 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
 				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
 				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
-				var xa = 0.0035+(0.1685 * displayAwacs/300)* math.cos((90-course_to_mp)*D2R);
-				var ya = 0.0005+(0.1685 * displayAwacs/300)* math.sin((90-course_to_mp)*D2R);
+				var xa = 0.0035+(0.1685 * displayAwacs/400)* math.cos((90-course_to_mp)*D2R);
+				var ya = 0.0005+(0.1685 * displayAwacs/400)* math.sin((90-course_to_mp)*D2R);
 				
 				var alt_ft = getprop("ai/models/tanker[" ~ n ~ "]/position/altitude-ft") or 0;
 			  	var tas_kt = getprop("ai/models/tanker[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
@@ -252,7 +252,7 @@ var tcas = func {
 				}else{
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show", 0);				
 				}
-				if (distance < 300*display_factor_awacs){ 
+				if (distance < 400*display_factor_awacs){ 
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show-awacs", 1);
 				}else{
 					setprop("/instrumentation/mptcas/ta[" ~ n ~ "]/show-awacs", 0);				
