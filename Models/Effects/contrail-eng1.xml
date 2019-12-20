@@ -38,7 +38,7 @@
      <phi-max-deg>1.5</phi-max-deg>
      <speed-mps>
        <value>0</value>
-       <spread>0</spread>
+       <spread>25</spread>
      </speed-mps>
      <rotation-speed>
        <x-min-deg-sec>0</x-min-deg-sec>
@@ -52,8 +52,8 @@
 
    <counter>
      <particles-per-sec>
-       <value>60</value>
-       <spread>0</spread>
+       <value>100</value>
+       <spread>25</spread>
      </particles-per-sec>
    </counter>
       
@@ -87,7 +87,7 @@
                         </expression>
                     </blue>
                     <alpha>
-                        <value>0.3</value>
+                        <value>0.1</value>
                     </alpha>
                 </color>
                 <size>
@@ -122,7 +122,7 @@
                         </expression>
                     </blue>
                     <alpha>
-                        <value>1.0</value>
+                        <value>0.8</value>
                     </alpha>
                 </color>
                 <size>
@@ -131,11 +131,11 @@
             </end>
 
      <life-sec>
-       <value>25</value>
+       <value>30</value>
      </life-sec>
         
      <mass-kg>  0.5 </mass-kg>
-     <radius-m> 0.5 </radius-m>
+     <radius-m> 2.5 </radius-m>
    </particle>
 
    <program>

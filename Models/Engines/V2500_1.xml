@@ -78,7 +78,7 @@
 		<name>Contrail</name>
 		<path>Aircraft/KC-137R/Models/Effects/contrail-eng2.xml</path>
 		<offsets>
-			<x-m>15.137</x-m>
+			<x-m>9.137</x-m>
 			<y-m>0</y-m>
 			<z-m>0</z-m>
 		</offsets>
