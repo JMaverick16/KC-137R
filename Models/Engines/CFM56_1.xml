@@ -31,14 +31,6 @@
 	</animation-->
 
 	<!-- Chrome shader -->
-	<!--<animation>
-		<name>Chrome shader</name>
-		<type>shader</type>
-		<shader>chrome</shader>
-		<texture>res/chrome.png</texture>
-		<object-name>Nozzle</object-name>
-	</animation>-->
-	
 	<effect>
 		<inherits-from>Effects/model-combined-deferred</inherits-from>
 		<parameters>
