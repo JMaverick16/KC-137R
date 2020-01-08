@@ -1309,7 +1309,7 @@
             <property>systems/electrical/outputs/efis</property>
             <volume>
             	<property>/sim/current-view/internal</property>
-                <factor>0.069</factor>
+                <factor>0.073</factor>
             </volume>
         </avionics>
 
@@ -1397,6 +1397,29 @@
                 <value>1.4</value>
             </volume>
         </refuel>
+
+        <ambience>
+			<name>AmbienceOutside</name>
+			<mode>looped</mode>
+			<path>Aircraft/KC-137R/Sounds/ambience_outside.wav</path>
+			<condition>
+				<not>
+					<property>sim/current-view/internal</property>
+				</not>
+				<property>gear/gear[0]/wow</property>
+				<property>gear/gear[1]/wow</property>
+				<property>gear/gear[2]/wow</property>
+				<not>
+					<property>/engines/engine[0]/running</property>
+					<property>/engines/engine[1]/running</property>
+					<property>/engines/engine[2]/running</property>
+					<property>/engines/engine[3]/running</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.267</factor>
+			</volume>
+		</ambience>
 </fx>
 
 </PropertyList>
