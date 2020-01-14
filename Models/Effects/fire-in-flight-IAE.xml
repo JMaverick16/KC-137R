@@ -50,7 +50,7 @@
 					<alpha><value>0.8</value></alpha>
 				</color>
 				<size>
-					<value>0.8</value>
+					<value>0.65</value>
 				</size>
 			</start>
 			<end>
@@ -61,11 +61,11 @@
 					<alpha><value>0.4</value></alpha>
 				</color>
 				<size>
-					<value>2.0</value>
+					<value>2.2</value>
 				</size>
 			</end>
 			<life-sec>
-				<value>0.2</value>
+				<value>0.25</value>
 			</life-sec>
 			<mass-kg>0.09</mass-kg>
 			<radius-m>0.3</radius-m>

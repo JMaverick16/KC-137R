@@ -109,12 +109,25 @@
 		<name>Engine fire</name>
 		<path>Aircraft/KC-137R/Models/Effects/enginefire.xml</path>
 		<offsets>
-			<x-m>3.316</x-m>
+			<x-m>0.5</x-m>
 			<y-m>0</y-m>
 			<z-m>0</z-m>
 		</offsets>
 		<condition>
-			<property>engines/engine[2]/on-fire</property>
+			<property>controls/engines/engine[2]/fire</property>
+		</condition>
+	</model>
+
+	<model>
+		<name>Engine fire flight</name>
+		<path>Aircraft/KC-137R/Models/Effects/fire-in-flight.xml</path>
+		<offsets>
+			<x-m>0.65</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.05</z-m>
+		</offsets>
+		<condition>
+			<property>controls/engines/engine[2]/fire</property>
 		</condition>
 	</model>
 

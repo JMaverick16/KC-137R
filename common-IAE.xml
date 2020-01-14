@@ -236,6 +236,7 @@
 		<int n="13" alias="/instrumentation/mptcas/on"/>  										<!-- show AWACS radar turning -->
 		<int n="14" alias="/b707/external-power-connected"/>									<!-- External Power-VW Kombi -->
 		<int n="15" type="int">0</int> <!-- jettison fuel 1 = left, 2 = right, 3 = both -->
+		<int n="17" type="int">0</int> <!-- fire 1 = eng 1, 2 = eng 2, 3 = both -->
 		<int n="19" alias="/b707/crashed"/>
 		<float n="0" alias="/systems/electrical/outputs/cabin-dim"/> 							<!-- cabin light dimmer -->
 		<float n="1" alias="/gear/gear[0]/compression-norm"/> 	
