@@ -102,9 +102,6 @@ var warhead_lbs = {
     "STORMSHADOW":         850.00,
     "ZB-250":              236.99,
     "ZB-500":              473.99,
-};
-
-var warhead_air_lbs = {
     # Anti-air warheads (sorted alphabetically)
     "aim-120":              44.00,
     "AIM-120":              44.00,
