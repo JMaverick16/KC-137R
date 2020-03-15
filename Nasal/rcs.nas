@@ -43,6 +43,7 @@ var rcs_database = {
     "707":                      90,     #guess
     "707-TT":                   90,     #guess
     "EC-137D":                  100,    #guess
+    "onox-tanker":              90,     #guess
     "B-1B":                     10,
     "b2-spirit":                0.002,  #actual: 0.0001
     "B-2A":                     0.002,  #actual: 0.0001
@@ -50,7 +51,8 @@ var rcs_database = {
     "Blackbird-SR71A":          0.25,
     "Blackbird-SR71B":          0.30,
     "Blackbird-SR71A-BigTail":  0.30,
-    "u2s":                      0.01,
+    "u-2s":                     0.01,
+    "U-2S-model":               0.01,
     "ch53e":                    35,     #guess
     "MiG-21bis":                3.5,
     "MiG-21Bison":              3.5,
@@ -91,8 +93,8 @@ var rcs_database = {
     "FA-18D_Hornet":            3.5,
     "F-22-Raptor":              0.002,  #actual: 0.0001
     "F-35A":                    0.001,
-    "F-35B":                    0.001,  
-    "Jaguar-GR1":               6,      #guess
+    "F-35B":                    0.001,
+    "Jaguar-GR1":               6,      #guess  
     "Jaguar-GR3":               6,      #guess
     "f-20A":                    2.5,    #low end of sources
     "f-20C":                    2.5,
