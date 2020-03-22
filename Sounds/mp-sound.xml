@@ -22,7 +22,7 @@
             <offset>-0.75</offset>
             <factor>0.0125</factor>
             <min>0.0</min>
-            <max>5.0</max>
+            <max>2.5</max>
         </volume>
         <position>
             <x>0</x>
@@ -45,7 +45,7 @@
             <offset>-0.75</offset>
             <factor>0.0125</factor>
             <min>0.0</min>
-            <max>5.0</max>
+            <max>2.5</max>
         </volume>
         <position>
             <x>0</x>

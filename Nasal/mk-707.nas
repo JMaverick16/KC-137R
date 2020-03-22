@@ -1037,7 +1037,7 @@ var calc_pressurization	= func{
 		interpolate("/b707/pressurization/cabin-altitude", alt, t);
 		interpolate("/b707/pressurization/climb-rate", vs, t);
 		var ra = getprop("position/altitude-agl-ft") or 0;
-		if(ra > 2000) screen.log.write(sprintf("ATTENTION! No pressurization!"), 1.0, 0.0, 0.0);
+		#if(ra > 2000) screen.log.write(sprintf("ATTENTION! No pressurization!"), 1.0, 0.0, 0.0);
 	}
 	
 	# cabin differential pressure
@@ -1048,7 +1048,7 @@ var calc_pressurization	= func{
 	interpolate("/b707/pressurization/cabin-differential-pressure", psi, t);
 	
 	if(calt > 8000){
-		 screen.log.write(sprintf("ATTENTION! Increase cabin pressure expressly!"), 1.0, 0.0, 0.0);
+		 screen.log.write(sprintf(" "), 1.0, 0.0, 0.0);
 	}else{
 		if(svp) setprop("/b707/pressurization/alt-cutout-horn", 0); # reset if it was pushed during depressurization
 	}
