@@ -547,7 +547,7 @@
 	
 	<!-- HUD -->
 
-	<model>
+	<!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/hud/hud.xml</path>
 		<offsets>
 			<x-m>-18.742</x-m>
@@ -555,11 +555,11 @@
 			<z-m>1.155</z-m>
                 <pitch-deg>0</pitch-deg>
 		</offsets>
-	</model>
+	</model-->
 	
 	<!-- HUD -->
 
-	<model>
+	<!--model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/hud/hud.xml</path>
 		<offsets>
 			<x-m>-18.742</x-m>
@@ -567,7 +567,7 @@
 			<z-m>1.155</z-m>
                 <pitch-deg>0</pitch-deg>
 		</offsets>
-	</model>
+	</model-->
 	
 	<!-- AP -->
 	<model>

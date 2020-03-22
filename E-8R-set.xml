@@ -139,6 +139,13 @@
 						</script>
 					</binding>
 				</item>
+				<item>
+		          <label>Radar Cutoff</label>
+		          <binding>
+		            <command>dialog-show</command>
+		            <dialog-name>cutoff</dialog-name>
+		          </binding>
+		      </item>
 			</menu>
 		</default>
 	</menubar>
@@ -337,6 +344,12 @@ no. D6-3071-00
   </mptcas>
  
  </instrumentation>
+
+ 	<awacs>
+		<from type="string">blufor</from>
+		<to type="string">opfor</to>
+		<a type="string">Enter callsigns and click Cutoff</a>
+	</awacs>
  
   <b707>
 		<manual>

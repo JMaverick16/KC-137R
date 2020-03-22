@@ -294,7 +294,7 @@ var tcas = func {
 			setprop("/instrumentation/mptcas/table/row[0]/col[2]","ALTITUDE");	
 			setprop("/instrumentation/mptcas/table/row[0]/col[3]","HDG | DIR");
 			setprop("/instrumentation/mptcas/table/row[0]/col[4]","TAS");	
-			setprop("/instrumentation/mptcas/table/row[0]/col[5]","AIRCRAFT | ID");
+			setprop("/instrumentation/mptcas/table/row[0]/col[5]","TYPE | SQUAWK");
 			
 			#return a list of the hash keys sorted by altitude_m
 			var sortedkeys = sort(keys(aircraft_list), func (a,b) { aircraft_list[a].dis - aircraft_list[b].dis; });
