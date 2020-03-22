@@ -9,6 +9,12 @@
 		<type>material</type>
 		<object-name>seats</object-name>
 		<object-name>fe-seat</object-name>
+		<object-name>Mesh13</object-name>
+		<object-name>Mesh14</object-name>
+		<object-name>armrest.4</object-name>
+		<object-name>armrest.5</object-name>
+		<object-name>armrest.6</object-name>
+		<object-name>armrest.7</object-name>
 		<condition>
 			<not><property>sim/rendering/rembrandt/enabled</property></not>
 			<property>systems/electrical/outputs/cabin-dim</property>
