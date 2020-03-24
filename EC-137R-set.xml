@@ -325,6 +325,9 @@ no. D6-3071-00
 		<display-factor-awacs type="double">1</display-factor-awacs>
 		<display-factor type="double">1</display-factor>
 	</mptcas>
+	<!--transponder>
+		<id-code type="int">6100</id-code>
+   </transponder-->
  </instrumentation>
  
 	<awacs>

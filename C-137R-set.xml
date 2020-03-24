@@ -313,12 +313,13 @@ no. D6-3071-00
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
 	</cdu>
-
   <mptcas>
     <display-factor-awacs type="double">1</display-factor-awacs>
     <display-factor type="double">1</display-factor>
   </mptcas>
- 
+  <!--transponder>
+		<digit type="int">0500</id-code>
+  </transponder-->
  </instrumentation>
  
   <b707>
@@ -333,7 +334,7 @@ no. D6-3071-00
 			<subtitle3 type="string">MODEL C-137R</subtitle3>
 			<text3 type="string">FOR FLIGHTGEAR SIMULATION ONLY</text3>
 			<subtitle4 type="string"></subtitle4>
-			<text4 type="string">J Maverick 16, Octal450 Hanger</text4>
+			<text4 type="string">J Maverick 16, Octal450 Hangar</text4>
 			<content include="Models/Cockpit/Manual/manual-C.xml"/>
 		</manual>
   </b707>
@@ -379,7 +380,6 @@ no. D6-3071-00
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
 		</m877>
--
 	    <dual_control_tools>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/dual-control-tools.nas</file>
 	    </dual_control_tools>

@@ -16,14 +16,15 @@
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
   <minimum-fg-version>2018.2</minimum-fg-version>
   <aircraft-data>
-            <path>/instrumentation/transponder/inputs/digit[0]</path>
-            <path>/instrumentation/transponder/inputs/digit[1]</path>
-            <path>/instrumentation/transponder/inputs/digit[2]</path>
-            <path>/instrumentation/transponder/inputs/digit[3]</path>
-            <path>/instrumentation/tacan/frequencies/selected-channel[1]</path>
-            <path>/instrumentation/tacan/frequencies/selected-channel[2]</path>
-            <path>/instrumentation/tacan/frequencies/selected-channel[3]</path>
-            <path>/instrumentation/tacan/frequencies/selected-channel[4]</path>
+        <path>/instrumentation/operating-time/total</path>
+        <path>/instrumentation/transponder/inputs/digit[0]</path>
+        <path>/instrumentation/transponder/inputs/digit[1]</path>
+        <path>/instrumentation/transponder/inputs/digit[2]</path>
+        <path>/instrumentation/transponder/inputs/digit[3]</path>
+        <path>/instrumentation/tacan/frequencies/selected-channel[1]</path>
+        <path>/instrumentation/tacan/frequencies/selected-channel[2]</path>
+        <path>/instrumentation/tacan/frequencies/selected-channel[3]</path>
+        <path>/instrumentation/tacan/frequencies/selected-channel[4]</path>
   </aircraft-data>
   <rating>
       <FDM type="int">4</FDM>
@@ -272,18 +273,6 @@
   <engine-type>
 	<IAE type="bool">false</IAE>
   </engine-type>
-  
-	<aircraft-data>
-		<path>/instrumentation/operating-time/total</path>
-		<path>/instrumentation/transponder/inputs/digit[0]</path>
-        <path>/instrumentation/transponder/inputs/digit[1]</path>
-        <path>/instrumentation/transponder/inputs/digit[2]</path>
-        <path>/instrumentation/transponder/inputs/digit[3]</path>
-        <path>/instrumentation/tacan/frequencies/selected-channel[1]</path>
-        <path>/instrumentation/tacan/frequencies/selected-channel[2]</path>
-        <path>/instrumentation/tacan/frequencies/selected-channel[3]</path>
-        <path>/instrumentation/tacan/frequencies/selected-channel[4]</path>
-	</aircraft-data>
 	
 	<yokes-visible type="bool">1</yokes-visible>
  </sim>
@@ -741,13 +730,15 @@
 				<col n="2">ALTITUDE</col>
 				<col n="3">HDG / DIR</col>
 				<col n="4">TAS</col>
-				<col n="5">AIRCRAFT</col>
+				<col n="5">TYPE</col>
 			</row>
 		  </table>
 		</mptcas>
 
 		<transponder>
-		  <inputs><knob-mode type="int">0</knob-mode></inputs>
+			<inputs>
+				<knob-mode type="int">0</knob-mode>
+			</inputs>
 		</transponder>
 
 		<rmi-needle n="0">

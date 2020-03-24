@@ -337,12 +337,13 @@ no. D6-3071-00
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
 	</cdu>
-
   <mptcas>
     <display-factor-awacs type="double">1</display-factor-awacs>
     <display-factor type="double">1</display-factor>
   </mptcas>
- 
+  <!--transponder>
+		<id-code type="int">5600</id-code>
+  </transponder-->
  </instrumentation>
 
  	<awacs>
@@ -363,7 +364,7 @@ no. D6-3071-00
 			<subtitle3 type="string">MODEL E-8R</subtitle3>
 			<text3 type="string">FOR FLIGHTGEAR SIMULATION ONLY</text3>
 			<subtitle4 type="string"></subtitle4>
-			<text4 type="string">J Maverick 16, Octal450 Hanger</text4>
+			<text4 type="string">J Maverick 16, Octal450 Hangar</text4>
 			<content include="Models/Cockpit/Manual/manual-JSTARS.xml"/>
 		</manual>
   </b707>
