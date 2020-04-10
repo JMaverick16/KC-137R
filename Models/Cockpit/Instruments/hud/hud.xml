@@ -2,6 +2,11 @@
 <PropertyList>
  <path>hud.ac</path>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Glass.001</object-name>
+  </effect>
+
 	<animation>
 		<type>pick</type>
 		<object-name>Glass.001</object-name>
