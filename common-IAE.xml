@@ -78,6 +78,15 @@
       <x-m type="float">-15.68</x-m>
       <class type="string">3</class>
 	</ramp>
+	<!--icing>
+	  <iceable>
+	  	<name>Windshield</name>
+	  	<ice-inches>0.0</ice-inches>
+	  	<salvage-control>/controls/deice/windowprobeheat</salvage-control>
+	  	<sensitivity type="double">0.5</sensitivity>
+	  	<output-property>/environment/aircraft-effects/frost-inch</output-property>
+	  </iceable>
+	</icing-->
   </model>
   
 	<airport>

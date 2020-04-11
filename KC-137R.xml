@@ -431,6 +431,7 @@
  
  <system file="pushback"/>
  <system file="fcs"/>
+ <system file="glass-effect"/>
 
  <flight_control name="none"/>
 
