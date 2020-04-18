@@ -1,11 +1,11 @@
-# IT-AUTOFLIGHT System Controller V4.0.1
+# IT-AUTOFLIGHT System Controller V4.0.2
 # Copyright (c) 2019 Joshua Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
 
 # Initialize all used variables and property nodes
 # Sim
-var Velocity = {
+var Velocities = {
 	airspeedKt: props.globals.getNode("/velocities/airspeed-kt", 1), # Only used for gain scheduling
 	groundspeedKt: props.globals.getNode("/velocities/groundspeed-kt", 1),
 	groundspeedMps: 0,
@@ -359,15 +359,15 @@ var ITAF = {
 	},
 	slowLoop: func() {
 		Input.bankLimitSWTemp = Input.bankLimitSW.getValue();
-		Velocity.trueAirspeedKtTemp = Velocity.trueAirspeedKt.getValue();
+		Velocities.trueAirspeedKtTemp = Velocities.trueAirspeedKt.getValue();
 		FPLN.activeTemp = FPLN.active.getValue();
 		FPLN.currentWPTemp = FPLN.currentWP.getValue();
 		FPLN.numTemp = FPLN.num.getValue();
 		
 		# Bank Limit
-		if (Velocity.trueAirspeedKtTemp >= 420) {
+		if (Velocities.trueAirspeedKtTemp >= 420) {
 			Internal.bankLimitAuto = 15;
-		} else if (Velocity.trueAirspeedKtTemp >= 340) {
+		} else if (Velocities.trueAirspeedKtTemp >= 340) {
 			Internal.bankLimitAuto = 20;
 		} else {
 			Internal.bankLimitAuto = 30;
@@ -400,7 +400,7 @@ var ITAF = {
 		# Waypoint Advance Logic
 		if (FPLN.numTemp > 0 and FPLN.activeTemp == 1) {
 			if ((FPLN.currentWPTemp + 1) < FPLN.numTemp) {
-				Velocity.groundspeedMps = Velocity.groundspeedKt.getValue() * 0.5144444444444;
+				Velocities.groundspeedMps = Velocities.groundspeedKt.getValue() * 0.5144444444444;
 				FPLN.wpFlyFrom = FPLN.currentWPTemp;
 				if (FPLN.wpFlyFrom < 0) {
 					FPLN.wpFlyFrom = 0;
@@ -418,7 +418,7 @@ var ITAF = {
 				if (FPLN.maxBank > FPLN.maxBankLimit) {
 					FPLN.maxBank = FPLN.maxBankLimit;
 				}
-				FPLN.radius = (Velocity.groundspeedMps * Velocity.groundspeedMps) / (9.81 * math.tan(FPLN.maxBank / 57.2957795131));
+				FPLN.radius = (Velocities.groundspeedMps * Velocities.groundspeedMps) / (9.81 * math.tan(FPLN.maxBank / 57.2957795131));
 				FPLN.deltaAngleRad = (180 - FPLN.deltaAngle) / 114.5915590262;
 				FPLN.R = FPLN.radius / math.sin(FPLN.deltaAngleRad);
 				FPLN.distCoeff = FPLN.deltaAngle * -0.011111 + 2;
@@ -437,6 +437,11 @@ var ITAF = {
 			}
 		}
 		
+		# Reset system once flight complete
+		if (!Output.ap1.getBoolValue() and !Output.ap2.getBoolValue() and Velocities.groundspeedKt.getValue() < 60 and Text.vert.getValue() != "T/O CLB") {
+			me.init(1);
+		}
+		
 		# Calculate Roll and Pitch Kp
 		if (!Setting.disableFinal.getBoolValue()) {
 			Gain.rollKpLowTemp = Gain.rollKpLow.getValue();
@@ -444,8 +449,8 @@ var ITAF = {
 			Gain.pitchKpLowTemp = Gain.pitchKpLow.getValue();
 			Gain.pitchKpHighTemp = Gain.pitchKpHigh.getValue();
 			
-			Gain.rollKpCalc = Gain.rollKpLowTemp + (Velocity.airspeedKt.getValue() - 140) * ((Gain.rollKpHighTemp - Gain.rollKpLowTemp) / (360 - 140));
-			Gain.pitchKpCalc = Gain.pitchKpLowTemp + (Velocity.airspeedKt.getValue() - 140) * ((Gain.pitchKpHighTemp - Gain.pitchKpLowTemp) / (360 - 140));
+			Gain.rollKpCalc = Gain.rollKpLowTemp + (Velocities.airspeedKt.getValue() - 140) * ((Gain.rollKpHighTemp - Gain.rollKpLowTemp) / (360 - 140));
+			Gain.pitchKpCalc = Gain.pitchKpLowTemp + (Velocities.airspeedKt.getValue() - 140) * ((Gain.pitchKpHighTemp - Gain.pitchKpLowTemp) / (360 - 140));
 			
 			if (Gain.rollKpLowTemp > Gain.rollKpHighTemp) {
 				Gain.rollKpCalc = math.clamp(Gain.rollKpCalc, Gain.rollKpHighTemp, Gain.rollKpLowTemp);
@@ -463,7 +468,7 @@ var ITAF = {
 		}
 		
 		# Calculate HDG Kp
-		Gain.hdgKpCalc = Gain.hdgGain.getValue() + (Velocity.airspeedKt.getValue() - 140) * ((Gain.hdgGain.getValue() + 1.0 - Gain.hdgGain.getValue()) / (360 - 140));
+		Gain.hdgKpCalc = Gain.hdgGain.getValue() + (Velocities.airspeedKt.getValue() - 140) * ((Gain.hdgGain.getValue() + 1.0 - Gain.hdgGain.getValue()) / (360 - 140));
 		Gain.hdgKpCalc = math.clamp(Gain.hdgKpCalc, Gain.hdgGain.getValue(), Gain.hdgGain.getValue() + 1.0);
 		
 		Gain.hdgKp.setValue(Gain.hdgKpCalc);
@@ -508,6 +513,9 @@ var ITAF = {
 				Control.aileron.setValue(0);
 				Control.elevator.setValue(0);
 				Control.rudder.setValue(0);
+			}
+			if (Text.vert.getValue() == "ROLLOUT") {
+				me.init(1);
 			}
 			if (Sound.enableApOff) {
 				Sound.apOff.setBoolValue(1);
@@ -726,7 +734,7 @@ var ITAF = {
 	checkLNAV: func(t) {
 		if (FPLN.num.getValue() > 0 and FPLN.active.getBoolValue() and Position.gearAglFt.getValue() >= Setting.latAglFt.getValue()) {
 			me.activateLNAV();
-		} else if (Output.lat.getValue() != 1 and t != 1) {
+		} else if (FPLN.active.getBoolValue() and Output.lat.getValue() != 1 and t != 1) {
 			Output.lnavArm.setBoolValue(1);
 			me.armTextCheck();
 		}
@@ -802,7 +810,7 @@ var ITAF = {
 	},
 	takeoffGoAround: func() {
 		Output.vertTemp = Output.vert.getValue();
-		if ((Output.vertTemp == 2 or Output.vertTemp == 6) and Velocity.indicatedAirspeedKt.getValue() >= 80) {
+		if ((Output.vertTemp == 2 or Output.vertTemp == 6) and Velocities.indicatedAirspeedKt.getValue() >= 80) {
 			if (Gear.wow1.getBoolValue() or Gear.wow2.getBoolValue()) {
 				me.ap1Master(0);
 				me.ap2Master(0);
@@ -814,7 +822,9 @@ var ITAF = {
 			me.syncIAS();
 		} else if (Gear.wow1Temp or Gear.wow2Temp) {
 			me.athrMaster(1);
-			me.setLatMode(5);
+			if (Output.lat.getValue() != 5) { # Don't accidently disarm LNAV
+				me.setLatMode(5);
+			}
 			me.setVertMode(7);
 			Text.vert.setValue("T/O CLB");
 		}
@@ -831,10 +841,10 @@ var ITAF = {
 		}
 	},
 	syncIAS: func() {
-		Input.ias.setValue(math.clamp(math.round(Velocity.indicatedAirspeedKt.getValue()), 100, 350));
+		Input.ias.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), 100, 350));
 	},
 	syncMach: func() {
-		Input.mach.setValue(math.clamp(math.round(Velocity.indicatedMach.getValue(), 0.001), 0.5, 0.9));
+		Input.mach.setValue(math.clamp(math.round(Velocities.indicatedMach.getValue(), 0.001), 0.5, 0.9));
 	},
 	syncHDG: func() {
 		Input.hdg.setValue(math.round(Internal.hdgPredicted.getValue())); # Switches to track automatically
