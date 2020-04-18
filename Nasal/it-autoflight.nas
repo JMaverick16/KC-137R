@@ -71,6 +71,8 @@ var FPLN = {
 };
 
 var Misc = {
+	efis0Trk: props.globals.getNode("/instrumentation/efis[0]/hdg-trk-selected", 1),
+	efis1Trk: props.globals.getNode("/instrumentation/efis[1]/hdg-trk-selected", 1),
 	flapNorm: props.globals.getNode("/surface-positions/flap-pos-norm", 1),
 };
 
@@ -87,6 +89,7 @@ var Input = {
 	fd2: props.globals.initNode("/it-autoflight/input/fd2", 0, "BOOL"),
 	fpa: props.globals.initNode("/it-autoflight/input/fpa", 0, "DOUBLE"),
 	hdg: props.globals.initNode("/it-autoflight/input/hdg", 0, "INT"),
+	hdgCalc: 0,
 	ias: props.globals.initNode("/it-autoflight/input/spd-kts", 250, "INT"),
 	ktsMach: props.globals.initNode("/it-autoflight/input/kts-mach", 0, "BOOL"),
 	lat: props.globals.initNode("/it-autoflight/input/lat", 5, "INT"),
@@ -109,6 +112,7 @@ var Internal = {
 	bankLimit: props.globals.initNode("/it-autoflight/internal/bank-limit", 30, "INT"),
 	bankLimitAuto: 30,
 	captVS: 0,
+	driftAngle: props.globals.initNode("/it-autoflight/internal/drift-angle-deg", 0, "DOUBLE"),
 	flchActive: 0,
 	fpa: props.globals.initNode("/it-autoflight/internal/fpa", 0, "DOUBLE"),
 	hdg: props.globals.initNode("/it-autoflight/internal/heading-deg", 0, "DOUBLE"),
@@ -925,6 +929,31 @@ setlistener("/it-autoflight/input/vert", func {
 		ITAF.setVertMode(Input.vert.getValue());
 	}
 });
+
+setlistener("/it-autoflight/input/trk", func {
+	Input.trkTemp = Input.trk.getBoolValue();
+	if (Input.trkTemp) {
+		Input.hdgCalc = Input.hdg.getValue() + math.round(Internal.driftAngle.getValue());
+		if (Input.hdgCalc > 360) { # It's rounded, so this is ok. Otherwise do >= 360.5
+			Input.hdgCalc = Input.hdgCalc - 360;
+		} else if (Input.hdgCalc < 1) { # It's rounded, so this is ok. Otherwise do < 0.5
+			Input.hdgCalc = Input.hdgCalc + 360;
+		}
+		Input.hdg.setValue(Input.hdgCalc);
+		Custom.hdgSel.setValue(Input.hdgCalc);
+	} else {
+		Input.hdgCalc = Input.hdg.getValue() - math.round(Internal.driftAngle.getValue());
+		if (Input.hdgCalc > 360) { # It's rounded, so this is ok. Otherwise do >= 360.5
+			Input.hdgCalc = Input.hdgCalc - 360;
+		} else if (Input.hdgCalc < 1) { # It's rounded, so this is ok. Otherwise do < 0.5
+			Input.hdgCalc = Input.hdgCalc + 360;
+		}
+		Input.hdg.setValue(Input.hdgCalc);
+		Custom.hdgSel.setValue(Input.hdgCalc);
+	}
+	Misc.efis0Trk.setBoolValue(Input.trkTemp); # For Canvas Nav Display.
+	Misc.efis1Trk.setBoolValue(Input.trkTemp); # For Canvas Nav Display.
+}, 0, 0);
 
 setlistener("/sim/signals/fdm-initialized", func {
 	ITAF.init();
