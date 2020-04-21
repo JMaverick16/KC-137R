@@ -313,7 +313,7 @@ var ITAF = {
 		Internal.altTemp = Internal.alt.getValue();
 		Internal.altDiff = Internal.altTemp - Position.indicatedAltitudeFtTemp;
 		
-		if (Output.vertTemp != 0 and Output.vertTemp != 2 and Output.vertTemp != 6 and Text.vertTemp != "G/A CLB") {
+		if (Output.vertTemp != 0 and Output.vertTemp != 2 and Output.vertTemp != 6) {
 			Internal.captVS = math.clamp(math.round(abs(Internal.vs.getValue()) / (-1 * Gain.altGain.getValue()), 100), 50, 2500); # Capture limits
 			if (abs(Internal.altDiff) <= Internal.captVS and !Gear.wow1Temp and !Gear.wow2Temp) {
 				if (Internal.altTemp >= Position.indicatedAltitudeFtTemp and Internal.vsTemp >= -25) { # Don't capture if we are going the wrong way
