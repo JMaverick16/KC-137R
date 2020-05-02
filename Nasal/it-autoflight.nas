@@ -153,7 +153,7 @@ var Output = {
 var Text = {
 	arm: props.globals.initNode("/it-autoflight/mode/arm", " ", "STRING"),
 	lat: props.globals.initNode("/it-autoflight/mode/lat", "T/O", "STRING"),
-	thr: props.globals.initNode("/it-autoflight/mode/thr", " PITCH", "STRING"),
+	thr: props.globals.initNode("/it-autoflight/mode/thr", "PITCH", "STRING"),
 	vert: props.globals.initNode("/it-autoflight/mode/vert", "T/O CLB", "STRING"),
 	vertTemp: "T/O CLB",
 };
@@ -234,7 +234,7 @@ var ITAF = {
 		Internal.altCaptureActive = 0;
 		Input.ias.setValue(250);
 		Input.mach.setValue(0.5);
-		Text.thr.setValue(" PITCH");
+		Text.thr.setValue("PITCH");
 		Text.arm.setValue(" ");
 		Text.lat.setValue("T/O");
 		Text.vert.setValue("T/O CLB");
@@ -378,20 +378,20 @@ var ITAF = {
 		} else if (Output.vertTemp == 4) {
 			if (Internal.altTemp >= Position.indicatedAltitudeFtTemp) {
 				Output.thrMode.setValue(2);
-				Text.thr.setValue(" PITCH");
+				Text.thr.setValue("PITCH");
 				if (Internal.flchActive) { # Set before mode change to prevent it from overwriting by mistake
 					Text.vert.setValue("SPD CLB");
 				}
 			} else {
 				Output.thrMode.setValue(1);
-				Text.thr.setValue(" PITCH");
+				Text.thr.setValue("PITCH");
 				if (Internal.flchActive) { # Set before mode change to prevent it from overwriting by mistake
 					Text.vert.setValue("SPD DES");
 				}
 			}
 		} else if (Output.vertTemp == 7) {
 			Output.thrMode.setValue(2);
-			Text.thr.setValue(" PITCH");
+			Text.thr.setValue("PITCH");
 		} else {
 			Output.thrMode.setValue(0);
 			Text.thr.setValue("THRUST");
