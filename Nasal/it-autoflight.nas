@@ -1,5 +1,5 @@
-# IT-AUTOFLIGHT System Controller V4.0.2
-# Copyright (c) 2020 Joshua Davidson (Octal450)
+# IT-AUTOFLIGHT System Controller V4.0.3
+# Copyright (c) 2019 Joshua Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
 
@@ -116,6 +116,8 @@ var Internal = {
 	flchActive: 0,
 	fpa: props.globals.initNode("/it-autoflight/internal/fpa", 0, "DOUBLE"),
 	hdg: props.globals.initNode("/it-autoflight/internal/heading-deg", 0, "DOUBLE"),
+	hdgErrorDeg: props.globals.initNode("/it-autoflight/internal/heading-error-deg", 0, "DOUBLE"),
+	hdgHldValue: 360,
 	hdgPredicted: props.globals.initNode("/it-autoflight/internal/heading-predicted", 0, "DOUBLE"),
 	lnavAdvanceNm: props.globals.initNode("/it-autoflight/internal/lnav-advance-nm", 0, "DOUBLE"),
 	minVS: props.globals.initNode("/it-autoflight/internal/min-vs", -500, "INT"),
@@ -137,6 +139,8 @@ var Output = {
 	fd1Temp: 0,
 	fd2: props.globals.initNode("/it-autoflight/output/fd2", 0, "BOOL"),
 	fd2Temp: 0,
+	hdgInHld: props.globals.initNode("/it-autoflight/output/hdg-in-hld", 0, "BOOL"),
+	hdgInHldTemp: 0,
 	lat: props.globals.initNode("/it-autoflight/output/lat", 5, "INT"),
 	latTemp: 5,
 	lnavArm: props.globals.initNode("/it-autoflight/output/lnav-armed", 0, "BOOL"),
@@ -214,6 +218,7 @@ var ITAF = {
 		Output.athr.setBoolValue(0);
 		Output.fd1.setBoolValue(0);
 		Output.fd2.setBoolValue(0);
+		Output.hdgInHld.setBoolValue(0);
 		Output.lnavArm.setBoolValue(0);
 		Output.locArm.setBoolValue(0);
 		Output.apprArm.setBoolValue(0);
@@ -239,23 +244,54 @@ var ITAF = {
 	loop: func() {
 		Output.latTemp = Output.lat.getValue();
 		Output.vertTemp = Output.vert.getValue();
+		Output.ap1Temp = Output.ap1.getBoolValue();
+		Output.ap2Temp = Output.ap2.getBoolValue();
+		Setting.autolandWithoutApTemp = Setting.autolandWithoutAp.getBoolValue();
+		
+		# Kill Autoland if the system should not autoland without AP, and AP is off
+		if (Setting.autolandWithoutApTemp) { # Only evaluate the rest if this setting is on
+			if (!Output.ap1Temp and !Output.ap2Temp) {
+				if (Output.latTemp == 4) {
+					me.activateLOC();
+				}
+				if (Output.vertTemp == 6) {
+					me.activateGS();
+				}
+			}
+		}
 		
 		# VOR/ILS Revision
-		if (Output.latTemp == 2 or Output.vertTemp == 2 or Output.vertTemp == 6) {
+		if (Output.latTemp == 2 or Output.latTemp == 4 or Output.vertTemp == 2 or Output.vertTemp == 6) {
 			me.checkRadioRevision(Output.latTemp, Output.vertTemp);
 		}
 		
 		Gear.wow1Temp = Gear.wow1.getBoolValue();
 		Gear.wow2Temp = Gear.wow2.getBoolValue();
-		Output.ap1Temp = Output.ap1.getBoolValue();
-		Output.ap2Temp = Output.ap2.getBoolValue();
 		Output.latTemp = Output.lat.getValue();
 		Output.vertTemp = Output.vert.getValue();
 		Text.vertTemp = Text.vert.getValue();
 		Position.gearAglFtTemp = Position.gearAglFt.getValue();
 		Internal.vsTemp = Internal.vs.getValue();
 		Position.indicatedAltitudeFtTemp = Position.indicatedAltitudeFt.getValue();
-		Setting.autolandWithoutApTemp = Setting.autolandWithoutAp.getBoolValue();
+		Output.hdgInHldTemp = Output.hdgInHld.getBoolValue();
+		
+		# HDG HLD logic
+		if (Output.latTemp == 0) {
+			if (Input.hdg.getValue() == Internal.hdgHldValue and abs(Internal.hdgErrorDeg.getValue()) <= 2.5) {
+				if (Output.hdgInHldTemp != 1) {
+					Output.hdgInHld.setBoolValue(1);
+				}
+			} else if (Input.hdg.getValue() != Internal.hdgHldValue) {
+				Internal.hdgHldValue = Input.hdg.getValue();
+				if (Output.hdgInHldTemp != 0) {
+					Output.hdgInHld.setBoolValue(0);
+				}
+			}
+		} else {
+			if (Output.hdgInHldTemp != 0) {
+				Output.hdgInHld.setBoolValue(0);
+			}
+		}
 		
 		# LNAV Engagement
 		if (Output.lnavArm.getBoolValue()) {
@@ -443,7 +479,7 @@ var ITAF = {
 		
 		# Reset system once flight complete
 		if (!Output.ap1.getBoolValue() and !Output.ap2.getBoolValue() and Velocities.groundspeedKt.getValue() < 60 and Text.vert.getValue() != "T/O CLB") {
-			me.init(1);
+			me.init();
 		}
 		
 		# Calculate Roll and Pitch Kp
@@ -586,6 +622,8 @@ var ITAF = {
 			me.syncHDG();
 			Output.lat.setValue(0);
 			Text.lat.setValue("HDG");
+			Internal.hdgHldValue = Input.hdg.getValue();
+			Output.hdgInHld.setBoolValue(1);
 			if (Output.vertTemp == 2 or Output.vertTemp == 6) { # Also cancel G/S or FLARE if active
 				me.setVertMode(1);
 			} else {
