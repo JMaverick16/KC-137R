@@ -283,7 +283,7 @@ var ITAF = {
 				}
 			} else if (Input.hdg.getValue() != Internal.hdgHldValue) {
 				Internal.hdgHldValue = Input.hdg.getValue();
-				if (Output.hdgInHldTemp != 0) {
+				if (Output.hdgInHldTemp != 0 and abs(Internal.hdgErrorDeg.getValue()) > 2.5) {
 					Output.hdgInHld.setBoolValue(0);
 				}
 			}
