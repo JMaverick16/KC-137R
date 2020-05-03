@@ -901,7 +901,7 @@ Modified by Octal450 for KC-137R
 		<condition>
 			<equals>
 				<property>it-autoflight/mode/thr</property>
-				<value> PITCH</value>
+				<value>PITCH</value>
 			</equals>
 		</condition>
 	</animation>
@@ -1109,7 +1109,7 @@ Modified by Octal450 for KC-137R
 		<condition>
 			<equals>
 				<property>it-autoflight/mode/thr</property>
-				<value> PITCH</value>
+				<value>PITCH</value>
 			</equals>
 		</condition>
 	</animation>

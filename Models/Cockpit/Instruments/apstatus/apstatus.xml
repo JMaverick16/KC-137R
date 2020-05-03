@@ -96,7 +96,7 @@
 		<condition>
 			<equals>
 				<property>it-autoflight/mode/thr</property>
-				<value> PITCH</value>
+				<value>PITCH</value>
 			</equals>
 		</condition>
 	</animation>
@@ -357,7 +357,7 @@
 		<condition>
 			<equals>
 				<property>it-autoflight/mode/thr</property>
-				<value> PITCH</value>
+				<value>PITCH</value>
 			</equals>
 		</condition>
 	</animation>

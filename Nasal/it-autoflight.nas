@@ -1,5 +1,5 @@
 # IT-AUTOFLIGHT System Controller V4.0.3
-# Copyright (c) 2019 Joshua Davidson (Octal450)
+# Copyright (c) 2020 Joshua Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
 
@@ -178,15 +178,15 @@ var Sound = {
 
 var Gain = {
 	altGain: props.globals.getNode("/it-autoflight/config/cmd/alt-gain", 1),
-	hdgGain: props.globals.getNode("/it-autoflight/config/cmd/hdg", 1),
-	hdgKp: props.globals.initNode("/it-autoflight/config/cmd/hdg-kp", 0, "DOUBLE"),
-	hdgKpCalc: 0,
+	hdgGain: props.globals.getNode("/it-autoflight/config/cmd/roll", 1),
 	pitchKp: props.globals.initNode("/it-autoflight/config/pitch/kp", 0, "DOUBLE"),
 	pitchKpCalc: 0,
 	pitchKpLow: props.globals.getNode("/it-autoflight/config/pitch/kp-low", 1),
 	pitchKpLowTemp: 0,
 	pitchKpHigh: props.globals.getNode("/it-autoflight/config/pitch/kp-high", 1),
 	pitchKpHighTemp: 0,
+	rollCmdKp: props.globals.initNode("/it-autoflight/config/cmd/roll-kp", 0, "DOUBLE"),
+	rollCmdKpCalc: 0,
 	rollKp: props.globals.initNode("/it-autoflight/config/roll/kp", 0, "DOUBLE"),
 	rollKpCalc: 0,
 	rollKpLowTemp: 0,
@@ -482,7 +482,7 @@ var ITAF = {
 			me.init();
 		}
 		
-		# Calculate Roll and Pitch Kp
+		# Calculate Roll and Pitch Rate Kp
 		if (!Setting.disableFinal.getBoolValue()) {
 			Gain.rollKpLowTemp = Gain.rollKpLow.getValue();
 			Gain.rollKpHighTemp = Gain.rollKpHigh.getValue();
@@ -507,11 +507,11 @@ var ITAF = {
 			Gain.pitchKp.setValue(Gain.pitchKpCalc);
 		}
 		
-		# Calculate HDG Kp
-		Gain.hdgKpCalc = Gain.hdgGain.getValue() + (Velocities.airspeedKt.getValue() - 140) * ((Gain.hdgGain.getValue() + 1.0 - Gain.hdgGain.getValue()) / (360 - 140));
-		Gain.hdgKpCalc = math.clamp(Gain.hdgKpCalc, Gain.hdgGain.getValue(), Gain.hdgGain.getValue() + 1.0);
+		# Calculate Roll Command Kp
+		Gain.rollCmdKpCalc = Gain.hdgGain.getValue() + (Velocities.airspeedKt.getValue() - 140) * ((Gain.hdgGain.getValue() + 1.0 - Gain.hdgGain.getValue()) / (360 - 140));
+		Gain.rollCmdKpCalc = math.clamp(Gain.rollCmdKpCalc, Gain.hdgGain.getValue(), Gain.hdgGain.getValue() + 1.0);
 		
-		Gain.hdgKp.setValue(Gain.hdgKpCalc);
+		Gain.rollCmdKp.setValue(Gain.rollCmdKpCalc);
 	},
 	ap1Master: func(s) {
 		if (s == 1) {

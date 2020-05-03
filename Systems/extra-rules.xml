@@ -12,18 +12,19 @@
 		<input>
 			<condition>
 				<and>
-				<equals>
-					<property>/fdm/jsbsim/fbw/ap/enabled</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>/fdm/jsbsim/position/wow</property>
-					<value>1</value>
-				</equals>
+					<equals>
+						<property>/fdm/jsbsim/fbw/ap/enabled</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/fdm/jsbsim/position/wow</property>
+						<value>1</value>
+					</equals>
 				</and>
 			</condition>
 			<property>/orientation/roll-deg</property>
 		</input>
+		<input>0</input>
 		<reference>0</reference>
 		<output>/fdm/jsbsim/fbw/roll/aileron-rollout</output>
 	</filter>

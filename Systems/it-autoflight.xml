@@ -589,7 +589,7 @@
 				<sum>
 					<div>
 						<property>/orientation/roll-deg</property>
-						<property>/it-autoflight/config/cmd/hdg-kp</property>
+						<property>/it-autoflight/config/cmd/roll-kp</property>
 					</div>
 					<property>/it-autoflight/internal/heading-deg</property>
 				</sum>
@@ -606,7 +606,7 @@
 				<sum>
 					<div>
 						<property>/orientation/roll-deg</property>
-						<property>/it-autoflight/config/cmd/hdg-kp</property>
+						<property>/it-autoflight/config/cmd/roll-kp</property>
 					</div>
 					<property>/it-autoflight/internal/track-deg</property>
 				</sum>
@@ -696,7 +696,7 @@
 		<name>IT-CONTROLLER: HDG/LNAV ROLL</name>
 		<debug>false</debug>
 		<type>gain</type>
-		<gain>/it-autoflight/config/cmd/hdg-kp</gain>
+		<gain>/it-autoflight/config/cmd/roll-kp</gain>
 		<enable>
 			<condition>
 				<and>
@@ -745,7 +745,7 @@
 		<name>IT-CONTROLLER: VORLOC ROLL</name>
 		<debug>false</debug>
 		<type>gain</type>
-		<gain>/it-autoflight/config/cmd/vorloc</gain>
+		<gain>/it-autoflight/config/cmd/roll-kp</gain>
 		<enable>
 			<condition>
 				<and>
@@ -975,18 +975,7 @@
 				</or>
 			</condition>
 		</enable>
-		<input>
-			<expression>
-				<table>
-					<property>/orientation/roll-deg</property>
-					<entry><ind>-30</ind><dep>-30</dep></entry>
-					<entry><ind> -1</ind><dep>  0</dep></entry>
-					<entry><ind>  0</ind><dep>  0</dep></entry>
-					<entry><ind>  1</ind><dep>  0</dep></entry>
-					<entry><ind> 30</ind><dep> 30</dep></entry>
-				</table>
-			</expression>
-		</input>
+		<input>/orientation/roll-deg</input>
 		<reference>0</reference>
 		<output>/it-autoflight/internal/aileron-rollout</output>
 	</filter>
