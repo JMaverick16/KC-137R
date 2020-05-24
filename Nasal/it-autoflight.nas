@@ -374,6 +374,14 @@ var ITAF = {
 			Text.thr.setValue("RETARD");
 			if (Gear.wow1Temp or Gear.wow2Temp) { # Disconnect A/THR on either main gear touch
 				me.athrMaster(0);
+				setprop("/controls/engines/engine[0]/throttle", 0);
+				setprop("/controls/engines/engine[1]/throttle", 0);
+				setprop("/controls/engines/engine[2]/throttle", 0);
+				setprop("/controls/engines/engine[3]/throttle", 0);
+				setprop("/controls/engines/engine[4]/throttle", 0);
+				setprop("/controls/engines/engine[5]/throttle", 0);
+				setprop("/controls/engines/engine[6]/throttle", 0);
+				setprop("/controls/engines/engine[7]/throttle", 0);
 			}
 		} else if (Output.vertTemp == 4) {
 			if (Internal.altTemp >= Position.indicatedAltitudeFtTemp) {
