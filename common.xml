@@ -314,6 +314,8 @@
 		</config>
 		<settings>
 			<auto-bank-max-deg>30</auto-bank-max-deg> <!-- Maximum Auto Bank Limit -->
+			<autothrottle-max>0.95</autothrottle-max> <!-- Thrust Max Limit Normalized -->
+			<autothrottle-min>0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
 			<disable-final>1</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
 			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 			<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
