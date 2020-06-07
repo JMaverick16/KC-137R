@@ -17,6 +17,7 @@
 			</expression>
 		</input>
 		<output>/controls/engines/n1lim-norm</output>
+		<output>/it-autoflight/settings/autothrottle-max</output>
 	</filter>
 	
 	<filter>

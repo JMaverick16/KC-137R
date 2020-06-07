@@ -42,9 +42,8 @@
 		<autopilot n="0">
 			<path>Aircraft/KC-137R/Systems/it-autoflight.xml</path>
 		</autopilot>
-		<!-- Uses a custom EPR based autothrottle -->
 		<autopilot n="1">
-			<path>Aircraft/KC-137R/Systems/custom-autothrust.xml</path>
+			<path>Aircraft/KC-137R/Systems/it-autothrust.xml</path>
 		</autopilot>
 		<autopilot n="2">
 			<path>Aircraft/KC-137R/Systems/engine-timing.xml</path>
