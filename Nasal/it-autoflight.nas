@@ -5,47 +5,10 @@ setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
 
 # Initialize all used variables and property nodes
 # Sim
-var Velocities = {
-	airspeedKt: props.globals.getNode("/velocities/airspeed-kt", 1), # Only used for gain scheduling
-	groundspeedKt: props.globals.getNode("/velocities/groundspeed-kt", 1),
-	groundspeedMps: 0,
-	indicatedAirspeedKt: props.globals.getNode("/instrumentation/airspeed-indicator/indicated-speed-kt", 1),
-	indicatedMach: props.globals.getNode("/instrumentation/airspeed-indicator/indicated-mach", 1),
-	trueAirspeedKt: props.globals.getNode("/instrumentation/airspeed-indicator/true-speed-kt", 1),
-	trueAirspeedKtTemp: 0,
-};
-
-var Position = {
-	gearAglFtTemp: 0,
-	gearAglFt: props.globals.getNode("/position/gear-agl-ft", 1),
-	indicatedAltitudeFt: props.globals.getNode("/instrumentation/altimeter/indicated-altitude-ft", 1),
-	indicatedAltitudeFtTemp: 0,
-};
-
-var Gear = {
-	wow0: props.globals.getNode("/gear/gear[0]/wow", 1),
-	wow1: props.globals.getNode("/gear/gear[1]/wow", 1),
-	wow1Temp: 1,
-	wow2: props.globals.getNode("/gear/gear[2]/wow", 1),
-	wow2Temp: 1,
-};
-
-var Control = {
+var Controls = {
 	aileron: props.globals.getNode("/controls/flight/aileron", 1),
 	elevator: props.globals.getNode("/controls/flight/elevator", 1),
 	rudder: props.globals.getNode("/controls/flight/rudder", 1),
-};
-
-var Radio = {
-	gsDefl: [props.globals.getNode("/instrumentation/nav[0]/gs-needle-deflection-norm", 1), props.globals.getNode("/instrumentation/nav[1]/gs-needle-deflection-norm", 1)],
-	gsDeflTemp: 0,
-	inRange: [props.globals.getNode("/instrumentation/nav[0]/in-range", 1), props.globals.getNode("/instrumentation/nav[1]/in-range", 1)],
-	inRangeTemp: 0,
-	locDefl: [props.globals.getNode("/instrumentation/nav[0]/heading-needle-deflection-norm", 1), props.globals.getNode("/instrumentation/nav[1]/heading-needle-deflection-norm", 1)],
-	locDeflTemp: 0,
-	radioSel: 0,
-	signalQuality: [props.globals.getNode("/instrumentation/nav[0]/signal-quality-norm", 1), props.globals.getNode("/instrumentation/nav[1]/signal-quality-norm", 1)],
-	signalQualityTemp: 0,
 };
 
 var FPLN = {
@@ -70,10 +33,47 @@ var FPLN = {
 	wpFlyTo: 0,
 };
 
+var Gear = {
+	wow0: props.globals.getNode("/gear/gear[0]/wow", 1),
+	wow1: props.globals.getNode("/gear/gear[1]/wow", 1),
+	wow1Temp: 1,
+	wow2: props.globals.getNode("/gear/gear[2]/wow", 1),
+	wow2Temp: 1,
+};
+
 var Misc = {
 	efis0Trk: props.globals.getNode("/instrumentation/efis[0]/hdg-trk-selected", 1),
 	efis1Trk: props.globals.getNode("/instrumentation/efis[1]/hdg-trk-selected", 1),
 	flapNorm: props.globals.getNode("/surface-positions/flap-pos-norm", 1),
+};
+
+var Position = {
+	gearAglFtTemp: 0,
+	gearAglFt: props.globals.getNode("/position/gear-agl-ft", 1),
+	indicatedAltitudeFt: props.globals.getNode("/instrumentation/altimeter/indicated-altitude-ft", 1),
+	indicatedAltitudeFtTemp: 0,
+};
+
+var Radio = {
+	gsDefl: [props.globals.getNode("/instrumentation/nav[0]/gs-needle-deflection-norm", 1), props.globals.getNode("/instrumentation/nav[1]/gs-needle-deflection-norm", 1)],
+	gsDeflTemp: 0,
+	inRange: [props.globals.getNode("/instrumentation/nav[0]/in-range", 1), props.globals.getNode("/instrumentation/nav[1]/in-range", 1)],
+	inRangeTemp: 0,
+	locDefl: [props.globals.getNode("/instrumentation/nav[0]/heading-needle-deflection-norm", 1), props.globals.getNode("/instrumentation/nav[1]/heading-needle-deflection-norm", 1)],
+	locDeflTemp: 0,
+	radioSel: 0,
+	signalQuality: [props.globals.getNode("/instrumentation/nav[0]/signal-quality-norm", 1), props.globals.getNode("/instrumentation/nav[1]/signal-quality-norm", 1)],
+	signalQualityTemp: 0,
+};
+
+var Velocities = {
+	airspeedKt: props.globals.getNode("/velocities/airspeed-kt", 1), # Only used for gain scheduling
+	groundspeedKt: props.globals.getNode("/velocities/groundspeed-kt", 1),
+	groundspeedMps: 0,
+	indicatedAirspeedKt: props.globals.getNode("/instrumentation/airspeed-indicator/indicated-speed-kt", 1),
+	indicatedMach: props.globals.getNode("/instrumentation/airspeed-indicator/indicated-mach", 1),
+	trueAirspeedKt: props.globals.getNode("/instrumentation/airspeed-indicator/true-speed-kt", 1),
+	trueAirspeedKtTemp: 0,
 };
 
 # IT-AUTOFLIGHT
@@ -524,7 +524,7 @@ var ITAF = {
 	ap1Master: func(s) {
 		if (s == 1) {
 			if (Output.vert.getValue() != 6 and !Gear.wow1.getBoolValue() and !Gear.wow2.getBoolValue()) {
-				Control.rudder.setValue(0);
+				Controls.rudder.setValue(0);
 				Output.ap1.setBoolValue(1);
 				Sound.enableApOff = 1;
 				Sound.apOff.setBoolValue(0);
@@ -541,7 +541,7 @@ var ITAF = {
 	ap2Master: func(s) {
 		if (s == 1) {
 			if (Output.vert.getValue() != 6 and !Gear.wow1.getBoolValue() and !Gear.wow2.getBoolValue()) {
-				Control.rudder.setValue(0);
+				Controls.rudder.setValue(0);
 				Output.ap2.setBoolValue(1);
 				Sound.enableApOff = 1;
 				Sound.apOff.setBoolValue(0);
@@ -558,9 +558,9 @@ var ITAF = {
 	apOffFunction: func() {
 		if (!Output.ap1.getBoolValue() and !Output.ap2.getBoolValue()) { # Only do if both APs are off
 			if (!Setting.disableFinal.getBoolValue()) {
-				Control.aileron.setValue(0);
-				Control.elevator.setValue(0);
-				Control.rudder.setValue(0);
+				Controls.aileron.setValue(0);
+				Controls.elevator.setValue(0);
+				Controls.rudder.setValue(0);
 			}
 			if (Text.vert.getValue() == "ROLLOUT") {
 				me.init(1);
