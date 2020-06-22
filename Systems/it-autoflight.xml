@@ -7,7 +7,7 @@
 	
 	<!-- Predictors -->
 	<predict-simple>
-		<name>IAS 5 Second Predictor</name>
+		<name>Knots 5 Second Predictor</name>
 		<debug>false</debug>
 		<input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
 		<output>/it-autoflight/internal/kts-predicted-5</output>
@@ -16,7 +16,7 @@
 	</predict-simple>
 	
 	<predict-simple>
-		<name>MACH 5 Second Predictor</name>
+		<name>Mach 5 Second Predictor</name>
 		<debug>false</debug>
 		<input>/instrumentation/airspeed-indicator/indicated-mach</input>
 		<output>/it-autoflight/internal/mach-predicted-5</output>
@@ -25,7 +25,7 @@
 	</predict-simple>
 	
 	<predict-simple>
-		<name>IAS 15 Second Predictor</name>
+		<name>Knots 15 Second Predictor</name>
 		<debug>false</debug>
 		<input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
 		<output>/it-autoflight/internal/kts-predicted-15</output>
@@ -34,7 +34,7 @@
 	</predict-simple>
 	
 	<predict-simple>
-		<name>MACH 15 Second Predictor</name>
+		<name>Mach 15 Second Predictor</name>
 		<debug>false</debug>
 		<input>/instrumentation/airspeed-indicator/indicated-mach</input>
 		<output>/it-autoflight/internal/mach-predicted-15</output>
