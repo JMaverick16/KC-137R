@@ -270,6 +270,8 @@
  
   <flight-recorder include="Systems/flightrecorder.xml"/>
 
+  <gui n="0" include="gui/it-gui.xml"/>
+
   <flaps>
     <setting>0.0</setting>
     <setting>0.2</setting>	<!-- 20% takeoff-->
