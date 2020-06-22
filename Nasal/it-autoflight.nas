@@ -866,11 +866,7 @@ var ITAF = {
 			me.setVertMode(7); # Must be before kicking AP off
 			Text.vert.setValue("G/A CLB");
 			Input.ktsMach.setBoolValue(0);
-			if (Velocities.indicatedAirspeedKt.getValue() < Setting.togaSpd.getValue()) {
-				Input.ias.setValue(Setting.togaSpd.getValue());
-			} else {
-				me.syncIAS();
-			}
+			me.syncIASGA();
 			if (Gear.wow1.getBoolValue() or Gear.wow2.getBoolValue()) {
 				me.ap1Master(0);
 				me.ap2Master(0);
@@ -897,6 +893,9 @@ var ITAF = {
 	},
 	syncIAS: func() {
 		Input.ias.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), 100, 350));
+	},
+	syncIASGA: func() { # Same as syncIAS, except doesn't go below TogaSpd
+		Input.ias.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), Setting.togaSpd.getValue(), 350));
 	},
 	syncMach: func() {
 		Input.mach.setValue(math.clamp(math.round(Velocities.indicatedMach.getValue(), 0.001), 0.5, 0.9));
