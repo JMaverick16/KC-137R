@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0"?>
 
 <!-- IT-AUTOFLIGHT Autopilot Control Dialog -->
 <!-- Copyright (c) 2020 Joshua Davidson (Octal450) -->
@@ -651,7 +651,7 @@
 			</checkbox>
 			<checkbox>
 				<label>Use NAV2 Radio</label>
-				<property>/it-autoflight/settings/use-nav2-radio</property>
+				<property>/it-autoflight/input/use-nav2-radio</property>
 				<enable>
 					<not-equals>
 						<property>/it-autoflight/output/vert</property>

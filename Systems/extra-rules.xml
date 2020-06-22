@@ -39,21 +39,15 @@
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/fdm/jsbsim/position/wow</property>
+						<property>/gear/gear[0]/wow</property>
 						<value>0</value>
 					</equals>
 				</and>
 			</condition>
 		</enable>
-		<input>
-			<property>/it-autoflight/internal/pitch-rate</property>
-		</input>
-		<reference>
-			<property>/orientation/pitch-rate-degps</property>
-		</reference>
-		<output>
-			<property>/fdm/jsbsim/fbw/pitch/g-ap-cmd</property>
-		</output>
+		<input>/it-autoflight/internal/pitch-rate</input>
+		<reference>/orientation/pitch-rate-degps</reference>
+		<output>/fdm/jsbsim/fbw/pitch/g-ap-cmd</output>
 		<config>
 			<Kp>
 				<expression>

@@ -307,7 +307,8 @@
 			</autoland>
 			<rollout>
 				<roll-kp>-0.1</roll-kp>
-				<pitch-defl>0.15</pitch-defl>
+				<pitch-nose>0.1</pitch-nose>
+				<pitch-rate>-1.5</pitch-rate>
 				<yaw-kp>-0.02</yaw-kp>
 			</rollout>
 		</config>
