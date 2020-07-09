@@ -1,4 +1,4 @@
-# IT-AUTOFLIGHT System Controller V4.0.4
+# IT-AUTOFLIGHT System Controller V4.0.5
 # Copyright (c) 2020 Joshua Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
@@ -91,11 +91,11 @@ var Input = {
 	fpaAbs: props.globals.initNode("/it-autoflight/input/fpa-abs", 0, "DOUBLE"), # Set by property rule
 	hdg: props.globals.initNode("/it-autoflight/input/hdg", 0, "INT"),
 	hdgCalc: 0,
-	ias: props.globals.initNode("/it-autoflight/input/spd-kts", 250, "INT"),
+	kts: props.globals.initNode("/it-autoflight/input/kts", 250, "INT"),
 	ktsMach: props.globals.initNode("/it-autoflight/input/kts-mach", 0, "BOOL"),
 	lat: props.globals.initNode("/it-autoflight/input/lat", 5, "INT"),
 	latTemp: 5,
-	mach: props.globals.initNode("/it-autoflight/input/spd-mach", 0.5, "DOUBLE"),
+	mach: props.globals.initNode("/it-autoflight/input/mach", 0.5, "DOUBLE"),
 	toga: props.globals.initNode("/it-autoflight/input/toga", 0, "BOOL"),
 	trk: props.globals.initNode("/it-autoflight/input/trk", 0, "BOOL"),
 	trueCourse: props.globals.initNode("/it-autoflight/input/true-course", 0, "BOOL"),
@@ -235,7 +235,7 @@ var ITAF = {
 		Internal.bankLimitAuto = 30;
 		Internal.alt.setValue(10000);
 		Internal.altCaptureActive = 0;
-		Input.ias.setValue(250);
+		Input.kts.setValue(250);
 		Input.mach.setValue(0.5);
 		Text.thr.setValue("PITCH");
 		Text.arm.setValue(" ");
@@ -868,7 +868,7 @@ var ITAF = {
 			me.setVertMode(7); # Must be before kicking AP off
 			Text.vert.setValue("G/A CLB");
 			Input.ktsMach.setBoolValue(0);
-			me.syncIASGA();
+			me.syncKtsGa();
 			if (Gear.wow1.getBoolValue() or Gear.wow2.getBoolValue()) {
 				me.ap1Master(0);
 				me.ap2Master(0);
@@ -893,11 +893,11 @@ var ITAF = {
 			Text.arm.setValue(" ");
 		}
 	},
-	syncIAS: func() {
-		Input.ias.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), 100, 350));
+	syncKts: func() {
+		Input.kts.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), 100, 350));
 	},
-	syncIASGA: func() { # Same as syncIAS, except doesn't go below TogaSpd
-		Input.ias.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), Setting.togaSpd.getValue(), 350));
+	syncKtsGa: func() { # Same as syncKts, except doesn't go below TogaSpd
+		Input.kts.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), Setting.togaSpd.getValue(), 350));
 	},
 	syncMach: func() {
 		Input.mach.setValue(math.clamp(math.round(Velocities.indicatedMach.getValue(), 0.001), 0.5, 0.9));
@@ -956,7 +956,7 @@ setlistener("/it-autoflight/input/kts-mach", func {
 	if (Input.ktsMach.getBoolValue()) {
 		ITAF.syncMach();
 	} else {
-		ITAF.syncIAS();
+		ITAF.syncKts();
 	}
 }, 0, 0);
 

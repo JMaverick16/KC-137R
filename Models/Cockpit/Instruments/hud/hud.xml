@@ -1772,7 +1772,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>ias100</object-name>
-   <property>it-autoflight/input/spd-kts</property>
+   <property>it-autoflight/input/kts</property>
    <factor>0.001</factor>
    <step>100</step>
    <axis>
@@ -1785,7 +1785,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>ias10</object-name>
-   <property>it-autoflight/input/spd-kts</property>
+   <property>it-autoflight/input/kts</property>
    <factor>0.01</factor>
    <step>10</step>
    <axis>
@@ -1798,7 +1798,7 @@
   <animation>
    <type>textranslate</type>
    <object-name>ias1</object-name>
-   <property>it-autoflight/input/spd-kts</property>
+   <property>it-autoflight/input/kts</property>
    <factor>0.1</factor>
    <step>1</step>
    <axis>

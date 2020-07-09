@@ -96,7 +96,7 @@
 		<name>IAS setting 100's</name>
 		<type>textranslate</type>
 		<object-name>APias100</object-name>
-		<property>it-autoflight/input/spd-kts</property>
+		<property>it-autoflight/input/kts</property>
 		<factor>0.001</factor>
 		<step>100</step>
 		<axis>
@@ -108,7 +108,7 @@
 		<name>IAS setting 10's</name>
 		<type>textranslate</type>
 		<object-name>APias10</object-name>
-		<property>it-autoflight/input/spd-kts</property>
+		<property>it-autoflight/input/kts</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -120,7 +120,7 @@
 		<name>IAS setting 1's</name>
 		<type>textranslate</type>
 		<object-name>APias1</object-name>
-		<property>it-autoflight/input/spd-kts</property>
+		<property>it-autoflight/input/kts</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -148,7 +148,7 @@
 		<name>Mach setting 1's</name>
 		<type>textranslate</type>
 		<object-name>APmach1</object-name>
-		<property>it-autoflight/input/spd-mach</property>
+		<property>it-autoflight/input/mach</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -160,7 +160,7 @@
 		<name>Mach setting .1's</name>
 		<type>textranslate</type>
 		<object-name>APmach.1</object-name>
-		<property>it-autoflight/input/spd-mach</property>
+		<property>it-autoflight/input/mach</property>
 		<step>0.1</step>
 		<axis>
 			<x>0</x>
@@ -171,7 +171,7 @@
 		<name>Mach setting .01's</name>
 		<type>textranslate</type>
 		<object-name>APmach.01</object-name>
-		<property>it-autoflight/input/spd-mach</property>
+		<property>it-autoflight/input/mach</property>
 		<factor>10</factor>
 		<step>0.01</step>
 		<axis>
@@ -188,7 +188,7 @@
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>it-autoflight/input/spd-kts</property>
+      <property>it-autoflight/input/kts</property>
       <step>1</step>
       <min>0</min>
       <max>380</max>
@@ -204,7 +204,7 @@
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>it-autoflight/input/spd-kts</property>
+      <property>it-autoflight/input/kts</property>
       <step>-1</step>
       <min>0</min>
       <max>380</max>
@@ -221,7 +221,7 @@
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>it-autoflight/input/spd-mach</property>
+      <property>it-autoflight/input/mach</property>
       <step>0.01</step>
       <min>0.60</min>
       <max>0.92</max>
@@ -237,7 +237,7 @@
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>it-autoflight/input/spd-mach</property>
+      <property>it-autoflight/input/mach</property>
       <step>-0.01</step>
       <min>0.60</min>
       <max>0.92</max>
@@ -250,7 +250,7 @@
 		<name>Speed knob kt rotate</name>
 		<type>rotate</type>
 		<object-name>SPDknb</object-name>
-		<property>it-autoflight/input/spd-kts</property>
+		<property>it-autoflight/input/kts</property>
 		<factor>2</factor>
 		<axis>
 			<x>-1</x>
@@ -267,7 +267,7 @@
 		<name>Speed knob Mach rotate</name>
 		<type>rotate</type>
 		<object-name>SPDknb</object-name>
-		<property>it-autoflight/input/spd-mach</property>
+		<property>it-autoflight/input/mach</property>
 		<factor>2000</factor>
 		<axis>
 			<x>1</x>
