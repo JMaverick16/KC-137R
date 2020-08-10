@@ -213,8 +213,10 @@ var ITAF = {
 		Input.ap1.setBoolValue(0);
 		Input.ap2.setBoolValue(0);
 		Input.athr.setBoolValue(0);
-		Input.fd1.setBoolValue(0);
-		Input.fd2.setBoolValue(0);
+		if (t != 1) {
+			Input.fd1.setBoolValue(0);
+			Input.fd2.setBoolValue(0);
+		}
 		Input.vs.setValue(0);
 		Input.fpa.setValue(0);
 		Input.lat.setValue(5);
@@ -223,8 +225,10 @@ var ITAF = {
 		Output.ap1.setBoolValue(0);
 		Output.ap2.setBoolValue(0);
 		Output.athr.setBoolValue(0);
-		Output.fd1.setBoolValue(0);
-		Output.fd2.setBoolValue(0);
+		if (t != 1) {
+			Output.fd1.setBoolValue(0);
+			Output.fd2.setBoolValue(0);
+		}
 		Output.hdgInHld.setBoolValue(0);
 		Output.lnavArm.setBoolValue(0);
 		Output.locArm.setBoolValue(0);
