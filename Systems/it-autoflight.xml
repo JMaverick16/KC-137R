@@ -1476,7 +1476,7 @@
 							<property>/orientation/pitch-deg</property>
 							<value>5</value>
 						</dif>
-						<value>-10</value>
+						<value>-15</value>
 					</max>
 				</expression>
 			</u_min>
@@ -1502,7 +1502,7 @@
 							<property>/orientation/pitch-deg</property>
 							<value>5</value>
 						</sum>
-						<value>25</value>
+						<value>30</value>
 					</min>
 				</expression>
 			</u_max>
