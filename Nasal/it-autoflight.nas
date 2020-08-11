@@ -114,6 +114,7 @@ var Internal = {
 	altPredicted: props.globals.initNode("/it-autoflight/internal/altitude-predicted", 0, "DOUBLE"),
 	bankLimit: props.globals.initNode("/it-autoflight/internal/bank-limit", 30, "INT"),
 	bankLimitAuto: 30,
+	bankLimitMax: [30, 5, 10, 15, 20, 25, 30],
 	captVs: 0,
 	driftAngle: props.globals.initNode("/it-autoflight/internal/drift-angle-deg", 0, "DOUBLE"),
 	flchActive: 0,
@@ -238,8 +239,6 @@ var ITAF = {
 		Output.vert.setValue(7);
 		Internal.minVs.setValue(-500);
 		Internal.maxVs.setValue(500);
-		Internal.bankLimit.setValue(30);
-		Internal.bankLimitAuto = 30;
 		Internal.alt.setValue(10000);
 		Internal.altCaptureActive = 0;
 		Text.thr.setValue("PITCH");
@@ -431,22 +430,11 @@ var ITAF = {
 		} else {
 			Internal.bankLimitAuto = 30;
 		}
-		math.clamp(Internal.bankLimitAuto, 15, Settings.autoBankMaxDeg.getValue()); # Limit to max degree
 		
-		if (Input.bankLimitSWTemp == 0) {
+		if (Internal.bankLimitAuto > Internal.bankLimitMax[Input.bankLimitSWTemp]) {
+			Internal.bankLimit.setValue(Internal.bankLimitMax[Input.bankLimitSWTemp]);
+		} else {
 			Internal.bankLimit.setValue(Internal.bankLimitAuto);
-		} else if (Input.bankLimitSWTemp == 1) {
-			Internal.bankLimit.setValue(5);
-		} else if (Input.bankLimitSWTemp == 2) {
-			Internal.bankLimit.setValue(10);
-		} else if (Input.bankLimitSWTemp == 3) {
-			Internal.bankLimit.setValue(15);
-		} else if (Input.bankLimitSWTemp == 4) {
-			Internal.bankLimit.setValue(20);
-		} else if (Input.bankLimitSWTemp == 5) {
-			Internal.bankLimit.setValue(25);
-		} else if (Input.bankLimitSWTemp == 6) {
-			Internal.bankLimit.setValue(30);
 		}
 		
 		# If in LNAV mode and route is not longer active, switch to HDG HLD
