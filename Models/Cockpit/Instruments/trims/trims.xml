@@ -157,4 +157,50 @@
         </axis>
     </animation>
 
+    <!-- lighting -->
+    <animation>
+        <type>material</type>
+        <object-name>Cylinder.383</object-name>
+        <object-name>Cylinder.052</object-name>
+        <object-name>Cylinder.401</object-name>
+        <object-name>Cylinder.402</object-name>
+        <object-name>Cube.1229</object-name>
+        <object-name>ailerontrim.needle</object-name>
+        <object-name>aileron_trim</object-name>
+        <object-name>Rudder.trim</object-name>
+        <object-name>ruddertrim.needle</object-name>
+        <condition>
+            <less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+        </condition>
+        <emission>
+            <red>0.6</red>
+            <green>0.4</green>
+            <blue>0.3</blue>
+            <factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>Cylinder.383</object-name>
+        <object-name>Cylinder.052</object-name>
+        <object-name>Cylinder.401</object-name>
+        <object-name>Cylinder.402</object-name>
+        <object-name>Cube.1229</object-name>
+        <object-name>ailerontrim.needle</object-name>
+        <object-name>aileron_trim</object-name>
+        <object-name>Rudder.trim</object-name>
+        <object-name>ruddertrim.needle</object-name>
+        <condition>
+            <not><property>sim/rendering/rembrandt/enabled</property></not>
+            <property>systems/electrical/outputs/cabin-dim</property>
+        </condition>
+        <emission>
+          <red>0.8</red>
+          <green>0.8</green>
+          <blue>0.8</blue>
+          <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+        </emission>
+    </animation>
+
 </PropertyList>
