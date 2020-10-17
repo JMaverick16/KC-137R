@@ -320,6 +320,7 @@
 			<autothrottle-min>0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
 			<custom-fma>0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented --> 
 			<disable-final>1</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
+			<hdg-hld-separate>0</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
 			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 			<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
 			<retard-ft>30</retard-ft> <!-- Enable Thrust Retard -->
