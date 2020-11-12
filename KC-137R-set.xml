@@ -35,10 +35,6 @@
 	<canvas-popup-enable type="bool">true</canvas-popup-enable>
   </instrument-options>
 
-  <damage>
-    <enable type="bool">false</enable>
-  </damage>
-	
   <remote>
    <pilot-callsign type="string"/>
   </remote>
@@ -81,12 +77,19 @@
                     </binding>
 				</item>
 				<item>
-                    <label>Toggle damage</label>
+					<label>Toggle damage</label>
 					<binding>
 						<command>nasal</command>
-                        <script>damage.toggleDamage();</script>
+						<script>b707.toggleDamage();</script>
 					</binding>
-                </item>
+				</item>
+				<item>
+					<label>Combat event log</label>
+					<binding>
+						<command>dialog-show</command>
+						<dialog-name>flightlog</dialog-name>
+					</binding>
+				</item>
 				<item>
 					<label>--- Equipment ---</label>
 					<enabled>false</enabled>
@@ -408,9 +411,13 @@ no. D6-3071-00
 	    <dual_control>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/pilot-dual-control.nas</file>
 	    </dual_control>
-		
+
+		<notifications>
+			<file>Aircraft/KC-137R/Nasal/ArmamentNotification.nas</file>
+			<file>Aircraft/KC-137R/Nasal/GeoBridgedTransmitter.nas</file>
+		</notifications>
 		<damage>
-		  <file>Aircraft/KC-137R/Nasal/damage.nas</file>
+			<file>Aircraft/KC-137R/Nasal/damage.nas</file>
 		</damage>
 
 		<efb>
