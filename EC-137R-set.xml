@@ -371,7 +371,7 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/electrical.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-707.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-agl-radar.nas</file>
-			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
+			<file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-wiper.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mk-ci-tacan.nas</file>
 			<file>Aircraft/KC-137R/Nasal/doors.nas</file>
@@ -395,7 +395,7 @@ no. D6-3071-00
 		</itaf> 
 		
 		<m877>
-			<file>Aircraft/Instruments-3d/clock/m877/M877.nas</file>
+			<file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
 		</m877>
 -
 	    <dual_control_tools>
