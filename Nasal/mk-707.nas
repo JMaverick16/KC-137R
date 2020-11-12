@@ -1262,6 +1262,7 @@ var loop_flare = func {
             setprop("ai/submodels/submodel[0]/flare-release", TRUE);
             setprop("rotors/main/blade[3]/flap-deg", flareStart);
             setprop("rotors/main/blade[3]/position-deg", flareStart);
+            damage.flare_released();
         } else {
             # play the sound for out of flares
             setprop("ai/submodels/submodel[0]/flare-release-out-snd", TRUE);
@@ -1280,7 +1281,21 @@ var loop_flare = func {
         setprop("ai/submodels/submodel[0]/flare-release", FALSE);
         flareCount = -1;
     }
-    }
+}
+
+# Damage toggle
+var toggleDamage = func {
+  if (!getprop("fdm/jsbsim/gear/unit[0]/WOW")) {
+    gui.popupTip("Damage can only be toggled when on the ground");
+    return;
+  }
+  setprop("payload/armament/msg", !getprop("payload/armament/msg"));
+  if (getprop("/payload/armament/msg")) {
+    gui.popupTip("Damage is ON");
+  } else {
+    gui.popupTip("Damage is OFF");
+  }
+}
 
 # only for Tanker but don't worry if its no Tanker aircraft
 var toggleProbeLeft = func(){

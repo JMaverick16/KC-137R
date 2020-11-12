@@ -538,6 +538,15 @@
 			<min-lb type="double">  0.0</min-lb>
 			<max-lb type="double"> 10000.0</max-lb>
 		</weight>
+		<armament>
+			<msg type="bool">false</msg>
+			<models type="string">Aircraft/KC-137R/Models/Armament/</models>
+			<MLW-bearing type="double">0</MLW-bearing>
+			<MLW-count type="int">0</MLW-count>
+			<MLW-launcher type="string"></MLW-launcher>
+			<MAW-bearing type="double">0</MAW-bearing>
+			<MAW-active type="bool">false</MAW-active>
+		</armament>
 	</payload>
 	
 	<instrumentation>	
