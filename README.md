@@ -29,7 +29,8 @@ AUTHORS:
 * D-ECHO: First RC-137R 3D version.
 * chad3006: Instrument textures for Block 45 update.
 * Jabberwocky (JWOCKY): Technical help and suggestions.
-* Garry Brown (N-SCOT): C-137R HD livery package.
+* Gary Brown (N-SCOT): C-137R HD livery package.
+* Colin Geniet: Emesary and damage compatibility.
 * Some other people helped in the project with minor contributions.
 
 The original 707 work was done by Innis Cunningham and then Mark Kraus from the Lake of Constance Hangar.
