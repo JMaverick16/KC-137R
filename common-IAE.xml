@@ -14,7 +14,7 @@
   <flight-model>jsb</flight-model>
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
-  <minimum-fg-version>2018.2</minimum-fg-version>
+  <minimum-fg-version>2020.3</minimum-fg-version>
   <aircraft-data>
         <path>/instrumentation/operating-time/total</path>
         <path>/instrumentation/transponder/inputs/digit[0]</path>
