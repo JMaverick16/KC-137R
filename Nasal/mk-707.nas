@@ -1246,42 +1246,44 @@ var flareStart = -1;
 var loop_flare = func {
     # Flare/chaff release
     if (getprop("ai/submodels/submodel[0]/flare-release-snd") == nil) {
-        setprop("ai/submodels/submodel[0]/flare-release-snd", FALSE);
-        setprop("ai/submodels/submodel[0]/flare-release-out-snd", FALSE);
+        setprop("ai/submodels/submodel[0]/flare-release-snd", 0);
+        setprop("ai/submodels/submodel[0]/flare-release-out-snd", 0);
     }
     var flareOn = getprop("ai/submodels/submodel[0]/flare-release-cmd");
-    if (flareOn == TRUE and getprop("ai/submodels/submodel[0]/flare-release") == FALSE
-            and getprop("ai/submodels/submodel[0]/flare-release-out-snd") == FALSE
-            and getprop("ai/submodels/submodel[0]/flare-release-snd") == FALSE) {
+    if (flareOn == 1 and getprop("ai/submodels/submodel[0]/flare-release") == 0
+            and getprop("ai/submodels/submodel[0]/flare-release-out-snd") == 0
+            and getprop("ai/submodels/submodel[0]/flare-release-snd") == 0) {
         flareCount = getprop("ai/submodels/submodel[0]/count");
         flareStart = getprop("sim/time/elapsed-sec");
-        setprop("ai/submodels/submodel[0]/flare-release-cmd", FALSE);
+        setprop("ai/submodels/submodel[0]/flare-release-cmd", 0);
         if (flareCount > 0) {
             # release a flare
-            setprop("ai/submodels/submodel[0]/flare-release-snd", TRUE);
-            setprop("ai/submodels/submodel[0]/flare-release", TRUE);
+            setprop("ai/submodels/submodel[0]/flare-release-snd", 1);
+            setprop("ai/submodels/submodel[0]/flare-release", 1);
             setprop("rotors/main/blade[3]/flap-deg", flareStart);
             setprop("rotors/main/blade[3]/position-deg", flareStart);
             damage.flare_released();
         } else {
             # play the sound for out of flares
-            setprop("ai/submodels/submodel[0]/flare-release-out-snd", TRUE);
+            setprop("ai/submodels/submodel[0]/flare-release-out-snd", 1);
         }
     }
-    if (getprop("ai/submodels/submodel[0]/flare-release-snd") == TRUE and (flareStart + 1) < getprop("sim/time/elapsed-sec")) {
-        setprop("ai/submodels/submodel[0]/flare-release-snd", FALSE);
+    if (getprop("ai/submodels/submodel[0]/flare-release-snd") == 1 and (flareStart + 1) < getprop("sim/time/elapsed-sec")) {
+        setprop("ai/submodels/submodel[0]/flare-release-snd", 0);
         setprop("rotors/main/blade[3]/flap-deg", 0);
         setprop("rotors/main/blade[3]/position-deg", 0);#MP interpolates between numbers, so nil is better than 0.
     }
-    if (getprop("ai/submodels/submodel[0]/flare-release-out-snd") == TRUE and (flareStart + 1) < getprop("sim/time/elapsed-sec")) {
-        setprop("ai/submodels/submodel[0]/flare-release-out-snd", FALSE);
+    if (getprop("ai/submodels/submodel[0]/flare-release-out-snd") == 1 and (flareStart + 1) < getprop("sim/time/elapsed-sec")) {
+        setprop("ai/submodels/submodel[0]/flare-release-out-snd", 0);
     }
     if (flareCount > getprop("ai/submodels/submodel[0]/count")) {
         # A flare was released in last loop, we stop releasing flares, so user have to press button again to release new.
-        setprop("ai/submodels/submodel[0]/flare-release", FALSE);
+        setprop("ai/submodels/submodel[0]/flare-release", 0);
         flareCount = -1;
     }
 }
+var flaretimer = maketimer(0.1, loop_flare);
+flaretimer.start();
 
 # Damage toggle
 var toggleDamage = func {

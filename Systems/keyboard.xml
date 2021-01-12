@@ -119,19 +119,13 @@
 </key>
 	<key n="102">
 		<name>f</name>
-		<desc>Release Flare / Chaff</desc>
+		<desc>Release Flare/Chaff</desc>
+    <repeatable>true</repeatable>
 		<binding>
 			<command>property-assign</command>
 			<property>ai/submodels/submodel[0]/flare-release-cmd</property>
-			<value>true</value>
+			<value>1</value>
 		</binding>
-		<mod-up>
-			<binding>
-				<command>property-assign</command>
-				<property>ai/submodels/submodel[0]/flare-release-cmd</property>
-				<value>false</value>
-			</binding>
-		</mod-up>
 	</key>
 
 </PropertyList>
