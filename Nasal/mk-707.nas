@@ -1249,13 +1249,13 @@ var loop_flare = func {
         setprop("ai/submodels/submodel[0]/flare-release-snd", FALSE);
         setprop("ai/submodels/submodel[0]/flare-release-out-snd", FALSE);
     }
-    var flareOn = getprop("ai/submodels/submodel[0]/flare-release");
+    var flareOn = getprop("ai/submodels/submodel[0]/flare-release-cmd");
     if (flareOn == TRUE and getprop("ai/submodels/submodel[0]/flare-release") == FALSE
             and getprop("ai/submodels/submodel[0]/flare-release-out-snd") == FALSE
             and getprop("ai/submodels/submodel[0]/flare-release-snd") == FALSE) {
         flareCount = getprop("ai/submodels/submodel[0]/count");
         flareStart = getprop("sim/time/elapsed-sec");
-        setprop("ai/submodels/submodel[0]/flare-release", FALSE);
+        setprop("ai/submodels/submodel[0]/flare-release-cmd", FALSE);
         if (flareCount > 0) {
             # release a flare
             setprop("ai/submodels/submodel[0]/flare-release-snd", TRUE);

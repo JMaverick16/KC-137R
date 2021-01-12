@@ -122,13 +122,13 @@
 		<desc>Release Flare / Chaff</desc>
 		<binding>
 			<command>property-assign</command>
-			<property>ai/submodels/submodel[0]/flare-release</property>
+			<property>ai/submodels/submodel[0]/flare-release-cmd</property>
 			<value>true</value>
 		</binding>
 		<mod-up>
 			<binding>
 				<command>property-assign</command>
-				<property>ai/submodels/submodel[0]/flare-release</property>
+				<property>ai/submodels/submodel[0]/flare-release-cmd</property>
 				<value>false</value>
 			</binding>
 		</mod-up>
