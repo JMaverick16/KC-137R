@@ -9,7 +9,7 @@
 <PropertyList>
 
 	<path>../../Instruments/radar/mps.ac</path>
-	
+
 	<animation>
 		<type>material</type>
 		<object-name>mp</object-name>
@@ -52,6 +52,26 @@
 		<object-name>ai.017</object-name>
 		<object-name>ai.018</object-name>
 		<object-name>ai.019</object-name>
+		<object-name>swift</object-name>
+		<object-name>swift.001</object-name>
+		<object-name>swift.002</object-name>
+		<object-name>swift.003</object-name>
+		<object-name>swift.004</object-name>
+		<object-name>swift.005</object-name>
+		<object-name>swift.006</object-name>
+		<object-name>swift.007</object-name>
+		<object-name>swift.008</object-name>
+		<object-name>swift.009</object-name>
+		<object-name>swift.010</object-name>
+		<object-name>swift.011</object-name>
+		<object-name>swift.012</object-name>
+		<object-name>swift.013</object-name>
+		<object-name>swift.014</object-name>
+		<object-name>swift.015</object-name>
+		<object-name>swift.016</object-name>
+		<object-name>swift.017</object-name>
+		<object-name>swift.018</object-name>
+		<object-name>swift.019</object-name>
 		<object-name>ta</object-name>
 		<condition>
 			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
@@ -106,14 +126,35 @@
 		<object-name>ai.017</object-name>
 		<object-name>ai.018</object-name>
 		<object-name>ai.019</object-name>
+		<object-name>swift</object-name>
 		<object-name>ta</object-name>
+		<object-name>swift</object-name>
+		<object-name>swift.001</object-name>
+		<object-name>swift.002</object-name>
+		<object-name>swift.003</object-name>
+		<object-name>swift.004</object-name>
+		<object-name>swift.005</object-name>
+		<object-name>swift.006</object-name>
+		<object-name>swift.007</object-name>
+		<object-name>swift.008</object-name>
+		<object-name>swift.009</object-name>
+		<object-name>swift.010</object-name>
+		<object-name>swift.011</object-name>
+		<object-name>swift.012</object-name>
+		<object-name>swift.013</object-name>
+		<object-name>swift.014</object-name>
+		<object-name>swift.015</object-name>
+		<object-name>swift.016</object-name>
+		<object-name>swift.017</object-name>
+		<object-name>swift.018</object-name>
+		<object-name>swift.019</object-name>
 		<emission>
 			<red>0.5</red>
 			<green>0.5</green>
 			<blue>0.5</blue>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<type>noshadow</type>
 		<object-name>mp</object-name>
@@ -156,11 +197,31 @@
 		<object-name>ai.017</object-name>
 		<object-name>ai.018</object-name>
 		<object-name>ai.019</object-name>
+		<object-name>swift</object-name>
+		<object-name>swift.001</object-name>
+		<object-name>swift.002</object-name>
+		<object-name>swift.003</object-name>
+		<object-name>swift.004</object-name>
+		<object-name>swift.005</object-name>
+		<object-name>swift.006</object-name>
+		<object-name>swift.007</object-name>
+		<object-name>swift.008</object-name>
+		<object-name>swift.009</object-name>
+		<object-name>swift.010</object-name>
+		<object-name>swift.011</object-name>
+		<object-name>swift.012</object-name>
+		<object-name>swift.013</object-name>
+		<object-name>swift.014</object-name>
+		<object-name>swift.015</object-name>
+		<object-name>swift.016</object-name>
+		<object-name>swift.017</object-name>
+		<object-name>swift.018</object-name>
+		<object-name>swift.019</object-name>
 		<object-name>ta</object-name>
 	</animation>
 
 <!-- TCAS ANIMATIONS -->
-	
+
 	<!-- TANKER only in air refueling_demo -->
 
 	<!-- ta -->
@@ -179,14 +240,14 @@
 			<visible>true</visible>
 			<action>
 				<button>0</button>
-				<repeatable>false</repeatable>			
+				<repeatable>false</repeatable>
 				<binding>
 					<command>nasal</command>
 					<script>b707.show_ta_info(0)</script>
 				</binding>
 			</action>
 		</animation>
-	
+
 		<animation>
 			<type>translate</type>
 			<object-name>ta</object-name>
@@ -228,14 +289,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(0)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp</object-name>
@@ -258,7 +319,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- mp2 -->
 
 	<animation>
@@ -275,14 +336,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(1)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.001</object-name>
@@ -322,14 +383,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(2)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.002</object-name>
@@ -369,14 +430,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(3)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.003</object-name>
@@ -416,14 +477,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(4)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.004</object-name>
@@ -463,14 +524,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(5)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.005</object-name>
@@ -510,14 +571,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(6)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.006</object-name>
@@ -540,7 +601,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- mp8 -->
 
 	<animation>
@@ -557,14 +618,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(7)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.007</object-name>
@@ -587,7 +648,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- mp9 -->
 
 	<animation>
@@ -604,14 +665,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(8)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.008</object-name>
@@ -634,7 +695,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- mp10 -->
 
 	<animation>
@@ -651,14 +712,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(9)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.009</object-name>
@@ -681,7 +742,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- mp11 -->
 
 	<animation>
@@ -698,14 +759,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(10)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.010</object-name>
@@ -728,7 +789,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-		
+
 <!-- mp12 -->
 
 	<animation>
@@ -745,14 +806,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(11)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.011</object-name>
@@ -792,14 +853,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(12)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.012</object-name>
@@ -839,14 +900,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(13)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.013</object-name>
@@ -886,14 +947,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(14)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.014</object-name>
@@ -933,14 +994,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(15)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.015</object-name>
@@ -980,14 +1041,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(16)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.016</object-name>
@@ -1010,7 +1071,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- mp18 -->
 
 	<animation>
@@ -1027,14 +1088,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(17)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.017</object-name>
@@ -1057,7 +1118,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- mp19 -->
 
 	<animation>
@@ -1074,14 +1135,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(18)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.018</object-name>
@@ -1104,7 +1165,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- mp20 -->
 
 	<animation>
@@ -1121,14 +1182,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_mp_info(19)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>mp.019</object-name>
@@ -1150,9 +1211,9 @@
 			<y>0</y>
 			<z>1</z>
 		</axis>
-	</animation>	
+	</animation>
 
-	
+
 <!-- AI AIRCRAFT -->
 
 <!-- ai1 -->
@@ -1171,14 +1232,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(0)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai</object-name>
@@ -1201,7 +1262,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- ai2 -->
 
 	<animation>
@@ -1218,14 +1279,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(1)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.001</object-name>
@@ -1265,14 +1326,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(2)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.002</object-name>
@@ -1312,14 +1373,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(3)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.003</object-name>
@@ -1359,14 +1420,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(4)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.004</object-name>
@@ -1406,14 +1467,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(5)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.005</object-name>
@@ -1453,14 +1514,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(6)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.006</object-name>
@@ -1483,7 +1544,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- ai8 -->
 
 	<animation>
@@ -1500,14 +1561,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(7)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.007</object-name>
@@ -1530,7 +1591,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- ai9 -->
 
 	<animation>
@@ -1547,14 +1608,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(8)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.008</object-name>
@@ -1577,7 +1638,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- ai10 -->
 
 	<animation>
@@ -1594,14 +1655,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(9)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.009</object-name>
@@ -1624,7 +1685,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- ai11 -->
 
 	<animation>
@@ -1641,14 +1702,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(10)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.010</object-name>
@@ -1671,7 +1732,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-		
+
 <!-- ai12 -->
 
 	<animation>
@@ -1688,14 +1749,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(11)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.011</object-name>
@@ -1735,14 +1796,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(12)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.012</object-name>
@@ -1782,14 +1843,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(13)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.013</object-name>
@@ -1829,14 +1890,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(14)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.014</object-name>
@@ -1876,14 +1937,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(15)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.015</object-name>
@@ -1923,14 +1984,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(16)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.016</object-name>
@@ -1953,7 +2014,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- ai18 -->
 
 	<animation>
@@ -1970,14 +2031,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(17)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.017</object-name>
@@ -2000,7 +2061,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- ai19 -->
 
 	<animation>
@@ -2017,14 +2078,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(18)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.018</object-name>
@@ -2047,7 +2108,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 <!-- ai20 -->
 
 	<animation>
@@ -2064,14 +2125,14 @@
 		<visible>true</visible>
 		<action>
 			<button>0</button>
-			<repeatable>false</repeatable>			
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
 				<script>b707.show_ai_info(19)</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ai.019</object-name>
@@ -2093,6 +2154,768 @@
 			<y>0</y>
 			<z>1</z>
 		</axis>
-	</animation>	
-	
+	</animation>
+
+	<!--VATSIM AWACS-->
+
+	<!--Swift 1-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(0)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift</object-name>
+		<property>instrumentation/mptcas/swift[0]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift</object-name>
+		<property>instrumentation/mptcas/swift[0]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 2-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.001</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(1)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.001</object-name>
+		<property>instrumentation/mptcas/swift[1]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.001</object-name>
+		<property>instrumentation/mptcas/swift[1]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 3-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.002</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(2)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.002</object-name>
+		<property>instrumentation/mptcas/swift[2]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.002</object-name>
+		<property>instrumentation/mptcas/swift[2]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 4-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.003</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(3)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.003</object-name>
+		<property>instrumentation/mptcas/swift[3]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.003</object-name>
+		<property>instrumentation/mptcas/swift[3]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 5-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.004</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(4)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.004</object-name>
+		<property>instrumentation/mptcas/swift[4]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.004</object-name>
+		<property>instrumentation/mptcas/swift[4]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 6-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.005</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(5)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.005</object-name>
+		<property>instrumentation/mptcas/swift[5]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.005</object-name>
+		<property>instrumentation/mptcas/swift[5]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 7-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.006</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(6)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.006</object-name>
+		<property>instrumentation/mptcas/swift[6]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.006</object-name>
+		<property>instrumentation/mptcas/swift[6]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 8-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.007</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(7)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.007</object-name>
+		<property>instrumentation/mptcas/swift[7]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.007</object-name>
+		<property>instrumentation/mptcas/swift[7]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 9-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.008</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(8)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.008</object-name>
+		<property>instrumentation/mptcas/swift[8]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.008</object-name>
+		<property>instrumentation/mptcas/swift[8]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 10-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.009</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(9)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.009</object-name>
+		<property>instrumentation/mptcas/swift[9]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.009</object-name>
+		<property>instrumentation/mptcas/swift[9]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 11-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.010</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(10)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.010</object-name>
+		<property>instrumentation/mptcas/swift[10]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.010</object-name>
+		<property>instrumentation/mptcas/swift[10]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 12-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.011</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(11)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.011</object-name>
+		<property>instrumentation/mptcas/swift[11]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.011</object-name>
+		<property>instrumentation/mptcas/swift[11]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 13-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.012</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(12)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.012</object-name>
+		<property>instrumentation/mptcas/swift[12]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.012</object-name>
+		<property>instrumentation/mptcas/swift[12]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 14-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.013</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(13)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.013</object-name>
+		<property>instrumentation/mptcas/swift[13]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.013</object-name>
+		<property>instrumentation/mptcas/swift[13]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 15-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.014</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(14)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.014</object-name>
+		<property>instrumentation/mptcas/swift[14]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.014</object-name>
+		<property>instrumentation/mptcas/swift[14]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 16-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.015</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(15)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.015</object-name>
+		<property>instrumentation/mptcas/swift[15]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.015</object-name>
+		<property>instrumentation/mptcas/swift[15]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 17-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.016</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(16)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.016</object-name>
+		<property>instrumentation/mptcas/swift[16]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.016</object-name>
+		<property>instrumentation/mptcas/swift[16]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 18-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.017</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(17)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.017</object-name>
+		<property>instrumentation/mptcas/swift[17]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.017</object-name>
+		<property>instrumentation/mptcas/swift[17]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 19-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.018</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(18)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.018</object-name>
+		<property>instrumentation/mptcas/swift[18]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.018</object-name>
+		<property>instrumentation/mptcas/swift[18]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<!--Swift 20-->
+	<animation>
+		<type>pick</type>
+		<object-name>swift.019</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.show_swift_info(19)</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>swift.019</object-name>
+		<property>instrumentation/mptcas/swift[19]/dis-xa</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>swift.019</object-name>
+		<property>instrumentation/mptcas/swift[19]/dis-ya</property>
+		<factor>1</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
 </PropertyList>
