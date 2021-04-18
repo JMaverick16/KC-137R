@@ -42,26 +42,26 @@ var togglereverser = func {
 	rc1 = "/controls/engines/engine";
 	rc2 = "/controls/engines/engine[1]";
 	rc3 = "/controls/engines/engine[2]";
-	rc4 = "/controls/engines/engine[3]"; 
+	rc4 = "/controls/engines/engine[3]";
 
 	r5 = "/sim/input/selected";
 
-	rv1 = "/engines/engine/reverser-pos-norm"; 
+	rv1 = "/engines/engine/reverser-pos-norm";
 	rv2 = "/engines/engine[1]/reverser-pos-norm";
-	rv3 = "/engines/engine[2]/reverser-pos-norm"; 
-	rv4 = "/engines/engine[3]/reverser-pos-norm"; 
+	rv3 = "/engines/engine[2]/reverser-pos-norm";
+	rv4 = "/engines/engine[3]/reverser-pos-norm";
 
 	val1 = getprop(rv1) or 0;
-	
+
 	t1 = getprop("/controls/engines/engine[0]/throttle") or 0;
 
-	if ((val1 == 0 or val1 == nil) and t1 < 0.25) {
-		interpolate(rv1, 1.0, 1.4); 
+	if (val1 == 0 or val1 == nil) {
+		interpolate(rv1, 1.0, 1.4);
 		interpolate(rv2, 1.0, 1.4);
-		interpolate(rv3, 1.0, 1.4); 
-		interpolate(rv4, 1.0, 1.4);   
+		interpolate(rv3, 1.0, 1.4);
+		interpolate(rv4, 1.0, 1.4);
 		setprop(r1,"reverser-angle-rad",2);
-		setprop(r2,"reverser-angle-rad",2);   
+		setprop(r2,"reverser-angle-rad",2);
 		setprop(r3,"reverser-angle-rad",2);
 		setprop(r4,"reverser-angle-rad",2);
 		setprop(rc1,"reverser", "true");
@@ -72,14 +72,18 @@ var togglereverser = func {
 		setprop(r5,"engine[1]", "true");
 		setprop(r5,"engine[2]", "true");
 		setprop(r5,"engine[3]", "true");
+		setprop("controls/engines/engine[0]/throttle", 0.75);
+		setprop("controls/engines/engine[1]/throttle", 0.75);
+		setprop("controls/engines/engine[2]/throttle", 0.75);
+		setprop("controls/engines/engine[3]/throttle", 0.75);
 	} else {
-		if (val1 == 1.0 and t1 == 0){
+		if (val1 == 1.0){
 		interpolate(rv1, 0.0, 1.4);
-		interpolate(rv2, 0.0, 1.4); 
+		interpolate(rv2, 0.0, 1.4);
 		interpolate(rv3, 0.0, 1.4);
-		interpolate(rv4, 0.0, 1.4);  
+		interpolate(rv4, 0.0, 1.4);
 		setprop(r1,"reverser-angle-rad",0);
-		setprop(r2,"reverser-angle-rad",0); 
+		setprop(r2,"reverser-angle-rad",0);
 		setprop(r3,"reverser-angle-rad",0);
 		setprop(r4,"reverser-angle-rad",0);
 		setprop(rc1,"reverser",0);
@@ -90,6 +94,10 @@ var togglereverser = func {
 		setprop(r5,"engine[1]", "true");
 		setprop(r5,"engine[2]", "true");
 		setprop(r5,"engine[3]", "true");
+		setprop("controls/engines/engine[0]/throttle", 0);
+		setprop("controls/engines/engine[1]/throttle", 0);
+		setprop("controls/engines/engine[2]/throttle", 0);
+		setprop("controls/engines/engine[3]/throttle", 0);
 		}
 	}
 }
@@ -97,27 +105,27 @@ var togglereverser = func {
 var toggleLandingLights = func {
 
   if(!getprop("/controls/lighting/switches/landing-light")){
-  	setprop("/controls/lighting/switches/landing-light",1); 
+  	setprop("/controls/lighting/switches/landing-light",1);
   }else{
-		setprop("/controls/lighting/switches/landing-light",0);  
+		setprop("/controls/lighting/switches/landing-light",0);
   }
 
   if(!getprop("/controls/lighting/switches/landing-light[1]")){
-  	setprop("/controls/lighting/switches/landing-light[1]",1); 
+  	setprop("/controls/lighting/switches/landing-light[1]",1);
   }else{
-		setprop("/controls/lighting/switches/landing-light[1]",0);  
+		setprop("/controls/lighting/switches/landing-light[1]",0);
   }
 
   if(!getprop("/controls/lighting/switches/landing-light[2]")){
-  	setprop("/controls/lighting/switches/landing-light[2]",1); 
+  	setprop("/controls/lighting/switches/landing-light[2]",1);
   }else{
-		setprop("/controls/lighting/switches/landing-light[2]",0);  
+		setprop("/controls/lighting/switches/landing-light[2]",0);
   }
-  
+
   if(!getprop("/controls/lighting/switches/landing-light[3]")){
-  	setprop("/controls/lighting/switches/landing-light[3]",1); 
+  	setprop("/controls/lighting/switches/landing-light[3]",1);
   }else{
-		setprop("/controls/lighting/switches/landing-light[3]",0);  
+		setprop("/controls/lighting/switches/landing-light[3]",0);
   }
 }
 
@@ -155,12 +163,12 @@ var show_alti = func {
 	var alt_ft = getprop("/instrumentation/aglradar/alt-ft");
 	if(  alt_ft == nil ) alt_ft = 0.0;
 	var alt_on = getprop("/instrumentation/aglradar/power-btn");
-	if(  alt_on == nil ) alt_on = 0;	
+	if(  alt_on == nil ) alt_on = 0;
   var s_alti = getprop("/instrumentation/altimeter/indicated-altitude-ft") or 0;
   if(alt_on){
   	help_win.write(sprintf("With %.2f inhg the actual altitude is: %.0f ft. AGL is %.0f ft", press_inhg, s_alti, alt_ft) );
   }else{
-   	help_win.write(sprintf("With %.2f inhg the actual altitude is: %.0f ft. Groundradar is off.", press_inhg, s_alti, alt_ft) ); 
+   	help_win.write(sprintf("With %.2f inhg the actual altitude is: %.0f ft. Groundradar is off.", press_inhg, s_alti, alt_ft) );
   }
 }
 
@@ -177,12 +185,12 @@ var show_lat_lon = func {
 	dgc1 = dgc1*f1;
 	dgc2 = dgc2*f2;
 	mv = int(mv);
-	help_win.write(sprintf("lat: "~lat~" lon: "~lon~" / Magnetic variation is "~mv~" / Compass Controller 1 lat: "~dgc1~" / Compass Controller 2 lat: "~dgc2)); 
+	help_win.write(sprintf("lat: "~lat~" lon: "~lon~" / Magnetic variation is "~mv~" / Compass Controller 1 lat: "~dgc1~" / Compass Controller 2 lat: "~dgc2));
 }
 
 var show_tat = func {
 	var tat = getprop("/b707/anti-ice/total-air-temperature");
-	help_win.write(sprintf("Total-Air-Temperature: %.2f Celsius", tat)); 
+	help_win.write(sprintf("Total-Air-Temperature: %.2f Celsius", tat));
 }
 
 var show_dme = func {
@@ -194,7 +202,7 @@ var show_dme = func {
   var decToString = func(x){
     var d = int(math.mod((x*100),100));
 
-    return (int(x)~"."~d);  
+    return (int(x)~"."~d);
   }
 
   if (dme == 2){
@@ -203,7 +211,7 @@ var show_dme = func {
     var frex = getprop("/instrumentation/tacan/frequencies/selected-channel[4]");
     help_win.write(sprintf("Distance to TACAN \""~freq ~ frex~"\" %.2f nm", x) );
   }
-  
+
   if (dme == 1){
     var x = decToString(dme_miles2);
     var id = getprop("/instrumentation/nav[1]/nav-id") or 0.0;
@@ -212,14 +220,14 @@ var show_dme = func {
 
   if (!dme){
     var x = decToString(dme_miles1);
-    var id = getprop("/instrumentation/nav/nav-id") or 0.0;             
+    var id = getprop("/instrumentation/nav/nav-id") or 0.0;
     help_win.write(sprintf("Distance to VOR-DME \""~id~"\" %.2f nm", x) );
   }
 }
 
 var show_tacan = func {
 	var tacan_freq = getprop("/instrumentation/tacan/display/channel");
-	help_win.write("Tacan: "~tacan_freq); 
+	help_win.write("Tacan: "~tacan_freq);
 }
 
 var show_tacan_dme = func {
@@ -230,7 +238,7 @@ var show_tacan_dme = func {
     var decToString = func(x){
       var d = int(math.mod((x*100),100));
 
-      return (int(x)~"."~d);  
+      return (int(x)~"."~d);
     }
 
       var x = decToString(tacan_miles);
@@ -254,27 +262,27 @@ var show_fuel_consumption = func {
 	var kg = (!engineType) ? used * 0.45359237 : ((used * 0.45359237) - (used * 0.45359237 * 0.08)); # JT4 engines minus 8 percent
 	var totalkg = fueltotal * 0.45359237;
 	var rt = 0;
-	
+
 	# how long we can fly
 	if(used){
 		var rt = fueltotal / used * 3600;
 	  var hours = int(rt/3600);
 		var minutes = int(math.mod(rt / 60, 60));
 	}
-	
+
 	if(kg > 0){
 		help_win.write(sprintf("Total Fuel: %.2fkg - fuel consumption/hour: %.2fkg expected flighttime %3dh %02dmin", totalkg, kg, hours, minutes));
 	}else{
 		help_win.write(sprintf("NO FUEL CONSUMPTION - Total fuel: %.2fkg", fueltotal));
 	}
-} 
+}
 
 # real cabin altitude in pressurisatiion cabin alt instrument
 var show_cabin_alt = func {
 	var calt = getprop("/b707/pressurization/cabin-altitude") or 0;
-	help_win.write(sprintf("Cabin Altitude: %.0fft", calt)); 
+	help_win.write(sprintf("Cabin Altitude: %.0fft", calt));
 }
- 
+
 # show the mp or ai aircraft information on the radar
 
 var show_mp_info = func (i){
@@ -284,8 +292,8 @@ var show_mp_info = func (i){
 	var dis = getprop("instrumentation/mptcas/mp[" ~ i ~ "]/distance-nm") or 0;
 	var code = getprop("instrumentation/mptcas/mp[" ~ i ~ "]/id-code") or "----";
 
-  help_win.write(sprintf(cs~" / %.0fft / %.0fkts / %.2fnm / Transponder-Code: "~code~" ", al, as, dis) ); 
-} 
+  help_win.write(sprintf(cs~" / %.0fft / %.0fkts / %.2fnm / Transponder-Code: "~code~" ", al, as, dis) );
+}
 
 var show_ai_info = func (i){
 	var cs  = getprop("instrumentation/mptcas/ai[" ~ i ~ "]/callsign") or "";
@@ -305,6 +313,15 @@ var show_ta_info = func (i){
   help_win.write(sprintf(cs~" / %.0fft / %.0fkts / %.2fnm", al, as, dis) );
 }
 
+var show_swift_info = func (i){
+	var cs  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/callsign") or "";
+	var al  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/altitude-ft") or 0;
+	var as  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/tas-kt") or 0;
+	var dis = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/distance-nm") or 0;
+
+  help_win.write(sprintf(cs~" / %.0fft / %.0fkts / %.2fnm", al, as, dis) );
+}
+
 var show_mp_awacs_info = func (i){
 	var cs  = getprop("instrumentation/mptcas/mp[" ~ i ~ "]/callsign") or "";
 	var al  = getprop("instrumentation/mptcas/mp[" ~ i ~ "]/altitude-ft") or 0;
@@ -314,8 +331,8 @@ var show_mp_awacs_info = func (i){
 	var ct = getprop("instrumentation/mptcas/mp[" ~ i ~ "]/course-to-mp") or 0;
 	var code = getprop("instrumentation/mptcas/mp[" ~ i ~ "]/id-code") or "----";
 
-  help_win.write(sprintf(cs~" / %.0fhdg / course to %.0fdeg /  %.0fft / %.0fkts / %.2fnm / Transponder-Code: "~code~" ", bg, ct, al, as, dis) ); 
-} 
+  help_win.write(sprintf(cs~" / %.0fhdg / course to %.0fdeg /  %.0fft / %.0fkts / %.2fnm / Transponder-Code: "~code~" ", bg, ct, al, as, dis) );
+}
 
 var show_ai_awacs_info = func (i){
 	var cs  = getprop("instrumentation/mptcas/ai[" ~ i ~ "]/callsign") or "";
@@ -339,6 +356,17 @@ var show_ta_awacs_info = func (i){
   help_win.write(sprintf(cs~" / %.0fhdg / course to %.0fdeg / %.0fft / %.0fkts / %.2fnm", bg, ct, al, as, dis) );
 }
 
+var show_swift_awacs_info = func (i){
+	var cs  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/callsign") or "";
+	var al  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/altitude-ft") or 0;
+	var as  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/tas-kt") or 0;
+	var bg = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/bearing-deg") or 0;
+	var ct = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/course-to-mp") or 0;
+	var dis = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/distance-nm") or 0;
+
+  help_win.write(sprintf(cs~" / %.0fhdg / course to %.0fdeg / %.0fft / %.0fkts / %.2fnm", bg, ct, al, as, dis) );
+}
+
 #################################### helper for the standby ADI ############################################
 var gauge_erec = func {
   setprop("/instrumentation/vertical-speed-indicator/serviceable",0);
@@ -346,7 +374,7 @@ var gauge_erec = func {
   var tmp_vs_target_max = 4000;
   var tmp_vs_target_min = -3000;
   interpolate("/instrumentation/adi/knob-pos",1,0.2);
-  interpolate("/instrumentation/vertical-speed-indicator/indicated-speed-fpm",tmp_vs_target_max,0.3); 
+  interpolate("/instrumentation/vertical-speed-indicator/indicated-speed-fpm",tmp_vs_target_max,0.3);
 	settimer( func{ interpolate("/instrumentation/vertical-speed-indicator/indicated-speed-fpm",tmp_vs_target_min,0.7); }, 0.3);
 	settimer( func{ interpolate("/instrumentation/vertical-speed-indicator/indicated-speed-fpm",tmp_vs,0.5); }, 1.0);
 	settimer( func{   setprop("/instrumentation/vertical-speed-indicator/serviceable", 1);
@@ -362,17 +390,17 @@ var operating_time_counter = func {
   var old_total   	= props.globals.getNode("/instrumentation/operating-time/total");
   var old_total_h   = props.globals.getNode("/instrumentation/operating-time/total-h");
   var old_total_m   = props.globals.getNode("/instrumentation/operating-time/total-m");
-  
+
   var new_total   = old_total.getValue() + (act_time.getValue() - start_time.getValue());
-  
+
   var hours = new_total / 3600;
   var minutes = int(math.mod(new_total / 60, 60));
-  
+
   start_time.setValue(act_time.getValue());
   old_total.setValue(new_total);
   old_total_h.setValue(hours);
   old_total_m.setValue(minutes);
-  
+
 	settimer( operating_time_counter, 60);
 }
 
@@ -392,7 +420,7 @@ var fullSpeedbrakes = func {
 props.globals.initNode("/instrumentation/compass-control[0]/justify",0,"BOOL");
 props.globals.initNode("/instrumentation/compass-control[1]/justify",0,"BOOL");
 
-setlistener( "/instrumentation/compass-control[0]/mag", func(state){ 
+setlistener( "/instrumentation/compass-control[0]/mag", func(state){
 	var value = state.getValue();
 	var nIndicatedHeading = props.globals.initNode("b707/hsi[0]/indicated-heading-deg",0.0,"DOUBLE");
 	nIndicatedHeading.unalias();
@@ -403,7 +431,7 @@ setlistener( "/instrumentation/compass-control[0]/mag", func(state){
 	}
 },1,0);
 
-setlistener( "/instrumentation/compass-control[1]/mag", func(state){ 
+setlistener( "/instrumentation/compass-control[1]/mag", func(state){
 	var value = state.getValue();
 	var nIndicatedHeading = props.globals.initNode("b707/hsi[1]/indicated-heading-deg",0.0,"DOUBLE");
 	nIndicatedHeading.unalias();
@@ -415,7 +443,7 @@ setlistener( "/instrumentation/compass-control[1]/mag", func(state){
 },1,0);
 
 
-setlistener( "/instrumentation/compass-control[0]/lat-turn", func(state){ 
+setlistener( "/instrumentation/compass-control[0]/lat-turn", func(state){
 	var latCorr = state.getValue() or 0;
 	var latPos = getprop("/position/latitude-deg") or 0;
 	var magVar = getprop("/environment/magnetic-variation-deg") or 0;
@@ -433,7 +461,7 @@ setlistener( "/instrumentation/compass-control[0]/lat-turn", func(state){
 	show_lat_lon();
 },1,0);
 
-setlistener( "/instrumentation/compass-control[1]/lat-turn", func(state){ 
+setlistener( "/instrumentation/compass-control[1]/lat-turn", func(state){
 	var latCorr = state.getValue() or 0;
 	var latPos = getprop("/position/latitude-deg") or 0;
 	var magVar = getprop("/environment/magnetic-variation-deg") or 0;
@@ -451,12 +479,12 @@ setlistener( "/instrumentation/compass-control[1]/lat-turn", func(state){
 	show_lat_lon();
 },1,0);
 
-setlistener( "/instrumentation/compass-control[0]/lat-knob", func(state){ 
+setlistener( "/instrumentation/compass-control[0]/lat-knob", func(state){
 	var nS = state.getBoolValue() or 0;
 	var latPos = getprop("/position/latitude-deg") or 0;
 	var magVar = getprop("/environment/magnetic-variation-deg") or 0;
 	var latCorr = getprop("/instrumentation/compass-control[0]/lat-turn") or 0;
-	var f = (nS) ? -1 : 1;	
+	var f = (nS) ? -1 : 1;
 	var latJustify = latPos - latCorr * f;
 	if (latJustify >= -1 and latJustify <= 1) {
 		setprop("instrumentation/compass-control[0]/justify",1);
@@ -468,12 +496,12 @@ setlistener( "/instrumentation/compass-control[0]/lat-knob", func(state){
 	show_lat_lon();
 },1,0);
 
-setlistener( "/instrumentation/compass-control[1]/lat-knob", func(state){ 
+setlistener( "/instrumentation/compass-control[1]/lat-knob", func(state){
 	var nS = state.getBoolValue() or 0;
 	var latPos = getprop("/position/latitude-deg") or 0;
 	var magVar = getprop("/environment/magnetic-variation-deg") or 0;
 	var latCorr = getprop("/instrumentation/compass-control[1]/lat-turn") or 0;
-	var f = (nS) ? -1 : 1;	
+	var f = (nS) ? -1 : 1;
 	var latJustify = latPos - latCorr * f;
 	if (latJustify >= -1 and latJustify <= 1) {
 		setprop("instrumentation/compass-control[1]/justify",1);
@@ -504,7 +532,7 @@ var my_mini_rand = func(min,max) {
 			while( r < min or r > max ){
 					r = rand();
 			}
-			
+
 		  return r;
 }
 
@@ -515,9 +543,9 @@ var eng_vib = func {
 	var evib3 = getprop("/engines/engine[2]/n2") or 0;
 	var evib4 = getprop("/engines/engine[3]/n2") or 0;
 	var dc = getprop("/b707/ess-bus") or 0;
-	var vibte = getprop("/b707/vibrations/vib-test") or 0;	
+	var vibte = getprop("/b707/vibrations/vib-test") or 0;
 	var state = getprop("/b707/vibrations/vib-sel") or 0;
-	
+
 	var a1 = 0;
 	var a2 = 0;
 	var a3 = 0;
@@ -533,7 +561,7 @@ var eng_vib = func {
 		interpolate("/b707/vibrations/vib[2]", a3, 2.5);
 		interpolate("/b707/vibrations/vib[3]", a4, 3.5);
 		settimer( eng_vib, 2.5);
-		
+
 	}elsif(state == 2 and !vibte) {
 		if(evib1 > 10 and dc > 20) a1 = my_mini_rand(0.25, 0.35);
 		if(evib2 > 10 and dc > 20) a2 = my_mini_rand(0.25, 0.35);
@@ -544,7 +572,7 @@ var eng_vib = func {
 		interpolate("/b707/vibrations/vib[2]", a3, 2.5);
 		interpolate("/b707/vibrations/vib[3]", a4, 2.5);
 		settimer( eng_vib, 2.5);
-		
+
 	}else{
 		interpolate("/b707/vibrations/vib[0]", a1, 0.5);
 		interpolate("/b707/vibrations/vib[1]", a2, 0.5);
@@ -582,99 +610,99 @@ var eb = props.globals.getNode("/b707/ess-bus", 1);
 
 setlistener("/b707/hydraulic/hyd-fluid-shutoff[0]", func{
 	if(shut1.getBoolValue() and eb.getValue() > 23){
-		 if (sys.getValue() <= 1 and pump1.getBoolValue()){ 
+		 if (sys.getValue() <= 1 and pump1.getBoolValue()){
 		 		interpolate("/b707/hydraulic/system", 2210, 12); # <=1 interpolation did not started before
 		 		var q = (HydQuant.getValue() >= 5400) ? 4400 : HydQuant.getValue() - 1000;
 		 		interpolate("/b707/hydraulic/quantity", q, 12);
 		 }
 	}else{
 		 pump1.setBoolValue(0);
-		 if (!shut2.getBoolValue() or !pump2.getBoolValue(0) or eb.getValue() < 23) { 
+		 if (!shut2.getBoolValue() or !pump2.getBoolValue(0) or eb.getValue() < 23) {
 		 		interpolate("/b707/hydraulic/system", 0, 7);
 		 		var q = (HydQuant.getValue() >= 4400) ? 5400 : HydQuant.getValue() + 1000;
 		 		interpolate("/b707/hydraulic/quantity", q, 7);
-		 }	
+		 }
 	}
 },0,0);
 
 setlistener("/b707/hydraulic/hyd-fluid-shutoff[1]", func{
 	if(shut2.getBoolValue() and eb.getValue() > 23){
-		 if (sys.getValue() <= 1 and pump2.getBoolValue()){ 
+		 if (sys.getValue() <= 1 and pump2.getBoolValue()){
 		 		interpolate("/b707/hydraulic/system", 2210, 12); # <=1 interpolation did not started before
 		 		var q = (HydQuant.getValue() >= 5400) ? 4400 : HydQuant.getValue() - 1000;
 		 		interpolate("/b707/hydraulic/quantity", q, 12);
 		 }
 	}else{
 		 pump2.setBoolValue(0);
-		 if (!shut1.getBoolValue() or !pump1.getBoolValue(0) or eb.getValue() < 23) { 
+		 if (!shut1.getBoolValue() or !pump1.getBoolValue(0) or eb.getValue() < 23) {
 		 		interpolate("/b707/hydraulic/system", 0, 7);
 		 		var q = (HydQuant.getValue() >= 4400) ? 5400 : HydQuant.getValue() + 1000;
 		 		interpolate("/b707/hydraulic/quantity", q, 7);
-		 }	
+		 }
 	}
 },0,0);
 
 setlistener("/b707/hydraulic/hyd-fluid-pump[0]", func{
 	if(pump1.getBoolValue() and eb.getValue() > 23){
-		 if (sys.getValue() <= 1 and shut1.getBoolValue()){ 
+		 if (sys.getValue() <= 1 and shut1.getBoolValue()){
 		 		interpolate("/b707/hydraulic/system", 2210, 12); # <=1 interpolation did not started before
 		 		var q = (HydQuant.getValue() >= 5400) ? 4400 : HydQuant.getValue() - 1000;
 		 		interpolate("/b707/hydraulic/quantity", q, 12);
 		 }
 	}else{
-		 if (!shut2.getBoolValue() or !pump2.getBoolValue()) { 
+		 if (!shut2.getBoolValue() or !pump2.getBoolValue()) {
 		 		interpolate("/b707/hydraulic/system", 0, 7);
 		 		var q = (HydQuant.getValue() >= 4400) ? 5400 : HydQuant.getValue() + 1000;
 		 		interpolate("/b707/hydraulic/quantity", q, 7);
-		 }	
+		 }
 	}
 },0,0);
 
 setlistener("/b707/hydraulic/hyd-fluid-pump[1]", func{
 	if(pump2.getBoolValue() and eb.getValue() > 23){
-		 if (sys.getValue() <= 1 and shut2.getBoolValue()) { 
+		 if (sys.getValue() <= 1 and shut2.getBoolValue()) {
 		 		interpolate("/b707/hydraulic/system", 2210, 12); # <=1 interpolation did not started before
 		 		var q = (HydQuant.getValue() >= 5400) ? 4400 : HydQuant.getValue() - 1000;
 		 		interpolate("/b707/hydraulic/quantity", q, 12);
 		 }
 	}else{
-		 if (!shut1.getBoolValue() or !pump1.getBoolValue()) { 
+		 if (!shut1.getBoolValue() or !pump1.getBoolValue()) {
 		 		interpolate("/b707/hydraulic/system", 0, 7);
 		 		var q = (HydQuant.getValue() >= 4400) ? 5400 : HydQuant.getValue() + 1000;
 		 		interpolate("/b707/hydraulic/quantity", q, 7);
-		 }	
+		 }
 	}
 },0,0);
 
 setlistener("/b707/hydraulic/ac-aux-pump[0]", func{
 	if(acAux1.getBoolValue() and eb.getValue() > 23){
-		 if (rud.getValue() <= 1){ 
+		 if (rud.getValue() <= 1){
 		 		interpolate("/b707/hydraulic/rudder", 3010, 14); # <=1 interpolation did not started before
 		 		var q = (HydQuant.getValue() >= 5400) ? 4200 : HydQuant.getValue() - 1200;
 		 		interpolate("/b707/hydraulic/quantity", q, 14);
 		 }
 	}else{
-		 if (!acAux2.getBoolValue()) { 
+		 if (!acAux2.getBoolValue()) {
 		 		 	interpolate("/b707/hydraulic/rudder", 0, 8);
 		 			var q = (HydQuant.getValue() >= 4200) ? 5400 : HydQuant.getValue() + 1200;
 			 		interpolate("/b707/hydraulic/quantity", q, 8);
-		 }	
+		 }
 	}
 },0,0);
 
 setlistener("/b707/hydraulic/ac-aux-pump[1]", func{
 	if(acAux2.getBoolValue() and eb.getValue() > 23){
-		 if (rud.getValue() <= 1){ 
+		 if (rud.getValue() <= 1){
 		 		interpolate("/b707/hydraulic/rudder", 3010, 14); # <=1 interpolation did not started before
 		 		var q = (HydQuant.getValue() >= 5400) ? 4200 : HydQuant.getValue() - 1200;
 		 		interpolate("/b707/hydraulic/quantity", q, 14);
 		 }
 	}else{
-		 if (!acAux1.getBoolValue()) { 
+		 if (!acAux1.getBoolValue()) {
 		 		 	interpolate("/b707/hydraulic/rudder", 0, 8);
 		 			var q = (HydQuant.getValue() >= 4200) ? 5400 : HydQuant.getValue() + 1200;
 			 		interpolate("/b707/hydraulic/quantity", q, 8);
-		 }	
+		 }
 	}
 },0,0);
 
@@ -741,7 +769,7 @@ var calc_oil_temp = func{
 
 	var atemp  =  getprop("/environment/temperature-degc") or 0;
 	var vmach  =  getprop("/velocities/mach") or 0;
-	
+
 	# without any engine and no support what happens to the wingTemperature
   # Calculate TAT Value (TAT = static temp (1 +((1.4 - 1) / 2) Mach^2) )
 	var tat = atemp * (1 + (0.2 * vmach * vmach));
@@ -750,7 +778,7 @@ var calc_oil_temp = func{
 	interpolate("/b707/anti-ice/total-air-temperature-digit", digittat, 32); # show it on instrument
 	#print("TAT ist: "~tat);
 	#print("TAT ist: "~digittat);
-	
+
 	# calculate the windows alpha for ice effect - use this loop only for the 32 sec
 	var capH = getprop("/b707/anti-ice/window-heat-cap-switch") or 0;
 	var FoH = getprop("/b707/anti-ice/window-heat-fo-switch") or 0;
@@ -770,8 +798,8 @@ var calc_oil_temp = func{
 			interpolate("/b707/anti-ice/window-alpha-fo", newAlphaF, 20);
 		}else{
 			interpolate("/b707/anti-ice/window-alpha-fo", newAlpha, 30);
-		}	
-	
+		}
+
 	}else{
 		if(windowHeatAlphaCapt.getValue() < 1.0){
 			interpolate("/b707/anti-ice/window-alpha-capt", 1.0, 15);
@@ -790,16 +818,16 @@ var calc_oil_temp = func{
 		if(e.getNode("running") != nil){
 			r = e.getNode("running").getValue();
 		}
-		
+
 		var t = n * 2.148;
 		if(r){
 			# the oil temp calculation
-			interpolate("/b707/oil/oil-temp["~e.getIndex()~"]", t, 32);				
+			interpolate("/b707/oil/oil-temp["~e.getIndex()~"]", t, 32);
 		}else{
 			interpolate("/b707/oil/oil-temp["~e.getIndex()~"]", atemp, 32);
 		}
 	}
-	
+
 	settimer( calc_oil_temp, 32);
 }
 
@@ -814,17 +842,17 @@ var nacelle_deicing = func {
 	var tat = getprop("/b707/anti-ice/total-air-temperature") or 0;
 	var coef = getprop("/b707/anti-ice/drag-coefficient") or 0; # standard is 1, worst case is wc
 	var wc = 7; # the max Drag factor for our aircraft - over this value, the behavior in simulation is unrealistic
-	
+
 	# without any engine and no support what happens to the wingTemperature
-  var wingTempOutL = tat;  
-  var wingTempOutR = tat;  
-  var wingTempInL = tat;  
+  var wingTempOutL = tat;
+  var wingTempOutR = tat;
+  var wingTempInL = tat;
   var wingTempInR = tat;
   var wingAntiIce = getprop("/b707/anti-ice/switch") or 0;
   var iceAlertEngines = 0;
   var iceAlertWings = 0;
   var iceAlertFuel = 0;
-  
+
 	# if engines running show me the temperature near the wing anti ice valve
 	foreach(var e; props.globals.getNode("/engines").getChildren("engine")) {
 		var r = 0;
@@ -834,41 +862,41 @@ var nacelle_deicing = func {
 		var deg = 0;
 	  if(e.getNode("egt-degf") != nil and e.getNode("egt-degf").getValue()){
 			deg = e.getNode("egt-degf").getValue();
-		}		
+		}
 		var engineInlet = getprop("/b707/anti-ice/engine-inlet["~e.getIndex()~"]") or 0;
-		
+
 		if (!engineInlet and e.getIndex() < 4) {
 		  var n = e.getIndex() + 1;
 		  if(tat <= -10) iceAlertEngines = 1;
 		  if(tat <= -30) setprop("/controls/engines/engine["~e.getIndex()~"]/cutoff", 1);
 		}
-		
+
 		var temperature = deg * 110/1400; # engines have 1400 degree f max temperature
-		
+
 		if(r){
 			# the wing Ice
 			if(e.getIndex() == 0 and wingAntiIce){
 				var wingTempOutL = temperature + 5;  # + 5 only for difference on instruments :-)
 			}
 			if(e.getIndex() == 1 and wingAntiIce){
-				var wingTempInL = temperature - 4; 
+				var wingTempInL = temperature - 4;
 			}
 			if(e.getIndex() == 2 and wingAntiIce){
-				var wingTempInR = temperature - 6; 
+				var wingTempInR = temperature - 6;
 			}
 			if(e.getIndex() == 3 and wingAntiIce){
-				var wingTempOutR = temperature + 7; 
-			}		
+				var wingTempOutR = temperature + 7;
+			}
 		}
-		
+
 	}
-	
+
 	# and turn the needles in the wing anti ice instruments (overhead panel)
 	interpolate("/b707/anti-ice/temp-out-l", wingTempOutL, 15);
 	interpolate("/b707/anti-ice/temp-in-l", wingTempInL, 15);
 	interpolate("/b707/anti-ice/temp-out-r", wingTempOutR, 15);
 	interpolate("/b707/anti-ice/temp-in-r", wingTempInR, 15);
-	
+
 	# calculate the drag-coefficient of our aircraft with ice - no ice/  1 is perfect, wc is the worst case
 	if(tat < 1){
 	    # overwrite the variable from real temperature to factor 1 to wc for coefficent calc
@@ -881,44 +909,44 @@ var nacelle_deicing = func {
 			# print("Coeff: " ~newcoef);
 			newcoef = (newcoef > wc) ? wc : newcoef;
 			newcoef = ((coef - newcoef) > 1) ? newcoef + 1 : newcoef;   # go back after switch on heating max 1 point/15 sec
-			
+
 			if(coef != newcoef) interpolate("/b707/anti-ice/drag-coefficient", newcoef, 15);
-			
+
 			if(coef < newcoef) iceAlertWings = 1; # only message, if value rise up
-			
+
 	}else{
 		if(coef > 1){
 			interpolate("/b707/anti-ice/drag-coefficient", 1, 15);
 		}
 	}
-	
+
 	### Fuel temperature
-	var sel = getprop("/b707/fuel/temperatur-selector") or 0; 
+	var sel = getprop("/b707/fuel/temperatur-selector") or 0;
   # 0 = Main Tank 1, 1 = Engine 1, 2 = Engine 2 ... Main Tank has no heater
   var fuelTempMain = (tat < -10) ? -10 : tat;
   setprop("/b707/fuel/temp[0]", fuelTempMain);
-  
+
   if (sel == 0) setprop("/b707/fuel/temperature", fuelTempMain);
-  
+
 	foreach(var h; props.globals.getNode("/b707/fuel").getChildren("heater")) {
 	  var state = h.getValue();
 	  var hnr = h.getIndex();
 	  var tnr = hnr + 1;
 	  var oldfuelTemp = getprop("/b707/fuel/temp["~tnr~"]") or 0;
 	  var newfuelTemp = tat;
-	  
+
 	  if(state){
 	  		newfuelTemp = oldfuelTemp + 5;
 	  		newfuelTemp = (newfuelTemp > 20) ? 20 : newfuelTemp;
 	  }
-	  
+
 	  if(newfuelTemp <  -8)  iceAlertFuel = 1;
 	  if(newfuelTemp < -20)  setprop("/controls/engines/engine["~hnr~"]/cutoff", 1);
-	  
+
 		setprop("/b707/fuel/temp["~tnr~"]", newfuelTemp);
   	if (sel == tnr) interpolate("/b707/fuel/temperature", newfuelTemp, 15);
 	}
-	
+
 	if(iceAlertWings) {
 		screen.log.write("WINGS - ICE ALERT: Switch on the WING ANTI-ICE System", 1, 0, 0);
 		iceAlertWings = 0;
@@ -948,7 +976,7 @@ var safety_valv_pos = func {
 	setprop("b707/pressurization/safety-valve-pos", 0);
 	setprop("/b707/pressurization/manual-mode-switch", 0);
 	var svs = getprop("b707/pressurization/safety-valve") or 0;
-	if(svs){ 
+	if(svs){
 		settimer( func { setprop("b707/pressurization/safety-valve-pos", 1) }, 2.1 );
 	}
 }
@@ -975,21 +1003,21 @@ var calc_pressurization	= func{
 	engBleedAir2 = (engBleedAir2) ? getprop("engines/engine[1]/n1") : 0;
 	engBleedAir3 = (engBleedAir3) ? getprop("engines/engine[2]/n1") : 0;
 	engBleedAir4 = (engBleedAir4) ? getprop("engines/engine[3]/n1") : 0;
-	
+
 	# this is a fake calculation for psi in air supply and the control for the overheat of the compressors
 	var overspeedMach = getprop("/velocities/mach") or 0;
 	if(comrpm1.getValue() > 115 or overspeedMach > 0.93) settimer(func{air_compressor(0)}, 0);
 	if(comrpm2.getValue() > 115 or overspeedMach > 0.93) settimer(func{air_compressor(1)}, 0);
 	if(comrpm3.getValue() > 115 or overspeedMach > 0.93) settimer(func{air_compressor(2)}, 0);
-	
+
 	var airSupplyDuct = (engBleedAir1 + engBleedAir2 + engBleedAir3 + engBleedAir4 + comrpm1.getValue() + comrpm2.getValue() + comrpm3.getValue()) / 30 * 6;
 	airSupplyDuct = (airSupplyDuct >= 0) ? airSupplyDuct : 0;
 	interpolate("/b707/air-conditioning/air-supply-psi", airSupplyDuct, t);
-	
+
 	if(svp and airSupplyDuct > 18){
-	
+
 		if(ms){
-		
+
 			var autorate = vs/6.32;
 
 			if(mode){ 					# in takeoff or flight mode
@@ -1009,28 +1037,28 @@ var calc_pressurization	= func{
 				}
 
 			}
-			
+
 			max = alt/6.3;
 			max = (agl < 100) ? alt - 200 : max;
-			
+
 			interpolate("/b707/pressurization/cabin-max", max, t);  # the white scale is set automatically
-			interpolate("/b707/pressurization/cabin-altitude", calt, t); # the alt needles 
+			interpolate("/b707/pressurization/cabin-altitude", calt, t); # the alt needles
 			interpolate("/b707/pressurization/climb-rate", rate, t); # the climb rate
 			#print("calc_pressurization is running in auto mode");
 		}else{
-			
+
 			if((mcs > 0 and calt < max) or (mcs < 0 and calt > max)){
 				calt = calt + (t*mcs/60);
 			}else{
 				calt = calt;
 				mcs = 0;
-			}	
-			
-			interpolate("/b707/pressurization/cabin-altitude", calt, t); # the alt needles as result of white scale and manual control 
+			}
+
+			interpolate("/b707/pressurization/cabin-altitude", calt, t); # the alt needles as result of white scale and manual control
 			interpolate("/b707/pressurization/climb-rate", mcs, t);		# the climb rate as result of manual control
 			#print("calc_pressurization is working on manual mode");
 		}
-		
+
 	}else{
 		calt = alt;
 		#print("calc_pressurization is not working");
@@ -1039,22 +1067,22 @@ var calc_pressurization	= func{
 		var ra = getprop("position/altitude-agl-ft") or 0;
 		#if(ra > 2000) screen.log.write(sprintf("ATTENTION! No pressurization!"), 1.0, 0.0, 0.0);
 	}
-	
+
 	# cabin differential pressure
 	var diff = alt - calt;
 	var psi = diff * 8.6/40000;
 	psi = (psi > 10) ? 10 : psi;
 	psi = (psi < 0) ? 0 : psi;
 	interpolate("/b707/pressurization/cabin-differential-pressure", psi, t);
-	
+
 	if(calt > 8000){
 		 screen.log.write(sprintf(" "), 1.0, 0.0, 0.0);
 	}else{
 		if(svp) setprop("/b707/pressurization/alt-cutout-horn", 0); # reset if it was pushed during depressurization
 	}
-	
+
 	settimer(calc_pressurization, t);
-	
+
 }
 
 settimer( calc_pressurization, 9); # start first after 10 sec.
@@ -1089,9 +1117,9 @@ var air_compressor = func(nr){
 		}else{
 			setprop("/b707/air-conditioning/compressor-start["~nr~"]", 2);
 			settimer( func { setprop("/b707/air-conditioning/compressor-start["~nr~"]", 0) }, 0.2);
-			
+
 			if(getprop("/sim/sound/switch2") == 1){
-				 setprop("/sim/sound/switch2", 0); 
+				 setprop("/sim/sound/switch2", 0);
 			}else{
 				 setprop("/sim/sound/switch2", 1);
 			}
@@ -1111,7 +1139,7 @@ setlistener("/b707/pressurization/cabin-air-temp-selector", func(state){
 	}
 },1,0);
 
-################################  funny sound action for the old elevator trim wheel #################### 
+################################  funny sound action for the old elevator trim wheel ####################
 
 setlistener("/controls/flight/elevator-trim", func(et){
 	var et = et.getValue();
@@ -1148,7 +1176,7 @@ setlistener("/b707/hydraulic/spoiler-switch[1]", func(state){
 var emerMain  = props.globals.getNode("/b707/emergency/emer-flap-switch");
 var emerInbd  = props.globals.getNode("/b707/emergency/emer-flap-inbd");
 var emerOutbd = props.globals.getNode("/b707/emergency/emer-flap-outbd");
- 
+
 setlistener("/b707/emergency/emer-flap-switch", func(state){
 	var state = state.getValue() or 0;
 	if(state){
@@ -1327,7 +1355,7 @@ var masterLoop = func {
 			call(func{fgcommand('dialog-close', props.Node.new({"dialog-name": "WeightAndFuel"}))},nil,var err2 = []);
 			call(func{fgcommand('dialog-close', props.Node.new({"dialog-name": "system-failures"}))},nil,var err2 = []);
 			call(func{fgcommand('dialog-close', props.Node.new({"dialog-name": "instrument-failures"}))},nil,var err2 = []);
-		}  
+		}
 		setprop("sim/freeze/fuel",0);
 		setprop("/sim/speed-up", 1);
 		setprop("/gui/map/draw-traffic", 0);
@@ -1341,22 +1369,22 @@ var toggleRefuelling = func{
   var lD = getprop("/b707/refuelling/probe-left") or 0;
   var rD = getprop("/b707/refuelling/probe-right") or 0;
   var bo = getprop("/instrumentation/doors/refuel-boom/position-norm") or 0;
-  
+
   if(lD){
   	somethingOut = 1;
-  } 
+  }
   if(rD){
   	somethingOut = 1;
   }
   if(bo > 0){
   	somethingOut = 1;
   }
-  
+
   if(somethingOut){
   	setprop("/tanker", 0);
   	if(rD) toggleProbeRight();
   	if(lD) toggleProbeLeft();
-		if(bo) b707.doorsystem.refuelexport();  
+		if(bo) b707.doorsystem.refuelexport();
   }else{
   	setprop("/tanker", 1);
   	if(!rD) toggleProbeRight();
