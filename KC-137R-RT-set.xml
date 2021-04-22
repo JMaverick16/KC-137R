@@ -364,6 +364,7 @@ no. D6-3071-00
             <file>Aircraft/KC-137R/Nasal/vector.nas</file>
 		</vector>
 		<rcs>
+			<file>Aircraft/KC-137R/Nasal/rcs_mand.nas</file>
             <file>Aircraft/KC-137R/Nasal/rcs.nas</file>
 		</rcs>
 		<b707>
