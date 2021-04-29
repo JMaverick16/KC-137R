@@ -40,7 +40,7 @@ var tcas = func {
 
 		# Multiplayer TCAS
 
-		for (var n = 0; n < 30; n += 1) {
+		for (var n = 0; n < 45; n += 1) {
 
 			var callsign = getprop(path~"[" ~ n ~ "]/callsign") or 0;
 
@@ -125,7 +125,7 @@ var tcas = func {
 
 	# AI TCAS
 
-		for (var n = 0; n < 20; n += 1) {
+		for (var n = 0; n < 45; n += 1) {
 
 			var callsign = getprop("ai/models/aircraft[" ~ n ~ "]/callsign") or 0;
 
@@ -192,7 +192,7 @@ var tcas = func {
 
     # VATSIM TCAS
 
-  		for (var n = 0; n < 20; n += 1) {
+  		for (var n = 0; n < 45; n += 1) {
 
   			var callsign = getprop("ai/models/swift[" ~ n ~ "]/callsign") or 0;
 
