@@ -142,7 +142,7 @@
 					</binding>
 				</item>
 				<item>
-				    <label>IFF channel</label>
+				    <label>IFF Channel</label>
 				    <binding>
 						<command>dialog-show</command>
 						<dialog-name>iff</dialog-name>
