@@ -143,6 +143,13 @@
 					</binding>
 				</item>
 				<item>
+			    <label>IFF channel</label>
+			    <binding>
+					<command>dialog-show</command>
+					<dialog-name>iff</dialog-name>
+			    </binding>
+			  </item>
+				<item>
 		          <label>Radar Cutoff</label>
 		          <binding>
 		            <command>dialog-show</command>
@@ -303,6 +310,10 @@ no. D6-3071-00
   </submodels>
  </sim>
 
+    <iff>
+	    <channel type="int">0000</channel>
+	</iff>
+
  <tanker type="bool">false</tanker>
 
 	<systems>
@@ -324,6 +335,13 @@ no. D6-3071-00
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
 	</cdu>
+	<iff>
+	    <power_prop type="string">instrumentation/iff/power</power_prop>
+	    <channel_prop
+		type="string">instrumentation/iff/channel</channel_prop>
+	    <channel type="int">0000</channel>
+	    <power type="bool">true</power>
+	</iff>
 	<mptcas>
     <display-factor-awacs type="double">1</display-factor-awacs>
     <display-factor type="double">1</display-factor>
@@ -439,6 +457,9 @@ no. D6-3071-00
 		<fbw>
 			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
 		</fbw>
+		<iff>
+	        <file>Aircraft/KC-137R/Nasal/iff.nas</file>
+	    </iff>
 	</nasal>
 
     <dual-control>
