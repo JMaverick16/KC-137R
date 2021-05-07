@@ -143,19 +143,12 @@
 					</binding>
 				</item>
 				<item>
-				    <label>DLINK Channel</label>
+				    <label>IFF/DLINK Settings</label>
 				    <binding>
 						<command>dialog-show</command>
-						<dialog-name>dlink</dialog-name>
+						<dialog-name>iff</dialog-name>
 				    </binding>
 			    </item>
-				<item>
-			    <label>IFF Channel</label>
-			    <binding>
-					<command>dialog-show</command>
-					<dialog-name>iff</dialog-name>
-			    </binding>
-			  </item>
 				<item>
 		          <label>Radar Cutoff</label>
 		          <binding>

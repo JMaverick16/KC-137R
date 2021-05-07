@@ -152,7 +152,7 @@
 					</binding>
 				</item>
 				<item>
-				    <label>IFF Channel</label>
+				    <label>IFF/DLINK Settings</label>
 				    <binding>
 						<command>dialog-show</command>
 						<dialog-name>iff</dialog-name>
@@ -329,6 +329,13 @@ no. D6-3071-00
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
 	</cdu>
+	<datalink>
+        <channel type="int">42</channel>
+        <power_prop type="string">instrumentation/mptcas/on</power_prop>
+        <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
+        <receive_period type="double">1</receive_period>
+        <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
+    </datalink>
 	<iff>
 	    <power_prop type="string">instrumentation/iff/power</power_prop>
 	    <channel_prop
@@ -435,6 +442,9 @@ no. D6-3071-00
 		<fbw>
 			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
 		</fbw>
+		<datalink>
+            <file>Aircraft/KC-137R/Nasal/datalink.nas</file>
+        </datalink>
 		<iff>
 	        <file>Aircraft/KC-137R/Nasal/iff.nas</file>
 	    </iff>
