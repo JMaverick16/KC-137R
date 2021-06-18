@@ -62,9 +62,16 @@
 		<input>
 			<expression>
 				<table>
-					<property>/fdm/jsbsim/atmosphere/density-altitude</property> 
-					<entry><ind>    0</ind><dep>0.6738</dep></entry>
-					<entry><ind>42000</ind><dep>0.7570</dep></entry>
+					<product>
+						<property>/position/altitude-ft</property>
+						<table>
+							<property>/fdm/jsbsim/velocities/mach</property>
+							<entry><ind>0.09</ind><dep>0.1</dep></entry>
+							<entry><ind>0.15</ind><dep>1.0</dep></entry>
+						</table>
+					</product>
+					<entry><ind>    0</ind><dep>0.674</dep></entry>
+					<entry><ind>43000</ind><dep>1.120</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -96,13 +103,19 @@
 			<expression>
 				<difference>
 					<table>
-						<property>/fdm/jsbsim/atmosphere/density-altitude</property> 
-						<entry><ind>    0</ind><dep>0.9867</dep></entry>
+						<product>
+							<property>/position/altitude-ft</property>
+							<table>
+								<property>/fdm/jsbsim/velocities/mach</property>
+								<entry><ind>0.09</ind><dep>0.1</dep></entry>
+								<entry><ind>0.15</ind><dep>1.0</dep></entry>
+							</table>
+						</product>
+						<entry><ind>    0</ind><dep>0.9852</dep></entry>
 						<entry><ind>43000</ind><dep>0.8584</dep></entry>
 					</table>
 					<table>
 						<property>/fdm/jsbsim/velocities/mach</property>
-						<entry><ind>0.00</ind><dep>0.000</dep></entry>
 						<entry><ind>0.09</ind><dep>0.000</dep></entry>
 						<entry><ind>0.15</ind><dep>0.016</dep></entry>
 						<entry><ind>0.22</ind><dep>0.022</dep></entry>
