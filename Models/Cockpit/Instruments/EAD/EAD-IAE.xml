@@ -2622,12 +2622,12 @@
 					<or>
 						<less-than>
 							<property>orientation/roll-deg</property>
-							<value>-45</value>
+							<value>-45.5</value>
 						</less-than>
-						<greater-than-equals>
+						<greater-than>
 							<property>orientation/roll-deg</property>
-							<value>45</value>
-						</greater-than-equals>
+							<value>45.5</value>
+						</greater-than>
 					</or>
 				</and>
 				<equals>

@@ -430,6 +430,7 @@
  </propulsion> 
  
  <system file="pushback"/>
+ <system file="fbw"/>
  <system file="fcs"/>
  <system file="glass-effect"/>
 
