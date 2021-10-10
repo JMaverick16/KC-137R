@@ -8,10 +8,6 @@
 		<type>material</type>
 		<object-name>LampAmber1</object-name>
 		<object-name>LampAmber2</object-name>
-		<object-name>switch1</object-name>
-		<object-name>switch2</object-name>
-		<object-name>sockle1</object-name>
-		<object-name>sockle2</object-name>
 		<condition>
 			<less-than>
 				<property>systems/electrical/outputs/cabin-dim</property>
@@ -30,10 +26,6 @@
 		<type>material</type>
 		<object-name>LampAmber1</object-name>
 		<object-name>LampAmber2</object-name>
-		<object-name>switch1</object-name>
-		<object-name>switch2</object-name>
-		<object-name>sockle1</object-name>
-		<object-name>sockle2</object-name>
 		<object-name>sup</object-name>
 		<object-name>shadow</object-name>
 		<condition>
@@ -90,39 +82,6 @@
 	</animation>
 
 	<animation>
-		<type>rotate</type>
-		<object-name>switch1</object-name>
-		<property>it-fbw/man-roll-btn</property>
-		<factor>60</factor>
-		<offset-deg>-60</offset-deg>
-		<center>
-			<x-m>0.00113</x-m>
-			<y-m>0.0</y-m>
-			<z-m>-0.00092</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>switch1</object-name>
-		<object-name>sockle1</object-name>
-		<visible>true</visible>
-		<action>
-			<button>0</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>nasal</command>
-				<script>fbw.roll();</script>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
 		<type>select</type>
 		<object-name>LampAmberON2</object-name>
 		<condition>
@@ -140,34 +99,14 @@
 	</animation>
 	
 	<animation>
-		<type>rotate</type>
-		<object-name>switch2</object-name>
-		<property>it-fbw/man-pitch-btn</property>
-		<factor>60</factor>
-		<offset-deg>-60</offset-deg>
-		<center>
-			<x-m>0.00113</x-m>
-			<y-m>0.0</y-m>
-			<z-m>-0.00092</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
 		<type>pick</type>
-		<object-name>switch2</object-name>
-		<object-name>sockle2</object-name>
-		<visible>true</visible>
+		<object-name>reset</object-name>
 		<action>
 			<button>0</button>
-			<repeatable>true</repeatable>
+			<repeatable>false</repeatable>
 			<binding>
 				<command>nasal</command>
-				<script>fbw.pitch();</script>
+				<script>fbw.reset();</script>
 			</binding>
 		</action>
 	</animation>

@@ -31,19 +31,11 @@
 	<group>
 		<layout>hbox</layout>
 		<button>
-			<legend>MAN ROLL</legend>
-            <pref-width>80</pref-width>
+			<legend>RESET FBW LAW</legend>
+            <pref-width>160</pref-width>
 			<binding>
-			<command>nasal</command>
-			<script>fbw.roll();</script>
-			</binding>
-		</button>
-		<button>
-			<legend>MAN PITCH</legend>
-            <pref-width>80</pref-width>
-			<binding>
-			<command>nasal</command>
-			<script>fbw.pitch();</script>
+				<command>nasal</command>
+				<script>fbw.reset();</script>
 			</binding>
 		</button>
 	</group>

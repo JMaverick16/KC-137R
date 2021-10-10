@@ -52,20 +52,18 @@
 			<Kp>
 				<expression>
 					<table>
-						<property>/velocities/mach</property> 
-						<entry><ind>0.2</ind><dep>-0.3</dep></entry>
-						<entry><ind>0.5</ind><dep>-0.7</dep></entry>
-						<entry><ind>0.9</ind><dep>-0.8</dep></entry>
+						<property>/velocities/airspeed-kt</property> 
+						<entry><ind>140</ind><dep>-0.3</dep></entry>
+						<entry><ind>400</ind><dep>-0.8</dep></entry>
 					</table>
 				</expression>
 			</Kp>
 			<Ki>
 				<expression>
 					<table>
-						<property>/velocities/mach</property> 
-						<entry><ind>0.2</ind><dep>-0.2</dep></entry>
-						<entry><ind>0.5</ind><dep>-0.6</dep></entry>
-						<entry><ind>0.9</ind><dep>-0.7</dep></entry>
+						<property>/velocities/airspeed-kt</property> 
+						<entry><ind>140</ind><dep>-0.2</dep></entry>
+						<entry><ind>400</ind><dep>-0.7</dep></entry>
 					</table>
 				</expression>
 			</Ki>

@@ -4,16 +4,16 @@
 
 	<path>resIAE/EAD.ac</path>
 	
-    <animation>
-        <type>select</type>
-        <object-name>Power.off</object-name>
-        <condition>
-            <less-than>
+	<animation>
+		<type>select</type>
+		<object-name>Power.off</object-name>
+		<condition>
+			<less-than>
 				<property>systems/electrical/outputs/efis</property>
 				<value>15</value>
-            </less-than>
-        </condition>
-    </animation>
+			</less-than>
+		</condition>
+	</animation>
 	
 	<animation>
 		<type>pick</type>
@@ -30,10 +30,10 @@
 
 	<!-- EPR -->
 	<animation>
-    	<type>rotate</type>
-    	<object-name>epr.1</object-name>
-    	<property>engines/engine[0]/epr-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>epr.1</object-name>
+		<property>engines/engine[0]/epr-actual</property>
+		<interpolation>
 			<entry><ind>0.99</ind><dep>  0</dep></entry>
 			<entry><ind>1.00</ind><dep>  5</dep></entry>
 			<entry><ind>1.10</ind><dep> 48</dep></entry>
@@ -43,22 +43,22 @@
 			<entry><ind>1.50</ind><dep>222</dep></entry>
 			<entry><ind>1.60</ind><dep>266</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.1161470</y-m>
-    		<z-m> 0.0817098</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.1161470</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>epr.2</object-name>
-    	<property>engines/engine[1]/epr-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>epr.2</object-name>
+		<property>engines/engine[1]/epr-actual</property>
+		<interpolation>
 			<entry><ind>0.99</ind><dep>  0</dep></entry>
 			<entry><ind>1.00</ind><dep>  5</dep></entry>
 			<entry><ind>1.10</ind><dep> 48</dep></entry>
@@ -68,22 +68,22 @@
 			<entry><ind>1.50</ind><dep>222</dep></entry>
 			<entry><ind>1.60</ind><dep>266</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0838900</y-m>
-    		<z-m> 0.0817098</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>epr.3</object-name>
-    	<property>engines/engine[2]/epr-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>epr.3</object-name>
+		<property>engines/engine[2]/epr-actual</property>
+		<interpolation>
 			<entry><ind>0.99</ind><dep>  0</dep></entry>
 			<entry><ind>1.00</ind><dep>  5</dep></entry>
 			<entry><ind>1.10</ind><dep> 48</dep></entry>
@@ -93,22 +93,22 @@
 			<entry><ind>1.50</ind><dep>222</dep></entry>
 			<entry><ind>1.60</ind><dep>266</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0516165</y-m>
-    		<z-m> 0.0817098</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>epr.4</object-name>
-    	<property>engines/engine[3]/epr-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>epr.4</object-name>
+		<property>engines/engine[3]/epr-actual</property>
+		<interpolation>
 			<entry><ind>0.99</ind><dep>  0</dep></entry>
 			<entry><ind>1.00</ind><dep>  5</dep></entry>
 			<entry><ind>1.10</ind><dep> 48</dep></entry>
@@ -118,24 +118,24 @@
 			<entry><ind>1.50</ind><dep>222</dep></entry>
 			<entry><ind>1.60</ind><dep>266</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0193615</y-m>
-    		<z-m> 0.0817098</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0193615</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	
 	<!-- N1 -->
 	<animation>
-    	<type>rotate</type>
-    	<object-name>n1.1</object-name>
-    	<property>engines/engine[0]/n1-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>n1.1</object-name>
+		<property>engines/engine[0]/n1-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
 			<entry><ind> 20</ind><dep> 49</dep></entry>
@@ -149,22 +149,22 @@
 			<entry><ind>100</ind><dep>241</dep></entry>
 			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.1161660</y-m>
-    		<z-m> 0.0526897</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.1161660</y-m>
+			<z-m>0.0526897</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>n1.2</object-name>
-    	<property>engines/engine[1]/n1-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>n1.2</object-name>
+		<property>engines/engine[1]/n1-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
 			<entry><ind> 20</ind><dep> 49</dep></entry>
@@ -178,22 +178,22 @@
 			<entry><ind>100</ind><dep>241</dep></entry>
 			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0838900</y-m>
-    		<z-m> 0.0526897</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>0.0526897</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>n1.3</object-name>
-    	<property>engines/engine[2]/n1-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>n1.3</object-name>
+		<property>engines/engine[2]/n1-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
 			<entry><ind> 20</ind><dep> 49</dep></entry>
@@ -207,22 +207,22 @@
 			<entry><ind>100</ind><dep>241</dep></entry>
 			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0516165</y-m>
-    		<z-m> 0.0526897</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>0.0526897</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>n1.4</object-name>
-    	<property>engines/engine[3]/n1-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>n1.4</object-name>
+		<property>engines/engine[3]/n1-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
 			<entry><ind> 20</ind><dep> 49</dep></entry>
@@ -236,24 +236,24 @@
 			<entry><ind>100</ind><dep>241</dep></entry>
 			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0193569</y-m>
-    		<z-m> 0.0526897</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0193569</y-m>
+			<z-m>0.0526897</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	
 	<!-- EGT -->
 	<animation>
-    	<type>rotate</type>
-    	<object-name>egt.1</object-name>
-    	<property>engines/engine[0]/egt-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>egt.1</object-name>
+		<property>engines/engine[0]/egt-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind>100</ind><dep> 35</dep></entry>
 			<entry><ind>200</ind><dep> 69</dep></entry>
@@ -264,22 +264,22 @@
 			<entry><ind>700</ind><dep>235</dep></entry>
 			<entry><ind>800</ind><dep>269</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.1161660</y-m>
-    		<z-m> 0.0237043</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.1161660</y-m>
+			<z-m>0.0237043</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>egt.2</object-name>
-    	<property>engines/engine[1]/egt-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>egt.2</object-name>
+		<property>engines/engine[1]/egt-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind>100</ind><dep> 35</dep></entry>
 			<entry><ind>200</ind><dep> 69</dep></entry>
@@ -290,22 +290,22 @@
 			<entry><ind>700</ind><dep>235</dep></entry>
 			<entry><ind>800</ind><dep>269</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0838900</y-m>
-    		<z-m> 0.0237043</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>0.0237043</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>egt.3</object-name>
-    	<property>engines/engine[2]/egt-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>egt.3</object-name>
+		<property>engines/engine[2]/egt-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind>100</ind><dep> 35</dep></entry>
 			<entry><ind>200</ind><dep> 69</dep></entry>
@@ -316,22 +316,22 @@
 			<entry><ind>700</ind><dep>235</dep></entry>
 			<entry><ind>800</ind><dep>269</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0516165</y-m>
-    		<z-m> 0.0237043</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>0.0237043</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>egt.4</object-name>
-    	<property>engines/engine[3]/egt-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>egt.4</object-name>
+		<property>engines/engine[3]/egt-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind>100</ind><dep> 35</dep></entry>
 			<entry><ind>200</ind><dep> 69</dep></entry>
@@ -342,24 +342,24 @@
 			<entry><ind>700</ind><dep>235</dep></entry>
 			<entry><ind>800</ind><dep>269</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0193569</y-m>
-    		<z-m> 0.0237043</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0193569</y-m>
+			<z-m>0.0237043</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	
 	<!-- N2 -->
 	<animation>
-    	<type>rotate</type>
-    	<object-name>n2.1</object-name>
-    	<property>engines/engine[0]/n2-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>n2.1</object-name>
+		<property>engines/engine[0]/n2-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
 			<entry><ind> 20</ind><dep> 49</dep></entry>
@@ -373,22 +373,22 @@
 			<entry><ind>100</ind><dep>241</dep></entry>
 			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.1161660</y-m>
-    		<z-m>-0.005326</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.1161660</y-m>
+			<z-m>-0.005326</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>n2.2</object-name>
-    	<property>engines/engine[1]/n2-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>n2.2</object-name>
+		<property>engines/engine[1]/n2-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
 			<entry><ind> 20</ind><dep> 49</dep></entry>
@@ -402,22 +402,22 @@
 			<entry><ind>100</ind><dep>241</dep></entry>
 			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0838900</y-m>
-    		<z-m>-0.005326</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>-0.005326</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>n2.3</object-name>
-    	<property>engines/engine[2]/n2-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>n2.3</object-name>
+		<property>engines/engine[2]/n2-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
 			<entry><ind> 20</ind><dep> 49</dep></entry>
@@ -431,22 +431,22 @@
 			<entry><ind>100</ind><dep>241</dep></entry>
 			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0516165</y-m>
-    		<z-m>-0.005326</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>-0.005326</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	<animation>
-    	<type>rotate</type>
-    	<object-name>n2.4</object-name>
-    	<property>engines/engine[3]/n2-actual</property>
-    	<interpolation>
+		<type>rotate</type>
+		<object-name>n2.4</object-name>
+		<property>engines/engine[3]/n2-actual</property>
+		<interpolation>
 			<entry><ind>  0</ind><dep>  0</dep></entry>
 			<entry><ind> 10</ind><dep> 24</dep></entry>
 			<entry><ind> 20</ind><dep> 49</dep></entry>
@@ -460,27 +460,27 @@
 			<entry><ind>100</ind><dep>241</dep></entry>
 			<entry><ind>110</ind><dep>265</dep></entry>
 		</interpolation>
-    	<center>
-    		<x-m> 0</x-m>
-    		<y-m>-0.0193569</y-m>
-    		<z-m>-0.005326</z-m>
-    	</center>
-    	<axis>
-    		<x>-1</x>
-    		<y>0</y>
-    		<z>0</z>
-    	</axis>
-    </animation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0193569</y-m>
+			<z-m>-0.005326</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 	
 	<animation>
 		<type>select</type>
-        <object-name>rev1.y</object-name>
+		<object-name>rev1.y</object-name>
 		<condition>
 			<and>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[0]/reverser-pos-norm</property>
 					<value>0.01</value>
-				</greater-than>
+				</greater-than-equals>
 				<less-than>
 					<property>engines/engine[0]/reverser-pos-norm</property>
 					<value>0.9500000001</value>
@@ -491,13 +491,13 @@
 	
 	<animation>
 		<type>select</type>
-        <object-name>rev2.y</object-name>
+		<object-name>rev2.y</object-name>
 		<condition>
 			<and>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[1]/reverser-pos-norm</property>
 					<value>0.01</value>
-				</greater-than>
+				</greater-than-equals>
 				<less-than>
 					<property>engines/engine[1]/reverser-pos-norm</property>
 					<value>0.9500000001</value>
@@ -508,13 +508,13 @@
 	
 	<animation>
 		<type>select</type>
-        <object-name>rev3.y</object-name>
+		<object-name>rev3.y</object-name>
 		<condition>
 			<and>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[2]/reverser-pos-norm</property>
 					<value>0.01</value>
-				</greater-than>
+				</greater-than-equals>
 				<less-than>
 					<property>engines/engine[2]/reverser-pos-norm</property>
 					<value>0.9500000001</value>
@@ -525,13 +525,13 @@
 	
 	<animation>
 		<type>select</type>
-        <object-name>rev4.y</object-name>
+		<object-name>rev4.y</object-name>
 		<condition>
 			<and>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[3]/reverser-pos-norm</property>
 					<value>0.01</value>
-				</greater-than>
+				</greater-than-equals>
 				<less-than>
 					<property>engines/engine[3]/reverser-pos-norm</property>
 					<value>0.9500000001</value>
@@ -542,45 +542,45 @@
 	
 	<animation>
 		<type>select</type>
-        <object-name>rev1.g</object-name>
+		<object-name>rev1.g</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>engines/engine[0]/reverser-pos-norm</property>
 				<value>0.95</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
 	<animation>
 		<type>select</type>
-        <object-name>rev2.g</object-name>
+		<object-name>rev2.g</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>engines/engine[1]/reverser-pos-norm</property>
 				<value>0.95</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
 	<animation>
 		<type>select</type>
-        <object-name>rev3.g</object-name>
+		<object-name>rev3.g</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>engines/engine[2]/reverser-pos-norm</property>
 				<value>0.95</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
 	<animation>
 		<type>select</type>
-        <object-name>rev4.g</object-name>
+		<object-name>rev4.g</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>engines/engine[3]/reverser-pos-norm</property>
 				<value>0.95</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
@@ -642,9 +642,9 @@
 	<text>
 		<name>rev1.y</name>
 		<offsets>
-    		<x-m> 0.0004</x-m>
-    		<y-m>-0.1161660</y-m>
-    		<z-m> 0.0566897</z-m>
+			<x-m>0.0004</x-m>
+			<y-m>-0.1161660</y-m>
+			<z-m>0.0566897</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -666,9 +666,9 @@
 	<text>
 		<name>rev2.y</name>
 		<offsets>
-    		<x-m> 0.0004</x-m>
-    		<y-m>-0.0838900</y-m>
-    		<z-m> 0.0566897</z-m>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>0.0566897</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -690,9 +690,9 @@
 	<text>
 		<name>rev3.y</name>
 		<offsets>
-    		<x-m> 0.0004</x-m>
-    		<y-m>-0.0516165</y-m>
-    		<z-m> 0.0566897</z-m>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>0.0566897</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -714,9 +714,9 @@
 	<text>
 		<name>rev4.y</name>
 		<offsets>
-    		<x-m> 0.0004</x-m>
-    		<y-m>-0.0193569</y-m>
-    		<z-m> 0.0566897</z-m>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0193569</y-m>
+			<z-m>0.0566897</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -738,9 +738,9 @@
 	<text>
 		<name>rev1.g</name>
 		<offsets>
-    		<x-m> 0.0004</x-m>
-    		<y-m>-0.1161660</y-m>
-    		<z-m> 0.0566897</z-m>
+			<x-m>0.0004</x-m>
+			<y-m>-0.1161660</y-m>
+			<z-m>0.0566897</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -762,9 +762,9 @@
 	<text>
 		<name>rev2.g</name>
 		<offsets>
-    		<x-m> 0.0004</x-m>
-    		<y-m>-0.0838900</y-m>
-    		<z-m> 0.0566897</z-m>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>0.0566897</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -786,9 +786,9 @@
 	<text>
 		<name>rev3.g</name>
 		<offsets>
-    		<x-m> 0.0004</x-m>
-    		<y-m>-0.0516165</y-m>
-    		<z-m> 0.0566897</z-m>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>0.0566897</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -810,9 +810,9 @@
 	<text>
 		<name>rev4.g</name>
 		<offsets>
-    		<x-m> 0.0004</x-m>
-    		<y-m>-0.0193569</y-m>
-    		<z-m> 0.0566897</z-m>
+			<x-m>0.0004</x-m>
+			<y-m>-0.0193569</y-m>
+			<z-m>0.0566897</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -958,7 +958,7 @@
 		<condition>
 			<less-than>
 				<property>engines/engine[0]/n1-actual</property>
-				<value>15</value>
+				<value>2</value>
 			</less-than>
 		</condition>
 	</animation>
@@ -970,7 +970,7 @@
 		<condition>
 			<less-than>
 				<property>engines/engine[1]/n1-actual</property>
-				<value>15</value>
+				<value>2</value>
 			</less-than>
 		</condition>
 	</animation>
@@ -982,7 +982,7 @@
 		<condition>
 			<less-than>
 				<property>engines/engine[2]/n1-actual</property>
-				<value>15</value>
+				<value>2</value>
 			</less-than>
 		</condition>
 	</animation>
@@ -994,7 +994,7 @@
 		<condition>
 			<less-than>
 				<property>engines/engine[3]/n1-actual</property>
-				<value>15</value>
+				<value>2</value>
 			</less-than>
 		</condition>
 	</animation>
@@ -1013,10 +1013,10 @@
 		<condition>
 			<or>
 				<property>controls/engines/engine[0]/starter</property>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[0]/n2-actual</property>
 					<value>2</value>
-				</greater-than>
+				</greater-than-equals>
 			</or>
 		</condition>
 	</animation>
@@ -1035,10 +1035,10 @@
 		<condition>
 			<or>
 				<property>controls/engines/engine[1]/starter</property>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[1]/n2-actual</property>
 					<value>2</value>
-				</greater-than>
+				</greater-than-equals>
 			</or>
 		</condition>
 	</animation>
@@ -1057,10 +1057,10 @@
 		<condition>
 			<or>
 				<property>controls/engines/engine[2]/starter</property>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[2]/n2-actual</property>
 					<value>2</value>
-				</greater-than>
+				</greater-than-equals>
 			</or>
 		</condition>
 	</animation>
@@ -1079,10 +1079,10 @@
 		<condition>
 			<or>
 				<property>controls/engines/engine[3]/starter</property>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[3]/n2-actual</property>
 					<value>2</value>
-				</greater-than>
+				</greater-than-equals>
 			</or>
 		</condition>
 	</animation>
@@ -1093,10 +1093,10 @@
 		<object-name>n1.1</object-name>
 		<object-name>n11</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>engines/engine[0]/n1-actual</property>
-				<value>15</value>
-			</greater-than>
+				<value>2</value>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
@@ -1106,10 +1106,10 @@
 		<object-name>n1.2</object-name>
 		<object-name>n12</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>engines/engine[1]/n1-actual</property>
-				<value>15</value>
-			</greater-than>
+				<value>2</value>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
@@ -1119,10 +1119,10 @@
 		<object-name>n1.3</object-name>
 		<object-name>n13</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>engines/engine[2]/n1-actual</property>
-				<value>15</value>
-			</greater-than>
+				<value>2</value>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
@@ -1132,10 +1132,10 @@
 		<object-name>n1.4</object-name>
 		<object-name>n14</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>engines/engine[3]/n1-actual</property>
-				<value>15</value>
-			</greater-than>
+				<value>2</value>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
@@ -1143,9 +1143,9 @@
 	<text>
 		<name>eprl</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0679</y-m>
-			<z-m> 0.0928</z-m>
+			<z-m>0.0928</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1167,9 +1167,9 @@
 	<text>
 		<name>epr1</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1070</y-m>
-			<z-m> 0.0708</z-m>
+			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1188,12 +1188,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX1e</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX1e</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1070</y-m>
-			<z-m> 0.0708</z-m>
+			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1211,12 +1211,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX1e</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
-    		<y-m>-0.1161470</y-m>
-    		<z-m> 0.0817098</z-m>
+	<text>
+		<name>XX1e</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1161470</y-m>
+			<z-m>0.0817098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1237,9 +1237,9 @@
 	<text>
 		<name>epr2</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0747</y-m>
-			<z-m> 0.0708</z-m>
+			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1258,12 +1258,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX2e</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX2e</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0747</y-m>
-			<z-m> 0.0708</z-m>
+			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1281,12 +1281,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX2e</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
-    		<y-m>-0.0838900</y-m>
-    		<z-m> 0.0817098</z-m>
+	<text>
+		<name>XX2e</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>0.0817098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1307,9 +1307,9 @@
 	<text>
 		<name>epr3</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0425</y-m>
-			<z-m> 0.0708</z-m>
+			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1328,12 +1328,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX3e</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX3e</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0425</y-m>
-			<z-m> 0.0708</z-m>
+			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1351,12 +1351,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX3e</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
-    		<y-m>-0.0516165</y-m>
-    		<z-m> 0.0817098</z-m>
+	<text>
+		<name>XX3e</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>0.0817098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1377,9 +1377,9 @@
 	<text>
 		<name>epr4</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
-			<z-m> 0.0708</z-m>
+			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1398,12 +1398,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX4e</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX4e</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
-			<z-m> 0.0708</z-m>
+			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1421,12 +1421,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX4e</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
-    		<y-m>-0.0193615</y-m>
-    		<z-m> 0.0817098</z-m>
+	<text>
+		<name>XX4e</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0193615</y-m>
+			<z-m>0.0817098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1448,9 +1448,9 @@
 	<text>
 		<name>n1l</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0679</y-m>
-			<z-m> 0.0636</z-m>
+			<z-m>0.0636</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1472,9 +1472,9 @@
 	<text>
 		<name>n11</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1070</y-m>
-			<z-m> 0.0418</z-m>
+			<z-m>0.0418</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1493,12 +1493,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX1n</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX1n</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1070</y-m>
-			<z-m> 0.0418</z-m>
+			<z-m>0.0418</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1519,9 +1519,9 @@
 	<text>
 		<name>n12</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0747</y-m>
-			<z-m> 0.0418</z-m>
+			<z-m>0.0418</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1540,12 +1540,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX2n</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX2n</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0747</y-m>
-			<z-m> 0.0418</z-m>
+			<z-m>0.0418</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1566,9 +1566,9 @@
 	<text>
 		<name>n13</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0425</y-m>
-			<z-m> 0.0418</z-m>
+			<z-m>0.0418</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1587,12 +1587,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX3n</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX3n</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0425</y-m>
-			<z-m> 0.0418</z-m>
+			<z-m>0.0418</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1613,9 +1613,9 @@
 	<text>
 		<name>n14</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
-			<z-m> 0.0418</z-m>
+			<z-m>0.0418</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1634,12 +1634,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX4n</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX4n</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
-			<z-m> 0.0418</z-m>
+			<z-m>0.0418</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1661,9 +1661,9 @@
 	<text>
 		<name>egtl</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0679</y-m>
-			<z-m> 0.0348</z-m>
+			<z-m>0.0348</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1685,9 +1685,9 @@
 	<text>
 		<name>egt1</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1070</y-m>
-			<z-m> 0.0128</z-m>
+			<z-m>0.0128</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1706,12 +1706,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX1</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX1</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1070</y-m>
-			<z-m> 0.0128</z-m>
+			<z-m>0.0128</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1732,9 +1732,9 @@
 	<text>
 		<name>egt2</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0747</y-m>
-			<z-m> 0.0128</z-m>
+			<z-m>0.0128</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1753,12 +1753,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX2</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX2</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0747</y-m>
-			<z-m> 0.0128</z-m>
+			<z-m>0.0128</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1779,9 +1779,9 @@
 	<text>
 		<name>egt3</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0425</y-m>
-			<z-m> 0.0128</z-m>
+			<z-m>0.0128</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1800,12 +1800,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX3</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX3</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0425</y-m>
-			<z-m> 0.0128</z-m>
+			<z-m>0.0128</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1826,9 +1826,9 @@
 	<text>
 		<name>egt4</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
-			<z-m> 0.0128</z-m>
+			<z-m>0.0128</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1847,12 +1847,12 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX4</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX4</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
-			<z-m> 0.0128</z-m>
+			<z-m>0.0128</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1874,9 +1874,9 @@
 	<text>
 		<name>n2l</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0679</y-m>
-			<z-m> 0.0058</z-m>
+			<z-m>0.0058</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1898,7 +1898,7 @@
 	<text>
 		<name>n21</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1070</y-m>
 			<z-m>-0.0163</z-m>
 		</offsets>
@@ -1919,10 +1919,10 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX1</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX1</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1070</y-m>
 			<z-m>-0.0163</z-m>
 		</offsets>
@@ -1945,7 +1945,7 @@
 	<text>
 		<name>n22</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0747</y-m>
 			<z-m>-0.0163</z-m>
 		</offsets>
@@ -1966,10 +1966,10 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX2</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX2</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0747</y-m>
 			<z-m>-0.0163</z-m>
 		</offsets>
@@ -1992,7 +1992,7 @@
 	<text>
 		<name>n23</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0425</y-m>
 			<z-m>-0.0163</z-m>
 		</offsets>
@@ -2013,10 +2013,10 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX3</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX3</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0425</y-m>
 			<z-m>-0.0163</z-m>
 		</offsets>
@@ -2039,7 +2039,7 @@
 	<text>
 		<name>n24</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
 			<z-m>-0.0163</z-m>
 		</offsets>
@@ -2060,10 +2060,10 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX4</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX4</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
 			<z-m>-0.0163</z-m>
 		</offsets>
@@ -2086,7 +2086,7 @@
 	<text>
 		<name>ffl</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1250</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2110,7 +2110,7 @@
 	<text>
 		<name>ff1</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1050</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2131,10 +2131,10 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX1</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX1</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1050</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2157,7 +2157,7 @@
 	<text>
 		<name>ff2</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0733</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2178,10 +2178,10 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX2</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX2</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0733</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2204,7 +2204,7 @@
 	<text>
 		<name>ff3</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0417</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2225,10 +2225,10 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX3</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX3</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0417</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2251,7 +2251,7 @@
 	<text>
 		<name>ff4</name>
 		<offsets>
-			<x-m> 0.00018</x-m>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2272,10 +2272,10 @@
 		</font-resolution>
 	</text>
 	
-    <text>
-        <name>XX4</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>XX4</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0102</y-m>
 			<z-m>-0.0302</z-m>
 		</offsets>
@@ -2298,9 +2298,9 @@
 	<!-- Status -->
 	
 	<text>
-        <name>spdbrka</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+		<name>spdbrka</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1300</y-m>
 			<z-m>-0.0770</z-m>
 		</offsets>
@@ -2321,9 +2321,9 @@
 	</text>
 	
 	<text>
-        <name>spdbrke</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+		<name>spdbrke</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1300</y-m>
 			<z-m>-0.0770</z-m>
 		</offsets>
@@ -2384,16 +2384,16 @@
 	</animation>
 	
 	<text>
-        <name>manroll</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+		<name>manroll</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1300</y-m>
 			<z-m>-0.0830</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">ROLL/YAW SYS MAN</format>
+		<format type="string">FBW ROLL/YAW DIRECT</format>
 		<property>autopilot/serviceable</property>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2405,7 +2405,6 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
 	
 	<animation>
 		<type>select</type>
@@ -2425,16 +2424,16 @@
 	</animation>
 	
 	<text>
-        <name>manpitch</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+		<name>manpitch</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1300</y-m>
 			<z-m>-0.0890</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">PITCH SYS MAN</format>
+		<format type="string">FBW PITCH DIRECT</format>
 		<property>autopilot/serviceable</property>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2446,7 +2445,6 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
 	
 	<animation>
 		<type>select</type>
@@ -2467,9 +2465,9 @@
 	
 	
 	<text>
-        <name>boomdn</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+		<name>boomdn</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.1300</y-m>
 			<z-m>-0.0950</z-m>
 		</offsets>
@@ -2495,10 +2493,10 @@
 		<object-name>boomdn</object-name>
 		<condition>
 			<or>
-				<greater-than>
+				<greater-than-equals>
 					<property>instrumentation/doors/refuel-boom/position-norm</property>
 					<value>0.05</value>
-				</greater-than>
+				</greater-than-equals>
 				<equals>
 					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
@@ -2510,16 +2508,16 @@
 	<!-- Warnings -->
 	
 	<text>
-        <name>ensh</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
-			<y-m> 0.0010</y-m>
+		<name>ensh</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>0.0010</y-m>
 			<z-m>-0.0770</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">ENG SHUTDOWN!</format>
+		<format type="string">ENG SHUTDOWN</format>
 		<property>autopilot/serviceable</property>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2562,16 +2560,16 @@
 	</animation>
 	
 	<text>
-        <name>overeprlim</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
-			<y-m> 0.0010</y-m>
+		<name>overeprlim</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>0.0010</y-m>
 			<z-m>-0.0830</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">EPR OVER LIMIT!</format>
+		<format type="string">EPR OVER LIMIT</format>
 		<property>autopilot/serviceable</property>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2589,22 +2587,22 @@
 		<object-name>overeprlim</object-name>
 		<condition>
 			<or>
-				<greater-than>
+				<greater-than-equals>
 					<property>engines/engine[0]/epr-actual</property>
 					<property>controls/engines/eproverlim</property>
-				</greater-than>
-				<greater-than>
+				</greater-than-equals>
+				<greater-than-equals>
 					<property>engines/engine[1]/epr-actual</property>
 					<property>controls/engines/eproverlim</property>
-				</greater-than>
-				<greater-than>
+				</greater-than-equals>
+				<greater-than-equals>
 					<property>engines/engine[2]/epr-actual</property>
 					<property>controls/engines/eproverlim</property>
-				</greater-than>
-				<greater-than>
+				</greater-than-equals>
+				<greater-than-equals>
 					<property>engines/engine[3]/epr-actual</property>
 					<property>controls/engines/eproverlim</property>
-				</greater-than>
+				</greater-than-equals>
 				<equals>
 					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
@@ -2626,10 +2624,10 @@
 							<property>orientation/roll-deg</property>
 							<value>-45</value>
 						</less-than>
-						<greater-than>
+						<greater-than-equals>
 							<property>orientation/roll-deg</property>
 							<value>45</value>
-						</greater-than>
+						</greater-than-equals>
 					</or>
 				</and>
 				<equals>
@@ -2641,16 +2639,16 @@
 	</animation>
 	
 	<text>
-        <name>bankoverlin</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
-			<y-m> 0.0010</y-m>
+		<name>bankoverlin</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>0.0010</y-m>
 			<z-m>-0.0890</z-m>
 		</offsets>
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">BANK OVER LIMIT!</format>
+		<format type="string">BANK OVER LIMIT</format>
 		<property>autopilot/serviceable</property>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2662,6 +2660,50 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
+	
+	<text>
+		<name>nofbwprot</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>0.0010</y-m>
+			<z-m>-0.0950</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">NO FBW PROTECTIONS</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>nofbwprot</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>it-fbw/roll-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>it-fbw/pitch-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
 	
 	<!-- White -->
 	<animation>
@@ -2722,8 +2764,6 @@
 		<type>material</type> 
 		<object-name>spdbrka</object-name>
 		<object-name>boomdn</object-name>
-		<object-name>manpitch</object-name>
-		<object-name>manroll</object-name>
 		<diffuse>
 			<red>0</red>
 			<green>0.75</green>
@@ -2789,6 +2829,9 @@
 		<object-name>ensh</object-name>
 		<object-name>overeprlim</object-name>
 		<object-name>bankoverlin</object-name>
+		<object-name>manpitch</object-name>
+		<object-name>manroll</object-name>
+		<object-name>nofbwprot</object-name>
 		<diffuse>
 			<red>1</red>
 			<green>1</green>
@@ -2812,10 +2855,10 @@
 	</animation>
 	
 	<!-- Flaps -->
-    <text>
-        <name>flap-pos</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>flap-pos</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0355</y-m>
 			<z-m>-0.0504</z-m>
 		</offsets>
@@ -2834,10 +2877,10 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-    <text>
-        <name>flap-pos</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>flap-pos</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0355</y-m>
 			<z-m>-0.0562</z-m>
 		</offsets>
@@ -2856,10 +2899,10 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-    <text>
-        <name>flap-pos</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>flap-pos</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0355</y-m>
 			<z-m>-0.0620</z-m>
 		</offsets>
@@ -2878,10 +2921,10 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-    <text>
-        <name>flap-pos</name>
-        <offsets>
-			<x-m> 0.00018</x-m>
+	<text>
+		<name>flap-pos</name>
+		<offsets>
+			<x-m>0.00018</x-m>
 			<y-m>-0.0355</y-m>
 			<z-m>-0.0680</z-m>
 		</offsets>
@@ -2905,30 +2948,30 @@
 		<type>select</type>
 		<object-name>Flap1</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.06666</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>Flap2</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.13332</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>Flap3</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.19998</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
@@ -2936,30 +2979,30 @@
 		<type>select</type>
 		<object-name>Flap4</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.26666</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>Flap5</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.33332</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>Flap6</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.39998</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
@@ -2967,30 +3010,30 @@
 		<type>select</type>
 		<object-name>Flap7</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.46666</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>Flap8</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.53332</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>Flap9</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.59998</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	
@@ -2998,30 +3041,30 @@
 		<type>select</type>
 		<object-name>Flap10</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.73333</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>Flap11</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.86666</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	<animation>
 		<type>select</type>
 		<object-name>Flap12</object-name>
 		<condition>
-			<greater-than>
+			<greater-than-equals>
 				<property>surface-positions/flap-pos-norm</property>
 				<value>0.99999</value>
-			</greater-than>
+			</greater-than-equals>
 		</condition>
 	</animation>
 	

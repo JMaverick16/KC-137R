@@ -144,11 +144,8 @@
 					<name>fbw</name>
 					<label>FBW Control</label>
 					<binding>
-					<command>nasal</command>
-						<script>
-						var fbw = gui.Dialog.new("sim/gui/dialogs/fbw/dialog", "Aircraft/KC-137R/Systems/fbw-dlg.xml");
-						fbw.open();
-						</script>
+						<command>dialog-show</command>
+						<dialog-name>fbw</dialog-name>
 					</binding>
 				</item>
 				<item>

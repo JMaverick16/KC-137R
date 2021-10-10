@@ -1,4 +1,4 @@
-# KC-137R Roll/Pitch Stabilization Augmentation System by Joshua Davidson (Octal450)
+# KC-137R Fly By Wire System by Josh Davidson (Octal450)
 
 ##############################
 # Engage/Disengage Functions #
@@ -8,6 +8,13 @@ setprop("/it-fbw/roll-disable", 0);
 setprop("/it-fbw/man-roll-btn", 0);
 setprop("/it-fbw/pitch-disable", 0);
 setprop("/it-fbw/man-pitch-btn", 0);
+
+var reset = func {
+	setprop("/it-fbw/roll-disable", 0);
+	setprop("/it-fbw/man-roll-btn", 0);
+	setprop("/it-fbw/pitch-disable", 0);
+	setprop("/it-fbw/man-pitch-btn", 0);
+}
 
 var roll = func {
 	if (getprop("/it-autoflight/output/ap1") == 1) {
@@ -79,7 +86,7 @@ var update_fbw = func {
 
 setlistener("/sim/signals/fdm-initialized", func {
 	update.start();
-	print("Stabilization System ... OK!")
+	print("Fly By Wire System ... OK!")
 });
 
 ##########

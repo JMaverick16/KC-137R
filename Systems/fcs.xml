@@ -449,8 +449,8 @@
 			<table>
 				<independentVar lookup="row">velocities/mach</independentVar>
 				<tableData>
-					0.2  0.7
-					0.5  1.0
+					140  0.8
+					200  1.0
 				</tableData>
 			</table>
 			<gain>fbw/pitch/thetadot-gain</gain>
@@ -516,17 +516,19 @@
 				<sum>
 					<table>
 						<independentVar lookup="row">fbw/pitch/input-sum</independentVar>
+						<independentVar lookup="column">velocities/vc-kts</independentVar>
 						<tableData>
-							-1.0  2.5
-							 0.0  1.0
-							 1.0  0.0
+							      140  200
+							-1.0  2.0  2.5
+							 0.0  1.0  1.0
+							 1.0  0.0 -0.5
 						</tableData>
 					</table>
 					<property>fbw/pitch/thetadot-feed</property>
 				</sum>
 			</function>
 			<clipto>
-				<min>0.0</min>
+				<min>-0.5</min>
 				<max>2.5</max>
 			</clipto>
 		</fcs_function>

@@ -9,11 +9,55 @@ Modified by Octal450 for KC-137R
 <path>PFD_L.ac</path>
 
     <animation>
-    <type>scale</type>
-    <x-offset>0.8</x-offset>
-    <y-offset>0.8</y-offset>
-    <z-offset>0.8</z-offset>
+		<type>scale</type>
+		<x-offset>0.8</x-offset>
+		<y-offset>0.8</y-offset>
+		<z-offset>0.8</z-offset>
     </animation>
+	
+	<text>
+		<name>Direct</name>
+		<offsets>
+			<x-m>0.004</x-m>
+			<y-m>-0.011</y-m>
+			<z-m>-0.049</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">RESET FBW LAW</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.0055</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Direct</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>it-fbw/roll-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>it-fbw/pitch-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
 	
 	<animation>
 		<type>pick</type>
@@ -1792,6 +1836,31 @@ Modified by Octal450 for KC-137R
             <red>0.4</red>
             <green>1.0</green>
             <blue>1.0</blue>
+        </emission>
+        <ambient>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </ambient>
+        <diffuse>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </diffuse>
+        <specular>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+        </specular>
+    </animation>
+	
+    <animation>
+        <type>material</type><!--red-->
+        <object-name>Direct</object-name>
+        <emission>
+            <red>1.0</red>
+            <green>0</green>
+            <blue>0</blue>
         </emission>
         <ambient>
             <red>0</red>
