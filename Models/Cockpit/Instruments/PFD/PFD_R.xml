@@ -834,48 +834,8 @@ Modified by Octal450 for KC-137R
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">THRUST</format>
-		<property>autopilot/serviceable</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.007</character-size>
-        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">64</width>
-            <height type="int">64</height>
-        </font-resolution>
-	</text>
-    <text>
-        <name>TPITCH</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>-0.042</y-m>
-            <z-m>0.088</z-m>
-		</offsets>
-		<alignment>center-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">PITCH</format>
-		<property>autopilot/serviceable</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.007</character-size>
-        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">64</width>
-            <height type="int">64</height>
-        </font-resolution>
-	</text>
-    <text>
-        <name>RETARD</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>-0.042</y-m>
-            <z-m>0.088</z-m>
-		</offsets>
-		<alignment>center-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">RETARD</format>
-		<property>autopilot/serviceable</property>
+        <format type="string">%s</format>
+		<property>it-autoflight/mode/thr</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -889,30 +849,52 @@ Modified by Octal450 for KC-137R
 		<type>select</type>
 		<object-name>THRUST</object-name>
 		<condition>
-			<equals>
-				<property>it-autoflight/mode/thr</property>
-				<value>THRUST</value>
-			</equals>
-		</condition>
-	</animation>
-	<animation>
-		<type>select</type>
-		<object-name>TPITCH</object-name>
-		<condition>
-			<equals>
-				<property>it-autoflight/mode/thr</property>
-				<value>PITCH</value>
-			</equals>
-		</condition>
-	</animation>
-	<animation>
-		<type>select</type>
-		<object-name>RETARD</object-name>
-		<condition>
-			<equals>
-				<property>it-autoflight/mode/thr</property>
-				<value>RETARD</value>
-			</equals>
+			<or>
+				<and>
+					<or>
+						<equals>
+							<property>it-autoflight/output/fd1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/fd2</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/ap1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/ap2</property>
+							<value>1</value>
+						</equals>
+					</or>
+					<equals>
+						<property>it-autoflight/mode/thr</property>
+						<value>PITCH</value>
+					</equals>
+				</and>
+				<and>
+					<or>
+						<equals>
+							<property>it-autoflight/output/fd1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/fd2</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/athr</property>
+							<value>1</value>
+						</equals>
+					</or>
+					<not-equals>
+						<property>it-autoflight/mode/thr</property>
+						<value>PITCH</value>
+					</not-equals>
+				</and>
+			</or>
 		</condition>
 	</animation>
 	
@@ -951,27 +933,6 @@ Modified by Octal450 for KC-137R
 		<property>it-autoflight/mode/vert</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
-        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">64</width>
-            <height type="int">64</height>
-        </font-resolution>
-	</text>
-	
-    <text>
-        <name>THR arm</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>-0.042</y-m>
-            <z-m>0.081</z-m>
-		</offsets>
-		<alignment>center-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">THRUST</format>
-		<property>autopilot/serviceable</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.006</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
         <font-resolution>
             <width type="int">64</width>
@@ -1020,47 +981,7 @@ Modified by Octal450 for KC-137R
             <height type="int">64</height>
         </font-resolution>
 	</text>
-    <text>
-        <name>ALT arm</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>0.024</y-m>
-            <z-m>0.081</z-m>
-		</offsets>
-		<alignment>center-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">ALT CAP</format>
-		<property>autopilot/serviceable</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.006</character-size>
-        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">64</width>
-            <height type="int">64</height>
-        </font-resolution>
-	</text>
 	
-    <text>
-        <name>TLATH arm</name>
-        <offsets>
-            <x-m>0.004</x-m>
-            <y-m>-0.009</y-m>
-            <z-m>0.081</z-m>
-		</offsets>
-		<alignment>center-center</alignment>
-		<axis-alignment>yz-plane</axis-alignment>
-		<type type="string">text-value</type>
-		<format type="string">HDG</format>
-		<property>autopilot/serviceable</property>
-        <font>helvetica_bold.txf</font>
-        <character-size>0.006</character-size>
-        <character-aspect-ratio type="double">1.4</character-aspect-ratio>
-        <font-resolution>
-            <width type="int">64</width>
-            <height type="int">64</height>
-        </font-resolution>
-	</text>
     <text>
         <name>TLATL arm</name>
         <offsets>
@@ -1104,17 +1025,6 @@ Modified by Octal450 for KC-137R
 	</text>
 	
 	<animation>
-		<object-name>THR arm</object-name>
-		<type>select</type>
-		<condition>
-			<equals>
-				<property>it-autoflight/mode/thr</property>
-				<value>PITCH</value>
-			</equals>
-		</condition>
-	</animation>
-	
-	<animation>
 		<object-name>LOC arm</object-name>
 		<type>select</type>
 		<condition>
@@ -1137,51 +1047,6 @@ Modified by Octal450 for KC-137R
 	</animation>
 	
 	<animation>
-		<object-name>ALT arm</object-name>
-		<type>select</type>
-		<condition>
-			<and>
-			<equals>
-				<property>it-autoflight/output/appr-armed</property>
-				<value>0</value>
-			</equals>
-			<or>
-			<equals>
-				<property>it-autoflight/output/vert</property>
-				<value>1</value>
-			</equals>
-			<equals>
-				<property>it-autoflight/output/vert</property>
-				<value>4</value>
-			</equals>
-			<equals>
-				<property>it-autoflight/output/vert</property>
-				<value>5</value>
-			</equals>
-			<equals>
-				<property>it-autoflight/output/vert</property>
-				<value>7</value>
-			</equals>
-			</or>
-			</and>
-		</condition>
-	</animation>
-	
-	<animation>
-		<object-name>TLATH arm</object-name>
-		<type>select</type>
-		<condition>
-			<equals>
-				<property>it-autoflight/mode/lat</property>
-				<value>T/O</value>
-			</equals>
-			<equals>
-				<property>it-autoflight/output/lnav-arm</property>
-				<value>0</value>
-			</equals>
-		</condition>
-	</animation>
-	<animation>
 		<object-name>TLATL arm</object-name>
 		<type>select</type>
 		<condition>
@@ -1190,7 +1055,7 @@ Modified by Octal450 for KC-137R
 				<value>T/O</value>
 			</equals>
 			<equals>
-				<property>it-autoflight/output/lnav-arm</property>
+				<property>it-autoflight/output/lnav-armed</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -1201,10 +1066,10 @@ Modified by Octal450 for KC-137R
 		<type>select</type>
 		<condition>
 			<and>
-				<equals>
-					<property>it-autoflight/output/vert</property>
-					<value>6</value>
-				</equals>
+				<less-than-equals>
+					<property>position/gear-agl-ft</property>
+					<value>100</value>
+				</less-than-equals>
 				<equals>
 					<property>it-autoflight/mode/vert</property>
 					<value>G/S</value>
@@ -1233,6 +1098,88 @@ Modified by Octal450 for KC-137R
             <height type="int">64</height>
         </font-resolution>
 	</text>
+	
+	<animation>
+		<type>select</type>
+        <object-name>ROLL</object-name>
+        <object-name>LOC arm</object-name>
+        <object-name>G/S arm</object-name>
+        <object-name>TLATL arm</object-name>
+        <object-name>FLARE arm</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>it-autoflight/output/fd1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>it-autoflight/output/fd2</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>it-autoflight/output/ap1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>it-autoflight/output/ap2</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+        <object-name>PITCH</object-name>
+		<condition>
+			<or>
+				<and>
+					<or>
+						<equals>
+							<property>it-autoflight/output/fd1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/fd2</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/ap1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/ap2</property>
+							<value>1</value>
+						</equals>
+					</or>
+					<not-equals>
+						<property>it-autoflight/mode/thr</property>
+						<value>PITCH</value>
+					</not-equals>
+				</and>
+				<and>
+					<or>
+						<equals>
+							<property>it-autoflight/output/fd1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/fd2</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>it-autoflight/output/athr</property>
+							<value>1</value>
+						</equals>
+					</or>
+					<equals>
+						<property>it-autoflight/mode/thr</property>
+						<value>PITCH</value>
+					</equals>
+				</and>
+			</or>
+		</condition>
+	</animation>
 
     <text>
         <name>VS-POS</name>
@@ -1732,8 +1679,6 @@ Modified by Octal450 for KC-137R
     <animation>
         <type>material</type><!--green-->
         <object-name>THRUST</object-name>
-        <object-name>TPITCH</object-name>
-        <object-name>RETARD</object-name>
         <object-name>ROLL</object-name>
         <object-name>PITCH</object-name>
         <object-name>AP</object-name>
@@ -1775,7 +1720,6 @@ Modified by Octal450 for KC-137R
         <object-name>LOC arm</object-name>
         <object-name>G/S arm</object-name>
         <object-name>ALT arm</object-name>
-        <object-name>TLATH arm</object-name>
         <object-name>TLATL arm</object-name>
         <object-name>FLARE arm</object-name>
         <object-name>VS-POS</object-name>
