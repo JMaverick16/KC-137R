@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing RC-137R Rivet Joint (CFM56-7B26)</description>
+  <description>Boeing RC-137R Rivet Joint (CFM56)</description>
   	<long-description>
    	The Boeing RC-137R Rivet Joint is an airborne SIGINT/reconnaissance aircraft built by Boeing and modified by a number of companies, including General Dynamics, Lockheed and L-3 Communications. It is used by the United States Air Force to support theater and national level intelligence consumers with near real-time on-scene collection, analysis and dissemination capabilities thanks to its sensor suite which allows to detect, identify and geolocate signals throughout the electromagnetic spectrum, forwarding gathered information in a variety of formats to a wide range of consumers via Rivet Joint's extensive communications suite. Based on the C-135 Stratolifter airframe, various types of RC-137s have been in service since 1961. Many variants have been modified numerous times, resulting in a large variety of designations, configurations, and program names.
   	</long-description>
@@ -410,7 +410,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
-			<file>Aircraft/KC-137R/Nasal/gear-tilt.nas</file>
 		</b707>
 		
 		<itaf>

@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing KC-137R Stratotanker (CFM56-7B26)</description>
+  <description>Boeing KC-137R Stratotanker (CFM56)</description>
   	<long-description>
    	The Boeing KC-137R Stratotanker is a military aerial refueling aircraft. The KC-137 was the US Air Force's first jet-powered refueling tanker and replaced the KC-97 Stratofreighter. The KC-137 was initially tasked with refueling strategic bombers, but was used extensively in the Vietnam War and later conflicts such as Operation Desert Storm to extend the range and endurance of US tactical fighters and bombers.
   	</long-description>
@@ -414,7 +414,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
-			<file>Aircraft/KC-137R/Nasal/gear-tilt.nas</file>
 		</b707>
 		
 		<itaf>

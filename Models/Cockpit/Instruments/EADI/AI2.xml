@@ -322,6 +322,11 @@
 		<name>Green text</name>
 		<type>material</type>
 		<object-name>Minimums</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
 		<emission>
 			<red>0</red>
 			<green>1</green>
@@ -332,6 +337,11 @@
 		<name>White text</name>
 		<type>material</type>
 		<object-name>Radar Altitude</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
 		<emission>
 			<red>1</red>
 			<green>1</green>
@@ -342,6 +352,11 @@
 		<name>Red text</name>
 		<type>material</type>
 		<object-name>Direct</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>0</green>
+			<blue>0</blue>
+		</diffuse>
 		<emission>
 			<red>1</red>
 			<green>0</green>

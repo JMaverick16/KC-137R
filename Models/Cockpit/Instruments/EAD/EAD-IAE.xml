@@ -34,14 +34,16 @@
 		<object-name>epr.1</object-name>
 		<property>engines/engine[0]/epr-actual</property>
 		<interpolation>
-			<entry><ind>0.99</ind><dep>  0</dep></entry>
-			<entry><ind>1.00</ind><dep>  5</dep></entry>
-			<entry><ind>1.10</ind><dep> 48</dep></entry>
-			<entry><ind>1.20</ind><dep> 92</dep></entry>
-			<entry><ind>1.30</ind><dep>136</dep></entry>
-			<entry><ind>1.40</ind><dep>179</dep></entry>
-			<entry><ind>1.50</ind><dep>222</dep></entry>
-			<entry><ind>1.60</ind><dep>266</dep></entry>
+			<entry><ind>0.7</ind><dep>  5.0</dep></entry>
+			<entry><ind>0.8</ind><dep> 33.5</dep></entry>
+			<entry><ind>0.9</ind><dep> 62.5</dep></entry>
+			<entry><ind>1.0</ind><dep> 92.0</dep></entry>
+			<entry><ind>1.1</ind><dep>121.0</dep></entry>
+			<entry><ind>1.2</ind><dep>150.0</dep></entry>
+			<entry><ind>1.3</ind><dep>179.0</dep></entry>
+			<entry><ind>1.4</ind><dep>208.0</dep></entry>
+			<entry><ind>1.5</ind><dep>237.0</dep></entry>
+			<entry><ind>1.6</ind><dep>266.0</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -59,14 +61,16 @@
 		<object-name>epr.2</object-name>
 		<property>engines/engine[1]/epr-actual</property>
 		<interpolation>
-			<entry><ind>0.99</ind><dep>  0</dep></entry>
-			<entry><ind>1.00</ind><dep>  5</dep></entry>
-			<entry><ind>1.10</ind><dep> 48</dep></entry>
-			<entry><ind>1.20</ind><dep> 92</dep></entry>
-			<entry><ind>1.30</ind><dep>136</dep></entry>
-			<entry><ind>1.40</ind><dep>179</dep></entry>
-			<entry><ind>1.50</ind><dep>222</dep></entry>
-			<entry><ind>1.60</ind><dep>266</dep></entry>
+			<entry><ind>0.7</ind><dep>  5.0</dep></entry>
+			<entry><ind>0.8</ind><dep> 33.5</dep></entry>
+			<entry><ind>0.9</ind><dep> 62.5</dep></entry>
+			<entry><ind>1.0</ind><dep> 92.0</dep></entry>
+			<entry><ind>1.1</ind><dep>121.0</dep></entry>
+			<entry><ind>1.2</ind><dep>150.0</dep></entry>
+			<entry><ind>1.3</ind><dep>179.0</dep></entry>
+			<entry><ind>1.4</ind><dep>208.0</dep></entry>
+			<entry><ind>1.5</ind><dep>237.0</dep></entry>
+			<entry><ind>1.6</ind><dep>266.0</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -84,14 +88,16 @@
 		<object-name>epr.3</object-name>
 		<property>engines/engine[2]/epr-actual</property>
 		<interpolation>
-			<entry><ind>0.99</ind><dep>  0</dep></entry>
-			<entry><ind>1.00</ind><dep>  5</dep></entry>
-			<entry><ind>1.10</ind><dep> 48</dep></entry>
-			<entry><ind>1.20</ind><dep> 92</dep></entry>
-			<entry><ind>1.30</ind><dep>136</dep></entry>
-			<entry><ind>1.40</ind><dep>179</dep></entry>
-			<entry><ind>1.50</ind><dep>222</dep></entry>
-			<entry><ind>1.60</ind><dep>266</dep></entry>
+			<entry><ind>0.7</ind><dep>  5.0</dep></entry>
+			<entry><ind>0.8</ind><dep> 33.5</dep></entry>
+			<entry><ind>0.9</ind><dep> 62.5</dep></entry>
+			<entry><ind>1.0</ind><dep> 92.0</dep></entry>
+			<entry><ind>1.1</ind><dep>121.0</dep></entry>
+			<entry><ind>1.2</ind><dep>150.0</dep></entry>
+			<entry><ind>1.3</ind><dep>179.0</dep></entry>
+			<entry><ind>1.4</ind><dep>208.0</dep></entry>
+			<entry><ind>1.5</ind><dep>237.0</dep></entry>
+			<entry><ind>1.6</ind><dep>266.0</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -109,14 +115,129 @@
 		<object-name>epr.4</object-name>
 		<property>engines/engine[3]/epr-actual</property>
 		<interpolation>
-			<entry><ind>0.99</ind><dep>  0</dep></entry>
-			<entry><ind>1.00</ind><dep>  5</dep></entry>
-			<entry><ind>1.10</ind><dep> 48</dep></entry>
-			<entry><ind>1.20</ind><dep> 92</dep></entry>
-			<entry><ind>1.30</ind><dep>136</dep></entry>
-			<entry><ind>1.40</ind><dep>179</dep></entry>
-			<entry><ind>1.50</ind><dep>222</dep></entry>
-			<entry><ind>1.60</ind><dep>266</dep></entry>
+			<entry><ind>0.7</ind><dep>  5.0</dep></entry>
+			<entry><ind>0.8</ind><dep> 33.5</dep></entry>
+			<entry><ind>0.9</ind><dep> 62.5</dep></entry>
+			<entry><ind>1.0</ind><dep> 92.0</dep></entry>
+			<entry><ind>1.1</ind><dep>121.0</dep></entry>
+			<entry><ind>1.2</ind><dep>150.0</dep></entry>
+			<entry><ind>1.3</ind><dep>179.0</dep></entry>
+			<entry><ind>1.4</ind><dep>208.0</dep></entry>
+			<entry><ind>1.5</ind><dep>237.0</dep></entry>
+			<entry><ind>1.6</ind><dep>266.0</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0193615</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!-- EPR Limit -->
+	<animation>
+		<type>rotate</type>
+		<object-name>epr.1l</object-name>
+		<property>fdm/jsbsim/fadec/limit/active-epr</property>
+		<interpolation>
+			<entry><ind>0.7</ind><dep>  5.0</dep></entry>
+			<entry><ind>0.8</ind><dep> 33.5</dep></entry>
+			<entry><ind>0.9</ind><dep> 62.5</dep></entry>
+			<entry><ind>1.0</ind><dep> 92.0</dep></entry>
+			<entry><ind>1.1</ind><dep>121.0</dep></entry>
+			<entry><ind>1.2</ind><dep>150.0</dep></entry>
+			<entry><ind>1.3</ind><dep>179.0</dep></entry>
+			<entry><ind>1.4</ind><dep>208.0</dep></entry>
+			<entry><ind>1.5</ind><dep>237.0</dep></entry>
+			<entry><ind>1.6</ind><dep>266.0</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.1161470</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>epr.2l</object-name>
+		<property>fdm/jsbsim/fadec/limit/active-epr</property>
+		<interpolation>
+			<entry><ind>0.7</ind><dep>  5.0</dep></entry>
+			<entry><ind>0.8</ind><dep> 33.5</dep></entry>
+			<entry><ind>0.9</ind><dep> 62.5</dep></entry>
+			<entry><ind>1.0</ind><dep> 92.0</dep></entry>
+			<entry><ind>1.1</ind><dep>121.0</dep></entry>
+			<entry><ind>1.2</ind><dep>150.0</dep></entry>
+			<entry><ind>1.3</ind><dep>179.0</dep></entry>
+			<entry><ind>1.4</ind><dep>208.0</dep></entry>
+			<entry><ind>1.5</ind><dep>237.0</dep></entry>
+			<entry><ind>1.6</ind><dep>266.0</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>epr.3l</object-name>
+		<property>fdm/jsbsim/fadec/limit/active-epr</property>
+		<interpolation>
+			<entry><ind>0.7</ind><dep>  5.0</dep></entry>
+			<entry><ind>0.8</ind><dep> 33.5</dep></entry>
+			<entry><ind>0.9</ind><dep> 62.5</dep></entry>
+			<entry><ind>1.0</ind><dep> 92.0</dep></entry>
+			<entry><ind>1.1</ind><dep>121.0</dep></entry>
+			<entry><ind>1.2</ind><dep>150.0</dep></entry>
+			<entry><ind>1.3</ind><dep>179.0</dep></entry>
+			<entry><ind>1.4</ind><dep>208.0</dep></entry>
+			<entry><ind>1.5</ind><dep>237.0</dep></entry>
+			<entry><ind>1.6</ind><dep>266.0</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>epr.4l</object-name>
+		<property>fdm/jsbsim/fadec/limit/active-epr</property>
+		<interpolation>
+			<entry><ind>0.7</ind><dep>  5.0</dep></entry>
+			<entry><ind>0.8</ind><dep> 33.5</dep></entry>
+			<entry><ind>0.9</ind><dep> 62.5</dep></entry>
+			<entry><ind>1.0</ind><dep> 92.0</dep></entry>
+			<entry><ind>1.1</ind><dep>121.0</dep></entry>
+			<entry><ind>1.2</ind><dep>150.0</dep></entry>
+			<entry><ind>1.3</ind><dep>179.0</dep></entry>
+			<entry><ind>1.4</ind><dep>208.0</dep></entry>
+			<entry><ind>1.5</ind><dep>237.0</dep></entry>
+			<entry><ind>1.6</ind><dep>266.0</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -644,7 +765,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.1161660</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -668,7 +789,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0838900</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -692,7 +813,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0516165</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -716,7 +837,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0193569</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -740,7 +861,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.1161660</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -764,7 +885,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0838900</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -788,7 +909,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0516165</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -812,7 +933,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0193569</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -1004,9 +1125,11 @@
 		<object-name>disk11</object-name>
 		<object-name>disk13</object-name>
 		<object-name>epr.1</object-name>
+		<object-name>epr.1l</object-name>
 		<object-name>egt.1</object-name>
 		<object-name>n2.1</object-name>
 		<object-name>epr1</object-name>
+		<object-name>eprlim1</object-name>
 		<object-name>egt1</object-name>
 		<object-name>n21</object-name>
 		<object-name>ff1</object-name>
@@ -1026,9 +1149,11 @@
 		<object-name>disk21</object-name>
 		<object-name>disk23</object-name>
 		<object-name>epr.2</object-name>
+		<object-name>epr.2l</object-name>
 		<object-name>egt.2</object-name>
 		<object-name>n2.2</object-name>
 		<object-name>epr2</object-name>
+		<object-name>eprlim2</object-name>
 		<object-name>egt2</object-name>
 		<object-name>n22</object-name>
 		<object-name>ff2</object-name>
@@ -1048,9 +1173,11 @@
 		<object-name>disk31</object-name>
 		<object-name>disk33</object-name>
 		<object-name>epr.3</object-name>
+		<object-name>epr.3l</object-name>
 		<object-name>egt.3</object-name>
 		<object-name>n2.3</object-name>
 		<object-name>epr3</object-name>
+		<object-name>eprlim3</object-name>
 		<object-name>egt3</object-name>
 		<object-name>n23</object-name>
 		<object-name>ff3</object-name>
@@ -1070,9 +1197,11 @@
 		<object-name>disk41</object-name>
 		<object-name>disk43</object-name>
 		<object-name>epr.4</object-name>
+		<object-name>epr.4l</object-name>
 		<object-name>egt.4</object-name>
 		<object-name>n2.4</object-name>
 		<object-name>epr4</object-name>
+		<object-name>eprlim4</object-name>
 		<object-name>egt4</object-name>
 		<object-name>n24</object-name>
 		<object-name>ff4</object-name>
@@ -1168,7 +1297,7 @@
 		<name>epr1</name>
 		<offsets>
 			<x-m>0.00018</x-m>
-			<y-m>-0.1070</y-m>
+			<y-m>-0.107</y-m>
 			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -1189,10 +1318,34 @@
 	</text>
 	
 	<text>
+		<name>eprlim1</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.105</y-m>
+			<z-m>0.0778</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%1.3f</format>
+		<property>fdm/jsbsim/fadec/limit/active-epr</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
 		<name>XX1e</name>
 		<offsets>
 			<x-m>0.00018</x-m>
-			<y-m>-0.1070</y-m>
+			<y-m>-0.107</y-m>
 			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -1252,6 +1405,30 @@
 		<draw-alignment type="bool">false</draw-alignment>
 		<draw-boundingbox type="bool">false</draw-boundingbox>
 		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>eprlim2</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0727</y-m>
+			<z-m>0.0778</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%1.3f</format>
+		<property>fdm/jsbsim/fadec/limit/active-epr</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
 		<font-resolution>
 			<width type="int">32</width>
 			<height type="int">32</height>
@@ -1329,6 +1506,30 @@
 	</text>
 	
 	<text>
+		<name>eprlim3</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0405</y-m>
+			<z-m>0.0778</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%1.3f</format>
+		<property>fdm/jsbsim/fadec/limit/active-epr</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
 		<name>XX3e</name>
 		<offsets>
 			<x-m>0.00018</x-m>
@@ -1392,6 +1593,30 @@
 		<draw-alignment type="bool">false</draw-alignment>
 		<draw-boundingbox type="bool">false</draw-boundingbox>
 		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>eprlim4</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0082</y-m>
+			<z-m>0.0778</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%1.3f</format>
+		<property>fdm/jsbsim/fadec/limit/active-epr</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
 		<font-resolution>
 			<width type="int">32</width>
 			<height type="int">32</height>
@@ -2295,6 +2520,109 @@
 		</font-resolution>
 	</text>
 	
+
+	<text>
+		<name>toga</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0670</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">THR MODE: TO/GA</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>toga</object-name>
+		<condition>
+			<equals>
+				<property>fdm/jsbsim/fadec/limit/active-int</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<text>
+		<name>mct</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0670</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">THR MODE: MCT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>mct</object-name>
+		<condition>
+			<equals>
+				<property>fdm/jsbsim/fadec/limit/active-int</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<text>
+		<name>climb</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0670</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">THR MODE: CLIMB</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>climb</object-name>
+		<condition>
+			<equals>
+				<property>fdm/jsbsim/fadec/limit/active-int</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+	
 	<!-- Status -->
 	
 	<text>
@@ -2560,7 +2888,7 @@
 	</animation>
 	
 	<text>
-		<name>overeprlim</name>
+		<name>fadec</name>
 		<offsets>
 			<x-m>0.00018</x-m>
 			<y-m>0.0010</y-m>
@@ -2569,7 +2897,7 @@
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">EPR OVER LIMIT</format>
+		<format type="string">FADEC</format>
 		<property>autopilot/serviceable</property>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2584,25 +2912,13 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>overeprlim</object-name>
+		<object-name>fadec</object-name>
 		<condition>
 			<or>
-				<greater-than-equals>
-					<property>engines/engine[0]/epr-actual</property>
-					<property>controls/engines/eproverlim</property>
-				</greater-than-equals>
-				<greater-than-equals>
-					<property>engines/engine[1]/epr-actual</property>
-					<property>controls/engines/eproverlim</property>
-				</greater-than-equals>
-				<greater-than-equals>
-					<property>engines/engine[2]/epr-actual</property>
-					<property>controls/engines/eproverlim</property>
-				</greater-than-equals>
-				<greater-than-equals>
-					<property>engines/engine[3]/epr-actual</property>
-					<property>controls/engines/eproverlim</property>
-				</greater-than-equals>
+				<equals>
+					<property>fdm/jsbsim/fadec/unused</property>
+					<value>0</value>
+				</equals>
 				<equals>
 					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
@@ -2764,6 +3080,14 @@
 		<type>material</type> 
 		<object-name>spdbrka</object-name>
 		<object-name>boomdn</object-name>
+		<object-name>fadec</object-name>
+		<object-name>eprlim1</object-name>
+		<object-name>eprlim2</object-name>
+		<object-name>eprlim3</object-name>
+		<object-name>eprlim4</object-name>
+		<object-name>toga</object-name>
+		<object-name>mct</object-name>
+		<object-name>climb</object-name>
 		<diffuse>
 			<red>0</red>
 			<green>0.75</green>
@@ -2827,7 +3151,6 @@
 	<animation>
 		<type>material</type>
 		<object-name>ensh</object-name>
-		<object-name>overeprlim</object-name>
 		<object-name>bankoverlin</object-name>
 		<object-name>manpitch</object-name>
 		<object-name>manroll</object-name>
@@ -3068,11 +3391,11 @@
 		</condition>
 	</animation>
 	
-<!-- LoD -->
- <animation>
-   <type>range</type>
-   <min-m>0</min-m>
-   <max-m>20</max-m>
- </animation>
+	<!-- LoD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20</max-m>
+	</animation>
 
 </PropertyList>

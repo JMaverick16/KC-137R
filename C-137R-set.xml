@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Boeing C-137R Stratoliner (IAE V2527-A5)</description>
+  <description>Boeing C-137R Stratoliner (IAE V2500)</description>
   	<long-description>
    		The Boeing C-137R Stratoliner is a VIP transport aircraft derived from the Boeing 707 jet airliner used by the United States Air Force.
   	</long-description>
@@ -398,7 +398,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
-			<file>Aircraft/KC-137R/Nasal/gear-tilt.nas</file>
 		</b707>
 		
 		<itaf>

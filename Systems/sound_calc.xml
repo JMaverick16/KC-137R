@@ -374,8 +374,8 @@
       <product>
         <table>
           <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.75</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.80</ind> <dep>0.10</dep></entry>
+			<entry><ind>0.65</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.70</ind> <dep>0.10</dep></entry>
 			<entry><ind>1.08</ind> <dep>0.80</dep></entry>
         </table>
       </product>
@@ -394,8 +394,8 @@
       <product>
         <table>
           <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.75</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.80</ind> <dep>0.10</dep></entry>
+			<entry><ind>0.65</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.70</ind> <dep>0.10</dep></entry>
 			<entry><ind>1.08</ind> <dep>0.80</dep></entry>
         </table>
       </product>
@@ -414,8 +414,8 @@
       <product>
         <table>
           <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.75</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.80</ind> <dep>0.10</dep></entry>
+			<entry><ind>0.65</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.70</ind> <dep>0.10</dep></entry>
 			<entry><ind>1.08</ind> <dep>0.80</dep></entry>
         </table>
       </product>
@@ -434,8 +434,8 @@
       <product>
         <table>
           <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.75</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.80</ind> <dep>0.10</dep></entry>
+			<entry><ind>0.65</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.70</ind> <dep>0.10</dep></entry>
 			<entry><ind>1.08</ind> <dep>0.80</dep></entry>
         </table>
       </product>
@@ -636,7 +636,7 @@
       <product>
         <table>
           <product><property>/engines/engine[0]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.80</ind> <dep>0.80</dep></entry>
+			<entry><ind>0.70</ind> <dep>0.80</dep></entry>
 			<entry><ind>1.08</ind> <dep>1.28</dep></entry>
         </table>
       </product>
@@ -655,7 +655,7 @@
       <product>
         <table>
           <product><property>/engines/engine[1]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.80</ind> <dep>0.80</dep></entry>
+			<entry><ind>0.70</ind> <dep>0.80</dep></entry>
 			<entry><ind>1.08</ind> <dep>1.28</dep></entry>
         </table>
       </product>
@@ -674,7 +674,7 @@
       <product>
         <table>
           <product><property>/engines/engine[2]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.80</ind> <dep>0.80</dep></entry>
+			<entry><ind>0.70</ind> <dep>0.80</dep></entry>
 			<entry><ind>1.08</ind> <dep>1.28</dep></entry>
         </table>
       </product>
@@ -693,7 +693,7 @@
       <product>
         <table>
           <product><property>/engines/engine[3]/n1</property><value>0.01</value>  </product>
-			<entry><ind>0.80</ind> <dep>0.80</dep></entry>
+			<entry><ind>0.70</ind> <dep>0.80</dep></entry>
 			<entry><ind>1.08</ind> <dep>1.28</dep></entry>
         </table>
       </product>

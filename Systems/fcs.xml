@@ -9,7 +9,7 @@
 		
 		<summer name="fcs/roll-sum">
 			<input>fbw/roll-output</input>
-			<input>fbw/yaw/aileron-trim-nul</input>
+			<input>fbw/roll/aileron-trim-nul</input>
 			<clipto>
 				<min>-1.0</min>
 				<max>1.0</max>
@@ -114,90 +114,6 @@
 			<gain>1.0</gain>
 			<output>/surface-positions/rudder-norm</output>
 		</pure_gain>
-	
-	</channel>
-	
-	<channel name="FADEC">
-		
-		<lag_filter name="fcs/throttle1">
-			<input>/controls/engines/engine[0]/throttle</input>
-			<c1>0.95</c1>
-			<output>fcs/throttle-pos-norm[0]</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/throttle2">
-			<input>/controls/engines/engine[1]/throttle</input>
-			<c1>0.95</c1>
-			<output>fcs/throttle-pos-norm[1]</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/throttle3">
-			<input>/controls/engines/engine[2]/throttle</input>
-			<c1>0.95</c1>
-			<output>fcs/throttle-pos-norm[2]</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/throttle4">
-			<input>/controls/engines/engine[3]/throttle</input>
-			<c1>0.95</c1>
-			<output>fcs/throttle-pos-norm[3]</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/n1-actual1">
-			<input>/engines/engine[0]/n1</input>
-			<c1>2.25</c1>
-			<output>/engines/engine[0]/n1-actual</output>
-			<output>/engines/engine[4]/n1</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/n1-actual2">
-			<input>/engines/engine[1]/n1</input>
-			<c1>2.25</c1>
-			<output>/engines/engine[1]/n1-actual</output>
-			<output>/engines/engine[5]/n1</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/n1-actual3">
-			<input>/engines/engine[2]/n1</input>
-			<c1>2.25</c1>
-			<output>/engines/engine[2]/n1-actual</output>
-			<output>/engines/engine[6]/n1</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/n1-actual4">
-			<input>/engines/engine[3]/n1</input>
-			<c1>2.25</c1>
-			<output>/engines/engine[3]/n1-actual</output>
-			<output>/engines/engine[7]/n1</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/n2-actual1">
-			<input>/engines/engine[0]/n2</input>
-			<c1>2.25</c1>
-			<output>/engines/engine[0]/n2-actual</output>
-			<output>/engines/engine[4]/n2</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/n2-actual2">
-			<input>/engines/engine[1]/n2</input>
-			<c1>2.25</c1>
-			<output>/engines/engine[1]/n2-actual</output>
-			<output>/engines/engine[5]/n2</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/n2-actual3">
-			<input>/engines/engine[2]/n2</input>
-			<c1>2.25</c1>
-			<output>/engines/engine[2]/n2-actual</output>
-			<output>/engines/engine[6]/n2</output>
-		</lag_filter>
-		
-		<lag_filter name="fcs/n2-actual4">
-			<input>/engines/engine[3]/n2</input>
-			<c1>2.25</c1>
-			<output>/engines/engine[3]/n2-actual</output>
-			<output>/engines/engine[7]/n2</output>
-		</lag_filter>
 	
 	</channel>
 	

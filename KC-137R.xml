@@ -237,10 +237,10 @@
 
  <propulsion>
 
-   <engine file="CFM-56">
+   <engine file="cfm56_1">
     <location unit="IN">
       <x>  22.11 </x>
-      <y>-586.50 </y>
+      <y>-293.50 </y>
       <z> -46.00 </z>
     </location>
     <orient unit="DEG">
@@ -254,7 +254,7 @@
     <thruster file="direct">
      <location unit="IN">
       <x>  22.11 </x>
-      <y>-586.50 </y>
+      <y>-293.50 </y>
       <z> -46.00 </z>
      </location>
      <orient unit="DEG">
@@ -265,10 +265,10 @@
     </thruster>
   </engine>
 
-   <engine file="CFM-56">
+   <engine file="cfm56_2">
     <location unit="IN">
       <x>-164.20 </x>
-      <y>-393.62 </y>
+      <y>-197.62 </y>
       <z> -77.00 </z>
     </location>
     <orient unit="DEG">
@@ -282,7 +282,7 @@
     <thruster file="direct">
      <location unit="IN">
       <x>-164.20 </x>
-      <y>-393.62 </y>
+      <y>-197.62 </y>
       <z> -77.00 </z>
      </location>
      <orient unit="DEG">
@@ -293,10 +293,10 @@
     </thruster>
   </engine>
 
-   <engine file="CFM-56">
+   <engine file="cfm56_3">
     <location unit="IN">
       <x>-164.20 </x>
-      <y> 393.62 </y>
+      <y> 197.62 </y>
       <z> -77.00 </z>
     </location>
     <orient unit="DEG">
@@ -310,7 +310,7 @@
     <thruster file="direct">
      <location unit="IN">
       <x>-164.20 </x>
-      <y> 393.62 </y>
+      <y> 197.62 </y>
       <z> -77.00 </z>
      </location>
      <orient unit="DEG">
@@ -321,10 +321,10 @@
     </thruster>
   </engine>
 
-   <engine file="CFM-56">
+   <engine file="cfm56_4">
     <location unit="IN">
       <x>  22.11 </x>
-      <y> 586.50 </y>
+      <y> 293.50 </y>
       <z> -46.00 </z>
     </location>
     <orient unit="DEG">
@@ -338,7 +338,7 @@
     <thruster file="direct">
      <location unit="IN">
       <x>  22.11 </x>
-      <y> 586.50 </y>
+      <y> 293.50 </y>
       <z> -46.00 </z>
      </location>
      <orient unit="DEG">
@@ -432,6 +432,7 @@
  <system file="pushback"/>
  <system file="fbw"/>
  <system file="fcs"/>
+ <system file="cfm56"/>
  <system file="glass-effect"/>
 
  <flight_control name="none"/>
@@ -549,9 +550,9 @@
             <independentVar lookup="row">aero/alpha-rad</independentVar>
             <tableData>
              -1.57    1.500
-             -0.26    0.022
-              0.00    0.017
-              0.26    0.022
+             -0.26    0.024
+              0.00    0.019
+              0.26    0.024
               1.57    1.500
             </tableData>
           </table>
@@ -565,7 +566,7 @@
            <property>metrics/Sw-sqft</property>
            <property>aero/cl-squared</property>
 	  			 <property>/b707/anti-ice/drag-coefficient</property> <!-- if ice is on wings -->
-           <value>0.042</value>
+           <value>0.044</value>
          </product>
     </function>
 

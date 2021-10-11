@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Boeing EC-137R Sentry (IAE V2527-A5)</description>
+  <description>Boeing EC-137R Sentry (IAE V2500)</description>
   	<long-description>
    	The Boeing EC-137R Sentry, commonly known as AWACS, is an American airborne early warning and control (AEW and C) aircraft developed by Boeing. Derived from the Boeing 707, it provides all-weather surveillance, command, control, and communications, and is mainly used by the United States Air Force and NATO. The EC-137R is distinguished by the distinctive rotating radar dome (ROTODOME) above the fuselage.
   	</long-description>
@@ -410,7 +410,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
-			<file>Aircraft/KC-137R/Nasal/gear-tilt.nas</file>
 		</b707>
 		
 		<itaf>

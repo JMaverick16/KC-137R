@@ -4,8 +4,89 @@ MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 1 1 1  shi 128  trans
 MATERIAL "black" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "buttonlights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0.33 0.33 0.33  shi 32  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 128  trans 0
+MATERIAL "ac3dmat1" rgb 0 0.501961 1  amb 0 0.501961 1  emis 0 0.501961 1  spec 0 0 0  shi 64.6737  trans 0
 OBJECT world
-kids 60
+kids 64
+OBJECT poly
+name "n1.4l"
+loc 0.000166407 0.0811017 -0.128039
+data 8
+Mesh.008
+crease 45.000000
+numvert 4
+0 -0.0137142 0.148098
+0 -0.0137142 0.146761
+0 -0.0110762 0.146761
+0 -0.0110873 0.14809
+numsurf 1
+SURF 0x30
+mat 5
+refs 4
+2 0.0771681 0.146419
+3 0.0771681 0.181706
+0 0.343129 0.181706
+1 0.343129 0.146419
+kids 0
+OBJECT poly
+name "n1.3l"
+loc 0.000166407 0.0811017 -0.0961596
+data 8
+Mesh.008
+crease 45.000000
+numvert 4
+0 -0.0137142 0.14847
+0 -0.0137142 0.14713
+0 -0.0110762 0.14713
+0 -0.0110873 0.148462
+numsurf 1
+SURF 0x30
+mat 5
+refs 4
+2 0.0771681 0.146419
+3 0.0771681 0.181706
+0 0.343129 0.181706
+1 0.343129 0.146419
+kids 0
+OBJECT poly
+name "n1.2l"
+loc 0.000166407 0.0811017 -0.0638896
+data 8
+Mesh.008
+crease 45.000000
+numvert 4
+0 -0.0137142 0.14847
+0 -0.0137142 0.14713
+0 -0.0110762 0.14713
+0 -0.0110873 0.148462
+numsurf 1
+SURF 0x30
+mat 5
+refs 4
+2 0.0771681 0.146419
+3 0.0771681 0.181706
+0 0.343129 0.181706
+1 0.343129 0.146419
+kids 0
+OBJECT poly
+name "n1.1l"
+loc 0.000166407 0.0811017 -0.0316286
+data 8
+Mesh.008
+crease 45.000000
+numvert 4
+0 -0.0137142 0.14847
+0 -0.0137142 0.14713
+0 -0.0110762 0.14713
+0 -0.0110873 0.148462
+numsurf 1
+SURF 0x30
+mat 5
+refs 4
+2 0.0771681 0.146419
+3 0.0771681 0.181706
+0 0.343129 0.181706
+1 0.343129 0.146419
+kids 0
 OBJECT poly
 name "ND.screenC"
 loc 0.000164129 0.0111064 -0.0642732

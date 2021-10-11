@@ -146,21 +146,142 @@
 		</axis>
 	</animation>
 	
+	<!-- N1 Limit -->
+	<animation>
+		<type>rotate</type>
+		<object-name>n1.1l</object-name>
+		<property>fdm/jsbsim/fadec/limit/active</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 10</ind><dep> 24</dep></entry>
+			<entry><ind> 20</ind><dep> 49</dep></entry>
+			<entry><ind> 30</ind><dep> 72</dep></entry>
+			<entry><ind> 40</ind><dep> 96</dep></entry>
+			<entry><ind> 50</ind><dep>120</dep></entry>
+			<entry><ind> 60</ind><dep>144</dep></entry>
+			<entry><ind> 70</ind><dep>168</dep></entry>
+			<entry><ind> 80</ind><dep>192</dep></entry>
+			<entry><ind> 90</ind><dep>216</dep></entry>
+			<entry><ind>100</ind><dep>241</dep></entry>
+			<entry><ind>110</ind><dep>265</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.1161660</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>n1.2l</object-name>
+		<property>fdm/jsbsim/fadec/limit/active</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 10</ind><dep> 24</dep></entry>
+			<entry><ind> 20</ind><dep> 49</dep></entry>
+			<entry><ind> 30</ind><dep> 72</dep></entry>
+			<entry><ind> 40</ind><dep> 96</dep></entry>
+			<entry><ind> 50</ind><dep>120</dep></entry>
+			<entry><ind> 60</ind><dep>144</dep></entry>
+			<entry><ind> 70</ind><dep>168</dep></entry>
+			<entry><ind> 80</ind><dep>192</dep></entry>
+			<entry><ind> 90</ind><dep>216</dep></entry>
+			<entry><ind>100</ind><dep>241</dep></entry>
+			<entry><ind>110</ind><dep>265</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0838900</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>n1.3l</object-name>
+		<property>fdm/jsbsim/fadec/limit/active</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 10</ind><dep> 24</dep></entry>
+			<entry><ind> 20</ind><dep> 49</dep></entry>
+			<entry><ind> 30</ind><dep> 72</dep></entry>
+			<entry><ind> 40</ind><dep> 96</dep></entry>
+			<entry><ind> 50</ind><dep>120</dep></entry>
+			<entry><ind> 60</ind><dep>144</dep></entry>
+			<entry><ind> 70</ind><dep>168</dep></entry>
+			<entry><ind> 80</ind><dep>192</dep></entry>
+			<entry><ind> 90</ind><dep>216</dep></entry>
+			<entry><ind>100</ind><dep>241</dep></entry>
+			<entry><ind>110</ind><dep>265</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0516165</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>n1.4l</object-name>
+		<property>fdm/jsbsim/fadec/limit/active</property>
+		<interpolation>
+			<entry><ind>  0</ind><dep>  0</dep></entry>
+			<entry><ind> 10</ind><dep> 24</dep></entry>
+			<entry><ind> 20</ind><dep> 49</dep></entry>
+			<entry><ind> 30</ind><dep> 72</dep></entry>
+			<entry><ind> 40</ind><dep> 96</dep></entry>
+			<entry><ind> 50</ind><dep>120</dep></entry>
+			<entry><ind> 60</ind><dep>144</dep></entry>
+			<entry><ind> 70</ind><dep>168</dep></entry>
+			<entry><ind> 80</ind><dep>192</dep></entry>
+			<entry><ind> 90</ind><dep>216</dep></entry>
+			<entry><ind>100</ind><dep>241</dep></entry>
+			<entry><ind>110</ind><dep>265</dep></entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0193569</y-m>
+			<z-m>0.0817098</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
 	<!-- EGT -->
 	<animation>
 		<type>rotate</type>
 		<object-name>egt.1</object-name>
 		<property>engines/engine[0]/egt-actual</property>
 		<interpolation>
-			<entry><ind>  0</ind><dep>  0</dep></entry>
-			<entry><ind>100</ind><dep> 35</dep></entry>
-			<entry><ind>200</ind><dep> 69</dep></entry>
-			<entry><ind>300</ind><dep>102</dep></entry>
-			<entry><ind>400</ind><dep>136</dep></entry>
-			<entry><ind>500</ind><dep>169</dep></entry>
-			<entry><ind>600</ind><dep>202</dep></entry>
-			<entry><ind>700</ind><dep>235</dep></entry>
-			<entry><ind>800</ind><dep>269</dep></entry>
+			<entry><ind>   0</ind><dep>  0</dep></entry>
+			<entry><ind> 100</ind><dep> 24</dep></entry>
+			<entry><ind> 200</ind><dep> 49</dep></entry>
+			<entry><ind> 300</ind><dep> 72</dep></entry>
+			<entry><ind> 400</ind><dep> 96</dep></entry>
+			<entry><ind> 500</ind><dep>120</dep></entry>
+			<entry><ind> 600</ind><dep>144</dep></entry>
+			<entry><ind> 700</ind><dep>168</dep></entry>
+			<entry><ind> 800</ind><dep>192</dep></entry>
+			<entry><ind> 900</ind><dep>216</dep></entry>
+			<entry><ind>1000</ind><dep>241</dep></entry>
+			<entry><ind>1100</ind><dep>265</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -178,15 +299,18 @@
 		<object-name>egt.2</object-name>
 		<property>engines/engine[1]/egt-actual</property>
 		<interpolation>
-			<entry><ind>  0</ind><dep>  0</dep></entry>
-			<entry><ind>100</ind><dep> 35</dep></entry>
-			<entry><ind>200</ind><dep> 69</dep></entry>
-			<entry><ind>300</ind><dep>102</dep></entry>
-			<entry><ind>400</ind><dep>136</dep></entry>
-			<entry><ind>500</ind><dep>169</dep></entry>
-			<entry><ind>600</ind><dep>202</dep></entry>
-			<entry><ind>700</ind><dep>235</dep></entry>
-			<entry><ind>800</ind><dep>269</dep></entry>
+			<entry><ind>   0</ind><dep>  0</dep></entry>
+			<entry><ind> 100</ind><dep> 24</dep></entry>
+			<entry><ind> 200</ind><dep> 49</dep></entry>
+			<entry><ind> 300</ind><dep> 72</dep></entry>
+			<entry><ind> 400</ind><dep> 96</dep></entry>
+			<entry><ind> 500</ind><dep>120</dep></entry>
+			<entry><ind> 600</ind><dep>144</dep></entry>
+			<entry><ind> 700</ind><dep>168</dep></entry>
+			<entry><ind> 800</ind><dep>192</dep></entry>
+			<entry><ind> 900</ind><dep>216</dep></entry>
+			<entry><ind>1000</ind><dep>241</dep></entry>
+			<entry><ind>1100</ind><dep>265</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -204,15 +328,18 @@
 		<object-name>egt.3</object-name>
 		<property>engines/engine[2]/egt-actual</property>
 		<interpolation>
-			<entry><ind>  0</ind><dep>  0</dep></entry>
-			<entry><ind>100</ind><dep> 35</dep></entry>
-			<entry><ind>200</ind><dep> 69</dep></entry>
-			<entry><ind>300</ind><dep>102</dep></entry>
-			<entry><ind>400</ind><dep>136</dep></entry>
-			<entry><ind>500</ind><dep>169</dep></entry>
-			<entry><ind>600</ind><dep>202</dep></entry>
-			<entry><ind>700</ind><dep>235</dep></entry>
-			<entry><ind>800</ind><dep>269</dep></entry>
+			<entry><ind>   0</ind><dep>  0</dep></entry>
+			<entry><ind> 100</ind><dep> 24</dep></entry>
+			<entry><ind> 200</ind><dep> 49</dep></entry>
+			<entry><ind> 300</ind><dep> 72</dep></entry>
+			<entry><ind> 400</ind><dep> 96</dep></entry>
+			<entry><ind> 500</ind><dep>120</dep></entry>
+			<entry><ind> 600</ind><dep>144</dep></entry>
+			<entry><ind> 700</ind><dep>168</dep></entry>
+			<entry><ind> 800</ind><dep>192</dep></entry>
+			<entry><ind> 900</ind><dep>216</dep></entry>
+			<entry><ind>1000</ind><dep>241</dep></entry>
+			<entry><ind>1100</ind><dep>265</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -230,15 +357,18 @@
 		<object-name>egt.4</object-name>
 		<property>engines/engine[3]/egt-actual</property>
 		<interpolation>
-			<entry><ind>  0</ind><dep>  0</dep></entry>
-			<entry><ind>100</ind><dep> 35</dep></entry>
-			<entry><ind>200</ind><dep> 69</dep></entry>
-			<entry><ind>300</ind><dep>102</dep></entry>
-			<entry><ind>400</ind><dep>136</dep></entry>
-			<entry><ind>500</ind><dep>169</dep></entry>
-			<entry><ind>600</ind><dep>202</dep></entry>
-			<entry><ind>700</ind><dep>235</dep></entry>
-			<entry><ind>800</ind><dep>269</dep></entry>
+			<entry><ind>   0</ind><dep>  0</dep></entry>
+			<entry><ind> 100</ind><dep> 24</dep></entry>
+			<entry><ind> 200</ind><dep> 49</dep></entry>
+			<entry><ind> 300</ind><dep> 72</dep></entry>
+			<entry><ind> 400</ind><dep> 96</dep></entry>
+			<entry><ind> 500</ind><dep>120</dep></entry>
+			<entry><ind> 600</ind><dep>144</dep></entry>
+			<entry><ind> 700</ind><dep>168</dep></entry>
+			<entry><ind> 800</ind><dep>192</dep></entry>
+			<entry><ind> 900</ind><dep>216</dep></entry>
+			<entry><ind>1000</ind><dep>241</dep></entry>
+			<entry><ind>1100</ind><dep>265</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -542,7 +672,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.1161660</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -566,7 +696,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0838900</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -590,7 +720,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0516165</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -614,7 +744,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0193569</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -638,7 +768,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.1161660</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -662,7 +792,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0838900</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -686,7 +816,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0516165</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -710,7 +840,7 @@
 		<offsets>
 			<x-m>0.0004</x-m>
 			<y-m>-0.0193569</y-m>
-			<z-m>0.0566897</z-m>
+			<z-m>0.0857098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
@@ -795,7 +925,9 @@
 		<object-name>disk12</object-name>
 		<object-name>disk13</object-name>
 		<object-name>n1.1</object-name>
+		<object-name>n1.1l</object-name>
 		<object-name>n11</object-name>
+		<object-name>n1lim1</object-name>
 		<object-name>egt.1</object-name>
 		<object-name>n2.1</object-name>
 		<object-name>egt1</object-name>
@@ -818,7 +950,9 @@
 		<object-name>disk22</object-name>
 		<object-name>disk23</object-name>
 		<object-name>n1.2</object-name>
+		<object-name>n1.2l</object-name>
 		<object-name>n12</object-name>
+		<object-name>n1lim2</object-name>
 		<object-name>egt.2</object-name>
 		<object-name>n2.2</object-name>
 		<object-name>egt2</object-name>
@@ -841,7 +975,9 @@
 		<object-name>disk32</object-name>
 		<object-name>disk33</object-name>
 		<object-name>n1.3</object-name>
+		<object-name>n1.3l</object-name>
 		<object-name>n13</object-name>
+		<object-name>n1lim3</object-name>
 		<object-name>egt.3</object-name>
 		<object-name>n2.3</object-name>
 		<object-name>egt3</object-name>
@@ -864,7 +1000,9 @@
 		<object-name>disk42</object-name>
 		<object-name>disk43</object-name>
 		<object-name>n1.4</object-name>
+		<object-name>n1.4l</object-name>
 		<object-name>n14</object-name>
+		<object-name>n1lim4</object-name>
 		<object-name>egt.4</object-name>
 		<object-name>n2.4</object-name>
 		<object-name>egt4</object-name>
@@ -910,7 +1048,7 @@
 		<name>n11</name>
 		<offsets>
 			<x-m>0.00018</x-m>
-			<y-m>-0.1070</y-m>
+			<y-m>-0.107</y-m>
 			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -931,10 +1069,34 @@
 	</text>
 	
 	<text>
+		<name>n1lim1</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.105</y-m>
+			<z-m>0.0778</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>fdm/jsbsim/fadec/limit/active</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
 		<name>XX1</name>
 		<offsets>
 			<x-m>0.00018</x-m>
-			<y-m>-0.1070</y-m>
+			<y-m>-0.107</y-m>
 			<z-m>0.0708</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -957,7 +1119,7 @@
 		<name>XX1</name>
 		<offsets>
 			<x-m>0.00018</x-m>
-			<y-m>-0.1161470</y-m>
+			<y-m>-0.116147</y-m>
 			<z-m>0.0817098</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -994,6 +1156,30 @@
 		<draw-alignment type="bool">false</draw-alignment>
 		<draw-boundingbox type="bool">false</draw-boundingbox>
 		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>n1lim2</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0727</y-m>
+			<z-m>0.0778</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>fdm/jsbsim/fadec/limit/active</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
 		<font-resolution>
 			<width type="int">32</width>
 			<height type="int">32</height>
@@ -1071,6 +1257,30 @@
 	</text>
 	
 	<text>
+		<name>n1lim3</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0405</y-m>
+			<z-m>0.0778</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>fdm/jsbsim/fadec/limit/active</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
 		<name>XX3</name>
 		<offsets>
 			<x-m>0.00018</x-m>
@@ -1134,6 +1344,30 @@
 		<draw-alignment type="bool">false</draw-alignment>
 		<draw-boundingbox type="bool">false</draw-boundingbox>
 		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>n1lim4</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.0082</y-m>
+			<z-m>0.0778</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.1f</format>
+		<property>fdm/jsbsim/fadec/limit/active</property>
+		<truncate type="bool">false</truncate>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.004</character-size>
 		<font-resolution>
 			<width type="int">32</width>
 			<height type="int">32</height>
@@ -1824,6 +2058,108 @@
 		</font-resolution>
 	</text>
 	
+	<text>
+		<name>toga</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0670</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">THR MODE: TO/GA</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>toga</object-name>
+		<condition>
+			<equals>
+				<property>fdm/jsbsim/fadec/limit/active-int</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<text>
+		<name>mct</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0670</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">THR MODE: MCT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>mct</object-name>
+		<condition>
+			<equals>
+				<property>fdm/jsbsim/fadec/limit/active-int</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<text>
+		<name>climb</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0670</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">THR MODE: CLIMB</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>climb</object-name>
+		<condition>
+			<equals>
+				<property>fdm/jsbsim/fadec/limit/active-int</property>
+				<value>2</value>
+			</equals>
+		</condition>
+	</animation>
+	
 	<!-- Status -->
 	
 	<text>
@@ -2089,7 +2425,7 @@
 	</animation>
 	
 	<text>
-		<name>overn1lim</name>
+		<name>fadec</name>
 		<offsets>
 			<x-m>0.00018</x-m>
 			<y-m>0.0010</y-m>
@@ -2098,7 +2434,7 @@
 		<alignment>left-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
-		<format type="string">N1 OVER LIMIT</format>
+		<format type="string">FADEC</format>
 		<property>autopilot/serviceable</property>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2113,25 +2449,13 @@
 	
 	<animation>
 		<type>select</type>
-		<object-name>overn1lim</object-name>
+		<object-name>fadec</object-name>
 		<condition>
 			<or>
-				<greater-than-equals>
-					<property>engines/engine[0]/n1-actual</property>
-					<property>controls/engines/n1overlim</property>
-				</greater-than-equals>
-				<greater-than-equals>
-					<property>engines/engine[1]/n1-actual</property>
-					<property>controls/engines/n1overlim</property>
-				</greater-than-equals>
-				<greater-than-equals>
-					<property>engines/engine[2]/n1-actual</property>
-					<property>controls/engines/n1overlim</property>
-				</greater-than-equals>
-				<greater-than-equals>
-					<property>engines/engine[3]/n1-actual</property>
-					<property>controls/engines/n1overlim</property>
-				</greater-than-equals>
+				<equals>
+					<property>fdm/jsbsim/fadec/unused</property>
+					<value>0</value>
+				</equals>
 				<equals>
 					<property>controls/test/warn-knob</property>
 					<value>1.0</value>
@@ -2288,6 +2612,14 @@
 		<type>material</type> 
 		<object-name>spdbrka</object-name>
 		<object-name>boomdn</object-name>
+		<object-name>fadec</object-name>
+		<object-name>n1lim1</object-name>
+		<object-name>n1lim2</object-name>
+		<object-name>n1lim3</object-name>
+		<object-name>n1lim4</object-name>
+		<object-name>toga</object-name>
+		<object-name>mct</object-name>
+		<object-name>climb</object-name>
 		<diffuse>
 			<red>0</red>
 			<green>0.75</green>
@@ -2343,8 +2675,6 @@
 	<animation>
 		<type>material</type>
 		<object-name>ensh</object-name>
-		<object-name>overeprlim</object-name>
-		<object-name>overn1lim</object-name>
 		<object-name>bankoverlin</object-name>
 		<object-name>manpitch</object-name>
 		<object-name>manroll</object-name>
@@ -2585,11 +2915,11 @@
 		</condition>
 	</animation>
 	
-<!-- LoD -->
- <animation>
-   <type>range</type>
-   <min-m>0</min-m>
-   <max-m>20</max-m>
- </animation>
+	<!-- LoD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20</max-m>
+	</animation>
 
 </PropertyList>

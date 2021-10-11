@@ -46,10 +46,7 @@
 			<path>Aircraft/KC-137R/Systems/it-autothrust.xml</path>
 		</autopilot>
 		<autopilot n="2">
-			<path>Aircraft/KC-137R/Systems/engine-timing.xml</path>
-		</autopilot>
-		<autopilot n="3">
-			<path>Aircraft/KC-137R/Systems/extra-rules.xml</path>
+			<path>Aircraft/KC-137R/Systems/libraries.xml</path>
 		</autopilot>
 		<property-rule n="101">	
 			<path>Aircraft/KC-137R/Systems/sound_calc.xml</path>

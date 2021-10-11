@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Northrop Grumman E-8R Joint STARS (IAE V2527-A5)</description>
+  <description>Northrop Grumman E-8R Joint STARS (IAE V2500)</description>
   <long-description>
    The Northrop Grumman E-8R Joint Surveillance Target Attack Radar System (Joint STARS) is a United States Air Force airborne ground surveillance, battle management and command and control aircraft. It tracks ground vehicles and some aircraft, collects imagery, and relays tactical pictures to ground and air theater commanders. The aircraft is operated by both active duty Air Force and Air National Guard units.
   </long-description>
@@ -426,7 +426,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
-			<file>Aircraft/KC-137R/Nasal/gear-tilt.nas</file>
 		</b707>
 		
 		<itaf>

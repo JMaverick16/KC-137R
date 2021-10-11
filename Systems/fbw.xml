@@ -42,6 +42,13 @@
 			</test>
 		</switch>
 		
+		<switch name="aero/alpha-deg-fixed">
+			<default value="0"/>
+			<test value="aero/alpha-deg">
+				gear/unit[0]/WOW eq 0
+			</test>
+		</switch>
+		
 		<switch name="fbw/roll/gain-switch">
 			<default value="0"/>
 			<test logic="OR" value="1">
@@ -64,15 +71,6 @@
 			<test logic="OR" value="1">
 				/it-autoflight/output/ap1 eq 1
 				/it-autoflight/output/ap2 eq 1
-			</test>
-		</switch>
-		
-		<switch name="fbw/instrumented-alpha">
-			<default value="aero/alpha-deg"/>
-			<test logic="AND" value="0">
-				gear/unit[0]/WOW eq 1
-				gear/unit[1]/WOW eq 1
-				gear/unit[2]/WOW eq 1
 			</test>
 		</switch>
 		
@@ -250,7 +248,7 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fbw/yaw/aileron-trim-nul">
+		<fcs_function name="fbw/roll/aileron-trim-nul">
 			<function>
 				<table>
 					<independentVar lookup="row">/controls/flight/aileron-trim</independentVar>
@@ -284,6 +282,8 @@
 				fbw/ap/enabled ne 1
 				velocities/p-rad_sec lt 0.0174533
 				velocities/p-rad_sec gt -0.0174533
+				attitude/roll-rad ge -0.6195919
+				attitude/roll-rad le 0.6195919
 			</test>
 		</switch>
 		
@@ -314,9 +314,24 @@
 			</clipto>
 		</pure_gain>
 		
+		<fcs_function name="fbw/roll/overbank">
+			<function>
+				<table>
+					<independentVar lookup="row">attitude/roll-rad</independentVar>
+					<tableData>
+						-1.570800  0.261799
+						-0.785398  0.000000
+						 0.785398  0.000000
+						 1.570800 -0.261799
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
 		<summer name="fbw/roll/rate-sum">
 			<input>fbw/roll/rate-command</input>
 			<input>fbw/roll/rad-rate</input>
+			<input>fbw/roll/overbank</input>
 		</summer>
 		
 		<switch name="fbw/roll/rate-switch">
@@ -328,18 +343,14 @@
 		
 		<lag_filter name="fbw/roll/rate-demand">
 			<input>fbw/roll/rate-switch</input>
-			<c1>11.2</c1>
+			<c1>10.5</c1>
 			<output>fbw/roll/rate-feedback</output>
 		</lag_filter>
 		
-		<fcs_function name="fbw/roll/rate-error">
-			<function>
-				<difference>
-					<toradians><property>/orientation/roll-rate-degps</property></toradians>
-					<property>fbw/roll/rate-demand</property>
-				</difference>
-			</function>
-		</fcs_function>
+		<summer name="fbw/roll/rate-error">
+			<input>velocities/p-rad_sec</input>
+			<input>-fbw/roll/rate-demand</input>
+		</summer>
 		
 		<switch name="fbw/roll/trigger">
 			<default value="0"/>
@@ -461,19 +472,12 @@
 			</clipto>
 		</scheduled_gain>
 		
-		<switch name="fbw/pitch/alpha-switched">
-			<default value="aero/alpha-deg"/>
-			<test value="0">
-				position/wow eq 1
-			</test>
-		</switch>
-		
 		<lag_filter name="fbw/pitch/alpha-lag">
-			<input>fbw/pitch/alpha-switched</input>
+			<input>aero/alpha-deg-fixed</input>
 			<c1>10</c1>
 		</lag_filter>
 		
-		<fcs_function name="fbw/pitch/alpha-pitch-feed">
+		<fcs_function name="fbw/pitch/alpha-feed">
 			<function>
 				<table>
 					<independentVar lookup="row">fbw/pitch/alpha-lag</independentVar>
@@ -498,7 +502,7 @@
 			</function>
 		</fcs_function>
 		
-		<pure_gain name="fbw/pitch/elevator-pitch-feed">
+		<pure_gain name="fbw/pitch/elevator-feed">
 			<input>fbw/pitch/elevator-nul</input>
 			<gain>1.0</gain>
 			<clipto>
@@ -507,9 +511,24 @@
 			</clipto>
 		</pure_gain>
 		
+		<fcs_function name="fbw/pitch/overpitch">
+			<function>
+				<table>
+					<independentVar lookup="row">attitude/pitch-rad</independentVar>
+					<tableData>
+						-1.047200 -0.75
+						-0.349066  0.00
+						 0.610865  0.00
+						 1.047200  0.75
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
 		<summer name="fbw/pitch/input-sum">
-			<input>fbw/pitch/elevator-pitch-feed</input>
-			<input>fbw/pitch/alpha-pitch-feed</input>
+			<input>fbw/pitch/elevator-feed</input>
+			<input>fbw/pitch/alpha-feed</input>
+			<input>fbw/pitch/overpitch</input>
 		</summer>
 		
 		<fcs_function name="fbw/pitch/g-command">
@@ -536,7 +555,7 @@
 		
 		<lag_filter name="fbw/pitch/g-command-lag">
 			<input>fbw/pitch/g-command</input>
-			<c1>9.6</c1>
+			<c1>9.5</c1>
 		</lag_filter>
 		
 		<fcs_function name="fbw/pitch/g-ap">
@@ -852,12 +871,12 @@
 		
 		<lag_filter name="fbw/yaw/rudder-lag">
 			<input>fbw/yaw/rudder-switched</input>
-			<c1>7.4</c1>
+			<c1>3.0</c1>
 		</lag_filter>
 		
 		<pure_gain name="fbw/yaw/beta-cmd">
 			<input>fbw/yaw/rudder-lag</input>
-			<gain>-0.174533</gain>
+			<gain>-0.261799</gain>
 		</pure_gain>
 		
 		<summer name="fbw/yaw/beta-error">
