@@ -435,7 +435,7 @@ Modified by Octal450 for KC-137R
         <object-name>FDpitch</object-name>
         <object-name>FDpitch_rembrandt</object-name>
         <property>it-autoflight/fd/pitch-bar</property>
-        <factor>0.0005</factor>
+        <factor>0.002</factor>
         <axis>
             <x>0</x>
             <y>0</y>
@@ -448,7 +448,7 @@ Modified by Octal450 for KC-137R
         <object-name>FDroll</object-name>
         <object-name>FDroll_rembrandt</object-name>
         <property>it-autoflight/fd/roll-bar</property>
-        <factor>0.0002</factor>
+        <factor>0.0006</factor>
         <axis>
             <x>0</x>
             <y>1</y>
