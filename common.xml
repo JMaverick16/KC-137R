@@ -318,7 +318,7 @@
 			<custom-fma>0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented --> 
 			<disable-final>1</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
 			<fd-starts-on>1</fd-starts-on> <!-- Enable/Disable Flight Director being on by default -->
-			<hdg-hld-separate>0</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
+			<hdg-hld-separate>1</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
 			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 			<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
 			<retard-ft>30</retard-ft> <!-- Enable Thrust Retard -->
