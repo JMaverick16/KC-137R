@@ -355,6 +355,7 @@
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
+			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="1">
 			<on-fire type="bool">false</on-fire>
@@ -364,6 +365,7 @@
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
+			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="2">
 			<on-fire type="bool">false</on-fire>
@@ -373,6 +375,7 @@
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
+			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="3">
 			<on-fire type="bool">false</on-fire>
@@ -382,6 +385,7 @@
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
+			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 	</engines>
  

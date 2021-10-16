@@ -795,19 +795,19 @@ var startup = func
 			}else{
 				screen.log.write("WARNING: startup interrupted before ENGINE 3 ", 1, 0, 0);
 			}
-		}, t); t += 6.0;
+		}, t); t += 10.0;
 		settimer(func{
 			if(step == 9 and auto_procedure.getValue()){
 				setprop("controls/engines/engine[2]/cutoff", 0);
 			}
-		}, t); t += 29.5;	
+		}, t); t += 44.5;	
 		settimer( func{
 			if(step == 9 and auto_procedure.getValue()){
 				setprop("b707/start/startercover[2]", 0);
 				toggle_switch3();
 				step = 10;
 			}
-		}, t); t += 0.5; # 30 sec per engine
+		}, t); t += 0.5; # 45 sec per engine
 
 		settimer( func{	  
 			if(step == 10 and auto_procedure.getValue()){
@@ -816,25 +816,25 @@ var startup = func
 			}
 		}, t); t += 0.5;
 		settimer( func{
-			if(step == 10 and auto_procedure.getValue() and run3.getBoolValue()){
+			if(step == 10 and auto_procedure.getValue() and getprop("/engines/engine[2]/n2") >= 43){
 				setprop("controls/engines/engine[3]/starter", 1);
 				toggle_switch2();
 			}else{
 				screen.log.write("WARNING: startup interrupted at ENGINE 3 ", 1, 0, 0);
 			}
-		}, t); t += 6.0;
+		}, t); t += 10.0;
 		settimer(func{
 			if(step == 10 and auto_procedure.getValue()){
 				setprop("controls/engines/engine[3]/cutoff", 0);
 			}
-		}, t); t += 29.5;	
+		}, t); t += 44.5;	
 		settimer( func{
 			if(step == 10 and auto_procedure.getValue()){
 				setprop("b707/start/startercover[3]", 0);
 				toggle_switch3();
 				step = 11;
 			}
-		}, t); t += 0.5; # 30 sec per engine 	
+		}, t); t += 0.5; # 45 sec per engine 	
 	
 		settimer( func{	  
 			if(step == 11 and auto_procedure.getValue()){
@@ -843,25 +843,25 @@ var startup = func
 			}
 		}, t); t += 0.5;
 		settimer( func{
-			if(step == 11 and auto_procedure.getValue() and run3.getBoolValue() and run4.getBoolValue()){
+			if(step == 11 and auto_procedure.getValue() and getprop("/engines/engine[2]/n2") >= 43 and getprop("/engines/engine[3]/n2") >= 43){
 				setprop("controls/engines/engine[1]/starter", 1);
 				toggle_switch2();
 			}else{
 				screen.log.write("WARNING: startup interrupted at ENGINE 4 ", 1, 0, 0);
 			}
-		}, t); t += 6.0;
+		}, t); t += 10.0;
 		settimer(func{
 			if(step == 11 and auto_procedure.getValue()){
 				setprop("controls/engines/engine[1]/cutoff", 0);
 			}
-		}, t); t += 29.5;	
+		}, t); t += 44.5;	
 		settimer( func{
 			if(step == 11 and auto_procedure.getValue()){
 				setprop("b707/start/startercover[1]", 0);
 				toggle_switch3();
 				step = 12;
 			}
-		}, t); t += 0.5; # 30 sec per engine 
+		}, t); t += 0.5; # 45 sec per engine 
 
 		settimer( func{	  
 			if(step == 12 and auto_procedure.getValue()){
@@ -870,18 +870,18 @@ var startup = func
 			}
 		}, t); t += 0.5;
 		settimer( func{
-			if(step == 12 and auto_procedure.getValue() and run2.getBoolValue() and run3.getBoolValue() and run4.getBoolValue()){
+			if(step == 12 and auto_procedure.getValue() and getprop("/engines/engine[1]/n2") >= 43 and getprop("/engines/engine[2]/n2") >= 43 and getprop("/engines/engine[3]/n2") >= 43){
 				setprop("controls/engines/engine[0]/starter", 1);
 				toggle_switch2();
 			}else{
 				screen.log.write("WARNING: startup interrupted at ENGINE 2 ", 1, 0, 0);
 			}
-		}, t); t += 6.0;
+		}, t); t += 10.0;
 		settimer(func{
 			if(step == 12 and auto_procedure.getValue()){
 				setprop("controls/engines/engine[0]/cutoff", 0);
 			}
-		}, t); t += 29.5;
+		}, t); t += 44.5;
 		settimer( func{
 			if(step == 12 and auto_procedure.getValue()){
 				setprop("b707/start/startercover[0]", 0);
@@ -889,7 +889,7 @@ var startup = func
 				screen.log.write("Synchronisation of the engines now - have a look to the engineer panel", 1, 1, 1);
 				step = 13;
 			}
-		}, t); t += 1.5; # 30 sec per engine 
+		}, t); t += 1.5; # 45 sec per engine 
 		 
 		# synchronized the generator one and select this engine as ess-pwr
 	 	settimer( func{		

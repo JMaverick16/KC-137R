@@ -2343,7 +2343,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%5.0f</format>
-		<property>engines/engine[0]/fuel-flow_pph</property>
+		<property>engines/engine[0]/ff-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2390,7 +2390,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%5.0f</format>
-		<property>engines/engine[1]/fuel-flow_pph</property>
+		<property>engines/engine[1]/ff-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2437,7 +2437,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%5.0f</format>
-		<property>engines/engine[2]/fuel-flow_pph</property>
+		<property>engines/engine[2]/ff-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -2484,7 +2484,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%5.0f</format>
-		<property>engines/engine[3]/fuel-flow_pph</property>
+		<property>engines/engine[3]/ff-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
