@@ -369,11 +369,11 @@
 			<ki>fbw/roll/i-gain</ki>
 			<kd>fbw/roll/d-gain</kd>
 			<trigger>fbw/roll/trigger</trigger>
+			<output>fbw/roll/pid</output>
 			<clipto>
 				<min>-1.0</min>
 				<max>1.0</max>
 			</clipto>
-			<output>fbw/roll/pid</output>
 		</pid>
 		
 		<pure_gain name="fbw/mixer/roll/computer-demand">
@@ -625,11 +625,11 @@
 			<ki>fbw/pitch/g-i-gain</ki>
 			<kd>0.0</kd>
 			<trigger>fbw/pitch/g-trigger</trigger>
+			<output>fbw/pitch/q-demand</output>
 			<clipto>
 				<min>-1.0</min>
 				<max>1.0</max>
 			</clipto>
-			<output>fbw/pitch/q-demand</output>
 		</pid>
 		
 		<fcs_function name="fbw/pitch/q-error">
@@ -898,11 +898,11 @@
 			<kp>0.0</kp>
 			<ki>0.0</ki>
 			<kd>fbw/yaw/beta-d-gain</kd>
+			<output>fbw/yaw/beta-d</output>
 			<clipto>
 				<min>-0.5</min>
 				<max>0.5</max>
 			</clipto>
-			<output>fbw/yaw/beta-d</output>
 		</pid>
 		
 		<summer name="fbw/yaw/beta-pd">
