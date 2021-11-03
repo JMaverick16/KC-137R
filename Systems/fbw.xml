@@ -16,7 +16,6 @@
 	<property value="1">fbw/mixer/passive-gain-feedback</property>
 	
 	<property value="0">fbw/roll/pid</property>
-	<property value="0">fbw/roll/rate-feedback</property>
 	<property value="0">fbw/pitch/q-demand</property>
 	<property value="0">fbw/yaw/beta-d</property>
 	
@@ -196,25 +195,10 @@
 			</function>
 		</fcs_function>
 		
-		<switch name="fbw/mixer/rate-limit">
-			<default value="fbw/mixer/rate-limit"/>
-			<test logic="AND" value="0.5"> <!-- 2 seconds -->
-				position/wow eq 1
-				fbw/mixer/passive-gain-feedback eq 1
-			</test>
-			<test logic="AND" value="100"> <!-- Unlimited -->
-				position/wow eq 1
-				fbw/mixer/passive-gain-feedback ne 1
-			</test>
-			<test logic="AND" value="100"> <!-- Unlimited -->
-				position/wow eq 0
-				fbw/mixer/passive-gain-feedback eq 0
-			</test>
-		</switch>
-		
 		<actuator name="fbw/mixer/passive-gain">
 			<input>position/wow</input>
-			<rate_limit>fbw/mixer/rate-limit</rate_limit>
+			<rate_limit sense="incr">100</rate_limit> <!-- Instant -->
+			<rate_limit sense="decr">0.5</rate_limit> <!-- 2 seconds -->
 			<output>fbw/mixer/passive-gain-feedback</output>
 		</actuator>
 		
@@ -227,6 +211,15 @@
 						1  0
 					</tableData>
 				</table>
+			</function>
+		</fcs_function>
+		
+		<!-- Because we want to be attitude stable -->
+		<fcs_function name="fbw/roll/p-rad_sec">
+			<function>
+				<toradians>
+					<property>/orientation/roll-rate-degps</property>
+				</toradians>
 			</function>
 		</fcs_function>
 	
@@ -272,48 +265,6 @@
 			<gain>0.0174533</gain> <!-- DEG to RAD -->
 		</pure_gain>
 		
-		<switch name="fbw/roll/rad-hold">
-			<default value="0"/>
-			<test logic="AND" value="1">
-				fbw/roll/rate-feedback lt 0.005
-				fbw/roll/rate-feedback gt -0.005
-				position/wow eq 0
-				fbw/roll/gain-switch eq 0
-				fbw/ap/enabled ne 1
-				velocities/p-rad_sec lt 0.0174533
-				velocities/p-rad_sec gt -0.0174533
-				attitude/roll-rad ge -0.6195919
-				attitude/roll-rad le 0.6195919
-			</test>
-		</switch>
-		
-		<fcs_function name="fbw/roll/rad">
-			<function>
-				<ifthen>
-					<eq>
-						<property>fbw/roll/rad-hold</property>
-						<value>0</value>
-					</eq>
-					<property>attitude/roll-rad</property>
-					<property>fbw/roll/rad</property>
-				</ifthen>
-			</function>
-		</fcs_function>
-		
-		<summer name="fbw/roll/rad-error">
-			<input>attitude/roll-rad</input>
-			<input>-fbw/roll/rad</input>
-		</summer>
-		
-		<pure_gain name="fbw/roll/rad-rate">
-			<input>fbw/roll/rad-error</input>
-			<gain>-2.5</gain>
-			<clipto>
-				<min>-0.0872665</min>
-				<max>0.0872665</max>
-			</clipto>
-		</pure_gain>
-		
 		<fcs_function name="fbw/roll/overbank">
 			<function>
 				<table>
@@ -330,7 +281,6 @@
 		
 		<summer name="fbw/roll/rate-sum">
 			<input>fbw/roll/rate-command</input>
-			<input>fbw/roll/rad-rate</input>
 			<input>fbw/roll/overbank</input>
 		</summer>
 		
@@ -343,12 +293,11 @@
 		
 		<lag_filter name="fbw/roll/rate-demand">
 			<input>fbw/roll/rate-switch</input>
-			<c1>10.5</c1>
-			<output>fbw/roll/rate-feedback</output>
+			<c1>10</c1>
 		</lag_filter>
 		
 		<summer name="fbw/roll/rate-error">
-			<input>velocities/p-rad_sec</input>
+			<input>fbw/roll/p-rad_sec</input>
 			<input>-fbw/roll/rate-demand</input>
 		</summer>
 		
@@ -482,8 +431,8 @@
 				<table>
 					<independentVar lookup="row">fbw/pitch/alpha-lag</independentVar>
 					<tableData>
-						12  0.0
-						16  1.0
+						12  0
+						16  1
 					</tableData>
 				</table>
 			</function>

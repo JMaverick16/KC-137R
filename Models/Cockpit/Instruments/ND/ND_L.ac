@@ -1,12 +1,12 @@
 AC3Db
 MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
-MATERIAL "buttonlights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0.33 0.33 0.33  shi 32  trans 0
+MATERIAL "buttonlights" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 32  trans 0
 MATERIAL "black" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 OBJECT world
 kids 3
 OBJECT poly
 name "block"
-loc -6.64033e-005 -0.0052709 4.57838e-006
+loc -6.64033e-05 -0.0052709 4.57838e-06
 crease 45.000000
 numvert 56
 -0.0221725 -0.0727713 0.0236225
@@ -447,10 +447,10 @@ refs 4
 kids 0
 OBJECT poly
 name "ND.screenL"
-loc 2.83979e-005 -0.00775798 0.000156674
+loc 2.83979e-05 -0.00775798 0.000156674
 data 10
 ND.screenL
-texture "../../screen.png"
+texture "screen.png"
 crease 30.000002
 numvert 4
 0 0.070884 -0.0667488
@@ -462,8 +462,8 @@ SURF 0x0
 mat 1
 refs 4
 0 1.00067 0.999407
-3 4.45843e-005 0.999407
-2 4.45843e-005 0.000756443
+3 4.45843e-05 0.999407
+2 4.45843e-05 0.000756443
 1 1.00067 0.000756443
 kids 0
 OBJECT poly
