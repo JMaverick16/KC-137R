@@ -64,14 +64,6 @@ var update_fbw = func {
 			setprop("/it-fbw/man-pitch-btn", 1);
 		}
 	}
-	if (getprop("/it-fbw/pitch-disable") == 1 or getprop("/it-fbw/roll-disable") == 1) {
-		if (getprop("/it-autoflight/output/ap1") == 1) {
-			setprop("/it-autoflight/input/ap1", 0);
-		}
-		if (getprop("/it-autoflight/output/ap2") == 1) {
-			setprop("/it-autoflight/input/ap2", 0);
-		}
-	}
 	
 	if (getprop("/it-autoflight/output/ap1") == 1 or getprop("/it-autoflight/output/ap2") == 1) {
 		if (getprop("/controls/flight/aileron") > 0.2 or getprop("/controls/flight/aileron") < -0.2 or getprop("/controls/flight/elevator") > 0.2 or getprop("/controls/flight/elevator") < -0.2) {

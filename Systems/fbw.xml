@@ -5,8 +5,6 @@
 
 <system name="KC-137R: FBW">
 	
-	<property value="0">/it-fbw/roll-disable</property>
-	<property value="0">/it-fbw/pitch-disable</property>
 	<property value="0">/it-autoflight/internal/roll-rate</property>
 	<property value="0">/it-autoflight/internal/pitch-rate</property>
 	<property value="1">fbw/mixer/passive-gain-feedback</property>

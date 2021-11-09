@@ -3,8 +3,8 @@
 
 # Init
 var gmeter_init = func {
-	setprop("/gmeter/min", 1);
-	setprop("/gmeter/max", 1);
+	setprop("/gmeter/min", -0.5);
+	setprop("/gmeter/max", 2.5);
 	gmeter_loop();
 	print("GMETER ... FINE!");
 }
