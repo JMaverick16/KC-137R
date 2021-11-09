@@ -190,7 +190,7 @@
       <command>property-adjust</command>
       <property>it-autoflight/input/kts</property>
       <step>1</step>
-      <min>0</min>
+      <min>100</min>
       <max>380</max>
       <wrap>false</wrap>
     </binding>
@@ -206,7 +206,7 @@
       <command>property-adjust</command>
       <property>it-autoflight/input/kts</property>
       <step>-1</step>
-      <min>0</min>
+      <min>100</min>
       <max>380</max>
       <wrap>false</wrap>
     </binding>
@@ -223,7 +223,7 @@
       <command>property-adjust</command>
       <property>it-autoflight/input/mach</property>
       <step>0.01</step>
-      <min>0.60</min>
+      <min>0.50</min>
       <max>0.92</max>
       <wrap>false</wrap>
     </binding>
@@ -239,7 +239,7 @@
       <command>property-adjust</command>
       <property>it-autoflight/input/mach</property>
       <step>-0.01</step>
-      <min>0.60</min>
+      <min>0.50</min>
       <max>0.92</max>
       <wrap>false</wrap>
     </binding>

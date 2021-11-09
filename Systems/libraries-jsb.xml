@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<!-- KC-137R FBW -->
+<!-- Copyright (c) 2021 Josh Davidson (Octal450) -->
+
+<system name="KC-137R: Common">
+	
+	<property value="0">zero</property>
+	
+	<channel name="Libraries">
+		
+		<switch name="position/wow">
+			<default value="0"/>
+			<test logic="OR" value="1">
+				gear/unit[0]/WOW eq 1
+				gear/unit[1]/WOW eq 1
+				gear/unit[2]/WOW eq 1
+			</test>
+		</switch>
+		
+		<switch name="aero/alpha-deg-fixed">
+			<default value="0"/>
+			<test value="aero/alpha-deg">
+				gear/unit[0]/WOW eq 0
+			</test>
+		</switch>
+	
+	</channel>
+
+</system>

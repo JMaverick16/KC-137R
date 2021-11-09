@@ -430,6 +430,8 @@
  </propulsion> 
  
  <system file="pushback"/>
+ <system file="libraries-jsb"/>
+ <system file="cws"/>
  <system file="fbw"/>
  <system file="fcs"/>
  <system file="v2500"/>

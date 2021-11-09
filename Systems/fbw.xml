@@ -5,17 +5,15 @@
 
 <system name="KC-137R: FBW">
 	
-	<property value="0">zero</property>
 	<property value="0">/it-fbw/roll-disable</property>
 	<property value="0">/it-fbw/pitch-disable</property>
 	<property value="0">/it-autoflight/internal/roll-rate</property>
 	<property value="0">/it-autoflight/internal/pitch-rate</property>
-	<property value="0">fbw/roll/aileron-rollout</property>
-	<property value="0">fbw/pitch/g-ap-cmd</property>
-	<property value="0">fbw/yaw/rudder-cmd</property>
 	<property value="1">fbw/mixer/passive-gain-feedback</property>
 	
 	<property value="0">fbw/roll/pid</property>
+	<property value="0">fbw/pitch/ap-pi</property>
+	<property value="0">fbw/pitch/g-pi</property>
 	<property value="0">fbw/pitch/q-demand</property>
 	<property value="0">fbw/yaw/beta-d</property>
 	
@@ -31,22 +29,6 @@
 	<property value="0">fbw/yaw/beta-d-gain</property>
 	
 	<channel name="Libraries">
-		
-		<switch name="position/wow">
-			<default value="0"/>
-			<test logic="OR" value="1">
-				gear/unit[0]/WOW eq 1
-				gear/unit[1]/WOW eq 1
-				gear/unit[2]/WOW eq 1
-			</test>
-		</switch>
-		
-		<switch name="aero/alpha-deg-fixed">
-			<default value="0"/>
-			<test value="aero/alpha-deg">
-				gear/unit[0]/WOW eq 0
-			</test>
-		</switch>
 		
 		<switch name="fbw/roll/gain-switch">
 			<default value="0"/>
@@ -73,14 +55,23 @@
 			</test>
 		</switch>
 		
+		<switch name="fbw/pitch/ap-gain-switch">
+			<default value="0"/>
+			<test logic="OR" value="1">
+				fbw/pitch/gain-switch gt 0
+				fbw/ap/enabled eq 0
+				gear/unit[0]/WOW eq 1
+			</test>
+		</switch>
+		
 		<fcs_function name="fbw/roll/p-gain">
 			<function>
 				<table>
 					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
-						     0    1  
-						140 -5.0  0.0
+						     0    1
+						120 -6.0  0.0
 						400 -3.5  0.0
 					</tableData>
 				</table>
@@ -94,7 +85,7 @@
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
 						     0    1
-						140 -8.0  0.0
+						120 -8.5  0.0
 						400 -4.5  0.0
 					</tableData>
 				</table>
@@ -108,7 +99,7 @@
 					<independentVar lookup="column">fbw/roll/gain-switch</independentVar>
 					<tableData>
 						     0     1
-						140 -0.60  0.00
+						120 -0.65  0.00
 						400 -0.03  0.00
 					</tableData>
 				</table>
@@ -120,8 +111,34 @@
 				<table>
 					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<tableData>
-						140 14.0
-						400  3.5
+						120  14.8
+						400   3.5
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fbw/pitch/ap-p-gain">
+			<function>
+				<table>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
+					<tableData>
+						120 -0.3
+						400 -0.8
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fbw/pitch/ap-i-gain">
+			<function>
+				<table>
+					<independentVar lookup="row">velocities/vc-kts</independentVar>
+					<independentVar lookup="column">fbw/pitch/ap-gain-switch</independentVar>
+					<tableData>
+						     0    1
+						120 -0.2  0.0
+						400 -0.7  0.0
 					</tableData>
 				</table>
 			</function>
@@ -132,7 +149,7 @@
 				<table>
 					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<tableData>
-						140 -0.41
+						120 -0.43
 						400 -0.19
 					</tableData>
 				</table>
@@ -146,7 +163,7 @@
 					<independentVar lookup="column">fbw/pitch/gain-switch</independentVar>
 					<tableData>
 						     0     1
-						140 -0.65  0.00
+						120 -0.67  0.00
 						400 -0.41  0.00
 					</tableData>
 				</table>
@@ -160,7 +177,7 @@
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
 						     0    1
-						140 -8.5  0.0
+						120 -9.0  0.0
 						400 -2.3  0.0
 					</tableData>
 				</table>
@@ -173,9 +190,9 @@
 					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
-						     0     1
-						140 16.0  0.0
-						400  3.0  0.0
+						     0   1
+						120  17  0
+						400   3  0
 					</tableData>
 				</table>
 			</function>
@@ -187,9 +204,9 @@
 					<independentVar lookup="row">velocities/vc-kts</independentVar>
 					<independentVar lookup="column">fbw/yaw/gain-switch</independentVar>
 					<tableData>
-						     0    1
-						140 12.0  0.0
-						400  4.0  0.0
+						     0     1
+						120  12.5  0.0
+						400   4.0  0.0
 					</tableData>
 				</table>
 			</function>
@@ -271,8 +288,8 @@
 					<independentVar lookup="row">attitude/roll-rad</independentVar>
 					<tableData>
 						-1.570800  0.261799
-						-0.785398  0.000000
-						 0.785398  0.000000
+						-0.610865  0.000000
+						 0.610865  0.000000
 						 1.570800 -0.261799
 					</tableData>
 				</table>
@@ -344,9 +361,14 @@
 			</clipto>
 		</summer>
 		
+		<pure_gain name="fbw/roll/rollout-cmd">
+			<input>/orientation/roll-deg</input>
+			<gain>/it-autoflight/config/rollout/roll-kp</gain> <!-- Pull from ITAF Config -->
+		</pure_gain>
+		
 		<switch name="fbw/roll-output">
 			<default value="fbw/mixer/roll/output"/> <!-- Mix passive and active control law for transition from ground -->
-			<test logic="AND" value="fbw/roll/aileron-rollout">
+			<test logic="AND" value="fbw/roll/rollout-cmd">
 				/it-fbw/roll-disable eq 0
 				fbw/ap/enabled eq 1
 				position/wow eq 1
@@ -408,9 +430,9 @@
 		<scheduled_gain name="fbw/pitch/thetadot-feed">
 			<input>velocities/thetadot-rad_sec</input>
 			<table>
-				<independentVar lookup="row">velocities/mach</independentVar>
+				<independentVar lookup="row">velocities/vc-kts</independentVar>
 				<tableData>
-					140  0.8
+					120  0.8
 					200  1.0
 				</tableData>
 			</table>
@@ -474,10 +496,36 @@
 			</function>
 		</fcs_function>
 		
+		<switch name="fbw/pitch/flare-switch">
+			<default value="fbw/pitch/flare-switch"/>
+			<test logic="OR" value="0">
+				gear/unit[0]/WOW eq 1
+				/it-autoflight/output/vert eq 7
+			</test>
+			<test value="1">
+				/position/gear-agl-ft ge 50
+			</test>
+		</switch>
+		
+		<fcs_function name="fbw/pitch/flare">
+			<function>
+				<table>
+					<independentVar lookup="row">/position/gear-agl-ft</independentVar>
+					<independentVar lookup="column">fbw/pitch/flare-switch</independentVar>
+					<tableData>
+						    0    1
+						10  0.0  0.1
+						50  0.0  0.0
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
 		<summer name="fbw/pitch/input-sum">
 			<input>fbw/pitch/elevator-feed</input>
 			<input>fbw/pitch/alpha-feed</input>
 			<input>fbw/pitch/overpitch</input>
+			<input>fbw/pitch/flare</input>
 		</summer>
 		
 		<fcs_function name="fbw/pitch/g-command">
@@ -486,8 +534,8 @@
 					<table>
 						<independentVar lookup="row">fbw/pitch/input-sum</independentVar>
 						<independentVar lookup="column">velocities/vc-kts</independentVar>
-						<tableData>
-							      140  200
+						<tableData> <!-- Make sure you update fbw/yoke-pitch-ap-cmd -->
+							      120  200
 							-1.0  2.0  2.5
 							 0.0  1.0  1.0
 							 1.0  0.0 -0.5
@@ -507,10 +555,39 @@
 			<c1>9.5</c1>
 		</lag_filter>
 		
+		<summer name="fbw/pitch/ap-error">
+			<input>/orientation/pitch-rate-degps</input>
+			<input>-/it-autoflight/internal/pitch-rate</input>
+		</summer>
+		
+		<switch name="fbw/pitch/ap-trigger">
+			<default value="0"/>
+			<test value="-1">
+				fbw/pitch/ap-gain-switch gt 0
+			</test>
+			<test logic="OR" value="1">
+				fbw/pitch/ap-pi le -0.999
+				fbw/pitch/ap-pi ge 0.999
+			</test>
+		</switch>
+		
+		<pid name="fbw/pitch/ap-pi-v">
+			<input>fbw/pitch/ap-error</input>
+			<kp>fbw/pitch/ap-p-gain</kp>
+			<ki>fbw/pitch/ap-i-gain</ki>
+			<kd>0.0</kd>
+			<trigger>fbw/pitch/ap-trigger</trigger>
+			<output>fbw/pitch/ap-pi</output>
+			<clipto>
+				<min>-1.0</min>
+				<max>1.0</max>
+			</clipto>
+		</pid>
+		
 		<fcs_function name="fbw/pitch/g-ap">
 			<function>
 				<sum>
-					<property>fbw/pitch/g-ap-cmd</property>
+					<property>fbw/pitch/ap-pi</property>
 					<value>1</value>
 				</sum>
 			</function>
@@ -531,7 +608,7 @@
 		<pure_gain name="fbw/pitch/roll-clipped">
 			<input>attitude/roll-rad</input>
 			<gain>1.0</gain>
-			<clipto> <!-- +/- 35.5 degrees, after that it stops compensating G -->
+			<clipto> <!-- +/- 35 degrees, after that it stops compensating G -->
 				<min>-0.610865</min>
 				<max>0.610865</max>
 			</clipto>
@@ -568,7 +645,7 @@
 			</test>
 		</switch>
 		
-		<pid name="fbw/pitch/g-pid-v">
+		<pid name="fbw/pitch/g-pi-v">
 			<input>fbw/pitch/g-error</input>
 			<kp>fbw/pitch/g-p-gain</kp>
 			<ki>fbw/pitch/g-i-gain</ki>
@@ -876,9 +953,19 @@
 			</test>
 		</switch>
 		
+		<pure_gain name="fbw/yaw/ap-raw">
+			<input>/it-autoflight/internal/rudder-cmd</input>
+			<gain>fbw/yaw/autoland-switch</gain>
+		</pure_gain>
+		
+		<actuator name="fbw/yaw/ap-cmd">
+			<input>fbw/yaw/ap-raw</input>
+			<rate_limit>1.2</rate_limit>
+		</actuator>
+		
 		<switch name="fbw/yaw-output">
 			<default value="fbw/yaw/sum"/>
-			<test logic="AND" value="fbw/yaw/rudder-cmd">
+			<test logic="AND" value="fbw/yaw/ap-cmd">
 				/it-fbw/roll-disable eq 0
 				fbw/yaw/autoland-switch eq 1
 			</test>
@@ -922,7 +1009,7 @@
 		
 		<switch name="fbw/yoke-roll-cmd">
 			<default value="fbw/roll/aileron-nul"/>
-			<test logic="AND" value="fbw/roll/aileron-rollout">
+			<test logic="AND" value="fbw/roll/rollout-cmd">
 				/it-fbw/roll-disable eq 0
 				fbw/ap/enabled eq 1
 				position/wow eq 1
@@ -945,20 +1032,20 @@
 						<value>1</value>
 					</eq>
 					<table>
-						<independentVar lookup="row">fbw/pitch/g-ap-cmd</independentVar>
+						<independentVar lookup="row">fbw/pitch/g-ap</independentVar>
 						<independentVar lookup="column">zero</independentVar>
 						<independentVar lookup="table">velocities/vc-kts</independentVar>
-						<tableData breakPoint="140">
-							      0  1
-							-1.0  1  1
-							 0.0  0  0
-							 1.0 -1 -1
+						<tableData breakPoint="120">
+							   0  1
+							0  1  1
+							1  0  0
+							2 -1 -1
 						</tableData>
 						<tableData breakPoint="200">
 							      0  1
-							-1.5  1  1
-							 0.0  0  0
-							 1.5 -1 -1
+							-0.5  1  1
+							 1.0  0  0
+							 2.5 -1 -1
 						</tableData>
 					</table>
 					<value>0</value>

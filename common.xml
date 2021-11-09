@@ -329,7 +329,7 @@
 			<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
 		</settings>
 		<internal>
-			<aileron-rollout>0</aileron-rollout>
+			<rudder-cmd>0</rudder-cmd>
 		</internal>
 		<output>
 			<ap1>0</ap1>
