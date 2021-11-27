@@ -98,7 +98,7 @@
 
 <key n="79">
   <name>O</name>
-  <desc>Extend Refuelling Drogues</desc>  
+  <desc>Extend Refuelling Drogues</desc>
   <binding>
 		  <command>nasal</command>
 		  <script>b707.toggleRefuelling();</script>
@@ -106,7 +106,7 @@
 </key>
 <key n="2">
   <name>Ctrl + b</name>
-  <desc>Speedbrakes/Spoiler full</desc>  
+  <desc>Speedbrakes/Spoiler full</desc>
   <binding>
 		  <command>nasal</command>
 		  <script>b707.fullSpeedbrakes();</script>
@@ -127,5 +127,17 @@
 			<value>1</value>
 		</binding>
 	</key>
-
+	<key n="101">
+			<name>e</name>
+			<desc>Idle Thrust</desc>
+			<binding>
+					<command>nasal</command>
+					<script>
+							setprop("controls/engines/engine[0]/throttle", 0);
+							setprop("controls/engines/engine[1]/throttle", 0);
+							setprop("controls/engines/engine[2]/throttle", 0);
+							setprop("controls/engines/engine[3]/throttle", 0);
+					</script>
+			</binding>
+	</key>
 </PropertyList>
