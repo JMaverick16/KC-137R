@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Northrop Grumman E-8R Joint STARS (IAE V2527-A5)</description>
+  <description>Northrop Grumman E-8R Joint STARS (IAE V2500)</description>
   <long-description>
    The Northrop Grumman E-8R Joint Surveillance Target Attack Radar System (Joint STARS) is a United States Air Force airborne ground surveillance, battle management and command and control aircraft. It tracks ground vehicles and some aircraft, collects imagery, and relays tactical pictures to ground and air theater commanders. The aircraft is operated by both active duty Air Force and Air National Guard units.
   </long-description>
@@ -133,15 +133,19 @@
 				</item>
 				<item>
 					<name>fbw</name>
-					<label>FBW Control</label>
+					<label>FBW and CWS Control</label>
 					<binding>
-					<command>nasal</command>
-						<script>
-						var fbw = gui.Dialog.new("sim/gui/dialogs/fbw/dialog", "Aircraft/KC-137R/Systems/fbw-dlg.xml");
-						fbw.open();
-						</script>
+						<command>dialog-show</command>
+						<dialog-name>fbw</dialog-name>
 					</binding>
 				</item>
+				<item>
+				    <label>IFF/DLINK Settings</label>
+				    <binding>
+						<command>dialog-show</command>
+						<dialog-name>iff</dialog-name>
+				    </binding>
+			    </item>
 				<item>
 		          <label>Radar Cutoff</label>
 		          <binding>
@@ -319,6 +323,10 @@ no. D6-3071-00
    </submodels>
  </sim>
 
+    <iff>
+	    <channel type="int">0000</channel>
+	</iff>
+
  <tanker type="bool">false</tanker>
 
 	<systems>
@@ -340,6 +348,20 @@ no. D6-3071-00
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
 	</cdu>
+	<datalink>
+        <channel type="int">42</channel>
+        <power_prop type="string">instrumentation/mptcas/on</power_prop>
+        <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
+        <receive_period type="double">1</receive_period>
+        <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
+    </datalink>
+	<iff>
+	    <power_prop type="string">instrumentation/iff/power</power_prop>
+	    <channel_prop
+		type="string">instrumentation/iff/channel</channel_prop>
+	    <channel type="int">0000</channel>
+	    <power type="bool">true</power>
+	</iff>
   <mptcas>
     <display-factor-awacs type="double">1</display-factor-awacs>
     <display-factor type="double">1</display-factor>
@@ -377,6 +399,7 @@ no. D6-3071-00
             <file>Aircraft/KC-137R/Nasal/vector.nas</file>
 		</vector>
 		<rcs>
+			<file>Aircraft/KC-137R/Nasal/rcs_mand.nas</file>
             <file>Aircraft/KC-137R/Nasal/rcs.nas</file>
 		</rcs>
 		<b707>
@@ -403,7 +426,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
-			<file>Aircraft/KC-137R/Nasal/gear-tilt.nas</file>
 		</b707>
 		
 		<itaf>
@@ -454,6 +476,12 @@ no. D6-3071-00
 		<fbw>
 			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
 		</fbw>
+		<datalink>
+            <file>Aircraft/KC-137R/Nasal/datalink.nas</file>
+        </datalink>
+		<iff>
+	        <file>Aircraft/KC-137R/Nasal/iff.nas</file>
+	    </iff>
 	</nasal>
 
     <dual-control>

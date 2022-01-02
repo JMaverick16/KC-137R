@@ -8,10 +8,16 @@
 		<type>select</type>
 		<object-name>master-caution-on</object-name>
 		<condition>
-			<equals>
-				<property>warnings/mc</property>
-				<value>1</value>
-			</equals>
+			<and>
+				<greater-than-equals>
+					<property>systems/electrical/outputs/efis</property>
+					<value>15</value>
+				</greater-than-equals>
+				<equals>
+					<property>warnings/mc</property>
+					<value>1</value>
+				</equals>
+			</and>
 		</condition>  
 	</animation>
 	
@@ -19,15 +25,15 @@
 		<type>pick</type>
 		<object-name>master-caution-on</object-name>
 		<object-name>master-caution-off</object-name>  
-        <action>
-            <button>0</button>
+		<action>
+			<button>0</button>
 			<binding>
 				<command>property-assign</command>
 				<property>warnings/mc</property>
 				<value>0</value>
 			</binding>
-        </action>
-    </animation>
+		</action>
+	</animation>
 	
 	<!-- lighting -->
 	

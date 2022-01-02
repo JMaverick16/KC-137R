@@ -17,7 +17,7 @@ This repo contains 6 military aircrafts derived from the Boeing 707 and it's var
 AUTHORS:
 * MD-GRK (themadgreek): Original KC-137R project idea with CFM LEAP X engines.
 * J Maverick 16: Initial contribution and update of original model; current maintainer and developer.
-* Joshua Davidson (Octal450): Further contribution, introduction of the other variants and reconfiguration of cockpit, systems, FDM, Autopilot, Sounds and many more; former maintainer and developer.
+* Josh Davidson (Octal450): Further contribution, introduction of the other variants and reconfiguration of cockpit, systems, FDM, Autopilot, Sounds and many more; current maintainer and developer.
 * peter305305: Minor sound update.
 * FL2070: Custom sound pack for engines and other.
 * onox: Importation of some of his former 707 project with advanced MP refueling system.

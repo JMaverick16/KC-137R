@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!-- KC-137R CWS -->
+<!-- Copyright (c) 2021 Josh Davidson (Octal450) -->
+
+<system name="KC-137R: CWS">
+	
+	<property value="0">/it-fbw/cws-enable</property>
+	<property value="0">/it-fbw/cws-alt</property>
+	
+	<channel name="Libraries">
+		
+		<switch name="/it-fbw/cws-enable">
+			<default value="/it-fbw/cws-enable"/>
+			<test logic="OR" value="0">
+				position/wow eq 1
+				/it-fbw/roll-disable eq 1
+				/it-fbw/pitch-disable eq 1
+			</test>
+		</switch>
+		
+		<switch name="/it-fbw/cws-alt">
+			<default value="/it-fbw/cws-alt"/>
+			<test value="0">
+				/it-fbw/cws-enable eq 0
+			</test>
+		</switch>
+	
+	</channel>
+	
+	<channel name="Roll">
+		
+		
+	
+	</channel>
+
+</system>

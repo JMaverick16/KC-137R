@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing RC-137R Rivet Joint (CFM56-7B26)</description>
+  <description>Boeing RC-137R Rivet Joint (CFM56)</description>
   	<long-description>
    	The Boeing RC-137R Rivet Joint is an airborne SIGINT/reconnaissance aircraft built by Boeing and modified by a number of companies, including General Dynamics, Lockheed and L-3 Communications. It is used by the United States Air Force to support theater and national level intelligence consumers with near real-time on-scene collection, analysis and dissemination capabilities thanks to its sensor suite which allows to detect, identify and geolocate signals throughout the electromagnetic spectrum, forwarding gathered information in a variety of formats to a wide range of consumers via Rivet Joint's extensive communications suite. Based on the C-135 Stratolifter airframe, various types of RC-137s have been in service since 1961. Many variants have been modified numerous times, resulting in a large variety of designations, configurations, and program names.
   	</long-description>
@@ -133,15 +133,19 @@
 				</item>
 				<item>
 					<name>fbw</name>
-					<label>FBW Control</label>
+					<label>FBW and CWS Control</label>
 					<binding>
-					<command>nasal</command>
-						<script>
-						var fbw = gui.Dialog.new("sim/gui/dialogs/fbw/dialog", "Aircraft/KC-137R/Systems/fbw-dlg.xml");
-						fbw.open();
-						</script>
+						<command>dialog-show</command>
+						<dialog-name>fbw</dialog-name>
 					</binding>
 				</item>
+				<item>
+				    <label>IFF/DLINK Settings</label>
+				    <binding>
+						<command>dialog-show</command>
+						<dialog-name>iff</dialog-name>
+				    </binding>
+			    </item>
 				<item>
 		          <label>Radar Cutoff</label>
 		          <binding>
@@ -303,6 +307,10 @@ no. D6-3071-00
   </submodels>
  </sim>
 
+    <iff>
+	    <channel type="int">0000</channel>
+	</iff>
+
  <tanker type="bool">false</tanker>
 
 	<systems>
@@ -324,6 +332,20 @@ no. D6-3071-00
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
 	</cdu>
+	<datalink>
+        <channel type="int">42</channel>
+        <power_prop type="string">instrumentation/mptcas/on</power_prop>
+        <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
+        <receive_period type="double">1</receive_period>
+        <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
+    </datalink>
+	<iff>
+	    <power_prop type="string">instrumentation/iff/power</power_prop>
+	    <channel_prop
+		type="string">instrumentation/iff/channel</channel_prop>
+	    <channel type="int">0000</channel>
+	    <power type="bool">true</power>
+	</iff>
 	<mptcas>
     <display-factor-awacs type="double">1</display-factor-awacs>
     <display-factor type="double">1</display-factor>
@@ -361,6 +383,7 @@ no. D6-3071-00
             <file>Aircraft/KC-137R/Nasal/vector.nas</file>
 		</vector>
 		<rcs>
+			<file>Aircraft/KC-137R/Nasal/rcs_mand.nas</file>
             <file>Aircraft/KC-137R/Nasal/rcs.nas</file>
 		</rcs>
 		<b707>
@@ -387,7 +410,6 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
 			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
-			<file>Aircraft/KC-137R/Nasal/gear-tilt.nas</file>
 		</b707>
 		
 		<itaf>
@@ -438,6 +460,12 @@ no. D6-3071-00
 		<fbw>
 			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
 		</fbw>
+		<datalink>
+            <file>Aircraft/KC-137R/Nasal/datalink.nas</file>
+        </datalink>
+		<iff>
+	        <file>Aircraft/KC-137R/Nasal/iff.nas</file>
+	    </iff>
 	</nasal>
 
     <dual-control>

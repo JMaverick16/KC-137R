@@ -8,7 +8,7 @@
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
  <sim n="0">
   <description>Boeing KC-137R</description>
-  <author>J Maverick 16, Joshua Davidson, Martien Van Der P., Nikolai V. Chr., FL2070, MD-GRK and others. Based on Lake of Constance Hangar 707 [Original from Innis Cunningham]</author>
+  <author>J Maverick 16, Josh Davidson, Martien Van Der P., Nikolai V. Chr., FL2070, MD-GRK and others. Based on Lake of Constance Hangar 707 [Original from Innis Cunningham]</author>
   <status>Early Production</status>
   <aero>KC-137R-IAE</aero>
   <flight-model>jsb</flight-model>
@@ -46,10 +46,7 @@
 			<path>Aircraft/KC-137R/Systems/it-autothrust.xml</path>
 		</autopilot>
 		<autopilot n="2">
-			<path>Aircraft/KC-137R/Systems/engine-timing.xml</path>
-		</autopilot>
-		<autopilot n="3">
-			<path>Aircraft/KC-137R/Systems/extra-rules.xml</path>
+			<path>Aircraft/KC-137R/Systems/libraries.xml</path>
 		</autopilot>
 		<property-rule n="101">
 			<path>Aircraft/KC-137R/Systems/sound_calc.xml</path>
@@ -332,18 +329,19 @@
 			<autothrottle-min>0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
 			<custom-fma>0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented -->
 			<disable-final>1</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
-			<hdg-hld-separate>0</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
+			<fd-starts-on>1</fd-starts-on> <!-- Enable/Disable Flight Director being on by default -->
+			<hdg-hld-separate>1</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
 			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
 			<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
 			<retard-ft>30</retard-ft> <!-- Enable Thrust Retard -->
 			<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
 			<togaspd>161</togaspd> <!-- V2 + 10kts -->
 			<lat-agl-ft>50</lat-agl-ft> <!-- AGL when LNAV becomes active if armed -->
-			<reduc-agl-ft>1500</reduc-agl-ft> <!-- AGL when T/O CLB changes to SPD CLB (FLCH), set to 0 to disable -->
+			<reduc-agl-ft>1000</reduc-agl-ft> <!-- AGL when T/O CLB changes to SPD CLB (FLCH), set to 0 to disable -->
 			<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
 		</settings>
 		<internal>
-			<aileron-rollout>0</aileron-rollout>
+			<rudder-cmd>0</rudder-cmd>
 		</internal>
 		<output>
 			<ap1>0</ap1>
@@ -369,6 +367,7 @@
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
+			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="1">
 			<on-fire type="bool">false</on-fire>
@@ -378,6 +377,7 @@
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
+			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="2">
 			<on-fire type="bool">false</on-fire>
@@ -387,6 +387,7 @@
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
+			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="3">
 			<on-fire type="bool">false</on-fire>
@@ -396,6 +397,7 @@
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
+			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 	</engines>
 

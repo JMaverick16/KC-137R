@@ -57,7 +57,7 @@
 		<object-name>switch.001</object-name>
 		<object-name>switch.002</object-name>
 		<object-name>switch.003</object-name>
-		<object-name>switch.004</object-name>
+		<!--object-name>switch.004</object-name-->
 		<object-name>switch.005</object-name>
 		<object-name>switch.006</object-name>
 		<object-name>switch.007</object-name>
@@ -107,7 +107,7 @@
 					<value>20</value>
 				</greater-than>
 				<or>
-					<property>autopilot/internal/yaw-damper</property>
+				<not><property>it-fbw/roll-disable</property></not>
 		    	<property>controls/test/warn-knob</property>
 		    </or>
 		  </and>
@@ -494,45 +494,6 @@
 		      <min>0</min>
 		      <max>3</max>
 		      <wrap>true</wrap>
-        </binding>
-		    <binding>
-		      <command>property-toggle</command>
-		      <property>sim/sound/switch2</property>
-		    </binding>
-		  </action>
-	</animation>
-	
-	<!-- Yaw Damper -->
-	<animation>
-		  <type>rotate</type>
-		  <object-name>switch.004</object-name>
-		  <property>autopilot/internal/yaw-damper</property>
-		 	<interpolation>
-				<entry><ind>  0.0</ind><dep>  0.0</dep></entry>
-				<entry><ind>  1.0</ind><dep> 90.0</dep></entry>
-			</interpolation> 
-		  <axis>
-		   <x>0</x>
-		   <y>1</y>
-		   <z>0</z>
-		  </axis>
-		  <center>
-		  <x-m>-0.0012</x-m>
-		  <y-m> 0.0</y-m>
-		  <z-m>-0.194</z-m>
-		  </center>  
-	</animation>
-
-	<animation>
-		  <type>pick</type>
-		  <object-name>switch.004</object-name>
-		  <object-name>sockle.004</object-name>
-		  <action>
-		    <button>0</button>
-		    <repeatable>false</repeatable>
-        <binding>
-		      <command>property-toggle</command>
-		      <property>autopilot/internal/yaw-damper</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>

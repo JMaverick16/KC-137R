@@ -148,7 +148,7 @@
         <object-name>FDpitch</object-name>
         <object-name>FDpitch_rembrandt</object-name>
         <property>it-autoflight/fd/pitch-bar</property>
-        <factor>0.0005</factor>
+        <factor>0.001</factor>
         <axis>
             <x>0</x>
             <y>0</y>
@@ -161,7 +161,7 @@
         <object-name>FDroll</object-name>
         <object-name>FDroll_rembrandt</object-name>
         <property>it-autoflight/fd/roll-bar</property>
-        <factor>0.0002</factor>
+        <factor>0.0004</factor>
         <axis>
             <x>0</x>
             <y>1</y>
@@ -273,12 +273,60 @@
 		    </less-than>
 		</condition>
 	</animation>
-		
+	
+	<text>
+		<name>Direct</name>
+		<offsets>
+			<x-m>0.0002</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.0435</z-m>
+		</offsets>
+		<alignment>center-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">RESET FBW LAW</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">helvetica_bold.txf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.0045</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Direct</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>it-fbw/roll-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>it-fbw/pitch-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
 
 	<animation>
 		<name>Green text</name>
 		<type>material</type>
 		<object-name>Minimums</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
 		<emission>
 			<red>0</red>
 			<green>1</green>
@@ -289,10 +337,30 @@
 		<name>White text</name>
 		<type>material</type>
 		<object-name>Radar Altitude</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
 		<emission>
 			<red>1</red>
 			<green>1</green>
 			<blue>1</blue>
+		</emission>
+	</animation>
+	<animation>
+		<name>Red text</name>
+		<type>material</type>
+		<object-name>Direct</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>0</green>
+			<blue>0</blue>
+		</diffuse>
+		<emission>
+			<red>1</red>
+			<green>0</green>
+			<blue>0</blue>
 		</emission>
 	</animation>
 
