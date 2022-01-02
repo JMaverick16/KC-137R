@@ -48,7 +48,7 @@
 		<autopilot n="2">
 			<path>Aircraft/KC-137R/Systems/libraries.xml</path>
 		</autopilot>
-		<property-rule n="101">	
+		<property-rule n="101">
 			<path>Aircraft/KC-137R/Systems/sound_calc.xml</path>
 		</property-rule>
 	</systems>
@@ -56,7 +56,7 @@
 	<instrumentation>
     <path>Aircraft/KC-137R/Systems/instrumentation.xml</path>
     </instrumentation>
-  
+
   <model>
 	 <pushback>
 		<kp type="double">500</kp>
@@ -65,6 +65,18 @@
 		<position-norm type="double">0</position-norm>
 	 </pushback>
 	 <door>
+	  <position-x-m type="float">-15.836</position-x-m>
+	  <position-y-m type="float">-1.578</position-y-m>
+	  <position-z-m type="float">0.1365</position-z-m>
+	  <jetway-hood-deg type="float">5</jetway-hood-deg>
+	 </door>
+   <door n="1">
+	  <position-x-m type="float">-15.836</position-x-m>
+	  <position-y-m type="float">-1.578</position-y-m>
+	  <position-z-m type="float">0.1365</position-z-m>
+	  <jetway-hood-deg type="float">5</jetway-hood-deg>
+	 </door>
+   <door n="2">
 	  <position-x-m type="float">-15.836</position-x-m>
 	  <position-y-m type="float">-1.578</position-y-m>
 	  <position-z-m type="float">0.1365</position-z-m>
@@ -84,7 +96,7 @@
 	  </iceable>
 	</icing-->
   </model>
-  
+
 	<airport>
 		<runways>
 			<start-offset-m>30</start-offset-m>
@@ -95,8 +107,8 @@
       <path>Aircraft/KC-137R/Sounds/cfm56-sound.xml</path>
       <switch type = "bool">0</switch>
       <stall-horn type="bool">0</stall-horn>
-  </sound> 
-  
+  </sound>
+
 	<tutorials>
 		<tutorial include="Tutorials/707-startup-german.xml"/>
 		<tutorial include="Tutorials/707-startup-english.xml"/>
@@ -177,7 +189,7 @@
 			<front-right-direction-deg type="double">315</front-right-direction-deg>
 			<dynamic-view type="bool">true</dynamic-view>
     </config>
-	</view> 
+	</view>
 	<view n="103">
     <name>Officer View</name>
     <enabled type="bool">true</enabled>
@@ -222,10 +234,10 @@
 			<dynamic-view type="bool">true</dynamic-view>
     </config>
 	</view>
-		
+
   <chase-distance-m type="double" archive="y">-85</chase-distance-m>
-	
-  <multiplay>  
+
+  <multiplay>
     <generic>
 		<int n="0" alias="/controls/lighting/landing-light"/> 									<!-- landing light nose wheel -->
 		<int n="1" alias="/controls/lighting/landing-light[1]"/> 								<!-- landing light left and right -->
@@ -234,8 +246,8 @@
 		<int n="4" alias="/controls/lighting/beacon-state/state"/>								<!-- beacon -->
 		<int n="5" alias="/controls/lighting/strobe-state/state"/>								<!-- Strobe -->
 		<int n="6" alias="/controls/special/tyresmoke"/>										<!-- tyresmoke -->
-		<int n="7" alias="/controls/lighting/logo-lights"/> 									<!-- logo-light -->	
-		<int n="8" type="int">0</int>	
+		<int n="7" alias="/controls/lighting/logo-lights"/> 									<!-- logo-light -->
+		<int n="8" type="int">0</int>
 		<int n="10" alias="/b707/refuelling/probe-right"/>										<!-- refuel probe -->
 		<int n="11" alias="/b707/refuelling/probe-left"/>										<!-- refuel probe -->
 		<int n="12"  type="int">0</int>															<!-- communication between tanker and receiving aircraft -->
@@ -245,7 +257,7 @@
 		<int n="17" type="int">0</int> <!-- fire 1 = eng 1, 2 = eng 2, 3 = both -->
 		<int n="19" alias="/b707/crashed"/>
 		<float n="0" alias="/systems/electrical/outputs/cabin-dim"/> 							<!-- cabin light dimmer -->
-		<float n="1" alias="/gear/gear[0]/compression-norm"/> 	
+		<float n="1" alias="/gear/gear[0]/compression-norm"/>
 		<float n="2" alias="/gear/gear[0]/rollspeed-ms"/> 										<!-- multiplayer see the wheels turning -->
 		<float n="6" alias="/instrumentation/doors/pasfront/position-norm"/>					<!-- Passenger - front -->
 		<float n="7" alias="/instrumentation/doors/pasrear/position-norm"/>						<!-- Passenger - back -->
@@ -264,7 +276,7 @@
     </generic>
     <visibility-range-nm type="int">400</visibility-range-nm>
   </multiplay>
- 
+
   <flight-recorder include="Systems/flightrecorder.xml"/>
 
   <gui n="0" include="gui/it-gui.xml"/>
@@ -276,11 +288,11 @@
     <setting>0.6</setting>	<!-- 60% approach-->
     <setting>1.0</setting>	<!-- 100% landing -->
   </flaps>
-  
+
   <engine-type>
 	<IAE type="bool">false</IAE>
   </engine-type>
-	
+
 	<yokes-visible type="bool">1</yokes-visible>
  </sim>
 
@@ -300,7 +312,7 @@
 				<roll>1.6</roll>
 				<alt-gain>-5</alt-gain>
 			</cmd>
-			<autoland> 
+			<autoland>
 				<pitch-kp>0.0052</pitch-kp>
 				<yaw-kp>-0.05</yaw-kp>
 			</autoland>
@@ -315,7 +327,7 @@
 			<auto-bank-max-deg>30</auto-bank-max-deg> <!-- Maximum Auto Bank Limit -->
 			<autothrottle-max>0.95</autothrottle-max> <!-- Thrust Max Limit Normalized -->
 			<autothrottle-min>0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
-			<custom-fma>0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented --> 
+			<custom-fma>0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented -->
 			<disable-final>1</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
 			<fd-starts-on>1</fd-starts-on> <!-- Enable/Disable Flight Director being on by default -->
 			<hdg-hld-separate>1</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
@@ -388,7 +400,7 @@
 			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 	</engines>
- 
+
 	<input>
 		<keyboard include="Systems/keyboard.xml"/>
 	</input>
@@ -455,7 +467,7 @@
     </gear>
 
  </controls>
- 
+
  <!-- the b707 folder most properties set in other files. These we need for the tutorial-->
  <b707>
  		<hydraulic>
@@ -551,8 +563,8 @@
 			<MAW-active type="bool">false</MAW-active>
 		</armament>
 	</payload>
-	
-	<instrumentation>	
+
+	<instrumentation>
 		<!-- specific ADF -->
 		<adf n="0">
 		  <mode>adf</mode>
@@ -572,7 +584,7 @@
 		  </frequencies>
 		</adf>
 
-		<rmi>	
+		<rmi>
 			<face-offset type="double">0.0</face-offset>
 			<rmi-needle n="0">
 				<switch type="bool">0</switch>
@@ -734,7 +746,7 @@
 		  <name>tacan</name>
 		  <number>0</number>
 			<serviceable type="bool" archive="y">true</serviceable>
-			<switch-position type="int" archive="y">0</switch-position>      
+			<switch-position type="int" archive="y">0</switch-position>
 			<xy-position type="int" archive="y">0</xy-position>
 			<volume type="double" archive="y">0.0</volume>
 			<display n="0"><correction type="double">0.0</correction></display>
@@ -958,7 +970,7 @@
 				</aircraft>
 				<aircraft n="10">
 					<name>a4</name>
-					<rcs-sq-meter>10</rcs-sq-meter>	
+					<rcs-sq-meter>10</rcs-sq-meter>
 					<rcs-4th-root>1.77</rcs-4th-root>
 					<radar-type>APG-53</radar-type>
 					<max-radar-rng-km>15</max-radar-rng-km>
@@ -1519,7 +1531,7 @@
 			</data>
 		</radar-performance>
 	</instrumentation>
-	
+
 	<limits>
 		<mass-and-balance>
 			<maximum-takeoff-mass-lbs>322500</maximum-takeoff-mass-lbs>
