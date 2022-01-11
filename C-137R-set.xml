@@ -142,7 +142,7 @@
 		         </item>
 				<item>
 					<name>fbw</name>
-					<label>FBW and CWS Control</label>
+					<label>FBW Control</label>
 					<binding>
 						<command>dialog-show</command>
 						<dialog-name>fbw</dialog-name>
