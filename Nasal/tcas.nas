@@ -40,7 +40,7 @@ var tcas = func {
 
 		# Multiplayer TCAS
 
-		for (var n = 0; n < 45; n += 1) {
+		for (var n = 0; n < 20; n += 1) {
 
 			var callsign = getprop(path~"[" ~ n ~ "]/callsign") or 0;
 
@@ -125,7 +125,7 @@ var tcas = func {
 
 	# AI TCAS
 
-		for (var n = 0; n < 45; n += 1) {
+		for (var n = 0; n < 20; n += 1) {
 
 			var callsign = getprop("ai/models/aircraft[" ~ n ~ "]/callsign") or 0;
 
@@ -189,73 +189,6 @@ var tcas = func {
 			}
 
 		}
-
-    # VATSIM TCAS
-
-  		for (var n = 0; n < 45; n += 1) {
-
-  			var callsign = getprop("ai/models/swift[" ~ n ~ "]/callsign") or 0;
-
-  			if (getprop("ai/models/swift[" ~ n ~ "]/valid") and callsign and run) {
-
-  				var ai_lat = getprop("ai/models/swift[" ~ n ~ "]/position/latitude-deg") or 0;
-  				var ai_lon = getprop("ai/models/swift[" ~ n ~ "]/position/longitude-deg") or 0;
-  				var bearing = getprop("ai/models/swift[" ~ n ~ "]/radar/bearing-deg") or 0;
-
-  				# What is our position to the ai?
-  				var ai_pos 	= geo.Coord.new();
-  						ai_pos.set_latlon( ai_lat, ai_lon);
-  				var hdg_to_mp = our_pos.course_to(ai_pos);
-  				var distance = our_pos.distance_to(ai_pos) * M2NM; # to Nautical Miles
-  				var course_to_mp = geo.normdeg(hdg_to_mp-my_hdg);
-
-  				var display = distance / display_factor; # for the range of the selected mp-aircrafts
-  				var displayAwacs = distance / display_factor_awacs; # for the range of the selected mp-aircrafts
-  				# -0.165 0.172  -0.168 0.169
-  				# 0.1685  0.1685
-  				var x  = (0.055 * display/100)* math.cos((90-course_to_mp)*D2R);
-  				var y  = (0.055 * display/100)* math.sin((90-course_to_mp)*D2R);
-  				var xa = 0.0035+(0.1685 * displayAwacs/400)* math.cos((90-course_to_mp)*D2R);
-  				var ya = 0.0005+(0.1685 * displayAwacs/400)* math.sin((90-course_to_mp)*D2R);
-
-  				var alt_ft = getprop("ai/models/swift[" ~ n ~ "]/position/altitude-ft") or 0;
-  			  var tas_kt = getprop("ai/models/swift[" ~ n ~ "]/velocities/true-airspeed-kt") or 0;
-
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/dis-x", x);										# for the radar pos
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/dis-y", y);										# for the radar pos
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/dis-xa", xa);									# for the radar pos
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/dis-ya", ya);									# for the radar pos
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/callsign", callsign);					# only info
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/distance-nm", distance);			# only info
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/bearing-deg", bearing);			  # only info
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/course-to-mp",course_to_mp);	# only info
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/altitude-ft", alt_ft);				# only info
-  				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/tas-kt", tas_kt);							# only info
-
-  				# fill the Awacs data array
-  				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
-  				  var true_hdg = getprop("ai/models/swift[" ~ n ~ "]/orientation/true-heading-deg") or 0;
-  				  aircraft_list[callsign] = {cs: callsign, dis: distance, alt: alt_ft, th: true_hdg, ctm: course_to_mp, tas: tas_kt, at: "AI" };
-  				}
-
-  				# select object if in range of radar / 3.24 found by trial and error depends on range select knob
-  				if (distance < 100*display_factor){
-  					setprop("/instrumentation/mptcas/swift[" ~ n ~ "]/show", 1);
-  				}else{
-  					setprop("/instrumentation/mptcas/swift[" ~ n ~ "]/show", 0);
-  				}
-  				if (distance < 400*display_factor_awacs){
-  					setprop("/instrumentation/mptcas/swift[" ~ n ~ "]/show-awacs", 1);
-  				}else{
-  					setprop("/instrumentation/mptcas/swift[" ~ n ~ "]/show-awacs", 0);
-  				}
-  			}else{
-
-  				setprop("/instrumentation/mptcas/swift[" ~ n ~ "]/show-awacs", 0);
-  				setprop("/instrumentation/mptcas/swift[" ~ n ~ "]/show", 0);
-  			}
-
-  		}
 
 	# TCAS for Tanker in refueling_demos
 

@@ -52,7 +52,7 @@ var togglereverser = func {
 	rv4 = "/engines/engine[3]/reverser-pos-norm";
 
 	val1 = getprop(rv1) or 0;
-	
+
 	tm = getprop("/fdm/jsbsim/fadec/throttle-compare-max") or 0;
 	tmr = getprop("/fdm/jsbsim/fadec/throttle-rev-compare-max") or 0;
 
@@ -304,15 +304,6 @@ var show_ta_info = func (i){
   help_win.write(sprintf(cs~" / %.0fft / %.0fkts / %.2fnm", al, as, dis) );
 }
 
-var show_swift_info = func (i){
-	var cs  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/callsign") or "";
-	var al  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/altitude-ft") or 0;
-	var as  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/tas-kt") or 0;
-	var dis = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/distance-nm") or 0;
-
-  help_win.write(sprintf(cs~" / %.0fft / %.0fkts / %.2fnm", al, as, dis) );
-}
-
 var show_mp_awacs_info = func (i){
 	var cs  = getprop("instrumentation/mptcas/mp[" ~ i ~ "]/callsign") or "";
 	var al  = getprop("instrumentation/mptcas/mp[" ~ i ~ "]/altitude-ft") or 0;
@@ -343,17 +334,6 @@ var show_ta_awacs_info = func (i){
 	var bg = getprop("instrumentation/mptcas/ta[" ~ i ~ "]/bearing-deg") or 0;
 	var ct = getprop("instrumentation/mptcas/ta[" ~ i ~ "]/course-to-mp") or 0;
 	var dis = getprop("instrumentation/mptcas/ta[" ~ i ~ "]/distance-nm") or 0;
-
-  help_win.write(sprintf(cs~" / %.0fhdg / course to %.0fdeg / %.0fft / %.0fkts / %.2fnm", bg, ct, al, as, dis) );
-}
-
-var show_swift_awacs_info = func (i){
-	var cs  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/callsign") or "";
-	var al  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/altitude-ft") or 0;
-	var as  = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/tas-kt") or 0;
-	var bg = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/bearing-deg") or 0;
-	var ct = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/course-to-mp") or 0;
-	var dis = getprop("instrumentation/mptcas/swift[" ~ i ~ "]/distance-nm") or 0;
 
   help_win.write(sprintf(cs~" / %.0fhdg / course to %.0fdeg / %.0fft / %.0fkts / %.2fnm", bg, ct, al, as, dis) );
 }
