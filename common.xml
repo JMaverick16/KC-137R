@@ -324,21 +324,23 @@
 			</rollout>
 		</config>
 		<settings>
-			<auto-bank-max-deg>30</auto-bank-max-deg> <!-- Maximum Auto Bank Limit -->
-			<autothrottle-max>0.95</autothrottle-max> <!-- Thrust Max Limit Normalized -->
-			<autothrottle-min>0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
-			<custom-fma>0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented -->
-			<disable-final>1</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
-			<fd-starts-on>1</fd-starts-on> <!-- Enable/Disable Flight Director being on by default -->
-			<hdg-hld-separate>1</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
-			<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
-			<land-flap>0.6</land-flap> <!-- Minimum Flap used for Landing -->
-			<retard-ft>30</retard-ft> <!-- Enable Thrust Retard -->
-			<retard-enable>1</retard-enable> <!-- AGL to Thrust Retard -->
-			<togaspd>161</togaspd> <!-- V2 + 10kts -->
-			<lat-agl-ft>50</lat-agl-ft> <!-- AGL when LNAV becomes active if armed -->
-			<reduc-agl-ft>1000</reduc-agl-ft> <!-- AGL when T/O CLB changes to SPD CLB (FLCH), set to 0 to disable -->
-			<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
+			<accel-ft type="double">1000</accel-ft> <!-- Acceleration AGL when T/O CLB changes to SPD CLB, 0 to disable -->
+			<auto-bank-max-deg type="double">30</auto-bank-max-deg> <!-- Maximum Auto Bank Limit -->
+			<autoland-without-ap type="bool">1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
+			<autothrottle-max type="double">0.95</autothrottle-max> <!-- Thrust Max Limit Normalized -->
+			<autothrottle-min type="double">0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
+			<custom-fma type="bool">0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented --> 
+			<disable-final type="bool">1</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
+			<fd-starts-on type="bool">1</fd-starts-on> <!-- Enable/Disable Flight Director being on by default -->
+			<hdg-hld-separate type="bool">1</hdg-hld-separate> <!-- Separates the HDG HLD mode from the HDG SEL mode -->
+			<land-enable type="bool">1</land-enable> <!-- Enable/Disable Autoland -->
+			<land-flap type="double">0.6</land-flap> <!-- Minimum Flap used for Landing -->
+			<lnav-ft type="double">50</lnav-ft> <!-- AGL when LNAV becomes active if armed -->
+			<retard-enable type="bool">1</retard-enable> <!-- AGL to Thrust Retard -->
+			<retard-ft type="double">30</retard-ft> <!-- Enable Thrust Retard -->
+			<toga-spd type="double">160</toga-spd> <!-- V2 + 10kts -->
+			<use-controls-engines type="bool">1</use-controls-engines> <!-- Use /controls/engines properties -->
+			<use-controls-flight type="bool">0</use-controls-flight> <!-- Use /controls/flight properties -->
 		</settings>
 		<internal>
 			<rudder-cmd>0</rudder-cmd>
