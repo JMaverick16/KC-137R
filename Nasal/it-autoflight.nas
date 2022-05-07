@@ -1,4 +1,4 @@
-# IT-AUTOFLIGHT System Controller V4.0.7
+# IT-AUTOFLIGHT System Controller V4.0.8 Beta
 # Copyright (c) 2022 Josh Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
@@ -47,6 +47,10 @@ var Misc = {
 	flapNorm: props.globals.getNode("/surface-positions/flap-pos-norm", 1),
 };
 
+var Orientation = {
+	rollDeg: props.globals.getNode("/orientation/roll-deg"),
+};
+
 var Position = {
 	gearAglFtTemp: 0,
 	gearAglFt: props.globals.getNode("/position/gear-agl-ft", 1),
@@ -70,8 +74,6 @@ var Velocities = {
 	groundspeedMps: 0,
 	indicatedAirspeedKt: props.globals.getNode("/instrumentation/airspeed-indicator/indicated-speed-kt", 1),
 	indicatedMach: props.globals.getNode("/instrumentation/airspeed-indicator/indicated-mach", 1),
-	trueAirspeedKt: props.globals.getNode("/instrumentation/airspeed-indicator/true-speed-kt", 1),
-	trueAirspeedKtTemp: 0,
 };
 
 # IT-AUTOFLIGHT
@@ -105,6 +107,7 @@ var Input = {
 	mach: props.globals.initNode("/it-autoflight/input/mach", 0.5, "DOUBLE"),
 	radioSel: props.globals.initNode("/it-autoflight/input/radio-sel", 0, "INT"),
 	radioSelTemp: 0,
+	roll: props.globals.initNode("/it-autoflight/input/roll", 0, "INT"),
 	toga: props.globals.initNode("/it-autoflight/input/toga", 0, "BOOL"),
 	trk: props.globals.initNode("/it-autoflight/input/trk", 0, "BOOL"),
 	trueCourse: props.globals.initNode("/it-autoflight/input/true-course", 0, "BOOL"),
@@ -121,9 +124,11 @@ var Internal = {
 	altDiff: 0,
 	altTemp: 0,
 	altPredicted: props.globals.initNode("/it-autoflight/internal/altitude-predicted", 0, "DOUBLE"),
-	bankLimit: props.globals.initNode("/it-autoflight/internal/bank-limit", 30, "INT"),
-	bankLimitAuto: 30,
-	bankLimitMax: [30, 5, 10, 15, 20, 25, 30],
+	bankLimit: props.globals.initNode("/it-autoflight/internal/bank-limit", 0, "DOUBLE"),
+	bankLimitAuto: props.globals.initNode("/it-autoflight/internal/bank-limit-auto", 0, "DOUBLE"),
+	bankLimitCalc: 0,
+	bankLimitMax: [5, 10, 15, 20, 25, 30, 35],
+	bankLimitTemp: 0,
 	captVs: 0,
 	driftAngle: props.globals.initNode("/it-autoflight/internal/drift-angle-deg", 0, "DOUBLE"),
 	driftAngleTemp: 0,
@@ -139,6 +144,7 @@ var Internal = {
 	navCourseTrackErrorDeg: [props.globals.initNode("/it-autoflight/internal/nav1-course-track-error-deg", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/nav2-course-track-error-deg", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/nav3-course-track-error-deg", 0, "DOUBLE")],
 	navHeadingErrorDeg: [props.globals.initNode("/it-autoflight/internal/nav1-heading-error-deg", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/nav2-heading-error-deg", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/nav3-heading-error-deg", 0, "DOUBLE")],
 	navHeadingErrorDegTemp: [0, 0, 0],
+	throttle: [props.globals.initNode("/it-autoflight/internal/throttle[0]", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/throttle[1]", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/throttle[2]", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/throttle[3]", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/throttle[4]", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/throttle[5]", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/throttle[6]", 0, "DOUBLE"), props.globals.initNode("/it-autoflight/internal/throttle[7]", 0, "DOUBLE")],
 	vs: props.globals.initNode("/it-autoflight/internal/vert-speed-fpm", 0, "DOUBLE"),
 	vsTemp: 0,
 };
@@ -151,6 +157,7 @@ var Output = {
 	apprArm: props.globals.initNode("/it-autoflight/output/appr-armed", 0, "BOOL"),
 	athr: props.globals.initNode("/it-autoflight/output/athr", 0, "BOOL"),
 	athrTemp: 0,
+	cws: props.globals.initNode("/it-autoflight/output/cws", 0, "BOOL"),
 	fd1: props.globals.initNode("/it-autoflight/output/fd1", 0, "BOOL"),
 	fd1Temp: 0,
 	fd2: props.globals.initNode("/it-autoflight/output/fd2", 0, "BOOL"),
@@ -174,19 +181,22 @@ var Text = {
 };
 
 var Settings = {
-	autoBankMaxDeg: props.globals.getNode("/it-autoflight/settings/auto-bank-max-deg", 1),
+	accelFt: props.globals.getNode("/it-autoflight/settings/accel-ft", 1),
+	autoBankLimitCalc: props.globals.getNode("/it-autoflight/settings/auto-bank-limit-calc", 1),
 	autolandWithoutAp: props.globals.getNode("/it-autoflight/settings/autoland-without-ap", 1),
 	autolandWithoutApTemp: 0,
+	bankMaxDeg: props.globals.getNode("/it-autoflight/settings/bank-max-deg", 1),
 	customFma: props.globals.getNode("/it-autoflight/settings/custom-fma", 1),
 	disableFinal: props.globals.getNode("/it-autoflight/settings/disable-final", 1),
 	fdStartsOn: props.globals.getNode("/it-autoflight/settings/fd-starts-on", 1),
 	hdgHldSeparate: props.globals.getNode("/it-autoflight/settings/hdg-hld-separate", 1),
-	latAglFt: props.globals.getNode("/it-autoflight/settings/lat-agl-ft", 1),
 	landingFlap: props.globals.getNode("/it-autoflight/settings/land-flap", 1),
-	reducAglFt: props.globals.getNode("/it-autoflight/settings/reduc-agl-ft", 1),
+	lnavFt: props.globals.getNode("/it-autoflight/settings/lnav-ft", 1),
 	retardAltitude: props.globals.getNode("/it-autoflight/settings/retard-ft", 1),
 	retardEnable: props.globals.getNode("/it-autoflight/settings/retard-enable", 1),
-	togaSpd: props.globals.getNode("/it-autoflight/settings/togaspd", 1),
+	togaSpd: props.globals.getNode("/it-autoflight/settings/toga-spd", 1),
+	useControlsEngines: props.globals.getNode("/it-autoflight/settings/use-controls-engines", 1),
+	useControlsFlight: props.globals.getNode("/it-autoflight/settings/use-controls-flight", 1),
 };
 
 var Sound = {
@@ -385,7 +395,7 @@ var ITAF = {
 		
 		# FLCH Engagement
 		if (Text.vertTemp == "T/O CLB") {
-			me.checkFlch(Settings.reducAglFt.getValue());
+			me.checkFlch(Settings.accelFt.getValue());
 		}
 		
 		# Altitude Capture/Sync Logic
@@ -416,28 +426,14 @@ var ITAF = {
 		
 		# Thrust Mode Selector
 		me.updateThrustMode();
+		
+		# Bank Limits
+		me.bankLimit();
 	},
 	slowLoop: func() {
-		Input.bankLimitSwTemp = Input.bankLimitSw.getValue();
-		Velocities.trueAirspeedKtTemp = Velocities.trueAirspeedKt.getValue();
 		FPLN.activeTemp = FPLN.active.getValue();
 		FPLN.currentWpTemp = FPLN.currentWp.getValue();
 		FPLN.numTemp = FPLN.num.getValue();
-		
-		# Bank Limit
-		if (Velocities.trueAirspeedKtTemp >= 420) {
-			Internal.bankLimitAuto = 15;
-		} else if (Velocities.trueAirspeedKtTemp >= 340) {
-			Internal.bankLimitAuto = 20;
-		} else {
-			Internal.bankLimitAuto = 30;
-		}
-		
-		if (Internal.bankLimitAuto > Internal.bankLimitMax[Input.bankLimitSwTemp]) {
-			Internal.bankLimit.setValue(Internal.bankLimitMax[Input.bankLimitSwTemp]);
-		} else {
-			Internal.bankLimit.setValue(Internal.bankLimitAuto);
-		}
 		
 		# If in LNAV mode and route is not longer active, switch to HDG HLD
 		if (Output.lat.getValue() == 1) { # Only evaulate the rest of the condition if we are in LNAV mode
@@ -558,7 +554,7 @@ var ITAF = {
 	},
 	apOffFunction: func() {
 		if (!Output.ap1.getBoolValue() and !Output.ap2.getBoolValue()) { # Only do if both APs are off
-			if (!Settings.disableFinal.getBoolValue()) {
+			if (!Settings.disableFinal.getBoolValue() and !Settings.useControlsFlight.getBoolValue()) {
 				Controls.aileron.setValue(0);
 				Controls.elevator.setValue(0);
 				Controls.rudder.setValue(0);
@@ -578,6 +574,16 @@ var ITAF = {
 				Output.athr.setBoolValue(1);
 			}
 		} else {
+			if (!Settings.useControlsEngines.getBoolValue()) {
+				setprop("/controls/engines/engine[0]/throttle", Internal.throttle[0].getValue());
+				setprop("/controls/engines/engine[1]/throttle", Internal.throttle[1].getValue());
+				setprop("/controls/engines/engine[2]/throttle", Internal.throttle[2].getValue());
+				setprop("/controls/engines/engine[3]/throttle", Internal.throttle[3].getValue());
+				setprop("/controls/engines/engine[4]/throttle", Internal.throttle[4].getValue());
+				setprop("/controls/engines/engine[5]/throttle", Internal.throttle[5].getValue());
+				setprop("/controls/engines/engine[6]/throttle", Internal.throttle[6].getValue());
+				setprop("/controls/engines/engine[7]/throttle", Internal.throttle[7].getValue());
+			}
 			Output.athr.setBoolValue(0);
 		}
 		Output.athrTemp = Output.athr.getBoolValue();
@@ -670,12 +676,13 @@ var ITAF = {
 			me.updateApprArm(0);
 			Output.lat.setValue(5);
 			me.updateLatText("T/O");
-		} else if (n == 6) { # LVL
+		} else if (n == 6) { # ROLL
 			me.updateLnavArm(0);
 			me.updateLocArm(0);
 			me.updateApprArm(0);
 			Output.lat.setValue(6);
-			me.updateLatText("LVL");
+			me.updateLatText("ROLL");
+			me.syncRoll();
 		} else if (n == 9) { # Blank
 			me.updateLnavArm(0);
 			me.updateLocArm(0);
@@ -790,7 +797,7 @@ var ITAF = {
 			Output.vert.setValue(7);
 			Input.ktsMach.setBoolValue(0);
 			me.updateThrustMode();
-		} else if (n == 9) {
+		} else if (n == 9) { # Blank
 			Internal.flchActive = 0;
 			Internal.altCaptureActive = 0;
 			me.updateApprArm(0);
@@ -840,6 +847,17 @@ var ITAF = {
 			Text.thr.setValue("THRUST");
 		}
 	},
+	bankLimit: func() {
+		Input.bankLimitSwTemp = Input.bankLimitSw.getValue();
+		Output.latTemp = Output.lat.getValue();
+		
+		if (Input.bankLimitSwTemp == 0) {
+			Internal.bankLimitCalc = Internal.bankLimitAuto.getValue();
+		} else {
+			Internal.bankLimitCalc = Internal.bankLimitMax[Input.bankLimitSwTemp - 1];
+		}
+		Internal.bankLimit.setValue(math.clamp(Internal.bankLimitCalc, 0, Settings.bankMaxDeg.getValue()));
+	},
 	activateLnav: func() {
 		if (Output.lat.getValue() != 1) {
 			me.updateLnavArm(0);
@@ -872,7 +890,7 @@ var ITAF = {
 	},
 	checkLnav: func(t) {
 		FPLN.activeTemp = FPLN.active.getBoolValue();
-		if (FPLN.num.getValue() > 0 and FPLN.activeTemp and Position.gearAglFt.getValue() >= Settings.latAglFt.getValue()) {
+		if (FPLN.num.getValue() > 0 and FPLN.activeTemp and Position.gearAglFt.getValue() >= Settings.lnavFt.getValue()) {
 			me.activateLnav();
 		} else if (FPLN.activeTemp and Output.lat.getValue() != 1 and t != 1) {
 			me.updateLnavArm(1);
@@ -989,6 +1007,10 @@ var ITAF = {
 	},
 	syncHdg: func() {
 		Input.hdg.setValue(math.round(Internal.hdgPredicted.getValue())); # Switches to track automatically
+	},
+	syncRoll: func() {
+		Internal.bankLimitTemp = Internal.bankLimit.getValue();
+		Input.roll.setValue(math.clamp(math.round(Orientation.rollDeg.getValue(), 1), Internal.bankLimitTemp * -1, Internal.bankLimitTemp));
 	},
 	syncAlt: func() {
 		Input.alt.setValue(math.clamp(math.round(Internal.altPredicted.getValue(), 100), 0, 50000));
