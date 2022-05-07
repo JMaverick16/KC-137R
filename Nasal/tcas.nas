@@ -16,8 +16,8 @@ setprop("systems/electrical/outputs/radar", 30);
 var myRadar = b707.Radar.new(NewRangeTab:[500],NewRangeIndex:0,forcePath:"instrumentation/radar2/targets",NewAutoUpdate:1,newDopplerSpeedLimit:50,NewhaveSweep:0,NewUnfocused_az_fld:360);
 
 
-var path = "ai/models/multiplayer";
-#var path ="instrumentation/radar2/targets/multiplayer";
+#var path = "ai/models/multiplayer";
+var path ="instrumentation/radar2/targets/multiplayer";
 
 
 var tcas = func {

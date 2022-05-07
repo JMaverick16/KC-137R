@@ -8,7 +8,7 @@
 -->
 <PropertyList>
 
-	<path>mps.ac</path>
+	<path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/mps.ac</path>
 
 	<animation>
 		<type>material</type>
