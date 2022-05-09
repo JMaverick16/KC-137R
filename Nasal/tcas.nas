@@ -23,8 +23,6 @@ var path = "ai/models/multiplayer";
 var tcas = func {
     b707.arr = myRadar.update();
 
-
-
 		var run = getprop("/instrumentation/mptcas/on") or 0;
 
 		var pos_lat = getprop("/position/latitude-deg") or 0;
@@ -49,8 +47,6 @@ var tcas = func {
 				var mp_lat = getprop(path~"[" ~ n ~ "]/position/latitude-deg") or 0;
 				var mp_lon = getprop(path~"[" ~ n ~ "]/position/longitude-deg") or 0;
 				var bearing = getprop(path~"[" ~ n ~ "]/radar/bearing-deg") or 0;
-
-
 
 				# What is our position to the mp?
 				var mp_pos 	= geo.Coord.new();
@@ -235,7 +231,7 @@ var tcas = func {
   				# fill the Awacs data array
   				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
   				  var true_hdg = getprop("ai/models/swift[" ~ n ~ "]/orientation/true-heading-deg") or 0;
-  				  aircraft_list[callsign] = {cs: callsign, dis: distance, alt: alt_ft, th: true_hdg, ctm: course_to_mp, tas: tas_kt, at: "AI" };
+  				  aircraft_list[callsign] = {cs: callsign, dis: distance, alt: alt_ft, th: true_hdg, ctm: course_to_mp, tas: tas_kt, at: "SWIFT" };
   				}
 
   				# select object if in range of radar / 3.24 found by trial and error depends on range select knob
