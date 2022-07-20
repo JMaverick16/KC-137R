@@ -4757,7 +4757,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift</object-name>
-		<property>instrumentation/mptcas/swift[0]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[0]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4768,7 +4768,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift</object-name>
-		<property>instrumentation/mptcas/swift[0]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[0]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4804,7 +4804,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.001</object-name>
-		<property>instrumentation/mptcas/swift[1]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[1]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4815,7 +4815,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.001</object-name>
-		<property>instrumentation/mptcas/swift[1]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[1]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4851,7 +4851,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.002</object-name>
-		<property>instrumentation/mptcas/swift[2]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[2]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4862,7 +4862,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.002</object-name>
-		<property>instrumentation/mptcas/swift[2]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[2]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4898,7 +4898,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.003</object-name>
-		<property>instrumentation/mptcas/swift[3]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[3]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4909,7 +4909,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.003</object-name>
-		<property>instrumentation/mptcas/swift[3]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[3]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4944,7 +4944,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.004</object-name>
-		<property>instrumentation/mptcas/swift[4]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[4]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4955,7 +4955,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.004</object-name>
-		<property>instrumentation/mptcas/swift[4]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[4]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -4990,7 +4990,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.005</object-name>
-		<property>instrumentation/mptcas/swift[5]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[5]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5001,7 +5001,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.005</object-name>
-		<property>instrumentation/mptcas/swift[5]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[5]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5036,7 +5036,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.006</object-name>
-		<property>instrumentation/mptcas/swift[6]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[6]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5047,7 +5047,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.006</object-name>
-		<property>instrumentation/mptcas/swift[6]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[6]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5083,7 +5083,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.007</object-name>
-		<property>instrumentation/mptcas/swift[7]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[7]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5094,7 +5094,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.007</object-name>
-		<property>instrumentation/mptcas/swift[7]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[7]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5130,7 +5130,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.008</object-name>
-		<property>instrumentation/mptcas/swift[8]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[8]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5141,7 +5141,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.008</object-name>
-		<property>instrumentation/mptcas/swift[8]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[8]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5177,7 +5177,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.009</object-name>
-		<property>instrumentation/mptcas/swift[9]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[9]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5188,7 +5188,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.009</object-name>
-		<property>instrumentation/mptcas/swift[9]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[9]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5224,7 +5224,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.010</object-name>
-		<property>instrumentation/mptcas/swift[10]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[10]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5235,7 +5235,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.010</object-name>
-		<property>instrumentation/mptcas/swift[10]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[10]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5271,7 +5271,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.011</object-name>
-		<property>instrumentation/mptcas/swift[11]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[11]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5282,7 +5282,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.011</object-name>
-		<property>instrumentation/mptcas/swift[11]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[11]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5318,7 +5318,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.012</object-name>
-		<property>instrumentation/mptcas/swift[12]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[12]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5329,7 +5329,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.012</object-name>
-		<property>instrumentation/mptcas/swift[12]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[12]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5365,7 +5365,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.013</object-name>
-		<property>instrumentation/mptcas/swift[13]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[13]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5376,7 +5376,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.013</object-name>
-		<property>instrumentation/mptcas/swift[13]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[13]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5412,7 +5412,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.014</object-name>
-		<property>instrumentation/mptcas/swift[14]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[14]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5423,7 +5423,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.014</object-name>
-		<property>instrumentation/mptcas/swift[14]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[14]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5459,7 +5459,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.015</object-name>
-		<property>instrumentation/mptcas/swift[15]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[15]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5470,7 +5470,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.015</object-name>
-		<property>instrumentation/mptcas/swift[15]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[15]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5506,7 +5506,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.016</object-name>
-		<property>instrumentation/mptcas/swift[16]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[16]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5517,7 +5517,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.016</object-name>
-		<property>instrumentation/mptcas/swift[16]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[16]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5553,7 +5553,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.017</object-name>
-		<property>instrumentation/mptcas/swift[17]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[17]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5564,7 +5564,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.017</object-name>
-		<property>instrumentation/mptcas/swift[17]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[17]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5600,7 +5600,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.018</object-name>
-		<property>instrumentation/mptcas/swift[18]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[18]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5611,7 +5611,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.018</object-name>
-		<property>instrumentation/mptcas/swift[18]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[18]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5647,7 +5647,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.019</object-name>
-		<property>instrumentation/mptcas/swift[19]/dis-xa</property>
+		<property>instrumentation/mptcas/swift[19]/dis-x</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
@@ -5658,7 +5658,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>swift.019</object-name>
-		<property>instrumentation/mptcas/swift[19]/dis-ya</property>
+		<property>instrumentation/mptcas/swift[19]/dis-y</property>
 		<factor>1</factor>
 		<axis>
 			<x>0</x>
