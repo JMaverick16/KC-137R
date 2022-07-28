@@ -25,6 +25,7 @@
         <path>/instrumentation/tacan/frequencies/selected-channel[2]</path>
         <path>/instrumentation/tacan/frequencies/selected-channel[3]</path>
         <path>/instrumentation/tacan/frequencies/selected-channel[4]</path>
+        <path>/environment/season</path>
   </aircraft-data>
   <rating>
       <FDM type="int">4</FDM>
