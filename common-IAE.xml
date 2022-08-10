@@ -310,8 +310,9 @@
 	<it-autoflight>
 		<config>
 			<cmd>
+				<alt>-5</alt>
+				<flch-accel>2</flch-accel>
 				<roll>1.6</roll>
-				<alt-gain>-5</alt-gain>
 			</cmd>
 			<autoland>
 				<pitch-kp>0.0052</pitch-kp>

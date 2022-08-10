@@ -205,7 +205,7 @@ var Sound = {
 };
 
 var Gain = {
-	altGain: props.globals.getNode("/it-autoflight/config/cmd/alt-gain", 1),
+	altGain: props.globals.getNode("/it-autoflight/config/cmd/alt", 1),
 	hdgGain: props.globals.getNode("/it-autoflight/config/cmd/roll", 1),
 	pitchKp: props.globals.initNode("/it-autoflight/config/pitch/kp", 0, "DOUBLE"),
 	pitchKpCalc: 0,
