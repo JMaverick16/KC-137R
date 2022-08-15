@@ -177,7 +177,7 @@
 		<type>exponential</type>
 		<input>/velocities/airspeed-kt</input>
 		<output>/it-autoflight/internal/kts-input-lag</output>
-		<filter-time>0.32</filter-time>
+		<filter-time>0.16</filter-time>
 	</filter>
 	
 	<filter>
@@ -218,7 +218,7 @@
 		<type>exponential</type>
 		<input>/velocities/mach</input>
 		<output>/it-autoflight/internal/mach-input-lag</output>
-		<filter-time>0.32</filter-time>
+		<filter-time>0.16</filter-time>
 	</filter>
 	
 	<filter>
@@ -1384,21 +1384,6 @@
 			<value>120</value>
 		</min>
 		<min>-100000</min>
-		<max>
-			<condition>
-				<or>
-					<equals>
-						<property>/gear/gear[1]/wow</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/gear/gear[2]/wow</property>
-						<value>1</value>
-					</equals>
-				</or>
-			</condition>
-			<value>1000</value>
-		</max>
 		<max>
 			<condition>
 				<equals>
