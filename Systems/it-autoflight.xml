@@ -1325,7 +1325,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/internal/kts-mach</property>
+					<property>/it-autoflight/input/kts-mach</property>
 					<value>1</value>
 				</equals>
 			</condition>

@@ -1262,7 +1262,7 @@ Modified by Octal450 for KC-137R
         <axis-alignment>yz-plane</axis-alignment>
         <type type="string">number-value</type>
         <format type="string">%0.3f</format>
-        <property>velocities/mach</property>
+        <property>instrumentation/airspeed-indicator/indicated-mach</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.010</character-size>
         <character-aspect-ratio type="double">1.2</character-aspect-ratio>
