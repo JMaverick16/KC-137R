@@ -414,6 +414,23 @@
 	</filter>
 	
 	<filter>
+		<name>Heading/Track Deg</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/it-autoflight/input/trk</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<property>/it-autoflight/internal/track-deg</property>
+		</input>
+		<input>/it-autoflight/internal/heading-deg</input>
+		<output>/it-autoflight/internal/heading</output>
+	</filter>
+	
+	<filter>
 		<name>Drift Angle</name>
 		<type>gain</type>
 		<gain>1.0</gain>
@@ -424,11 +441,42 @@
 					<value>1</value>
 				</less-than>
 			</condition>
-			<property>/orientation/heading-magnetic-deg</property>
+			<property>/orientation/heading-deg</property>
 		</input>
-		<input>/orientation/track-magnetic-deg</input>
-		<reference>/orientation/heading-magnetic-deg</reference>
+		<input>/orientation/track-deg</input>
+		<reference>/orientation/heading-deg</reference>
 		<output>/it-autoflight/internal/drift-angle-deg</output>
+		<period>
+			<min>-180</min>
+			<max>180</max>
+		</period>
+	</filter>
+	
+	<filter>
+		<name>Mag True Diff</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/it-autoflight/input/trk</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<property>/orientation/track-deg</property>
+		</input>
+		<input>/orientation/heading-deg</input>
+		<reference>
+			<condition>
+				<equals>
+					<property>/it-autoflight/input/trk</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<property>/orientation/track-magnetic-deg</property>
+		</reference>
+		<reference>/orientation/heading-magnetic-deg</reference>
+		<output>/it-autoflight/internal/mag-true-diff-deg</output>
 		<period>
 			<min>-180</min>
 			<max>180</max>
@@ -464,39 +512,14 @@
 		<gain>1.0</gain>
 		<input>
 			<condition>
-				<and>
-					<equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/input/trk</property>
-						<value>0</value>
-					</equals>
-				</and>
+				<equals>
+					<property>/it-autoflight/output/lat</property>
+					<value>0</value>
+				</equals>
 			</condition>
 			<property>/it-autoflight/internal/hdg-target</property>
 			<offset>
-				<property>/it-autoflight/internal/heading-deg</property>
-				<scale>-1</scale>
-			</offset>
-		</input>
-		<input>
-			<condition>
-				<and>
-					<equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/input/trk</property>
-						<value>1</value>
-					</equals>
-				</and>
-			</condition>
-			<property>/it-autoflight/internal/hdg-target</property>
-			<offset>
-				<property>/it-autoflight/internal/track-deg</property>
+				<property>/it-autoflight/internal/heading</property>
 				<scale>-1</scale>
 			</offset>
 		</input>
@@ -520,6 +543,19 @@
 					</product>
 				</sum>
 			</expression>
+		</input>
+		<input>
+			<condition>
+				<equals>
+					<property>/it-autoflight/output/lat</property>
+					<value>5</value>
+				</equals>
+			</condition>
+			<property>/it-autoflight/internal/takeoff-hdg</property>
+			<offset>
+				<property>/it-autoflight/internal/heading</property>
+				<scale>-1.0</scale>
+			</offset>
 		</input>
 		<input>0</input>
 		<output>/it-autoflight/internal/heading-error-deg</output>
@@ -776,7 +812,7 @@
 		</input>
 		<input>/instrumentation/nav[0]/gs-rate-of-climb-fpm</input>
 		<output>/it-autoflight/internal/nav-rate-of-climb-fpm</output>
-		<min>-1200</min>
+		<min>-1500</min>
 		<max>0</max>
 	</filter>
 	
@@ -911,6 +947,16 @@
 							<property>/it-autoflight/output/lat</property>
 							<value>1</value>
 						</equals>
+						<and>
+							<equals>
+								<property>/it-autoflight/output/lat</property>
+								<value>5</value>
+							</equals>
+							<equals>
+								<property>/it-autoflight/internal/takeoff-lvl</property>
+								<value>0</value>
+							</equals>
+						</and>
 					</or>
 				</and>
 			</condition>
@@ -961,10 +1007,16 @@
 						<property>/it-autoflight/output/lat</property>
 						<value>4</value>
 					</equals>
-					<equals>
-						<property>/it-autoflight/output/lat</property>
-						<value>5</value>
-					</equals>
+					<and>
+						<equals>
+							<property>/it-autoflight/output/lat</property>
+							<value>5</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/internal/takeoff-lvl</property>
+							<value>1</value>
+						</equals>
+					</and>
 				</or>
 			</condition>
 		</enable>
@@ -1346,7 +1398,7 @@
 			<expression>
 				<table>
 					<property>/velocities/airspeed-kt</property>
-					<entry><ind>140</ind><dep> 900</dep></entry>
+					<entry><ind>140</ind><dep> 700</dep></entry>
 					<entry><ind>360</ind><dep>1400</dep></entry>
 				</table>
 			</expression>
@@ -1385,13 +1437,7 @@
 	<filter>
 		<name>Speed By Pitch Filter</name>
 		<type>noise-spike</type>
-		<input>
-			<condition>
-				<property>/it-autoflight/internal/flch-active</property>
-			</condition>
-			<property>/it-autoflight/internal/flch-raw</property>
-		</input>
-		<input>/it-autoflight/internal/vert-speed-fpm</input>
+		<input>/it-autoflight/internal/flch-raw</input>
 		<output>/it-autoflight/internal/flch-filtered</output>
 		<max-rate-of-change>
 			<condition>
