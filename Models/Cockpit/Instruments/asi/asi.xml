@@ -59,7 +59,7 @@
 		<interpolation>
 			<entry><ind>0</ind><dep>9.5</dep></entry>
 			<entry><ind>60</ind><dep>0</dep></entry>
-			<entry><ind>250</ind><dep>-244</dep></entry>
+			<entry><ind>250</ind><dep>-245.5</dep></entry>
 			<entry><ind>300</ind><dep>-265.5</dep></entry>
 			<entry><ind>450</ind><dep>-331</dep></entry>
 		</interpolation>
@@ -82,11 +82,11 @@
 		<property alias="../../params/indicated-speed-kt" />
 		<factor>0.001</factor>
 		<step>100</step>
+		<scroll>1</scroll>
 		<axis>
 			<x>0</x>
-                        <y>1</y>
-                        <z>0</z>
-                </axis>
+			<y>1</y>
+		</axis>
 	</animation>
 	<animation>
 		<name>IAS 10</name>
@@ -95,11 +95,11 @@
 		<property alias="../../params/indicated-speed-kt" />
 		<factor>0.01</factor>
 		<step>10</step>
+		<scroll>1</scroll>
 		<axis>
 			<x>0</x>
-                        <y>1</y>
-                        <z>0</z>
-                </axis>
+			<y>1</y>
+		</axis>
 	</animation>
 	<animation>
 		<name>IAS 1</name>
@@ -107,12 +107,10 @@
 		<object-name>IAS.dig3</object-name>
 		<property alias="../../params/indicated-speed-kt" />
 		<factor>0.1</factor>
-		<step>1</step>
 		<axis>
 			<x>0</x>
-                        <y>1</y>
-                        <z>0</z>
-                </axis>
+			<y>1</y>
+		</axis>
 	</animation>
 
 	<animation>
@@ -122,12 +120,11 @@
 		<property alias="../../params/indicated-mach" />
 		<factor>1</factor>
 		<step>0.1</step>
-		<bias>0.0001</bias>
+		<scroll>0.001</scroll>
 		<axis>
 			<x>0</x>
-                        <y>1</y>
-                        <z>0</z>
-                </axis>
+			<y>1</y>
+		</axis>
 	</animation>
 	<animation>
 		<name>MACH 0.001</name>
@@ -136,12 +133,11 @@
 		<property alias="../../params/indicated-mach" />
 		<factor>10</factor>
 		<step>0.01</step>
-		<bias>0.0001</bias>
+		<scroll>0.001</scroll>
 		<axis>
 			<x>0</x>
-                        <y>1</y>
-                        <z>0</z>
-                </axis>
+			<y>1</y>
+		</axis>
 	</animation>
 	<animation>
 		<name>MACH 0.001</name>
@@ -149,13 +145,10 @@
 		<object-name>MACH.dig3</object-name>
 		<property alias="../../params/indicated-mach" />
 		<factor>100</factor>
-		<step>0.001</step>
-		<bias>0.0001</bias>
 		<axis>
 			<x>0</x>
-                        <y>1</y>
-                        <z>0</z>
-                </axis>
+			<y>1</y>
+		</axis>
 	</animation>
 
 </PropertyList>

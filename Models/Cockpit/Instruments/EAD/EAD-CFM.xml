@@ -2473,14 +2473,14 @@
 					<not><property>gear/gear[1]/wow</property></not>
 					<not><property>gear/gear[2]/wow</property></not>
 					<or>
-						<less-than>
+						<less-than-equals>
 							<property>orientation/roll-deg</property>
-							<value>-45.5</value>
-						</less-than>
-						<greater-than>
+							<value>-45</value>
+						</less-than-equals>
+						<greater-than-equals>
 							<property>orientation/roll-deg</property>
-							<value>45.5</value>
-						</greater-than>
+							<value>45</value>
+						</greater-than-equals>
 					</or>
 				</and>
 				<equals>
