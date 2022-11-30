@@ -88,7 +88,7 @@ var warheads = {
     "GBU-24":            [19,  945.00,1,0],
     "GBU-31":            [20,  945.00,1,0],
     "GBU-54":            [21,  190.00,1,0],
-    "GBU-10":            [22, 2000.00,1,0],
+    "GBU-10":            [22,  945.00,1,0],
     "GBU-16":            [23,  450.00,1,0],
     "HVAR":              [24,    7.50,1,0],#P51
     "KAB-500":           [25,  564.38,1,0],
@@ -134,7 +134,7 @@ var warheads = {
     "5Ya23":             [65,  414.00,0,0],#Volga-M
     "R.550 Magic 2":     [66,   27.00,0,0],
     "R.530":             [67,   55.00,0,0],
-    "d-a":               [68,   30.00,0,0],#deprecated
+    "MK-82AIR":          [68,  192.00,1,0],
     "AIM-9M":            [69,   20.80,0,0],
     "R-73 RMD-1":        [70,   16.31,0,0],# automat Mig29/su27
     "Meteor":            [71,   55.00,0,0],
@@ -162,12 +162,14 @@ var warheads = {
     "pilot":             [93,    0.00,1,0],# ejected pilot
     "BETAB-500ShP":      [94, 1160.00,1,0],
     "Flare":             [95,    0.00,0,0],
+    "3M9":               [96,  125.00,0,0],# 3M9M3 Missile used with 2K12/SA-6
+    "5V28V":             [97,  478.00,0,0],# Missile used with S-200D/SA-5
 };
 
 var id2warhead = [];
 var launched = {};# callsign: elapsed-sec
 var approached = {};# callsign: uniqueID
-var heavy_smoke = [61,62,92];
+var heavy_smoke = [61,62,63,65,92,96,97];
 
 var k = keys(warheads);
 
