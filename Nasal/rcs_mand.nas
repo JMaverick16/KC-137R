@@ -85,4 +85,3 @@ var rcs_oprf_database = {
     "USS-OliverPerry":          450,    
     "USS-SanAntonio":           450,    
 };
-};
