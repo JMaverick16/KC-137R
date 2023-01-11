@@ -172,7 +172,7 @@
 				</setting>
 			</traverse>
 			<output>gear/gear-pos-norm</output>
-		</kinematic>       
+		</kinematic>
 		
 		<kinematic name="Leading Edge Flaps Control">
 			<input>fcs/flap-cmd-norm</input>
