@@ -1,1 +1,1 @@
-setprop("sim/multiplay/visibility-range-nm", 380);
+setprop("sim/multiplay/visibility-range-nm", 400);
