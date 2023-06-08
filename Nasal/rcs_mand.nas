@@ -1,5 +1,5 @@
 var rcs_oprf_database = {
-    #Revision DEC 06 2022
+    #Revision JUN 08 2022
     # This list contains the mandatory RCS frontal values for OPRF (anno 1997), feel free to add non-OPRF to your aircraft, we don't care.
     "default":                  150,    #default value if target's model isn't listed
     "f-14b":                    12,     
@@ -30,7 +30,8 @@ var rcs_oprf_database = {
     "KC-137R-RT":               100,
     "C-137R":                   100,
     "RC-137R":                  100,
-    "E-3R":                  110,
+    "EC-137R":                  110,
+    "E-3R":                     110,
     "E-8R":                     100,
     "KC-10A":                   90,
     "KC-10A-GE":                90,
@@ -81,9 +82,10 @@ var rcs_oprf_database = {
     "SU-27":                    15,
     "daVinci_SU-34":            8,
     "A-50":                     150,
+    "E-3":                      110,
 # Hunter ships
     "USS-NORMANDY":             450,    
     "USS-LakeChamplain":        450,    
     "USS-OliverPerry":          450,    
-    "USS-SanAntonio":           450,    
+    "USS-SanAntonio":           450,  
 };

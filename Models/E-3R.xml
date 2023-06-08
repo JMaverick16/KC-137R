@@ -153,7 +153,7 @@
 	<object-name>E-3antennas</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>EC-137.png</texture>
+    <texture>E-3R.png</texture>
   </animation>
 
 	<animation>
