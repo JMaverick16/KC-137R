@@ -23,6 +23,16 @@ The only reason it's here is to specify a second ADF.
 			<number>1</number>
 		</adf>
 
+		<comm-radio>
+			<name>comm</name>
+			<number>0</number>
+		</comm-radio>
+
+		<comm-radio>
+			<name>comm</name>
+			<number>1</number>
+		</comm-radio>
+
 		<nav-radio>
 			<name>nav</name>
 			<number>0</number>
