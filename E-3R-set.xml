@@ -7,9 +7,9 @@
 -->
 <PropertyList include="common-IAE.xml">
  <sim n="0">
-  <description>Boeing EC-137R Sentry (IAE V2500)</description>
+  <description>Boeing E-3R Sentry (IAE V2500)</description>
   	<long-description>
-   	The Boeing EC-137R Sentry, commonly known as AWACS, is an American airborne early warning and control (AEW and C) aircraft developed by Boeing. Derived from the Boeing 707, it provides all-weather surveillance, command, control, and communications, and is mainly used by the United States Air Force and NATO. The EC-137R is distinguished by the distinctive rotating radar dome (ROTODOME) above the fuselage.
+   	The Boeing E-3R Sentry, commonly known as AWACS, is an American airborne early warning and control (AEW and C) aircraft developed by Boeing. Derived from the Boeing 707, it provides all-weather surveillance, command, control, and communications, and is mainly used by the United States Air Force and NATO. The E-3R is distinguished by the distinctive rotating radar dome (ROTODOME) above the fuselage.
   	</long-description>
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/Old/splashEC.png</splash-texture>
@@ -26,9 +26,9 @@
     </previews>
 
   <model n="0">
-   	 <path>Aircraft/KC-137R/Models/EC-137R.xml</path>
+   	 <path>Aircraft/KC-137R/Models/E-3R.xml</path>
       <livery>
-        <file type="string">EC-137R</file>
+        <file type="string">E-3R</file>
       </livery>
   </model>
 
@@ -43,7 +43,7 @@
 	<menubar>
 		<default>
 			<menu n="100">
-				<label>Boeing EC-137R</label>
+				<label>Boeing E-3R</label>
 				<enabled type="bool">true</enabled>
 				<item>
 					<label>Autostart / shutdown</label>
@@ -158,7 +158,7 @@
 	</menubar>
 
 	<help>
-	  <title>Boeing EC-137R</title>
+	  <title>Boeing E-3R</title>
 		<key>
 		  <name>L</name>
 		  <desc>toggle Landing Lights</desc>
@@ -212,7 +212,7 @@
 			<desc>release flare/chaff countermeasures</desc>
 		</key>
 		<text>
-_______________ Boeing EC-137R Sentry ___________________
+_______________ Boeing E-3R Sentry ___________________
 
 Startup engines:
 follow the tutorials or use Autostart
@@ -326,7 +326,7 @@ no. D6-3071-00
 	<cdu>
 		<display>IDENT</display>
 		<ident>
-			<model>EC-137R</model>
+			<model>E-3R</model>
 			<engines>IAE V2527-A5</engines>
 		</ident>
 		<input type="string"/>
@@ -370,7 +370,7 @@ no. D6-3071-00
 			<text1 type="string"></text1>
 			<subtitle2 type="string"></subtitle2>
 			<text2 type="string"></text2>
-			<subtitle3 type="string">MODEL EC-137R</subtitle3>
+			<subtitle3 type="string">MODEL E-3R</subtitle3>
 			<text3 type="string">FOR FLIGHTGEAR SIMULATION ONLY</text3>
 			<subtitle4 type="string"></subtitle4>
 			<text4 type="string">J Maverick 16, Octal450 Hanger</text4>

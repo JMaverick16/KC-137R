@@ -234,7 +234,7 @@ RWRCanvas = {
                 "MiG-23MLD":                rwr.AIRCRAFT_FLOGGER,
                 "MiG-29":                   rwr.AIRCRAFT_FULCRUM,
                 "SU-27":                    rwr.AIRCRAFT_FLANKER,
-                "EC-137R":                  rwr.AIRCRAFT_SEARCH,
+                "E-3R":                  rwr.AIRCRAFT_SEARCH,
                 "RC-137R":                  rwr.AIRCRAFT_SEARCH,
                 "E-8R":                     rwr.AIRCRAFT_SEARCH,
                 "EC-137D":                  rwr.AIRCRAFT_SEARCH,

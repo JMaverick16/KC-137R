@@ -81,7 +81,7 @@ var tcas = func {
 				setprop("instrumentation/mptcas/mp[" ~ n ~ "]/id-code", t_code);						# only info
 
 				# fill the Awacs data array
-				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
+				if(getprop("sim/aircraft") == "E-3R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
 				var true_hdg = getprop(path~"[" ~ n ~ "]/orientation/true-heading-deg") or 0;
 				  t_code = (t_code > 0) ? t_code : "----";
 
@@ -162,7 +162,7 @@ var tcas = func {
 				setprop("instrumentation/mptcas/ai[" ~ n ~ "]/tas-kt", tas_kt);							# only info
 
 				# fill the Awacs data array
-				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
+				if(getprop("sim/aircraft") == "E-3R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
 				  var true_hdg = getprop("ai/models/aircraft[" ~ n ~ "]/orientation/true-heading-deg") or 0;
 				  aircraft_list[callsign] = {cs: callsign, dis: distance, alt: alt_ft, th: true_hdg, ctm: course_to_mp, tas: tas_kt, at: "AI" };
 				}
@@ -229,7 +229,7 @@ var tcas = func {
   				setprop("instrumentation/mptcas/swift[" ~ n ~ "]/tas-kt", tas_kt);							# only info
 
   				# fill the Awacs data array
-  				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
+  				if(getprop("sim/aircraft") == "E-3R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
   				  var true_hdg = getprop("ai/models/swift[" ~ n ~ "]/orientation/true-heading-deg") or 0;
   				  aircraft_list[callsign] = {cs: callsign, dis: distance, alt: alt_ft, th: true_hdg, ctm: course_to_mp, tas: tas_kt, at: "SWIFT" };
   				}
@@ -304,7 +304,7 @@ var tcas = func {
 				setprop("instrumentation/mptcas/ta[" ~ n ~ "]/tas-kt", tas_kt);							# only info
 
 				# fill the Awacs data array
-				if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
+				if(getprop("sim/aircraft") == "E-3R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
 				  var true_hdg = getprop("ai/models/tanker[" ~ n ~ "]/orientation/true-heading-deg") or 0;
 				  aircraft_list[callsign] = {cs: callsign, dis: distance, alt: alt_ft, th: true_hdg, ctm: course_to_mp, tas: tas_kt, at: "TANKER" };
 				}
@@ -328,7 +328,7 @@ var tcas = func {
 
 		}
 
-		if(getprop("sim/aircraft") == "EC-137R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
+		if(getprop("sim/aircraft") == "E-3R" or getprop("sim/aircraft") == "RC-137R" or getprop("sim/aircraft") == "E-8R"){
 			# first reset the old inputs
 			foreach(var r; props.globals.getNode("/instrumentation/mptcas/table").getChildren("row")){
 				if(r.getNode("col[0]") != nil){

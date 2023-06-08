@@ -11,7 +11,7 @@
     <model>
         <livery>
             <name type="string">U.S. AIR FORCE AWACS</name>
-            <texture>EC-137R.png</texture>
+            <texture>E-3R.png</texture>
             <texture-container>LiveriesEC/FAE-container.png</texture-container>
         </livery>
     </model>

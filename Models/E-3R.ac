@@ -11,7 +11,7 @@ name "Cylinder"
 loc 0 0 -0
 data 8
 Cylinder
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 98
@@ -1116,7 +1116,7 @@ name "E-3antennas"
 loc 0 0 -0
 data 11
 E-3antennas
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 788
@@ -10747,7 +10747,7 @@ name "Inlet"
 loc 0 0 -0
 data 5
 Inlet
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 362
@@ -15440,7 +15440,7 @@ name "LeftGear"
 loc 5.10629 -0.27505 -7.48841
 data 8
 LeftGear
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 324
@@ -17455,7 +17455,7 @@ name "LeftGear.001"
 loc 5.10629 -0.039237 -7.48634
 data 12
 LeftGear.001
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 57
@@ -17907,7 +17907,7 @@ name "LeftGearCompressor"
 loc 5.10629 0.439938 -6.29359
 data 18
 LeftGearCompressor
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 134
@@ -18748,7 +18748,7 @@ name "LeftGearCompressor1"
 loc 5.10629 0.684418 -6.29359
 data 19
 LeftGearCompressor1
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 385
@@ -20786,7 +20786,7 @@ name "NGear"
 loc -15.8003 -1.67798 -0.023383
 data 5
 NGear
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 1412
@@ -27795,7 +27795,7 @@ name "NGearStrut"
 loc -15.7819 -1.5902 -0.023383
 data 10
 NGearStrut
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 616
@@ -31026,7 +31026,7 @@ name "NoseRadar"
 loc 0 0 -0
 data 9
 NoseRadar
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 308
@@ -34477,7 +34477,7 @@ name "NoseWheel"
 loc -19.5898 22.362499 -0.023389
 data 9
 NoseWheel
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 690
@@ -41034,7 +41034,7 @@ name "Radome"
 loc 0 0 -0
 data 6
 Radome
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 1026
@@ -49175,7 +49175,7 @@ name "RadomeSup"
 loc 2.00772 0 -0
 data 9
 RadomeSup
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 150
@@ -49976,7 +49976,7 @@ name "RightGear"
 loc 5.10629 -0.275082 4.97312
 data 9
 RightGear
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 324
@@ -51991,7 +51991,7 @@ name "RightGear.001"
 loc 5.10629 -0.049095 4.97312
 data 13
 RightGear.001
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 57
@@ -52443,7 +52443,7 @@ name "RightGearCompressor"
 loc 5.10629 0.439906 6.16795
 data 19
 RightGearCompressor
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 138
@@ -53300,7 +53300,7 @@ name "RightGearCompressor1"
 loc 5.10629 0.684386 6.16795
 data 20
 RightGearCompressor1
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 377
@@ -55302,7 +55302,7 @@ name "SideRadars"
 loc 0 0 -0
 data 10
 SideRadars
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 624
@@ -62771,7 +62771,7 @@ name "Tailend"
 loc 0 0 -0
 data 7
 Tailend
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 978
@@ -74620,7 +74620,7 @@ name "Tailend.001"
 loc 0 0 -0
 data 11
 Tailend.001
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 52
@@ -74983,7 +74983,7 @@ name "WingAntenna"
 loc 0 0 -0
 data 11
 WingAntenna
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 179.000000
 numvert 32
@@ -75218,7 +75218,7 @@ name "doorBelly"
 loc 0 0.000015 -0.000101
 data 9
 doorBelly
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 88
@@ -75641,7 +75641,7 @@ name "doorCargo"
 loc 0 0.000015 -0.000101
 data 9
 doorCargo
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 116
@@ -76232,7 +76232,7 @@ name "doorFL"
 loc 0 0.000015 -0.000101
 data 6
 doorFL
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 124
@@ -76917,7 +76917,7 @@ name "doorRL"
 loc 0 0.000015 -0.000101
 data 6
 doorRL
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 144
@@ -77736,7 +77736,7 @@ name "doorRefuel"
 loc 0 0.000015 -0.000101
 data 10
 doorRefuel
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 52
@@ -77953,7 +77953,7 @@ name "elevwing"
 loc 0 0 -0.000101
 data 8
 elevwing
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 252
@@ -79026,7 +79026,7 @@ name "engineSupport"
 loc -1.93232 -0.394344 -0.019461
 data 13
 engineSupport
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 1106
@@ -87437,7 +87437,7 @@ name "fuselage"
 loc 0 0.000015 -0.000101
 data 8
 fuselage
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 2053
@@ -101011,7 +101011,7 @@ name "fuselage.belly"
 loc 0 0.000015 -0.000101
 data 14
 fuselage.belly
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 92
@@ -101465,7 +101465,7 @@ name "fuselage.inner"
 loc 0 0.000015 -0.000101
 data 14
 fuselage.inner
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 428
@@ -103998,7 +103998,7 @@ name "lampFrame"
 loc -5.51337 -0.842583 -3.81323
 data 9
 lampFrame
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 20
@@ -104085,7 +104085,7 @@ name "lhdoorinner"
 loc 0 0 0.021165
 data 11
 lhdoorinner
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 32
@@ -104198,7 +104198,7 @@ name "lhdoorouter"
 loc 0 0.013971 0.021165
 data 11
 lhdoorouter
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 20
@@ -104285,7 +104285,7 @@ name "lhelevator"
 loc 0 0 -0.000101
 data 10
 lhelevator
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 20
@@ -104356,7 +104356,7 @@ name "lhfiletflap"
 loc -0.068811 -0.671044 2.17031
 data 11
 lhfiletflap
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 86
@@ -105048,7 +105048,7 @@ name "lhibail"
 loc 0 -5.70613 -0.023386
 data 7
 lhibail
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 19
@@ -105162,7 +105162,7 @@ name "lhibflap"
 loc 4.01488 -0.671044 5.79242
 data 8
 lhibflap
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 86
@@ -105854,7 +105854,7 @@ name "lhngdoor"
 loc 0 -0.004791 0.076661
 data 8
 lhngdoor
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 31
@@ -105986,7 +105986,7 @@ name "lhngdooraft"
 loc 0 0 -0.000101
 data 11
 lhngdooraft
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 24
@@ -106063,7 +106063,7 @@ name "lhobail"
 loc 0 -5.70613 -0.023386
 data 7
 lhobail
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 14
@@ -106158,7 +106158,7 @@ name "lhobflap"
 loc 5.20901 -0.671367 12.9151
 data 8
 lhobflap
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 86
@@ -106850,7 +106850,7 @@ name "lhsp1"
 loc -0.003837 -5.71002 -0.028172
 data 5
 lhsp1
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 8
@@ -106911,7 +106911,7 @@ name "lhsp3"
 loc -0.246786 -5.71002 -0.031444
 data 5
 lhsp3
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 8
@@ -106972,7 +106972,7 @@ name "mgdoora"
 loc 0 -5.70611 -0.023386
 data 7
 mgdoora
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 12
@@ -107058,7 +107058,7 @@ name "mgdoorb"
 loc 0 -5.70611 -0.023386
 data 7
 mgdoorb
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 16
@@ -107183,7 +107183,7 @@ name "mgdoorc"
 loc 0 -5.65001 0.432927
 data 7
 mgdoorc
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 12
@@ -107269,7 +107269,7 @@ name "nose"
 loc 0 0.000015 -0.000101
 data 4
 nose
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 686
@@ -112178,7 +112178,7 @@ name "nosewheelwell"
 loc 0 0 -0.000101
 data 13
 nosewheelwell
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 40
@@ -112384,7 +112384,7 @@ name "probe"
 loc 0.443668 -0.450714 -0.004448
 data 5
 probe
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 20
@@ -112511,7 +112511,7 @@ name "rhdoorinner"
 loc 0 0 -0.000101
 data 11
 rhdoorinner
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 36
@@ -112628,7 +112628,7 @@ name "rhdoorouter"
 loc 0 0.018309 -0.000101
 data 11
 rhdoorouter
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 46
@@ -112811,7 +112811,7 @@ name "rhelevator"
 loc 0 0 -0.000101
 data 10
 rhelevator
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 20
@@ -112882,7 +112882,7 @@ name "rhfiletflap"
 loc -0.068811 -0.671044 -0.031103
 data 11
 rhfiletflap
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 86
@@ -113574,7 +113574,7 @@ name "rhibail"
 loc 0 -5.70613 -0.023386
 data 7
 rhibail
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 19
@@ -113688,7 +113688,7 @@ name "rhibflap"
 loc 4.01488 -0.671044 0.025121
 data 8
 rhibflap
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 86
@@ -114380,7 +114380,7 @@ name "rhmgdoora"
 loc 0 -5.70611 -0.015136
 data 9
 rhmgdoora
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 12
@@ -114466,7 +114466,7 @@ name "rhmgdoorb"
 loc 0 -5.70611 -0.023386
 data 9
 rhmgdoorb
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 16
@@ -114591,7 +114591,7 @@ name "rhmgdoorc"
 loc 0 -5.66028 -0.479907
 data 9
 rhmgdoorc
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 12
@@ -114677,7 +114677,7 @@ name "rhngdoor"
 loc 0 0 -0.000101
 data 8
 rhngdoor
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 32
@@ -114810,7 +114810,7 @@ name "rhngdooraft"
 loc 0 0 -0.000101
 data 11
 rhngdooraft
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 25
@@ -114888,7 +114888,7 @@ name "rhobail"
 loc 0 -5.70613 -0.023386
 data 7
 rhobail
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 14
@@ -114983,7 +114983,7 @@ name "rhobflap"
 loc 5.20901 -0.671367 12.9272
 data 8
 rhobflap
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 86
@@ -115675,7 +115675,7 @@ name "rhsp1"
 loc -0.003837 -5.71002 -0.028172
 data 5
 rhsp1
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 8
@@ -115736,7 +115736,7 @@ name "rhsp3"
 loc -0.246786 -5.71002 -0.031444
 data 5
 rhsp3
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 8
@@ -115797,7 +115797,7 @@ name "rudder"
 loc 0.199257 -0.151658 -0.000593
 data 6
 rudder
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 26
@@ -115890,7 +115890,7 @@ name "slatsL"
 loc -0.00656 -5.15047 -0.051956
 data 6
 slatsL
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 130
@@ -116619,7 +116619,7 @@ name "slatsR"
 loc -0.000056 -5.69381 -0.036784
 data 6
 slatsR
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 130
@@ -117348,7 +117348,7 @@ name "vertstab"
 loc 0.199257 -0.151658 -0.000593
 data 8
 vertstab
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 89
@@ -117852,7 +117852,7 @@ name "wing"
 loc -0.026068 -5.69381 -0.021565
 data 4
 wing
-texture "EC-137R.png"
+texture "E-3R.png"
 texrep 1.000000 1.000000
 crease 45.000001
 numvert 886
