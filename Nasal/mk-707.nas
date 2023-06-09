@@ -1301,8 +1301,11 @@ var loop_flare = func {
         flareCount = -1;
     }
 }
-var flaretimer = maketimer(0.1, loop_flare);
-flaretimer.start();
+if (getprop("sim/aircraft") != "E-3R") {
+	# We use a version that supports auto-cm for E-3R, see E-3.nas
+	var flaretimer = maketimer(0.1, loop_flare);
+	flaretimer.start();
+}
 
 # Damage toggle
 var toggleDamage = func {

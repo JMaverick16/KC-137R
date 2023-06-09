@@ -14,7 +14,7 @@
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/Old/splashEC.png</splash-texture>
 	</startup>
-	
+	<expected-aircraft-dir-name>KC-137R</expected-aircraft-dir-name>
 	<variant-of>KC-137R</variant-of>
 	<minimum-fg-version>2018.3</minimum-fg-version>
 	<previews>
@@ -22,6 +22,11 @@
                 <type>exterior</type>
                 <splash type="bool">true</splash>
                 <path>Splash/EC.png</path>
+            </preview>
+            <preview>
+                <type>interior</type>
+                <splash type="bool">true</splash>
+                <path>Splash/splash-e-3-interior.png</path>
             </preview>
     </previews>
 
@@ -146,13 +151,6 @@
 						<dialog-name>iff</dialog-name>
 				    </binding>
 			    </item>
-				<item>
-		          <label>AWACS Cutoff</label>
-		          <binding>
-		            <command>dialog-show</command>
-		            <dialog-name>cutoff</dialog-name>
-		          </binding>
-		      </item>
 			</menu>
 		</default>
 	</menubar>
@@ -208,8 +206,20 @@
 		  <desc>open Fuel &amp; Weight Menu</desc>
 		</key>
 		<key>
-			<name>f</name>
-			<desc>release flare/chaff countermeasures</desc>
+		  <name>Ctrl-q</name>
+		  <desc>Toggle auto countermeasures</desc>
+		</key>
+		<key>
+		  <name>q</name>
+		  <desc>Release countermeasures (manually)</desc>
+		</key>
+		<key>
+		  <name>Shift-q</name>
+		  <desc>Reset view</desc>
+		</key>
+		<key>
+		  <name>f</name>
+		  <desc>IFF interogate</desc>
 		</key>
 		<text>
 _______________ Boeing E-3R Sentry ___________________
@@ -307,9 +317,10 @@ no. D6-3071-00
   </submodels>
  </sim>
 
-    <iff>
+ <iff>
 	    <channel type="int">0000</channel>
 	</iff>
+
 
  <tanker type="bool">false</tanker>
 
@@ -332,12 +343,24 @@ no. D6-3071-00
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
 	</cdu>
+	<rwr n="0">
+		<serviceable type="bool">true</serviceable>
+		<auto-cm type="bool">true</auto-cm>
+	</rwr>
+	<radar n="0">
+		<knob type="bool">false</knob>
+		<iff type="bool">false</iff>
+		<serviceable type="bool">true</serviceable>
+		<antennae-knob type="double">0</antennae-knob>
+		<range-selected type="double">50</range-selected>
+	</radar>
 	<datalink>
+		<data type="int">0</data>
         <channel type="int">42</channel>
-        <power_prop type="string">instrumentation/mptcas/on</power_prop>
+        <power type="bool">true</power><!-- read in radar system also -->
+        <power_prop type="string">/instrumentation/datalink/power</power_prop>
         <channel_prop type="string">instrumentation/datalink/channel</channel_prop>
         <receive_period type="double">1</receive_period>
-        <!--identifier_prop type="string">instrumentation/datalink/ident</identifier_prop-->
     </datalink>
 	<iff>
 	    <power_prop type="string">instrumentation/iff/power</power_prop>
@@ -345,6 +368,8 @@ no. D6-3071-00
 		type="string">instrumentation/iff/channel</channel_prop>
 	    <channel type="int">0000</channel>
 	    <power type="bool">true</power>
+	    <response type="bool">false</response>
+	    <activate type="bool">true</activate>
 	</iff>
 	<mptcas>
 		<display-factor-awacs type="double">1</display-factor-awacs>
@@ -355,11 +380,7 @@ no. D6-3071-00
    </transponder-->
  </instrumentation>
  
-	<awacs>
-		<from type="string">blufor</from>
-		<to type="string">opfor</to>
-		<a type="string">Enter callsigns and click Cutoff</a>
-	</awacs>
+	
  
   <b707>
 		<manual>
@@ -378,10 +399,47 @@ no. D6-3071-00
 		</manual>
   </b707>
 
+  	<debug-radar>
+        <debug-main type="int">0</debug-main>
+        <debug-stt type="int">0</debug-stt>
+    </debug-radar>
+
+    <rotors>
+        <main>
+            <blade n="3">
+                <flap-deg type="double">0</flap-deg>        <!-- used for releasing flares -->
+                <position-deg type="double">0</position-deg><!-- used for releasing chaff  -->
+            </blade>
+        </main>
+    </rotors>
+
 	<nasal>
+		<hack><file>Aircraft/KC-137R/Nasal/E-3/hackCanvas.nas</file></hack>
+		<notifications>
+			<file>Aircraft/KC-137R/Nasal/ArmamentNotification.nas</file>
+			<file>Aircraft/KC-137R/Nasal/GeoBridgedTransmitter.nas</file>
+		</notifications>
 		<vector>
             <file>Aircraft/KC-137R/Nasal/vector.nas</file>
 		</vector>
+		<damage>
+			<file>Aircraft/KC-137R/Nasal/damage.nas</file>
+		</damage>
+		<datalink>
+            <file>Aircraft/KC-137R/Nasal/datalink.nas</file>
+        </datalink>
+		<iff>
+	        <file>Aircraft/KC-137R/Nasal/iff.nas</file>
+	    </iff>
+		<crash><file>Aircraft/KC-137R/Nasal/E-3/crash-and-stress.nas</file></crash>
+		<e3><file>Aircraft/KC-137R/Nasal/E-3/e3.nas</file></e3>
+		<radar_system>
+			<file>Aircraft/KC-137R/Nasal/E-3/radar-system.nas</file>
+			<file>Aircraft/KC-137R/Nasal/E-3/an-apy-1.nas</file>
+		</radar_system>
+		<rwr><file>Aircraft/KC-137R/Nasal/E-3/rwr.nas</file></rwr>
+		<rdrRoom><file>Aircraft/KC-137R/Nasal/E-3/radar-room.nas</file></rdrRoom>
+		
 		<rcs>
 			<file>Aircraft/KC-137R/Nasal/rcs_mand.nas</file>
             <file>Aircraft/KC-137R/Nasal/rcs.nas</file>
@@ -406,9 +464,7 @@ no. D6-3071-00
 			<file>Aircraft/KC-137R/Nasal/systems-init.nas</file>
 			<file>Aircraft/KC-137R/Nasal/radio.nas</file>
 			<file>Aircraft/KC-137R/Nasal/rangeEC.nas</file>
-			<file>Aircraft/KC-137R/Nasal/radar2.nas</file>
 			<file>Aircraft/KC-137R/Nasal/mc.nas</file>
-			<file>Aircraft/KC-137R/Nasal/tcas.nas</file>
 			<file>Aircraft/KC-137R/Nasal/gmeter.nas</file>
 		</b707>
 		
@@ -419,7 +475,7 @@ no. D6-3071-00
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>
 		</m877>
--
+
 	    <dual_control_tools>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/dual-control-tools.nas</file>
 	    </dual_control_tools>
@@ -429,15 +485,6 @@ no. D6-3071-00
 	    <dual_control>
 	     <file>Aircraft/KC-137R/Nasal/DualControl/pilot-dual-control.nas</file>
 	    </dual_control>
-
-		<notifications>
-			<file>Aircraft/KC-137R/Nasal/ArmamentNotification.nas</file>
-			<file>Aircraft/KC-137R/Nasal/GeoBridgedTransmitter.nas</file>
-		</notifications>
-		<damage>
-			<file>Aircraft/KC-137R/Nasal/damage.nas</file>
-		</damage>
-
 		<efb>
             <file>Aircraft/KC-137R/Nasal/efb.nas</file>
 		</efb>
@@ -448,24 +495,13 @@ no. D6-3071-00
 		<radar>
 			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/RDR-160/RDR160.nas</file>
 		</radar>
-		<rwr>
+		<!--rwr>
 			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/rwr/rwr.nas</file>
-		</rwr>
-		<!--<radardist>
-			<file>Aircraft/KC-137R/Nasal/radardist.nas</file>
-		</radardist>-->
-		<!--<radar-logic>
-			<file>Aircraft/KC-137R/Models/Cockpit/Instruments/rwr/radar-logic.nas</file>
-		</radar-logic>-->
+		</rwr-->
 		<fbw>
 			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
 		</fbw>
-		<datalink>
-            <file>Aircraft/KC-137R/Nasal/datalink.nas</file>
-        </datalink>
-		<iff>
-	        <file>Aircraft/KC-137R/Nasal/iff.nas</file>
-	    </iff>
+		
 	</nasal>
 
     <dual-control>

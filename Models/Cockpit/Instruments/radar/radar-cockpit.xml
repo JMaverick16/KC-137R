@@ -8,7 +8,7 @@
 -->
 <PropertyList>
 
-	<path>radar.ac</path>
+	<path>radarE3.ac</path>
 
 	<animation>
 		<type>material</type>
@@ -97,7 +97,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>KnobOnOff</object-name>
-		<property>instrumentation/mptcas/on</property>
+		<property>instrumentation/radar/rwr-separate</property>
 		<factor>-90</factor>
 		<center>
 			<x-m> 0.0</x-m>
@@ -121,7 +121,7 @@
 			<repeatable>true</repeatable>			
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/mptcas/on</property>
+				<property>instrumentation/radar/rwr-separate</property>
 			</binding>
 		  <binding>
 				<command>property-toggle</command>
@@ -183,7 +183,7 @@
 
 <!-- MULTIPLAYER -->
 
-<model>
+<!--model>
   <name>multis</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/radar/mps.xml</path>
   <offsets>
@@ -191,7 +191,7 @@
     <y-m>0</y-m>
     <z-m>0</z-m>
   </offsets>
-</model>
+</model-->
 
 <!--<animation>
 	<type>rotate</type>
@@ -216,7 +216,15 @@
 	</condition>
 </animation>
 
-
+<animation>
+		<type>material</type>
+		<object-name>canvasRWR</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
 
 	
 </PropertyList>

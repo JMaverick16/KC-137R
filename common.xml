@@ -560,16 +560,35 @@
 			<min-lb type="double">  0.0</min-lb>
 			<max-lb type="double"> 10000.0</max-lb>
 		</weight>
-		<armament>
-			<msg type="bool">false</msg>
-			<models type="string">Aircraft/KC-137R/Models/Armament/</models>
-			<MLW-bearing type="double">0</MLW-bearing>
-			<MLW-count type="int">0</MLW-count>
-			<MLW-launcher type="string"></MLW-launcher>
-			<MAW-bearing type="double">0</MAW-bearing>
-			<MAW-active type="bool">false</MAW-active>
-		</armament>
-	</payload>
+ 		<d-config>
+	        <full_damage_dist_m type="double">0</full_damage_dist_m>
+	        <use_hitpoints_instead_of_failure_modes_bool type="bool">false</use_hitpoints_instead_of_failure_modes_bool>
+	        <hp_max type="double">80</hp_max>
+	        <hitable_by_air_munitions type="bool">true</hitable_by_air_munitions>
+	        <hitable_by_cannon type="bool">true</hitable_by_cannon>
+	        <is_fleet type="bool">false</is_fleet>
+	        <rwr_to_screen type="bool">true</rwr_to_screen>
+	        <rwr_audio_extended type="bool">true</rwr_audio_extended>
+	        <tacview_supported type="bool">false</tacview_supported>
+	        <m28_auto type="bool">false</m28_auto>
+	        <mlw_max type="double">0</mlw_max>
+	        <auto_flare_caller type="bool">false</auto_flare_caller>
+	    </d-config>
+	    <armament>	        
+	        <msg type="bool">true</msg>
+	        <tacview type="bool">false</tacview>
+	        <models type="string">Aircraft/707/Models/E-3/</models>
+	        <enable-craters type="bool">true</enable-craters>
+	        <MLW-bearing type="double">0</MLW-bearing>
+	        <MLW-count type="int">0</MLW-count>
+	        <MLW-launcher type="string"></MLW-launcher>
+	        <MAW-bearing type="double">0</MAW-bearing>
+	        <MAW-active type="bool">false</MAW-active>
+	        <MAW-semiactive type="bool">false</MAW-semiactive>
+	        <MAW-semiactive-callsign type="string"></MAW-semiactive-callsign>
+	        <spike type="bool">false</spike>
+	    </armament>
+ 	</payload>
 
 	<instrumentation>
 		<!-- specific ADF -->
