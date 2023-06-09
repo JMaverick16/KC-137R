@@ -207,7 +207,7 @@
 	
 	<model>
 		<name>radioRoom</name>
-		<path>Aircraft/KC-137R/Models/Cockpit/Awacs/radioroom.xml</path>
+		<path>Aircraft/KC-137R/Models/Cockpit/Awacs/radioroomE3.xml</path>
 	</model>
 	
 		

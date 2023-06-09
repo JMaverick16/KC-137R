@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
+<PropertyList>
+ <path>radioroom.ac</path>
+	<animation>
+		<type>material</type>
+  		<object-name>sup</object-name>
+  		<object-name>console1</object-name>
+			<object-name>seats</object-name>
+			<object-name>keyboard</object-name>
+		<condition>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+		</condition>
+		<emission>
+			<red>0.05</red>
+			<green>0.05</green>
+			<blue>0.05</blue>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+  		<object-name>sup</object-name>
+  		<object-name>console1</object-name>
+			<object-name>seats</object-name>
+			<object-name>keyboard</object-name>
+		<condition>
+			<not><property>/sim/rendering/rembrandt/enabled</property></not>
+			<property>systems/electrical/outputs/cabin-dim</property>
+		</condition>
+		<emission>
+		  <red>0.3</red>
+		  <green>0.3</green>
+		  <blue>0.3</blue>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>noshadow</type>
+			<object-name>keyboard</object-name>
+	</animation>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>keyboard</object-name>
+  	</effect>
+
+    <model>
+        <name>RAD1</name>
+        <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/radarE3.xml</path>
+        <offsets>
+            <x-m>-11.20</x-m>
+            <y-m>  0.117</y-m>
+            <z-m>  1.24</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>RAD2</name>
+        <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/radardataE3.xml</path>
+        <offsets>
+            <x-m>-11.20</x-m>
+            <y-m>  0.617</y-m>
+            <z-m>  1.24</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>RAD3</name>
+        <path>Aircraft/KC-137R/Models/Cockpit/Awacs/radar/radarblindE3.xml</path>
+        <offsets>
+            <x-m>-11.20</x-m>
+            <y-m>  1.117</y-m>
+            <z-m>  1.24</z-m>
+        </offsets>
+    </model>
+
+    <light>
+    	<!-- This light only works in 2020.4.0 and with dynamic lights enabled -->
+	  <name>my-spotlight</name>
+	  <type>point</type>
+	  <position>
+	    <x-m>-8.78565</x-m>
+	    <y-m>-0.007164</y-m>
+	    <z-m>2.04776</z-m>
+	  </position>
+	  <ambient>
+	    <r>0.03</r>
+	    <g>0.03</g>
+	    <b>0.03</b>
+	    <a>1</a>
+	  </ambient>
+	  <diffuse>
+	    <r>0.95</r>
+	    <g>0.9</g>
+	    <b>0.9</b>
+	    <a>1</a>
+	  </diffuse>
+	  <specular>
+	    <r>0.0</r>
+	    <g>0.0</g>
+	    <b>0.0</b>
+	    <a>1</a>
+	  </specular>
+	  <attenuation>
+	    <c>1.0</c>
+	    <l>0.0</l>
+	    <q>0.075</q>
+	  </attenuation>
+	  <range-m>3</range-m>
+	  <dim-factor>
+	    <property>systems/electrical/outputs/cabin-dim</property>
+	  </dim-factor>
+	</light>
+</PropertyList>

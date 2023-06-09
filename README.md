@@ -14,6 +14,19 @@ This repo contains 6 military aircrafts derived from the Boeing 707 and it's var
 
 - C-137R Stratoliner: Advanced military transport aircraft and VIP clipper, featuring glass cockpit (IAE V2528-D5).
 
+# Boeing E-3R Sentry Specifics
+
+The radar only works when airborne
+
+To select a friendly on radar: left mouse-click on screen
+
+To select a boogie/bandit on radar: middle mouse-click on screen
+
+To seperate RWR emitters if they are clumped: use knob in cockpit next to rwr screen
+
+Download state border outlines here, just unpack the ZIP in the aircraft KC-137R folder:
+[Google Drive link to ZIP](https://drive.google.com/file/d/1GKyUINj9j4mKxqtG874WbCc9Jmpg76wl/view?usp=drive_link)
+
 AUTHORS:
 * MD-GRK (themadgreek): Original KC-137R project idea with CFM LEAP X engines.
 * J Maverick 16: Initial contribution and update of original model; current maintainer and developer.
