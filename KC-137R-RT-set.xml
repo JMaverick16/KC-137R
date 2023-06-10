@@ -14,7 +14,7 @@
 	<startup>
 		<splash-texture>Aircraft/KC-137R/Splash/Old/splashKCRT.png</splash-texture>
 	</startup>
-	
+	<expected-aircraft-dir-name>KC-137R</expected-aircraft-dir-name>
 	<variant-of>KC-137R</variant-of>
 	<minimum-fg-version>2018.3</minimum-fg-version>
 	<previews>
