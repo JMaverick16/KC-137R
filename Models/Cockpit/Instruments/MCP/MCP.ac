@@ -2,10 +2,7 @@ AC3Db
 MATERIAL "ac3dmat1.001" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 64  trans 0
 MATERIAL "ac3dmat1.001" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 0 0 0  shi 64  trans 0
 OBJECT world
-kids 30
-OBJECT group
-name "Display"
-kids 0
+kids 29
 OBJECT poly
 name "AltHld"
 data 8
@@ -60,6 +57,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Alt.knob"
+loc 0 -0.00109 0
 data 12
 Cylinder.007
 texture "MCP.png"
@@ -2586,6 +2584,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Hdg.knob"
+loc 0 -0.00109 0
 data 12
 Cylinder.009
 texture "MCP.png"
@@ -7337,6 +7336,7 @@ refs 4
 kids 0
 OBJECT poly
 name "Spd.knob"
+loc 0 -0.00109 0
 data 12
 Cylinder.012
 texture "MCP.png"
