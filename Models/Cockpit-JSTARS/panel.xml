@@ -566,7 +566,7 @@
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/MCP/MCP.xml</path>
 		<offsets>
 			<x-m>-18.812</x-m>
-			<y-m> -0.035</y-m>
+			<y-m> -0.038</y-m>
 			<z-m>  1.048</z-m>
 		</offsets>
 	</model>

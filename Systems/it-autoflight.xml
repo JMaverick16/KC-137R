@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- IT-AUTOFLIGHT -->
-<!-- Copyright (c) 2022 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2023 Josh Davidson (Octal450) -->
 
 <PropertyList>
 	
@@ -927,6 +927,37 @@
 			</expression>
 		</input>
 		<output>/it-autoflight/internal/fpa</output>
+	</filter>
+	
+	<filter>
+		<name>FPA Sync</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<enable>
+			<condition>
+				<not-equals>
+					<property>/it-autoflight/output/vert</property>
+					<value>5</value>
+				</not-equals>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<div>
+					<floor>
+						<sum>
+							<product>
+								<property>/it-autoflight/internal/fpa</property>
+								<value>10</value>
+							</product>
+							<value>0.5</value>
+						</sum>
+					</floor>
+					<value>10</value>
+				</div>
+			</expression>
+		</input>
+		<output>/it-autoflight/input/fpa</output>
 	</filter>
 	
 	<!-- Roll Axis -->
@@ -2228,7 +2259,7 @@
 			<property>/it-autoflight/internal/rudder-cmd</property>
 		</input>
 		<input>0</input>
-		<output>/fdm/jsbsim/fcc/afs/yaw-cmd</output>
+		<output>/it-autoflight/internal/rudder</output>
 		<max-rate-of-change>1.2</max-rate-of-change>
 	</filter>
 	
