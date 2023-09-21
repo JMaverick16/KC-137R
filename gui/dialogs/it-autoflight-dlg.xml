@@ -455,8 +455,12 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/mach", math.round(math.max(getprop("/it-autoflight/input/mach") - 0.01, 0.5), 0.001));</script>
+				<command>property-adjust</command>
+				<property>/it-autoflight/input/mach</property>
+				<min>0.50</min>
+				<max>0.90</max>
+				<step>-0.01</step>
+				<wrap>false</wrap>
 			</binding>
 		</button>
 		<button>
@@ -472,8 +476,12 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/mach", math.round(math.max(getprop("/it-autoflight/input/mach") - 0.001, 0.5), 0.001));</script>
+				<command>property-adjust</command>
+				<property>/it-autoflight/input/mach</property>
+				<min>0.50</min>
+				<max>0.90</max>
+				<step>-0.001</step>
+				<wrap>false</wrap>
 			</binding>
 		</button>
 
@@ -507,8 +515,12 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.001, 0.9), 0.001));</script>
+				<command>property-adjust</command>
+				<property>/it-autoflight/input/mach</property>
+				<min>0.50</min>
+				<max>0.90</max>
+				<step>0.001</step>
+				<wrap>false</wrap>
 			</binding>
 		</button>
 		<button>
@@ -525,8 +537,12 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.01, 0.9), 0.001));</script>
+				<command>property-adjust</command>
+				<property>/it-autoflight/input/mach</property>
+				<min>0.50</min>
+				<max>0.90</max>
+				<step>0.01</step>
+				<wrap>false</wrap>
 			</binding>
 		</button>
 	</group>
@@ -1119,8 +1135,12 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/fpa", math.round(math.max(getprop("/it-autoflight/input/fpa") - 1, -9.9), 0.1));</script>
+				<command>property-adjust</command>
+				<property>/it-autoflight/input/fpa</property>
+				<min>-9.9</min>
+				<max>9.9</max>
+				<step>-1</step>
+				<wrap>false</wrap>
 			</binding>
 		</button>
 		<button>
@@ -1136,8 +1156,12 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/fpa", math.round(math.max(getprop("/it-autoflight/input/fpa") - 0.1, -9.9), 0.1));</script>
+				<command>property-adjust</command>
+				<property>/it-autoflight/input/fpa</property>
+				<min>-9.9</min>
+				<max>9.9</max>
+				<step>-0.1</step>
+				<wrap>false</wrap>
 			</binding>
 		</button>
 
@@ -1171,8 +1195,12 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/fpa", math.round(math.min(getprop("/it-autoflight/input/fpa") + 0.1, 9.9), 0.1));</script>
+				<command>property-adjust</command>
+				<property>/it-autoflight/input/fpa</property>
+				<min>-9.9</min>
+				<max>9.9</max>
+				<step>0.1</step>
+				<wrap>false</wrap>
 			</binding>
 		</button>
 		<button>
@@ -1189,8 +1217,12 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/fpa", math.round(math.min(getprop("/it-autoflight/input/fpa") + 1, 9.9), 0.1));</script>
+				<command>property-adjust</command>
+				<property>/it-autoflight/input/fpa</property>
+				<min>-9.9</min>
+				<max>9.9</max>
+				<step>1</step>
+				<wrap>false</wrap>
 			</binding>
 		</button>
 	</group>

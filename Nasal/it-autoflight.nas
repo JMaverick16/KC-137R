@@ -1,5 +1,5 @@
-# IT-AUTOFLIGHT System Controller V4.0.8 Beta
-# Copyright (c) 2022 Josh Davidson (Octal450)
+# IT-AUTOFLIGHT System Controller V4.0.8
+# Copyright (c) 2023 Josh Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
 
@@ -316,7 +316,7 @@ var ITAF = {
 		Settings.autolandWithoutApTemp = Settings.autolandWithoutAp.getBoolValue();
 		
 		# Kill Autoland if the system should not autoland without AP, and AP is off
-		if (Settings.autolandWithoutApTemp) { # Only evaluate the rest if this setting is on
+		if (!Settings.autolandWithoutApTemp) { # Only evaluate the rest if this setting is on
 			if (!Output.ap1Temp and !Output.ap2Temp) {
 				if (Output.latTemp == 4) {
 					me.activateLoc();
@@ -571,7 +571,7 @@ var ITAF = {
 	},
 	apOffFunction: func() {
 		if (!Output.ap1.getBoolValue() and !Output.ap2.getBoolValue()) { # Only do if both APs are off
-			if (!Settings.disableFinal.getBoolValue() and !Settings.useControlsFlight.getBoolValue()) {
+			if (!Settings.disableFinal.getBoolValue() and Settings.useControlsFlight.getBoolValue()) {
 				Controls.aileron.setValue(0);
 				Controls.elevator.setValue(0);
 				Controls.rudder.setValue(0);

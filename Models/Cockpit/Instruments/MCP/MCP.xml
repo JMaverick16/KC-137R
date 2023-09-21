@@ -386,7 +386,7 @@
 				<command>property-adjust</command>
 				<property>it-autoflight/input/kts</property>
 				<step>-1</step>
-				<max>350</max>
+				<min>100</min>
 				<wrap>false</wrap>
 			</binding>
 			<binding>
@@ -399,7 +399,7 @@
 				<command>property-adjust</command>
 				<property>it-autoflight/input/kts</property>
 				<step>-10</step>
-				<max>350</max>
+				<min>100</min>
 				<wrap>false</wrap>
 			</binding>
 			<binding>
