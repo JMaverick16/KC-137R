@@ -1,42 +1,42 @@
 {
   "vector": {
-    "version": null,
+    "version": "2.0.3",
     "path": "Nasal/vector.nas"
   },
   "radar-system": {
-    "version": null,
+    "version": "1.0.1",
     "path": "Nasal/E-3/radar-system.nas"
   },
   "damage": {
-    "version": null,
+    "version": "1.0.1",
     "path": "Nasal/damage.nas"
   },
   "iff": {
-    "version": null,
+    "version": "1.1.0",
     "path": "Nasal/iff.nas"
   },
   "datalink": {
-    "version": null,
+    "version": "1.1.0",
     "path": "Nasal/datalink.nas"
   },
   "rcs-mand": {
-    "version": null,
+    "version": "1.0.1",
     "path": "Nasal/rcs_mand.nas"
   },
   "armament-notification": {
-    "version": null,
+    "version": "1.1.0",
     "path": "Nasal/ArmamentNotification.nas"
   },
   "geo-bridged-transmitter": {
-    "version": null,
+    "version": "1.0.0",
     "path": "Nasal/GeoBridgedTransmitter.nas"
   },
   "hack-canvas": {
-    "version": null,
+    "version": "1.0.0",
     "path": "Nasal/E-3/hackCanvas.nas"
   },
   "crash-and-stress": {
-    "version": null,
+    "version": "0.1.9",
     "path": "Nasal/E-3/crash-and-stress.nas"
   }
 }

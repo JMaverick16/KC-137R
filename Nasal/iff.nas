@@ -31,12 +31,6 @@
 # returns 1 if a match, otherwise 0.
 #
 
-# MIG-21 SPECIFIC INFO
-# To keep things trimmed down, the IFF lights are handled in a couple different files.
-# the IMTR light and RESP light are in rwr.nas
-# the DECOD light is in radar-canvas.nas (should probably be in radar-logic but the code is basically already there in -canvas)  
-
-
 var iff_refresh_rate = getprop("/instrumentation/iff/iff_refresh_rate") or 120;
 var iff_unique_id = getprop("/instrumentation/iff/iff_unique_id") or "";
 var iff_hash_length = getprop("/instrumentation/iff/iff_hash_length") or 3;
@@ -69,10 +63,10 @@ var iff_hash = {
 			me.int_systime = int(systime());
 			me.update_time = int(math.mod(me.int_systime,iff_refresh_rate));
 			me.time = me.int_systime - me.update_time;
-			node.hash.setValue(_calculate_hash(me.time, me.callsign, node.channel.getValue()));
+			node.hash.setValue(_calculate_hash(me.time, node.callsign.getValue(), node.channel.getValue()));
 		} else {
-			node.hash.setValue("");
 			me.timer.stop();
+			node.hash.setValue("");
 		}
 	},
 };
@@ -80,13 +74,16 @@ var iff_hash = {
 var hash1 = "";
 var hash2 = "";
 var check_hash = "";
+var last_interogate = 0;
 
 var interrogate = func(tgt) {
 	if ( tgt.getChild("callsign") == nil or tgt.getNode("sim/multiplay/generic/string["~iff_mp_string~"]") == nil ) {
 		return 0;
 	}
-	hash1 = _calculate_hash(int(systime()) - int(math.mod(int(systime()),iff_refresh_rate)), tgt.getChild("callsign").getValue(),node.channel.getValue());
-	hash2 = _calculate_hash(int(systime()) - int(math.mod(int(systime()),iff_refresh_rate)) - iff_refresh_rate, tgt.getChild("callsign").getValue(),node.channel.getValue());
+	var cs = tgt.getChild("callsign").getValue();
+	cs = size(cs) < 8?cs:left(cs, 7);
+	hash1 = _calculate_hash(int(systime()) - int(math.mod(int(systime()),iff_refresh_rate)), cs,node.channel.getValue());
+	hash2 = _calculate_hash(int(systime()) - int(math.mod(int(systime()),iff_refresh_rate)) - iff_refresh_rate, cs,node.channel.getValue());
 	check_hash = tgt.getNode("sim/multiplay/generic/string["~iff_mp_string~"]").getValue();
 	#print("hash1 " ~ hash1);
 	#print("hash2 " ~ hash2);
@@ -103,6 +100,7 @@ var _calculate_hash = func(time, callsign, channel) {
 	#print("callsign|" ~ callsign ~ "|");
 	#print("channel|" ~ channel ~ "|");
 	#print("hash|"~left(md5(time ~ callsign ~ channel ~ iff_unique_id),iff_hash_length)~"|");
+	callsign = size(callsign) < 8?callsign:left(callsign, 7);
 	return left(md5(time ~ callsign ~ channel ~ iff_unique_id),iff_hash_length);
 }
 
@@ -110,3 +108,4 @@ var new_hashing = iff_hash.new();
 new_hashing.loop();
 setlistener(node.channel,func(){new_hashing.loop();},nil,0);
 setlistener(node.power,func(){new_hashing.loop();},nil,0);
+setlistener(node.callsign,func(){new_hashing.loop();},nil,0);
