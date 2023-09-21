@@ -26,5 +26,17 @@
   "armament-notification": {
     "version": null,
     "path": "Nasal/ArmamentNotification.nas"
+  },
+  "geo-bridged-transmitter": {
+    "version": null,
+    "path": "Nasal/GeoBridgedTransmitter.nas"
+  },
+  "hack-canvas": {
+    "version": null,
+    "path": "Nasal/E-3/hackCanvas.nas"
+  },
+  "crash-and-stress": {
+    "version": null,
+    "path": "Nasal/E-3/crash-and-stress.nas"
   }
 }

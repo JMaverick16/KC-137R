@@ -431,7 +431,7 @@ no. D6-3071-00
 		<iff>
 	        <file>Aircraft/KC-137R/Nasal/iff.nas</file>
 	    </iff>
-		<crash><file>Aircraft/KC-137R/Nasal/E-3/crash-and-stress.nas</file></crash>
+		<crash><file>Aircraft/KC-137R/Nasal/E-3/crash-and-stress.nas</file><file>Aircraft/KC-137R/Nasal/E-3/crash-and-stress-custom.nas</file></crash>
 		<e3><file>Aircraft/KC-137R/Nasal/E-3/e3.nas</file></e3>
 		<radar_system>
 			<file>Aircraft/KC-137R/Nasal/E-3/radar-system.nas</file>
