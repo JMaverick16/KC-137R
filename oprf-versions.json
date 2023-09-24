@@ -4,11 +4,11 @@
     "path": "Nasal/vector.nas"
   },
   "radar-system": {
-    "version": "2.0.0",
+    "version": "2.0.1",
     "path": "Nasal/E-3/radar-system.nas"
   },
   "radar-system-database": {
-    "version": "1.0.2",
+    "version": "1.0.4",
     "path": "Nasal/E-3/radar-system-database.nas"
   },
   "damage": {
@@ -24,7 +24,7 @@
     "path": "Nasal/datalink.nas"
   },
   "rcs-mand": {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "path": "Nasal/rcs_mand.nas"
   },
   "armament-notification": {
