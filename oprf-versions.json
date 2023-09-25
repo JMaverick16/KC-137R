@@ -24,7 +24,7 @@
     "path": "Nasal/datalink.nas"
   },
   "rcs-mand": {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "path": "Nasal/rcs_mand.nas"
   },
   "armament-notification": {
