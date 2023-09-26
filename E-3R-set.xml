@@ -151,6 +151,13 @@
 						<dialog-name>iff</dialog-name>
 				    </binding>
 			    </item>
+			    <item>
+		          	<label>Reset to Airbase (military only)</label>
+		          	<binding>
+		              	<command>dialog-show</command>
+		              	<dialog-name>airbases</dialog-name>
+		        	</binding>
+		      	</item>
 			</menu>
 		</default>
 	</menubar>
@@ -502,6 +509,9 @@ no. D6-3071-00
 		<fbw>
 			<file>Aircraft/KC-137R/Nasal/it-fbw.nas</file>
 		</fbw>
+		<airbases>
+			<file>Aircraft/KC-137R/Nasal/airbases.nas</file>
+		</airbases>
 		
 	</nasal>
 
