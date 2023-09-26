@@ -46,5 +46,9 @@
   "airbases": {
     "version": null,
     "path": "Nasal/airbases.nas"
+  },
+  "airbases-dialog": {
+    "version": null,
+    "path": "gui/dialogs/airbases.xml"
   }
 }
