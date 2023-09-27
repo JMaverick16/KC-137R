@@ -44,11 +44,11 @@
     "path": "Nasal/E-3/crash-and-stress.nas"
   },
   "airbases": {
-    "version": null,
+    "version": "1.0.13",
     "path": "Nasal/airbases.nas"
   },
   "airbases-dialog": {
-    "version": null,
+    "version": "1.0.0",
     "path": "gui/dialogs/airbases.xml"
   }
 }

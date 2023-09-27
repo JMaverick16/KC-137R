@@ -1634,7 +1634,9 @@ var db = {
 # Contains 1624 bases
 
 
-
+# Countries checked: Netherlands (PHJake), Denmark (Leto), UK (Sammy), Cyprus (Leto), part of USA (pinto),
+#                    Australia (sryu1).
+#
 # The above list is auto-generated, put custom changes here:
 
 # ADD
@@ -1644,7 +1646,35 @@ db.EHSB = "NLD Netherlands";
 db.EHTW = "NLD Netherlands";
 db.EHVB = "NLD Netherlands";
 db.EHKD = "NLD Netherlands";
-db.EKAV = "DNK Denmark";      # Avnø Air Base
+db.EKAV = "DNK Denmark";        # Avnø Air Base
+db.EGKN = "GBR United Kingdom";
+db.EGKT = "GBR United Kingdom";
+db.EGQL = "GBR United Kingdom";
+db.EGVL = "GBR United Kingdom";
+db.EGDI = "GBR United Kingdom";
+db.EGOQ = "GBR United Kingdom";
+db.EGDN = "GBR United Kingdom";
+db.EGOW = "GBR United Kingdom";
+db.EGXY = "GBR United Kingdom";
+db.EGOE = "GBR United Kingdom";
+db.EGDJ = "GBR United Kingdom";
+db.EGXW = "GBR United Kingdom";
+db.EGUW = "GBR United Kingdom";
+db.EGPK = "GBR United Kingdom";
+db.EGVA = "GBR United Kingdom";
+db.EGYD = "GBR United Kingdom";
+db.EGXC = "GBR United Kingdom";
+db.EGYE = "GBR United Kingdom";
+db.EGUB = "GBR United Kingdom";
+db.LCRE = "CYP Cyprus [UK]";#British Overseas Territory on the island of Cyprus
+db.LCGK = "CYP Turkish Republic of Northern Cyprus";
+db.KSKA = "USA United States"; # Fairchild (USAF)
+db.KGFA = "USA United States"; # Malmstrom (USAF)
+db.FJDG = "USA United States"; # Diego Garcia (British Royal Navy/USN/CIA)
+db.KPUB = "USA United States"; # Pueblo Memorial (USAF)
+db.YPLM = "AUS Australia";#  RAAF Base Learmonth
+db.YGNB = "AUS Australia";#  RAAF Base Glenbrook
+db.YBSG = "AUS Australia";#  RAAF Base Scherger
 
 # REMOVE
 #
@@ -1654,6 +1684,48 @@ delete(db,"EHLE");
 delete(db,"EKMB");
 delete(db,"EKAH");
 delete(db,"KLAS");
+delete(db,"EGKB");
+delete(db,"EGBJ");
+delete(db,"EGDL");
+delete(db,"EGGP");
+delete(db,"EGHF");# 1990's
+delete(db,"EGHG");
+delete(db,"EGHH"); #- 1969
+delete(db,"EGHI"); #- 1946?
+delete(db,"EGHR"); #- 1940s
+delete(db,"EGKA"); #- ~1945
+delete(db,"EGLL"); #- Never. It's Heathrow.
+delete(db,"EGMH");
+delete(db,"EGSC");
+delete(db,"EGSH");
+delete(db,"EGTD");
+delete(db,"EGTE");
+delete(db,"YAYR"); #: "AUS Australia",                                # Ayr
+delete(db,"YBEG"); #: "AUS Australia",                                # Bening Field
+delete(db,"YBHB"); #: "AUS Australia",                                # Bathurst Harbour
+delete(db,"YBON"); #: "AUS Australia",                                # Bindoon
+delete(db,"YBRK"); #: "AUS Australia",                                # Rockhampton
+delete(db,"YCMT"); #: "AUS Australia",                                # Clermont
+delete(db,"YCNN"); #: "AUS Australia",                                # Coonana
+delete(db,"YDNB"); #: "AUS Australia",                                # Doongmabulla
+delete(db,"YFBS"); #: "AUS Australia",                                # Forbes
+delete(db,"YGFN"); #: "AUS Australia",                                # Grafton
+delete(db,"YGMP"); #: "AUS Australia",                                # Grampians
+delete(db,"YGYM"); #: "AUS Australia",                                # Gympie
+delete(db,"YHER"); #: "AUS Australia",                                # Hervey Range
+delete(db,"YIGM"); #: "AUS Australia",                                # Ingham
+delete(db,"YILA"); #: "AUS Australia",                                # Milawa
+delete(db,"YLED"); #: "AUS Australia",                                # Lethbridge
+delete(db,"YMAV"); #: "AUS Australia",                                # Avalon
+delete(db,"YNKR"); #: "AUS Australia",                                # Nackeroo
+delete(db,"YNRG"); #: "AUS Australia",                                # Narrogin
+delete(db,"YOAS"); #: "AUS Australia",                                # The Oaks
+delete(db,"YOOD"); #: "AUS Australia",                                # Oodnadatta
+delete(db,"YPKL"); #: "AUS Australia",                                # Puckapunyal
+delete(db,"YPPD"); #: "AUS Australia",                                # Port Hedland Intl
+delete(db,"YSCB"); #: "AUS Australia",                                # Canberra
+delete(db,"YSHW"); #: "AUS Australia",                                # Holsworthy
+delete(db,"YTCK"); #: "AUS Australia",                                # Torrens Creek
 
 # MODIFY
 #
@@ -1663,6 +1735,8 @@ db.UAOL = "KAZ Kazakhstan";
 db.VEAB = "IND India";
 db.VERP = "IND India";
 db.VEBR = "IND India";
+db.LCPH = "CYP Republic of Cyprus";
+db.LCRA = "CYP Cyprus [UK]";#British Overseas Territory on the island of Cyprus
 
 var pruneDB = func {
 	# Optimize DB by removing airbases FG does not support
@@ -1674,3 +1748,28 @@ var pruneDB = func {
 	print("Optimized airbase DB, it now has "~size(keys(db))~" entries.");
 }
 #pruneDB(); # it only removes around 150 bases, so not worth it
+
+
+# These 2 function is how you use the DB:
+
+var lookUp = func (icao) {
+	icao = string.uc(icao);
+	if (contains(db, icao)) return 1;
+	if (icao == "8KS3") {
+		# ICAOs that starts with number go in these functions
+		#
+		# 8KS3  Davis Airfield (USAF)
+		#
+		return 1;
+	}
+	return 0;
+}
+
+var country = func (icao) {
+	icao = string.uc(icao);
+	if (contains(db, icao)) return db[icao];
+	if (icao == "8KS3") {
+		return "USA United States";
+	}
+	return "";
+}
