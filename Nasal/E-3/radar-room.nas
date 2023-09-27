@@ -1878,9 +1878,10 @@ var get_intercept = func(bearingToRunner, dist_m, runnerHeading, runnerSpeed, ch
     var a = chaserSpeed * chaserSpeed - runnerSpeed * runnerSpeed;
     var b = 2 * vector.Math.dotProduct(VectorFromRunner, RunnerVelocity);
     var c = -dist_m * dist_m;
+
+    if (a == 0) a = 1000;# Otherwise same speeds will produce no intercept even though possible.
     var dd = b*b-4*a*c;
-    if (a == 0) a == 1000;# Otherwise same speeds will produce no intercept.
-    if (dd<0 or a == 0) {
+    if (dd<0) {
       # intercept not possible
       return nil;
     }
