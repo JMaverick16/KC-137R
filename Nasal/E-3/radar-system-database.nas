@@ -89,8 +89,8 @@ var Database = {
     "missile_frigate":        {isShip: 1, canFly: 0, hasAirRadar:1, rwrCode:"SH", killZone: 80, radarHorzRadius: 180, baseThreat:defaultMissileShipThreat},
     "fleet":                  {isShip: 1, canFly: 0, hasAirRadar:1, rwrCode:"SH", killZone: 80, radarHorzRadius: 180, baseThreat:defaultMissileShipThreat},
     "frigate":                {isShip: 1, canFly: 0, hasAirRadar:1, rwrCode:"SH", killZone: 80, radarHorzRadius: 180, baseThreat:defaultMissileShipThreat},
-    "tower":                  {isSurfaceAsset: 1, canFly: 0, hasAirRadar:1, radarHorzRadius: 180},
-    "gci":                    {isSurfaceAsset: 1, canFly: 0, hasAirRadar:1, radarHorzRadius: 180},
+    "tower":                  {isSurfaceAsset: 1, canFly: 0, hasAirRadar:1, rwrCode:"S", radarHorzRadius: 180},
+    "gci":                    {isSurfaceAsset: 1, canFly: 0, hasAirRadar:1, rwrCode:"S", radarHorzRadius: 180},
     "struct":                 {isSurfaceAsset: 1, canFly: 0},
     "rig":                    {isSurfaceAsset: 1, canFly: 0},
     "point":                  {isSurfaceAsset: 1, canFly: 0},
@@ -233,12 +233,12 @@ var Database = {
 	"L-159":                  {hasAirRadar:1, rwrCode:"LC", baseThreat:defaultFighterThreat},
 	"super-etendard":         {hasAirRadar:1, rwrCode:"ET", baseThreat:defaultFighterThreat},
 	"Mirage_F1":              {hasAirRadar:1, rwrCode:"M1", baseThreat:defaultFighterThreat},
-	"ufo":                    {},
+	"ufo":                    {hasAirRadar:1, rwrCode:"U",  baseThreat:defaultFighterThreat},
 	"bluebird-osg":           {},
 	"Vostok-1":               {},
 	"V-1":                    {},
 	"SpaceShuttle":           {},
-	"F-23C_BlackWidow-II":    {},
+	"F-23C_BlackWidow-II":    {hasAirRadar:1, rwrCode:"U",  baseThreat:defaultFighterThreat},
 };
 
 var debugDatabaseLevel = 0;

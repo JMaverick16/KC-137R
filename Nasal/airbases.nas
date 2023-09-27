@@ -1737,6 +1737,7 @@ db.VERP = "IND India";
 db.VEBR = "IND India";
 db.LCPH = "CYP Republic of Cyprus";
 db.LCRA = "CYP Cyprus [UK]";#British Overseas Territory on the island of Cyprus
+db.EGYP = "FLK Falkland Islands [UK]";
 
 var pruneDB = func {
 	# Optimize DB by removing airbases FG does not support
