@@ -32,7 +32,7 @@
     "path": "Nasal/ArmamentNotification.nas"
   },
   "geo-bridged-transmitter": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "path": "Nasal/GeoBridgedTransmitter.nas"
   },
   "hack-canvas": {
@@ -44,7 +44,7 @@
     "path": "Nasal/E-3/crash-and-stress.nas"
   },
   "airbases": {
-    "version": "1.0.15",
+    "version": "1.0.19",
     "path": "Nasal/airbases.nas"
   },
   "airbases-dialog": {
