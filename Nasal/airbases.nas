@@ -1635,7 +1635,7 @@ var db = {
 
 
 # Countries checked: Netherlands (PHJake), Denmark (Leto), UK (Sammy), Cyprus (Leto), part of USA (pinto),
-#                    Australia (sryu1), Sweden (Leto), Norway (Leto), Belgium (Bat).
+#                    Australia (sryu1), Sweden (Johan), Norway (Leto), Belgium (Bat).
 #
 # The above list is auto-generated, put custom changes here:
 
@@ -1666,15 +1666,15 @@ db.EGYD = "GBR United Kingdom";
 db.EGXC = "GBR United Kingdom";
 db.EGYE = "GBR United Kingdom";
 db.EGUB = "GBR United Kingdom";
-db.LCRE = "CYP Cyprus [UK]";#British Overseas Territory on the island of Cyprus
+db.LCRE = "CYP Cyprus [UK]";   # British Overseas Territory on the island of Cyprus
 db.LCGK = "CYP Turkish Republic of Northern Cyprus";
 db.KSKA = "USA United States"; # Fairchild (USAF)
 db.KGFA = "USA United States"; # Malmstrom (USAF)
 db.FJDG = "USA United States"; # Diego Garcia (British Royal Navy/USN/CIA)
 db.KPUB = "USA United States"; # Pueblo Memorial (USAF)
-db.YPLM = "AUS Australia";#  RAAF Base Learmonth
-db.YGNB = "AUS Australia";#  RAAF Base Glenbrook
-db.YBSG = "AUS Australia";#  RAAF Base Scherger
+db.YPLM = "AUS Australia";    #  RAAF Base Learmonth
+db.YGNB = "AUS Australia";    #  RAAF Base Glenbrook
+db.YBSG = "AUS Australia";    #  RAAF Base Scherger
 db.ESQO = "SWE Sweden";
 db.ESMV = "SWE Sweden";
 db.ESNJ = "SWE Sweden";
@@ -1684,6 +1684,7 @@ db.ESFR = "SWE Sweden";
 db.ESPE = "SWE Sweden";
 db.ESSV = "SWE Sweden";
 db.ESIB = "SWE Sweden";
+db.ESSF = "SWE Sweden";
 db.ENOL = "NOR Norway";
 db.ENRY = "NOR Norway";
 db.EBFS = "BEL Belgium"; # Florennes
