@@ -12,7 +12,7 @@
 	<property value="0">fbw/roll/pid</property>
 	<property value="0">fbw/pitch/ap-pi</property>
 	<property value="0">fbw/pitch/g-pi</property>
-	<property value="0">fbw/pitch/q-demand</property>
+	<property value="0">fbw/pitch/g-pi</property>
 	<property value="0">fbw/yaw/beta-d</property>
 	
 	<!-- Default gains for tuning -->
@@ -311,8 +311,16 @@
 			<c1>10</c1>
 		</lag_filter>
 		
-		<summer name="fbw/roll/rate-error">
+		<lead_lag_filter name="fbw/roll/p-leadlag">
 			<input>fbw/roll/p-rad_sec</input>
+			<c1>1.05</c1>
+			<c2>1.0</c2>
+			<c3>0.98</c3>
+			<c4>1.0</c4>
+		</lead_lag_filter>
+		
+		<summer name="fbw/roll/rate-error">
+			<input>fbw/roll/p-leadlag</input>
 			<input>-fbw/roll/rate-demand</input>
 		</summer>
 		
@@ -327,13 +335,12 @@
 			</test>
 		</switch>
 		
-		<pid name="fbw/roll/pid-v">
+		<pid name="fbw/roll/pid">
 			<input>fbw/roll/rate-error</input>
 			<kp>fbw/roll/p-gain</kp>
 			<ki>fbw/roll/i-gain</ki>
 			<kd>fbw/roll/d-gain</kd>
 			<trigger>fbw/roll/trigger</trigger>
-			<output>fbw/roll/pid</output>
 			<clipto>
 				<min>-1.0</min>
 				<max>1.0</max>
@@ -569,13 +576,12 @@
 			</test>
 		</switch>
 		
-		<pid name="fbw/pitch/ap-pi-v">
+		<pid name="fbw/pitch/ap-pi">
 			<input>fbw/pitch/ap-error</input>
 			<kp>fbw/pitch/ap-p-gain</kp>
 			<ki>fbw/pitch/ap-i-gain</ki>
 			<kd>0.0</kd>
 			<trigger>fbw/pitch/ap-trigger</trigger>
-			<output>fbw/pitch/ap-pi</output>
 			<clipto>
 				<min>-1.0</min>
 				<max>1.0</max>
@@ -638,18 +644,17 @@
 				fbw/pitch/gain-switch gt 0
 			</test>
 			<test logic="OR" value="1">
-				fbw/pitch/q-demand le -0.999
-				fbw/pitch/q-demand ge 0.999
+				fbw/pitch/g-pi le -0.999
+				fbw/pitch/g-pi ge 0.999
 			</test>
 		</switch>
 		
-		<pid name="fbw/pitch/g-pi-v">
+		<pid name="fbw/pitch/g-pi">
 			<input>fbw/pitch/g-error</input>
 			<kp>fbw/pitch/g-p-gain</kp>
 			<ki>fbw/pitch/g-i-gain</ki>
 			<kd>0.0</kd>
 			<trigger>fbw/pitch/g-trigger</trigger>
-			<output>fbw/pitch/q-demand</output>
 			<clipto>
 				<min>-1.0</min>
 				<max>1.0</max>
@@ -661,7 +666,7 @@
 				<difference>
 					<property>velocities/q-rad_sec</property>
 					<product>
-						<property>fbw/pitch/q-demand</property>
+						<property>fbw/pitch/g-pi</property>
 						<value>0.174533</value>
 						<!-- For tuning/testing only -->
 						<!--property>fbw/pitch/elevator-nul</property>
@@ -680,11 +685,16 @@
 			</clipto>
 		</pure_gain>
 		
+		<washout_filter name="fbw/pitch/q-washout">
+			<input>velocities/q-rad_sec</input>
+			<c1>0.5</c1>
+		</washout_filter>
+		
 		<fcs_function name="fbw/pitch/q-passive-error">
 			<function>
 				<difference>
 					<product> <!-- Damp response with gear on ground -->
-						<property>velocities/q-rad_sec</property>
+						<property>fbw/pitch/q-washout</property>
 						<value>0.25</value>
 					</product>
 					<product>
@@ -917,12 +927,11 @@
 			</clipto>
 		</pure_gain>
 		
-		<pid name="fbw/yaw/beta-d-v">
+		<pid name="fbw/yaw/beta-d">
 			<input>fbw/yaw/beta-error</input>
 			<kp>0.0</kp>
 			<ki>0.0</ki>
 			<kd>fbw/yaw/beta-d-gain</kd>
-			<output>fbw/yaw/beta-d</output>
 			<clipto>
 				<min>-0.5</min>
 				<max>0.5</max>
