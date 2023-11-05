@@ -38,12 +38,6 @@ var apfd = func {
 	} else if ((ap1 == 1 or ap2 == 1) and athr == 0) {
 		setprop("/fma/pfd/autoflight-mode", "AP");
 		setprop("/fma/apstatus/autoflight-mode", "AP");
-	} else if ((fd1 == 1 or fd2 == 1) and athr == 1) {
-		setprop("/fma/pfd/autoflight-mode", "AT+FD");
-		setprop("/fma/apstatus/autoflight-mode", "FD");
-	} else if ((fd1 == 1 or fd2 == 1) and athr == 0) {
-		setprop("/fma/pfd/autoflight-mode", "FD");
-		setprop("/fma/apstatus/autoflight-mode", "FD");
 	} else if (athr == 1) {
 		setprop("/fma/pfd/autoflight-mode", "AT");
 		setprop("/fma/apstatus/autoflight-mode", " ");
@@ -61,12 +55,6 @@ setlistener("/it-autoflight/output/ap2", func {
 	apfd();
 });
 setlistener("/it-autoflight/output/athr", func {
-	apfd();
-});
-setlistener("/it-autoflight/output/fd1", func {
-	apfd();
-});
-setlistener("/it-autoflight/output/fd2", func {
 	apfd();
 });
 

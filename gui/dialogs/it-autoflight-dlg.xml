@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- IT-AUTOFLIGHT Autopilot Control Dialog -->
+<!-- IT-AUTOFLIGHT Control Dialog -->
 <!-- Copyright (c) 2023 Josh Davidson (Octal450) -->
 
 <PropertyList>
@@ -144,25 +144,61 @@
 		
 		<text>
 			<row>0</row>
-			<col>0</col>
+			<col>1</col>
 			<visible>
 				<equals>
 					<property>/it-autoflight/mode/thr</property>
-					<value>PITCH</value>
+					<value>THR LIM</value>
 				</equals>
 			</visible>
 			<border>1</border>
-			<label> PITCH</label>
+			<label>THR LIM</label>
 			<valign>center</valign>
 		</text>
 		<text>
 			<row>0</row>
-			<col>0</col>
+			<col>1</col>
 			<visible>
-				<not-equals>
+				<equals>
 					<property>/it-autoflight/mode/thr</property>
-					<value>PITCH</value>
-				</not-equals>
+					<value>IDLE</value>
+				</equals>
+			</visible>
+			<border>1</border>
+			<label>IDLE </label>
+			<valign>center</valign>
+		</text>
+		<text>
+			<row>0</row>
+			<col>1</col>
+			<visible>
+				<equals>
+					<property>/it-autoflight/mode/thr</property>
+					<value>RETARD</value>
+				</equals>
+			</visible>
+			<border>1</border>
+			<label>RETARD</label>
+			<valign>center</valign>
+		</text>
+		<text>
+			<row>0</row>
+			<col>1</col>
+			<visible>
+				<and>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>THR LIM</value>
+					</not-equals>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>IDLE</value>
+					</not-equals>
+					<not-equals>
+						<property>/it-autoflight/mode/thr</property>
+						<value>RETARD</value>
+					</not-equals>
+				</and>
 			</visible>
 			<border>1</border>
 			<label>999999</label>
@@ -173,12 +209,12 @@
 		
 		<vrule>
 			<row>0</row>
-			<col>1</col>
+			<col>2</col>
 		</vrule>
 		
 		<text>
 			<row>0</row>
-			<col>2</col>
+			<col>3</col>
 			<visible>
 				<and>
 					<equals>
@@ -197,7 +233,7 @@
 		</text>
 		<text>
 			<row>0</row>
-			<col>2</col>
+			<col>3</col>
 			<visible>
 				<and>
 					<equals>
@@ -220,7 +256,7 @@
 		</text>
 		<text>
 			<row>0</row>
-			<col>2</col>
+			<col>3</col>
 			<visible>
 				<and>
 					<equals>
@@ -244,14 +280,14 @@
 		
 		<vrule>
 			<row>0</row>
-			<col>3</col>
+			<col>4</col>
 		</vrule>
 		
 		<text>
 			<row>0</row>
-			<col>4</col>
+			<col>5</col>
 			<border>1</border>
-			<label>99999</label>
+			<label>9999</label>
 			<valign>center</valign>
 			<property>/it-autoflight/mode/lat</property>
 			<live>1</live>
@@ -259,12 +295,12 @@
 		
 		<vrule>
 			<row>0</row>
-			<col>5</col>
+			<col>6</col>
 		</vrule>
 		
 		<text>
 			<row>0</row>
-			<col>6</col>
+			<col>7</col>
 			<border>1</border>
 			<label>99999999</label>
 			<valign>center</valign>
@@ -455,12 +491,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/mach</property>
-				<min>0.50</min>
-				<max>0.90</max>
-				<step>-0.01</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/mach", math.round(math.max(getprop("/it-autoflight/input/mach") - 0.01, 0.5), 0.001));</script>
 			</binding>
 		</button>
 		<button>
@@ -476,12 +508,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/mach</property>
-				<min>0.50</min>
-				<max>0.90</max>
-				<step>-0.001</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/mach", math.round(math.max(getprop("/it-autoflight/input/mach") - 0.001, 0.5), 0.001));</script>
 			</binding>
 		</button>
 
@@ -515,12 +543,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/mach</property>
-				<min>0.50</min>
-				<max>0.90</max>
-				<step>0.001</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.001, 0.9), 0.001));</script>
 			</binding>
 		</button>
 		<button>
@@ -537,12 +561,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/mach</property>
-				<min>0.50</min>
-				<max>0.90</max>
-				<step>0.01</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.01, 0.9), 0.001));</script>
 			</binding>
 		</button>
 	</group>
@@ -1135,12 +1155,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/fpa</property>
-				<min>-9.9</min>
-				<max>9.9</max>
-				<step>-1</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/fpa", math.round(math.max(getprop("/it-autoflight/input/fpa") - 1, -9.9), 0.1));</script>
 			</binding>
 		</button>
 		<button>
@@ -1156,12 +1172,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/fpa</property>
-				<min>-9.9</min>
-				<max>9.9</max>
-				<step>-0.1</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/fpa", math.round(math.max(getprop("/it-autoflight/input/fpa") - 0.1, -9.9), 0.1));</script>
 			</binding>
 		</button>
 
@@ -1195,12 +1207,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/fpa</property>
-				<min>-9.9</min>
-				<max>9.9</max>
-				<step>0.1</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/fpa", math.round(math.min(getprop("/it-autoflight/input/fpa") + 0.1, 9.9), 0.1));</script>
 			</binding>
 		</button>
 		<button>
@@ -1217,12 +1225,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/fpa</property>
-				<min>-9.9</min>
-				<max>9.9</max>
-				<step>1</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/fpa", math.round(math.min(getprop("/it-autoflight/input/fpa") + 1, 9.9), 0.1));</script>
 			</binding>
 		</button>
 	</group>

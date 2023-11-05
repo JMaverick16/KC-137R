@@ -293,7 +293,7 @@
 
 <model>
   <name>apstatus_cp</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apstatus/apstatus.xml</path>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/apstatus/apstatus2.xml</path>
   <offsets>
     <x-m>-18.915</x-m>
     <y-m>0.315</y-m>

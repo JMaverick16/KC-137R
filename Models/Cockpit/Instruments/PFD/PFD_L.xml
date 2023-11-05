@@ -854,52 +854,10 @@ Modified by Octal450 for KC-137R
 		<type>select</type>
 		<object-name>THRUST</object-name>
 		<condition>
-			<or>
-				<and>
-					<or>
-						<equals>
-							<property>it-autoflight/output/fd1</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/fd2</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/ap1</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/ap2</property>
-							<value>1</value>
-						</equals>
-					</or>
-					<equals>
-						<property>it-autoflight/mode/thr</property>
-						<value>PITCH</value>
-					</equals>
-				</and>
-				<and>
-					<or>
-						<equals>
-							<property>it-autoflight/output/fd1</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/fd2</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/athr</property>
-							<value>1</value>
-						</equals>
-					</or>
-					<not-equals>
-						<property>it-autoflight/mode/thr</property>
-						<value>PITCH</value>
-					</not-equals>
-				</and>
-			</or>
+			<equals>
+				<property>it-autoflight/output/athr</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 	
@@ -1107,6 +1065,7 @@ Modified by Octal450 for KC-137R
 	<animation>
 		<type>select</type>
         <object-name>ROLL</object-name>
+        <object-name>PITCH</object-name>
         <object-name>LOC arm</object-name>
         <object-name>G/S arm</object-name>
         <object-name>TLATL arm</object-name>
@@ -1118,10 +1077,6 @@ Modified by Octal450 for KC-137R
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>it-autoflight/output/fd2</property>
-					<value>1</value>
-				</equals>
-				<equals>
 					<property>it-autoflight/output/ap1</property>
 					<value>1</value>
 				</equals>
@@ -1129,59 +1084,6 @@ Modified by Octal450 for KC-137R
 					<property>it-autoflight/output/ap2</property>
 					<value>1</value>
 				</equals>
-			</or>
-		</condition>
-	</animation>
-	
-	<animation>
-		<type>select</type>
-        <object-name>PITCH</object-name>
-		<condition>
-			<or>
-				<and>
-					<or>
-						<equals>
-							<property>it-autoflight/output/fd1</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/fd2</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/ap1</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/ap2</property>
-							<value>1</value>
-						</equals>
-					</or>
-					<not-equals>
-						<property>it-autoflight/mode/thr</property>
-						<value>PITCH</value>
-					</not-equals>
-				</and>
-				<and>
-					<or>
-						<equals>
-							<property>it-autoflight/output/fd1</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/fd2</property>
-							<value>1</value>
-						</equals>
-						<equals>
-							<property>it-autoflight/output/athr</property>
-							<value>1</value>
-						</equals>
-					</or>
-					<equals>
-						<property>it-autoflight/mode/thr</property>
-						<value>PITCH</value>
-					</equals>
-				</and>
 			</or>
 		</condition>
 	</animation>
