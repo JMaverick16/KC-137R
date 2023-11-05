@@ -99,22 +99,21 @@
 		<type>pick</type>
 		<object-name>switch</object-name>
 		<object-name>sockle</object-name>
-		<visible>true</visible>
-		  <action>
-		    <button>0</button>
-		    <repeatable>true</repeatable>
-				<binding>
-					 <command>property-cycle</command>
-					 <property>controls/flight/speedbrake-arm</property>
-					 <value>0</value>
-					 <value>1</value>
-				</binding>
-        <binding>
-          <command>property-toggle</command>
-          <property>sim/sound/switch2</property>
-        </binding>
-		  </action>
+		<action>
+			<button>0</button>
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/flight/speedbrake-arm</property>
+			</binding>
+			<binding>
+			  <command>property-toggle</command>
+			  <property>sim/sound/switch2</property>
+			</binding>
+		</action>
 	</animation>
 
 </PropertyList>
-
