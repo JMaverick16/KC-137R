@@ -600,7 +600,6 @@
 		<name>VS Abs</name>
 		<type>gain</type>
 		<gain>1.0</gain>
-		<update-interval-secs>0.02</update-interval-secs>
 		<input>
 			<expression>
 				<abs>
@@ -615,7 +614,6 @@
 		<name>FPA Abs</name>
 		<type>gain</type>
 		<gain>1.0</gain>
-		<update-interval-secs>0.02</update-interval-secs>
 		<input>
 			<expression>
 				<abs>
@@ -627,10 +625,23 @@
 	</filter>
 	
 	<filter>
+		<name>Pitch Abs</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<expression>
+				<abs>
+					<property>/it-autoflight/input/pitch</property>
+				</abs>
+			</expression>
+		</input>
+		<output>/it-autoflight/input/pitch-abs</output>
+	</filter>
+	
+	<filter>
 		<name>Mach x1000</name>
 		<type>gain</type>
 		<gain>1000</gain>
-		<update-interval-secs>0.02</update-interval-secs>
 		<input>/it-autoflight/input/mach</input>
 		<output>/it-autoflight/input/mach-x1000</output>
 	</filter>
