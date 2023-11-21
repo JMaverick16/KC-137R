@@ -213,6 +213,8 @@ var Settings = {
 	hdgHldSeparate: props.globals.getNode("/it-autoflight/settings/hdg-hld-separate", 1),
 	landingFlap: props.globals.getNode("/it-autoflight/settings/land-flap", 1),
 	lnavFt: props.globals.getNode("/it-autoflight/settings/lnav-ft", 1),
+	maxKts: props.globals.getNode("/it-autoflight/settings/max-kts", 1),
+	maxMach: props.globals.getNode("/it-autoflight/settings/max-mach", 1),
 	retardAltitude: props.globals.getNode("/it-autoflight/settings/retard-ft", 1),
 	retardEnable: props.globals.getNode("/it-autoflight/settings/retard-enable", 1),
 	takeoffHdgCap: props.globals.getNode("/it-autoflight/settings/takeoff-hdg-cap", 1),
@@ -1107,15 +1109,15 @@ var ITAF = {
 		}
 	},
 	syncKts: func() {
-		Input.kts.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), 100, 350));
+		Input.kts.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), 100, Settings.maxKts.getValue()));
 	},
 	syncKtsGa: func() { # Same as syncKts, except doesn't go below TogaSpd
-		Input.kts.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), Settings.togaSpd.getValue(), 350));
+		Input.kts.setValue(math.clamp(math.round(Velocities.indicatedAirspeedKt.getValue()), Settings.togaSpd.getValue(), Settings.maxKts.getValue()));
 	},
 	syncMach: func() {
 		Velocities.indicatedMachTemp = Velocities.indicatedMach.getValue();
-		Input.mach.setValue(math.clamp(math.round(Velocities.indicatedMachTemp, 0.001), 0.5, 0.9));
-		Input.machX1000.setValue(math.clamp(math.round(Velocities.indicatedMachTemp * 1000, 1), 500, 900));
+		Input.mach.setValue(math.clamp(math.round(Velocities.indicatedMachTemp, 0.001), 0.5, Settings.maxMach.getValue()));
+		Input.machX1000.setValue(math.clamp(math.round(Velocities.indicatedMachTemp * 1000, 1), 500, Settings.maxMach.getValue() * 1000));
 	},
 	syncHdg: func() {
 		Input.hdg.setValue(math.round(Internal.hdgPredicted.getValue())); # Switches to track automatically

@@ -377,12 +377,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/kts</property>
-				<min>100</min>
-				<max>350</max>
-				<step>-10</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/kts", math.max(getprop("/it-autoflight/input/kts") - 10, 100));</script>
 			</binding>
 		</button>
 		<button>
@@ -398,12 +394,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/kts</property>
-				<min>100</min>
-				<max>350</max>
-				<step>-1</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/kts", math.max(getprop("/it-autoflight/input/kts") - 1, 100));</script>
 			</binding>
 		</button>
 
@@ -437,12 +429,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/kts</property>
-				<min>100</min>
-				<max>350</max>
-				<step>1</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/kts", math.min(getprop("/it-autoflight/input/kts") + 1, getprop("/it-autoflight/settings/max-kts")));</script>
 			</binding>
 		</button>
 		<button>
@@ -459,12 +447,8 @@
 				</equals>
 			</enable>
 			<binding>
-				<command>property-adjust</command>
-				<property>/it-autoflight/input/kts</property>
-				<min>100</min>
-				<max>350</max>
-				<step>10</step>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/kts", math.min(getprop("/it-autoflight/input/kts") + 10, getprop("/it-autoflight/settings/max-kts")));</script>
 			</binding>
 		</button>
 	</group>
@@ -544,7 +528,7 @@
 			</enable>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.001, 0.9), 0.001));</script>
+				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.001, getprop("/it-autoflight/settings/max-mach")), 0.001));</script>
 			</binding>
 		</button>
 		<button>
@@ -562,7 +546,7 @@
 			</enable>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.01, 0.9), 0.001));</script>
+				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.01, getprop("/it-autoflight/settings/max-mach")), 0.001));</script>
 			</binding>
 		</button>
 	</group>

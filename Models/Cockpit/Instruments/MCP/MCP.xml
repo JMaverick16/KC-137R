@@ -6,17 +6,17 @@
 	
 	<path>MCP.ac</path>
 	
-    <animation>
+	<animation>
 		<type>scale</type>
 		<x-offset>0.65</x-offset>
 		<y-offset>0.65</y-offset>
 		<z-offset>0.65</z-offset>
-    </animation>
+	</animation>
 	
 	<effect>
 		<object-name>Display</object-name>
-        <inherits-from>Effects/model-transparent</inherits-from>
-    </effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+	</effect>
 	
 	<animation>
 		<type>select</type>
@@ -332,11 +332,8 @@
 						<not><property>it-autoflight/input/kts-mach</property></not>
 					</and>
 				</condition>
-				<command>property-adjust</command>
-				<property>it-autoflight/input/kts</property>
-				<step>1</step>
-				<max>350</max>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/kts", math.min(getprop("/it-autoflight/input/kts") + 1, getprop("/it-autoflight/settings/max-kts")));</script>
 			</binding>
 			<binding>
 				<condition>
@@ -345,11 +342,8 @@
 						<not><property>it-autoflight/input/kts-mach</property></not>
 					</and>
 				</condition>
-				<command>property-adjust</command>
-				<property>it-autoflight/input/kts</property>
-				<step>10</step>
-				<max>350</max>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/kts", math.min(getprop("/it-autoflight/input/kts") + 10, getprop("/it-autoflight/settings/max-kts")));</script>
 			</binding>
 			<binding>
 				<condition>
@@ -359,7 +353,7 @@
 					</and>
 				</condition>
 				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.001, 0.9), 0.001));</script>
+				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.001, getprop("/it-autoflight/settings/max-mach")), 0.001));</script>
 			</binding>
 			<binding>
 				<condition>
@@ -369,7 +363,7 @@
 					</and>
 				</condition>
 				<command>nasal</command>
-				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.01, 0.9), 0.001));</script>
+				<script>setprop("/it-autoflight/input/mach", math.round(math.min(getprop("/it-autoflight/input/mach") + 0.01, getprop("/it-autoflight/settings/max-mach")), 0.001));</script>
 			</binding>
 		</action>
 		<action>
@@ -383,11 +377,8 @@
 						<not><property>it-autoflight/input/kts-mach</property></not>
 					</and>
 				</condition>
-				<command>property-adjust</command>
-				<property>it-autoflight/input/kts</property>
-				<step>-1</step>
-				<min>100</min>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/kts", math.max(getprop("/it-autoflight/input/kts") - 1, 100));</script>
 			</binding>
 			<binding>
 				<condition>
@@ -396,11 +387,8 @@
 						<not><property>it-autoflight/input/kts-mach</property></not>
 					</and>
 				</condition>
-				<command>property-adjust</command>
-				<property>it-autoflight/input/kts</property>
-				<step>-10</step>
-				<min>100</min>
-				<wrap>false</wrap>
+				<command>nasal</command>
+				<script>setprop("/it-autoflight/input/kts", math.max(getprop("/it-autoflight/input/kts") - 10, 100));</script>
 			</binding>
 			<binding>
 				<condition>
