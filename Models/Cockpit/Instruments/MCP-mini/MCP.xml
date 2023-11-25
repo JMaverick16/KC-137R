@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+
+<!-- Copyright (c) 2023 Josh Davidson (Octal450) -->
+
+<PropertyList>
+	
+	<path>MCP.ac</path>
+	
+	<animation>
+		<type>scale</type>
+		<x-offset>0.65</x-offset>
+		<y-offset>0.65</y-offset>
+		<z-offset>0.65</z-offset>
+	</animation>
+	
+	<effect>
+		<object-name>Display</object-name>
+		<inherits-from>Effects/model-transparent</inherits-from>
+	</effect>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Display</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/efis</property>
+				<value>24</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>Roll</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+			<factor-prop>controls/lighting/panel-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	<!-- Buttons -->
+	<animation>
+		<type>pick</type>
+		<object-name>Roll</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>it-autoflight/input/lat</property>
+				<value>6</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<!-- Knobs -->
+	<animation>
+		<type>pick</type>
+		<object-name>Roll.knob</object-name>
+		<action>
+			<button>0</button>
+			<button>3</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
+				<command>property-adjust</command>
+				<property>it-autoflight/input/roll</property>
+				<step>1</step>
+				<min>-30</min>
+				<max>30</max>
+				<wrap>false</wrap>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>property-adjust</command>
+				<property>it-autoflight/input/roll</property>
+				<step>10</step>
+				<min>-30</min>
+				<max>30</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
+		<action>
+			<button>1</button>
+			<button>4</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<condition>
+					<not><property>devices/status/keyboard/shift</property></not>
+				</condition>
+				<command>property-adjust</command>
+				<property>it-autoflight/input/roll</property>
+				<step>-1</step>
+				<min>-30</min>
+				<max>30</max>
+				<wrap>false</wrap>
+			</binding>
+			<binding>
+				<condition>
+					<property>devices/status/keyboard/shift</property>
+				</condition>
+				<command>property-adjust</command>
+				<property>it-autoflight/input/roll</property>
+				<step>-10</step>
+				<min>-30</min>
+				<max>30</max>
+				<wrap>false</wrap>
+			</binding>
+		</action>
+	</animation>
+	
+	<!-- Display -->
+	<animation>
+		<type>select</type>
+		<object-name>ApRoll1</object-name>
+		<object-name>ApRoll10</object-name>
+		<object-name>ApRollMinus</object-name>
+		<condition>
+			<equals>
+				<property>it-autoflight/output/lat</property>
+				<value>6</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>ApRollMinus</object-name>
+		<condition>
+			<and>
+				<less-than>
+					<property>it-autoflight/input/roll</property>
+					<value>-0.001</value>
+				</less-than>
+				<greater-than>
+					<property>it-autoflight/input/roll-abs</property>
+					<value>0.001</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>ApRollDash</object-name>
+		<condition>
+			<not-equals>
+				<property>it-autoflight/output/lat</property>
+				<value>6</value>
+			</not-equals>
+		</condition>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>ApRoll10</object-name>
+		<property>it-autoflight/input/roll-abs</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>ApRoll1</object-name>
+		<property>it-autoflight/input/roll-abs</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+</PropertyList>

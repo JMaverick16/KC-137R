@@ -639,6 +639,20 @@
 	</filter>
 	
 	<filter>
+		<name>Roll Abs</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<expression>
+				<abs>
+					<property>/it-autoflight/input/roll</property>
+				</abs>
+			</expression>
+		</input>
+		<output>/it-autoflight/input/roll-abs</output>
+	</filter>
+	
+	<filter>
 		<name>Mach x1000</name>
 		<type>gain</type>
 		<gain>1000</gain>
@@ -1078,11 +1092,8 @@
 		</enable>
 		<input>/it-autoflight/input/roll</input>
 		<output>/it-autoflight/internal/target-roll-deg</output>
-		<min>
-			<property>/it-autoflight/internal/bank-limit</property>
-			<scale>-1</scale>
-		</min>
-		<max>/it-autoflight/internal/bank-limit</max>
+		<min>-60</min>
+		<max>60</max>
 	</filter>
 	
 	<filter>

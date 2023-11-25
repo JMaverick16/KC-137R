@@ -474,19 +474,17 @@
     </model>
 	
 	<!-- HUD -->
-
 	<model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/hud/hud.xml</path>
 		<offsets>
 			<x-m>-18.742</x-m>
 			<y-m>-0.45</y-m>
 			<z-m>1.155</z-m>
-                <pitch-deg>0</pitch-deg>
+			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
 	
 	<!-- HUD -->
-
 	<model>
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/hud/hud.xml</path>
 		<offsets>
@@ -502,8 +500,16 @@
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/MCP/MCP.xml</path>
 		<offsets>
 			<x-m>-18.812</x-m>
-			<y-m> -0.038</y-m>
-			<z-m>  1.048</z-m>
+			<y-m>-0.045</y-m>
+			<z-m>1.048</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/MCP-mini/MCP.xml</path>
+		<offsets>
+			<x-m>-18.812</x-m>
+			<y-m>0.091</y-m>
+			<z-m>1.048</z-m>
 		</offsets>
 	</model>
 
@@ -512,8 +518,8 @@
 		<path>Aircraft/KC-137R/Models/Cockpit/Instruments/lamps/asb.xml</path>
 		<offsets>
 			<x-m>-18.812</x-m>
-			<y-m>  0.120</y-m>
-			<z-m>  1.050</z-m>
+			<y-m>0.139</y-m>
+			<z-m>1.05</z-m>
 		</offsets>
 	</model>
 	
