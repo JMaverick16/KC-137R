@@ -827,7 +827,16 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/input/use-nav2-radio</property>
+					<property>/it-autoflight/input/radio-sel</property>
+					<value>2</value>
+				</equals>
+			</condition>
+			<property>/instrumentation/nav[2]/gs-rate-of-climb-fpm</property>
+		</input>
+		<input>
+			<condition>
+				<equals>
+					<property>/it-autoflight/input/radio-sel</property>
 					<value>1</value>
 				</equals>
 			</condition>
