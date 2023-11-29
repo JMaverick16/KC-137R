@@ -12,19 +12,6 @@ setlistener("/sim/signals/fdm-initialized", func {
   print("OCTAL ... FINE!");
 });
 
-setlistener("engines/engine[0]/epr-actual", func {
-  setprop("engines/engine[0]/epr-actualx100", (getprop("engines/engine[0]/epr-actual") * 100));
-});
-setlistener("engines/engine[1]/epr-actual", func {
-  setprop("engines/engine[1]/epr-actualx100", (getprop("engines/engine[1]/epr-actual") * 100));
-});
-setlistener("engines/engine[2]/epr-actual", func {
-  setprop("engines/engine[2]/epr-actualx100", (getprop("engines/engine[2]/epr-actual") * 100));
-});
-setlistener("engines/engine[3]/epr-actual", func {
-  setprop("engines/engine[3]/epr-actualx100", (getprop("engines/engine[3]/epr-actual") * 100));
-});
-
 # AT or AP or FD
 var apfd = func {
 	var ap1 = getprop("/it-autoflight/output/ap1");
