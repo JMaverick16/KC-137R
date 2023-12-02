@@ -795,9 +795,9 @@ RadarScreenLeft = {
             me.interceptCoord = me.intercept[2];
             #me.interceptDist = me.intercept[3];
             me.fromCoord = radar_system.self.getCoord();
-            me.dist_m    = me.fromCoord.distance_to(me.interceptCoord);
+            me.dist_cept_m    = me.fromCoord.distance_to(me.interceptCoord);
             me.course = me.fromCoord.course_to(me.interceptCoord);
-            me.distPixels = me.dist_m*M2NM*(me.radius/radar_system.apy1Radar.getRange());
+            me.distPixels = me.dist_cept_m*M2NM*(me.radius/radar_system.apy1Radar.getRange());
             me.echoPos = me.calcPos(geo.normdeg180(me.course - radar_system.self.getHeading()), me.distPixels);
             me.interceptCross.setTranslation(me.echoPos);
             me.interceptCross.setVisible(1);
