@@ -534,8 +534,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/speedbrake-pos-norm</property>
-           <!--<value>-0.08</value>-->
-           <value>-0.2</value>
+           <value>-0.1</value>
        </product>
     </function>
    
@@ -668,8 +667,7 @@
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
            <property>fcs/speedbrake-pos-norm</property>
-           <!--<value>0.017</value>-->
-           <value>0.05</value>
+           <value>0.02</value>
          </product>
     </function>
    

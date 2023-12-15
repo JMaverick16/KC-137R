@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- KC-137R FBW -->
-<!-- Copyright (c) 2022 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2023 Josh Davidson (Octal450) -->
 
 <system name="KC-137R: FBW">
 	
@@ -11,7 +11,6 @@
 	
 	<property value="0">fbw/roll/pid</property>
 	<property value="0">fbw/pitch/ap-pi</property>
-	<property value="0">fbw/pitch/g-pi</property>
 	<property value="0">fbw/pitch/g-pi</property>
 	<property value="0">fbw/yaw/beta-d</property>
 	

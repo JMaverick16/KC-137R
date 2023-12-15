@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- Extra Property Rule Things -->
-<!-- Copyright (c) 2022 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2023 Josh Davidson (Octal450) -->
 
 <PropertyList>
 	
@@ -21,8 +21,8 @@
 							<entry><ind>0.15</ind><dep>1.0</dep></entry>
 						</table>
 					</product>
-					<entry><ind>    0</ind><dep>0.634</dep></entry>
-					<entry><ind>43000</ind><dep>1.080</dep></entry>
+					<entry><ind>    0</ind><dep>0.674</dep></entry>
+					<entry><ind>45000</ind><dep>1.502</dep></entry>
 				</table>
 			</expression>
 		</input>
@@ -45,8 +45,8 @@
 								<entry><ind>0.15</ind><dep>1.0</dep></entry>
 							</table>
 						</product>
-						<entry><ind>    0</ind><dep>0.9864</dep></entry>
-						<entry><ind>43000</ind><dep>0.8596</dep></entry>
+						<entry><ind>    0</ind><dep>0.9852</dep></entry>
+						<entry><ind>45000</ind><dep>0.6884</dep></entry>
 					</table>
 					<table>
 						<property>/fdm/jsbsim/velocities/mach</property>
