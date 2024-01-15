@@ -1,5 +1,5 @@
 # IT-AUTOFLIGHT System Controller V4.0.9
-# Copyright (c) 2023 Josh Davidson (Octal450)
+# Copyright (c) 2024 Josh Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
 
@@ -50,6 +50,7 @@ var Misc = {
 };
 
 var Orientation = {
+	alphaDeg: props.globals.getNode("/orientation/alpha-deg"),
 	pitchDeg: props.globals.getNode("/orientation/pitch-deg"),
 	pitchDegTemp: 0,
 	rollDeg: props.globals.getNode("/orientation/roll-deg"),
@@ -219,6 +220,7 @@ var Settings = {
 	maxMach: props.globals.getNode("/it-autoflight/settings/max-mach", 1),
 	retardAltitude: props.globals.getNode("/it-autoflight/settings/retard-ft", 1),
 	retardEnable: props.globals.getNode("/it-autoflight/settings/retard-enable", 1),
+	stallAoaDeg: props.globals.getNode("/it-autoflight/settings/stall-aoa-deg", 1),
 	takeoffHdgCap: props.globals.getNode("/it-autoflight/settings/takeoff-hdg-cap", 1),
 	takeoffHdgCapTemp: 0,
 	togaSpd: props.globals.getNode("/it-autoflight/settings/toga-spd", 1),
@@ -323,6 +325,12 @@ var ITAF = {
 		Output.vertTemp = Output.vert.getValue();
 		
 		# Trip system off
+		if (Output.ap1Temp or Output.ap2Temp) { 
+			if (Orientation.alphaDeg.getValue() >= Settings.stallAoaDeg.getValue()) {
+				me.ap1Master(0);
+				me.ap2Master(0);
+			}
+		}
 		if (!Input.ap1Avail.getBoolValue() and Output.ap1Temp) {
 			me.ap1Master(0);
 		}
@@ -336,9 +344,16 @@ var ITAF = {
 			me.athrMaster(0);
 		}
 		
-		# VOR/ILS Revision
+		# LNAV Reversion
+		if (Output.lat.getValue() == 1) { # Only evaulate the rest of the condition if we are in LNAV mode
+			if (FPLN.num.getValue() == 0 or !FPLN.active.getBoolValue()) {
+				me.setLatMode(3);
+			}
+		}
+		
+		# VOR/ILS Reversion
 		if (Output.latTemp == 2 or Output.latTemp == 4 or Output.vertTemp == 2 or Output.vertTemp == 6) {
-			me.checkRadioRevision(Output.latTemp, Output.vertTemp);
+			me.checkRadioReversion(Output.latTemp, Output.vertTemp);
 		}
 		
 		Output.ap1Temp = Output.ap1.getBoolValue();
@@ -480,13 +495,6 @@ var ITAF = {
 		me.bankLimit();
 	},
 	slowLoop: func() {
-		# If in LNAV mode and route is not longer active, switch to HDG HLD
-		if (Output.lat.getValue() == 1) { # Only evaulate the rest of the condition if we are in LNAV mode
-			if (FPLN.num.getValue() == 0 or !FPLN.active.getBoolValue()) {
-				me.setLatMode(3);
-			}
-		}
-		
 		# Reset system once flight complete
 		if (!Settings.groundModeSelect.getBoolValue()) {
 			if (!Output.ap1.getBoolValue() and !Output.ap2.getBoolValue() and !Output.ap3.getBoolValue() and Gear.wow0.getBoolValue() and Velocities.groundspeedKt.getValue() < 60 and Output.vert.getValue() != 7) { # Not in T/O or G/A
@@ -1046,7 +1054,7 @@ var ITAF = {
 			me.updateApprArm(0);
 		}
 	},
-	checkRadioRevision: func(l, v) { # Revert mode if signal lost
+	checkRadioReversion: func(l, v) { # Revert mode if signal lost
 		if (!Radio.inRange[Input.radioSel.getValue()].getBoolValue()) {
 			if (l == 4 or v == 6) {
 				me.ap1Master(0);

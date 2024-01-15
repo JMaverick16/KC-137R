@@ -343,6 +343,7 @@
 			<lnav-ft type="double">50</lnav-ft> <!-- AGL when LNAV becomes active if armed -->
 			<max-kts type="int">380</max-kts> <!-- Maxmimum target airspeed in knots -->
 			<max-mach type="double">0.9</max-mach> <!-- Maxmimum target mach number -->
+			<stall-aoa-deg type="double">13</stall-aoa-deg> <!-- Angle of attack where AP trips off -->
 			<retard-enable type="bool">1</retard-enable> <!-- AGL to Thrust Retard -->
 			<retard-ft type="double">30</retard-ft> <!-- Enable Thrust Retard -->
 			<takeoff-hdg-cap type="double">5</takeoff-hdg-cap> <!-- Maximum bank to capture current hdg in T/O mode -->
