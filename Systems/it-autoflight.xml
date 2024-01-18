@@ -2208,6 +2208,46 @@
 	</filter>
 	
 	<filter>
+		<name>Elevator Trim Flip Flop</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<not><property>/it-autoflight/output/ap-on</property></not>
+			</condition>
+			<value>0</value>
+		</input>
+		<input>
+			<condition>
+				<greater-than-equals>
+					<expression>
+						<abs>
+							<property>/it-autoflight/internal/elevator</property>
+						</abs>
+					</expression>
+					<property>/it-autoflight/settings/elevator-out-of-trim</property>
+				</greater-than-equals>
+			</condition>
+			<value>1</value>
+		</input>
+		<input>
+			<condition>
+				<less-than>
+					<expression>
+						<abs>
+							<property>/it-autoflight/internal/elevator</property>
+						</abs>
+					</expression>
+					<property>/it-autoflight/settings/elevator-in-trim</property>
+				</less-than>
+			</condition>
+			<value>0</value>
+		</input>
+		<input>/it-autoflight/internal/out-of-trim</input>
+		<output>/it-autoflight/internal/out-of-trim</output>
+	</filter>
+	
+	<filter>
 		<name>System Command: Elevator Trim</name>
 		<type>noise-spike</type>
 		<initialize-to>output</initialize-to>
@@ -2223,16 +2263,10 @@
 						<property>/gear/gear[2]/wow</property>
 						<value>0</value>
 					</equals>
-					<or>
-						<greater-than>
-							<property>/it-autoflight/internal/elevator-cmd</property>
-							<value>0.01</value>
-						</greater-than>
-						<less-than>
-							<property>/it-autoflight/internal/elevator-cmd</property>
-							<value>-0.01</value>
-						</less-than>
-					</or>
+					<equals>
+						<property>/it-autoflight/internal/out-of-trim</property>
+						<value>1</value>
+					</equals>
 					<not-equals>
 						<property>/it-autoflight/output/vert</property>
 						<value>9</value>
@@ -2247,8 +2281,8 @@
 		<input>
 			<condition>
 				<greater-than>
-					<property>/it-autoflight/internal/elevator-cmd</property>
-					<value>0.01</value>
+					<property>/it-autoflight/internal/elevator</property>
+					<value>0.001</value>
 				</greater-than>
 			</condition>
 			<value>1</value>
@@ -2256,8 +2290,8 @@
 		<input>
 			<condition>
 				<less-than>
-					<property>/it-autoflight/internal/elevator-cmd</property>
-					<value>-0.01</value>
+					<property>/it-autoflight/internal/elevator</property>
+					<value>-0.001</value>
 				</less-than>
 			</condition>
 			<value>-1</value>
@@ -2268,8 +2302,8 @@
 		<max-rate-of-change>
 			<expression>
 				<table>
-					<abs><property>/it-autoflight/internal/elevator-cmd</property></abs>
-					<entry><ind>0.01</ind><dep>0.001</dep></entry>
+					<abs><property>/it-autoflight/internal/elevator</property></abs>
+					<entry><ind>0.01</ind><dep>0.002</dep></entry>
 					<entry><ind>0.10</ind><dep>0.010</dep></entry>
 				</table>
 			</expression>
