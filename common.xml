@@ -334,6 +334,8 @@
 			<bank-max-deg type="double">25</bank-max-deg> <!-- Maximum Bank Limit -->
 			<custom-fma type="bool">0</custom-fma> <!-- Call functions when modes change for a custom FMA to be implemented --> 
 			<disable-final type="bool">1</disable-final> <!-- Disable the Final Controllers, for custom FCS integration -->
+			<elevator-in-trim type="double">0.01</elevator-in-trim> <!-- Normalized elevator to stop trimming -->
+			<elevator-out-of-trim type="double">0.02</elevator-out-of-trim> <!-- Normalized elevator to start trimming -->
 			<fd-starts-on type="bool">1</fd-starts-on> <!-- Enable/Disable Flight Director being on by default -->
 			<fd-takeoff-deg type="double">7.5</fd-takeoff-deg> <!-- Adjust Flight Director pitch bar in T/O CLB on ground -->
 			<ground-mode-select type="bool">0</ground-mode-select> <!-- Allow modes to be selected when on ground -->
