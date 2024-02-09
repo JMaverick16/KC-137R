@@ -2269,6 +2269,10 @@
 					</equals>
 					<not-equals>
 						<property>/it-autoflight/output/vert</property>
+						<value>6</value>
+					</not-equals>
+					<not-equals>
+						<property>/it-autoflight/output/vert</property>
 						<value>9</value>
 					</not-equals>
 					<not-equals>
