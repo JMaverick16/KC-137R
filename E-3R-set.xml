@@ -440,6 +440,10 @@ no. D6-3071-00
 	    </iff>
 		<crash><file>Aircraft/KC-137R/Nasal/E-3/crash-and-stress.nas</file><file>Aircraft/KC-137R/Nasal/E-3/crash-and-stress-custom.nas</file></crash>
 		<e3><file>Aircraft/KC-137R/Nasal/E-3/e3.nas</file></e3>
+		<rcs>
+			<file>Aircraft/KC-137R/Nasal/rcs_mand.nas</file>
+			<file>Aircraft/KC-137R/Nasal/rcs.nas</file>
+		</rcs>
 		<radar_system>
 			<file>Aircraft/KC-137R/Nasal/E-3/radar-system-database.nas</file>
 			<file>Aircraft/KC-137R/Nasal/E-3/radar-system.nas</file>
@@ -447,11 +451,6 @@ no. D6-3071-00
 		</radar_system>
 		<rwr><file>Aircraft/KC-137R/Nasal/E-3/rwr.nas</file></rwr>
 		<rdrRoom><file>Aircraft/KC-137R/Nasal/E-3/radar-room.nas</file></rdrRoom>
-		
-		<rcs>
-			<file>Aircraft/KC-137R/Nasal/rcs_mand.nas</file>
-            <file>Aircraft/KC-137R/Nasal/rcs.nas</file>
-		</rcs>
 		<b707>
 			<file>Aircraft/KC-137R/Nasal/shake.nas</file>
 			<file>Aircraft/KC-137R/Nasal/autostart.nas</file>
