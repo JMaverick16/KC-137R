@@ -218,7 +218,8 @@ var Settings = {
 	fdStartsOn: props.globals.getNode("/it-autoflight/settings/fd-starts-on", 1),
 	groundModeSelect: props.globals.getNode("/it-autoflight/settings/ground-mode-select", 1),
 	hdgHldSeparate: props.globals.getNode("/it-autoflight/settings/hdg-hld-separate", 1),
-	landingFlap: props.globals.getNode("/it-autoflight/settings/land-flap", 1),
+	landEnable: props.globals.getNode("/it-autoflight/settings/land-enable", 1),
+	landFlap: props.globals.getNode("/it-autoflight/settings/land-flap", 1),
 	lnavFt: props.globals.getNode("/it-autoflight/settings/lnav-ft", 1),
 	maxKts: props.globals.getNode("/it-autoflight/settings/max-kts", 1),
 	maxMach: props.globals.getNode("/it-autoflight/settings/max-mach", 1),
@@ -436,28 +437,26 @@ var ITAF = {
 		}
 		
 		# Autoland Logic
-		if (Output.latTemp == 2) {
-			if (Position.gearAglFtTemp <= 150) {
-				if (Output.ap1Temp or Output.ap2Temp or Output.ap3Temp or Settings.autolandWithoutApTemp) {
+		if ((Output.ap1Temp or Output.ap2Temp or Output.ap3Temp or Settings.autolandWithoutApTemp) and Settings.landEnable.getBoolValue()) {
+			if (Output.latTemp == 2) {
+				if (Position.gearAglFtTemp <= 150) {
 					me.setLatMode(4);
 				}
 			}
-		}
-		if (Output.vertTemp == 2) {
-			if (Position.gearAglFtTemp <= 50 and Position.gearAglFtTemp >= 5) {
-				if (Output.ap1Temp or Output.ap2Temp or Output.ap3Temp or Settings.autolandWithoutApTemp) {
+			if (Output.vertTemp == 2) {
+				if (Position.gearAglFtTemp <= 50 and Position.gearAglFtTemp >= 5) {
 					me.setVertMode(6);
 				}
-			}
-		} else if (Output.vertTemp == 6) {
-			if (!Output.ap1Temp and !Output.ap2Temp and !Output.ap3Temp and !Settings.autolandWithoutApTemp) {
-				me.activateLoc();
-				me.activateGs();
-			} else {
+			} else if (Output.vertTemp == 6) {
 				if (Gear.wow1Temp and Gear.wow2Temp and Text.vert.getValue() != "ROLLOUT") {
 					me.updateLatText("RLOU");
 					me.updateVertText("ROLLOUT");
 				}
+			}
+		} else {
+			if (Output.latTemp == 4 or Output.vertTemp == 6) {
+				me.activateLoc();
+				me.activateGs();
 			}
 		}
 		
@@ -906,7 +905,7 @@ var ITAF = {
 	},
 	updateThrustMode: func() {
 		Output.vertTemp = Output.vert.getValue();
-		if (Output.athr.getBoolValue() and Output.vertTemp != 7 and Settings.retardEnable.getBoolValue() and Position.gearAglFt.getValue() <= Settings.retardAltitude.getValue() and Misc.flapNorm.getValue() >= Settings.landingFlap.getValue() - 0.001) {
+		if (Output.athr.getBoolValue() and Output.vertTemp != 7 and Settings.retardEnable.getBoolValue() and Position.gearAglFt.getValue() <= Settings.retardAltitude.getValue() and Misc.flapNorm.getValue() >= Settings.landFlap.getValue() - 0.001) {
 			Output.thrMode.setValue(1);
 			Text.spd.setValue("RETARD");
 			Text.thr.setValue("RETARD");
@@ -1135,7 +1134,7 @@ var ITAF = {
 	syncMach: func() {
 		Velocities.indicatedMachTemp = Velocities.indicatedMach.getValue();
 		Input.mach.setValue(math.clamp(math.round(Velocities.indicatedMachTemp, 0.001), 0.5, Settings.maxMach.getValue()));
-		Input.machX1000.setValue(math.clamp(math.round(Velocities.indicatedMachTemp * 1000, 1), 500, Settings.maxMach.getValue() * 1000));
+		Input.machX1000.setValue(math.clamp(math.round(Velocities.indicatedMachTemp * 1000), 500, Settings.maxMach.getValue() * 1000));
 	},
 	syncHdg: func() {
 		Input.hdg.setValue(math.round(Internal.hdgPredicted.getValue())); # Switches to track automatically
