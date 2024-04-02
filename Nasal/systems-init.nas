@@ -12,6 +12,13 @@ setlistener("/sim/signals/fdm-initialized", func {
   print("OCTAL ... FINE!");
 });
 
+# Handle FGFS Autopilot Disconnect Binding
+controls.autopilotDisconnect = func() {
+	itaf.ITAF.ap1Master(0);
+	itaf.ITAF.ap2Master(0);
+	itaf.ITAF.ap3Master(0);
+}
+
 # AT or AP or FD
 var apfd = func {
 	var ap1 = getprop("/it-autoflight/output/ap1");
