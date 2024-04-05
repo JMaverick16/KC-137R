@@ -5,7 +5,7 @@
 		This file is licenced under the terms of the GNU General Public Licence V2 or later
 		###################################################################################
 -->
-<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
+<PropertyList>
  <sim n="0">
   <description>Boeing KC-137R</description>
   <author>J Maverick 16, Josh Davidson, Martien Van Der P., Nikolai V. Chr., FL2070, MD-GRK and others. Based on Lake of Constance Hangar 707 [Original from Innis Cunningham]</author>

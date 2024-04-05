@@ -12,6 +12,7 @@
  
   <apoff>
    <name>apoff</name>
+   <type>avionics</type>
    <path>/Aircraft/KC-137R/Sounds/apoff.wav</path>
    <condition>
 	 <property>/it-autoflight/sound/apoff</property>
@@ -23,6 +24,7 @@
   
    <apon>
    <name>apon</name>
+   <type>avionics</type>
    <path>/Aircraft/KC-137R/Sounds/apon.wav</path>
    <condition>
 	<greater-than>
@@ -38,6 +40,7 @@
   <apon>
    <name>apon2</name>
    <path>/Aircraft/KC-137R/Sounds/apon.wav</path>
+   <type>avionics</type>
    <condition>
    	<greater-than>
       <property>/it-autoflight/output/ap2</property>
@@ -52,6 +55,7 @@
 		<altAlert>
 			<name>altAlert</name>
 			<mode>once</mode>
+			<type>avionics</type>
 			<path>Aircraft/KC-137R/Sounds/altAlert.wav</path>
 			<condition>
 				<or>
@@ -81,77 +85,6 @@
 				<factor>2.0</factor>
 			</volume>
 		</altAlert>
-  
-	    <gpws>
-			<name>min</name>
-			<path>Aircraft/KC-137R/Sounds/mk-viii/min.wav</path>
-			<mode>once</mode>
-			<condition>
-				<and>
-					<less-than>
-						<property>/position/gear-agl-ft</property>
-						<value>250</value>
-					</less-than>
-					<greater-than>
-						<property>/position/gear-agl-ft</property>
-						<value>220</value>
-					</greater-than>
-					<greater-than>
-						<property>/controls/flight/flaps</property>
-						<value>0.59</value>
-					</greater-than>
-					<less-than>
-						<property>/it-autoflight/internal/vert-speed-fpm</property>
-						<value>1</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<factor>8</factor>
-			</volume>
-			<position>
-				<x>0.00</x>
-				<y>0.00</y>
-				<z>0.00</z>
-			</position>
-			<reference-dist>20.0</reference-dist>
-			<max-dist>100.0</max-dist>
-		</gpws>
-	    <gpws>
-			<name>amin</name>
-			<path>Aircraft/KC-137R/Sounds/mk-viii/appmin.wav</path>
-			<mode>once</mode>
-			<condition>
-				<and>
-					<less-than>
-						<property>/position/gear-agl-ft</property>
-						<value>350</value>
-					</less-than>
-					<greater-than>
-						<property>/position/gear-agl-ft</property>
-						<value>320</value>
-					</greater-than>
-					<greater-than>
-						<property>/controls/flight/flaps</property>
-						<value>0.59</value>
-					</greater-than>
-					<less-than>
-						<property>/it-autoflight/internal/vert-speed-fpm</property>
-						<value>1</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<factor>8</factor>
-			</volume>
-			<position>
-				<x>0.00</x>
-				<y>0.00</y>
-				<z>0.00</z>
-			</position>
-			<reference-dist>20.0</reference-dist>
-			<max-dist>100.0</max-dist>
-		</gpws>
   
   <tchdwn0>
    <name>tchdwn0</name>
