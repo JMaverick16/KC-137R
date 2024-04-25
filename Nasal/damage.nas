@@ -293,7 +293,7 @@ var DamageRecipient =
 #                      " RemoteCallsign=",notification.RemoteCallsign,
 #                      " Flags=",notification.Flags,
 #                      " Radar=",bits.test(notification.Flags, 0),
-#                      " Thrust=",bits.test(notification.Flags, 1));
+#                      " Thrust=",bits.test(notification.Flags, 1),
 #                      " CWI=",bits.test(notification.Flags, 2));
                 #
                 # todo:
@@ -449,28 +449,40 @@ var DamageRecipient =
                       damageLog.push("Ignored hit by "~notification.Callsign);
                       return emesary.Transmitter.ReceiptStatus_NotProcessed;
                     }
-                    if (tacview_supported and tacview.starttime and (getprop("sim/multiplay/txhost") != "mpserver.opredflag.com" or m28_auto)) {
-                    var node = getCallsign(notification.RemoteCallsign);
-                      if (node != nil and (notification.SecondaryKind > 20 or notification.SecondaryKind < -40)) {
-                        # its a warhead
-                        var wh = id2warhead[DamageRecipient.emesaryID2typeID(notification.SecondaryKind)];
-                        var lbs = wh[1];
-                        var hitCoord = geo.Coord.new();
-                        hitCoord.set_latlon(node.getNode("position/latitude-deg").getValue(), node.getNode("position/longitude-deg").getValue(), node.getNode("position/altitude-ft").getValue()*FT2M+notification.RelativeAltitude);
-                        if (notification.Distance > math.abs(notification.RelativeAltitude)) {#just a sanity check
-                          hitCoord = hitCoord.apply_course_distance(notification.Bearing, math.sqrt(notification.Distance*notification.Distance-notification.RelativeAltitude*notification.RelativeAltitude));
-                        }
-                        thread.lock(tacview.mutexWrite);
-                        tacview.writeExplosion(hitCoord.lat(),hitCoord.lon(),hitCoord.alt(), lbs*0.5);
-                        thread.unlock(tacview.mutexWrite);
-                      } elsif (node != nil and notification.SecondaryKind < 0) {
-                        # its a cannon or rocket
-                        thread.lock(tacview.mutexWrite);
-                        tacview.writeExplosion(node.getNode("position/latitude-deg").getValue(), node.getNode("position/longitude-deg").getValue(), node.getNode("position/altitude-ft").getValue()*FT2M, 5);
-                        thread.unlock(tacview.mutexWrite);
-                      }
-                    }
                     var callsign = processCallsign(getprop("sim/multiplay/callsign"));
+                    if (tacview_supported and tacview.starttime and (getprop("sim/multiplay/txhost") != "mpserver.opredflag.com" or m28_auto or notification.RemoteCallsign == callsign)) {
+                        var node = getCallsign(notification.RemoteCallsign);
+                        if (notification.RemoteCallsign == callsign) node = 1;
+                        if (node != nil and (notification.SecondaryKind > 20 or notification.SecondaryKind < -40)) {
+                          # its a warhead
+                          var wh = id2warhead[DamageRecipient.emesaryID2typeID(notification.SecondaryKind)];
+                          var lbs = wh[1];
+                          var hitCoord = geo.Coord.new();
+                          if (notification.RemoteCallsign == callsign) {
+                            hitCoord = geo.aircraft_position();
+                          } else {
+                            hitCoord.set_latlon(node.getNode("position/latitude-deg").getValue(), node.getNode("position/longitude-deg").getValue(), node.getNode("position/altitude-ft").getValue()*FT2M+notification.RelativeAltitude);
+                          }
+                          if (notification.Distance > math.abs(notification.RelativeAltitude)) {#just a sanity check
+                            hitCoord = hitCoord.apply_course_distance(notification.Bearing, math.sqrt(notification.Distance*notification.Distance-notification.RelativeAltitude*notification.RelativeAltitude));
+                          }
+                          thread.lock(tacview.mutexWrite);
+                          tacview.writeExplosion(hitCoord.lat(),hitCoord.lon(),hitCoord.alt(), lbs*0.5);
+                          thread.unlock(tacview.mutexWrite);
+                        } elsif (node == 1 and notification.SecondaryKind < 0) {
+                          # its a cannon or rocket
+                          var hitCoord = geo.aircraft_position();
+                          thread.lock(tacview.mutexWrite);
+                          tacview.writeExplosion(hitCoord.lat(), hitCoord.lon(), hitCoord.alt(), 5);
+                          thread.unlock(tacview.mutexWrite);
+                        } elsif (node != nil and notification.SecondaryKind < 0) {
+                          # its a cannon or rocket
+                          thread.lock(tacview.mutexWrite);
+                          tacview.writeExplosion(node.getNode("position/latitude-deg").getValue(), node.getNode("position/longitude-deg").getValue(), node.getNode("position/altitude-ft").getValue()*FT2M, 5);
+                          thread.unlock(tacview.mutexWrite);
+                        }
+                    }
+                    
                     if (notification.RemoteCallsign == callsign and getprop("payload/armament/msg") == 1) {
                         #damage enabled and were getting hit
                         
