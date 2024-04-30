@@ -4,7 +4,7 @@
     "path": "Nasal/vector.nas"
   },
   "radar-system": {
-    "version": "2.0.5",
+    "version": "2.0.6",
     "path": "Nasal/E-3/radar-system.nas"
   },
   "radar-system-database": {
@@ -12,7 +12,7 @@
     "path": "Nasal/E-3/radar-system-database.nas"
   },
   "damage": {
-    "version": "1.4.8",
+    "version": "1.4.10",
     "path": "Nasal/damage.nas"
   },
   "iff": {
