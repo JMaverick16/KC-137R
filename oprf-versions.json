@@ -12,7 +12,7 @@
     "path": "Nasal/E-3/radar-system-database.nas"
   },
   "damage": {
-    "version": "1.4.10",
+    "version": "1.4.11",
     "path": "Nasal/damage.nas"
   },
   "iff": {
