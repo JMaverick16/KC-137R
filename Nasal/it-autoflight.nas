@@ -543,6 +543,11 @@ var ITAF = {
 		
 		if (FPLN.numTemp > 0 and FPLN.activeTemp == 1) {
 			if ((FPLN.currentWpTemp + 1) < FPLN.numTemp) {
+				if (FPLN.currentWpTemp == -1) { # This fixes a Route Manager bug
+					FPLN.currentWp.setValue(1);
+					FPLN.currentWpTemp = 1;
+				}
+				
 				Velocities.groundspeedMps = Velocities.groundspeedKt.getValue() * 0.5144444444444;
 				FPLN.wpFlyFrom = FPLN.currentWpTemp;
 				if (FPLN.wpFlyFrom < 0) {
@@ -592,6 +597,7 @@ var ITAF = {
 			Output.ap1.setBoolValue(0);
 			me.apOffFunction();
 		}
+		
 		Output.ap1Temp = Output.ap1.getBoolValue();
 		if (Input.ap1.getBoolValue() != Output.ap1Temp) {
 			Input.ap1.setBoolValue(Output.ap1Temp);
@@ -609,6 +615,7 @@ var ITAF = {
 			Output.ap2.setBoolValue(0);
 			me.apOffFunction();
 		}
+		
 		Output.ap2Temp = Output.ap2.getBoolValue();
 		if (Input.ap2.getBoolValue() != Output.ap2Temp) {
 			Input.ap2.setBoolValue(Output.ap2Temp);
@@ -626,6 +633,7 @@ var ITAF = {
 			Output.ap3.setBoolValue(0);
 			me.apOffFunction();
 		}
+		
 		Output.ap3Temp = Output.ap3.getBoolValue();
 		if (Input.ap3.getBoolValue() != Output.ap3Temp) {
 			Input.ap3.setBoolValue(Output.ap3Temp);
@@ -638,9 +646,11 @@ var ITAF = {
 				Controls.elevator.setValue(0);
 				Controls.rudder.setValue(0);
 			}
+			
 			if (Text.vert.getValue() == "ROLLOUT") {
 				me.init(1);
 			}
+			
 			if (Sound.enableApOff) {
 				Sound.apOff.setBoolValue(1);
 				Sound.enableApOff = 0;
@@ -665,6 +675,7 @@ var ITAF = {
 			}
 			Output.athr.setBoolValue(0);
 		}
+		
 		Output.athrTemp = Output.athr.getBoolValue();
 		if (Input.athr.getBoolValue() != Output.athrTemp) {
 			Input.athr.setBoolValue(Output.athrTemp);
@@ -692,6 +703,7 @@ var ITAF = {
 		} else {
 			Output.fd1.setBoolValue(0);
 		}
+		
 		Output.fd1Temp = Output.fd1.getBoolValue();
 		if (Input.fd1.getBoolValue() != Output.fd1Temp) {
 			Input.fd1.setBoolValue(Output.fd1Temp);
@@ -703,6 +715,7 @@ var ITAF = {
 		} else {
 			Output.fd2.setBoolValue(0);
 		}
+		
 		Output.fd2Temp = Output.fd2.getBoolValue();
 		if (Input.fd2.getBoolValue() != Output.fd2Temp) {
 			Input.fd2.setBoolValue(Output.fd2Temp);
