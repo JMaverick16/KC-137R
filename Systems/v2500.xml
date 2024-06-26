@@ -17,8 +17,8 @@
 				<table>
 					<independentVar lookup="row">velocities/mach</independentVar>
 					<tableData>
-						0.06  0.973269699530
-						0.10  1.000000000000
+						0.07  0.973269699530
+						0.09  1.000000000000
 					</tableData>
 				</table>
 			</function>
@@ -358,7 +358,7 @@
 						<table>
 							<independentVar lookup="row">fadec/limit/active-epr-input</independentVar>
 							<tableData>
-								   24743.1  0.00
+								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -807,7 +807,7 @@
 						<table>
 							<independentVar lookup="row">fadec/epr-actual-1-ref</independentVar>
 							<tableData>
-								   24743.1  0.00
+								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -836,7 +836,7 @@
 						<table>
 							<independentVar lookup="row">fadec/epr-actual-2-ref</independentVar>
 							<tableData>
-								   24743.1  0.00
+								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -865,7 +865,7 @@
 						<table>
 							<independentVar lookup="row">fadec/epr-actual-3-ref</independentVar>
 							<tableData>
-								   24743.1  0.00
+								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -894,7 +894,7 @@
 						<table>
 							<independentVar lookup="row">fadec/epr-actual-4-ref</independentVar>
 							<tableData>
-								   24743.1  0.00
+								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
