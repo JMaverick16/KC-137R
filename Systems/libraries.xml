@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- Extra Property Rule Things -->
-<!-- Copyright (c) 2023 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
 
 <PropertyList>
 	
@@ -17,9 +17,8 @@
 						<property>/position/altitude-ft</property>
 						<table>
 							<property>/fdm/jsbsim/velocities/mach</property>
-							<entry><ind>0.08</ind><dep>0.0</dep></entry>
 							<entry><ind>0.09</ind><dep>0.1</dep></entry>
-							<entry><ind>0.17</ind><dep>1.0</dep></entry>
+							<entry><ind>0.15</ind><dep>1.0</dep></entry>
 						</table>
 					</product>
 					<entry><ind>    0</ind><dep>0.674</dep></entry>
@@ -42,9 +41,8 @@
 							<property>/position/altitude-ft</property>
 							<table>
 								<property>/fdm/jsbsim/velocities/mach</property>
-								<entry><ind>0.08</ind><dep>0.0</dep></entry>
 								<entry><ind>0.09</ind><dep>0.1</dep></entry>
-								<entry><ind>0.17</ind><dep>1.0</dep></entry>
+								<entry><ind>0.15</ind><dep>1.0</dep></entry>
 							</table>
 						</product>
 						<entry><ind>    0</ind><dep>0.9852</dep></entry>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- KC-137R V2500 Engine/FADEC -->
-<!-- Copyright (c) 2023 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
 <!-- Tables based off my A320 FADEC -->
 
 <system name="KC-137R: V2500">
@@ -358,7 +358,6 @@
 						<table>
 							<independentVar lookup="row">fadec/limit/active-epr-input</independentVar>
 							<tableData>
-								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -800,14 +799,13 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-1">
+		<fcs_function name="fadec/epr-actual-1-calc">
 			<function>
 				<sum>
 					<product>
 						<table>
 							<independentVar lookup="row">fadec/epr-actual-1-ref</independentVar>
 							<tableData>
-								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -816,6 +814,20 @@
 					</product>
 					<property>fadec/epr/c2</property>
 				</sum>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fadec/epr-actual-1">
+			<function>
+				<interpolate1d>
+					<property>fadec/n1-actual-1</property>
+					<value>6</value><interpolate1d> <!-- Eng off EPR -->
+						<property>velocities/mach</property>
+						<value>0.09</value><value>0.996</value>
+						<value>0.15</value><property>fadec/epr/c2</property>
+					</interpolate1d>
+					<value>22.4</value><property>fadec/epr-actual-1-calc</property>
+				</interpolate1d>
 			</function>
 			<output>/engines/engine[0]/epr-actual</output>
 		</fcs_function>
@@ -829,14 +841,13 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-2">
+		<fcs_function name="fadec/epr-actual-2-calc">
 			<function>
 				<sum>
 					<product>
 						<table>
 							<independentVar lookup="row">fadec/epr-actual-2-ref</independentVar>
 							<tableData>
-								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -845,6 +856,20 @@
 					</product>
 					<property>fadec/epr/c2</property>
 				</sum>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fadec/epr-actual-2">
+			<function>
+				<interpolate1d>
+					<property>fadec/n1-actual-2</property>
+					<value>6</value><interpolate1d> <!-- Eng off EPR -->
+						<property>velocities/mach</property>
+						<value>0.09</value><value>0.996</value>
+						<value>0.15</value><property>fadec/epr/c2</property>
+					</interpolate1d>
+					<value>22.4</value><property>fadec/epr-actual-2-calc</property>
+				</interpolate1d>
 			</function>
 			<output>/engines/engine[1]/epr-actual</output>
 		</fcs_function>
@@ -858,14 +883,13 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-3">
+		<fcs_function name="fadec/epr-actual-3-calc">
 			<function>
 				<sum>
 					<product>
 						<table>
 							<independentVar lookup="row">fadec/epr-actual-3-ref</independentVar>
 							<tableData>
-								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -874,6 +898,20 @@
 					</product>
 					<property>fadec/epr/c2</property>
 				</sum>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fadec/epr-actual-3">
+			<function>
+				<interpolate1d>
+					<property>fadec/n1-actual-3</property>
+					<value>6</value><interpolate1d> <!-- Eng off EPR -->
+						<property>velocities/mach</property>
+						<value>0.09</value><value>0.996</value>
+						<value>0.15</value><property>fadec/epr/c2</property>
+					</interpolate1d>
+					<value>22.4</value><property>fadec/epr-actual-3-calc</property>
+				</interpolate1d>
 			</function>
 			<output>/engines/engine[2]/epr-actual</output>
 		</fcs_function>
@@ -887,14 +925,13 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-4">
+		<fcs_function name="fadec/epr-actual-4-calc">
 			<function>
 				<sum>
 					<product>
 						<table>
 							<independentVar lookup="row">fadec/epr-actual-4-ref</independentVar>
 							<tableData>
-								    3162.2  0.00
 								   53194.6  0.03
 								10000000.0  1.00
 							</tableData>
@@ -903,6 +940,20 @@
 					</product>
 					<property>fadec/epr/c2</property>
 				</sum>
+			</function>
+		</fcs_function>
+		
+		<fcs_function name="fadec/epr-actual-4">
+			<function>
+				<interpolate1d>
+					<property>fadec/n1-actual-4</property>
+					<value>6</value><interpolate1d> <!-- Eng off EPR -->
+						<property>velocities/mach</property>
+						<value>0.09</value><value>0.996</value>
+						<value>0.15</value><property>fadec/epr/c2</property>
+					</interpolate1d>
+					<value>22.4</value><property>fadec/epr-actual-4-calc</property>
+				</interpolate1d>
 			</function>
 			<output>/engines/engine[3]/epr-actual</output>
 		</fcs_function>
