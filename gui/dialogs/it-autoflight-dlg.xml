@@ -218,11 +218,11 @@
 			<visible>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/lnav-armed</property>
+						<property>/it-autoflight/output/lnav-arm</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/appr-armed</property>
+						<property>/it-autoflight/output/gs-arm</property>
 						<value>1</value>
 					</equals>
 				</and>
@@ -237,15 +237,15 @@
 			<visible>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/lnav-armed</property>
+						<property>/it-autoflight/output/lnav-arm</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/loc-armed</property>
+						<property>/it-autoflight/output/loc-arm</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/appr-armed</property>
+						<property>/it-autoflight/output/gs-arm</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -260,15 +260,15 @@
 			<visible>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/lnav-armed</property>
+						<property>/it-autoflight/output/lnav-arm</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/loc-armed</property>
+						<property>/it-autoflight/output/loc-arm</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/output/appr-armed</property>
+						<property>/it-autoflight/output/gs-arm</property>
 						<value>0</value>
 					</equals>
 				</and>

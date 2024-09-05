@@ -5,7 +5,7 @@
 <turbine_engine name="V2500">
 	
 	<milthrust>23000</milthrust> <!-- @ 0.2 Mach, lower at 0 Mach, handled in fadec file -->
-	<tsfc>0.335</tsfc>
+	<tsfc>0.541</tsfc>
 	<bleed>0.03</bleed>
 	<ignitionn1>5.3</ignitionn1>
 	<ignitionn2>28.5</ignitionn2>
