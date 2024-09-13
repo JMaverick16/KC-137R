@@ -2,17 +2,17 @@
 
 This repo contains 6 military aircrafts derived from the Boeing 707 and it's variants.
 
-- KC-137R Stratotanker: Advanced Air-To-Air Refueling System, featuring up to date technologies (CFM56-5B7).
+- KC-137R Stratotanker: Advanced Air-To-Air Refueling System, featuring up to date technologies.
 
-- KC-137R-RT Stratotanker: Advanced Air-To-Air Refueling System with ATA refuel ability (CFM56-5B7).
+- KC-137R-RT Stratotanker: Advanced Air-To-Air Refueling System with ATA refuel ability.
 
-- E-3R Sentry: Advanced AWACS System, featuring glass cockpit (IAE V2528-D5).
+- E-3R Sentry: Advanced AWACS System, featuring glass cockpit.
 
-- RC-137R Rivet Joint: Advanced Reconnaissance System, featuring glass cockpit (CFM56-5B7).
+- RC-137R Rivet Joint: Advanced Reconnaissance System, featuring glass cockpit.
 
-- E-8R Joint STARS: Advanced ground surveillance, battle management, command and control aircraft (IAE V2528-D5).
+- E-8R Joint STARS: Advanced ground surveillance, battle management, command and control aircraft.
 
-- C-137R Stratoliner: Advanced military transport aircraft and VIP clipper, featuring glass cockpit (IAE V2528-D5).
+- C-137R Stratoliner: Advanced military transport aircraft and VIP clipper, featuring glass cockpit.
 
 # Boeing E-3R Sentry Specifics
 
