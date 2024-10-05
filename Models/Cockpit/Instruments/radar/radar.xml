@@ -100,9 +100,9 @@
 		<property>instrumentation/mptcas/on</property>
 		<factor>-90</factor>
 		<center>
-			<x-m> 0.0</x-m>
-			<y-m> 0.0521</y-m>
-			<z-m>-0.0536</z-m>
+			<x-m>0</x-m>
+			<y-m>0.05209</y-m>
+			<z-m>-0.05363</z-m>
 		</center>
 		<axis>
 			<x>1</x>
@@ -137,9 +137,9 @@
 		<factor>45</factor>
 		<offset-deg>-35</offset-deg>
 		<center>
-			<x-m> 0.02512</x-m>
-			<y-m>-0.08374</y-m>
-			<z-m>-0.2062</z-m>
+			<x-m>0</x-m>
+			<y-m>-0.05088</y-m>
+			<z-m>-0.05363</z-m>
 		</center>
 		<axis>
 			<x>-1</x>
