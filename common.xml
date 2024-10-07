@@ -236,6 +236,47 @@
     </config>
 	</view>
 
+	<!-- A somewhat fixed/static close-up view of the CDUs -->
+	<view n="106">
+    <name>CDU View</name>
+    <enabled type="bool">true</enabled>
+    <type>lookfrom</type>
+    <internal type="bool">true</internal>
+    <config>
+			<from-model type="bool">true</from-model>
+			<from-model-idx type="int">true</from-model-idx>
+			<!-- x/y/z == right/up/back -->
+			<x-offset-m archive="y"> 0.0</x-offset-m>
+			<y-offset-m archive="y"> 1.05</y-offset-m>
+			<z-offset-m archive="y">-18.70</z-offset-m>
+			<heading-offset-deg type="double"> 0.0</heading-offset-deg>
+			<pitch-offset-deg type="double">-62.5</pitch-offset-deg>
+			<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<default-field-of-view-deg type="double">58.0</default-field-of-view-deg>
+			<default-pitch-deg type="double">-5.0</default-pitch-deg>
+			<default-heading-deg type="double">0</default-heading-deg>
+			<front-direction-deg type="double">0</front-direction-deg>
+			<dynamic-view type="bool">true</dynamic-view>
+			<limits>
+                <enabled type="bool">true</enabled>
+                <left>
+                    <heading-max-deg type="double">0.00001</heading-max-deg>
+                    <heading-max-deg type="double">0.00001</heading-max-deg>
+                </left>
+                <right>
+                    <heading-max-deg type="double">0.00001</heading-max-deg>
+                    <pitch-max-deg type="double">0.00001</pitch-max-deg>
+                </right>
+				<up>
+                    <pitch-max-deg type="double">0.00001</pitch-max-deg>
+				</up>
+				<down>
+                    <pitch-max-deg type="double">0.00001</pitch-max-deg>
+				</down>
+            </limits>
+    </config>
+	</view>
+
   <chase-distance-m type="double" archive="y">-85</chase-distance-m>
 
   <multiplay>
