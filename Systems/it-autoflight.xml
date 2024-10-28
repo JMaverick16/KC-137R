@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- IT-AUTOFLIGHT -->
+<!-- IT Autoflight -->
 <!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
 
 <PropertyList>
@@ -795,10 +795,37 @@
 	</filter>
 	
 	<filter>
+		<name>Flare Entry Max Descent Rate</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input> <!-- Ensure we are not descending below -3 degrees for flare entry -->
+			<expression>
+				<sum>
+					<difference> <!-- Fix an issue with the calculation -->
+						<property>/it-autoflight/internal/vert-speed-fpm</property>
+						<product>
+							<property>/velocities/vertical-speed-fps</property>
+							<value>60</value>
+						</product>
+					</difference>
+					<product>
+						<property>/instrumentation/airspeed-indicator/true-speed-kt</property>
+						<value>-0.05233595624294</value> <!-- Sin(-3) -->
+						<value>101.26859142607174</value> <!-- FPM to Knot -->
+					</product>
+				</sum>
+			</expression>
+		</input>
+		<output>/it-autoflight/internal/flare-entry-max-descent-rate</output>
+		<min>-1500</min>
+		<max>0</max>
+	</filter>
+	
+	<filter>
 		<name>Nav G/S FPM Calc</name>
 		<type>gain</type>
 		<gain>1.0</gain>
-		<input> <!-- Under 110ft glideslope data starts to become unusable -->
+		<input> <!-- Under 120ft glideslope data starts to become unusable -->
 			<condition>
 				<and>
 					<or>
@@ -813,13 +840,16 @@
 					</or>
 					<less-than-equals>
 						<property>/position/gear-agl-ft</property>
-						<value>110</value>
+						<value>120</value>
 					</less-than-equals>
 				</and>
 			</condition>
 			<expression>
 				<min>
-					<property>/it-autoflight/internal/nav-rate-of-climb-fpm</property>
+					<max>
+						<property>/it-autoflight/internal/nav-rate-of-climb-fpm</property>
+						<property>/it-autoflight/internal/flare-entry-max-descent-rate</property>
+					</max>
 					<value>-500</value>
 				</min>
 			</expression>
@@ -1670,13 +1700,10 @@
 						<product>
 							<sin>
 								<deg2rad>
-									<table>
+									<table> <!-- Entry at -3 degrees -->
 										<property>/position/gear-agl-ft</property>
-										<entry><ind>50</ind><dep>-3.0</dep></entry>
-										<entry><ind>40</ind><dep>-1.8</dep></entry>
-										<entry><ind>30</ind><dep>-1.5</dep></entry>
-										<entry><ind>20</ind><dep>-1.2</dep></entry>
-										<entry><ind> 5</ind><dep>-0.7</dep></entry>
+										<entry><ind>50</ind><dep>-1.7</dep></entry>
+										<entry><ind>10</ind><dep>-0.7</dep></entry>
 									</table>
 								</deg2rad>
 							</sin>
@@ -1893,10 +1920,10 @@
 			<u_min>
 				<expression>
 					<max>
-						<dif>
+						<difference>
 							<property>/orientation/pitch-deg</property>
 							<value>5</value>
-						</dif>
+						</difference>
 						<value>-15</value>
 					</max>
 				</expression>

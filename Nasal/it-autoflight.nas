@@ -1,4 +1,4 @@
-# IT-AUTOFLIGHT System Controller V4.1.0
+# IT Autoflight System Controller V4.1.0
 # Copyright (c) 2024 Josh Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
@@ -326,6 +326,8 @@ var ITAF = {
 		slowLoopTimer.start();
 	},
 	loop: func() {
+		Gear.wow1Temp = Gear.wow1.getBoolValue();
+		Gear.wow2Temp = Gear.wow2.getBoolValue();
 		Output.ap1Temp = Output.ap1.getBoolValue();
 		Output.ap2Temp = Output.ap2.getBoolValue();
 		Output.ap3Temp = Output.ap3.getBoolValue();
@@ -382,8 +384,6 @@ var ITAF = {
 			}
 		}
 		
-		Gear.wow1Temp = Gear.wow1.getBoolValue();
-		Gear.wow2Temp = Gear.wow2.getBoolValue();
 		Output.latTemp = Output.lat.getValue();
 		Output.vertTemp = Output.vert.getValue();
 		Text.vertTemp = Text.vert.getValue();
@@ -1025,7 +1025,7 @@ var ITAF = {
 		}
 	},
 	checkFlch: func(a) {
-		if (Position.gearAglFt.getValue() >= a and a != 0) {
+		if (!Gear.wow1.getBoolValue() and !Gear.wow2.getBoolValue() and Position.gearAglFt.getValue() >= a and a != 0) {
 			me.setVertMode(4);
 		}
 	},

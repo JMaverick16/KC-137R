@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- IT-AUTOFLIGHT Control Dialog -->
+<!-- IT Autoflight Control Dialog -->
 <!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
 
 <PropertyList>
@@ -14,7 +14,7 @@
 		
 		<text>
 			<halign>left</halign>
-			<label>IT-AUTOFLIGHT System (V4.0.X)</label>
+			<label>IT Autoflight System (V4.1.X)</label>
 		</text>
 		<button>
 			<halign>right</halign>
