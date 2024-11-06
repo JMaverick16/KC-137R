@@ -9,8 +9,6 @@
  <sim n="0">
   <description>Boeing KC-137R</description>
   <author>J Maverick 16, Josh Davidson, Martien Van Der P., Nikolai V. Chr., FL2070, MD-GRK and others. Based on Lake of Constance Hangar 707 [Original from Innis Cunningham]</author>
-  <status>Early Production</status>
-  <aero>KC-137R</aero>
   <flight-model>jsb</flight-model>
   <virtual-cockpit archive="y">true</virtual-cockpit>
   <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
@@ -103,12 +101,6 @@
 			<start-offset-m>30</start-offset-m>
 		</runways>
 	</airport>
-
-  <sound>
-      <path>Aircraft/KC-137R/Sounds/cfm56-sound.xml</path>
-      <switch type = "bool">0</switch>
-      <stall-horn type="bool">0</stall-horn>
-  </sound>
 
 	<tutorials>
 		<tutorial include="Tutorials/707-startup-german.xml"/>
@@ -290,10 +282,6 @@
     <setting>1.0</setting>	<!-- 100% landing -->
   </flaps>
 
-  <engine-type>
-	<IAE type="bool">false</IAE>
-  </engine-type>
-
 	<yokes-visible type="bool">1</yokes-visible>
  </sim>
 
@@ -309,26 +297,25 @@
 
 	<it-autoflight>
 		<config>
+			<yaw>
+				<gain-factor>1.0</gain-factor> <!-- Yaw rate gain scaling factor for align/rollout -->
+			</yaw>
 			<cmd>
-				<alt>-5</alt>
-				<flch-accel>2</flch-accel>
-				<roll>1.6</roll>
+				<alt>-5</alt> <!-- Altitude deviation gain -->
+				<flch-accel>2</flch-accel> <!-- Level change accel/decel limit -->
+				<roll>1.6</roll> <!-- Roll heading deviation base gain -->
 			</cmd>
-			<autoland>
-				<pitch-kp>0.0052</pitch-kp>
-				<yaw-kp>-0.05</yaw-kp>
-			</autoland>
 			<rollout>
-				<roll-kp>-0.1</roll-kp>
-				<pitch-nose>0.1</pitch-nose>
-				<pitch-rate>-1.5</pitch-rate>
-				<yaw-kp>-0.02</yaw-kp>
+				<aileron>-0.1</aileron> <!-- Aileron to counter wind-induced banking on ground -->
+				<pitch-nose>0.1</pitch-nose> <!-- Forward pressure to keep nose gear on ground -->
+				<pitch-rate>-1.5</pitch-rate> <!-- Rate to lower nose to ground after touchdown -->
 			</rollout>
 		</config>
 		<settings>
 			<accel-ft type="double">1000</accel-ft> <!-- Acceleration AGL when T/O CLB changes to SPD CLB, 0 to disable -->
+			<align-ft type="int">200</align-ft> <!-- AGL when ALIGN engages during autoland -->
 			<auto-bank-limit-calc type="bool">1</auto-bank-limit-calc> <!-- Disable to add a custom auto bank limit schedule -->
-			<autoland-without-ap type="bool">1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
+			<autoland-without-ap type="bool">1</autoland-without-ap> <!-- Allows FLARE and ROLLOUT pitch modes to engage even if AP is off -->
 			<autothrottle-max type="double">0.95</autothrottle-max> <!-- Thrust Max Limit Normalized -->
 			<autothrottle-min type="double">0.02</autothrottle-min> <!-- Thrust Low Limit Normalized -->
 			<bank-max-deg type="double">25</bank-max-deg> <!-- Maximum Bank Limit -->
@@ -345,9 +332,9 @@
 			<lnav-ft type="double">50</lnav-ft> <!-- AGL when LNAV becomes active if armed -->
 			<max-kts type="int">380</max-kts> <!-- Maxmimum target airspeed in knots -->
 			<max-mach type="double">0.9</max-mach> <!-- Maxmimum target mach number -->
-			<stall-aoa-deg type="double">13</stall-aoa-deg> <!-- Angle of attack where AP trips off -->
 			<retard-enable type="bool">1</retard-enable> <!-- AGL to Thrust Retard -->
 			<retard-ft type="double">30</retard-ft> <!-- Enable Thrust Retard -->
+			<stall-aoa-deg type="double">13</stall-aoa-deg> <!-- Angle of attack where AP trips off -->
 			<takeoff-hdg-cap type="double">5</takeoff-hdg-cap> <!-- Maximum bank to capture current hdg in T/O mode -->
 			<toga-spd type="double">160</toga-spd> <!-- V2 + 10kts -->
 			<use-controls-engines type="bool">1</use-controls-engines> <!-- Use /controls/engines properties -->
@@ -423,7 +410,6 @@
 			<off-start-run type="double">2</off-start-run>
 		</APU>
 		<engines>
-			<epr type="bool">false</epr>
 			<engine-start-switch type="int">1</engine-start-switch>
 			<engine n="0">
 				<cutoff type="bool">true</cutoff>
@@ -582,9 +568,9 @@
 	        <auto_flare_caller type="bool">false</auto_flare_caller>
 	    </d-config>
 	    <armament>	        
-	        <msg type="bool">true</msg>
+	        <msg type="bool">false</msg>
 	        <tacview type="bool">false</tacview>
-	        <models type="string">Aircraft/707/Models/E-3/</models>
+	        <models type="string">Aircraft/KC-137R/Models/Armament/</models>
 	        <enable-craters type="bool">true</enable-craters>
 	        <MLW-bearing type="double">0</MLW-bearing>
 	        <MLW-count type="int">0</MLW-count>

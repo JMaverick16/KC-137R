@@ -8,6 +8,7 @@
 <PropertyList include="common.xml">
  <sim n="0">
   <description>Boeing KC-137R-RT Stratotanker (CFM56)</description>
+	<aero>KC-137R</aero>
   	<long-description>
    	The Boeing KC-137R-RT is a receiver-capable version of the Stratotanker military aerial refueling aircraft. The KC-137 was the US Air Force's first jet-powered refueling tanker and replaced the KC-97 Stratofreighter. The KC-137 was initially tasked with refueling strategic bombers, but was used extensively in the Vietnam War and later conflicts such as Operation Desert Storm to extend the range and endurance of US tactical fighters and bombers.
   	</long-description>
@@ -25,6 +26,10 @@
             </preview>
     </previews>
 
+  <engine-type>
+	<IAE type="bool">0</IAE>
+  </engine-type>
+
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/KC-137R-RT.xml</path>
       <livery>
@@ -39,6 +44,12 @@
   <remote>
    <pilot-callsign type="string"/>
   </remote>
+
+  <sound>
+      <path>Aircraft/KC-137R/Sounds/cfm56-sound.xml</path>
+      <switch type = "bool">0</switch>
+      <stall-horn type="bool">0</stall-horn>
+  </sound>
 
 	<menubar>
 		<default>

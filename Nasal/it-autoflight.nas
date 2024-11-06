@@ -212,6 +212,7 @@ var Text = {
 
 var Settings = {
 	accelFt: props.globals.getNode("/it-autoflight/settings/accel-ft", 1),
+	alignFt: props.globals.getNode("/it-autoflight/settings/align-ft", 1),
 	autoBankLimitCalc: props.globals.getNode("/it-autoflight/settings/auto-bank-limit-calc", 1),
 	autolandWithoutAp: props.globals.getNode("/it-autoflight/settings/autoland-without-ap", 1),
 	autolandWithoutApTemp: 0,
@@ -440,12 +441,18 @@ var ITAF = {
 		}
 		
 		# Autoland Logic
-		if ((Output.ap1Temp or Output.ap2Temp or Output.ap3Temp or Settings.autolandWithoutApTemp) and Settings.landEnable.getBoolValue()) {
+		if ((Output.ap1Temp or Output.ap2Temp or Output.ap3Temp) and Settings.landEnable.getBoolValue()) { # Lateral ALIGN/ROLLOUT requires AP to function
 			if (Output.latTemp == 2) {
-				if (Position.gearAglFtTemp <= 150) {
+				if (Position.gearAglFtTemp <= Settings.alignFt.getValue()) {
 					me.setLatMode(4);
 				}
 			}
+		} else {
+			if (Output.latTemp == 4) {
+				me.activateLoc();
+			}
+		}
+		if ((Output.ap1Temp or Output.ap2Temp or Output.ap3Temp or Settings.autolandWithoutApTemp) and Settings.landEnable.getBoolValue()) {
 			if (Output.vertTemp == 2) {
 				if (Position.gearAglFtTemp <= 50 and Position.gearAglFtTemp >= 5) {
 					me.setVertMode(6);
@@ -457,8 +464,7 @@ var ITAF = {
 				}
 			}
 		} else {
-			if (Output.latTemp == 4 or Output.vertTemp == 6) {
-				me.activateLoc();
+			if (Output.vertTemp == 6) {
 				me.activateGs();
 			}
 		}

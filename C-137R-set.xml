@@ -5,9 +5,10 @@
 		This file is licenced under the terms of the GNU General Public Licence V2 or later
 		###################################################################################
 -->
-<PropertyList include="common-IAE.xml">
+<PropertyList include="common.xml">
  <sim n="0">
   <description>Boeing C-137R Stratoliner (IAE V2500)</description>
+	<aero>KC-137R-IAE</aero>
   	<long-description>
    		The Boeing C-137R Stratoliner is a VIP transport aircraft derived from the Boeing 707 jet airliner used by the United States Air Force.
   	</long-description>
@@ -25,6 +26,10 @@
             </preview>
     </previews>
 
+  <engine-type>
+	<IAE type="bool">1</IAE>
+  </engine-type>
+
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/C-137R.xml</path>
       <livery>
@@ -39,6 +44,12 @@
   <remote>
    <pilot-callsign type="string"/>
   </remote>
+
+  <sound>
+      <path>Aircraft/KC-137R/Sounds/v2500-sound.xml</path>
+      <switch type = "bool">0</switch>
+      <stall-horn type="bool">0</stall-horn>
+  </sound>
 
 	<menubar>
 		<default>
