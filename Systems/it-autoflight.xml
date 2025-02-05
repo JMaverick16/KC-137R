@@ -277,7 +277,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/mode/vert</property>
+					<property>/it-autoflight/text/vert</property>
 					<value>T/O CLB</value>
 				</equals>
 			</condition>
@@ -345,6 +345,10 @@
 						<equals>
 							<property>/it-autoflight/output/vert</property>
 							<value>7</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/output/vert</property>
+							<value>8</value>
 						</equals>
 					</or>
 					<property>/it-autoflight/output/apfd-on</property>
@@ -1618,6 +1622,10 @@
 						<property>/it-autoflight/output/vert</property>
 						<value>7</value>
 					</equals>
+					<equals>
+						<property>/it-autoflight/output/vert</property>
+						<value>8</value>
+					</equals>
 				</or>
 			</and>
 		</input>
@@ -1904,6 +1912,10 @@
 						<property>/it-autoflight/output/vert</property>
 						<value>7</value>
 					</equals>
+					<equals>
+						<property>/it-autoflight/output/vert</property>
+						<value>8</value>
+					</equals>
 				</or>
 			</condition>
 			<property>/it-autoflight/internal/target-fpm-flch</property>
@@ -1931,11 +1943,11 @@
 				<or>
 					<equals>
 						<property>/it-autoflight/output/vert</property>
-						<value>8</value>
+						<value>9</value>
 					</equals>
 					<equals>
 						<property>/it-autoflight/output/vert</property>
-						<value>9</value>
+						<value>10</value>
 					</equals>
 				</or>
 			</condition>
@@ -1958,11 +1970,11 @@
 				</equals>
 				<not-equals>
 					<property>/it-autoflight/output/vert</property>
-					<value>8</value>
+					<value>9</value>
 				</not-equals>
 				<not-equals>
 					<property>/it-autoflight/output/vert</property>
-					<value>9</value>
+					<value>10</value>
 				</not-equals>
 			</and>
 		</input>
@@ -2104,11 +2116,11 @@
 						</equals>
 						<not-equals>
 							<property>/it-autoflight/output/vert</property>
-							<value>8</value>
+							<value>9</value>
 						</not-equals>
 						<not-equals>
 							<property>/it-autoflight/output/vert</property>
-							<value>9</value>
+							<value>10</value>
 						</not-equals>
 					</and>
 				</not>
@@ -2129,7 +2141,7 @@
 					<property>/it-autoflight/output/apfd-on</property>
 					<equals>
 						<property>/it-autoflight/output/vert</property>
-						<value>8</value>
+						<value>10</value>
 					</equals>
 				</and>
 			</condition>
@@ -2143,7 +2155,7 @@
 					<property>/it-autoflight/output/apfd-on</property>
 					<equals>
 						<property>/it-autoflight/output/vert</property>
-						<value>8</value>
+						<value>10</value>
 					</equals>
 				</and>
 			</condition>
@@ -2169,7 +2181,7 @@
 			<condition>
 				<equals>
 					<property>/it-autoflight/output/vert</property>
-					<value>8</value>
+					<value>10</value>
 				</equals>
 			</condition>
 			<property>/it-autoflight/internal/target-pitch-hold</property>
@@ -2818,7 +2830,7 @@
 			<condition>
 				<equals>
 					<property>/it-autoflight/output/vert</property>
-					<value>8</value>
+					<value>10</value>
 				</equals>
 			</condition>
 			<expression>
@@ -2858,7 +2870,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/mode/vert</property>
+					<property>/it-autoflight/text/vert</property>
 					<value>T/O CLB</value>
 				</equals>
 			</condition>

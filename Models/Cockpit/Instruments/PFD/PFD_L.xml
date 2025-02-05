@@ -840,7 +840,7 @@ Modified by Octal450 for KC-137R
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">text-value</type>
         <format type="string">%s</format>
-		<property>it-autoflight/mode/thr</property>
+		<property>it-autoflight/text/thr</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -872,7 +872,7 @@ Modified by Octal450 for KC-137R
 		<axis-alignment>yz-plane</axis-alignment>
         <type type="string">text-value</type>
         <format type="string">%s</format>
-		<property>it-autoflight/mode/lat</property>
+		<property>it-autoflight/text/lat</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -893,7 +893,7 @@ Modified by Octal450 for KC-137R
 		<axis-alignment>yz-plane</axis-alignment>
         <type type="string">text-value</type>
         <format type="string">%s</format>
-		<property>it-autoflight/mode/vert</property>
+		<property>it-autoflight/text/vert</property>
         <font>helvetica_bold.txf</font>
         <character-size>0.007</character-size>
         <character-aspect-ratio type="double">1.4</character-aspect-ratio>
@@ -1014,7 +1014,7 @@ Modified by Octal450 for KC-137R
 		<type>select</type>
 		<condition>
 			<equals>
-				<property>it-autoflight/mode/lat</property>
+				<property>it-autoflight/text/lat</property>
 				<value>T/O</value>
 			</equals>
 			<equals>
@@ -1034,7 +1034,7 @@ Modified by Octal450 for KC-137R
 					<value>100</value>
 				</less-than-equals>
 				<equals>
-					<property>it-autoflight/mode/vert</property>
+					<property>it-autoflight/text/vert</property>
 					<value>G/S</value>
 				</equals>
 			</and>

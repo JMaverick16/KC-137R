@@ -203,10 +203,10 @@ var Output = {
 };
 
 var Text = {
-	lat: props.globals.initNode("/it-autoflight/mode/lat", "T/O", "STRING"),
-	spd: props.globals.initNode("/it-autoflight/mode/spd", "PITCH", "STRING"),
-	thr: props.globals.initNode("/it-autoflight/mode/thr", "THR LIM", "STRING"),
-	vert: props.globals.initNode("/it-autoflight/mode/vert", "T/O CLB", "STRING"),
+	lat: props.globals.initNode("/it-autoflight/text/lat", "T/O", "STRING"),
+	spd: props.globals.initNode("/it-autoflight/text/spd", "PITCH", "STRING"),
+	thr: props.globals.initNode("/it-autoflight/text/thr", "THR LIM", "STRING"),
+	vert: props.globals.initNode("/it-autoflight/text/vert", "T/O CLB", "STRING"),
 	vertTemp: "T/O CLB",
 };
 
@@ -459,7 +459,7 @@ var ITAF = {
 				}
 			} else if (Output.vertTemp == 6) {
 				if (Gear.wow1Temp and Gear.wow2Temp and Text.vert.getValue() != "ROLLOUT") {
-					me.updateLatText("RLOU");
+					me.updateLatText("ROLLOUT");
 					me.updateVertText("ROLLOUT");
 				}
 			}
@@ -772,7 +772,7 @@ var ITAF = {
 			me.updateLocArm(0);
 			me.updateGsArm(0);
 			Output.lat.setValue(4);
-			me.updateLatText("ALGN");
+			me.updateLatText("ALIGN");
 		} else if (n == 5) { # T/O
 			me.updateLnavArm(0);
 			me.updateLocArm(0);
@@ -894,25 +894,22 @@ var ITAF = {
 			Output.vert.setValue(6);
 			me.updateVertText("FLARE");
 			me.updateThrustMode();
-		} else if (n == 7) { # T/O CLB or G/A CLB, text is set by TOGA selector
+		} else if (n == 7) { # T/O CLB
 			Internal.flchActive = 0;
 			Internal.altCaptureActive = 0;
 			me.updateGsArm(0);
 			Output.vert.setValue(7);
+			me.updateVertText("T/O CLB");
 			Input.ktsMach.setBoolValue(0);
 			me.updateThrustMode();
-		} else if (n == 8) { # PITCH
-			if (abs(Input.altDiff) >= 25) {
-				Internal.flchActive = 0;
-				Internal.altCaptureActive = 0;
-				me.updateGsArm(0);
-				Output.vert.setValue(8);
-				me.updateVertText("PITCH");
-				me.syncPitch();
-				me.updateThrustMode();
-			} else {
-				me.updateGsArm(0);
-			}
+		} else if (n == 8) { # G/A CLB
+			Internal.flchActive = 0;
+			Internal.altCaptureActive = 0;
+			me.updateGsArm(0);
+			Output.vert.setValue(8);
+			me.updateVertText("G/A CLB");
+			Input.ktsMach.setBoolValue(0);
+			me.updateThrustMode();
 		} else if (n == 9) { # Blank
 			Internal.flchActive = 0;
 			Internal.altCaptureActive = 0;
@@ -922,6 +919,18 @@ var ITAF = {
 			me.updateThrustMode();
 			if (!Settings.disableFinal.getBoolValue()) {
 				Controls.elevator.setValue(0);
+			}
+		} else if (n == 10) { # PITCH
+			if (abs(Input.altDiff) >= 25) {
+				Internal.flchActive = 0;
+				Internal.altCaptureActive = 0;
+				me.updateGsArm(0);
+				Output.vert.setValue(10);
+				me.updateVertText("PITCH");
+				me.syncPitch();
+				me.updateThrustMode();
+			} else {
+				me.updateGsArm(0);
 			}
 		}
 	},
@@ -960,7 +969,7 @@ var ITAF = {
 					me.updateVertText("SPD DES");
 				}
 			}
-		} else if (Output.vertTemp == 7) {
+		} else if (Output.vertTemp == 7 or Output.vertTemp == 8) {
 			Output.thrMode.setValue(2);
 			Text.spd.setValue("PITCH");
 			Text.thr.setValue("THR LIM");
@@ -1132,8 +1141,7 @@ var ITAF = {
 		Output.vertTemp = Output.vert.getValue();
 		if ((Output.vertTemp == 2 or Output.vertTemp == 6) and Velocities.indicatedAirspeedKt.getValue() >= 80) {
 			me.setLatMode(3);
-			me.setVertMode(7); # Must be before kicking AP off
-			me.updateVertText("G/A CLB");
+			me.setVertMode(8); # Must be before kicking AP off
 			me.syncKtsGa();
 			if (Gear.wow1.getBoolValue() or Gear.wow2.getBoolValue()) {
 				me.ap1Master(0);
@@ -1146,7 +1154,6 @@ var ITAF = {
 				me.setLatMode(5);
 			}
 			me.setVertMode(7);
-			me.updateVertText("T/O CLB");
 		}
 	},
 	syncKts: func() {
@@ -1264,7 +1271,8 @@ setlistener("/it-autoflight/input/fd2", func() {
 });
 
 setlistener("/it-autoflight/input/kts-mach", func() {
-	if (Output.vert.getValue() == 7) { # Mach is not allowed in Mode 7, and don't sync
+	Output.vertTemp = Output.vert.getValue();
+	if (Output.vertTemp == 7 or Output.vertTemp == 8) { # Mach is not allowed in mode 7/8, and don't sync
 		if (Input.ktsMach.getBoolValue()) {
 			Input.ktsMach.setBoolValue(0);
 		}
