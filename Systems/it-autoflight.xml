@@ -277,8 +277,8 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/text/vert</property>
-					<value>T/O CLB</value>
+					<property>/it-autoflight/output/vert</property>
+					<value>7</value>
 				</equals>
 			</condition>
 			<expression>
@@ -2870,8 +2870,8 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/text/vert</property>
-					<value>T/O CLB</value>
+					<property>/it-autoflight/output/vert</property>
+					<value>7</value>
 				</equals>
 			</condition>
 			<expression>
