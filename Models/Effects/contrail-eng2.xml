@@ -87,11 +87,11 @@
                         </expression>
                     </blue>
                     <alpha>
-                        <value>0.1</value>
+                        <value>0.15</value>
                     </alpha>
                 </color>
                 <size>
-                    <value>0.9</value>
+                    <value>1</value>
                 </size>
             </start>
 
