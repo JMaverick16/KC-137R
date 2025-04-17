@@ -9,77 +9,6 @@
 <PropertyList>
 
  <path>E-8R.ac</path>
-
-<animation>
-	<type>select</type>		
-    <object-name>fuselage</object-name>
-    <object-name>doorFL</object-name>
-    <object-name>doorRL</object-name>
-    <object-name>doorCargo</object-name>
-    <object-name>doorBelly</object-name>
-    <object-name>nose</object-name>
-    <object-name>vertstab</object-name>
-    <object-name>rudder</object-name>
-    <object-name>nonones</object-name>
-    <object-name>lhaftfairing</object-name>
-    <object-name>lhdoorinner</object-name>
-    <object-name>lhdoorouter</object-name>
-    <object-name>lhfwdfairing</object-name>
-    <object-name>rhaftfairing</object-name>
-    <object-name>rhdoorinner</object-name>
-    <object-name>rhdoorouter</object-name>
-    <object-name>rhfwdfairing</object-name>
-    <object-name>engineSupport</object-name>
-    <object-name>lhngdoor</object-name>
-    <object-name>lhngdooraft</object-name>
-    <object-name>rhngdoor</object-name>
-    <object-name>rhngdooraft</object-name>
-    <object-name>mgdoora</object-name>
-    <object-name>mgdoorb</object-name>
-    <object-name>mgdoorc</object-name>
-    <object-name>rhmgdoora</object-name>
-    <object-name>rhmgdoorb</object-name>
-    <object-name>rhmgdoorc</object-name>
-    <object-name>wing</object-name>
-    <object-name>elevwing</object-name>
-	<object-name>rhfiletflap</object-name>
-	<object-name>lhfiletflap</object-name>
-	<object-name>rhibflap</object-name>
-	<object-name>lhibflap</object-name>
-	<object-name>rhobflap</object-name>
-	<object-name>lhobflap</object-name>
-	<object-name>rhobail</object-name>
-	<object-name>lhobail</object-name>
-	<object-name>rhsp1</object-name>
-	<object-name>lhsp1</object-name>
-	<object-name>rhsp3</object-name>
-	<object-name>lhsp3</object-name>
-	<object-name>rhibail</object-name>
-	<object-name>lhibail</object-name>
-	<object-name>rhobail</object-name>
-	<object-name>lhobail</object-name>
-    <object-name>slatsR</object-name>
-    <object-name>slatsL</object-name>
-	<object-name>RightGear</object-name>
-	<object-name>RightGear.001</object-name>
-	<object-name>RightGearBase</object-name>
-	<object-name>RightGearCompressor</object-name>
-	<object-name>RightGearCompressor1</object-name>
-	<object-name>LeftGear</object-name>
-	<object-name>LeftGear.001</object-name>
-	<object-name>LeftGearBase</object-name>
-	<object-name>LeftGearCompressor</object-name>
-	<object-name>LeftGearCompressor1</object-name>
-	<condition>
-		<or>
-	    	<not><property>sim/current-view/internal</property></not>				
-			<equals>
-				<property>sim/current-view/view-number</property>
-				<value>12</value>
-			</equals>
-		</or>
-	</condition>
-</animation> 
  
   <sound><path>Aircraft/KC-137R/Sounds/mp-sound.xml</path></sound>
   
@@ -186,26 +115,6 @@
 		  <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
 		</emission>
 	</animation>	
-
-	<animation>
-		<type>select</type>
-		<object-name>fuselage.inner</object-name>
-		<object-name>fuselage.belly</object-name>
-		<object-name>radioRoom</object-name>
-		<condition>
-		  <or>
-      	<property>sim/multiplay/generic/float[6]</property>
-      	<property>sim/multiplay/generic/float[7]</property>
-      	<property>sim/multiplay/generic/float[15]</property>
-
-      	<property>sim/multiplay/generic/int[19]</property>
-      	<equals>
-      		<property>sim/current-view/view-number</property>
-      		<value>12</value>
-      	</equals>
-      </or>
-		</condition>
-	</animation>
 
 <!-- Externe -->
 	<model>
