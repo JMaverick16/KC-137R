@@ -2,7 +2,7 @@
 
 <!-- KC-137R CFM56 Engine/FADEC -->
 <!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
-<!-- Tables based off my A320 FADEC -->
+<!-- Tables based off my A320 FADEC, vs 101 not 104 -->
 
 <system name="KC-137R: CFM56">
 	
@@ -10,16 +10,17 @@
 	
 	<channel name="Thrust Limits">
 		
-		<fcs_function name="fadec/limit/rated-thrust-n1"> <!-- Vs 98.7, 104.8 (-15 bias + 1), 103.2, factor 95 -->
+		<fcs_function name="fadec/limit/rated-thrust-n1">
 			<function>
 				<table>
 					<independentVar lookup="row">/position/altitude-ft</independentVar>
 					<independentVar lookup="column">propulsion/tat-c</independentVar>
 					<tableData>
 						      -45   -15    15    45    75
-						    0  75.5  80.4  84.7  89.1  93.4
-						10000  85.6  90.1  94.1  95.6  94.3
-						45000  84.3  84.6  89.5  94.3  99.1
+						-2000  74.8  79.4  83.8  88.2  92.5
+						    0  77.4  82.2  86.7  91.2  95.6
+						10000  83.0  86.0  90.8  92.1  96.8
+						45000  82.7  83.0  87.7  92.3  97.0
 					</tableData>
 				</table>
 			</function>
@@ -118,16 +119,30 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/toga-ref">
+		<fcs_function name="fadec/limit/toga-table">
 			<function>
 				<table>
 					<independentVar lookup="row">/position/altitude-ft</independentVar>
 					<independentVar lookup="column">propulsion/tat-c</independentVar>
 					<tableData>
-						      -45   -15    15    45    75
-						    0  75.5  80.4  84.7  89.1  93.4
-						10000  85.6  90.1  94.1  95.6  94.3
-						45000  84.3  84.6  89.5  94.3  99.1
+						      -45   -35   -25   -15   -5     5     15    25    35    45    55    65    75
+						-2000  74.8  76.3  77.9  79.4  80.9  82.4  83.8  85.3  86.7  88.2  88.2  86.8  85.8
+						-1000  76.0  77.7  79.2  80.7  82.4  83.8  85.3  86.8  88.2  89.6  88.9  87.5  86.2
+						    0  77.4  79.0  80.6  82.2  83.7  85.2  86.7  88.2  89.6  91.2  89.5  88.1  86.6
+						 1000  77.9  79.7  81.2  82.9  84.4  85.9  87.4  88.8  90.3  91.2  89.6  87.9  86.7
+						 2000  78.5  80.3  81.9  83.4  85.0  86.4  88.0  89.4  91.0  91.2  89.5  87.9  86.8
+						 3000  79.1  80.8  82.4  84.0  85.7  87.1  88.6  90.1  91.5  91.2  89.4  87.9  86.8
+						 4000  79.8  81.4  83.1  84.6  86.2  87.7  89.1  90.7  92.1  91.2  89.2  88.0  86.9
+						 5000  80.5  82.1  83.7  85.3  86.8  88.4  89.7  91.3  92.7  91.1  89.0  88.0  86.9
+						 6000  80.9  82.6  84.2  85.8  87.4  88.8  90.2  91.7  92.7  91.1  89.0  88.0  86.8
+						 7000  81.6  83.3  84.9  86.5  88.1  89.6  91.1  92.5  92.8  90.9  89.0  88.1  87.3
+						 8000  82.3  84.0  85.7  87.3  88.8  90.4  91.8  93.4  92.6  90.7  89.1  88.1  88.1
+						 9000  82.7  84.4  86.0  87.7  89.2  90.8  92.3  93.8  92.5  90.7  89.2  88.3  88.3
+						10000  83.0  84.7  86.4  88.1  89.6  91.3  92.7  94.1  92.3  90.7  89.4  88.4  88.4
+						11000  83.6  85.4  87.0  88.7  90.3  91.8  93.4  94.2  92.3  90.7  89.5  89.5  89.5
+						12000  84.2  85.9  87.7  89.3  91.0  92.5  94.0  94.2  92.2  90.7  89.7  89.7  89.7
+						13000  84.6  86.3  88.1  89.7  91.4  92.9  94.4  94.0  92.2  90.7  89.8  89.8  89.8
+						14000  85.0  86.8  88.5  90.1  91.7  93.4  94.8  93.9  92.2  90.8  89.9  89.9  89.9
 					</tableData>
 				</table>
 			</function>
@@ -139,7 +154,7 @@
 					<integer>
 						<sum>
 							<product>
-								<property>fadec/limit/toga-ref</property>
+								<property>fadec/limit/toga-table</property>
 								<value>10</value>
 							</product>
 							<value>0.5</value> <!-- Make it round correctly -->
@@ -162,16 +177,60 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/mct-ref">
+		<fcs_function name="fadec/limit/mct-table">
 			<function>
 				<table>
 					<independentVar lookup="row">/position/altitude-ft</independentVar>
 					<independentVar lookup="column">propulsion/tat-c</independentVar>
-					<tableData>
+					<independentVar lookup="table">velocities/mach</independentVar>
+					<tableData breakPoint="0.3">
 						      -65   -35   -5     25    55
-						    0  69.5  74.1  78.6  82.7  81.2
-						10000  79.3  83.6  87.7  90.7  90.2
-						45000  80.7  81.0  82.8  87.4  85.8
+						    0  71.4  76.0  80.4  84.7  81.8
+						 5000  74.3  79.1  83.4  85.0  83.9
+						10000  78.3  83.1  87.5  86.0  86.9
+						15000  80.7  85.4  89.7  85.6  89.2
+					</tableData>
+					<tableData breakPoint="0.4">
+						      -65   -35   -5     25    55
+						    0  70.9  75.4  79.8  83.9  82.0
+						 5000  73.7  78.3  82.7  85.4  83.2
+						10000  77.5  82.2  86.5  86.3  85.9
+						15000  81.1  85.9  89.2  86.8  89.5
+						20000  82.5  87.4  90.2  87.3  89.5
+					</tableData>
+					<tableData breakPoint="0.5">
+						      -65   -35   -5     25    55
+						    0  70.2  74.8  79.1  83.2  82.5
+						 5000  72.8  77.6  81.9  85.9  82.6
+						10000  76.7  81.3  85.8  86.8  85.1
+						15000  79.3  83.9  88.2  86.3  87.6
+						20000  80.3  85.2  88.4  85.3  88.9
+						25000  81.8  86.5  87.4  87.1  90.8
+					</tableData>
+					<tableData breakPoint="0.6">
+						      -65   -35   -5     25    55
+						 5000  71.9  76.4  80.7  84.9  82.8
+						10000  75.2  79.9  84.2  86.8  83.5
+						15000  77.7  82.4  86.6  86.4  86.8
+						20000  79.6  84.4  87.3  86.3  87.9
+						25000  79.9  84.6  86.8  85.1  88.7
+					</tableData>
+					<tableData breakPoint="0.7">
+						      -65   -35   -5     25    55
+						15000  75.6  80.1  84.3  86.0  83.5
+						20000  77.7  82.5  86.0  86.3  85.9
+						25000  77.7  82.4  86.6  85.8  86.4
+						35000  81.1  85.9  84.3  85.4  88.0
+						39000  81.0  85.7  83.4  85.3  87.8
+						45000  82.0  85.8  83.0  84.9  87.3
+					</tableData>
+					<tableData breakPoint="0.8">
+						      -65   -35   -5     25    55
+						20000  75.5  80.3  84.6  85.1  83.6
+						25000  77.5  80.5  83.9  83.2  83.7
+						35000  78.5  83.2  83.9  82.6  86.3
+						39000  78.4  83.0  83.0  82.5  86.2
+						45000  79.4  83.9  82.6  82.0  85.8
 					</tableData>
 				</table>
 			</function>
@@ -183,7 +242,7 @@
 					<integer>
 						<sum>
 							<product>
-								<property>fadec/limit/mct-ref</property>
+								<property>fadec/limit/mct-table</property>
 								<value>10</value>
 							</product>
 							<value>0.5</value> <!-- Make it round correctly -->
@@ -194,16 +253,41 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/climb-ref">
+		<fcs_function name="fadec/limit/climb-table">
 			<function>
 				<table>
 					<independentVar lookup="row">/position/altitude-ft</independentVar>
 					<independentVar lookup="column">propulsion/tat-c</independentVar>
-					<tableData>
+					<independentVar lookup="table">velocities/mach</independentVar>
+					<tableData breakPoint="0.4">
 						      -65   -35   -5     25    55
-						    0  66.8  71.2  75.3  79.3  77.9
-						10000  76.1  80.1  84.0  86.8  85.6
-						45000  77.3  77.7  79.4  83.7  82.2
+						 5000  69.6  74.2  78.4  81.2  79.3
+						 8000  71.8  76.3  80.5  81.8  81.2
+						10000  73.6  78.1  82.4  82.8  82.3
+						14000  76.2  80.8  85.2  83.5  84.0
+					</tableData>
+					<tableData breakPoint="0.6">
+						      -65   -35   -5     25    55
+						 5000  67.9  72.3  76.5  80.5  78.8
+						10000  71.0  75.3  79.5  82.5  80.3
+						14000  72.7  77.4  81.6  82.5  81.9
+						20000  76.6  81.1  85.4  83.2  84.5
+						25000  78.8  83.4  85.7  84.0  85.9
+					</tableData>
+					<tableData breakPoint="0.8">
+						      -65   -35   -5     25    55
+						20000  72.5  77.1  81.2  82.3  81.3
+						25000  74.0  78.6  82.8  81.2  82.6
+						35000  77.5  82.0  82.8  81.4  83.5
+						39000  77.4  81.9  81.9  81.4  83.4
+						45000  78.3  82.8  81.0  80.9  83.2
+					</tableData>
+					<tableData breakPoint="0.85">
+						      -65   -35   -5     25    55
+						25000  73.2  77.7  81.9  81.2  81.7
+						35000  76.0  81.3  82.7  80.0  81.5
+						39000  75.8  81.2  81.7  79.9  81.4
+						45000  77.1  81.5  81.4  79.5  81.3
 					</tableData>
 				</table>
 			</function>
@@ -215,7 +299,7 @@
 					<integer>
 						<sum>
 							<product>
-								<property>fadec/limit/climb-ref</property>
+								<property>fadec/limit/climb-table</property>
 								<value>10</value>
 							</product>
 							<value>0.5</value> <!-- Make it round correctly -->
@@ -247,7 +331,7 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/idle-ref">
+		<fcs_function name="fadec/limit/idle-table">
 			<function>
 				<ifthen>
 					<eq>
@@ -280,7 +364,7 @@
 					<integer>
 						<sum>
 							<product>
-								<property>fadec/limit/idle-ref</property>
+								<property>fadec/limit/idle-table</property>
 								<value>10</value>
 							</product>
 							<value>0.5</value> <!-- Make it round correctly -->
@@ -304,7 +388,7 @@
 			<output>/it-autoflight/settings/autothrottle-min</output>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/mrev-ref">
+		<fcs_function name="fadec/limit/mrev-table">
 			<function>
 				<table>
 					<independentVar lookup="row">/position/altitude-ft</independentVar>
@@ -324,7 +408,7 @@
 					<integer>
 						<sum>
 							<product>
-								<property>fadec/limit/mrev-ref</property>
+								<property>fadec/limit/mrev-table</property>
 								<value>10</value>
 							</product>
 							<value>0.5</value> <!-- Make it round correctly -->
@@ -347,17 +431,35 @@
 			</function>
 		</fcs_function>
 		
+		<switch name="fadec/limit/climb-latch">
+			<default value="fadec/limit/climb-latch"/>
+			<test value="0">
+				/it-autoflight/output/vert eq 8
+			</test>
+			<test value="1">
+				/it-autoflight/output/vert ne 7
+			</test>
+			<test logic="AND" value="0">
+				/it-autoflight/output/vert eq 7
+				position/wow eq 1
+			</test>
+			<test logic="AND" value="1">
+				/it-autoflight/output/vert eq 7
+				/position/gear-agl-ft ge 1500
+			</test>
+		</switch>
+		
 		<switch name="fadec/limit/active-int">
 			<default value="0"/> <!-- Takeoff/Go Around -->
 			<test logic="AND" value="2"> <!-- Climb -->
-				/it-autoflight/output/vert ne 7
+				fadec/limit/climb-latch eq 1
 				/engines/engine[0]/running eq 1
 				/engines/engine[1]/running eq 1
 				/engines/engine[2]/running eq 1
 				/engines/engine[3]/running eq 1
 			</test>
 			<test value="1"> <!-- Max Continuous -->
-				/it-autoflight/output/vert ne 7
+				fadec/limit/climb-latch eq 1
 			</test>
 		</switch>
 		

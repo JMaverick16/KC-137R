@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- IT Autoflight -->
-<!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2025 Josh Davidson (Octal450) -->
 
 <PropertyList>
 	
@@ -1766,22 +1766,6 @@
 			</expression>
 		</input>
 		<output>/it-autoflight/internal/target-fpm-fpa-raw</output>
-		<min>
-			<expression>
-				<difference>
-					<property>/it-autoflight/internal/vert-speed-fpm</property>
-					<value>2000</value>
-				</difference>
-			</expression>
-		</min>
-		<max>
-			<expression>
-				<sum>
-					<property>/it-autoflight/internal/vert-speed-fpm</property>
-					<value>2000</value>
-				</sum>
-			</expression>
-		</max>
 	</filter>
 	
 	<filter>

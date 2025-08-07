@@ -1,9 +1,25 @@
 <?xml version="1.0"?>
 
 <!-- IT Autoflight: Autothrust -->
-<!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2025 Josh Davidson (Octal450) -->
 
 <PropertyList>
+	
+	<logic>
+		<input>
+			<and>
+				<equals>
+					<property>/it-autoflight/output/athr</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/input/athr-servo-clamp</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</input>
+		<output>/it-autoflight/output/athr-on</output>
+	</logic>
 	
 	<filter>
 		<name>A/THR Knots Lag</name>
@@ -55,7 +71,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -116,7 +132,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -148,7 +164,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -180,7 +196,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -220,7 +236,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -251,7 +267,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -273,7 +289,7 @@
 		<enable>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -357,7 +373,7 @@
 		<enable>
 			<condition>
 				<not-equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</not-equals>
 			</condition>
@@ -374,7 +390,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -385,7 +401,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -402,7 +418,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -424,7 +440,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -435,7 +451,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -452,7 +468,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -474,7 +490,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -485,7 +501,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -502,7 +518,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -524,7 +540,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -535,7 +551,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -552,7 +568,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -574,7 +590,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -585,7 +601,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -602,7 +618,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -624,7 +640,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -635,7 +651,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -652,7 +668,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -674,7 +690,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -685,7 +701,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -702,7 +718,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>
@@ -724,7 +740,7 @@
 		<input>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -735,7 +751,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/output/athr</property>
+					<property>/it-autoflight/output/athr-on</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -752,7 +768,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/output/athr</property>
+						<property>/it-autoflight/output/athr-on</property>
 						<value>1</value>
 					</equals>
 					<equals>

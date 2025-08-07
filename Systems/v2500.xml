@@ -305,17 +305,35 @@
 			</function>
 		</fcs_function>
 		
+		<switch name="fadec/limit/climb-latch">
+			<default value="fadec/limit/climb-latch"/>
+			<test value="0">
+				/it-autoflight/output/vert eq 8
+			</test>
+			<test value="1">
+				/it-autoflight/output/vert ne 7
+			</test>
+			<test logic="AND" value="0">
+				/it-autoflight/output/vert eq 7
+				position/wow eq 1
+			</test>
+			<test logic="AND" value="1">
+				/it-autoflight/output/vert eq 7
+				/position/gear-agl-ft ge 1500
+			</test>
+		</switch>
+		
 		<switch name="fadec/limit/active-int">
 			<default value="0"/> <!-- Takeoff/Go Around -->
 			<test logic="AND" value="2"> <!-- Climb -->
-				/it-autoflight/output/vert ne 7
+				fadec/limit/climb-latch eq 1
 				/engines/engine[0]/running eq 1
 				/engines/engine[1]/running eq 1
 				/engines/engine[2]/running eq 1
 				/engines/engine[3]/running eq 1
 			</test>
 			<test value="1"> <!-- Max Continuous -->
-				/it-autoflight/output/vert ne 7
+				fadec/limit/climb-latch eq 1
 			</test>
 		</switch>
 		

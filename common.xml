@@ -312,7 +312,8 @@
 			</rollout>
 		</config>
 		<settings>
-			<accel-ft type="double">1000</accel-ft> <!-- Acceleration AGL when T/O CLB changes to SPD CLB, 0 to disable -->
+			<accel-agl type="bool">1</accel-agl> <!-- Use AGL altitude for acceleration, use if no FMS acceleration alt is computed -->
+			<accel-ft type="double">3000</accel-ft> <!-- Acceleration AGL when T/O CLB changes to SPD CLB, 0 to disable -->
 			<align-ft type="int">200</align-ft> <!-- AGL when ALIGN engages during autoland -->
 			<auto-bank-limit-calc type="bool">1</auto-bank-limit-calc> <!-- Disable to add a custom auto bank limit schedule -->
 			<autoland-without-ap type="bool">1</autoland-without-ap> <!-- Allows FLARE and ROLLOUT pitch modes to engage even if AP is off -->

@@ -1,5 +1,5 @@
 # IT Autoflight System Controller V4.1.0
-# Copyright (c) 2024 Josh Davidson (Octal450)
+# Copyright (c) 2025 Josh Davidson (Octal450)
 
 setprop("/it-autoflight/config/tuning-mode", 0); # Not used by controller
 
@@ -61,8 +61,9 @@ var Orientation = {
 };
 
 var Position = {
-	gearAglFtTemp: 0,
+	altSwitchTemp: 0,
 	gearAglFt: props.globals.getNode("/position/gear-agl-ft", 1),
+	gearAglFtTemp: 0,
 	indicatedAltitudeFt: props.globals.getNode("/instrumentation/altimeter/indicated-altitude-ft", 1),
 	indicatedAltitudeFtTemp: 0,
 };
@@ -106,6 +107,7 @@ var Input = {
 	ap3Temp: 0,
 	athr: props.globals.initNode("/it-autoflight/input/athr", 0, "BOOL"),
 	athrAvail: props.globals.initNode("/it-autoflight/input/athr-avail", 1, "BOOL"),
+	athrServoClamp: props.globals.initNode("/it-autoflight/input/athr-servo-clamp", 0, "BOOL"),
 	athrTemp: 0,
 	bankLimitSw: props.globals.initNode("/it-autoflight/input/bank-limit-sw", 0, "INT"),
 	bankLimitSwTemp: 0,
@@ -211,6 +213,7 @@ var Text = {
 };
 
 var Settings = {
+	accelAgl: props.globals.getNode("/it-autoflight/settings/accel-agl", 1),
 	accelFt: props.globals.getNode("/it-autoflight/settings/accel-ft", 1),
 	alignFt: props.globals.getNode("/it-autoflight/settings/align-ft", 1),
 	autoBankLimitCalc: props.globals.getNode("/it-autoflight/settings/auto-bank-limit-calc", 1),
@@ -281,6 +284,7 @@ var ITAF = {
 		Input.ap2.setBoolValue(0);
 		Input.ap3.setBoolValue(0);
 		Input.athr.setBoolValue(0);
+		Input.athrServoClamp.setBoolValue(0);
 		if (t != 1) {
 			Input.fd1.setBoolValue(Settings.fdStartsOn.getBoolValue());
 			Input.fd2.setBoolValue(Settings.fdStartsOn.getBoolValue());
@@ -938,6 +942,7 @@ var ITAF = {
 		Output.vertTemp = Output.vert.getValue();
 		if (Output.athr.getBoolValue() and Output.vertTemp != 7 and Settings.retardEnable.getBoolValue() and Position.gearAglFt.getValue() <= Settings.retardAltitude.getValue() and Misc.flapNorm.getValue() >= Settings.landFlap.getValue() - 0.001) {
 			Output.thrMode.setValue(1);
+			Input.athrServoClamp.setBoolValue(0); # Always unclamp during RETARD
 			Text.spd.setValue("RETARD");
 			Text.thr.setValue("RETARD");
 			if (Gear.wow1.getBoolValue() or Gear.wow2.getBoolValue()) { # Disconnect A/THR on either main gear touch
@@ -957,14 +962,22 @@ var ITAF = {
 			if (Internal.alt.getValue() >= Position.indicatedAltitudeFt.getValue()) {
 				Output.thrMode.setValue(2);
 				Text.spd.setValue("PITCH");
-				Text.thr.setValue("THR LIM");
+				if (Input.athrServoClamp.getBoolValue()) {
+					Text.thr.setValue("CLAMP");
+				} else {
+					Text.thr.setValue("THR LIM");
+				}
 				if (Internal.flchActive and Text.vert.getValue() != "SPD CLB") {
 					me.updateVertText("SPD CLB");
 				}
 			} else {
 				Output.thrMode.setValue(1);
 				Text.spd.setValue("PITCH");
-				Text.thr.setValue("IDLE");
+				if (Input.athrServoClamp.getBoolValue()) {
+					Text.thr.setValue("CLAMP");
+				} else {
+					Text.thr.setValue("IDLE");
+				}
 				if (Internal.flchActive and Text.vert.getValue() != "SPD DES") {
 					me.updateVertText("SPD DES");
 				}
@@ -972,11 +985,17 @@ var ITAF = {
 		} else if (Output.vertTemp == 7 or Output.vertTemp == 8) {
 			Output.thrMode.setValue(2);
 			Text.spd.setValue("PITCH");
-			Text.thr.setValue("THR LIM");
+			if (Input.athrServoClamp.getBoolValue()) {
+				Text.thr.setValue("CLAMP");
+			} else {
+				Text.thr.setValue("THR LIM");
+			}
 		} else {
 			Output.thrMode.setValue(0);
 			Text.spd.setValue("THRUST");
-			if (Input.ktsMach.getBoolValue()) {
+			if (Input.athrServoClamp.getBoolValue()) {
+				Text.thr.setValue("CLAMP");
+			} else if (Input.ktsMach.getBoolValue()) {
 				Text.thr.setValue("MACH");
 			} else {
 				Text.thr.setValue("SPEED");
@@ -1040,7 +1059,13 @@ var ITAF = {
 		}
 	},
 	checkFlch: func(a) {
-		if (!Gear.wow1.getBoolValue() and !Gear.wow2.getBoolValue() and Position.gearAglFt.getValue() >= a and a != 0) {
+		if (Settings.accelAgl.getBoolValue()) {
+			Position.altSwitchTemp = Position.gearAglFt.getValue();
+		} else {
+			Position.altSwitchTemp = Position.indicatedAltitudeFt.getValue();
+		}
+		
+		if (!Gear.wow1.getBoolValue() and !Gear.wow2.getBoolValue() and Position.altSwitchTemp >= a and a != 0) {
 			me.setVertMode(4);
 		}
 	},
