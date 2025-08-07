@@ -26,7 +26,7 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/milthrust-unmodified"> <!-- Copy of MilThrust table in engines file -->
+		<fcs_function name="fadec/limit/milthrust-density"> <!-- Copy of MilThrust table with density effects -->
 			<function>
 				<table>
 					<independentVar lookup="row">velocities/mach</independentVar>
@@ -49,7 +49,7 @@
 		
 		<!-- Following functions fix a FGTurbine inaccuracy... rated thrust N1% should be rated thrust lbs -->
 		<!-- These calculations change it so that the rated power at sea level is at the correct N1% value. It still changes with altitude and mach as it should -->
-		<fcs_function name="fadec/limit/fgturbine-thrust">
+		<fcs_function name="fadec/limit/rated-thrust-target">
 			<function>
 				<sum>
 					<product>
@@ -64,7 +64,7 @@
 								<property>fadec/limit/rated-thrust</property>
 							</product>
 						</difference>
-						<property>fadec/limit/milthrust-unmodified</property>
+						<property>fadec/limit/milthrust-density</property>
 					</product>
 				</sum>
 			</function>
@@ -86,7 +86,7 @@
 									<property>fadec/limit/rated-thrust</property>
 								</product>
 							</difference>
-							<property>fadec/limit/milthrust-unmodified</property>
+							<property>fadec/limit/milthrust-density</property>
 						</product>
 						<pow>
 							<quotient>
@@ -111,7 +111,7 @@
 						<value>0</value>
 					</nq>
 					<quotient>
-						<property>fadec/limit/fgturbine-thrust</property>
+						<property>fadec/limit/rated-thrust-target</property>
 						<property>fadec/limit/rated-thrust-actual</property>
 					</quotient>
 					<value>1</value>

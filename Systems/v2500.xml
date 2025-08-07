@@ -2,44 +2,31 @@
 
 <!-- KC-137R V2500 Engine/FADEC -->
 <!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
-<!-- Tables based off my A320 FADEC -->
+<!-- Tables based off my A320 FADEC, vs 95 not 100 -->
 
 <system name="KC-137R: V2500">
 	
-	<property value="1">fadec/epr/c1</property> <!-- Done in property rule because its easier to tune -->
-	<property value="1">fadec/epr/c2</property> <!-- Done in property rule because its easier to tune -->
 	<property value="23000">fadec/limit/rated-thrust</property>
 	
 	<channel name="Thrust Limits">
 		
-		<fcs_function name="fadec/limit/mach-factor-schedule"> <!-- For some reason it does this -->
-			<function>
-				<table>
-					<independentVar lookup="row">velocities/mach</independentVar>
-					<tableData>
-						0.07  0.973269699530
-						0.09  1.000000000000
-					</tableData>
-				</table>
-			</function>
-		</fcs_function>
-		
-		<fcs_function name="fadec/limit/rated-thrust-n1"> <!-- Vs 98.7, 104.8 (-15 bias + 1), 103.2, factor 95 -->
+		<fcs_function name="fadec/limit/rated-thrust-n1">
 			<function>
 				<table>
 					<independentVar lookup="row">/position/altitude-ft</independentVar>
 					<independentVar lookup="column">propulsion/tat-c</independentVar>
 					<tableData>
 						      -44   -14    16    46    76
-						    0  73.8  78.2  82.2  86.2  90.1
-						10000  82.9  87.0  90.7  92.1  90.9
-						45000  81.7  82.1  86.5  94.3  95.3
+						-2000  71.8  75.9  79.8  83.7  87.5
+						    0  74.1  78.3  82.4  86.3  90.2
+						10000  79.1  81.8  86.0  87.1  91.3
+						45000  78.8  79.1  83.2  87.4  91.5
 					</tableData>
 				</table>
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/milthrust-unmodified"> <!-- Copy of MilThrust table in engines file -->
+		<fcs_function name="fadec/limit/milthrust-density"> <!-- Copy of MilThrust table with density effects -->
 			<function>
 				<table>
 					<independentVar lookup="row">velocities/mach</independentVar>
@@ -62,7 +49,7 @@
 		
 		<!-- Following functions fix a FGTurbine inaccuracy... rated thrust N1% should be rated thrust lbs -->
 		<!-- These calculations change it so that the rated power at sea level is at the correct N1% value. It still changes with altitude and mach as it should -->
-		<fcs_function name="fadec/limit/fgturbine-thrust">
+		<fcs_function name="fadec/limit/rated-thrust-target">
 			<function>
 				<sum>
 					<product>
@@ -77,7 +64,7 @@
 								<property>fadec/limit/rated-thrust</property>
 							</product>
 						</difference>
-						<property>fadec/limit/milthrust-unmodified</property>
+						<property>fadec/limit/milthrust-density</property>
 					</product>
 				</sum>
 			</function>
@@ -99,7 +86,7 @@
 									<property>fadec/limit/rated-thrust</property>
 								</product>
 							</difference>
-							<property>fadec/limit/milthrust-unmodified</property>
+							<property>fadec/limit/milthrust-density</property>
 						</product>
 						<pow>
 							<quotient>
@@ -124,7 +111,7 @@
 						<value>0</value>
 					</nq>
 					<quotient>
-						<property>fadec/limit/fgturbine-thrust</property>
+						<property>fadec/limit/rated-thrust-target</property>
 						<property>fadec/limit/rated-thrust-actual</property>
 					</quotient>
 					<value>1</value>
@@ -134,19 +121,30 @@
 		
 		<fcs_function name="fadec/limit/toga">
 			<function>
-				<product>
-					<table>
-						<independentVar lookup="row">/position/altitude-ft</independentVar>
-						<independentVar lookup="column">propulsion/tat-c</independentVar>
-						<tableData>
-							      -44   -14    16    46    76
-							    0  73.8  78.2  82.2  86.2  90.1
-							10000  82.9  87.0  90.7  92.1  90.9
-							45000  81.7  82.1  86.5  94.3  95.3
-						</tableData>
-					</table>
-					<property>fadec/limit/mach-factor-schedule</property>
-				</product>
+				<table>
+					<independentVar lookup="row">/position/altitude-ft</independentVar>
+					<independentVar lookup="column">propulsion/tat-c</independentVar>
+					<tableData>
+						      -44   -34   -24   -14   -4     6     16    26    36    46    56    66    76
+						-2000  71.8  73.2  74.6  75.9  77.3  78.6  79.8  81.2  82.4  83.7  83.7  82.6  81.6
+						-1000  72.9  74.4  75.7  77.1  78.5  79.8  81.2  82.5  83.7  85.0  84.3  83.1  81.9
+						    0  74.1  75.5  77.0  78.3  79.8  81.1  82.4  83.7  85.0  86.3  84.9  83.6  82.3
+						 1000  74.6  76.1  77.5  79.0  80.3  81.6  82.9  84.2  85.6  86.3  85.0  83.5  82.4
+						 2000  75.2  76.7  78.1  79.5  80.9  82.2  83.5  84.8  86.1  86.3  84.9  83.4  82.5
+						 3000  75.7  77.2  78.6  80.0  81.4  82.7  84.1  85.4  86.7  86.3  84.8  83.4  82.6
+						 4000  76.3  77.7  79.2  80.6  81.9  83.2  84.5  85.8  87.1  86.3  84.6  83.5  82.6
+						 5000  76.8  78.3  79.8  81.2  82.5  83.9  85.1  86.4  87.7  86.2  84.5  83.5  82.6
+						 6000  77.3  78.7  80.2  81.6  82.9  84.2  85.5  86.8  87.7  86.2  84.5  83.5  82.6
+						 7000  77.9  79.4  80.8  82.3  83.6  85.0  86.2  87.5  87.8  86.1  84.5  83.6  82.9
+						 8000  78.4  79.9  81.4  82.9  84.2  85.6  87.0  88.3  87.6  85.9  84.5  83.6  83.6
+						 9000  78.8  80.3  81.8  83.2  84.6  86.0  87.3  88.6  87.5  85.9  84.6  83.8  83.8
+						10000  79.1  80.6  82.2  83.6  85.0  86.4  87.7  88.9  87.4  85.9  84.8  83.9  83.9
+						11000  79.7  81.2  82.7  84.1  85.6  87.0  88.3  89.0  87.3  85.8  84.9  84.9  84.9
+						12000  80.2  81.7  83.2  84.7  86.1  87.5  88.8  89.0  87.2  85.8  85.1  85.1  85.1
+						13000  80.5  82.1  83.6  85.1  86.5  87.9  89.2  88.8  87.2  85.9  85.2  85.2  85.2
+						14000  80.9  82.5  83.9  85.5  86.9  88.3  89.6  88.7  87.2  86.0  85.2  85.2  85.2
+					</tableData>
+				</table>
 			</function>
 		</fcs_function>
 		
@@ -164,37 +162,100 @@
 		
 		<fcs_function name="fadec/limit/mct">
 			<function>
-				<product>
-					<table>
-						<independentVar lookup="row">/position/altitude-ft</independentVar>
-						<independentVar lookup="column">propulsion/tat-c</independentVar>
-						<tableData>
-							      -65   -35   -5     25    55
-							    0  68.3  72.5  76.6  80.4  78.9
-							10000  77.2  81.1  84.8  87.6  87.1
-							45000  78.5  78.8  80.5  84.6  83.1
-						</tableData>
-					</table>
-					<property>fadec/limit/mach-factor-schedule</property>
-				</product>
+				<table>
+					<independentVar lookup="row">/position/altitude-ft</independentVar>
+					<independentVar lookup="column">propulsion/tat-c</independentVar>
+					<independentVar lookup="table">velocities/mach</independentVar>
+					<tableData breakPoint="0.3">
+						      -65   -35   -5     25    55
+						    0  68.8  72.9  76.8  80.6  78.0
+						 5000  71.4  75.6  79.5  80.9  79.9
+						10000  75.0  79.2  83.0  81.8  82.6
+						15000  77.1  81.2  85.1  81.3  84.6
+					</tableData>
+					<tableData breakPoint="0.4">
+						      -65   -35   -5     25    55
+						    0  68.3  72.4  76.2  79.9  78.3
+						 5000  70.9  75.0  78.8  81.2  79.3
+						10000  74.1  78.3  82.2  82.1  81.7
+						15000  77.4  81.5  84.6  82.5  84.8
+						20000  78.6  83.0  85.4  82.8  84.8
+					</tableData>
+					<tableData breakPoint="0.5">
+						      -65   -35   -5     25    55
+						    0  67.8  71.8  75.6  79.2  78.6
+						 5000  70.1  74.2  78.1  81.7  78.7
+						10000  73.5  77.6  81.5  82.5  81.0
+						15000  75.8  79.8  83.6  82.1  83.1
+						20000  76.7  81.0  83.9  81.1  84.3
+						25000  78.0  82.2  83.0  82.7  86.0
+					</tableData>
+					<tableData breakPoint="0.6">
+						      -65   -35   -5     25    55
+						 5000  69.2  73.2  77.1  80.7  78.9
+						10000  72.2  76.3  80.1  82.5  79.6
+						15000  74.4  78.5  82.3  82.2  82.5
+						20000  76.0  80.3  82.8  82.1  83.4
+						25000  76.3  80.5  82.5  81.0  84.2
+					</tableData>
+					<tableData breakPoint="0.7">
+						      -65   -35   -5     25    55
+						15000  72.5  76.5  80.2  81.8  79.6
+						20000  74.3  78.6  81.8  82.0  81.6
+						25000  74.4  78.5  82.3  81.5  82.2
+						35000  77.4  81.5  80.2  81.2  83.5
+						39000  77.4  81.4  79.5  81.1  83.3
+						45000  78.3  81.5  79.0  80.8  82.9
+					</tableData>
+					<tableData breakPoint="0.8">
+						      -65   -35   -5     25    55
+						20000  72.5  76.7  80.5  81.0  79.7
+						25000  74.1  76.8  79.9  79.2  79.8
+						35000  75.1  79.2  79.9  78.7  82.0
+						39000  75.0  79.1  79.1  78.6  81.9
+						45000  75.9  79.9  78.7  78.3  81.5
+					</tableData>
+				</table>
 			</function>
 		</fcs_function>
 		
 		<fcs_function name="fadec/limit/climb">
 			<function>
-				<product>
-					<table>
-						<independentVar lookup="row">/position/altitude-ft</independentVar>
-						<independentVar lookup="column">propulsion/tat-c</independentVar>
-						<tableData>
-							      -65   -35   -5     25    55
-							    0  65.8  69.8  73.6  77.2  75.9
-							10000  74.3  77.9  81.5  84.1  82.9
-							45000  75.4  75.8  77.3  81.2  79.8
-						</tableData>
-					</table>
-					<property>fadec/limit/mach-factor-schedule</property>
-				</product>
+				<table>
+					<independentVar lookup="row">/position/altitude-ft</independentVar>
+					<independentVar lookup="column">propulsion/tat-c</independentVar>
+					<independentVar lookup="table">velocities/mach</independentVar>
+					<tableData breakPoint="0.4">
+						      -65   -35   -5     25    55
+						 5000  67.3  71.2  75.1  77.5  75.7
+						 8000  69.1  73.2  76.9  78.0  77.5
+						10000  70.8  74.8  78.5  78.9  78.4
+						14000  73.1  77.1  81.0  79.5  79.9
+					</tableData>
+					<tableData breakPoint="0.6">
+						      -65   -35   -5     25    55
+						 5000  65.7  69.6  73.3  76.8  75.4
+						10000  68.4  72.4  75.9  78.6  76.7
+						14000  70.0  74.0  77.9  78.6  78.2
+						20000  73.4  77.4  81.2  79.3  80.4
+						25000  75.4  79.5  81.4  79.9  81.7
+					</tableData>
+					<tableData breakPoint="0.8">
+						      -65   -35   -5     25    55
+						20000  69.8  73.8  77.5  78.4  77.6
+						25000  71.1  75.2  78.9  77.5  78.6
+						35000  74.1  78.2  78.9  77.7  79.5
+						39000  74.0  78.1  78.1  77.6  79.5
+						45000  74.9  78.9  77.3  77.2  79.2
+					</tableData>
+					<tableData breakPoint="0.85">
+						      -65   -35   -5     25    55
+						25000  70.4  74.4  78.2  77.5  77.9
+						35000  72.9  77.6  78.7  76.4  77.8
+						39000  72.7  77.5  77.9  76.3  77.7
+						45000  73.8  77.8  77.7  75.9  77.6
+					</tableData>
+				</table>
 			</function>
 		</fcs_function>
 		
@@ -278,18 +339,15 @@
 		
 		<fcs_function name="fadec/limit/mrev">
 			<function>
-				<product>
-					<table>
-						<independentVar lookup="row">/position/altitude-ft</independentVar>
-						<independentVar lookup="column">propulsion/tat-c</independentVar>
-						<tableData>
-							      -65   -35   -5     25    55
-							    0  62.1  65.5  68.9  72.2  71.0
-							10000  69.5  72.8  75.9  78.3  77.8
-						</tableData>
-					</table>
-					<property>fadec/limit/mach-factor-schedule</property>
-				</product>
+				<table>
+					<independentVar lookup="row">/position/altitude-ft</independentVar>
+					<independentVar lookup="column">propulsion/tat-c</independentVar>
+					<tableData>
+						      -65   -35   -5     25    55
+						    0  62.1  65.5  68.9  72.2  71.0
+						10000  69.5  72.8  75.9  78.3  77.8
+					</tableData>
+				</table>
 			</function>
 		</fcs_function>
 		
@@ -360,7 +418,7 @@
 			<output>/it-autoflight/settings/autothrottle-max</output>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/active-epr-input">
+		<fcs_function name="fadec/limit/active-tpr-ref">
 			<function>
 				<pow>
 					<property>fadec/limit/active</property>
@@ -369,38 +427,18 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/limit/active-epr-ref">
+		<fcs_function name="fadec/limit/active-tpr">
 			<function>
-				<sum>
-					<product>
-						<table>
-							<independentVar lookup="row">fadec/limit/active-epr-input</independentVar>
-							<tableData>
-								   53194.6  0.03
-								10000000.0  1.00
-							</tableData>
-						</table>
-						<property>fadec/epr/c1</property>
-					</product>
-					<property>fadec/epr/c2</property>
-				</sum>
-			</function>
-		</fcs_function>
-		
-		<fcs_function name="fadec/limit/active-epr">
-			<function>
-				<quotient>
-					<integer>
-						<sum>
-							<product>
-								<property>fadec/limit/active-epr-ref</property>
-								<value>1000</value>
-							</product>
-							<value>0.5</value> <!-- Make it round correctly -->
-						</sum>
-					</integer>
-					<value>1000</value>
-				</quotient>
+				<product>
+					<table>
+						<independentVar lookup="row">fadec/limit/active-tpr-ref</independentVar>
+						<tableData>
+							   53194.6    2.7
+							10000000.0  100.0
+						</tableData>
+					</table>
+					<property>fadec/limit/rated-thrust-factor</property>
+				</product>
 			</function>
 		</fcs_function>
 	
@@ -421,45 +459,8 @@
 			<c1>20</c1>
 		</lag_filter>
 		
-		<switch name="fadec/control-1/koz-mode">
-			<default value="fadec/control-1/koz-mode"/>
-			<test value="0">
-				fadec/control-1/throttle-pos le 0.4847938144329898
-			</test>
-			<test value="1">
-				fadec/control-1/throttle-pos ge 0.6652061855670103
-			</test>
-		</switch>
-		
-		<switch name="fadec/control-1/koz-min">
-			<default value="0"/>
-			<test value="0.6652061855670103">
-				fadec/control-1/koz-mode eq 1
-			</test>
-		</switch>
-		
-		<switch name="fadec/control-1/koz-max">
-			<default value="0.4847938144329898"/>
-			<test value="1">
-				fadec/control-1/koz-mode eq 1
-			</test>
-		</switch>
-		
-		<pure_gain name="fadec/control-1/koz">
-			<input>fadec/control-1/throttle-pos</input>
-			<gain>1.0</gain>
-			<clipto>
-				<min>fadec/control-1/koz-min</min>
-				<max>fadec/control-1/koz-max</max>
-			</clipto>
-		</pure_gain>
-		
 		<switch name="fadec/control-1/throttle-cmd">
 			<default value="fadec/control-1/throttle-pos"/>
-			<test logic="OR" value="fadec/control-1/koz">
-				position/wow eq 1
-				velocities/mach le 0.1
-			</test>
 			<clipto>
 				<min>fadec/limit/idle-norm</min>
 				<max>fadec/limit/toga-norm</max>
@@ -513,45 +514,8 @@
 			<c1>20</c1>
 		</lag_filter>
 		
-		<switch name="fadec/control-2/koz-mode">
-			<default value="fadec/control-2/koz-mode"/>
-			<test value="0">
-				fadec/control-2/throttle-pos le 0.4847938144329898
-			</test>
-			<test value="1">
-				fadec/control-2/throttle-pos ge 0.6652061855670103
-			</test>
-		</switch>
-		
-		<switch name="fadec/control-2/koz-min">
-			<default value="0"/>
-			<test value="0.6652061855670103">
-				fadec/control-2/koz-mode eq 1
-			</test>
-		</switch>
-		
-		<switch name="fadec/control-2/koz-max">
-			<default value="0.4847938144329898"/>
-			<test value="1">
-				fadec/control-2/koz-mode eq 1
-			</test>
-		</switch>
-		
-		<pure_gain name="fadec/control-2/koz">
-			<input>fadec/control-2/throttle-pos</input>
-			<gain>1.0</gain>
-			<clipto>
-				<min>fadec/control-2/koz-min</min>
-				<max>fadec/control-2/koz-max</max>
-			</clipto>
-		</pure_gain>
-		
 		<switch name="fadec/control-2/throttle-cmd">
 			<default value="fadec/control-2/throttle-pos"/>
-			<test logic="OR" value="fadec/control-2/koz">
-				position/wow eq 1
-				velocities/mach le 0.1
-			</test>
 			<clipto>
 				<min>fadec/limit/idle-norm</min>
 				<max>fadec/limit/toga-norm</max>
@@ -605,45 +569,8 @@
 			<c1>20</c1>
 		</lag_filter>
 		
-		<switch name="fadec/control-3/koz-mode">
-			<default value="fadec/control-3/koz-mode"/>
-			<test value="0">
-				fadec/control-3/throttle-pos le 0.4847938144329898
-			</test>
-			<test value="1">
-				fadec/control-3/throttle-pos ge 0.6652061855670103
-			</test>
-		</switch>
-		
-		<switch name="fadec/control-3/koz-min">
-			<default value="0"/>
-			<test value="0.6652061855670103">
-				fadec/control-3/koz-mode eq 1
-			</test>
-		</switch>
-		
-		<switch name="fadec/control-3/koz-max">
-			<default value="0.4847938144329898"/>
-			<test value="1">
-				fadec/control-3/koz-mode eq 1
-			</test>
-		</switch>
-		
-		<pure_gain name="fadec/control-3/koz">
-			<input>fadec/control-3/throttle-pos</input>
-			<gain>1.0</gain>
-			<clipto>
-				<min>fadec/control-3/koz-min</min>
-				<max>fadec/control-3/koz-max</max>
-			</clipto>
-		</pure_gain>
-		
 		<switch name="fadec/control-3/throttle-cmd">
 			<default value="fadec/control-3/throttle-pos"/>
-			<test logic="OR" value="fadec/control-3/koz">
-				position/wow eq 1
-				velocities/mach le 0.1
-			</test>
 			<clipto>
 				<min>fadec/limit/idle-norm</min>
 				<max>fadec/limit/toga-norm</max>
@@ -697,45 +624,8 @@
 			<c1>20</c1>
 		</lag_filter>
 		
-		<switch name="fadec/control-4/koz-mode">
-			<default value="fadec/control-4/koz-mode"/>
-			<test value="0">
-				fadec/control-4/throttle-pos le 0.4847938144329898
-			</test>
-			<test value="1">
-				fadec/control-4/throttle-pos ge 0.6652061855670103
-			</test>
-		</switch>
-		
-		<switch name="fadec/control-4/koz-min">
-			<default value="0"/>
-			<test value="0.6652061855670103">
-				fadec/control-4/koz-mode eq 1
-			</test>
-		</switch>
-		
-		<switch name="fadec/control-4/koz-max">
-			<default value="0.4847938144329898"/>
-			<test value="1">
-				fadec/control-4/koz-mode eq 1
-			</test>
-		</switch>
-		
-		<pure_gain name="fadec/control-4/koz">
-			<input>fadec/control-4/throttle-pos</input>
-			<gain>1.0</gain>
-			<clipto>
-				<min>fadec/control-4/koz-min</min>
-				<max>fadec/control-4/koz-max</max>
-			</clipto>
-		</pure_gain>
-		
 		<switch name="fadec/control-4/throttle-cmd">
 			<default value="fadec/control-4/throttle-pos"/>
-			<test logic="OR" value="fadec/control-4/koz">
-				position/wow eq 1
-				velocities/mach le 0.1
-			</test>
 			<clipto>
 				<min>fadec/limit/idle-norm</min>
 				<max>fadec/limit/toga-norm</max>
@@ -808,7 +698,7 @@
 			<output>/engines/engine[7]/n1</output>
 		</lag_filter>
 		
-		<fcs_function name="fadec/epr-actual-1-ref">
+		<fcs_function name="fadec/tpr-actual-1-ref">
 			<function>
 				<pow>
 					<property>fadec/n1-actual-1</property>
@@ -817,40 +707,33 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-1-calc">
+		<fcs_function name="fadec/tpr-actual-1-calc">
 			<function>
-				<sum>
-					<product>
-						<table>
-							<independentVar lookup="row">fadec/epr-actual-1-ref</independentVar>
-							<tableData>
-								   53194.6  0.03
-								10000000.0  1.00
-							</tableData>
-						</table>
-						<property>fadec/epr/c1</property>
-					</product>
-					<property>fadec/epr/c2</property>
-				</sum>
+				<product>
+					<table>
+						<independentVar lookup="row">fadec/tpr-actual-1-ref</independentVar>
+						<tableData>
+							   53194.6    2.7
+							10000000.0  100.0
+						</tableData>
+					</table>
+					<property>fadec/limit/rated-thrust-factor</property>
+				</product>
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-1">
+		<fcs_function name="fadec/tpr-actual-1">
 			<function>
 				<interpolate1d>
 					<property>fadec/n1-actual-1</property>
-					<value>6</value><interpolate1d> <!-- Eng off EPR -->
-						<property>velocities/mach</property>
-						<value>0.09</value><value>0.996</value>
-						<value>0.15</value><property>fadec/epr/c2</property>
-					</interpolate1d>
-					<value>22.4</value><property>fadec/epr-actual-1-calc</property>
+					<value>6</value><value>0</value>
+					<value>22.4</value><property>fadec/tpr-actual-1-calc</property>
 				</interpolate1d>
 			</function>
-			<output>/engines/engine[0]/epr-actual</output>
+			<output>/engines/engine[0]/tpr-actual</output>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-2-ref">
+		<fcs_function name="fadec/tpr-actual-2-ref">
 			<function>
 				<pow>
 					<property>fadec/n1-actual-2</property>
@@ -859,40 +742,33 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-2-calc">
+		<fcs_function name="fadec/tpr-actual-2-calc">
 			<function>
-				<sum>
-					<product>
-						<table>
-							<independentVar lookup="row">fadec/epr-actual-2-ref</independentVar>
-							<tableData>
-								   53194.6  0.03
-								10000000.0  1.00
-							</tableData>
-						</table>
-						<property>fadec/epr/c1</property>
-					</product>
-					<property>fadec/epr/c2</property>
-				</sum>
+				<product>
+					<table>
+						<independentVar lookup="row">fadec/tpr-actual-2-ref</independentVar>
+						<tableData>
+							   53194.6    2.7
+							10000000.0  100.0
+						</tableData>
+					</table>
+					<property>fadec/limit/rated-thrust-factor</property>
+				</product>
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-2">
+		<fcs_function name="fadec/tpr-actual-2">
 			<function>
 				<interpolate1d>
 					<property>fadec/n1-actual-2</property>
-					<value>6</value><interpolate1d> <!-- Eng off EPR -->
-						<property>velocities/mach</property>
-						<value>0.09</value><value>0.996</value>
-						<value>0.15</value><property>fadec/epr/c2</property>
-					</interpolate1d>
-					<value>22.4</value><property>fadec/epr-actual-2-calc</property>
+					<value>6</value><value>0</value>
+					<value>22.4</value><property>fadec/tpr-actual-2-calc</property>
 				</interpolate1d>
 			</function>
-			<output>/engines/engine[1]/epr-actual</output>
+			<output>/engines/engine[1]/tpr-actual</output>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-3-ref">
+		<fcs_function name="fadec/tpr-actual-3-ref">
 			<function>
 				<pow>
 					<property>fadec/n1-actual-3</property>
@@ -901,40 +777,33 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-3-calc">
+		<fcs_function name="fadec/tpr-actual-3-calc">
 			<function>
-				<sum>
-					<product>
-						<table>
-							<independentVar lookup="row">fadec/epr-actual-3-ref</independentVar>
-							<tableData>
-								   53194.6  0.03
-								10000000.0  1.00
-							</tableData>
-						</table>
-						<property>fadec/epr/c1</property>
-					</product>
-					<property>fadec/epr/c2</property>
-				</sum>
+				<product>
+					<table>
+						<independentVar lookup="row">fadec/tpr-actual-3-ref</independentVar>
+						<tableData>
+							   53194.6    2.7
+							10000000.0  100.0
+						</tableData>
+					</table>
+					<property>fadec/limit/rated-thrust-factor</property>
+				</product>
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-3">
+		<fcs_function name="fadec/tpr-actual-3">
 			<function>
 				<interpolate1d>
 					<property>fadec/n1-actual-3</property>
-					<value>6</value><interpolate1d> <!-- Eng off EPR -->
-						<property>velocities/mach</property>
-						<value>0.09</value><value>0.996</value>
-						<value>0.15</value><property>fadec/epr/c2</property>
-					</interpolate1d>
-					<value>22.4</value><property>fadec/epr-actual-3-calc</property>
+					<value>6</value><value>0</value>
+					<value>22.4</value><property>fadec/tpr-actual-3-calc</property>
 				</interpolate1d>
 			</function>
-			<output>/engines/engine[2]/epr-actual</output>
+			<output>/engines/engine[2]/tpr-actual</output>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-4-ref">
+		<fcs_function name="fadec/tpr-actual-4-ref">
 			<function>
 				<pow>
 					<property>fadec/n1-actual-4</property>
@@ -943,37 +812,30 @@
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-4-calc">
+		<fcs_function name="fadec/tpr-actual-4-calc">
 			<function>
-				<sum>
-					<product>
-						<table>
-							<independentVar lookup="row">fadec/epr-actual-4-ref</independentVar>
-							<tableData>
-								   53194.6  0.03
-								10000000.0  1.00
-							</tableData>
-						</table>
-						<property>fadec/epr/c1</property>
-					</product>
-					<property>fadec/epr/c2</property>
-				</sum>
+				<product>
+					<table>
+						<independentVar lookup="row">fadec/tpr-actual-4-ref</independentVar>
+						<tableData>
+							   53194.6    2.7
+							10000000.0  100.0
+						</tableData>
+					</table>
+					<property>fadec/limit/rated-thrust-factor</property>
+				</product>
 			</function>
 		</fcs_function>
 		
-		<fcs_function name="fadec/epr-actual-4">
+		<fcs_function name="fadec/tpr-actual-4">
 			<function>
 				<interpolate1d>
 					<property>fadec/n1-actual-4</property>
-					<value>6</value><interpolate1d> <!-- Eng off EPR -->
-						<property>velocities/mach</property>
-						<value>0.09</value><value>0.996</value>
-						<value>0.15</value><property>fadec/epr/c2</property>
-					</interpolate1d>
-					<value>22.4</value><property>fadec/epr-actual-4-calc</property>
+					<value>6</value><value>0</value>
+					<value>22.4</value><property>fadec/tpr-actual-4-calc</property>
 				</interpolate1d>
 			</function>
-			<output>/engines/engine[3]/epr-actual</output>
+			<output>/engines/engine[3]/tpr-actual</output>
 		</fcs_function>
 		
 		<lag_filter name="fadec/n2-actual-1">

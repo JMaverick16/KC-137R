@@ -8,7 +8,7 @@ MATERIAL "ac3dmat1" rgb 0 0.501961 1  amb 0 0.501961 1  emis 0 0.501961 1  spec 
 OBJECT world
 kids 80
 OBJECT poly
-name "epr.4l"
+name "tpr.4l"
 loc 0.000166407 0.0811017 -0.128039
 data 8
 Mesh.008
@@ -28,7 +28,7 @@ refs 4
 1 0.343129 0.146419
 kids 0
 OBJECT poly
-name "epr.3l"
+name "tpr.3l"
 loc 0.000166407 0.0811017 -0.0961596
 data 8
 Mesh.008
@@ -48,7 +48,7 @@ refs 4
 1 0.343129 0.146419
 kids 0
 OBJECT poly
-name "epr.2l"
+name "tpr.2l"
 loc 0.000166407 0.0811017 -0.0638896
 data 8
 Mesh.008
@@ -68,7 +68,7 @@ refs 4
 1 0.343129 0.146419
 kids 0
 OBJECT poly
-name "epr.1l"
+name "tpr.1l"
 loc 0.000166407 0.0811017 -0.0316286
 data 8
 Mesh.008
@@ -4790,7 +4790,7 @@ refs 3
 0 0.5 0.5
 kids 0
 OBJECT poly
-name "epr.4"
+name "tpr.4"
 loc 0.000167687 0.125555 -0.0487814
 data 8
 Mesh.008
@@ -5168,7 +5168,7 @@ refs 3
 0 0.5 0.5
 kids 0
 OBJECT poly
-name "epr.3"
+name "tpr.3"
 loc 0.000167687 0.125555 -0.0165264
 data 8
 Mesh.008
@@ -5188,7 +5188,7 @@ refs 4
 1 0.343129 0.146419
 kids 0
 OBJECT poly
-name "epr.2"
+name "tpr.2"
 loc 0.000167687 0.125555 0.0157471
 data 8
 Mesh.008
@@ -5566,7 +5566,7 @@ refs 3
 0 0.5 0.5
 kids 0
 OBJECT poly
-name "epr.1"
+name "tpr.1"
 loc 0.000167687 0.125555 0.0480041
 data 8
 Mesh.008
