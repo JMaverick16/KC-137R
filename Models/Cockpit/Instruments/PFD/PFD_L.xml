@@ -1092,7 +1092,7 @@ Modified by Octal450 for KC-137R
         <name>VS-POS</name>
         <offsets>
             <x-m>0.004</x-m>
-            <y-m>0.078</y-m>
+            <y-m>0.081</y-m>
             <z-m>0.056</z-m>
         </offsets>
         <alignment>center-center</alignment>
@@ -1113,7 +1113,7 @@ Modified by Octal450 for KC-137R
         <name>VS-NEG</name>
         <offsets>
             <x-m>0.004</x-m>
-            <y-m>0.078</y-m>
+            <y-m>0.081</y-m>
             <z-m>-0.038</z-m>
         </offsets>
         <alignment>center-center</alignment>
