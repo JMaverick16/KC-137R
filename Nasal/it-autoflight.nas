@@ -445,7 +445,7 @@ var ITAF = {
 		}
 		
 		# Autoland Logic
-		if ((Output.ap1Temp or Output.ap2Temp or Output.ap3Temp) and Settings.landEnable.getBoolValue()) { # Lateral ALIGN/ROLLOUT requires AP to function
+		if ((Output.ap1Temp or Output.ap2Temp or Output.ap3Temp or Settings.autolandWithoutApTemp) and Settings.landEnable.getBoolValue()) { # Lateral ALIGN/ROLLOUT requires AP to function
 			if (Output.latTemp == 2) {
 				if (Position.gearAglFtTemp <= Settings.alignFt.getValue()) {
 					me.setLatMode(4);
@@ -462,9 +462,14 @@ var ITAF = {
 					me.setVertMode(6);
 				}
 			} else if (Output.vertTemp == 6) {
-				if (Gear.wow1Temp and Gear.wow2Temp and Text.vert.getValue() != "ROLLOUT") {
-					me.updateLatText("ROLLOUT");
-					me.updateVertText("ROLLOUT");
+				if (Gear.wow1Temp and Gear.wow2Temp) {
+					if (Text.vert.getValue() != "ROLLOUT") {
+						me.updateLatText("ROLLOUT");
+						me.updateVertText("ROLLOUT");
+					}
+				} else if (Text.vert.getValue() != "FLARE") {
+					me.updateLatText("ALIGN");
+					me.updateVertText("FLARE");
 				}
 			}
 		} else {
@@ -658,10 +663,6 @@ var ITAF = {
 				Controls.aileron.setValue(0);
 				Controls.elevator.setValue(0);
 				Controls.rudder.setValue(0);
-			}
-			
-			if (Text.vert.getValue() == "ROLLOUT") {
-				me.init(1);
 			}
 			
 			if (Sound.enableApOff) {
