@@ -24,56 +24,84 @@
 	<filter>
 		<name>A/THR Knots Lag</name>
 		<type>exponential</type>
-		<input>/instrumentation/airspeed-indicator/indicated-speed-kt</input>
+		<input>/it-autoflight/internal/kts-input-avg</input>
 		<output>/it-autoflight/internal/athr-kts-input-lag</output>
-		<filter-time>0.04</filter-time>
+		<filter-time>0.64</filter-time>
+	</filter>
+	
+	<filter>
+		<name>A/THR Knots Rate</name>
+		<type>derivative</type>
+		<input>/it-autoflight/internal/athr-kts-input-lag</input>
+		<output>/it-autoflight/internal/athr-kts-rate-raw</output>
+		<min>-10</min>
+		<max>10</max>
+		<filter-time>1.0</filter-time>
 	</filter>
 	
 	<filter>
 		<name>A/THR Mach Lag</name>
 		<type>exponential</type>
-		<input>/instrumentation/airspeed-indicator/indicated-mach</input>
+		<input>/it-autoflight/internal/mach-input-avg</input>
 		<output>/it-autoflight/internal/athr-mach-input-lag</output>
-		<filter-time>0.04</filter-time>
+		<filter-time>0.64</filter-time>
 	</filter>
 	
 	<filter>
-		<name>A/THR Knots Input Gain</name>
+		<name>A/THR Mach Rate</name>
+		<type>derivative</type>
+		<input>/it-autoflight/internal/athr-mach-input-lag</input>
+		<output>/it-autoflight/internal/athr-mach-rate-raw</output>
+		<filter-time>1.0</filter-time>
+	</filter>
+	
+	<filter>
+		<name>A/THR Mach Rate Gain</name>
 		<type>gain</type>
-		<gain>1.0</gain>
-		<input>/it-autoflight/input/kts</input>
-		<output>/it-autoflight/internal/athr-kts-cmd</output>
-		<min>
-			<expression>
-				<difference>
-					<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-					<value>25</value>
-				</difference>
-			</expression>
-		</min>
-		<max>
-			<expression>
-				<sum>
-					<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
-					<value>25</value>
-				</sum>
-			</expression>
-		</max>
+		<gain>700</gain>
+		<input>/it-autoflight/internal/athr-mach-rate-raw</input>
+		<output>/it-autoflight/internal/athr-mach-rate-gain</output>
+		<min>-10</min>
+		<max>10</max>
+	</filter>
+	
+	<filter>
+		<name>A/THR Rate Filter</name>
+		<type>exponential</type>
+		<input>
+			<condition>
+				<less-than>
+					<property>/velocities/airspeed-kt</property>
+					<value>1</value>
+				</less-than>
+			</condition>
+			<value>0</value>
+		</input>
+		<input>
+			<condition>
+				<equals>
+					<property>/it-autoflight/input/kts-mach</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<property>/it-autoflight/internal/athr-mach-rate-gain</property>
+		</input>
+		<input>/it-autoflight/internal/athr-kts-rate-raw</input>
+		<output>/it-autoflight/internal/athr-rate</output>
+		<filter-time>0.04</filter-time>
 	</filter>
 	
 	<filter>
 		<name>A/THR Knots Input Filter</name>
 		<type>noise-spike</type>
+		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
-		<input>/it-autoflight/internal/athr-kts-cmd</input>
+		<input>/it-autoflight/input/kts</input>
 		<output>/it-autoflight/internal/athr-kts</output>
 		<max-rate-of-change>
 			<condition>
 				<and>
-					<equals>
-						<property>/it-autoflight/output/athr-on</property>
-						<value>1</value>
-					</equals>
+					<property>/it-autoflight/output/athr-on</property>
 					<equals>
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
@@ -98,43 +126,16 @@
 	</filter>
 	
 	<filter>
-		<name>A/THR Mach Input Gain</name>
-		<type>gain</type>
-		<gain>1.0</gain>
-		<input>/it-autoflight/input/mach</input>
-		<output>/it-autoflight/internal/athr-mach-cmd</output>
-		<min>
-			<expression>
-				<difference>
-					<property>/instrumentation/airspeed-indicator/indicated-mach</property>
-					<value>0.045</value>
-				</difference>
-			</expression>
-		</min>
-		<max>
-			<expression>
-				<sum>
-					<property>/instrumentation/airspeed-indicator/indicated-mach</property>
-					<value>0.045</value>
-				</sum>
-			</expression>
-		</max>
-	</filter>
-	
-	<filter>
 		<name>A/THR Mach Input Filter</name>
 		<type>noise-spike</type>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
-		<input>/it-autoflight/internal/athr-mach-cmd</input>
+		<input>/it-autoflight/input/mach</input>
 		<output>/it-autoflight/internal/athr-mach</output>
 		<max-rate-of-change>
 			<condition>
 				<and>
-					<equals>
-						<property>/it-autoflight/output/athr-on</property>
-						<value>1</value>
-					</equals>
+					<property>/it-autoflight/output/athr-on</property>
 					<equals>
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
@@ -153,24 +154,93 @@
 					</equals>
 				</and>
 			</condition>
-			<value>0.08</value>
+			<value>0.1</value>
 		</max-rate-of-change>
 		<max-rate-of-change>2</max-rate-of-change>
 	</filter>
 	
+	<filter>
+		<name>A/THR Rate Command</name>
+		<type>gain</type>
+		<gain>
+			<expression>
+				<table> <!-- As thrust decreases with altitude, correction must be less aggressive -->
+					<property>/position/altitude-ft</property>
+					<entry><ind>    0</ind><dep>1.0</dep></entry>
+					<entry><ind>50000</ind><dep>0.7</dep></entry>
+				</table>
+			</expression>
+		</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/it-autoflight/input/kts-mach</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<expression>
+				<product>
+					<difference>
+						<property>/it-autoflight/internal/athr-mach</property>
+						<property>/it-autoflight/internal/mach-asi-lag</property>
+					</difference>
+					<value>150</value>
+				</product>
+			</expression>
+		</input>
+		<input>
+			<expression>
+				<product>
+					<difference>
+						<property>/it-autoflight/internal/athr-kts</property>
+						<property>/it-autoflight/internal/kts-asi-lag</property>
+					</difference>
+					<value>0.15</value>
+				</product>
+			</expression>
+		</input>
+		<output>/it-autoflight/internal/athr-rate-cmd-raw</output>
+		<min>-10</min>
+		<max>10</max>
+	</filter>
+	
+	<filter>
+		<name>A/THR Rate Command Filter</name>
+		<type>noise-spike</type>
+		<feedback-if-disabled>true</feedback-if-disabled>
+		<initialize-to>output</initialize-to>
+		<input>/it-autoflight/internal/athr-rate-cmd-raw</input>
+		<output>/it-autoflight/internal/athr-rate-cmd</output>
+		<max-rate-of-change>
+			<condition>
+				<and>
+					<property>/it-autoflight/output/athr-on</property>
+					<equals>
+						<property>/it-autoflight/output/thr-mode</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</condition>
+			<value>3</value>
+		</max-rate-of-change>
+		<max-rate-of-change>100</max-rate-of-change>
+	</filter>
+	
+	<filter>
+		<name>A/THR Rate Error</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>/it-autoflight/internal/athr-rate</input>
+		<reference>/it-autoflight/internal/athr-rate-cmd</reference>
+		<output>/it-autoflight/internal/athr-rate-error</output>
+	</filter>
+	
 	<pid-controller>
-		<name>IT-CONTROLLER: Knots</name>
+		<name>IT-CONTROLLER: Speed/Mach</name>
 		<enable>
 			<condition>
 				<and>
-					<equals>
-						<property>/it-autoflight/output/athr-on</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/input/kts-mach</property>
-						<value>0</value>
-					</equals>
+					<property>/it-autoflight/output/athr-on</property>
 					<equals>
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
@@ -178,31 +248,60 @@
 				</and>
 			</condition>
 		</enable>
-		<input>/it-autoflight/internal/athr-kts-input-lag</input>
-		<reference>/it-autoflight/internal/athr-kts</reference>
-		<output>/it-autoflight/internal/throttle-cmd</output>
+		<input>/it-autoflight/internal/athr-rate-error</input>
+		<reference>0</reference>
+		<output>/it-autoflight/internal/throttle-cmd-raw-pid</output>
 		<config>
-			<Kp>0.055</Kp>
-			<Ti>9.0</Ti>
-			<Td>0.00001</Td>   
-			<u_min>/it-autoflight/settings/autothrottle-min</u_min>  
-			<u_max>/it-autoflight/settings/autothrottle-max</u_max>  
+			<Kp>
+				<expression>
+					<table> <!-- As thrust decreases with altitude, more delta throttle is required -->
+						<property>/position/altitude-ft</property>
+						<entry><ind>    0</ind><dep>0.06</dep></entry>
+						<entry><ind>50000</ind><dep>0.08</dep></entry>
+					</table>
+				</expression>
+			</Kp>
+			<Ti>1.2</Ti>
+			<Td>0.0</Td>
+			<u_min>
+				<expression>
+					<pow>
+						<max>
+							<property>/it-autoflight/settings/autothrottle-min</property>
+							<sum>
+								<property>/it-autoflight/internal/throttle-cmd</property>
+								<value>-0.005</value> <!-- For 60Hz and 0.3/sec -->
+							</sum>
+						</max>
+						<value>1.4</value>
+					</pow>
+				</expression>
+			</u_min>
+			<u_max>
+				<expression>
+					<pow>
+						<min>
+							<property>/it-autoflight/settings/autothrottle-max</property>
+							<sum>
+								<property>/it-autoflight/internal/throttle-cmd</property>
+								<value>0.005</value> <!-- For 60Hz and 0.3/sec -->
+							</sum>
+						</min>
+						<value>1.4</value>
+					</pow>
+				</expression>
+			</u_max>
 		</config>
 	</pid-controller>
 	
-	<pid-controller>
-		<name>IT-CONTROLLER: Mach</name>
+	<filter>
+		<name>Speed/Mach Shaping</name>
+		<type>gain</type>
+		<gain>1.0</gain>
 		<enable>
 			<condition>
 				<and>
-					<equals>
-						<property>/it-autoflight/output/athr-on</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/it-autoflight/input/kts-mach</property>
-						<value>1</value>
-					</equals>
+					<property>/it-autoflight/output/athr-on</property>
 					<equals>
 						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
@@ -211,22 +310,44 @@
 			</condition>
 		</enable>
 		<input>
-			<property>/it-autoflight/internal/athr-mach-input-lag</property>
-			<scale>1000</scale>
+			<expression>
+				<pow>
+					<property>/it-autoflight/internal/throttle-cmd-raw-pid</property>
+					<div>
+						<value>1</value>
+						<value>1.4</value>
+					</div>
+				</pow>
+			</expression>
 		</input>
-		<reference>
-			<property>/it-autoflight/internal/athr-mach</property>
-			<scale>1000</scale>
-		</reference>
-		<output>/it-autoflight/internal/throttle-cmd</output>
-		<config>
-			<Kp>0.055</Kp>
-			<Ti>9.0</Ti>
-			<Td>0.00001</Td>  
-			<u_min>/it-autoflight/settings/autothrottle-min</u_min>  
-			<u_max>/it-autoflight/settings/autothrottle-max</u_max>  
-		</config>
-	</pid-controller>
+		<output>/it-autoflight/internal/throttle-cmd-raw</output>
+	</filter>
+	
+	<filter>
+		<name>Speed/Mach Inactive Sync</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<enable>
+			<condition>
+				<or>
+					<not><property>/it-autoflight/output/athr-on</property></not>
+					<not-equals>
+						<property>/it-autoflight/output/thr-mode</property>
+						<value>0</value>
+					</not-equals>
+				</or>
+			</condition>
+		</enable>
+		<input>
+			<expression>
+				<pow>
+					<property>/it-autoflight/internal/throttle-cmd-raw</property>
+					<value>1.4</value>
+				</pow>
+			</expression>
+		</input>
+		<output>/it-autoflight/internal/throttle-cmd-raw-pid</output>
+	</filter>
 	
 	<filter>
 		<name>IT-CONTROLLER: Idle Limit</name>
@@ -256,7 +377,7 @@
 			<value>0</value>
 		</input>
 		<input>/it-autoflight/settings/autothrottle-min</input>
-		<output>/it-autoflight/internal/throttle-cmd</output>
+		<output>/it-autoflight/internal/throttle-cmd-raw</output>
 	</filter>
 	
 	<filter>
@@ -278,7 +399,7 @@
 			</condition>
 		</enable>
 		<input>/it-autoflight/settings/autothrottle-max</input>
-		<output>/it-autoflight/internal/throttle-cmd</output>
+		<output>/it-autoflight/internal/throttle-cmd-raw</output>
 	</filter>
 	
 	<filter>
@@ -294,8 +415,8 @@
 				</equals>
 			</condition>
 		</enable>
-		<input>/it-autoflight/internal/throttle-cmd</input>
-		<output>/it-autoflight/internal/throttle</output>
+		<input>/it-autoflight/internal/throttle-cmd-raw</input>
+		<output>/it-autoflight/internal/throttle-cmd</output>
 		<max-rate-of-change>
 			<condition>
 				<or>
@@ -379,7 +500,7 @@
 			</condition>
 		</enable>
 		<input>/it-autoflight/internal/throttle-compare-max</input>
-		<output>/it-autoflight/internal/throttle</output>
+		<output>/it-autoflight/internal/throttle-cmd</output>
 	</filter>
 	
 	<!-- Engine 1 -->
@@ -394,7 +515,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/throttle</property>
+			<property>/it-autoflight/internal/throttle-cmd</property>
 		</input>
 		<input>/controls/engines/engine[0]/throttle</input>
 		<output>/it-autoflight/internal/throttle[0]</output>
@@ -444,7 +565,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/throttle</property>
+			<property>/it-autoflight/internal/throttle-cmd</property>
 		</input>
 		<input>/controls/engines/engine[1]/throttle</input>
 		<output>/it-autoflight/internal/throttle[1]</output>
@@ -494,7 +615,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/throttle</property>
+			<property>/it-autoflight/internal/throttle-cmd</property>
 		</input>
 		<input>/controls/engines/engine[2]/throttle</input>
 		<output>/it-autoflight/internal/throttle[2]</output>
@@ -544,7 +665,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/throttle</property>
+			<property>/it-autoflight/internal/throttle-cmd</property>
 		</input>
 		<input>/controls/engines/engine[3]/throttle</input>
 		<output>/it-autoflight/internal/throttle[3]</output>
@@ -594,7 +715,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/throttle</property>
+			<property>/it-autoflight/internal/throttle-cmd</property>
 		</input>
 		<input>/controls/engines/engine[4]/throttle</input>
 		<output>/it-autoflight/internal/throttle[4]</output>
@@ -644,7 +765,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/throttle</property>
+			<property>/it-autoflight/internal/throttle-cmd</property>
 		</input>
 		<input>/controls/engines/engine[5]/throttle</input>
 		<output>/it-autoflight/internal/throttle[5]</output>
@@ -694,7 +815,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/throttle</property>
+			<property>/it-autoflight/internal/throttle-cmd</property>
 		</input>
 		<input>/controls/engines/engine[6]/throttle</input>
 		<output>/it-autoflight/internal/throttle[6]</output>
@@ -744,7 +865,7 @@
 					<value>1</value>
 				</equals>
 			</condition>
-			<property>/it-autoflight/internal/throttle</property>
+			<property>/it-autoflight/internal/throttle-cmd</property>
 		</input>
 		<input>/controls/engines/engine[7]/throttle</input>
 		<output>/it-autoflight/internal/throttle[7]</output>
