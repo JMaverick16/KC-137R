@@ -117,6 +117,7 @@ var Input = {
 	fpaAbs: props.globals.initNode("/it-autoflight/input/fpa-abs", 0, "DOUBLE"), # Set by property rule
 	hdg: props.globals.initNode("/it-autoflight/input/hdg", 0, "INT"),
 	hdgCalc: 0,
+	inhibitAltCap: props.globals.initNode("/it-autoflight/input/inhibit-alt-cap", 0, "BOOL"),
 	kts: props.globals.initNode("/it-autoflight/input/kts", 250, "INT"),
 	ktsMach: props.globals.initNode("/it-autoflight/input/kts-mach", 0, "BOOL"),
 	lat: props.globals.initNode("/it-autoflight/input/lat", 5, "INT"),
@@ -297,6 +298,7 @@ var ITAF = {
 		Input.pitchAbs.setValue(0);
 		Input.roll.setValue(0);
 		Input.rollAbs.setValue(0);
+		Input.inhibitAltCap.setBoolValue(0);
 		Input.lat.setValue(5);
 		Input.vert.setValue(7);
 		Input.toga.setBoolValue(0);
@@ -490,7 +492,7 @@ var ITAF = {
 		Internal.altTemp = Internal.alt.getValue();
 		Internal.altDiff = Internal.altTemp - Position.indicatedAltitudeFtTemp;
 		
-		if (Output.vertTemp != 0 and Output.vertTemp != 2 and Output.vertTemp != 6 and Output.vertTemp != 9) {
+		if (Output.vertTemp != 0 and Output.vertTemp != 2 and Output.vertTemp != 6 and Output.vertTemp != 9 and (!Input.inhibitAltCap.getBoolValue() or (Output.vertTemp != 1 and Output.vertTemp != 5))) {
 			Internal.captVs = math.clamp(math.round(abs(Internal.vs.getValue()) / (-1 * Gain.altGain.getValue()), 100), 50, 2500); # Capture limits
 			if (abs(Internal.altDiff) <= Internal.captVs and !Gear.wow1Temp and !Gear.wow2Temp) {
 				if (Internal.altTemp >= Position.indicatedAltitudeFtTemp and Internal.vsTemp >= -25) { # Don't capture if we are going the wrong way
@@ -829,7 +831,7 @@ var ITAF = {
 			me.updateThrustMode();
 		} else if (n == 1) { # V/S or FPA
 			if (Input.vsFpa.getBoolValue()) { # FPA if vsFpa is set
-				if (abs(Input.altDiff) >= 25) {
+				if (abs(Input.altDiff) >= 25 or Input.inhibitAltCap.getBoolValue()) {
 					Internal.flchActive = 0;
 					Internal.altCaptureActive = 0;
 					me.updateGsArm(0);
@@ -841,7 +843,7 @@ var ITAF = {
 					me.updateGsArm(0);
 				}
 			} else {
-				if (abs(Input.altDiff) >= 25) {
+				if (abs(Input.altDiff) >= 25 or Input.inhibitAltCap.getBoolValue()) {
 					Internal.flchActive = 0;
 					Internal.altCaptureActive = 0;
 					me.updateGsArm(0);
@@ -881,7 +883,7 @@ var ITAF = {
 				me.updateThrustMode();
 			}
 		} else if (n == 5) { # FPA
-			if (abs(Input.altDiff) >= 25) {
+			if (abs(Input.altDiff) >= 25 or Input.inhibitAltCap.getBoolValue()) {
 				Internal.flchActive = 0;
 				Internal.altCaptureActive = 0;
 				me.updateGsArm(0);
