@@ -306,9 +306,10 @@
 				<roll>1.6</roll> <!-- Roll heading deviation base gain -->
 			</cmd>
 			<rollout>
-				<aileron>-0.1</aileron> <!-- Aileron to counter wind-induced banking on ground -->
 				<pitch-nose>0.1</pitch-nose> <!-- Forward pressure to keep nose gear on ground -->
 				<pitch-rate>-1.5</pitch-rate> <!-- Rate to lower nose to ground after touchdown -->
+				<roll-angle-gain>-0.2</roll-angle-gain> <!-- Roll angle weighing for aileron after touchdown -->
+				<roll-cross-gain>-0.5</roll-cross-gain> <!-- Crossed controls weighing for aileron after touchdown -->
 			</rollout>
 		</config>
 		<settings>
@@ -342,7 +343,8 @@
 			<use-controls-flight type="bool">0</use-controls-flight> <!-- Use /controls/flight properties -->
 		</settings>
 		<internal>
-			<rudder-cmd>0</rudder-cmd>
+			<aileron-rollout type="double">0</aileron-rollout>
+			<rudder-cmd type="double">0</rudder-cmd>
 		</internal>
 		<output>
 			<ap1>0</ap1>

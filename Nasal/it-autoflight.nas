@@ -551,9 +551,8 @@ var ITAF = {
 		}
 		
 		# Calculate Roll Command Kp
-		Gain.rollCmdKpCalc = Gain.hdgGain.getValue() + (Velocities.airspeedKt.getValue() - 140) * ((Gain.hdgGain.getValue() + 1.0 - Gain.hdgGain.getValue()) / (360 - 140));
-		Gain.rollCmdKpCalc = math.clamp(Gain.rollCmdKpCalc, Gain.hdgGain.getValue(), Gain.hdgGain.getValue() + 1.0);
-		
+		Gain.rollCmdKpCalc = Gain.hdgGain.getValue() + (Velocities.airspeedKt.getValue() - 140) * ((Gain.hdgGain.getValue() + 1.5 - Gain.hdgGain.getValue()) / (360 - 140));
+		Gain.rollCmdKpCalc = math.clamp(Gain.rollCmdKpCalc, Gain.hdgGain.getValue(), Gain.hdgGain.getValue() + 1.5);
 		Gain.rollCmdKp.setValue(Gain.rollCmdKpCalc);
 		
 		# Waypoint Advance Logic
@@ -950,16 +949,14 @@ var ITAF = {
 			Text.thr.setValue("RETARD");
 			if (Gear.wow1.getBoolValue() or Gear.wow2.getBoolValue()) { # Disconnect A/THR on either main gear touch
 				me.athrMaster(0);
-				if (!Settings.useControlsEngines.getBoolValue()) {
-					Controls.throttle[0].setValue(Internal.throttle[0].getValue());
-					Controls.throttle[1].setValue(Internal.throttle[1].getValue());
-					Controls.throttle[2].setValue(Internal.throttle[2].getValue());
-					Controls.throttle[3].setValue(Internal.throttle[3].getValue());
-					Controls.throttle[4].setValue(Internal.throttle[4].getValue());
-					Controls.throttle[5].setValue(Internal.throttle[5].getValue());
-					Controls.throttle[6].setValue(Internal.throttle[6].getValue());
-					Controls.throttle[7].setValue(Internal.throttle[7].getValue());
-				}
+				Controls.throttle[0].setValue(0);
+				Controls.throttle[1].setValue(0);
+				Controls.throttle[2].setValue(0);
+				Controls.throttle[3].setValue(0);
+				Controls.throttle[4].setValue(0);
+				Controls.throttle[5].setValue(0);
+				Controls.throttle[6].setValue(0);
+				Controls.throttle[7].setValue(0);
 			}
 		} else if (Output.vertTemp == 4) {
 			if (Internal.alt.getValue() >= Position.indicatedAltitudeFt.getValue()) {

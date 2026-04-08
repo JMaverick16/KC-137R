@@ -365,14 +365,9 @@
 			</clipto>
 		</summer>
 		
-		<pure_gain name="fbw/roll/rollout-cmd">
-			<input>/orientation/roll-deg</input>
-			<gain>/it-autoflight/config/rollout/aileron</gain> <!-- Pull from ITAF Config -->
-		</pure_gain>
-		
 		<switch name="fbw/roll-output">
 			<default value="fbw/mixer/roll/output"/> <!-- Mix passive and active control law for transition from ground -->
-			<test logic="AND" value="fbw/roll/rollout-cmd">
+			<test logic="AND" value="/it-autoflight/internal/aileron-rollout">
 				/it-fbw/roll-disable eq 0
 				fbw/ap/enabled eq 1
 				position/wow eq 1

@@ -1160,7 +1160,7 @@
 	</filter>
 	
 	<filter>
-		<name>System Command: Roll Target Inactive Sync</name>
+		<name>System Command: Target Roll Inactive Sync</name>
 		<type>gain</type>
 		<gain>1.0</gain>
 		<enable>
@@ -1206,11 +1206,11 @@
 			</condition>
 			<value>15</value>
 		</max-rate-of-change>
-		<max-rate-of-change>6</max-rate-of-change>
+		<max-rate-of-change>5</max-rate-of-change>
 	</filter>
 	
 	<filter>
-		<name>System Command: Roll Rate Target</name>
+		<name>System Command: Target Roll Rate</name>
 		<type>gain</type>
 		<gain>-0.9</gain>
 		<enable>
@@ -1299,17 +1299,42 @@
 	</pid-controller>
 	
 	<filter>
-		<name>System Command: Aileron Ground</name>
+		<name>System Command: Aileron Rollout</name>
 		<type>gain</type>
-		<gain>/it-autoflight/config/rollout/aileron</gain>
-		<enable>
-			<condition>
-				<property>/it-autoflight/output/ap-on</property>
-			</condition>
-		</enable>
-		<input>/orientation/roll-deg</input>
-		<reference>0</reference>
+		<gain>1.0</gain>
+		<input>
+			<expression>
+				<sum>
+					<max>
+						<min>
+							<product>
+								<property>/orientation/roll-deg</property>
+								<property>/it-autoflight/config/rollout/roll-angle-gain</property>
+								<table>
+									<property>/velocities/airspeed-kt</property>
+									<entry><ind> 80</ind><dep>0.1</dep></entry>
+									<entry><ind>140</ind><dep>1.0</dep></entry>
+								</table>
+							</product>
+							<value>0.5</value>
+						</min>
+						<value>-0.5</value>
+					</max>
+					<product>
+						<property>/it-autoflight/internal/rudder-cmd</property>
+						<property>/it-autoflight/config/rollout/roll-cross-gain</property>
+						<table>
+							<property>/velocities/airspeed-kt</property>
+							<entry><ind> 80</ind><dep>0.1</dep></entry>
+							<entry><ind>140</ind><dep>1.0</dep></entry>
+						</table>
+					</product>
+				</sum>
+			</expression>
+		</input>
 		<output>/it-autoflight/internal/aileron-rollout</output>
+		<min>-1.0</min>
+		<max>1.0</max>
 	</filter>
 	
 	<filter>
@@ -2089,7 +2114,7 @@
 	</pid-controller>
 	
 	<filter>
-		<name>System Command: Pitch Target Inactive Sync</name>
+		<name>System Command: Target Pitch Inactive Sync</name>
 		<type>gain</type>
 		<gain>1.0</gain>
 		<enable>
@@ -2156,7 +2181,7 @@
 	</filter>
 	
 	<filter>
-		<name>System Command: Pitch Rate Target</name>
+		<name>System Command: Target Pitch Rate</name>
 		<type>gain</type>
 		<gain>-0.6</gain>
 		<enable>
@@ -2508,7 +2533,7 @@
 	</filter>
 	
 	<filter>
-		<name>IT-CONTROLLER: Align/Rollout Yaw Rate Target</name>
+		<name>IT-CONTROLLER: Align/Rollout Target Yaw Rate</name>
 		<type>gain</type>
 		<gain>1.0</gain>
 		<input>
