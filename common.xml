@@ -307,7 +307,7 @@
 			</cmd>
 			<rollout>
 				<pitch-nose>0.1</pitch-nose> <!-- Forward pressure to keep nose gear on ground -->
-				<pitch-rate>-1.5</pitch-rate> <!-- Rate to lower nose to ground after touchdown -->
+				<pitch-rate>-2</pitch-rate> <!-- Rate to lower nose to ground after touchdown -->
 				<roll-angle-gain>-0.2</roll-angle-gain> <!-- Roll angle weighing for aileron after touchdown -->
 				<roll-cross-gain>-0.5</roll-cross-gain> <!-- Crossed controls weighing for aileron after touchdown -->
 			</rollout>
