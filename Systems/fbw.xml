@@ -1010,7 +1010,7 @@
 		
 		<switch name="fbw/yoke-roll-cmd">
 			<default value="fbw/roll/aileron-nul"/>
-			<test logic="AND" value="fbw/roll/rollout-cmd">
+			<test logic="AND" value="/it-autoflight/internal/aileron-rollout">
 				/it-fbw/roll-disable eq 0
 				fbw/ap/enabled eq 1
 				position/wow eq 1
