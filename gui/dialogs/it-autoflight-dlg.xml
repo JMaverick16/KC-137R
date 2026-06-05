@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!-- IT Autoflight Control Dialog -->
-<!-- Copyright (c) 2024 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2026 Josh Davidson (Octal450) -->
 
 <PropertyList>
 	
@@ -354,7 +354,7 @@
 		<input>
 			<row>0</row>
 			<col>3</col>
-			<pref-width>50</pref-width>
+			<pref-width>60</pref-width>
 			<property>/it-autoflight/input/kts</property>
 			<live>true</live>
 			<enable>
@@ -388,7 +388,6 @@
 		<button>
 			<row>0</row>
 			<col>5</col>
-			<halign>left</halign>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
 			<legend>&gt;&gt;</legend>
@@ -403,19 +402,15 @@
 				<script>setprop("/it-autoflight/input/kts", math.min(getprop("/it-autoflight/input/kts") + 10, getprop("/it-autoflight/settings/max-kts")));</script>
 			</binding>
 		</button>
-	</group>
-	
-	<group>
-		<layout>table</layout>
 		
 		<text>
-			<row>0</row>
+			<row>1</row>
 			<col>0</col>
 			<label>Mach:</label>
 		</text>
 		
 		<button>
-			<row>0</row>
+			<row>1</row>
 			<col>1</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -432,7 +427,7 @@
 			</binding>
 		</button>
 		<button>
-			<row>0</row>
+			<row>1</row>
 			<col>2</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -450,9 +445,9 @@
 		</button>
 
 		<input>
-			<row>0</row>
+			<row>1</row>
 			<col>3</col>
-			<pref-width>50</pref-width>
+			<pref-width>60</pref-width>
 			<property>/it-autoflight/input/mach</property>
 			<live>true</live>
 			<enable>
@@ -467,7 +462,7 @@
 		</input>
 		
 		<button>
-			<row>0</row>
+			<row>1</row>
 			<col>4</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -484,9 +479,8 @@
 			</binding>
 		</button>
 		<button>
-			<row>0</row>
+			<row>1</row>
 			<col>5</col>
-			<halign>left</halign>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
 			<legend>&gt;&gt;</legend>
@@ -601,7 +595,7 @@
 		<input>
 			<row>0</row>
 			<col>3</col>
-			<pref-width>40</pref-width>
+			<pref-width>50</pref-width>
 			<property>/it-autoflight/input/hdg</property>
 			<live>true</live>
 			<binding>
@@ -627,7 +621,6 @@
 		<button>
 			<row>0</row>
 			<col>5</col>
-			<halign>left</halign>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
 			<legend>&gt;&gt;</legend>
@@ -914,7 +907,7 @@
 		<input>
 			<row>0</row>
 			<col>3</col>
-			<pref-width>55</pref-width>
+			<pref-width>70</pref-width>
 			<property>/it-autoflight/input/alt</property>
 			<live>true</live>
 			<binding>
@@ -940,7 +933,6 @@
 		<button>
 			<row>0</row>
 			<col>5</col>
-			<halign>left</halign>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
 			<legend>&gt;&gt;</legend>
@@ -953,19 +945,15 @@
 				<wrap>false</wrap>
 			</binding>
 		</button>
-	</group>
-	
-	<group>
-		<layout>table</layout>
 		
 		<text>
-			<row>0</row>
+			<row>1</row>
 			<col>0</col>
 			<label>V/S: </label>
 		</text>
 		
 		<button>
-			<row>0</row>
+			<row>1</row>
 			<col>1</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -986,7 +974,7 @@
 			</binding>
 		</button>
 		<button>
-			<row>0</row>
+			<row>1</row>
 			<col>2</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -1008,9 +996,9 @@
 		</button>
 
 		<input>
-			<row>0</row>
+			<row>1</row>
 			<col>3</col>
-			<pref-width>55</pref-width>
+			<pref-width>70</pref-width>
 			<property>/it-autoflight/input/vs</property>
 			<live>true</live>
 			<enable>
@@ -1025,7 +1013,7 @@
 		</input>
 		
 		<button>
-			<row>0</row>
+			<row>1</row>
 			<col>4</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -1046,9 +1034,8 @@
 			</binding>
 		</button>
 		<button>
-			<row>0</row>
+			<row>1</row>
 			<col>5</col>
-			<halign>left</halign>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
 			<legend>&gt;&gt;</legend>
@@ -1067,19 +1054,15 @@
 				<wrap>false</wrap>
 			</binding>
 		</button>
-	</group>
-	
-	<group>
-		<layout>table</layout>
 		
 		<text>
-			<row>0</row>
+			<row>2</row>
 			<col>0</col>
 			<label>FPA:</label>
 		</text>
 		
 		<button>
-			<row>0</row>
+			<row>2</row>
 			<col>1</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -1096,7 +1079,7 @@
 			</binding>
 		</button>
 		<button>
-			<row>0</row>
+			<row>2</row>
 			<col>2</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -1114,9 +1097,9 @@
 		</button>
 
 		<input>
-			<row>0</row>
+			<row>2</row>
 			<col>3</col>
-			<pref-width>55</pref-width>
+			<pref-width>70</pref-width>
 			<property>/it-autoflight/input/fpa</property>
 			<live>true</live>
 			<enable>
@@ -1131,7 +1114,7 @@
 		</input>
 		
 		<button>
-			<row>0</row>
+			<row>2</row>
 			<col>4</col>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
@@ -1148,9 +1131,8 @@
 			</binding>
 		</button>
 		<button>
-			<row>0</row>
+			<row>2</row>
 			<col>5</col>
-			<halign>left</halign>
 			<pref-width>25</pref-width>
 			<pref-height>25</pref-height>
 			<legend>&gt;&gt;</legend>
