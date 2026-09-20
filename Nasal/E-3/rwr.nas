@@ -416,7 +416,7 @@ RWRCanvas = {
                 me.symbol_priority.show();
                 me.prio = 1;
             }
-            if (me.contact[0].getType() == armament.AIR) {
+            if (me.contact[0].getType() == radar_system.AIR) {
                 #air-borne
                 me.symbol_hat[me.i].setTranslation(me.x,me.y);
                 me.symbol_hat[me.i].show();
