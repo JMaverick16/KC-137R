@@ -48,7 +48,7 @@
 		<property>fdm/jsbsim/aero/alpha-deg-fixed</property>
 		<interpolation>
 			<entry><ind>0.0</ind><dep>-27</dep></entry>
-			<entry><ind>10.0</ind><dep>-207</dep></entry>
+			<entry><ind>13.0</ind><dep>-207</dep></entry> <!-- 1.0 = 13 deg -->
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
