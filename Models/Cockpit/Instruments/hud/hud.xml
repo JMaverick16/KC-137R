@@ -939,7 +939,10 @@
    <type>translate</type>
    <object-name>vector</object-name>
    <property>orientation/alpha-deg[0]</property>
-<factor>0.0105</factor>
+<interpolation>
+	<entry><ind>-7</ind><dep>-0.0735</dep></entry>
+	<entry><ind> 7</ind><dep> 0.0735</dep></entry>
+</interpolation>
 <axis>
      <x>0.0</x>
      <y>0.0</y>
@@ -956,7 +959,10 @@
    <type>translate</type>
    <object-name>vector</object-name>
    <property>orientation/side-slip-deg[0]</property>
-<factor>0.0105</factor>
+<interpolation>
+	<entry><ind>-7</ind><dep>-0.0735</dep></entry>
+	<entry><ind> 7</ind><dep> 0.0735</dep></entry>
+</interpolation>
 <axis>
      <x>0.0</x>
      <y>-1.0</y>

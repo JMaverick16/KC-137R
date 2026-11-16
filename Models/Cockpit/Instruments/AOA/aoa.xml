@@ -47,8 +47,9 @@
 		<object-name>needle</object-name>
 		<property>fdm/jsbsim/aero/alpha-deg-fixed</property>
 		<interpolation>
-			<entry><ind>0.0</ind><dep>-27</dep></entry>
-			<entry><ind>13.0</ind><dep>-207</dep></entry> <!-- 1.0 = 13 deg -->
+			<entry><ind> 0.00</ind><dep> -27</dep></entry>
+			<entry><ind>13.17</ind><dep>-207</dep></entry> <!-- 1.0 = 13.17 deg -->
+			<entry><ind>20.00</ind><dep>-300</dep></entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
