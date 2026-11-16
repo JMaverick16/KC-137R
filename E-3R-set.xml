@@ -7,8 +7,8 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing E-3R Sentry (IAE V2500)</description>
-	<aero>KC-137R-IAE</aero>
+  <description>Boeing E-3R Sentry (CFM56)</description>
+	<aero>KC-137R</aero>
   	<long-description>
    	The Boeing E-3R Sentry, commonly known as AWACS, is an American airborne early warning and control (AEW and C) aircraft developed by Boeing. Derived from the Boeing 707, it provides all-weather surveillance, command, control, and communications, and is mainly used by the United States Air Force and NATO. The E-3R is distinguished by the distinctive rotating radar dome (ROTODOME) above the fuselage.
   	</long-description>
@@ -31,10 +31,6 @@
             </preview>
     </previews>
 
-  <engine-type>
-	<IAE type="bool">1</IAE>
-  </engine-type>
-
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/E-3R.xml</path>
       <livery>
@@ -51,7 +47,7 @@
   </remote>
 
   <sound>
-      <path>Aircraft/KC-137R/Sounds/v2500-sound.xml</path>
+      <path>Aircraft/KC-137R/Sounds/cfm56-sound.xml</path>
       <switch type = "bool">0</switch>
       <stall-horn type="bool">0</stall-horn>
   </sound>
@@ -358,7 +354,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>E-3R</model>
-			<engines>IAE V2527-A5</engines>
+			<engines>CFM56</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>

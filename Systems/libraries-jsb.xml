@@ -44,7 +44,7 @@
 		</switch>
 		
 		<switch name="/gear/gear[1]/angle-deg-cmd">
-			<default value="10"/>
+			<default value="0"/>
 			<test logic="AND" value="/orientation/pitch-deg">
 				gear/unit[1]/WOW eq 1
 			</test>
@@ -60,7 +60,7 @@
 		</lag_filter>
 		
 		<switch name="/gear/gear[2]/angle-deg-cmd">
-			<default value="10"/>
+			<default value="0"/>
 			<test logic="AND" value="/orientation/pitch-deg">
 				gear/unit[2]/WOW eq 1
 			</test>

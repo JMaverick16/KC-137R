@@ -620,7 +620,7 @@
 		<object-name>rev4.g</object-name>
 		<diffuse>
 			<red>0</red>
-			<green>0.543</green>
+			<green>0.9</green>
 			<blue>0</blue>
 		</diffuse>
 		<ambient>
@@ -635,7 +635,7 @@
 		</specular>
 		<emission>
 			<red>0</red>
-			<green>0.543</green>
+			<green>0.9</green>
 			<blue>0</blue>
 		</emission>
 	</animation>
@@ -647,7 +647,7 @@
 		<object-name>rev4.y</object-name>
 		<diffuse>
 			<red>1</red>
-			<green>1</green>
+			<green>0.8</green>
 			<blue>0</blue>
 		</diffuse>
 		<ambient>
@@ -662,7 +662,7 @@
 		</specular>
 		<emission>
 			<red>1</red>
-			<green>1</green>
+			<green>0.8</green>
 			<blue>0</blue>
 		</emission>
 	</animation>

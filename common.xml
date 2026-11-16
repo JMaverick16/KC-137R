@@ -51,6 +51,9 @@
 			<path>Aircraft/KC-137R/Systems/sound_calc.xml</path>
 		</property-rule>
 	</systems>
+	<sound n="0">
+		<suppress-warning type="bool">1</suppress-warning>
+	</sound>
 
 	<instrumentation>
     <path>Aircraft/KC-137R/Systems/instrumentation.xml</path>

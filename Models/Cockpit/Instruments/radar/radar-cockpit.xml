@@ -9,16 +9,6 @@
 <PropertyList>
 
 	<path>radarE3.ac</path>
-
-	<animation>
-		<type>material</type>
-		<object-name>cover</object-name>
-		<emission>
-			<red>0.5</red>
-			<green>0.5</green>
-			<blue>0.5</blue>
-		</emission>
-	</animation>
 	
 	<animation>
 		<type>material</type>
@@ -66,32 +56,6 @@
 		</emission>
 	</animation>
 	
-	<animation>
-		<type>select</type>
-		<object-name>Off</object-name>
-		<condition>
-			<or>
-				<less-than>
-					<property>b707/ess-bus</property>
-					<value>20</value>
-				</less-than>
-				<not><property>instrumentation/mptcas/on</property></not>
-			</or>
-		</condition>
-	</animation>
-	
-	<animation>
-		<type>noshadow</type>
-		<object-name>radarblade</object-name>
-		<object-name>cover</object-name>
-	</animation>
-
-	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>radarblade</object-name>
-		<object-name>cover</object-name>
-	</effect>
-	
 	<!-- the knob animations -->
 
 	<animation>
@@ -129,55 +93,6 @@
 			</binding>
 		</action>
 	</animation>
-	
-	<animation>
-		<type>knob</type>
-		<visible>true</visible>
-		<object-name>KnobRange</object-name>
-		<property>instrumentation/mptcas/display-factor</property>
-		<factor>45</factor>
-		<offset-deg>-35</offset-deg>
-		<center>
-			<x-m> 0.0</x-m>
-			<y-m>-0.0509</y-m>
-			<z-m>-0.0536</z-m>
-		</center>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-		<increase>
-			<binding>	   
-				<command>property-adjust</command>
-				<property>instrumentation/mptcas/display-factor</property>
-				<step>0.1</step>
-				<min>0.1</min>
-				<max>1.0</max>
-				<wrap>false</wrap>
-			</binding>
-		</increase>
-		<decrease>
-			<binding>	          
-				<command>property-adjust</command>
-				<property>instrumentation/mptcas/display-factor</property>
-				<step>-0.1</step>
-				<min>0.1</min>
-				<max>1.0</max>
-				<wrap>false</wrap>
-			</binding>
-		</decrease>
-		<hovered>
-            <binding>
-                <command>set-tooltip</command>
-                <tooltip-id>radranger</tooltip-id>
-                <label>Radar range: %d NM</label>
-                <property>instrumentation/mptcas/display-factor</property>
-                <mapping>nasal</mapping>
-			    <script>return arg[0]*100;</script>
-            </binding>
-        </hovered>
-	</animation>
 
 <!-- TCAS ANIMATIONS -->
 
@@ -204,17 +119,6 @@
 		<z>0</z>
 	</axis>
 </animation>-->
-
-<animation>
-	<type>select</type>
-	<object-name>multis</object-name>
-	<condition>
-		<greater-than>
-			<property>b707/ess-bus</property>
-			<value>20</value>
-		</greater-than>
-	</condition>
-</animation>
 
 <animation>
 		<type>material</type>

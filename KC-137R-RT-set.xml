@@ -26,10 +26,6 @@
             </preview>
     </previews>
 
-  <engine-type>
-	<IAE type="bool">0</IAE>
-  </engine-type>
-
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/KC-137R-RT.xml</path>
       <livery>
@@ -347,7 +343,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>KC-137R-RT</model>
-			<engines>CFM56-7B26</engines>
+			<engines>CFM56</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>

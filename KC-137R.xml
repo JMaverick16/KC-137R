@@ -238,11 +238,6 @@
  <propulsion>
 
    <engine file="cfm56_1">
-    <orient unit="DEG">
-      <pitch> 0.00 </pitch>
-      <roll>   0.00 </roll>
-      <yaw>   0.00 </yaw>
-    </orient>
 	<feed>3</feed>
     <feed>5</feed>
     <feed>6</feed>
@@ -261,11 +256,6 @@
   </engine>
 
    <engine file="cfm56_2">
-    <orient unit="DEG">
-      <pitch> 0.00 </pitch>
-      <roll>   0.00 </roll>
-      <yaw>   0.00 </yaw>
-    </orient>
 	<feed>3</feed>
     <feed>4</feed>
     <feed>6</feed>
@@ -284,11 +274,6 @@
   </engine>
 
    <engine file="cfm56_3">
-    <orient unit="DEG">
-      <pitch> 0.00 </pitch>
-      <roll>   0.00 </roll>
-      <yaw>   0.00 </yaw>
-    </orient>
 	<feed>3</feed>
     <feed>2</feed>
     <feed>0</feed>
@@ -307,11 +292,6 @@
   </engine>
 
    <engine file="cfm56_4">
-    <orient unit="DEG">
-      <pitch> 0.00 </pitch>
-      <roll>   0.00 </roll>
-      <yaw>   0.00 </yaw>
-    </orient>
 	<feed>3</feed>
     <feed>1</feed>
     <feed>0</feed>

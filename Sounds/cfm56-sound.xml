@@ -4,6 +4,9 @@
 		<name>a320_a1s</name>
 		<mode>looped</mode>
 		<path>FL2070/abn1strt.wav</path>
+		<condition>
+			<property>/sim/sound/suppress-warning</property>
+		</condition>
 		<volume>
 			<property>FL2070/sound/a1strt</property>
 			<offset>0</offset>
@@ -23,6 +26,9 @@
 		<name>a320_b1s</name>
 		<mode>looped</mode>
 		<path>FL2070/abn1strt.wav</path>
+		<condition>
+			<property>/sim/sound/suppress-warning</property>
+		</condition>
 		<volume>
 			<property>FL2070/sound/b1strt</property>
 			<offset>0</offset>
@@ -42,6 +48,9 @@
 		<name>a320_c1s</name>
 		<mode>looped</mode>
 		<path>FL2070/abn1strt.wav</path>
+		<condition>
+			<property>/sim/sound/suppress-warning</property>
+		</condition>
 		<volume>
 			<property>FL2070/sound/c1strt</property>
 			<offset>0</offset>
@@ -61,6 +70,9 @@
 		<name>a320_d1s</name>
 		<mode>looped</mode>
 		<path>FL2070/abn1strt.wav</path>
+		<condition>
+			<property>/sim/sound/suppress-warning</property>
+		</condition>
 		<volume>
 			<property>FL2070/sound/d1strt</property>
 			<offset>0</offset>

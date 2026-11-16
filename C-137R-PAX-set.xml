@@ -32,7 +32,7 @@
     </remote>
 
     <sound>
-		<path>Aircraft/KC-137R/Sounds/707-sound-IAE.xml</path>
+		<path>Aircraft/KC-137R/Sounds/cfm56-sound.xml</path>
     </sound>
 
    	<startup>

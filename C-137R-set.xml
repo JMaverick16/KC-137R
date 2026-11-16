@@ -7,8 +7,8 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing C-137R Stratoliner (IAE V2500)</description>
-	<aero>KC-137R-IAE</aero>
+  <description>Boeing C-137R Stratoliner (CFM56)</description>
+	<aero>KC-137R</aero>
   	<long-description>
    		The Boeing C-137R Stratoliner is a VIP transport aircraft derived from the Boeing 707 jet airliner used by the United States Air Force.
   	</long-description>
@@ -26,10 +26,6 @@
             </preview>
     </previews>
 
-  <engine-type>
-	<IAE type="bool">1</IAE>
-  </engine-type>
-
   <model n="0">
    	 <path>Aircraft/KC-137R/Models/C-137R.xml</path>
       <livery>
@@ -46,7 +42,7 @@
   </remote>
 
   <sound>
-      <path>Aircraft/KC-137R/Sounds/v2500-sound.xml</path>
+      <path>Aircraft/KC-137R/Sounds/cfm56-sound.xml</path>
       <switch type = "bool">0</switch>
       <stall-horn type="bool">0</stall-horn>
   </sound>
@@ -332,7 +328,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>C-137R</model>
-			<engines>IAE V2527-A5</engines>
+			<engines>CFM56</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>

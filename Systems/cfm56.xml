@@ -26,6 +26,26 @@
 			</function>
 		</fcs_function>
 		
+		<fcs_function name="fadec/limit/milthrust-no-density"> <!-- Copy of MilThrust table without density effects -->
+			<function>
+				<table>
+					<independentVar lookup="row">velocities/mach</independentVar>
+					<independentVar lookup="column">/position/altitude-ft</independentVar>
+					<tableData>
+						    -10000   0       10000   20000   30000   45000   52000
+						0.0  1.2100  1.0000  0.7400  0.5320  0.3340  0.2210  0.0000
+						0.2  1.1710  0.9740  0.7090  0.5040  0.3090  0.2040  0.0000
+						0.4  1.1500  0.9570  0.6920  0.4940  0.3110  0.2090  0.0000
+						0.6  1.1640  0.9410  0.7140  0.4940  0.3090  0.2080  0.0000
+						0.8  1.1890  0.9710  0.7350  0.5070  0.3060  0.2070  0.0000
+						0.9  1.1920  0.9760  0.7320  0.5010  0.2930  0.1940  0.0000
+						1.0  1.1810  0.9510  0.7020  0.4590  0.2430  0.1560  0.0000
+						1.2  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000  0.0000
+					</tableData>
+				</table>
+			</function>
+		</fcs_function>
+		
 		<fcs_function name="fadec/limit/milthrust-density"> <!-- Copy of MilThrust table with density effects -->
 			<function>
 				<table>
@@ -63,7 +83,7 @@
 								<property>fadec/limit/rated-thrust</property>
 							</product>
 						</difference>
-						<property>fadec/limit/milthrust-density</property>
+						<property>fadec/limit/milthrust-no-density</property>
 					</product>
 				</sum>
 			</function>

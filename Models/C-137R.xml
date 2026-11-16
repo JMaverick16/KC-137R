@@ -2249,44 +2249,44 @@
      </axis>
     </animation>
 
-<!-- IAE V2500 -->
+<!-- CFM56 -->
 	<model>
-		<name>engineOneIAE</name>
-		<path>Aircraft/KC-137R/Models/Engines/V2500_1.xml</path>
+		<name>engineOneCFM</name>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_1.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m>-14.835</y-m>
-		  <z-m> -0.93</z-m>
+		  <z-m> -0.99</z-m>
 		</offsets>
 	</model>
 	
 	<model>
-		<name>engineTwoIAE</name>
-		<path>Aircraft/KC-137R/Models/Engines/V2500_2.xml</path>
+		<name>engineTwoCFM</name>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_2.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m>-10.077</y-m>
-		  <z-m> -1.40</z-m>
+		  <z-m> -1.47</z-m>
 		</offsets>
 	</model>
 	
 	<model>
-		<name>engineThreeIAE</name>
-		<path>Aircraft/KC-137R/Models/Engines/V2500_3.xml</path>
+		<name>engineThreeCFM</name>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_3.xml</path>
 		<offsets>
 		  <x-m> -3.50</x-m>
 		  <y-m> 10.077</y-m>
-		  <z-m> -1.40</z-m>
+		  <z-m> -1.47</z-m>
 		</offsets>
 	</model>
 	
 	<model>
-		<name>engineFourIAE</name>
-		<path>Aircraft/KC-137R/Models/Engines/V2500_4.xml</path>
+		<name>engineFourCFM</name>
+		<path>Aircraft/KC-137R/Models/Engines/CFM56_4.xml</path>
 		<offsets>
 		  <x-m>  0.22</x-m>
 		  <y-m> 14.835</y-m>
-		  <z-m> -0.93</z-m>
+		  <z-m> -0.99</z-m>
 		</offsets>
 	</model>
 	

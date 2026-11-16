@@ -122,16 +122,7 @@
 	<filter>
 		<name>EGT 1</name>
 		<type>gain</type>
-		<gain>
-			<condition>
-				<equals>
-					<property>/sim/engine-type/IAE</property>
-					<value>0</value>
-				</equals>
-			</condition>
-			<value>1.2</value>
-		</gain>
-		<gain>1.0</gain>
+		<gain>1.2</gain>
 		<input>
 			<expression>
 				<table>
@@ -149,16 +140,7 @@
 	<filter>
 		<name>EGT 2</name>
 		<type>gain</type>
-		<gain>
-			<condition>
-				<equals>
-					<property>/sim/engine-type/IAE</property>
-					<value>0</value>
-				</equals>
-			</condition>
-			<value>1.2</value>
-		</gain>
-		<gain>1.0</gain>
+		<gain>1.2</gain>
 		<input>
 			<expression>
 				<table>
@@ -176,16 +158,7 @@
 	<filter>
 		<name>EGT 3</name>
 		<type>gain</type>
-		<gain>
-			<condition>
-				<equals>
-					<property>/sim/engine-type/IAE</property>
-					<value>0</value>
-				</equals>
-			</condition>
-			<value>1.2</value>
-		</gain>
-		<gain>1.0</gain>
+		<gain>1.2</gain>
 		<input>
 			<expression>
 				<table>
@@ -203,16 +176,7 @@
 	<filter>
 		<name>EGT 4</name>
 		<type>gain</type>
-		<gain>
-			<condition>
-				<equals>
-					<property>/sim/engine-type/IAE</property>
-					<value>0</value>
-				</equals>
-			</condition>
-			<value>1.2</value>
-		</gain>
-		<gain>1.0</gain>
+		<gain>1.2</gain>
 		<input>
 			<expression>
 				<table>
