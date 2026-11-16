@@ -58,7 +58,7 @@
 </model>
 
 <model>
-  <name>AoA_cp</name>
+  <name>AoA</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AOA/aoa.xml</path>
   <offsets>
     <x-m>-18.915</x-m>
@@ -217,7 +217,7 @@
 <!-- Copilot Panel -->
 
 <model>
-  <name>AoA</name>
+  <name>AoA_cp</name>
   <path>Aircraft/KC-137R/Models/Cockpit/Instruments/AOA/aoa.xml</path>
   <offsets>
     <x-m>-18.92</x-m>
