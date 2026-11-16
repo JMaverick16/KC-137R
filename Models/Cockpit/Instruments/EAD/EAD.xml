@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>res/EAD.ac</path>
+	
+	<animation>
+		<type>select</type>
+		<object-name>EAD.screen</object-name>
+		<object-name>Grid</object-name>
+		<object-name>ND.screenC</object-name>
+		<!-- Status and Warnings -->
+		<object-name>spdbrke</object-name>
+		<object-name>spdbrka</object-name>
+		<object-name>boomdn</object-name>
+		<object-name>ensh</object-name>
+		<object-name>bankoverlim</object-name>
+		<object-name>manpitch</object-name>
+		<object-name>manroll</object-name>
+		<object-name>nofbwprot</object-name>
+		<object-name>noap</object-name>
+		<condition>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</greater-than-equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>ND.screenC</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>b707.showNd("ce");</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<!-- Status -->
+	<text>
+		<name>spdbrka</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0770</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">SPEEDBRAKE ARM</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>spdbrke</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0770</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">SPEEDBRAKE EXT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>spdbrka</object-name>
+		<condition>
+			<or>
+				<and>
+					<equals>
+						<property>controls/flight/speedbrake-arm</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/flight/spoilers</property>
+						<value>0</value>
+					</equals>
+					<not-equals>
+						<property>controls/test/warn-knob</property>
+						<value>1.0</value>
+					</not-equals>
+				</and>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>spdbrke</object-name>
+		<condition>
+			<or>
+				<greater-than>
+					<property>controls/flight/spoilers</property>
+					<value>0</value>
+				</greater-than>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<text>
+		<name>manroll</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0830</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">FBW ROLL/YAW DIRECT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>manroll</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>it-fbw/roll-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<text>
+		<name>manpitch</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0890</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">FBW PITCH DIRECT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>manpitch</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>it-fbw/pitch-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	
+	<text>
+		<name>boomdn</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>-0.1300</y-m>
+			<z-m>-0.0950</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">BOOM EXT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	
+	<animation>
+		<type>select</type>
+		<object-name>boomdn</object-name>
+		<condition>
+			<or>
+				<greater-than-equals>
+					<property>instrumentation/doors/refuel-boom/position-norm</property>
+					<value>0.05</value>
+				</greater-than-equals>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<!-- Warnings -->
+	<text>
+		<name>ensh</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>0.0010</y-m>
+			<z-m>-0.0770</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">ENG SHUTDOWN</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>ensh</object-name>
+		<object-name>fadec</object-name>
+		<condition>
+			<or>
+				<less-than>
+					<property>engines/engine[0]/n2-actual</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[1]/n2-actual</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[2]/n2-actual</property>
+					<value>45</value>
+				</less-than>
+				<less-than>
+					<property>engines/engine[3]/n2-actual</property>
+					<value>45</value>
+				</less-than>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>bankoverlim</object-name>
+		<condition>
+			<or>
+				<and>
+					<not><property>gear/gear[1]/wow</property></not>
+					<not><property>gear/gear[2]/wow</property></not>
+					<or>
+						<less-than-equals>
+							<property>orientation/roll-deg</property>
+							<value>-45</value>
+						</less-than-equals>
+						<greater-than-equals>
+							<property>orientation/roll-deg</property>
+							<value>45</value>
+						</greater-than-equals>
+					</or>
+				</and>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<text>
+		<name>bankoverlim</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>0.0010</y-m>
+			<z-m>-0.0830</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">BANK OVER LIMIT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>noap</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>0.0010</y-m>
+			<z-m>-0.0890</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">NO AUTOPILOT</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<text>
+		<name>nofbwprot</name>
+		<offsets>
+			<x-m>0.00018</x-m>
+			<y-m>0.0010</y-m>
+			<z-m>-0.0950</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">NO FBW PROTECTIONS</format>
+		<property>autopilot/serviceable</property>
+		<font type="string">LiberationSansDU.ttf</font>
+		<draw-text type="bool">true</draw-text>
+		<draw-alignment type="bool">false</draw-alignment>
+		<draw-boundingbox type="bool">false</draw-boundingbox>
+		<character-size>0.005</character-size>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	
+	<animation>
+		<type>select</type>
+		<object-name>noap</object-name>
+		<object-name>nofbwprot</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>it-fbw/roll-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>it-fbw/pitch-disable</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/test/warn-knob</property>
+					<value>1.0</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<!-- Cyan -->
+	<animation>
+		<type>material</type>
+		<object-name>spdbrke</object-name>
+		<object-name>spdbrka</object-name>
+		<object-name>boomdn</object-name>
+		<diffuse>
+			<red>0</red>
+			<green>1</green>
+			<blue>1</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>0</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+	</animation>
+	
+	<!-- Yellow -->
+	<animation>
+		<type>material</type>
+		<object-name>ensh</object-name>
+		<object-name>bankoverlim</object-name>
+		<object-name>manpitch</object-name>
+		<object-name>manroll</object-name>
+		<object-name>nofbwprot</object-name>
+		<object-name>noap</object-name>
+		<diffuse>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</diffuse>
+		<ambient>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</ambient>
+		<specular>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
+		</specular>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>0</blue>
+		</emission>
+	</animation>
+	
+	<!-- LoD -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>20</max-m>
+	</animation>
+
+</PropertyList>

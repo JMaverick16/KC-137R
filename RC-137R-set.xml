@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing RC-137R Rivet Joint (CFM56)</description>
+  <description>Boeing RC-137R Rivet Joint</description>
 	<aero>KC-137R</aero>
   	<long-description>
    	The Boeing RC-137R Rivet Joint is an airborne SIGINT/reconnaissance aircraft built by Boeing and modified by a number of companies, including General Dynamics, Lockheed and L-3 Communications. It is used by the United States Air Force to support theater and national level intelligence consumers with near real-time on-scene collection, analysis and dissemination capabilities thanks to its sensor suite which allows to detect, identify and geolocate signals throughout the electromagnetic spectrum, forwarding gathered information in a variety of formats to a wide range of consumers via Rivet Joint's extensive communications suite. Based on the C-135 Stratolifter airframe, various types of RC-137s have been in service since 1961. Many variants have been modified numerous times, resulting in a large variety of designations, configurations, and program names.
@@ -334,7 +334,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>RC-137R</model>
-			<engines>CFM56</engines>
+			<engines>CFM56-5B5</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
@@ -386,6 +386,7 @@ no. D6-3071-00
   </b707>
 
 	<nasal>
+		<hack><file>Aircraft/KC-137R/Nasal/hack-canvas.nas</file></hack>
 		<vector>
             <file>Aircraft/KC-137R/Nasal/vector.nas</file>
 		</vector>
@@ -421,7 +422,11 @@ no. D6-3071-00
 		
 		<itaf>
             <file>Aircraft/KC-137R/Nasal/it-autoflight.nas</file>
-		</itaf> 
+		</itaf>
+		
+		<canvas_ead>
+			<file>Aircraft/KC-137R/Nasal/Displays/EAD.nas</file>
+		</canvas_ead>
 		
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>

@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing E-3R Sentry (CFM56)</description>
+  <description>Boeing E-3R Sentry</description>
 	<aero>KC-137R</aero>
   	<long-description>
    	The Boeing E-3R Sentry, commonly known as AWACS, is an American airborne early warning and control (AEW and C) aircraft developed by Boeing. Derived from the Boeing 707, it provides all-weather surveillance, command, control, and communications, and is mainly used by the United States Air Force and NATO. The E-3R is distinguished by the distinctive rotating radar dome (ROTODOME) above the fuselage.
@@ -354,7 +354,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>E-3R</model>
-			<engines>CFM56</engines>
+			<engines>CFM56-5B5</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
@@ -430,7 +430,7 @@ no. D6-3071-00
     </rotors>
 
 	<nasal>
-		<hack><file>Aircraft/KC-137R/Nasal/E-3/hackCanvas.nas</file></hack>
+		<hack><file>Aircraft/KC-137R/Nasal/hack-canvas.nas</file></hack>
 		<notifications>
 			<file>Aircraft/KC-137R/Nasal/ArmamentNotification.nas</file>
 			<file>Aircraft/KC-137R/Nasal/GeoBridgedTransmitter.nas</file>
@@ -486,7 +486,11 @@ no. D6-3071-00
 		
 		<itaf>
             <file>Aircraft/KC-137R/Nasal/it-autoflight.nas</file>
-		</itaf> 
+		</itaf>
+		
+		<canvas_ead>
+			<file>Aircraft/KC-137R/Nasal/Displays/EAD.nas</file>
+		</canvas_ead>
 		
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>

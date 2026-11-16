@@ -12,7 +12,6 @@ var nd_init = func {
 	setprop("/instrumentation/efis/inputs/nd-centered", "true");
 	setprop("/instrumentation/efis[1]/inputs/nd-centered", "true");
 	setprop("/instrumentation/efis[2]/inputs/arpt", "true");
-	print("EFIS ... OK!");
 }
 
 # Captain

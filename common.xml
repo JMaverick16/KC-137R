@@ -136,7 +136,7 @@
 		 <y-offset-m archive="y">1.155</y-offset-m>
 		 <z-offset-m archive="y">-18.2</z-offset-m>
 		 <pitch-offset-deg archive="y">-15.0</pitch-offset-deg>
-		 <default-field-of-view-deg type="double">76.2</default-field-of-view-deg>
+		 <default-field-of-view-deg type="double">73</default-field-of-view-deg>
    </config>
   </view>
   <view n="101">
@@ -153,7 +153,7 @@
 		 <z-offset-m archive="y">-18.2</z-offset-m>
 		 <pitch-offset-deg archive="y">-16.0</pitch-offset-deg>
 		 <default-pitch-deg type="double">-16.0</default-pitch-deg>
-		 <default-field-of-view-deg type="double">76.2</default-field-of-view-deg>
+		 <default-field-of-view-deg type="double">73</default-field-of-view-deg>
     </config>
 	</view>
   <view n="102">
@@ -279,10 +279,10 @@
 
   <flaps>
     <setting>0.0</setting>
-    <setting>0.2</setting>	<!-- 20% takeoff-->
-    <setting>0.4</setting>	<!-- 40% -->
-    <setting>0.6</setting>	<!-- 60% approach-->
-    <setting>1.0</setting>	<!-- 100% landing -->
+    <setting>0.28</setting> <!-- 14 -->
+    <setting>0.5</setting> <!-- 25 -->
+    <setting>0.8</setting> <!-- 40 -->
+    <setting>1.0</setting> <!-- 50 -->
   </flaps>
 
 	<yokes-visible type="bool">1</yokes-visible>
@@ -366,40 +366,52 @@
 			<serviceable type="bool">true</serviceable>
 		</APU>
 		<engine n="0">
+			<egt-actual type="double">0</egt-actual>
+			<ff-actual type="double">0</ff-actual>
+			<n1-actual type="double">0</n1-actual>
+			<n2-actual type="double">0</n2-actual>
 			<on-fire type="bool">false</on-fire>
 			<reverser-pos-norm type="double">0</reverser-pos-norm>
 			<running type="bool">false</running>
-			<rpm type="double">0</rpm>
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
 			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="1">
+			<egt-actual type="double">0</egt-actual>
+			<ff-actual type="double">0</ff-actual>
+			<n1-actual type="double">0</n1-actual>
+			<n2-actual type="double">0</n2-actual>
 			<on-fire type="bool">false</on-fire>
 			<reverser-pos-norm type="double">0</reverser-pos-norm>
 			<running type="bool">false</running>
-			<rpm type="double">0</rpm>
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
 			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="2">
+			<egt-actual type="double">0</egt-actual>
+			<ff-actual type="double">0</ff-actual>
+			<n1-actual type="double">0</n1-actual>
+			<n2-actual type="double">0</n2-actual>
 			<on-fire type="bool">false</on-fire>
 			<reverser-pos-norm type="double">0</reverser-pos-norm>
 			<running type="bool">false</running>
-			<rpm type="double">0</rpm>
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>
 			<fuel-flow_pph type="double">0</fuel-flow_pph>
 		</engine>
 		<engine n="3">
+			<egt-actual type="double">0</egt-actual>
+			<ff-actual type="double">0</ff-actual>
+			<n1-actual type="double">0</n1-actual>
+			<n2-actual type="double">0</n2-actual>
 			<on-fire type="bool">false</on-fire>
 			<reverser-pos-norm type="double">0</reverser-pos-norm>
 			<running type="bool">false</running>
-			<rpm type="double">0</rpm>
 			<started type="bool">false</started>
 			<failed type="bool">false</failed>
 			<kw type="double">0</kw>

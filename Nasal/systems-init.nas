@@ -1,15 +1,18 @@
 # KC-137R System Init File
 
-setlistener("/sim/signals/fdm-initialized", func {
-  setprop("/controls/internal/value1", "1");
-  setprop("/controls/flight/speedbrake-arm", "0");
-  setprop("/b707/anti-ice/window-heat-cap-switch", "0");
-  setprop("/b707/anti-ice/window-heat-fo-switch", "0");
-  setprop("/indicators/asi/vmo", "380");
-  setprop("/instrumentation/efis[2]/mfd/rangearc", 1);
-  b707.compass_swing();
-  b707.gmeter_init();
-  print("OCTAL ... FINE!");
+var initDone = 0;
+var fdmInit = setlistener("/sim/signals/fdm-initialized", func {
+	setprop("/controls/internal/value1", "1");
+	setprop("/controls/flight/speedbrake-arm", "0");
+	setprop("/b707/anti-ice/window-heat-cap-switch", "0");
+	setprop("/b707/anti-ice/window-heat-fo-switch", "0");
+	setprop("/indicators/asi/vmo", "380");
+	setprop("/instrumentation/efis[2]/mfd/rangearc", 1);
+	b707.compass_swing();
+	b707.gmeter_init();
+	canvas_ead.setup();
+	removelistener(fdmInit);
+	initDone = 1;
 });
 
 # Handle FGFS Autopilot Disconnect Binding
@@ -58,17 +61,17 @@ controls.flapsDown = func(step) {
 	if (step == 1) {
 		if (getprop("/controls/flight/flap-lever") == 0) {
 			setprop("/controls/special/slats-switch", 0.0);
-			setprop("/controls/flight/flaps", 0.2);
+			setprop("/controls/flight/flaps", 0.28);
 			setprop("/controls/flight/flap-lever", 1);
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 1) {
 			setprop("/controls/special/slats-switch", 1.0);
-			setprop("/controls/flight/flaps", 0.4);
+			setprop("/controls/flight/flaps", 0.5);
 			setprop("/controls/flight/flap-lever", 2);
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 2) {
 			setprop("/controls/special/slats-switch", 1.0);
-			setprop("/controls/flight/flaps", 0.6);
+			setprop("/controls/flight/flaps", 0.8);
 			setprop("/controls/flight/flap-lever", 3);
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 3) {
@@ -80,17 +83,17 @@ controls.flapsDown = func(step) {
 	} else if (step == -1) {
 		if (getprop("/controls/flight/flap-lever") == 4) {
 			setprop("/controls/special/slats-switch", 1.0);
-			setprop("/controls/flight/flaps", 0.6);
+			setprop("/controls/flight/flaps", 0.8);
 			setprop("/controls/flight/flap-lever", 3);
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 3) {
 			setprop("/controls/special/slats-switch", 1.0);
-			setprop("/controls/flight/flaps", 0.4);
+			setprop("/controls/flight/flaps", 0.5);
 			setprop("/controls/flight/flap-lever", 2);
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 2) {
 			setprop("/controls/special/slats-switch", 0.0);
-			setprop("/controls/flight/flaps", 0.2);
+			setprop("/controls/flight/flaps", 0.28);
 			setprop("/controls/flight/flap-lever", 1);
 			return;
 		} else if (getprop("/controls/flight/flap-lever") == 1) {

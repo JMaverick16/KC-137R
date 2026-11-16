@@ -4,7 +4,6 @@ setprop("/controls/radio/number/zero", "0");
 setprop("/controls/radio/number/one", "1");
 setprop("/controls/radio/number/two", "2");
 setprop("/controls/radio/number/three", "3");
-print("RADIO ... OK!");
 
 var comm1_switch = func {
 	var freqa = getprop("/instrumentation/comm/frequencies/selected-mhz");

@@ -65,7 +65,7 @@
  <animation>
   <type>rotate</type>
   <object-name>min.needle</object-name>
-  <property>gmeter/min</property>
+  <property>instrumentation/gmeter/min</property>
   <factor>45</factor>
   <center>
    <x-m>0</x-m>
@@ -82,7 +82,7 @@
  <animation>
   <type>rotate</type>
   <object-name>max.needle</object-name>
-  <property>gmeter/max</property>
+  <property>instrumentation/gmeter/max</property>
   <factor>45</factor>
   <center>
    <x-m>0</x-m>

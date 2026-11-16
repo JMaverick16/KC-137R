@@ -2367,5 +2367,4 @@ setlistener("sim/signals/fdm-initialized", func
  {
  efb.init();
  setprop("/sim/aircraft-operator", "FGFS");
- print("EFB COMPUTER ... FINE!");
  });

@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Northrop Grumman E-8R Joint STARS (CFM56)</description>
+  <description>Northrop Grumman E-8R Joint STARS</description>
 	<aero>KC-137R</aero>
   <long-description>
    The Northrop Grumman E-8R Joint Surveillance Target Attack Radar System (Joint STARS) is a United States Air Force airborne ground surveillance, battle management and command and control aircraft. It tracks ground vehicles and some aircraft, collects imagery, and relays tactical pictures to ground and air theater commanders. The aircraft is operated by both active duty Air Force and Air National Guard units.
@@ -350,7 +350,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>E-8R</model>
-			<engines>CFM56</engines>
+			<engines>CFM56-5B5</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
@@ -402,6 +402,7 @@ no. D6-3071-00
   </b707>
 
 	<nasal>
+		<hack><file>Aircraft/KC-137R/Nasal/hack-canvas.nas</file></hack>
 		<vector>
             <file>Aircraft/KC-137R/Nasal/vector.nas</file>
 		</vector>
@@ -437,7 +438,11 @@ no. D6-3071-00
 		
 		<itaf>
             <file>Aircraft/KC-137R/Nasal/it-autoflight.nas</file>
-		</itaf> 
+		</itaf>
+		
+		<canvas_ead>
+			<file>Aircraft/KC-137R/Nasal/Displays/EAD.nas</file>
+		</canvas_ead>
 		
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>

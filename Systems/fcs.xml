@@ -119,38 +119,22 @@
 	
 	<channel name="Aeromechanical">
 		
-		<kinematic name="Flaps Control">
+		<pure_gain name="fcs/flap-cmd-deg">
 			<input>fcs/flap-cmd-norm</input>
-			<traverse>
-				<setting>
-					<position>0</position>
-					<time>0 </time>
-				</setting>
-				<setting>
-					<position>2</position>
-					<time>5</time>
-				</setting>
-				<setting>
-					<position>4</position>
-					<time>5</time>
-				</setting>
-				<setting>
-					<position>6</position>
-					<time>5</time>
-				</setting>
-				<setting>
-					<position>10</position>
-					<time>5</time>
-				</setting>
-			</traverse>
+			<gain>50</gain>
+		</pure_gain>
+		
+		<actuator name="fcs/flap-pos-deg-tie">
+			<input>fcs/flap-cmd-deg</input>
+			<rate_limit>1.8</rate_limit>
 			<output>fcs/flap-pos-deg</output>
-		</kinematic>
+		</actuator>
 		
 		<aerosurface_scale name="flap normalization">
 			<input>fcs/flap-pos-deg</input>
 			<domain>
 				<min>0</min>
-				<max>10</max>
+				<max>50</max>
 			</domain>
 			<range>
 				<min>0</min>

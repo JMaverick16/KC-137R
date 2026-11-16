@@ -185,8 +185,8 @@
 </model-->
 
 <model>
-  <name>EAD-CFM</name>
-  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EAD/EAD-CFM.xml</path>
+  <name>EAD</name>
+  <path>Aircraft/KC-137R/Models/Cockpit/Instruments/EAD/EAD.xml</path>
   <offsets>
       <x-m>-18.918</x-m>
       <y-m>-0.015</y-m>

@@ -79,7 +79,6 @@ var update_fbw = func {
 
 setlistener("/sim/signals/fdm-initialized", func {
 	update.start();
-	print("Fly By Wire System ... OK!")
 });
 
 ##########

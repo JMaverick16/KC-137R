@@ -7,7 +7,7 @@
 -->
 <PropertyList include="common.xml">
  <sim n="0">
-  <description>Boeing C-137R Stratoliner (CFM56)</description>
+  <description>Boeing C-137R Stratoliner</description>
 	<aero>KC-137R</aero>
   	<long-description>
    		The Boeing C-137R Stratoliner is a VIP transport aircraft derived from the Boeing 707 jet airliner used by the United States Air Force.
@@ -328,7 +328,7 @@ no. D6-3071-00
 		<display>IDENT</display>
 		<ident>
 			<model>C-137R</model>
-			<engines>CFM56</engines>
+			<engines>CFM56-5B5</engines>
 		</ident>
 		<input type="string"/>
 		<serviceable type="bool">1</serviceable>
@@ -374,6 +374,7 @@ no. D6-3071-00
   </b707>
 
 	<nasal>
+		<hack><file>Aircraft/KC-137R/Nasal/hack-canvas.nas</file></hack>
 		<vector>
             <file>Aircraft/KC-137R/Nasal/vector.nas</file>
 		</vector>
@@ -409,7 +410,11 @@ no. D6-3071-00
 		
 		<itaf>
             <file>Aircraft/KC-137R/Nasal/it-autoflight.nas</file>
-		</itaf> 
+		</itaf>
+		
+		<canvas_ead>
+			<file>Aircraft/KC-137R/Nasal/Displays/EAD.nas</file>
+		</canvas_ead>
 		
 		<m877>
 			<file>Aircraft/Instruments-3d/clock/M877/M877.nas</file>

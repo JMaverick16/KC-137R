@@ -71,7 +71,6 @@ setlistener("/sim/signals/fdm-initialized", func {
 	if (getprop("/it-fbw/pitch-disable") == 1) {
 		setprop("/warnings/mc", 1);
 	}
-	print("Master Caution System ... FINE!");
 });
 
 setlistener("/b707/anti-ice/engine-inlet[0]", func {
