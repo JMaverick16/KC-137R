@@ -171,6 +171,35 @@ var CanvasEad = {
 		me["N14"].setText(sprintf("%5.1f", math.round(Value.n1[3], 0.1)));
 		me["N14_needle"].setRotation(math.clamp((Value.n1[3] / 110) * 230, 0, 230) * D2R);
 		
+		if (abs(Value.n1[0] - Value.n1Lim) <= 0.5) {
+			me["N11"].setColor(0, 1, 0);
+			me["N11_box"].setColor(0, 1, 0);
+		} else {
+			me["N11"].setColor(1, 1, 1);
+			me["N11_box"].setColor(1, 1, 1);
+		}
+		if (abs(Value.n1[1] - Value.n1Lim) <= 0.5) {
+			me["N12"].setColor(0, 1, 0);
+			me["N12_box"].setColor(0, 1, 0);
+		} else {
+			me["N12"].setColor(1, 1, 1);
+			me["N12_box"].setColor(1, 1, 1);
+		}
+		if (abs(Value.n1[2] - Value.n1Lim) <= 0.5) {
+			me["N13"].setColor(0, 1, 0);
+			me["N13_box"].setColor(0, 1, 0);
+		} else {
+			me["N13"].setColor(1, 1, 1);
+			me["N13_box"].setColor(1, 1, 1);
+		}
+		if (abs(Value.n1[3] - Value.n1Lim) <= 0.5) {
+			me["N14"].setColor(0, 1, 0);
+			me["N14_box"].setColor(0, 1, 0);
+		} else {
+			me["N14"].setColor(1, 1, 1);
+			me["N14_box"].setColor(1, 1, 1);
+		}
+		
 		Value.egt[0] = Prop.egt[0].getValue();
 		Value.egt[1] = Prop.egt[1].getValue();
 		Value.egt[2] = Prop.egt[2].getValue();
@@ -274,18 +303,22 @@ var KeyList = [
 	"G_needle",
 	"LimMode",
 	"N11",
+	"N11_box",
 	"N11_lim",
 	"N11_lim_needle",
 	"N11_needle",
 	"N12",
+	"N12_box",
 	"N12_lim",
 	"N12_lim_needle",
 	"N12_needle",
 	"N13",
+	"N13_box",
 	"N13_lim",
 	"N13_lim_needle",
 	"N13_needle",
 	"N14",
+	"N14_box",
 	"N14_lim",
 	"N14_lim_needle",
 	"N14_needle",

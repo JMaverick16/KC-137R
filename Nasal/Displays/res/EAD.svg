@@ -32,9 +32,9 @@
      inkscape:window-height="1009"
      id="namedview371"
      showgrid="false"
-     inkscape:zoom="0.5"
-     inkscape:cx="211"
-     inkscape:cy="725.00001"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="125.1579"
+     inkscape:cy="376.88791"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -860,7 +860,7 @@
      sodipodi:nodetypes="ccccccc"
      inkscape:transform-center-y="84" /><rect
      style="fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:square"
-     id="rect1"
+     id="N11_box"
      width="122"
      height="48"
      x="138"
@@ -1657,7 +1657,7 @@
      sodipodi:nodetypes="ccccccc"
      inkscape:transform-center-y="84" /><rect
      style="fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:square"
-     id="rect147"
+     id="N12_box"
      width="122"
      height="48"
      x="388"
@@ -2454,7 +2454,7 @@
      sodipodi:nodetypes="ccccccc"
      inkscape:transform-center-y="84" /><rect
      style="fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:square"
-     id="rect240"
+     id="N13_box"
      width="122"
      height="48"
      x="638"
@@ -3251,7 +3251,7 @@
      sodipodi:nodetypes="ccccccc"
      inkscape:transform-center-y="84" /><rect
      style="fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:square"
-     id="rect333"
+     id="N14_box"
      width="122"
      height="48"
      x="888"
